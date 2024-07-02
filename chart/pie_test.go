@@ -3,9 +3,10 @@ package chart
 import (
 	"os"
 	"testing"
-
 	"github.com/stretchr/testify/assert"
 )
+
+const pie_output = "../testdata/pie_chart.html"
 
 func TestCreatePieChart(t *testing.T) {
 	tests := []struct {
@@ -16,7 +17,7 @@ func TestCreatePieChart(t *testing.T) {
 		{
 			name: "Test basic pie chart",
 			opts: &PieChartOpts{
-				Output:    "test_output.html",
+				Output:    pie_output,
 				Title:     "Test Pie Chart",
 				Subtitle:  "Test subtitle",
 				Radius:    50,
@@ -28,7 +29,7 @@ func TestCreatePieChart(t *testing.T) {
 					{Name: "C", Values: 300},
 				},
 			},
-			expectedOutput: "test_output.html",
+			expectedOutput: pie_output,
 		},
 	}
 

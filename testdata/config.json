@@ -1,0 +1,8 @@
+{
+    "host": "localhost",
+    "port": 8080,
+    "meta": {
+        "lang": "golang",
+        "type": "package"
+    }
+}
