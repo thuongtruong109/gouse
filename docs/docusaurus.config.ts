@@ -14,7 +14,7 @@ const config: Config = {
   baseUrl: "/",
   baseUrlIssueBanner: true,
 
-  organizationName: "thuongtruong1009",
+  organizationName: "thuongtruong109",
   projectName: "gouse",
 
   onBrokenLinks: "throw",
@@ -32,12 +32,12 @@ const config: Config = {
         docs: {
           sidebarPath: "./sidebars.ts",
           editUrl:
-            "https://github.com/thuongtruong1009/gouse/tree/main/docs/main",
+            "https://github.com/thuongtruong109/gouse/tree/main/docs/main",
         },
         blog: {
           showReadingTime: true,
           editUrl:
-            "https://github.com/thuongtruong1009/gouse/tree/main/docs/main",
+            "https://github.com/thuongtruong109/gouse/tree/main/docs/main",
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -74,7 +74,7 @@ const config: Config = {
         },
         { to: "/blog", label: "Blog", position: "left" },
         {
-          href: "https://github.com/thuongtruong1009/gouse",
+          href: "https://github.com/thuongtruong109/gouse",
           position: "right",
           className: "header-github-link",
           "aria-label": "GitHub repository",
@@ -106,15 +106,15 @@ const config: Config = {
           items: [
             {
               label: "GitHub",
-              href: "https://github.com/thuongtruong1009/gouse",
+              href: "https://github.com/thuongtruong109/gouse",
             },
             {
               label: "Dev.to",
-              href: "https://dev.to/thuongtruong1009",
+              href: "https://dev.to/thuongtruong109",
             },
             {
               label: "LinkedIn",
-              href: "https://www.linkedin.com/in/thuongtruong1009/",
+              href: "https://www.linkedin.com/in/thuongtruong109/",
             },
           ],
         },
@@ -123,7 +123,7 @@ const config: Config = {
           items: [
             {
               label: "License",
-              href: "https://github.com/thuongtruong1009/gouse/blob/main/LICENSE",
+              href: "https://github.com/thuongtruong109/gouse/blob/main/LICENSE",
             },
             {
               label: "Change Log",

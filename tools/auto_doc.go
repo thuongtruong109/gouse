@@ -5,9 +5,9 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/thuongtruong1009/gouse/helper"
-	"github.com/thuongtruong1009/gouse/io"
-	"github.com/thuongtruong1009/gouse/strings"
+	"github.com/thuongtruong109/gouse/helper"
+	"github.com/thuongtruong109/gouse/io"
+	"github.com/thuongtruong109/gouse/strings"
 )
 
 func Doc(outputPath, newName string) {

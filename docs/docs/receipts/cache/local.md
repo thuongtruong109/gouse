@@ -5,7 +5,7 @@
 ```go
 import (
 	"fmt"
-	"github.com/thuongtruong1009/gouse/cache"
+	"github.com/thuongtruong109/gouse/cache"
 )
 ```
 ## Functions

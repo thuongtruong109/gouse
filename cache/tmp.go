@@ -4,7 +4,7 @@ import (
 	"time"
 
 	"github.com/patrickmn/go-cache"
-	"github.com/thuongtruong1009/gouse/types"
+	"github.com/thuongtruong109/gouse/types"
 )
 
 type Tmp struct {

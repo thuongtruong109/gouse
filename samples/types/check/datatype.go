@@ -1,6 +1,6 @@
 package check
 
-import "github.com/thuongtruong1009/gouse/types"
+import "github.com/thuongtruong109/gouse/types"
 
 func SampleTypeCheck() {
 	println("Check type is int: ", types.IsInt(1))

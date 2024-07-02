@@ -3,7 +3,7 @@ package function
 import (
 	"time"
 
-	"github.com/thuongtruong1009/gouse/date"
+	"github.com/thuongtruong109/gouse/date"
 )
 
 func Retry(fn func() error, attempts int, sleep int) (err error) {

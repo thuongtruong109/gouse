@@ -3,7 +3,7 @@ package path
 import (
 	"fmt"
 
-	"github.com/thuongtruong1009/gouse/io"
+	"github.com/thuongtruong109/gouse/io"
 )
 
 func SampleIoReadPath() {

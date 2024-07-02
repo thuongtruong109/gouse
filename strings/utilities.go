@@ -3,8 +3,8 @@ package strings
 import (
 	"fmt"
 
-	"github.com/thuongtruong1009/gouse/constants"
-	"github.com/thuongtruong1009/gouse/number"
+	"github.com/thuongtruong109/gouse/constants"
+	"github.com/thuongtruong109/gouse/number"
 )
 
 func Count(s string, substr ...string) int {

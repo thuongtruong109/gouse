@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/thuongtruong1009/gouse/console"
+	"github.com/thuongtruong109/gouse/console"
 )
 
 func formatTime(t time.Time) string {

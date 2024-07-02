@@ -3,8 +3,8 @@ package log
 import (
 	"fmt"
 
-	"github.com/thuongtruong1009/gouse/constants"
-	"github.com/thuongtruong1009/gouse/strings"
+	"github.com/thuongtruong109/gouse/constants"
+	"github.com/thuongtruong109/gouse/strings"
 )
 
 func detectError(err interface{}) string {

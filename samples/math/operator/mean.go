@@ -1,6 +1,6 @@
 package operator
 
-import "github.com/thuongtruong1009/gouse/math"
+import "github.com/thuongtruong109/gouse/math"
 
 func SampleMathMean() {
 	var num1, num2, num3, num4 = 10, 20, 30, -2

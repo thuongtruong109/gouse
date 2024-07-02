@@ -3,7 +3,7 @@ package fomular
 import (
 	"fmt"
 
-	"github.com/thuongtruong1009/gouse/math"
+	"github.com/thuongtruong109/gouse/math"
 )
 
 func SampleMathPytago() {

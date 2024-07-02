@@ -6,7 +6,7 @@ import (
 	"os/exec"
 	"runtime"
 
-	"github.com/thuongtruong1009/gouse/strings"
+	"github.com/thuongtruong109/gouse/strings"
 )
 
 func Cmd(defaultCmmand string, windowsCmmand ...string) {

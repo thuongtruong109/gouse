@@ -1,6 +1,6 @@
 package tools
 
-import "github.com/thuongtruong1009/gouse/tools"
+import "github.com/thuongtruong109/gouse/tools"
 
 func SampleToolProfile() {
 	var cpuprofile, memprofile = "cpu.pprof", "mem.pprof"

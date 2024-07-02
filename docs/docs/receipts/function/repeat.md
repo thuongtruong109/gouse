@@ -4,7 +4,7 @@
 
 ```go
 import (
-	"github.com/thuongtruong1009/gouse/function"
+	"github.com/thuongtruong109/gouse/function"
 )
 ```
 ## Functions

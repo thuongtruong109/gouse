@@ -5,7 +5,7 @@
 ```go
 import (
 	"fmt"
-	"github.com/thuongtruong1009/gouse/api"
+	"github.com/thuongtruong109/gouse/api"
 )
 ```
 ## Functions

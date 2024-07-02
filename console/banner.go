@@ -3,8 +3,8 @@ package console
 import (
 	"fmt"
 
-	"github.com/thuongtruong1009/gouse/shared"
-	"github.com/thuongtruong1009/gouse/strings"
+	"github.com/thuongtruong109/gouse/shared"
+	"github.com/thuongtruong109/gouse/strings"
 )
 
 func Banner(font shared.FontBannerType, s string) {

@@ -1,6 +1,6 @@
 package operator
 
-import "github.com/thuongtruong1009/gouse/math"
+import "github.com/thuongtruong109/gouse/math"
 
 func SampleMathRound() {
 	var num1, num2 = 10.49, 10.51

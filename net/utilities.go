@@ -5,7 +5,7 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/thuongtruong1009/gouse/console"
+	"github.com/thuongtruong109/gouse/console"
 )
 
 func Open(url string) {

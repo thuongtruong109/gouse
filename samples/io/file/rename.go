@@ -1,6 +1,6 @@
 package file
 
-import "github.com/thuongtruong1009/gouse/io"
+import "github.com/thuongtruong109/gouse/io"
 
 func SampleIoRenameFile() {
 	err := io.RenameFile("data.json", "data2.json")

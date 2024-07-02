@@ -3,7 +3,7 @@ package date
 import (
 	"fmt"
 
-	"github.com/thuongtruong1009/gouse/date"
+	"github.com/thuongtruong109/gouse/date"
 )
 
 func SampleDateTime() {

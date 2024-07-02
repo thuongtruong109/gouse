@@ -1,6 +1,6 @@
 package function
 
-import "github.com/thuongtruong1009/gouse/function"
+import "github.com/thuongtruong109/gouse/function"
 
 func SampleFuncTimes() {
 	function.Times(func() {

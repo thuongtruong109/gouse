@@ -1,6 +1,6 @@
 package strings
 
-import "github.com/thuongtruong1009/gouse/strings"
+import "github.com/thuongtruong109/gouse/strings"
 
 func SampleStringIsLetter() {
 	var str = "hello world"

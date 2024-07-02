@@ -1,7 +1,7 @@
 package chart
 
 import (
-	"github.com/thuongtruong1009/gouse/chart"
+	"github.com/thuongtruong109/gouse/chart"
 )
 
 func SampleChartLine() {

@@ -7,8 +7,8 @@ import (
 	"go/parser"
 	"go/token"
 
-	"github.com/thuongtruong1009/gouse/io"
-	"github.com/thuongtruong1009/gouse/types"
+	"github.com/thuongtruong109/gouse/io"
+	"github.com/thuongtruong109/gouse/types"
 )
 
 type Function struct {

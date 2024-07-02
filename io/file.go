@@ -6,8 +6,8 @@ import (
 	"io"
 	"os"
 
-	"github.com/thuongtruong1009/gouse/date"
-	"github.com/thuongtruong1009/gouse/strings"
+	"github.com/thuongtruong109/gouse/date"
+	"github.com/thuongtruong109/gouse/strings"
 )
 
 func IsExistFile(path string) (bool, error) {

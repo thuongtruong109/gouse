@@ -1,6 +1,6 @@
 package net
 
-import "github.com/thuongtruong1009/gouse/net"
+import "github.com/thuongtruong109/gouse/net"
 
 func SampleNetCheck() {
 	ok, err := net.Check("https://google.com")

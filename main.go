@@ -3,8 +3,8 @@ package main
 import (
 	"flag"
 
-	"github.com/thuongtruong1009/gouse/samples"
-	"github.com/thuongtruong1009/gouse/strings"
+	"github.com/thuongtruong109/gouse/samples"
+	"github.com/thuongtruong109/gouse/strings"
 )
 
 func Starter() {

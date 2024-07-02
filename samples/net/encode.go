@@ -1,6 +1,6 @@
 package net
 
-import "github.com/thuongtruong1009/gouse/net"
+import "github.com/thuongtruong109/gouse/net"
 
 func SampleNetEncode() {
 	println("Encode: ", net.Encode("https://google.com"))

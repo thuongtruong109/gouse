@@ -1,4 +1,4 @@
-module github.com/thuongtruong1009/gouse
+module github.com/thuongtruong109/gouse
 
 go 1.20
 

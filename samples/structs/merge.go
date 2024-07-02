@@ -3,7 +3,7 @@ package structs
 import (
 	"fmt"
 
-	"github.com/thuongtruong1009/gouse/structs"
+	"github.com/thuongtruong109/gouse/structs"
 )
 
 type Merge_Person struct {

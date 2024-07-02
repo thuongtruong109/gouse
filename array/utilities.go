@@ -1,6 +1,6 @@
 package array
 
-import "github.com/thuongtruong1009/gouse/types"
+import "github.com/thuongtruong109/gouse/types"
 
 func Includes[T comparable](array []T, value T) bool {
 	for _, v := range array {

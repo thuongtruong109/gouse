@@ -5,7 +5,7 @@
 ```go
 import (
 	"fmt"
-	"github.com/thuongtruong1009/gouse/regex"
+	"github.com/thuongtruong109/gouse/regex"
 )
 ```
 ## Functions

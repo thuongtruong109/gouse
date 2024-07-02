@@ -3,7 +3,7 @@ package check
 import (
 	"fmt"
 
-	"github.com/thuongtruong1009/gouse/types"
+	"github.com/thuongtruong109/gouse/types"
 )
 
 func SampleTypeCheckUUID() {

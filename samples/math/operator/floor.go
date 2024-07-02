@@ -1,6 +1,6 @@
 package operator
 
-import "github.com/thuongtruong1009/gouse/math"
+import "github.com/thuongtruong109/gouse/math"
 
 func SampleMathFloor() {
 	var num = 10.49

@@ -3,7 +3,7 @@ package connection
 // import (
 // 	"database/sql"
 // 	"fmt"
-// 	"github.com/thuongtruong1009/gouse/types"
+// 	"github.com/thuongtruong109/gouse/types"
 // 	"log"
 // 	"reflect"
 // 	"strings"

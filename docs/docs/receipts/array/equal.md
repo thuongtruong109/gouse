@@ -4,7 +4,7 @@
 
 ```go
 import (
-	"github.com/thuongtruong1009/gouse/array"
+	"github.com/thuongtruong109/gouse/array"
 )
 ```
 ## Functions

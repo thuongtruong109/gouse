@@ -7,7 +7,7 @@ name = "shell"
 name = "go"
 
   [analyzers.meta]
-  import_root = "github.com/thuongtruong1009/gouse"
+  import_root = "github.com/thuongtruong109/gouse"
 
 [[analyzers]]
 name = "javascript"

@@ -1,6 +1,6 @@
 package check
 
-import "github.com/thuongtruong1009/gouse/math"
+import "github.com/thuongtruong109/gouse/math"
 
 func SampleMathIsEven() {
 	var num = 10

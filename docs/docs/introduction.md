@@ -71,7 +71,7 @@ Gouse is a modern essential [`Golang`](https://golang.org/) utility package deli
 ## 📦 Installation
 
 ```go
-go get github.com/thuongtruong1009/gouse
+go get github.com/thuongtruong109/gouse
 ```
 
 ## 🦄 Usage
@@ -83,7 +83,7 @@ package main
 
 import (
     "fmt"
-    "github.com/thuongtruong1009/gouse/math"
+    "github.com/thuongtruong109/gouse/math"
 )
 
 func main() {
@@ -95,7 +95,7 @@ func main() {
 
 ## 📖 Documentation
 
-- To read the completely package documentation guide, reference at [![Dev package](https://pkg.go.dev/badge/github.com/thuongtruong1009/gouse)](https://pkg.go.dev/github.com/thuongtruong1009/gouse)
+- To read the completely package documentation guide, reference at [![Dev package](https://pkg.go.dev/badge/github.com/thuongtruong109/gouse)](https://pkg.go.dev/github.com/thuongtruong109/gouse)
 
 - Refer to the [`Contributing Commands`](.github/CONTRIBUTING.md#commands) section for more information on how to develop the project.
 
@@ -111,8 +111,8 @@ func main() {
 
 - The tool has been tested on a variety of inputs, but it's not perfect.
 - For support in using Gouse, please reach out in the following venues:
-  - [`Raise Issues`](https://github.com/thuongtruong1009/gouse/issues/new) - For generally applicable issues and feedback.
-  - [`Join Discussions`](https://github.com/thuongtruong1009/gouse/discussions) - For ideas, questions, or issues regarding Gouse's design, development, and future.
+  - [`Raise Issues`](https://github.com/thuongtruong109/gouse/issues/new) - For generally applicable issues and feedback.
+  - [`Join Discussions`](https://github.com/thuongtruong109/gouse/discussions) - For ideas, questions, or issues regarding Gouse's design, development, and future.
 
 ## 📜 Changelog
 

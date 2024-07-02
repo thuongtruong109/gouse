@@ -1,6 +1,6 @@
 package dir
 
-import "github.com/thuongtruong1009/gouse/io"
+import "github.com/thuongtruong109/gouse/io"
 
 func SampleIoCreateDir() {
 	err2 := io.CreateDir("tmp")

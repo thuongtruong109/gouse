@@ -2,10 +2,10 @@ package types
 
 import (
 	"github.com/google/uuid"
-	"github.com/thuongtruong1009/gouse/constants"
-	"github.com/thuongtruong1009/gouse/regex"
-	"github.com/thuongtruong1009/gouse/shared"
-	"github.com/thuongtruong1009/gouse/strings"
+	"github.com/thuongtruong109/gouse/constants"
+	"github.com/thuongtruong109/gouse/regex"
+	"github.com/thuongtruong109/gouse/shared"
+	"github.com/thuongtruong109/gouse/strings"
 )
 
 func IsUUID(input string) (bool, error) {

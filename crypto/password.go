@@ -1,7 +1,7 @@
 package crypto
 
 import (
-	"github.com/thuongtruong1009/gouse/constants"
+	"github.com/thuongtruong109/gouse/constants"
 	"golang.org/x/crypto/bcrypt"
 )
 

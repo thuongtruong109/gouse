@@ -1,6 +1,6 @@
 package api
 
-import "github.com/thuongtruong1009/gouse/api"
+import "github.com/thuongtruong109/gouse/api"
 
 /*
 Title: Port Scanner

@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/thuongtruong1009/gouse/shared"
+	"github.com/thuongtruong109/gouse/shared"
 )
 
 func TestIsUUID(t *testing.T) {

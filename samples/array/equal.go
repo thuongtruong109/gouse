@@ -1,6 +1,6 @@
 package array
 
-import "github.com/thuongtruong1009/gouse/array"
+import "github.com/thuongtruong109/gouse/array"
 
 func SampleArrayEqual() {
 	println("--- Compare equal ---")

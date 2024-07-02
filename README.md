@@ -1,21 +1,21 @@
 <div align="center">
-    <img src="https://github.com/thuongtruong1009/gouse/actions/workflows/analysis.yml/badge.svg?branch=main" alt="ci_status">
-    <img src="https://github.com/thuongtruong1009/gouse/actions/workflows/ci.yml/badge.svg?branch=main" alt="ci_status">
-    <a href="https://sonarcloud.io/summary/new_code?id=thuongtruong1009_gouse"><img src="https://sonarcloud.io/api/project_badges/measure?project=thuongtruong1009_gouse&metric=alert_status" alt="sonar"></a>
-    <a href="https://app.codacy.com/gh/thuongtruong1009/gouse/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade"><img src="https://app.codacy.com/project/badge/Grade/21f940894abd4e0384ef8b84adc294da" alt="codacy"></a>
-    <a href="https://app.deepsource.com/gh/thuongtruong1009/gouse/" target="_blank"><img alt="DeepSource" title="DeepSource" src="https://app.deepsource.com/gh/thuongtruong1009/gouse.svg/?label=resolved+issues&show_trend=false&token=VqBk6AsowWePd3khy3AUkvXJ"/></a>
-    <a href="https://goreportcard.com/report/thuongtruong1009/gouse"><img src="https://goreportcard.com/badge/github.com/thuongtruong1009/gouse" alt="go_report_card"></a>
-    <a href="https://codecov.io/gh/thuongtruong1009/gouse"><img src="https://codecov.io/gh/thuongtruong1009/gouse/branch/main/graph/badge.svg" alt="codecov"></a>
-    <a href="https://dl.circleci.com/status-badge/redirect/gh/thuongtruong1009/gouse/tree/main"><img src="https://dl.circleci.com/status-badge/img/gh/thuongtruong1009/gouse/tree/main.svg?style=svg" alt="circleci"></a>
-    <a href="https://pkg.go.dev/github.com/thuongtruong1009/gouse"><img src="https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square" alt="go.dev"></a>
+    <img src="https://github.com/thuongtruong109/gouse/actions/workflows/analysis.yml/badge.svg?branch=main" alt="ci_status">
+    <img src="https://github.com/thuongtruong109/gouse/actions/workflows/ci.yml/badge.svg?branch=main" alt="ci_status">
+    <a href="https://sonarcloud.io/summary/new_code?id=thuongtruong109_gouse"><img src="https://sonarcloud.io/api/project_badges/measure?project=thuongtruong109_gouse&metric=alert_status" alt="sonar"></a>
+    <a href="https://app.codacy.com/gh/thuongtruong109/gouse/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade"><img src="https://app.codacy.com/project/badge/Grade/21f940894abd4e0384ef8b84adc294da" alt="codacy"></a>
+    <a href="https://app.deepsource.com/gh/thuongtruong109/gouse/" target="_blank"><img alt="DeepSource" title="DeepSource" src="https://app.deepsource.com/gh/thuongtruong109/gouse.svg/?label=resolved+issues&show_trend=false&token=VqBk6AsowWePd3khy3AUkvXJ"/></a>
+    <a href="https://goreportcard.com/report/thuongtruong109/gouse"><img src="https://goreportcard.com/badge/github.com/thuongtruong109/gouse" alt="go_report_card"></a>
+    <a href="https://codecov.io/gh/thuongtruong109/gouse"><img src="https://codecov.io/gh/thuongtruong109/gouse/branch/main/graph/badge.svg" alt="codecov"></a>
+    <a href="https://dl.circleci.com/status-badge/redirect/gh/thuongtruong109/gouse/tree/main"><img src="https://dl.circleci.com/status-badge/img/gh/thuongtruong109/gouse/tree/main.svg?style=svg" alt="circleci"></a>
+    <a href="https://pkg.go.dev/github.com/thuongtruong109/gouse"><img src="https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square" alt="go.dev"></a>
     <img src="./public/count.svg" alt="gouse_functions_count">
-    <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/thuongtruong1009/gouse">
-    <a href=""><img src="https://img.shields.io/github/license/thuongtruong1009/gouse" alt="license"></a>
-    <!-- <a href="https://app.codacy.com/gh/thuongtruong1009/gouse/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_Coverage"><img src="https://app.codacy.com/project/badge/Coverage/21f940894abd4e0384ef8b84adc294da" alt="codacy"></a> -->
-    <!-- <a href="https://sourcegraph.com/github.com/thuongtruong1009/gouse?badge"><img src="https://sourcegraph.com/github.com/thuongtruong1009/gouse/-/badge.svg" alt="sourcegraph"></a> --> 
+    <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/thuongtruong109/gouse">
+    <a href=""><img src="https://img.shields.io/github/license/thuongtruong109/gouse" alt="license"></a>
+    <!-- <a href="https://app.codacy.com/gh/thuongtruong109/gouse/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_Coverage"><img src="https://app.codacy.com/project/badge/Coverage/21f940894abd4e0384ef8b84adc294da" alt="codacy"></a> -->
+    <!-- <a href="https://sourcegraph.com/github.com/thuongtruong109/gouse?badge"><img src="https://sourcegraph.com/github.com/thuongtruong109/gouse/-/badge.svg" alt="sourcegraph"></a> --> 
 </div>
 
-# ![](/public/banner.png)
+# ![Banner](/public/banner.png)
 
 ## 🧠 Why Gouse?
 
@@ -91,7 +91,7 @@
 ## 📦 Installation
 
 ```go
-go get github.com/thuongtruong1009/gouse
+go get github.com/thuongtruong109/gouse
 ```
 
 ## 🕯️ Quick Start
@@ -99,7 +99,7 @@ go get github.com/thuongtruong1009/gouse
 ```go
 package main
 
-import "github.com/thuongtruong1009/gouse"
+import "github.com/thuongtruong109/gouse"
 
 func main() {
     gouse.Stater()
@@ -115,7 +115,7 @@ package main
 
 import (
     "fmt"
-    "github.com/thuongtruong1009/gouse/math"
+    "github.com/thuongtruong109/gouse/math"
 )
 
 func main() {
@@ -127,7 +127,7 @@ func main() {
 
 ## 📖 Documentation
 
-- To read the completely package documentation guide, reference at [![Dev package](https://pkg.go.dev/badge/github.com/thuongtruong1009/gouse)](https://pkg.go.dev/github.com/thuongtruong1009/gouse)
+- To read the completely package documentation guide, reference at [![Dev package](https://pkg.go.dev/badge/github.com/thuongtruong109/gouse)](https://pkg.go.dev/github.com/thuongtruong109/gouse)
 
 ## 📊 Benchmark
 
@@ -145,12 +145,12 @@ func main() {
 
 ## 📁 Project Structure
 
-![Project Structure](https://raw.githubusercontent.com/thuongtruong1009/gouse/diagram/project-structure.svg)
+![Project Structure](https://raw.githubusercontent.com/thuongtruong109/gouse/diagram/project-structure.svg)
 
 ## 🛠️ Development
 
 ```bash
-$ git clone https://github.com/thuongtruong1009/gouse.git
+$ git clone https://github.com/thuongtruong109/gouse.git
 ```
 
 - Refer to the [`Contributing Commands`](.github/CONTRIBUTING.md#commands) section for more information on how to develop the project.
@@ -173,8 +173,8 @@ $ git clone https://github.com/thuongtruong1009/gouse.git
 
 - The tool has been tested on a variety of inputs, but it's not perfect.
 - For support in using Gouse, please reach out in the following venues:
-  - [`Raise Issues`](https://github.com/thuongtruong1009/gouse/issues/new) - For generally applicable issues and feedback.
-  - [`Join Discussions`](https://github.com/thuongtruong1009/gouse/discussions) - For ideas, questions, or issues regarding Gouse's design, development, and future.
+  - [`Raise Issues`](https://github.com/thuongtruong109/gouse/issues/new) - For generally applicable issues and feedback.
+  - [`Join Discussions`](https://github.com/thuongtruong109/gouse/discussions) - For ideas, questions, or issues regarding Gouse's design, development, and future.
 
 ## 📜 Changelog
 
@@ -186,9 +186,9 @@ $ git clone https://github.com/thuongtruong1009/gouse.git
 
 - If you like this project, you can sponsor me on:
 
-[![Github sponsor](https://img.shields.io/badge/GitHub_Sponsors-000000?style=for-the-badge&logo=github&logoColor=white)](https://sponsor.com/thuongtruong1009)
-[![Paypal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/thuongtruong1009)
-[![Kofi](https://img.shields.io/badge/ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/thuongtruong1009)
+[![Github sponsor](https://img.shields.io/badge/GitHub_Sponsors-000000?style=for-the-badge&logo=github&logoColor=white)](https://sponsor.com/thuongtruong109)
+[![Paypal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/thuongtruong109)
+[![Kofi](https://img.shields.io/badge/ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/thuongtruong109)
 
 <!-- ![Static Badge](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black) -->
 
@@ -197,9 +197,9 @@ $ git clone https://github.com/thuongtruong1009/gouse.git
 - If you have any questions, please contact me:
 
 [![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:thuongtruongofficial@gmail.com)
-[![Github](https://img.shields.io/badge/Github-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/thuongtruong1009)
-[![Linkedin](https://img.shields.io/badge/Linkedin-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/thuongtruong1009)
-[![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://facebook.com/thuongtruong1009)
+[![Github](https://img.shields.io/badge/Github-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/thuongtruong109)
+[![Linkedin](https://img.shields.io/badge/Linkedin-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/thuongtruong109)
+[![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://facebook.com/thuongtruong109)
 
 ## 🧬 Dependencies
 

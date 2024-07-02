@@ -6,8 +6,8 @@
 import (
 	"fmt"
 	"time"
-	"github.com/thuongtruong1009/gouse/cache"
-	"github.com/thuongtruong1009/gouse/date"
+	"github.com/thuongtruong109/gouse/cache"
+	"github.com/thuongtruong109/gouse/date"
 )
 ```
 ## Functions

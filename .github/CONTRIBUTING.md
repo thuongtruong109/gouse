@@ -32,8 +32,8 @@ Make sure to update the documentation to reflect your changes. This includes the
 
 #### 7. Open a pull request
 
-[issues]: https://github.com/thuongtruong1009/gouse/issues
-[prs]: https://github.com/thuongtruong1009/gouse/pulls
+[issues]: https://github.com/thuongtruong109/gouse/issues
+[prs]: https://github.com/thuongtruong109/gouse/pulls
 
 ### Commands
 
