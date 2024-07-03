@@ -51,7 +51,7 @@ func (c *Tmp) FlushTmp() {
 func (c *Tmp) AllTmp() map[string]string {
 	result := make(map[string]string)
 	for k := range c.Set.Items() {
-		result[k] = types.InterfaceToString(c.GetTmp(k))
+		result[k] = types.ToString(c.GetTmp(k))
 	}
 	return result
 }

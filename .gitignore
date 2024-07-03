@@ -2,10 +2,7 @@
 ./**/.next
 
 *.out
-tmp
 *.txt
-
-*.sh
 
 *.log
 *.html

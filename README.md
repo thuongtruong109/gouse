@@ -1,6 +1,6 @@
 <div align="center">
-    <img src="https://github.com/thuongtruong109/gouse/actions/workflows/analysis.yml/badge.svg?branch=main" alt="ci_status">
     <img src="https://github.com/thuongtruong109/gouse/actions/workflows/ci.yml/badge.svg?branch=main" alt="ci_status">
+    <img src="https://github.com/thuongtruong109/gouse/actions/workflows/analysis.yml/badge.svg?branch=main" alt="codeql_status">
     <a href="https://sonarcloud.io/summary/new_code?id=thuongtruong109_gouse"><img src="https://sonarcloud.io/api/project_badges/measure?project=thuongtruong109_gouse&metric=alert_status" alt="sonar"></a>
     <a href="https://app.codacy.com/gh/thuongtruong109/gouse/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade"><img src="https://app.codacy.com/project/badge/Grade/21f940894abd4e0384ef8b84adc294da" alt="codacy"></a>
     <a href="https://app.deepsource.com/gh/thuongtruong109/gouse/" target="_blank"><img alt="DeepSource" title="DeepSource" src="https://app.deepsource.com/gh/thuongtruong109/gouse.svg/?label=resolved+issues&show_trend=false&token=VqBk6AsowWePd3khy3AUkvXJ"/></a>
@@ -8,11 +8,12 @@
     <a href="https://codecov.io/gh/thuongtruong109/gouse"><img src="https://codecov.io/gh/thuongtruong109/gouse/branch/main/graph/badge.svg" alt="codecov"></a>
     <a href="https://dl.circleci.com/status-badge/redirect/gh/thuongtruong109/gouse/tree/main"><img src="https://dl.circleci.com/status-badge/img/gh/thuongtruong109/gouse/tree/main.svg?style=svg" alt="circleci"></a>
     <a href="https://pkg.go.dev/github.com/thuongtruong109/gouse"><img src="https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square" alt="go.dev"></a>
+    <a href="https://godocs.io/github.com/thuongtruong109/gouse"><img alt="Godoc" src="https://godocs.io/github.com/thuongtruong109/gouse?status.svg"></a>
     <img src="./public/count.svg" alt="gouse_functions_count">
-    <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/thuongtruong109/gouse">
-    <a href=""><img src="https://img.shields.io/github/license/thuongtruong109/gouse" alt="license"></a>
+    <a href="LICENSE"><img src="https://img.shields.io/github/license/thuongtruong109/gouse" alt="license"></a>
+     <!-- <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/thuongtruong109/gouse"> -->
     <!-- <a href="https://app.codacy.com/gh/thuongtruong109/gouse/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_Coverage"><img src="https://app.codacy.com/project/badge/Coverage/21f940894abd4e0384ef8b84adc294da" alt="codacy"></a> -->
-    <!-- <a href="https://sourcegraph.com/github.com/thuongtruong109/gouse?badge"><img src="https://sourcegraph.com/github.com/thuongtruong109/gouse/-/badge.svg" alt="sourcegraph"></a> --> 
+    <!-- <a href="https://sourcegraph.com/github.com/thuongtruong109/gouse?badge"><img src="https://sourcegraph.com/github.com/thuongtruong109/gouse/-/badge.svg" alt="sourcegraph"></a> -->
 </div>
 
 # ![Banner](/public/banner.png)
