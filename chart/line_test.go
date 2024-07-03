@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-const line_output = "../testdata/line_chart.html"
+const line_output = "../mockdata/line_chart.html"
 
 func TestCreateLineChart(t *testing.T) {
 	options := &LineChartOpts{

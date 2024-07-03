@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-const bar_output = "../testdata/bar_chart.html"
+const bar_output = "../mockdata/bar_chart.html"
 
 func TestCreateBarChart(t *testing.T) {
 	options := &BarChartOpts{

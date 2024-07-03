@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-const pie_output = "../testdata/pie_chart.html"
+const pie_output = "../mockdata/pie_chart.html"
 
 func TestCreatePieChart(t *testing.T) {
 	tests := []struct {
