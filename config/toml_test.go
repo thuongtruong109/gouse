@@ -15,7 +15,7 @@ func TestToml(t *testing.T) {
 	}
 
 	var conf configuration
-	if err := Toml("../testdata/config.toml", &conf); err != nil {
+	if err := Toml("../mockdata/config.toml", &conf); err != nil {
 		t.Fatal(err)
 	}
 

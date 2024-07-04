@@ -15,7 +15,7 @@ func TestJson(t *testing.T) {
 	}
 
 	var conf configuration
-	if err := Json("../testdata/config.json", &conf); err != nil {
+	if err := Json("../mockdata/config.json", &conf); err != nil {
 		t.Fatal(err)
 	}
 

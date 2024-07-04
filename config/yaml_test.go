@@ -15,7 +15,7 @@ func TestYaml(t *testing.T) {
 	}
 
 	var conf Configuration
-	if err := Yaml("../testdata/config.yaml", &conf); err != nil {
+	if err := Yaml("../mockdata/config.yaml", &conf); err != nil {
 		t.Fatal(err)
 	}
 
