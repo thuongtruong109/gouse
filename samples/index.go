@@ -1,12 +1,12 @@
 package samples
 
 import (
-	"github.com/thuongtruong109/gouse/samples/api"
 	"github.com/thuongtruong109/gouse/samples/array"
 	"github.com/thuongtruong109/gouse/samples/cache"
 	"github.com/thuongtruong109/gouse/samples/chart"
 	"github.com/thuongtruong109/gouse/samples/config"
 	"github.com/thuongtruong109/gouse/samples/console"
+	"github.com/thuongtruong109/gouse/samples/cron"
 	"github.com/thuongtruong109/gouse/samples/crypto"
 	"github.com/thuongtruong109/gouse/samples/date"
 	"github.com/thuongtruong109/gouse/samples/function"
@@ -19,23 +19,24 @@ import (
 	math_fomular "github.com/thuongtruong109/gouse/samples/math/fomular"
 	math_geometry "github.com/thuongtruong109/gouse/samples/math/geometry"
 	math_operator "github.com/thuongtruong109/gouse/samples/math/operator"
+	"github.com/thuongtruong109/gouse/samples/media"
 	"github.com/thuongtruong109/gouse/samples/net"
 	"github.com/thuongtruong109/gouse/samples/number"
+	"github.com/thuongtruong109/gouse/samples/os"
 	"github.com/thuongtruong109/gouse/samples/regex"
 	"github.com/thuongtruong109/gouse/samples/strings"
 	"github.com/thuongtruong109/gouse/samples/structs"
-	"github.com/thuongtruong109/gouse/samples/tools"
 	types_cast "github.com/thuongtruong109/gouse/samples/types/cast"
 	types_check "github.com/thuongtruong109/gouse/samples/types/check"
 )
 
 func Run() {
-	apiSample()
 	arraySample()
 	cacheSample()
 	chartSample()
 	configSample()
 	consoleSample()
+	cronSample()
 	cryptoSample()
 	dateSample()
 	functionSample()
@@ -44,16 +45,11 @@ func Run() {
 	mathSample()
 	netSample()
 	numberSample()
+	osSample()
 	regexSample()
 	stringSample()
 	structSample()
-	toolsSample()
 	typeSample()
-}
-
-func apiSample() {
-	api.SampleApiPortScanner()
-	api.SampleApiPortChecker()
 }
 
 func arraySample() {
@@ -122,6 +118,10 @@ func consoleSample() {
 	console.SampleConsoleParallel()
 	console.SampleConsoleDir()
 	console.SampleConsoleGlamour()
+}
+
+func cronSample() {
+	cron.SampleCronRun()
 }
 
 func cryptoSample() {
@@ -235,6 +235,11 @@ func mathSample() {
 	math_geometry.SampleMathPolygon()
 }
 
+func mediaSample() {
+	media.SampleMediaCanvas()
+	media.SampleMediaPngToJpg()
+}
+
 func netSample() {
 	net.SampleNetOpen()
 	net.SampleNetEncode()
@@ -243,12 +248,22 @@ func netSample() {
 	net.SampleNetCheckWithStatusCode()
 	net.SampleNetHeader()
 	net.SampleNetConnectTime()
+	net.SampleNetProxy()
+	net.SampleApiPortScanner()
+	net.SampleApiPortChecker()
 }
 
 func numberSample() {
 	number.SampleNumRandom()
 	number.SampleNumClamp()
 	number.SampleNumInRange()
+}
+
+func osSample() {
+	os.SampleOsSystem()
+	os.SampleOsDisk()
+	os.SampleOsCpu()
+	os.SampleOsProfile()
 }
 
 func regexSample() {
@@ -312,11 +327,6 @@ func structSample() {
 
 	structs.SampleStructClone()
 	structs.SampleStructHas()
-}
-
-func toolsSample() {
-	tools.SampleToolDoc()
-	tools.SampleToolProfile()
 }
 
 func typeSample() {

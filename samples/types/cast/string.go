@@ -18,7 +18,7 @@ func SampleTypeCastToString() {
 	println("Cast int to string: ", types.IntToString(1))
 	fmt.Println("Cast float to string: ", types.FloatToString(1.1))
 	println("Cast bool to string: ", types.BoolToString(true))
-	println("Cast interface to string: ", types.InterfaceToString([]int{1, 2, 3}))
+	println("Cast interface to string: ", types.ToString([]int{1, 2, 3}))
 	println("Cast bytes to string: ", types.BytesToString([]byte{49, 50, 51}))
 	println("Cast rune to string: ", types.RuneToString('a'))
 }

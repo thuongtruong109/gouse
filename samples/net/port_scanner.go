@@ -1,6 +1,6 @@
-package api
+package net
 
-import "github.com/thuongtruong109/gouse/api"
+import "github.com/thuongtruong109/gouse/net"
 
 /*
 Title: Port Scanner
@@ -10,5 +10,5 @@ Input: protocol, hostname, start, end
 */
 
 func SampleApiPortScanner() {
-	api.PortScanner("tcp", "127.0.0.1", 3000, 8080)
+	net.PortScanner("tcp", "127.0.0.1", 3000, 8080)
 }

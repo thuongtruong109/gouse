@@ -1,9 +1,9 @@
-package api
+package net
 
 import (
 	"fmt"
 
-	"github.com/thuongtruong109/gouse/api"
+	"github.com/thuongtruong109/gouse/net"
 )
 
 /*
@@ -14,6 +14,6 @@ Input: protocol, hostname, port
 */
 
 func SampleApiPortChecker() {
-	open := api.PortChecker("tcp", "localhost", 1313)
+	open := net.PortChecker("tcp", "localhost", 1313)
 	fmt.Printf("Port Open: %t\n", open)
 }

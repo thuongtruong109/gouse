@@ -1,10 +1,10 @@
-package tools
+package os
 
-import "github.com/thuongtruong109/gouse/tools"
+import "github.com/thuongtruong109/gouse/os"
 
-func SampleToolProfile() {
+func SampleOsProfile() {
 	var cpuprofile, memprofile = "cpu.pprof", "mem.pprof"
-	tools.Profile(cpuprofile, memprofile)
+	os.Profile(cpuprofile, memprofile)
 
 	// run this command to test
 	// go tool pprof <cpu.pprof_or_mem.pprof>
