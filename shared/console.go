@@ -13,4 +13,5 @@ const (
 	ORANGE_FG  string = "\033[38;5;208m"
 	BLUE_FG    string = "\033[38;5;27m"
 	MAGENTA_FG string = "\033[38;5;13m"
+	Gray string = "\033[37m"
 )
