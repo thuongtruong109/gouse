@@ -90,7 +90,7 @@ func BoolToString(data bool) string {
 	return fmt.Sprintf("%t", data)
 }
 
-func InterfaceToString(data interface{}) string {
+func ToString(data interface{}) string {
 	return fmt.Sprintf("%v", data)
 }
 

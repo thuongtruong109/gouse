@@ -152,15 +152,27 @@ func TestMapAsString(t *testing.T) {
 	result := MapAsString(data)
 	expected := "One: one\nTwo: two\nThree: three\n"
 
-	// if result != expected {
-	// 	t.Errorf("Expected %s, got %s", expected, result)
-	// }
-
 	resultType := reflect.TypeOf(result)
 	expectedType := reflect.TypeOf(expected)
 
 	if resultType != expectedType {
 		t.Errorf("Expected %s, got %s", expectedType, resultType)
+	}
+}
+
+func TestToString(t *testing.T) {
+	type testStruct struct {
+		One   int
+		Two   string
+		Three bool
+	}
+
+	data := testStruct{1, "two", true}
+	result := ToString(data)
+	expected := "{1 two true}"
+
+	if result != expected {
+		t.Errorf("Expected %s, got %s", expected, result)
 	}
 }
 
@@ -248,26 +260,6 @@ func TestMapAsString(t *testing.T) {
 // 	data := complex(1, 1)
 // 	result := ComplexToString(data)
 // 	expected := "1+1i"
-
-// 	if result != expected {
-// 		t.Errorf("Expected %s, got %s", expected, result)
-// 	}
-// }
-
-// func TestStringToInterface(t *testing.T) {
-// 	data := "test"
-// 	result := StringToInterface(data)
-// 	expected := "test"
-
-// 	if result != expected {
-// 		t.Errorf("Expected %s, got %s", expected, result)
-// 	}
-// }
-
-// func TestInterfaceToString(t *testing.T) {
-// 	data := "test"
-// 	result := InterfaceToString(data)
-// 	expected := "test"
 
 // 	if result != expected {
 // 		t.Errorf("Expected %s, got %s", expected, result)
