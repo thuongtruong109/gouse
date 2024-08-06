@@ -4,8 +4,7 @@
 
 ```go
 import (
-	"github.com/thuongtruong109/gouse/net"
-)
+	"github.com/thuongtruong109/gouse/net")
 ```
 ## Functions
 
@@ -19,8 +18,15 @@ func SampleNetCheck() {
 		panic(err)
 	}
 	println("Response: ", ok)
-}
+}```
+## Imports
+
+```go
+import (
+	"github.com/thuongtruong109/gouse/net")
 ```
+## Functions
+
 
 ### SampleNetCheckWithStatusCode
 
@@ -31,5 +37,4 @@ func SampleNetCheckWithStatusCode() {
 		panic(err)
 	}
 	println("Status code: ", statusCode)
-}
-```
+}```

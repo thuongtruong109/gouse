@@ -4,8 +4,7 @@
 
 ```go
 import (
-	"github.com/thuongtruong109/gouse/net"
-)
+	"github.com/thuongtruong109/gouse/net")
 ```
 ## Functions
 
@@ -15,13 +14,19 @@ import (
 ```go
 func SampleNetEncode() {
 	println("Encode: ", net.Encode("https://google.com"))
-}
+}```
+## Imports
+
+```go
+import (
+	"github.com/thuongtruong109/gouse/net")
 ```
+## Functions
+
 
 ### SampleNetDecode
 
 ```go
 func SampleNetDecode() {
 	println("Decode: ", net.Decode("https%3A%2F%2Fgoogle.com"))
-}
-```
+}```

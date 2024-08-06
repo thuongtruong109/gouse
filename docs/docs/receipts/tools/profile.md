@@ -4,8 +4,7 @@
 
 ```go
 import (
-	"github.com/thuongtruong109/gouse/tools"
-)
+	"github.com/thuongtruong109/gouse/tools")
 ```
 ## Functions
 
@@ -47,5 +46,4 @@ func SampleToolProfile() {
 	//	View specific data list in web browser
 	//
 	// http://localhost:8081/debug/pprof/goroutine?debug=1
-}
-```
+}```

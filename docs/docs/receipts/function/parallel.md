@@ -4,10 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"time"
-	"github.com/thuongtruong109/gouse/function"
-)
+	"fmt"	"time"	"github.com/thuongtruong109/gouse/function")
 ```
 ## Functions
 
@@ -38,5 +35,4 @@ func SampleFuncParallel() {
 	}
 
 	function.Parallelize(function1, function2, function3)
-}
-```
+}```

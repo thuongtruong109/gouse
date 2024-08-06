@@ -4,10 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/net"
-	"github.com/thuongtruong109/gouse/types"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/net"	"github.com/thuongtruong109/gouse/types")
 ```
 ## Functions
 
@@ -22,5 +19,4 @@ func SampleNetHeader() {
 	}
 
 	fmt.Println(types.MapAsString(header))
-}
-```
+}```

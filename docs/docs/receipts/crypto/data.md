@@ -4,9 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/crypto"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/crypto")
 ```
 ## Functions
 
@@ -24,8 +22,15 @@ func SampleCryptoEncode() {
 	}
 	fmt.Println("Raw data:", string(data))
 	fmt.Println("Encoded data:", string(encodedData))
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/crypto")
 ```
+## Functions
+
 
 ### SampleCryptoDecode
 
@@ -39,5 +44,4 @@ func SampleCryptoDecode() {
 	}
 	fmt.Println("Raw encoded data:", string(data))
 	fmt.Println("Decoded data:", string(decodedData))
-}
-```
+}```

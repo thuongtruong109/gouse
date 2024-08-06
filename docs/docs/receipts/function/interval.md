@@ -4,8 +4,7 @@
 
 ```go
 import (
-	"github.com/thuongtruong109/gouse/function"
-)
+	"github.com/thuongtruong109/gouse/function")
 ```
 ## Functions
 
@@ -17,5 +16,4 @@ func SampleFuncInterval() {
 	function.Interval(func() {
 		println("Interval")
 	}, 1)
-}
-```
+}```

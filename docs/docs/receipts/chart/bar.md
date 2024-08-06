@@ -4,8 +4,7 @@
 
 ```go
 import (
-	"github.com/thuongtruong109/gouse/chart"
-)
+	"github.com/thuongtruong109/gouse/chart")
 ```
 ## Functions
 
@@ -27,5 +26,4 @@ func SampleChartBar() {
 	}
 
 	chart.CreateBarChart(newChart)
-}
-```
+}```

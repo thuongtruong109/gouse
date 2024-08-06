@@ -4,9 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/date"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/date")
 ```
 ## Functions
 
@@ -29,16 +27,30 @@ func SampleDateTime() {
 	fmt.Println("UnixMilliToTime:", date.UnixMilliToTime(1000000000))
 	fmt.Println("UnixMicroToTime:", date.UnixMicroToTime(1000000000))
 	fmt.Println("UnixNanoToTime:", date.UnixNanoToTime(1000000000))
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/date")
 ```
+## Functions
+
 
 ### SampleDateISO
 
 ```go
 func SampleDateISO() {
 	println("ISO:", date.ISO())
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/date")
 ```
+## Functions
+
 
 ### SampleDateShort
 
@@ -52,77 +64,139 @@ func SampleDateShort() {
 	println("ShortUnderscore:", date.ShortUnderscore())
 	println("ShortSpace:", date.ShortSpace())
 	println("ShortMonth:", date.ShortMonth())
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/date")
 ```
+## Functions
+
 
 ### SampleDateLong
 
 ```go
 func SampleDateLong() {
 	println("Long:", date.Long())
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/date")
 ```
+## Functions
+
 
 ### SampleDateUTC
 
 ```go
 func SampleDateUTC() {
 	println("UTC:", date.UTC())
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/date")
 ```
+## Functions
+
 
 ### SampleDateToSecond
 
 ```go
 func SampleDateToSecond() {
 	println("ToSecond:", date.ToSecond(1))
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/date")
 ```
+## Functions
+
 
 ### SampleDateToMinute
 
 ```go
 func SampleDateToMinute() {
 	println("ToMinute:", date.ToMinute(1))
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/date")
 ```
+## Functions
+
 
 ### SampleDateToHour
 
 ```go
 func SampleDateToHour() {
 	println("ToHour:", date.ToHour(1))
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/date")
 ```
+## Functions
+
 
 ### SampleDateSleepSecond
 
 ```go
 func SampleDateSleepSecond() {
 	date.SleepSecond(1)
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/date")
 ```
+## Functions
+
 
 ### SampleDateSleepMinute
 
 ```go
 func SampleDateSleepMinute() {
 	date.SleepMinute(1)
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/date")
 ```
+## Functions
+
 
 ### SampleDateSleepHour
 
 ```go
 func SampleDateSleepHour() {
 	date.SleepHour(1)
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/date")
 ```
+## Functions
+
 
 ### SampleDateClock
 
 ```go
 func SampleDateClock() {
 	date.TerminalClock()
-}
-```
+}```

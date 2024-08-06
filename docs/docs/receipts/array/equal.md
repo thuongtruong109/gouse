@@ -4,8 +4,7 @@
 
 ```go
 import (
-	"github.com/thuongtruong109/gouse/array"
-)
+	"github.com/thuongtruong109/gouse/array")
 ```
 ## Functions
 
@@ -23,5 +22,4 @@ func SampleArrayEqual() {
 	println("[bool]: ", array.Equal(true, true))
 	println("[complex]: ", array.Equal(1+2i, 1+2i))
 	println("[struct]: ", array.Equal(struct{ a int }{1}, struct{ a int }{1}))
-}
-```
+}```

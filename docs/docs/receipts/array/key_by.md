@@ -4,8 +4,7 @@
 
 ```go
 import (
-	"github.com/thuongtruong109/gouse/array"
-)
+	"github.com/thuongtruong109/gouse/array")
 ```
 ## Functions
 
@@ -42,5 +41,4 @@ func SampleArrayKeyBy() {
 	println("[struct]: ", array.KeyBy([]struct{ a int }{{-1}, {-2}, {3}, {4}, {5}, {6}}, func(v struct{ a int }) bool {
 		return v.a == 3
 	}))
-}
-```
+}```

@@ -4,9 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/structs"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/structs")
 ```
 ## Functions
 
@@ -23,5 +21,4 @@ func SampleStructGet() {
 
 	name := structs.Get(person, "Name")
 	fmt.Printf("Name: %s\n", name)
-}
-```
+}```

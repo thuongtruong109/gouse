@@ -4,8 +4,7 @@
 
 ```go
 import (
-	"github.com/thuongtruong109/gouse/array"
-)
+	"github.com/thuongtruong109/gouse/array")
 ```
 ## Functions
 
@@ -22,5 +21,4 @@ func SampleArrayIncludes() {
 	println("[rune]: ", array.Includes([]rune{'a', 'b', 'c'}, 'a'))
 	println("[complex]: ", array.Includes([]complex128{1 + 2i, 2 + 3i}, 1+2i))
 	println("[struct]: ", array.Includes([]struct{ a int }{{1}, {2}}, struct{ a int }{3}))
-}
-```
+}```

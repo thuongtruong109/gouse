@@ -4,9 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/structs"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/structs")
 ```
 ## Functions
 
@@ -26,5 +24,4 @@ func SampleStructHas() {
 
 	hasEmpty := structs.HasEmpty(person, "Email")
 	fmt.Printf("Has empty: %+v\n", hasEmpty)
-}
-```
+}```

@@ -4,9 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/math"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/math")
 ```
 ## Functions
 
@@ -21,5 +19,4 @@ func SampleMathCube() {
 	println("Perimeter of cube (float): ", fmt.Sprintf("%f", math.PeriCubeF(10.0)))
 	println("Volume of cube (integer): ", math.VolCube(10))
 	println("Volume of cube (float): ", fmt.Sprintf("%f", math.VolCubeF(10.0)))
-}
-```
+}```

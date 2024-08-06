@@ -4,9 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/types"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/types")
 ```
 ## Functions
 
@@ -20,8 +18,15 @@ func SampleTypeCheckUUID() {
 		println(err.Error())
 	}
 	println("Check is valid uuid: ", isValid)
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/types")
 ```
+## Functions
+
 
 ### SampleTypeCheckGmail
 
@@ -38,8 +43,15 @@ func SampleTypeCheckGmail() {
 			fmt.Printf("%s - valid gmail\n", email)
 		}
 	}
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/types")
 ```
+## Functions
+
 
 ### SampleTypeCheckYahoo
 
@@ -56,8 +68,15 @@ func SampleTypeCheckYahoo() {
 			fmt.Printf("%s - valid yahoo email\n", email)
 		}
 	}
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/types")
 ```
+## Functions
+
 
 ### SampleTypeCheckOutlook
 
@@ -74,8 +93,15 @@ func SampleTypeCheckOutlook() {
 			fmt.Printf("%s - valid outlook email\n", email)
 		}
 	}
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/types")
 ```
+## Functions
+
 
 ### SampleTypeCheckEdu
 
@@ -92,8 +118,15 @@ func SampleTypeCheckEdu() {
 			fmt.Printf("%s - valid education email\n", email)
 		}
 	}
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/types")
 ```
+## Functions
+
 
 ### SampleTypeCheckEmail
 
@@ -110,8 +143,15 @@ func SampleTypeCheckEmail() {
 			fmt.Printf("%s - valid custom domain email\n", email)
 		}
 	}
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/types")
 ```
+## Functions
+
 
 ### SampleTypeCheckUsername
 
@@ -134,8 +174,15 @@ func SampleTypeCheckUsername() {
 			fmt.Printf("%s - valid username\n", username)
 		}
 	}
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/types")
 ```
+## Functions
+
 
 ### SampleTypeCheckPassword
 
@@ -159,8 +206,15 @@ func SampleTypeCheckPassword() {
 			fmt.Printf("%s - valid password\n", password)
 		}
 	}
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/types")
 ```
+## Functions
+
 
 ### SampleTypeCheckPhone
 
@@ -188,5 +242,4 @@ func SampleTypeCheckPhone() {
 			fmt.Printf("%s - valid phone number\n", phoneNumber)
 		}
 	}
-}
-```
+}```

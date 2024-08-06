@@ -4,9 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/net"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/net")
 ```
 ## Functions
 
@@ -21,5 +19,4 @@ func SampleNetConnectTime() {
 	}
 
 	fmt.Printf("Connect time: %fs\n", connectTime)
-}
-```
+}```

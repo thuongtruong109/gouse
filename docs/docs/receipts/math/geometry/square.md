@@ -4,9 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/math"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/math")
 ```
 ## Functions
 
@@ -19,5 +17,4 @@ func SampleMathSquare() {
 	println("Area of square (float): ", fmt.Sprintf("%f", math.AreaSquareF(10.0)))
 	println("Perimeter of square (integer): ", math.PeriSquare(10))
 	println("Perimeter of square (float): ", fmt.Sprintf("%f", math.PeriSquareF(10.0)))
-}
-```
+}```

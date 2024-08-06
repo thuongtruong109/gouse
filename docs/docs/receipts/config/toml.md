@@ -4,9 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/config"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/config")
 ```
 ## Functions
 
@@ -34,5 +32,4 @@ func SampleConfigToml() {
 	fmt.Println("Mysql Username:", myConf.Mysql.Username)
 	fmt.Println("Mysql Password:", myConf.Mysql.Password)
 	fmt.Println("Mysql Database:", myConf.Mysql.Database)
-}
-```
+}```

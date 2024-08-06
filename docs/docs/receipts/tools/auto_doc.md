@@ -4,8 +4,7 @@
 
 ```go
 import (
-	"github.com/thuongtruong109/gouse/tools"
-)
+	"github.com/thuongtruong109/gouse/tools")
 ```
 ## Functions
 
@@ -15,5 +14,4 @@ import (
 ```go
 func SampleToolDoc() {
 	tools.Doc("docs", "gen")
-}
-```
+}```

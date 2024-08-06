@@ -4,8 +4,7 @@
 
 ```go
 import (
-	"github.com/thuongtruong109/gouse/function"
-)
+	"github.com/thuongtruong109/gouse/function")
 ```
 ## Functions
 
@@ -18,5 +17,4 @@ func SampleFuncRetry() {
 		println("Retry")
 		return nil
 	}, 3, 1)
-}
-```
+}```

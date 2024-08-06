@@ -17,13 +17,13 @@ build:
 
 doc:
 	@echo "Generating docs..."
-	go run docs/generate.go ./samples ./samples/api ./samples/array ./samples/cache ./samples/chart ./samples/config ./samples/crypto ./samples/date ./samples/function ./samples/helper ./samples/io ./samples/io/dir ./samples/io/file ./samples/io/path ./samples/math/check ./samples/math/operator ./samples/math/geometry ./samples/math/fomular ./samples/net ./samples/number ./samples/regex ./samples/strings ./samples/structs ./samples/tools ./samples/types/cast ./samples/types/check
+	go run cmd/doc.go ./samples ./samples/api ./samples/array ./samples/cache ./samples/chart ./samples/config ./samples/crypto ./samples/date ./samples/function ./samples/helper ./samples/io ./samples/io/dir ./samples/io/file ./samples/io/path ./samples/math/check ./samples/math/operator ./samples/math/geometry ./samples/math/fomular ./samples/math/media ./samples/net ./samples/number ./samples/regex ./samples/strings ./samples/structs ./samples/types/cast ./samples/types/check
 	@echo "Done!"
 
 test:
 	@echo "Running tests..."
 	go clean -testcache
-	go test -v -count=1 -cover -coverprofile=coverage.out ./cache/... ./chart/... ./config/... ./date/... ./number/... ./regex/... ./strings/... ./structs/... ./types/...
+	go test -v -count=1 -cover -coverprofile=coverage.out ./array/... ./cache/... ./chart/... ./config/... ./cron/... ./date/... ./number/... ./regex/... ./strings/... ./structs/... ./types/...
 	go tool cover -func=coverage.out
 	@echo "Done!"
 
@@ -56,7 +56,7 @@ lint:
 
 count:
 	@echo "Counting lines..."
-	bash count.sh public/count.svg true 13708a api array cache chart config connection crypto console date function helper io log math net number regex strings structs tools types
+	bash count.sh public/count.svg array cache chart config connection cron crypto console date function helper io log math media net number os regex strings structs types
 	@echo "Done!"
 
 pre:

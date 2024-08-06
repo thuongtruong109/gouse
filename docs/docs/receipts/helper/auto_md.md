@@ -4,8 +4,7 @@
 
 ```go
 import (
-	"github.com/thuongtruong109/gouse/helper"
-)
+	"github.com/thuongtruong109/gouse/helper")
 ```
 ## Functions
 
@@ -17,5 +16,4 @@ func SampleHelperAutoMdDoc() {
 	inputFilePath := "main.go"
 	outputFilePath := "main.md"
 	helper.AutoMdDoc(inputFilePath, outputFilePath)
-}
-```
+}```

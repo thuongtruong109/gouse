@@ -4,9 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/math"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/math")
 ```
 ## Functions
 
@@ -22,5 +20,4 @@ func SampleMathRect() {
 	println("Diagonal of rectangle (float): ", fmt.Sprintf("%f", math.DiagRectF(10.0, 20.0)))
 	println("Volume of rectangular (integer): ", math.VolRect(10, 20, 30))
 	println("Volume of rectangular (float): ", fmt.Sprintf("%f", math.VolRectF(10.0, 20.0, 30.0)))
-}
-```
+}```

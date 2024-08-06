@@ -4,9 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/array"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/array")
 ```
 ## Functions
 
@@ -21,5 +19,4 @@ func SampleArraySum() {
 	fmt.Println("[float]: ", array.Sum([]float64{1.2, 2.3, 3.4}))
 	println("[rune]: ", array.Sum([]rune{'a', 'b', 'c'}))
 	fmt.Println("[complex]: ", array.Sum([]complex128{1 + 2i, 2 + 3i, 3 + 4i}))
-}
-```
+}```

@@ -4,8 +4,7 @@
 
 ```go
 import (
-	"github.com/thuongtruong109/gouse/io"
-)
+	"github.com/thuongtruong109/gouse/io")
 ```
 ## Functions
 
@@ -21,5 +20,4 @@ func SampleIoReadFileByLine() {
 	for _, v := range data {
 		println(v)
 	}
-}
-```
+}```

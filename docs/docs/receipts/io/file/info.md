@@ -4,9 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/io"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/io")
 ```
 ## Functions
 
@@ -26,5 +24,4 @@ func SampleIoFileInfo() {
 	fmt.Println("File info (with last modified):", data.ModTime)
 	fmt.Println("File info (with directory check): ", data.IsDir)
 	fmt.Printf("File info (with system process): %+v\n", data.Sys)
-}
-```
+}```

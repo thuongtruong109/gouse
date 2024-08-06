@@ -4,9 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/math"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/math")
 ```
 ## Functions
 
@@ -17,5 +15,4 @@ import (
 func SampleMathEllipse() {
 	println("Area of ellipse (integer): ", fmt.Sprintf("%f", math.AreaEllipse(10, 20)))
 	println("Area of ellipse (float): ", fmt.Sprintf("%f", math.AreaEllipseF(10.0, 20.0)))
-}
-```
+}```

@@ -4,9 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/math"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/math")
 ```
 ## Functions
 
@@ -19,5 +17,4 @@ func SampleMathTransition() {
 	println("Speed: ", fmt.Sprintf("%f", math.Speed(distance, time)))
 	println("Distance: ", fmt.Sprintf("%f", math.Distance(speed, time)))
 	println("Time: ", fmt.Sprintf("%f", math.Time(distance, speed)))
-}
-```
+}```

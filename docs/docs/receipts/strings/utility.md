@@ -4,9 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/strings"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/strings")
 ```
 ## Functions
 
@@ -18,8 +16,15 @@ func SampleStringCount() {
 	var str = "hello world wo wo"
 	println("Count words/substr in string (default): ", strings.Count(str))
 	println("Count words/substr in string (with char): ", strings.Count(str, "wo"))
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/strings")
 ```
+## Functions
+
 
 ### SampleStringLines
 
@@ -27,8 +32,15 @@ func SampleStringCount() {
 func SampleStringLines() {
 	var str = "hello world\nwo wo"
 	println("Count lines of string: ", strings.Lines(str))
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/strings")
 ```
+## Functions
+
 
 ### SampleStringIndex
 
@@ -60,8 +72,15 @@ func SampleStringIndex() {
 	if strings.LIndex(str, "oo") == -1 {
 		fmt.Println("Not found")
 	}
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/strings")
 ```
+## Functions
+
 
 ### SampleStringRandom
 
@@ -70,8 +89,15 @@ func SampleStringRandom() {
 	println("Random chain string: ", strings.RandomStr(10))
 
 	println("Random chain number: ", strings.RandomNum(6))
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/strings")
 ```
+## Functions
+
 
 ### SampleStringAt
 
@@ -80,8 +106,15 @@ func SampleStringAt() {
 	var str = "hello world"
 	println("At string: ", strings.At(str, 1))
 	println("At string: ", strings.At(str, -5))
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/strings")
 ```
+## Functions
+
 
 ### SampleStringCodePointAt
 
@@ -90,8 +123,15 @@ func SampleStringCodePointAt() {
 	var str = "hello world"
 	println("Code point at string: ", strings.CodePointAt(str, 1))
 	println("Code point at string: ", strings.CodePointAt(str, -5))
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/strings")
 ```
+## Functions
+
 
 ### SampleStringCodePoint
 
@@ -103,8 +143,15 @@ func SampleStringCodePoint() {
 	for _, asciiValue := range asciiValues {
 		fmt.Printf("%d ", asciiValue)
 	}
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/strings")
 ```
+## Functions
+
 
 ### SampleStringFromCodePointAt
 
@@ -112,13 +159,19 @@ func SampleStringCodePoint() {
 func SampleStringFromCodePointAt() {
 	println("From code point at string: ", strings.FromCodePointAt(9733))
 	println("From code point at string: ", strings.FromCodePointAt(9731))
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/strings")
 ```
+## Functions
+
 
 ### SampleStringFromCodePoint
 
 ```go
 func SampleStringFromCodePoint() {
 	println("From code point string: ", strings.FromCodePoint(104, 101, 108, 108, 111, 32, 119, 111, 114, 108, 100))
-}
-```
+}```
