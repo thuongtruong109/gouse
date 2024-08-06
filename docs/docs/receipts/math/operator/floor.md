@@ -4,8 +4,7 @@
 
 ```go
 import (
-	"github.com/thuongtruong109/gouse/math"
-)
+	"github.com/thuongtruong109/gouse/math")
 ```
 ## Functions
 
@@ -16,5 +15,4 @@ import (
 func SampleMathFloor() {
 	var num = 10.49
 	println("Floor number: ", math.Floor(num))
-}
-```
+}```

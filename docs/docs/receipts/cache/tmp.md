@@ -4,11 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"time"
-	"github.com/thuongtruong109/gouse/cache"
-	"github.com/thuongtruong109/gouse/date"
-)
+	"fmt"	"time"	"github.com/thuongtruong109/gouse/cache"	"github.com/thuongtruong109/gouse/date")
 ```
 ## Functions
 
@@ -48,5 +44,4 @@ func SampleCacheTmp() {
 
 	all = newCache.AllTmp()
 	fmt.Println("All temp cache values (after flush):", all)
-}
-```
+}```

@@ -4,8 +4,7 @@
 
 ```go
 import (
-	"github.com/thuongtruong109/gouse/net"
-)
+	"github.com/thuongtruong109/gouse/net")
 ```
 ## Functions
 
@@ -15,5 +14,4 @@ import (
 ```go
 func SampleNetOpen() {
 	net.Open("https://google.com")
-}
-```
+}```

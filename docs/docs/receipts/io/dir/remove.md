@@ -4,8 +4,7 @@
 
 ```go
 import (
-	"github.com/thuongtruong109/gouse/io"
-)
+	"github.com/thuongtruong109/gouse/io")
 ```
 ## Functions
 
@@ -19,5 +18,4 @@ func SampleIoRemoveDir() {
 		println(err3.Error())
 	}
 	println("dir removed")
-}
-```
+}```

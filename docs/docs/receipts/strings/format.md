@@ -4,9 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/strings"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/strings")
 ```
 ## Functions
 
@@ -17,8 +15,15 @@ import (
 func SampleStringSplit() {
 	var str = "hello world"
 	fmt.Println("Split string by separator: ", strings.Split(str, "l"))
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/strings")
 ```
+## Functions
+
 
 ### SampleStringWords
 
@@ -27,8 +32,15 @@ func SampleStringWords() {
 	var str = "hello world"
 	println("Split string to array of words: ", strings.Words(str))
 
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/strings")
 ```
+## Functions
+
 
 ### SampleStringReverse
 
@@ -36,8 +48,15 @@ func SampleStringWords() {
 func SampleStringReverse() {
 	var str = "hello world"
 	println("Reverse string: ", strings.Reverse(str))
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/strings")
 ```
+## Functions
+
 
 ### SampleStringLower
 
@@ -47,8 +66,15 @@ func SampleStringLower() {
 	println("Lower string (string): ", strings.Lowers(str))
 	println("Lower string (byte): ", strings.Lower(str[0]))
 	println("Lower first string: ", strings.LowerFirst(str))
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/strings")
 ```
+## Functions
+
 
 ### SampleStringUpper
 
@@ -58,8 +84,15 @@ func SampleStringUpper() {
 	println("Upper string (string): ", strings.Uppers(str))
 	println("Upper string (byte): ", strings.Upper(str[0]))
 	println("Upper first string: ", strings.UpperFirst(str))
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/strings")
 ```
+## Functions
+
 
 ### SampleStringRepeat
 
@@ -67,8 +100,15 @@ func SampleStringUpper() {
 func SampleStringRepeat() {
 	var str = "hello world"
 	println("Repeat string: ", strings.Repeat(str, 3))
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/strings")
 ```
+## Functions
+
 
 ### SampleStringTruncate
 
@@ -77,8 +117,15 @@ func SampleStringTruncate() {
 	var str = "hello world"
 	println("Truncate string (default): ", strings.Truncate(str, 5))
 	println("Truncate string (custom): ", strings.Truncate(str, 5, "***"))
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/strings")
 ```
+## Functions
+
 
 ### SampleStringReplace
 
@@ -86,8 +133,15 @@ func SampleStringTruncate() {
 func SampleStringReplace() {
 	var str = "hello world, this is world"
 	println("Replace string: ", strings.Replace(str, "world", "golang"))
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/strings")
 ```
+## Functions
+
 
 ### SampleStringTrim
 
@@ -97,8 +151,15 @@ func SampleStringTrim() {
 	println("Trim string: ", strings.Trim(str))
 	println("Trim left string: ", strings.LTrim(str))
 	println("Trim right string: ", strings.RTrim(str))
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/strings")
 ```
+## Functions
+
 
 ### SampleStringTrimBlank
 
@@ -107,8 +168,15 @@ func SampleStringTrimBlank() {
 	println("Trim blank string: ", strings.TrimBlank("   hello world, this is world   "))
 	println("Trim left blank string: ", strings.TrimBlank("   hello world, this is world   \t"))
 	println("Trim right blank string: ", strings.TrimBlank("   hello world, this is world   \n"))
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/strings")
 ```
+## Functions
+
 
 ### SampleStringTrimPrefix
 
@@ -117,8 +185,15 @@ func SampleStringTrimPrefix() {
 	var str = "   hello world, this is world   "
 	println("Trim prefix string: ", strings.TrimPrefix(str, "   "))
 	println("Trim suffix string: ", strings.TrimSuffix(str, "   "))
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/strings")
 ```
+## Functions
+
 
 ### SampleStringTrimSuffix
 
@@ -126,8 +201,15 @@ func SampleStringTrimPrefix() {
 func SampleStringTrimSuffix() {
 	var str = "   hello world, this is world   "
 	println("Trim suffix string: ", strings.TrimSuffix(str, "   "))
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/strings")
 ```
+## Functions
+
 
 ### SampleStringJoin
 
@@ -135,16 +217,30 @@ func SampleStringTrimSuffix() {
 func SampleStringJoin() {
 	var str = []string{"hello", "world"}
 	println("Join string: ", strings.Join(str, "-"))
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/strings")
 ```
+## Functions
+
 
 ### SampleStringConcat
 
 ```go
 func SampleStringConcat() {
 	println("Concat string: ", strings.Concat("hello", "world"))
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/strings")
 ```
+## Functions
+
 
 ### SampleStringSubStr
 
@@ -155,8 +251,15 @@ func SampleStringSubStr() {
 	println("Sub string: ", strings.SubStr(str, 0, 1))
 	println("Sub string (only start): ", strings.SubStr(str, -5))
 	println("Sub string (with negative index): ", strings.SubStr(str, -5, -1))
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/strings")
 ```
+## Functions
+
 
 ### SampleStringSlice
 
@@ -168,8 +271,15 @@ func SampleStringSlice() {
 	println("Slice string (only start): ", strings.Slice(str, -5))
 	println("Slice string (not parameters): ", strings.Slice(str))
 	println("Slice string (with negative index): ", strings.Slice(str, -5, -1))
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/strings")
 ```
+## Functions
+
 
 ### SampleStringSplice
 
@@ -179,8 +289,15 @@ func SampleStringSplice() {
 	println("Splice string (default not replace): ", strings.Splice(str, 0, 5))
 	println("Splice string (with replace): ", strings.Splice(str, 1, 5, "golang"))
 	println("Splice string (with replace multiple): ", strings.Splice(str, 1, 5, "golang1", "golang2"))
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/strings")
 ```
+## Functions
+
 
 ### SampleStringStartsWith
 
@@ -188,8 +305,15 @@ func SampleStringSplice() {
 func SampleStringStartsWith() {
 	var str = "hello world, this is world"
 	println("Starts with: ", strings.StartsWith(str, "hello"))
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/strings")
 ```
+## Functions
+
 
 ### SampleStringEndsWith
 
@@ -197,8 +321,15 @@ func SampleStringStartsWith() {
 func SampleStringEndsWith() {
 	var str = "hello world, this is world"
 	println("Ends with: ", strings.EndsWith(str, "world"))
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/strings")
 ```
+## Functions
+
 
 ### SampleStringEscape
 
@@ -206,8 +337,15 @@ func SampleStringEndsWith() {
 func SampleStringEscape() {
 	var str = "This is a <b>bold</b> statement & \"quote\" – © ®"
 	println("Escape string: ", strings.Escape(str))
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/strings")
 ```
+## Functions
+
 
 ### SampleStringUnescape
 
@@ -215,8 +353,15 @@ func SampleStringEscape() {
 func SampleStringUnescape() {
 	var str = "This is a &lt;b&gt;bold&lt;/b&gt; statement &amp; &quot;quote&quot; – © ®"
 	println("Unescape string: ", strings.Unescape(str))
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/strings")
 ```
+## Functions
+
 
 ### SampleStringPad
 
@@ -225,5 +370,4 @@ func SampleStringPad() {
 	var str = "hello world"
 	println("Pad-left string: ", strings.PadStart(str, 20, '$'))
 	println("Pad-right string: ", strings.PadEnd(str, 20, '@'))
-}
-```
+}```

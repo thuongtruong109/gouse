@@ -4,9 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/types"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/types")
 ```
 ## Functions
 
@@ -20,8 +18,15 @@ func SampleTypeStringConvert() {
 	println("Convert string to bool: ", types.StringToBool("true"))
 	fmt.Println("Convert string to bytes: ", string(types.StringToBytes("1")), "->", types.StringToBytes("1"))
 	fmt.Println("Convert strings to bytes: ", string(types.StringsToBytes([]string{"1", "2", "3"})), "->", types.StringsToBytes([]string{"1", "2", "3"}))
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/types")
 ```
+## Functions
+
 
 ### SampleTypeCastToString
 
@@ -30,8 +35,7 @@ func SampleTypeCastToString() {
 	println("Cast int to string: ", types.IntToString(1))
 	fmt.Println("Cast float to string: ", types.FloatToString(1.1))
 	println("Cast bool to string: ", types.BoolToString(true))
-	println("Cast interface to string: ", types.InterfaceToString([]int{1, 2, 3}))
+	println("Cast interface to string: ", types.ToString([]int{1, 2, 3}))
 	println("Cast bytes to string: ", types.BytesToString([]byte{49, 50, 51}))
 	println("Cast rune to string: ", types.RuneToString('a'))
-}
-```
+}```

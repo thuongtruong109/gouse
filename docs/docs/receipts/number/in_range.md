@@ -4,8 +4,7 @@
 
 ```go
 import (
-	"github.com/thuongtruong109/gouse/number"
-)
+	"github.com/thuongtruong109/gouse/number")
 ```
 ## Functions
 
@@ -15,5 +14,4 @@ import (
 ```go
 func SampleNumInRange() {
 	println("Check number is in range: ", number.InRange(5, 1, 10))
-}
-```
+}```

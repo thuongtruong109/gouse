@@ -4,9 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/regex"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/regex")
 ```
 ## Functions
 
@@ -22,5 +20,4 @@ func SampleRegexMatchIndex() {
 	} else {
 		println("Not found index match regex")
 	}
-}
-```
+}```

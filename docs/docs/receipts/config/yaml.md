@@ -4,9 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/config"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/config")
 ```
 ## Functions
 
@@ -36,5 +34,4 @@ func SampleConfigYaml() {
 	fmt.Println("Server Host:", myConf.Server.Host)
 	fmt.Println("DB Username:", myConf.Database.Username)
 	fmt.Println("DB Password:", myConf.Database.Password)
-}
-```
+}```

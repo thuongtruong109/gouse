@@ -4,9 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/regex"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/regex")
 ```
 ## Functions
 
@@ -16,5 +14,4 @@ import (
 ```go
 func SampleRegexIsMatch() {
 	fmt.Println("Match string with regex: ", regex.IsMatch(`[a-z]+\s[a-z]+`, "hello world"))
-}
-```
+}```

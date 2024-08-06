@@ -4,9 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/types"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/types")
 ```
 ## Functions
 
@@ -29,5 +27,4 @@ func SampleTypeStructConvert() {
 
 	println("Struct to string: ", types.StructToString(companyInfo))
 	fmt.Println("Struct to map: ", types.StructToMap(companyInfo))
-}
-```
+}```

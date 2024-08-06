@@ -39,7 +39,7 @@ package connection
 // 		fieldName := t.Field(i).Name
 // 		fieldValue := v.Field(i).Interface()
 // 		fields = append(fields, fieldName)
-// 		values = append(values, types.InterfaceToString(fieldValue))
+// 		values = append(values, types.ToString(fieldValue))
 // 	}
 
 // 	query := fmt.Sprintf("INSERT INTO %s (%s) VALUES ('%s')", t.Name(), strings.Join(fields, ", "), strings.Join(values, "', '"))
@@ -63,7 +63,7 @@ package connection
 // 		fieldName := t.Field(i).Name
 // 		fieldValue := v.Field(i).Interface()
 // 		fields = append(fields, fieldName)
-// 		values = append(values, types.InterfaceToString(fieldValue))
+// 		values = append(values, types.ToString(fieldValue))
 // 	}
 
 // 	query := fmt.Sprintf("UPDATE %s SET %s WHERE id = %s", t.Name(), strings.Join(fields, ", "), strings.Join(values, "', '"))
@@ -84,7 +84,7 @@ package connection
 
 // 	for i := 0; i < v.NumField(); i++ {
 // 		fieldValue := v.Field(i).Interface()
-// 		values = append(values, types.InterfaceToString(fieldValue))
+// 		values = append(values, types.ToString(fieldValue))
 // 	}
 
 // 	query := fmt.Sprintf("DELETE FROM %s WHERE id = %s", t.Name(), strings.Join(values, "', '"))
@@ -105,7 +105,7 @@ package connection
 
 // 	for i := 0; i < v.NumField(); i++ {
 // 		fieldValue := v.Field(i).Interface()
-// 		values = append(values, types.InterfaceToString(fieldValue))
+// 		values = append(values, types.ToString(fieldValue))
 // 	}
 
 // 	query := fmt.Sprintf("SELECT * FROM %s WHERE id = %s", t.Name(), strings.Join(values, "', '"))

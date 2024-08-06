@@ -4,8 +4,7 @@
 
 ```go
 import (
-	"github.com/thuongtruong109/gouse/array"
-)
+	"github.com/thuongtruong109/gouse/array")
 ```
 ## Functions
 
@@ -20,5 +19,4 @@ func SampleArrayMax() {
 	println("[string]: ", array.Max([]string{"z", "d", "m"}))
 	println("[rune]: ", string(array.Max([]rune{'z', 'd', 'm'})))
 	println("[float]: ", array.Max([]float64{1.2, 2.3, 3.4}))
-}
-```
+}```

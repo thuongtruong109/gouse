@@ -4,9 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/function"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/function")
 ```
 ## Functions
 
@@ -28,5 +26,4 @@ func SampleFuncLock() {
 	function.LockFunc(func() {
 		println("no input - no output")
 	}).(func())()
-}
-```
+}```

@@ -1,4 +1,4 @@
-package tools
+package main
 
 import (
 	"fmt"
@@ -10,7 +10,7 @@ import (
 	"github.com/thuongtruong109/gouse/strings"
 )
 
-func Doc(outputPath, newName string) {
+func GenerateDocument(outputPath, newName string) {
 	if len(os.Args) < 2 {
 		println("Please provide at least one path to a file or directory")
 		return
@@ -119,4 +119,8 @@ func createFilePath(subPath, fileName string, result []byte) {
 		fmt.Println("Error writing file:", err)
 		return
 	}
+}
+
+func main() {
+	GenerateDocument("docs/docs", "receipts")
 }

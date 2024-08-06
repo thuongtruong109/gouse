@@ -4,9 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/io"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/io")
 ```
 ## Functions
 
@@ -23,5 +21,4 @@ func SampleIoUnzip() {
 	}
 
 	println("Files unzipped successfully to:", destFolder)
-}
-```
+}```

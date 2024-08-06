@@ -4,9 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/math"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/math")
 ```
 ## Functions
 
@@ -21,5 +19,4 @@ func SampleMathTrigonometry() {
 	println("Cosine of float number: ", fmt.Sprintf("%f", math.CosF(90.0)))
 	println("Tangent of integer number: ", math.Tan(90))
 	println("Tangent of float number: ", fmt.Sprintf("%f", math.TanF(90.0)))
-}
-```
+}```

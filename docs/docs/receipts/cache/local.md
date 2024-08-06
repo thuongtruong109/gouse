@@ -4,9 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/cache"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/cache")
 ```
 ## Functions
 
@@ -44,5 +42,4 @@ func SampleCacheLocal() {
 
 	all = newCache.AllLocal()
 	fmt.Println("All local cache values (after flush):", all)
-}
-```
+}```

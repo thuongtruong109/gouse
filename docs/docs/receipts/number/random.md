@@ -4,8 +4,7 @@
 
 ```go
 import (
-	"github.com/thuongtruong109/gouse/number"
-)
+	"github.com/thuongtruong109/gouse/number")
 ```
 ## Functions
 
@@ -16,5 +15,4 @@ import (
 func SampleNumRandom() {
 	random := number.Random(1, 10)
 	println("Random number [1, 10): ", random)
-}
-```
+}```

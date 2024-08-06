@@ -4,33 +4,7 @@
 
 ```go
 import (
-	"github.com/thuongtruong109/gouse/samples/api"
-	"github.com/thuongtruong109/gouse/samples/array"
-	"github.com/thuongtruong109/gouse/samples/cache"
-	"github.com/thuongtruong109/gouse/samples/chart"
-	"github.com/thuongtruong109/gouse/samples/config"
-	"github.com/thuongtruong109/gouse/samples/console"
-	"github.com/thuongtruong109/gouse/samples/crypto"
-	"github.com/thuongtruong109/gouse/samples/date"
-	"github.com/thuongtruong109/gouse/samples/function"
-	"github.com/thuongtruong109/gouse/samples/helper"
-	"github.com/thuongtruong109/gouse/samples/io"
-	"github.com/thuongtruong109/gouse/samples/io/dir"
-	"github.com/thuongtruong109/gouse/samples/io/file"
-	"github.com/thuongtruong109/gouse/samples/io/path"
-	math_check "github.com/thuongtruong109/gouse/samples/math/check"
-	math_fomular "github.com/thuongtruong109/gouse/samples/math/fomular"
-	math_geometry "github.com/thuongtruong109/gouse/samples/math/geometry"
-	math_operator "github.com/thuongtruong109/gouse/samples/math/operator"
-	"github.com/thuongtruong109/gouse/samples/net"
-	"github.com/thuongtruong109/gouse/samples/number"
-	"github.com/thuongtruong109/gouse/samples/regex"
-	"github.com/thuongtruong109/gouse/samples/strings"
-	"github.com/thuongtruong109/gouse/samples/structs"
-	"github.com/thuongtruong109/gouse/samples/tools"
-	types_cast "github.com/thuongtruong109/gouse/samples/types/cast"
-	types_check "github.com/thuongtruong109/gouse/samples/types/check"
-)
+	"github.com/thuongtruong109/gouse/samples/api"	"github.com/thuongtruong109/gouse/samples/array"	"github.com/thuongtruong109/gouse/samples/cache"	"github.com/thuongtruong109/gouse/samples/chart"	"github.com/thuongtruong109/gouse/samples/config"	"github.com/thuongtruong109/gouse/samples/console"	"github.com/thuongtruong109/gouse/samples/cron"	"github.com/thuongtruong109/gouse/samples/crypto"	"github.com/thuongtruong109/gouse/samples/date"	"github.com/thuongtruong109/gouse/samples/function"	"github.com/thuongtruong109/gouse/samples/helper"	"github.com/thuongtruong109/gouse/samples/io"	"github.com/thuongtruong109/gouse/samples/io/dir"	"github.com/thuongtruong109/gouse/samples/io/file"	"github.com/thuongtruong109/gouse/samples/io/path"	math_check "github.com/thuongtruong109/gouse/samples/math/check"	math_fomular "github.com/thuongtruong109/gouse/samples/math/fomular"	math_geometry "github.com/thuongtruong109/gouse/samples/math/geometry"	math_operator "github.com/thuongtruong109/gouse/samples/math/operator"	"github.com/thuongtruong109/gouse/samples/net"	"github.com/thuongtruong109/gouse/samples/number"	"github.com/thuongtruong109/gouse/samples/os"	"github.com/thuongtruong109/gouse/samples/regex"	"github.com/thuongtruong109/gouse/samples/strings"	"github.com/thuongtruong109/gouse/samples/structs"	"github.com/thuongtruong109/gouse/samples/tools"	types_cast "github.com/thuongtruong109/gouse/samples/types/cast"	types_check "github.com/thuongtruong109/gouse/samples/types/check")
 ```
 ## Functions
 
@@ -39,27 +13,36 @@ import (
 
 ```go
 func Run() {
-	apiSample()
-	arraySample()
-	cacheSample()
-	chartSample()
-	configSample()
-	consoleSample()
-	cryptoSample()
-	dateSample()
-	functionSample()
-	helperSample()
-	ioSample()
-	mathSample()
-	netSample()
-	numberSample()
-	regexSample()
-	stringSample()
-	structSample()
-	toolsSample()
-	typeSample()
-}
+	// apiSample()
+	// arraySample()
+	// cacheSample()
+	// chartSample()
+	// configSample()
+	// consoleSample()
+	// cronSample()
+	// cryptoSample()
+	// dateSample()
+	// functionSample()
+	// helperSample()
+	// ioSample()
+	// mathSample()
+	// netSample()
+	// numberSample()
+	osSample()
+	// regexSample()
+	// stringSample()
+	// structSample()
+	// toolsSample()
+	// typeSample()
+}```
+## Imports
+
+```go
+import (
+	"github.com/thuongtruong109/gouse/samples/api"	"github.com/thuongtruong109/gouse/samples/array"	"github.com/thuongtruong109/gouse/samples/cache"	"github.com/thuongtruong109/gouse/samples/chart"	"github.com/thuongtruong109/gouse/samples/config"	"github.com/thuongtruong109/gouse/samples/console"	"github.com/thuongtruong109/gouse/samples/cron"	"github.com/thuongtruong109/gouse/samples/crypto"	"github.com/thuongtruong109/gouse/samples/date"	"github.com/thuongtruong109/gouse/samples/function"	"github.com/thuongtruong109/gouse/samples/helper"	"github.com/thuongtruong109/gouse/samples/io"	"github.com/thuongtruong109/gouse/samples/io/dir"	"github.com/thuongtruong109/gouse/samples/io/file"	"github.com/thuongtruong109/gouse/samples/io/path"	math_check "github.com/thuongtruong109/gouse/samples/math/check"	math_fomular "github.com/thuongtruong109/gouse/samples/math/fomular"	math_geometry "github.com/thuongtruong109/gouse/samples/math/geometry"	math_operator "github.com/thuongtruong109/gouse/samples/math/operator"	"github.com/thuongtruong109/gouse/samples/net"	"github.com/thuongtruong109/gouse/samples/number"	"github.com/thuongtruong109/gouse/samples/os"	"github.com/thuongtruong109/gouse/samples/regex"	"github.com/thuongtruong109/gouse/samples/strings"	"github.com/thuongtruong109/gouse/samples/structs"	"github.com/thuongtruong109/gouse/samples/tools"	types_cast "github.com/thuongtruong109/gouse/samples/types/cast"	types_check "github.com/thuongtruong109/gouse/samples/types/check")
 ```
+## Functions
+
 
 ### apiSample
 
@@ -67,8 +50,15 @@ func Run() {
 func apiSample() {
 	api.SampleApiPortScanner()
 	api.SampleApiPortChecker()
-}
+}```
+## Imports
+
+```go
+import (
+	"github.com/thuongtruong109/gouse/samples/api"	"github.com/thuongtruong109/gouse/samples/array"	"github.com/thuongtruong109/gouse/samples/cache"	"github.com/thuongtruong109/gouse/samples/chart"	"github.com/thuongtruong109/gouse/samples/config"	"github.com/thuongtruong109/gouse/samples/console"	"github.com/thuongtruong109/gouse/samples/cron"	"github.com/thuongtruong109/gouse/samples/crypto"	"github.com/thuongtruong109/gouse/samples/date"	"github.com/thuongtruong109/gouse/samples/function"	"github.com/thuongtruong109/gouse/samples/helper"	"github.com/thuongtruong109/gouse/samples/io"	"github.com/thuongtruong109/gouse/samples/io/dir"	"github.com/thuongtruong109/gouse/samples/io/file"	"github.com/thuongtruong109/gouse/samples/io/path"	math_check "github.com/thuongtruong109/gouse/samples/math/check"	math_fomular "github.com/thuongtruong109/gouse/samples/math/fomular"	math_geometry "github.com/thuongtruong109/gouse/samples/math/geometry"	math_operator "github.com/thuongtruong109/gouse/samples/math/operator"	"github.com/thuongtruong109/gouse/samples/net"	"github.com/thuongtruong109/gouse/samples/number"	"github.com/thuongtruong109/gouse/samples/os"	"github.com/thuongtruong109/gouse/samples/regex"	"github.com/thuongtruong109/gouse/samples/strings"	"github.com/thuongtruong109/gouse/samples/structs"	"github.com/thuongtruong109/gouse/samples/tools"	types_cast "github.com/thuongtruong109/gouse/samples/types/cast"	types_check "github.com/thuongtruong109/gouse/samples/types/check")
 ```
+## Functions
+
 
 ### arraySample
 
@@ -96,8 +86,15 @@ func arraySample() {
 	array.SampleArrayFindBy()
 	array.SampleArrayForBy()
 	array.SampleArrayMapBy()
-}
+}```
+## Imports
+
+```go
+import (
+	"github.com/thuongtruong109/gouse/samples/api"	"github.com/thuongtruong109/gouse/samples/array"	"github.com/thuongtruong109/gouse/samples/cache"	"github.com/thuongtruong109/gouse/samples/chart"	"github.com/thuongtruong109/gouse/samples/config"	"github.com/thuongtruong109/gouse/samples/console"	"github.com/thuongtruong109/gouse/samples/cron"	"github.com/thuongtruong109/gouse/samples/crypto"	"github.com/thuongtruong109/gouse/samples/date"	"github.com/thuongtruong109/gouse/samples/function"	"github.com/thuongtruong109/gouse/samples/helper"	"github.com/thuongtruong109/gouse/samples/io"	"github.com/thuongtruong109/gouse/samples/io/dir"	"github.com/thuongtruong109/gouse/samples/io/file"	"github.com/thuongtruong109/gouse/samples/io/path"	math_check "github.com/thuongtruong109/gouse/samples/math/check"	math_fomular "github.com/thuongtruong109/gouse/samples/math/fomular"	math_geometry "github.com/thuongtruong109/gouse/samples/math/geometry"	math_operator "github.com/thuongtruong109/gouse/samples/math/operator"	"github.com/thuongtruong109/gouse/samples/net"	"github.com/thuongtruong109/gouse/samples/number"	"github.com/thuongtruong109/gouse/samples/os"	"github.com/thuongtruong109/gouse/samples/regex"	"github.com/thuongtruong109/gouse/samples/strings"	"github.com/thuongtruong109/gouse/samples/structs"	"github.com/thuongtruong109/gouse/samples/tools"	types_cast "github.com/thuongtruong109/gouse/samples/types/cast"	types_check "github.com/thuongtruong109/gouse/samples/types/check")
 ```
+## Functions
+
 
 ### cacheSample
 
@@ -105,8 +102,15 @@ func arraySample() {
 func cacheSample() {
 	cache.SampleCacheLocal()
 	cache.SampleCacheTmp()
-}
+}```
+## Imports
+
+```go
+import (
+	"github.com/thuongtruong109/gouse/samples/api"	"github.com/thuongtruong109/gouse/samples/array"	"github.com/thuongtruong109/gouse/samples/cache"	"github.com/thuongtruong109/gouse/samples/chart"	"github.com/thuongtruong109/gouse/samples/config"	"github.com/thuongtruong109/gouse/samples/console"	"github.com/thuongtruong109/gouse/samples/cron"	"github.com/thuongtruong109/gouse/samples/crypto"	"github.com/thuongtruong109/gouse/samples/date"	"github.com/thuongtruong109/gouse/samples/function"	"github.com/thuongtruong109/gouse/samples/helper"	"github.com/thuongtruong109/gouse/samples/io"	"github.com/thuongtruong109/gouse/samples/io/dir"	"github.com/thuongtruong109/gouse/samples/io/file"	"github.com/thuongtruong109/gouse/samples/io/path"	math_check "github.com/thuongtruong109/gouse/samples/math/check"	math_fomular "github.com/thuongtruong109/gouse/samples/math/fomular"	math_geometry "github.com/thuongtruong109/gouse/samples/math/geometry"	math_operator "github.com/thuongtruong109/gouse/samples/math/operator"	"github.com/thuongtruong109/gouse/samples/net"	"github.com/thuongtruong109/gouse/samples/number"	"github.com/thuongtruong109/gouse/samples/os"	"github.com/thuongtruong109/gouse/samples/regex"	"github.com/thuongtruong109/gouse/samples/strings"	"github.com/thuongtruong109/gouse/samples/structs"	"github.com/thuongtruong109/gouse/samples/tools"	types_cast "github.com/thuongtruong109/gouse/samples/types/cast"	types_check "github.com/thuongtruong109/gouse/samples/types/check")
 ```
+## Functions
+
 
 ### chartSample
 
@@ -115,8 +119,15 @@ func chartSample() {
 	chart.SampleChartBar()
 	chart.SampleChartLine()
 	chart.SampleChartPie()
-}
+}```
+## Imports
+
+```go
+import (
+	"github.com/thuongtruong109/gouse/samples/api"	"github.com/thuongtruong109/gouse/samples/array"	"github.com/thuongtruong109/gouse/samples/cache"	"github.com/thuongtruong109/gouse/samples/chart"	"github.com/thuongtruong109/gouse/samples/config"	"github.com/thuongtruong109/gouse/samples/console"	"github.com/thuongtruong109/gouse/samples/cron"	"github.com/thuongtruong109/gouse/samples/crypto"	"github.com/thuongtruong109/gouse/samples/date"	"github.com/thuongtruong109/gouse/samples/function"	"github.com/thuongtruong109/gouse/samples/helper"	"github.com/thuongtruong109/gouse/samples/io"	"github.com/thuongtruong109/gouse/samples/io/dir"	"github.com/thuongtruong109/gouse/samples/io/file"	"github.com/thuongtruong109/gouse/samples/io/path"	math_check "github.com/thuongtruong109/gouse/samples/math/check"	math_fomular "github.com/thuongtruong109/gouse/samples/math/fomular"	math_geometry "github.com/thuongtruong109/gouse/samples/math/geometry"	math_operator "github.com/thuongtruong109/gouse/samples/math/operator"	"github.com/thuongtruong109/gouse/samples/net"	"github.com/thuongtruong109/gouse/samples/number"	"github.com/thuongtruong109/gouse/samples/os"	"github.com/thuongtruong109/gouse/samples/regex"	"github.com/thuongtruong109/gouse/samples/strings"	"github.com/thuongtruong109/gouse/samples/structs"	"github.com/thuongtruong109/gouse/samples/tools"	types_cast "github.com/thuongtruong109/gouse/samples/types/cast"	types_check "github.com/thuongtruong109/gouse/samples/types/check")
 ```
+## Functions
+
 
 ### configSample
 
@@ -125,8 +136,15 @@ func configSample() {
 	config.SampleConfigJson()
 	config.SampleConfigYaml()
 	config.SampleConfigToml()
-}
+}```
+## Imports
+
+```go
+import (
+	"github.com/thuongtruong109/gouse/samples/api"	"github.com/thuongtruong109/gouse/samples/array"	"github.com/thuongtruong109/gouse/samples/cache"	"github.com/thuongtruong109/gouse/samples/chart"	"github.com/thuongtruong109/gouse/samples/config"	"github.com/thuongtruong109/gouse/samples/console"	"github.com/thuongtruong109/gouse/samples/cron"	"github.com/thuongtruong109/gouse/samples/crypto"	"github.com/thuongtruong109/gouse/samples/date"	"github.com/thuongtruong109/gouse/samples/function"	"github.com/thuongtruong109/gouse/samples/helper"	"github.com/thuongtruong109/gouse/samples/io"	"github.com/thuongtruong109/gouse/samples/io/dir"	"github.com/thuongtruong109/gouse/samples/io/file"	"github.com/thuongtruong109/gouse/samples/io/path"	math_check "github.com/thuongtruong109/gouse/samples/math/check"	math_fomular "github.com/thuongtruong109/gouse/samples/math/fomular"	math_geometry "github.com/thuongtruong109/gouse/samples/math/geometry"	math_operator "github.com/thuongtruong109/gouse/samples/math/operator"	"github.com/thuongtruong109/gouse/samples/net"	"github.com/thuongtruong109/gouse/samples/number"	"github.com/thuongtruong109/gouse/samples/os"	"github.com/thuongtruong109/gouse/samples/regex"	"github.com/thuongtruong109/gouse/samples/strings"	"github.com/thuongtruong109/gouse/samples/structs"	"github.com/thuongtruong109/gouse/samples/tools"	types_cast "github.com/thuongtruong109/gouse/samples/types/cast"	types_check "github.com/thuongtruong109/gouse/samples/types/check")
 ```
+## Functions
+
 
 ### consoleSample
 
@@ -155,8 +173,30 @@ func consoleSample() {
 	console.SampleConsoleParallel()
 	console.SampleConsoleDir()
 	console.SampleConsoleGlamour()
-}
+}```
+## Imports
+
+```go
+import (
+	"github.com/thuongtruong109/gouse/samples/api"	"github.com/thuongtruong109/gouse/samples/array"	"github.com/thuongtruong109/gouse/samples/cache"	"github.com/thuongtruong109/gouse/samples/chart"	"github.com/thuongtruong109/gouse/samples/config"	"github.com/thuongtruong109/gouse/samples/console"	"github.com/thuongtruong109/gouse/samples/cron"	"github.com/thuongtruong109/gouse/samples/crypto"	"github.com/thuongtruong109/gouse/samples/date"	"github.com/thuongtruong109/gouse/samples/function"	"github.com/thuongtruong109/gouse/samples/helper"	"github.com/thuongtruong109/gouse/samples/io"	"github.com/thuongtruong109/gouse/samples/io/dir"	"github.com/thuongtruong109/gouse/samples/io/file"	"github.com/thuongtruong109/gouse/samples/io/path"	math_check "github.com/thuongtruong109/gouse/samples/math/check"	math_fomular "github.com/thuongtruong109/gouse/samples/math/fomular"	math_geometry "github.com/thuongtruong109/gouse/samples/math/geometry"	math_operator "github.com/thuongtruong109/gouse/samples/math/operator"	"github.com/thuongtruong109/gouse/samples/net"	"github.com/thuongtruong109/gouse/samples/number"	"github.com/thuongtruong109/gouse/samples/os"	"github.com/thuongtruong109/gouse/samples/regex"	"github.com/thuongtruong109/gouse/samples/strings"	"github.com/thuongtruong109/gouse/samples/structs"	"github.com/thuongtruong109/gouse/samples/tools"	types_cast "github.com/thuongtruong109/gouse/samples/types/cast"	types_check "github.com/thuongtruong109/gouse/samples/types/check")
 ```
+## Functions
+
+
+### cronSample
+
+```go
+func cronSample() {
+	cron.SampleCronRun()
+}```
+## Imports
+
+```go
+import (
+	"github.com/thuongtruong109/gouse/samples/api"	"github.com/thuongtruong109/gouse/samples/array"	"github.com/thuongtruong109/gouse/samples/cache"	"github.com/thuongtruong109/gouse/samples/chart"	"github.com/thuongtruong109/gouse/samples/config"	"github.com/thuongtruong109/gouse/samples/console"	"github.com/thuongtruong109/gouse/samples/cron"	"github.com/thuongtruong109/gouse/samples/crypto"	"github.com/thuongtruong109/gouse/samples/date"	"github.com/thuongtruong109/gouse/samples/function"	"github.com/thuongtruong109/gouse/samples/helper"	"github.com/thuongtruong109/gouse/samples/io"	"github.com/thuongtruong109/gouse/samples/io/dir"	"github.com/thuongtruong109/gouse/samples/io/file"	"github.com/thuongtruong109/gouse/samples/io/path"	math_check "github.com/thuongtruong109/gouse/samples/math/check"	math_fomular "github.com/thuongtruong109/gouse/samples/math/fomular"	math_geometry "github.com/thuongtruong109/gouse/samples/math/geometry"	math_operator "github.com/thuongtruong109/gouse/samples/math/operator"	"github.com/thuongtruong109/gouse/samples/net"	"github.com/thuongtruong109/gouse/samples/number"	"github.com/thuongtruong109/gouse/samples/os"	"github.com/thuongtruong109/gouse/samples/regex"	"github.com/thuongtruong109/gouse/samples/strings"	"github.com/thuongtruong109/gouse/samples/structs"	"github.com/thuongtruong109/gouse/samples/tools"	types_cast "github.com/thuongtruong109/gouse/samples/types/cast"	types_check "github.com/thuongtruong109/gouse/samples/types/check")
+```
+## Functions
+
 
 ### cryptoSample
 
@@ -168,8 +208,15 @@ func cryptoSample() {
 	crypto.SampleCryptoDecryptPassword()
 	crypto.SampleCryptoEncryptFile()
 	crypto.SampleCryptoDecryptFile()
-}
+}```
+## Imports
+
+```go
+import (
+	"github.com/thuongtruong109/gouse/samples/api"	"github.com/thuongtruong109/gouse/samples/array"	"github.com/thuongtruong109/gouse/samples/cache"	"github.com/thuongtruong109/gouse/samples/chart"	"github.com/thuongtruong109/gouse/samples/config"	"github.com/thuongtruong109/gouse/samples/console"	"github.com/thuongtruong109/gouse/samples/cron"	"github.com/thuongtruong109/gouse/samples/crypto"	"github.com/thuongtruong109/gouse/samples/date"	"github.com/thuongtruong109/gouse/samples/function"	"github.com/thuongtruong109/gouse/samples/helper"	"github.com/thuongtruong109/gouse/samples/io"	"github.com/thuongtruong109/gouse/samples/io/dir"	"github.com/thuongtruong109/gouse/samples/io/file"	"github.com/thuongtruong109/gouse/samples/io/path"	math_check "github.com/thuongtruong109/gouse/samples/math/check"	math_fomular "github.com/thuongtruong109/gouse/samples/math/fomular"	math_geometry "github.com/thuongtruong109/gouse/samples/math/geometry"	math_operator "github.com/thuongtruong109/gouse/samples/math/operator"	"github.com/thuongtruong109/gouse/samples/net"	"github.com/thuongtruong109/gouse/samples/number"	"github.com/thuongtruong109/gouse/samples/os"	"github.com/thuongtruong109/gouse/samples/regex"	"github.com/thuongtruong109/gouse/samples/strings"	"github.com/thuongtruong109/gouse/samples/structs"	"github.com/thuongtruong109/gouse/samples/tools"	types_cast "github.com/thuongtruong109/gouse/samples/types/cast"	types_check "github.com/thuongtruong109/gouse/samples/types/check")
 ```
+## Functions
+
 
 ### dateSample
 
@@ -190,8 +237,15 @@ func dateSample() {
 	date.SampleDateSleepHour()
 
 	date.SampleDateClock()
-}
+}```
+## Imports
+
+```go
+import (
+	"github.com/thuongtruong109/gouse/samples/api"	"github.com/thuongtruong109/gouse/samples/array"	"github.com/thuongtruong109/gouse/samples/cache"	"github.com/thuongtruong109/gouse/samples/chart"	"github.com/thuongtruong109/gouse/samples/config"	"github.com/thuongtruong109/gouse/samples/console"	"github.com/thuongtruong109/gouse/samples/cron"	"github.com/thuongtruong109/gouse/samples/crypto"	"github.com/thuongtruong109/gouse/samples/date"	"github.com/thuongtruong109/gouse/samples/function"	"github.com/thuongtruong109/gouse/samples/helper"	"github.com/thuongtruong109/gouse/samples/io"	"github.com/thuongtruong109/gouse/samples/io/dir"	"github.com/thuongtruong109/gouse/samples/io/file"	"github.com/thuongtruong109/gouse/samples/io/path"	math_check "github.com/thuongtruong109/gouse/samples/math/check"	math_fomular "github.com/thuongtruong109/gouse/samples/math/fomular"	math_geometry "github.com/thuongtruong109/gouse/samples/math/geometry"	math_operator "github.com/thuongtruong109/gouse/samples/math/operator"	"github.com/thuongtruong109/gouse/samples/net"	"github.com/thuongtruong109/gouse/samples/number"	"github.com/thuongtruong109/gouse/samples/os"	"github.com/thuongtruong109/gouse/samples/regex"	"github.com/thuongtruong109/gouse/samples/strings"	"github.com/thuongtruong109/gouse/samples/structs"	"github.com/thuongtruong109/gouse/samples/tools"	types_cast "github.com/thuongtruong109/gouse/samples/types/cast"	types_check "github.com/thuongtruong109/gouse/samples/types/check")
 ```
+## Functions
+
 
 ### functionSample
 
@@ -203,8 +257,15 @@ func functionSample() {
 	function.SampleFuncInterval()
 	function.SampleFuncLock()
 	function.SampleFuncRunTime()
-}
+}```
+## Imports
+
+```go
+import (
+	"github.com/thuongtruong109/gouse/samples/api"	"github.com/thuongtruong109/gouse/samples/array"	"github.com/thuongtruong109/gouse/samples/cache"	"github.com/thuongtruong109/gouse/samples/chart"	"github.com/thuongtruong109/gouse/samples/config"	"github.com/thuongtruong109/gouse/samples/console"	"github.com/thuongtruong109/gouse/samples/cron"	"github.com/thuongtruong109/gouse/samples/crypto"	"github.com/thuongtruong109/gouse/samples/date"	"github.com/thuongtruong109/gouse/samples/function"	"github.com/thuongtruong109/gouse/samples/helper"	"github.com/thuongtruong109/gouse/samples/io"	"github.com/thuongtruong109/gouse/samples/io/dir"	"github.com/thuongtruong109/gouse/samples/io/file"	"github.com/thuongtruong109/gouse/samples/io/path"	math_check "github.com/thuongtruong109/gouse/samples/math/check"	math_fomular "github.com/thuongtruong109/gouse/samples/math/fomular"	math_geometry "github.com/thuongtruong109/gouse/samples/math/geometry"	math_operator "github.com/thuongtruong109/gouse/samples/math/operator"	"github.com/thuongtruong109/gouse/samples/net"	"github.com/thuongtruong109/gouse/samples/number"	"github.com/thuongtruong109/gouse/samples/os"	"github.com/thuongtruong109/gouse/samples/regex"	"github.com/thuongtruong109/gouse/samples/strings"	"github.com/thuongtruong109/gouse/samples/structs"	"github.com/thuongtruong109/gouse/samples/tools"	types_cast "github.com/thuongtruong109/gouse/samples/types/cast"	types_check "github.com/thuongtruong109/gouse/samples/types/check")
 ```
+## Functions
+
 
 ### helperSample
 
@@ -214,8 +275,15 @@ func helperSample() {
 	helper.SampleHelperUUID()
 
 	helper.SampleHelperAutoMdDoc()
-}
+}```
+## Imports
+
+```go
+import (
+	"github.com/thuongtruong109/gouse/samples/api"	"github.com/thuongtruong109/gouse/samples/array"	"github.com/thuongtruong109/gouse/samples/cache"	"github.com/thuongtruong109/gouse/samples/chart"	"github.com/thuongtruong109/gouse/samples/config"	"github.com/thuongtruong109/gouse/samples/console"	"github.com/thuongtruong109/gouse/samples/cron"	"github.com/thuongtruong109/gouse/samples/crypto"	"github.com/thuongtruong109/gouse/samples/date"	"github.com/thuongtruong109/gouse/samples/function"	"github.com/thuongtruong109/gouse/samples/helper"	"github.com/thuongtruong109/gouse/samples/io"	"github.com/thuongtruong109/gouse/samples/io/dir"	"github.com/thuongtruong109/gouse/samples/io/file"	"github.com/thuongtruong109/gouse/samples/io/path"	math_check "github.com/thuongtruong109/gouse/samples/math/check"	math_fomular "github.com/thuongtruong109/gouse/samples/math/fomular"	math_geometry "github.com/thuongtruong109/gouse/samples/math/geometry"	math_operator "github.com/thuongtruong109/gouse/samples/math/operator"	"github.com/thuongtruong109/gouse/samples/net"	"github.com/thuongtruong109/gouse/samples/number"	"github.com/thuongtruong109/gouse/samples/os"	"github.com/thuongtruong109/gouse/samples/regex"	"github.com/thuongtruong109/gouse/samples/strings"	"github.com/thuongtruong109/gouse/samples/structs"	"github.com/thuongtruong109/gouse/samples/tools"	types_cast "github.com/thuongtruong109/gouse/samples/types/cast"	types_check "github.com/thuongtruong109/gouse/samples/types/check")
 ```
+## Functions
+
 
 ### ioSample
 
@@ -247,8 +315,15 @@ func ioSample() {
 
 	io.SampleIoZip()
 	io.SampleIoUnzip()
-}
+}```
+## Imports
+
+```go
+import (
+	"github.com/thuongtruong109/gouse/samples/api"	"github.com/thuongtruong109/gouse/samples/array"	"github.com/thuongtruong109/gouse/samples/cache"	"github.com/thuongtruong109/gouse/samples/chart"	"github.com/thuongtruong109/gouse/samples/config"	"github.com/thuongtruong109/gouse/samples/console"	"github.com/thuongtruong109/gouse/samples/cron"	"github.com/thuongtruong109/gouse/samples/crypto"	"github.com/thuongtruong109/gouse/samples/date"	"github.com/thuongtruong109/gouse/samples/function"	"github.com/thuongtruong109/gouse/samples/helper"	"github.com/thuongtruong109/gouse/samples/io"	"github.com/thuongtruong109/gouse/samples/io/dir"	"github.com/thuongtruong109/gouse/samples/io/file"	"github.com/thuongtruong109/gouse/samples/io/path"	math_check "github.com/thuongtruong109/gouse/samples/math/check"	math_fomular "github.com/thuongtruong109/gouse/samples/math/fomular"	math_geometry "github.com/thuongtruong109/gouse/samples/math/geometry"	math_operator "github.com/thuongtruong109/gouse/samples/math/operator"	"github.com/thuongtruong109/gouse/samples/net"	"github.com/thuongtruong109/gouse/samples/number"	"github.com/thuongtruong109/gouse/samples/os"	"github.com/thuongtruong109/gouse/samples/regex"	"github.com/thuongtruong109/gouse/samples/strings"	"github.com/thuongtruong109/gouse/samples/structs"	"github.com/thuongtruong109/gouse/samples/tools"	types_cast "github.com/thuongtruong109/gouse/samples/types/cast"	types_check "github.com/thuongtruong109/gouse/samples/types/check")
 ```
+## Functions
+
 
 ### mathSample
 
@@ -290,22 +365,15 @@ func mathSample() {
 	math_geometry.SampleMathRhombus()
 	math_geometry.SampleMathEllipse()
 	math_geometry.SampleMathPolygon()
-}
-```
-
-### netSample
+}```
+## Imports
 
 ```go
-func netSample() {
-	net.SampleNetOpen()
-	net.SampleNetEncode()
-	net.SampleNetDecode()
-	net.SampleNetCheck()
-	net.SampleNetCheckWithStatusCode()
-	net.SampleNetHeader()
-	net.SampleNetConnectTime()
-}
+import (
+	"github.com/thuongtruong109/gouse/samples/api"	"github.com/thuongtruong109/gouse/samples/array"	"github.com/thuongtruong109/gouse/samples/cache"	"github.com/thuongtruong109/gouse/samples/chart"	"github.com/thuongtruong109/gouse/samples/config"	"github.com/thuongtruong109/gouse/samples/console"	"github.com/thuongtruong109/gouse/samples/cron"	"github.com/thuongtruong109/gouse/samples/crypto"	"github.com/thuongtruong109/gouse/samples/date"	"github.com/thuongtruong109/gouse/samples/function"	"github.com/thuongtruong109/gouse/samples/helper"	"github.com/thuongtruong109/gouse/samples/io"	"github.com/thuongtruong109/gouse/samples/io/dir"	"github.com/thuongtruong109/gouse/samples/io/file"	"github.com/thuongtruong109/gouse/samples/io/path"	math_check "github.com/thuongtruong109/gouse/samples/math/check"	math_fomular "github.com/thuongtruong109/gouse/samples/math/fomular"	math_geometry "github.com/thuongtruong109/gouse/samples/math/geometry"	math_operator "github.com/thuongtruong109/gouse/samples/math/operator"	"github.com/thuongtruong109/gouse/samples/net"	"github.com/thuongtruong109/gouse/samples/number"	"github.com/thuongtruong109/gouse/samples/os"	"github.com/thuongtruong109/gouse/samples/regex"	"github.com/thuongtruong109/gouse/samples/strings"	"github.com/thuongtruong109/gouse/samples/structs"	"github.com/thuongtruong109/gouse/samples/tools"	types_cast "github.com/thuongtruong109/gouse/samples/types/cast"	types_check "github.com/thuongtruong109/gouse/samples/types/check")
 ```
+## Functions
+
 
 ### numberSample
 
@@ -314,8 +382,54 @@ func numberSample() {
 	number.SampleNumRandom()
 	number.SampleNumClamp()
 	number.SampleNumInRange()
-}
+}```
+## Imports
+
+```go
+import (
+	"github.com/thuongtruong109/gouse/samples/api"	"github.com/thuongtruong109/gouse/samples/array"	"github.com/thuongtruong109/gouse/samples/cache"	"github.com/thuongtruong109/gouse/samples/chart"	"github.com/thuongtruong109/gouse/samples/config"	"github.com/thuongtruong109/gouse/samples/console"	"github.com/thuongtruong109/gouse/samples/cron"	"github.com/thuongtruong109/gouse/samples/crypto"	"github.com/thuongtruong109/gouse/samples/date"	"github.com/thuongtruong109/gouse/samples/function"	"github.com/thuongtruong109/gouse/samples/helper"	"github.com/thuongtruong109/gouse/samples/io"	"github.com/thuongtruong109/gouse/samples/io/dir"	"github.com/thuongtruong109/gouse/samples/io/file"	"github.com/thuongtruong109/gouse/samples/io/path"	math_check "github.com/thuongtruong109/gouse/samples/math/check"	math_fomular "github.com/thuongtruong109/gouse/samples/math/fomular"	math_geometry "github.com/thuongtruong109/gouse/samples/math/geometry"	math_operator "github.com/thuongtruong109/gouse/samples/math/operator"	"github.com/thuongtruong109/gouse/samples/net"	"github.com/thuongtruong109/gouse/samples/number"	"github.com/thuongtruong109/gouse/samples/os"	"github.com/thuongtruong109/gouse/samples/regex"	"github.com/thuongtruong109/gouse/samples/strings"	"github.com/thuongtruong109/gouse/samples/structs"	"github.com/thuongtruong109/gouse/samples/tools"	types_cast "github.com/thuongtruong109/gouse/samples/types/cast"	types_check "github.com/thuongtruong109/gouse/samples/types/check")
 ```
+## Functions
+
+
+### netSample
+
+```go
+func netSample() {
+	// net.SampleNetOpen()
+	// net.SampleNetEncode()
+	// net.SampleNetDecode()
+	// net.SampleNetCheck()
+	// net.SampleNetCheckWithStatusCode()
+	// net.SampleNetHeader()
+	// net.SampleNetConnectTime()
+	net.SampleNetProxy()
+}```
+## Imports
+
+```go
+import (
+	"github.com/thuongtruong109/gouse/samples/api"	"github.com/thuongtruong109/gouse/samples/array"	"github.com/thuongtruong109/gouse/samples/cache"	"github.com/thuongtruong109/gouse/samples/chart"	"github.com/thuongtruong109/gouse/samples/config"	"github.com/thuongtruong109/gouse/samples/console"	"github.com/thuongtruong109/gouse/samples/cron"	"github.com/thuongtruong109/gouse/samples/crypto"	"github.com/thuongtruong109/gouse/samples/date"	"github.com/thuongtruong109/gouse/samples/function"	"github.com/thuongtruong109/gouse/samples/helper"	"github.com/thuongtruong109/gouse/samples/io"	"github.com/thuongtruong109/gouse/samples/io/dir"	"github.com/thuongtruong109/gouse/samples/io/file"	"github.com/thuongtruong109/gouse/samples/io/path"	math_check "github.com/thuongtruong109/gouse/samples/math/check"	math_fomular "github.com/thuongtruong109/gouse/samples/math/fomular"	math_geometry "github.com/thuongtruong109/gouse/samples/math/geometry"	math_operator "github.com/thuongtruong109/gouse/samples/math/operator"	"github.com/thuongtruong109/gouse/samples/net"	"github.com/thuongtruong109/gouse/samples/number"	"github.com/thuongtruong109/gouse/samples/os"	"github.com/thuongtruong109/gouse/samples/regex"	"github.com/thuongtruong109/gouse/samples/strings"	"github.com/thuongtruong109/gouse/samples/structs"	"github.com/thuongtruong109/gouse/samples/tools"	types_cast "github.com/thuongtruong109/gouse/samples/types/cast"	types_check "github.com/thuongtruong109/gouse/samples/types/check")
+```
+## Functions
+
+
+### osSample
+
+```go
+func osSample() {
+	os.SampleOsSystem()
+	os.SampleOsDisk()
+	os.SampleOsCpu()
+}```
+## Imports
+
+```go
+import (
+	"github.com/thuongtruong109/gouse/samples/api"	"github.com/thuongtruong109/gouse/samples/array"	"github.com/thuongtruong109/gouse/samples/cache"	"github.com/thuongtruong109/gouse/samples/chart"	"github.com/thuongtruong109/gouse/samples/config"	"github.com/thuongtruong109/gouse/samples/console"	"github.com/thuongtruong109/gouse/samples/cron"	"github.com/thuongtruong109/gouse/samples/crypto"	"github.com/thuongtruong109/gouse/samples/date"	"github.com/thuongtruong109/gouse/samples/function"	"github.com/thuongtruong109/gouse/samples/helper"	"github.com/thuongtruong109/gouse/samples/io"	"github.com/thuongtruong109/gouse/samples/io/dir"	"github.com/thuongtruong109/gouse/samples/io/file"	"github.com/thuongtruong109/gouse/samples/io/path"	math_check "github.com/thuongtruong109/gouse/samples/math/check"	math_fomular "github.com/thuongtruong109/gouse/samples/math/fomular"	math_geometry "github.com/thuongtruong109/gouse/samples/math/geometry"	math_operator "github.com/thuongtruong109/gouse/samples/math/operator"	"github.com/thuongtruong109/gouse/samples/net"	"github.com/thuongtruong109/gouse/samples/number"	"github.com/thuongtruong109/gouse/samples/os"	"github.com/thuongtruong109/gouse/samples/regex"	"github.com/thuongtruong109/gouse/samples/strings"	"github.com/thuongtruong109/gouse/samples/structs"	"github.com/thuongtruong109/gouse/samples/tools"	types_cast "github.com/thuongtruong109/gouse/samples/types/cast"	types_check "github.com/thuongtruong109/gouse/samples/types/check")
+```
+## Functions
+
 
 ### regexSample
 
@@ -324,8 +438,15 @@ func regexSample() {
 	regex.SampleRegexIsMatch()
 	regex.SampleRegexMatch()
 	regex.SampleRegexMatchIndex()
-}
+}```
+## Imports
+
+```go
+import (
+	"github.com/thuongtruong109/gouse/samples/api"	"github.com/thuongtruong109/gouse/samples/array"	"github.com/thuongtruong109/gouse/samples/cache"	"github.com/thuongtruong109/gouse/samples/chart"	"github.com/thuongtruong109/gouse/samples/config"	"github.com/thuongtruong109/gouse/samples/console"	"github.com/thuongtruong109/gouse/samples/cron"	"github.com/thuongtruong109/gouse/samples/crypto"	"github.com/thuongtruong109/gouse/samples/date"	"github.com/thuongtruong109/gouse/samples/function"	"github.com/thuongtruong109/gouse/samples/helper"	"github.com/thuongtruong109/gouse/samples/io"	"github.com/thuongtruong109/gouse/samples/io/dir"	"github.com/thuongtruong109/gouse/samples/io/file"	"github.com/thuongtruong109/gouse/samples/io/path"	math_check "github.com/thuongtruong109/gouse/samples/math/check"	math_fomular "github.com/thuongtruong109/gouse/samples/math/fomular"	math_geometry "github.com/thuongtruong109/gouse/samples/math/geometry"	math_operator "github.com/thuongtruong109/gouse/samples/math/operator"	"github.com/thuongtruong109/gouse/samples/net"	"github.com/thuongtruong109/gouse/samples/number"	"github.com/thuongtruong109/gouse/samples/os"	"github.com/thuongtruong109/gouse/samples/regex"	"github.com/thuongtruong109/gouse/samples/strings"	"github.com/thuongtruong109/gouse/samples/structs"	"github.com/thuongtruong109/gouse/samples/tools"	types_cast "github.com/thuongtruong109/gouse/samples/types/cast"	types_check "github.com/thuongtruong109/gouse/samples/types/check")
 ```
+## Functions
+
 
 ### stringSample
 
@@ -374,8 +495,15 @@ func stringSample() {
 	strings.SampleStringCodePoint()
 	strings.SampleStringFromCodePointAt()
 	strings.SampleStringFromCodePoint()
-}
+}```
+## Imports
+
+```go
+import (
+	"github.com/thuongtruong109/gouse/samples/api"	"github.com/thuongtruong109/gouse/samples/array"	"github.com/thuongtruong109/gouse/samples/cache"	"github.com/thuongtruong109/gouse/samples/chart"	"github.com/thuongtruong109/gouse/samples/config"	"github.com/thuongtruong109/gouse/samples/console"	"github.com/thuongtruong109/gouse/samples/cron"	"github.com/thuongtruong109/gouse/samples/crypto"	"github.com/thuongtruong109/gouse/samples/date"	"github.com/thuongtruong109/gouse/samples/function"	"github.com/thuongtruong109/gouse/samples/helper"	"github.com/thuongtruong109/gouse/samples/io"	"github.com/thuongtruong109/gouse/samples/io/dir"	"github.com/thuongtruong109/gouse/samples/io/file"	"github.com/thuongtruong109/gouse/samples/io/path"	math_check "github.com/thuongtruong109/gouse/samples/math/check"	math_fomular "github.com/thuongtruong109/gouse/samples/math/fomular"	math_geometry "github.com/thuongtruong109/gouse/samples/math/geometry"	math_operator "github.com/thuongtruong109/gouse/samples/math/operator"	"github.com/thuongtruong109/gouse/samples/net"	"github.com/thuongtruong109/gouse/samples/number"	"github.com/thuongtruong109/gouse/samples/os"	"github.com/thuongtruong109/gouse/samples/regex"	"github.com/thuongtruong109/gouse/samples/strings"	"github.com/thuongtruong109/gouse/samples/structs"	"github.com/thuongtruong109/gouse/samples/tools"	types_cast "github.com/thuongtruong109/gouse/samples/types/cast"	types_check "github.com/thuongtruong109/gouse/samples/types/check")
 ```
+## Functions
+
 
 ### structSample
 
@@ -389,8 +517,15 @@ func structSample() {
 
 	structs.SampleStructClone()
 	structs.SampleStructHas()
-}
+}```
+## Imports
+
+```go
+import (
+	"github.com/thuongtruong109/gouse/samples/api"	"github.com/thuongtruong109/gouse/samples/array"	"github.com/thuongtruong109/gouse/samples/cache"	"github.com/thuongtruong109/gouse/samples/chart"	"github.com/thuongtruong109/gouse/samples/config"	"github.com/thuongtruong109/gouse/samples/console"	"github.com/thuongtruong109/gouse/samples/cron"	"github.com/thuongtruong109/gouse/samples/crypto"	"github.com/thuongtruong109/gouse/samples/date"	"github.com/thuongtruong109/gouse/samples/function"	"github.com/thuongtruong109/gouse/samples/helper"	"github.com/thuongtruong109/gouse/samples/io"	"github.com/thuongtruong109/gouse/samples/io/dir"	"github.com/thuongtruong109/gouse/samples/io/file"	"github.com/thuongtruong109/gouse/samples/io/path"	math_check "github.com/thuongtruong109/gouse/samples/math/check"	math_fomular "github.com/thuongtruong109/gouse/samples/math/fomular"	math_geometry "github.com/thuongtruong109/gouse/samples/math/geometry"	math_operator "github.com/thuongtruong109/gouse/samples/math/operator"	"github.com/thuongtruong109/gouse/samples/net"	"github.com/thuongtruong109/gouse/samples/number"	"github.com/thuongtruong109/gouse/samples/os"	"github.com/thuongtruong109/gouse/samples/regex"	"github.com/thuongtruong109/gouse/samples/strings"	"github.com/thuongtruong109/gouse/samples/structs"	"github.com/thuongtruong109/gouse/samples/tools"	types_cast "github.com/thuongtruong109/gouse/samples/types/cast"	types_check "github.com/thuongtruong109/gouse/samples/types/check")
 ```
+## Functions
+
 
 ### toolsSample
 
@@ -398,8 +533,15 @@ func structSample() {
 func toolsSample() {
 	tools.SampleToolDoc()
 	tools.SampleToolProfile()
-}
+}```
+## Imports
+
+```go
+import (
+	"github.com/thuongtruong109/gouse/samples/api"	"github.com/thuongtruong109/gouse/samples/array"	"github.com/thuongtruong109/gouse/samples/cache"	"github.com/thuongtruong109/gouse/samples/chart"	"github.com/thuongtruong109/gouse/samples/config"	"github.com/thuongtruong109/gouse/samples/console"	"github.com/thuongtruong109/gouse/samples/cron"	"github.com/thuongtruong109/gouse/samples/crypto"	"github.com/thuongtruong109/gouse/samples/date"	"github.com/thuongtruong109/gouse/samples/function"	"github.com/thuongtruong109/gouse/samples/helper"	"github.com/thuongtruong109/gouse/samples/io"	"github.com/thuongtruong109/gouse/samples/io/dir"	"github.com/thuongtruong109/gouse/samples/io/file"	"github.com/thuongtruong109/gouse/samples/io/path"	math_check "github.com/thuongtruong109/gouse/samples/math/check"	math_fomular "github.com/thuongtruong109/gouse/samples/math/fomular"	math_geometry "github.com/thuongtruong109/gouse/samples/math/geometry"	math_operator "github.com/thuongtruong109/gouse/samples/math/operator"	"github.com/thuongtruong109/gouse/samples/net"	"github.com/thuongtruong109/gouse/samples/number"	"github.com/thuongtruong109/gouse/samples/os"	"github.com/thuongtruong109/gouse/samples/regex"	"github.com/thuongtruong109/gouse/samples/strings"	"github.com/thuongtruong109/gouse/samples/structs"	"github.com/thuongtruong109/gouse/samples/tools"	types_cast "github.com/thuongtruong109/gouse/samples/types/cast"	types_check "github.com/thuongtruong109/gouse/samples/types/check")
 ```
+## Functions
+
 
 ### typeSample
 
@@ -419,5 +561,4 @@ func typeSample() {
 	types_check.SampleTypeCheckUsername()
 	types_check.SampleTypeCheckPassword()
 	types_check.SampleTypeCheckPhone()
-}
-```
+}```

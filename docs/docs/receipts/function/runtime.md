@@ -4,10 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"time"
-	"github.com/thuongtruong109/gouse/function"
-)
+	"fmt"	"time"	"github.com/thuongtruong109/gouse/function")
 ```
 ## Functions
 
@@ -23,5 +20,4 @@ func SampleFuncRunTime() {
 
 	duration := function.RunTime(time.Now(), exampleFunc)
 	fmt.Printf("Function run in: %v\n", duration)
-}
-```
+}```

@@ -4,9 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/structs"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/structs")
 ```
 ## Functions
 
@@ -28,5 +26,4 @@ func SampleStructAdd() {
 	result := structs.Add(person, newFields)
 
 	fmt.Printf("Struct after adding fields: %+v\n", result)
-}
-```
+}```

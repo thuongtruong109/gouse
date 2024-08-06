@@ -4,8 +4,7 @@
 
 ```go
 import (
-	"github.com/thuongtruong109/gouse/math"
-)
+	"github.com/thuongtruong109/gouse/math")
 ```
 ## Functions
 
@@ -16,5 +15,4 @@ import (
 func SampleMathRound() {
 	var num1, num2 = 10.49, 10.51
 	println("Round number: ", math.Round(num1), math.Round(num2))
-}
-```
+}```

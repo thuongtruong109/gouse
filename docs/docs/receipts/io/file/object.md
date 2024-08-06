@@ -4,11 +4,7 @@
 
 ```go
 import (
-	"encoding/json"
-	"fmt"
-	"os"
-	"github.com/thuongtruong109/gouse/io"
-)
+	"encoding/json"	"fmt"	"os"	"github.com/thuongtruong109/gouse/io")
 ```
 ## Functions
 
@@ -78,5 +74,4 @@ func SampleIoFileObj() {
 		println(err2.Error())
 	}
 	println("data written")
-}
-```
+}```

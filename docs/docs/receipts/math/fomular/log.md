@@ -4,9 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/math"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/math")
 ```
 ## Functions
 
@@ -23,5 +21,4 @@ func SampleMathLog() {
 
 	println("Logarithm of integer number (base 10): ", math.Log10(100))
 	println("Logarithm of float number (base 10): ", fmt.Sprintf("%f", math.Log10F(20.0)))
-}
-```
+}```

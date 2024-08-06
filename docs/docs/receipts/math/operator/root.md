@@ -4,9 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/math"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/math")
 ```
 ## Functions
 
@@ -23,5 +21,4 @@ func SampleMathRoot() {
 
 	println("Nth-Root of integer number: ", math.Root(4, 2))
 	println("Nth-Root of float number: ", fmt.Sprintf("%f", math.RootF(20.0, 3.0)))
-}
-```
+}```

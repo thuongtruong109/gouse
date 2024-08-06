@@ -4,8 +4,7 @@
 
 ```go
 import (
-	"github.com/thuongtruong109/gouse/crypto"
-)
+	"github.com/thuongtruong109/gouse/crypto")
 ```
 ## Functions
 
@@ -16,8 +15,15 @@ import (
 func SampleCryptoEncryptFile() {
 	crypto.EncryptFile("sample.txt", []byte("password"))
 	println("File content encrypted")
-}
+}```
+## Imports
+
+```go
+import (
+	"github.com/thuongtruong109/gouse/crypto")
 ```
+## Functions
+
 
 ### SampleCryptoDecryptFile
 
@@ -25,5 +31,4 @@ func SampleCryptoEncryptFile() {
 func SampleCryptoDecryptFile() {
 	crypto.DecryptFile("sample.txt", []byte("password"))
 	println("File content decrypted")
-}
-```
+}```

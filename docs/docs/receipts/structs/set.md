@@ -4,9 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/structs"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/structs")
 ```
 ## Functions
 
@@ -24,5 +22,4 @@ func SampleStructSet() {
 	structs.Set(person, "Name", "Updated Name")
 
 	fmt.Printf("Struct after setting field: %+v\n", person)
-}
-```
+}```

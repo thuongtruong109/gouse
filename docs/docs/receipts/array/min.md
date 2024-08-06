@@ -4,8 +4,7 @@
 
 ```go
 import (
-	"github.com/thuongtruong109/gouse/array"
-)
+	"github.com/thuongtruong109/gouse/array")
 ```
 ## Functions
 
@@ -20,5 +19,4 @@ func SampleArrayMin() {
 	println("[string]: ", array.Min([]string{"z", "d", "m"}))
 	println("[rune]: ", string(array.Min([]rune{'z', 'd', 'm'})))
 	println("[float]: ", array.Min([]float64{1.2, 2.3, 3.4}))
-}
-```
+}```

@@ -4,9 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/io"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/io")
 ```
 ## Functions
 
@@ -22,5 +20,4 @@ func SampleIoCreatePath() {
 		return
 	}
 	println("File created successfully.")
-}
-```
+}```

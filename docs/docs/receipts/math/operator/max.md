@@ -4,8 +4,7 @@
 
 ```go
 import (
-	"github.com/thuongtruong109/gouse/math"
-)
+	"github.com/thuongtruong109/gouse/math")
 ```
 ## Functions
 
@@ -16,5 +15,4 @@ import (
 func SampleMathMax() {
 	var num1, num2, num3, num4 = 10, 20, 30, -2
 	println("Max number: ", math.Max(num1, num2, num3, num4))
-}
-```
+}```

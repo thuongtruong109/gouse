@@ -4,9 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/structs"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/structs")
 ```
 ## Functions
 
@@ -34,5 +32,4 @@ func SampleStructMerge() {
 	fmt.Println("Name:", merged.(map[string]interface{})["Name"])
 
 	fmt.Println("City:", merged.(map[string]interface{})["City"])
-}
-```
+}```

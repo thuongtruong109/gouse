@@ -4,8 +4,7 @@
 
 ```go
 import (
-	"github.com/thuongtruong109/gouse/api"
-)
+	"github.com/thuongtruong109/gouse/api")
 ```
 ## Functions
 
@@ -15,5 +14,4 @@ import (
 ```go
 func SampleApiPortScanner() {
 	api.PortScanner("tcp", "127.0.0.1", 3000, 8080)
-}
-```
+}```

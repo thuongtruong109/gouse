@@ -4,9 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/crypto"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/crypto")
 ```
 ## Functions
 
@@ -24,8 +22,15 @@ func SampleCryptoEncryptPassword() {
 	}
 	fmt.Println("Raw data:", string(data))
 	fmt.Println("Encrypted data:", string(encryptedData))
-}
+}```
+## Imports
+
+```go
+import (
+	"fmt"	"github.com/thuongtruong109/gouse/crypto")
 ```
+## Functions
+
 
 ### SampleCryptoDecryptPassword
 
@@ -38,5 +43,4 @@ func SampleCryptoDecryptPassword() {
 		return
 	}
 	println("Password matched")
-}
-```
+}```

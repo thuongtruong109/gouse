@@ -4,8 +4,7 @@
 
 ```go
 import (
-	"github.com/thuongtruong109/gouse/io"
-)
+	"github.com/thuongtruong109/gouse/io")
 ```
 ## Functions
 
@@ -23,5 +22,4 @@ func SampleIoLsDir() {
 	for _, v := range data {
 		println(v)
 	}
-}
-```
+}```

@@ -4,9 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/array"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/array")
 ```
 ## Functions
 
@@ -43,5 +41,4 @@ func SampleArrayFindBy() {
 	fmt.Println("[struct]: ", array.FindBy([]struct{ a int }{{-1}, {-2}, {3}, {4}, {5}, {6}}, func(v struct{ a int }) bool {
 		return v.a == 3
 	}))
-}
-```
+}```

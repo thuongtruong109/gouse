@@ -4,9 +4,7 @@
 
 ```go
 import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/config"
-)
+	"fmt"	"github.com/thuongtruong109/gouse/config")
 ```
 ## Functions
 
@@ -28,5 +26,4 @@ func SampleConfigJson() {
 
 	fmt.Println("Users:", myConf.Users)
 	fmt.Println("Groups:", myConf.Groups)
-}
-```
+}```

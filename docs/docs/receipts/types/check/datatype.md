@@ -4,8 +4,7 @@
 
 ```go
 import (
-	"github.com/thuongtruong109/gouse/types"
-)
+	"github.com/thuongtruong109/gouse/types")
 ```
 ## Functions
 
@@ -37,5 +36,4 @@ func SampleTypeCheck() {
 	println("Check type is empty: ", types.IsEmpty(""))
 	println("Check type is empty: ", types.IsEmpty(0))
 	println("Check type is zero: ", types.IsZero(0))
-}
-```
+}```
