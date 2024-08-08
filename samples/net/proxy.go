@@ -5,5 +5,5 @@ import (
 )
 
 func SampleNetProxy() {
-	net.Proxy("5000")
+	net.Proxy("5000", []string{"http://localhost:3000", "http://localhost:3001"})
 }
