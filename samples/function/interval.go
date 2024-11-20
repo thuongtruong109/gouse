@@ -1,9 +1,9 @@
 package function
 
-import "github.com/thuongtruong109/gouse/function"
+// import "github.com/thuongtruong109/gouse/function"
 
-func SampleFuncInterval() {
-	function.Interval(func() {
-		println("Interval")
-	}, 1)
-}
+// func SampleFuncInterval() {
+// 	function.Interval(func() {
+// 		println("Interval")
+// 	}, 1)
+// }

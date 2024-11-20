@@ -1,17 +1,17 @@
 package net
 
-import (
-	"fmt"
+// import (
+// 	"fmt"
 
-	"github.com/thuongtruong109/gouse/net"
-	"github.com/thuongtruong109/gouse/types"
-)
+// 	"github.com/thuongtruong109/gouse/net"
+// 	"github.com/thuongtruong109/gouse/types"
+// )
 
-func SampleNetHeader() {
-	header, err := net.Header("https://google.com")
-	if err != nil {
-		panic(err)
-	}
+// func SampleNetHeader() {
+// 	header, err := net.Header("https://google.com")
+// 	if err != nil {
+// 		panic(err)
+// 	}
 
-	fmt.Println(types.MapAsString(header))
-}
+// 	fmt.Println(types.MapAsString(header))
+// }

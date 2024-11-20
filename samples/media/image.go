@@ -1,16 +1,16 @@
 package media
 
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse/media"
-)
+// import (
+// 	"fmt"
+// 	"github.com/thuongtruong109/gouse/media"
+// )
 
-func SampleMediaPngToJpg() {
-	err := media.PngToJpg("mockdata/1720031107.png", "mockdata/output.jpg")
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
+// func SampleMediaPngToJpg() {
+// 	err := media.PngToJpg("mockdata/1720031107.png", "mockdata/output.jpg")
+// 	if err != nil {
+// 		fmt.Println(err)
+// 		return
+// 	}
 
-	fmt.Println("Conversion successful")
-}
+// 	fmt.Println("Conversion successful")
+// }

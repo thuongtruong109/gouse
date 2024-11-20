@@ -1,18 +1,18 @@
 package path
 
-import (
-	"fmt"
+// import (
+// 	"fmt"
 
-	"github.com/thuongtruong109/gouse/io"
-)
+// 	"github.com/thuongtruong109/gouse/io"
+// )
 
-func SampleIoReadPath() {
-	relativePath := "tmp/example.txt"
+// func SampleIoReadPath() {
+// 	relativePath := "tmp/example.txt"
 
-	content, err := io.ReadPath(relativePath)
-	if err != nil {
-		fmt.Println("Error reading file:", err)
-		return
-	}
-	fmt.Println("File content:", string(content))
-}
+// 	content, err := io.ReadPath(relativePath)
+// 	if err != nil {
+// 		fmt.Println("Error reading file:", err)
+// 		return
+// 	}
+// 	fmt.Println("File content:", string(content))
+// }

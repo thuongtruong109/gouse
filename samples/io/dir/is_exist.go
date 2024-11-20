@@ -1,15 +1,15 @@
 package dir
 
-import "github.com/thuongtruong109/gouse/io"
+// import "github.com/thuongtruong109/gouse/io"
 
-func SampleIoCheckDir() {
-	isExist, err1 := io.IsExistDir("tmp")
-	if err1 != nil {
-		println(err1.Error())
-	}
-	if isExist {
-		println("dir exist")
-	} else {
-		println("dir not exist")
-	}
-}
+// func SampleIoCheckDir() {
+// 	isExist, err1 := io.IsExistDir("tmp")
+// 	if err1 != nil {
+// 		println(err1.Error())
+// 	}
+// 	if isExist {
+// 		println("dir exist")
+// 	} else {
+// 		println("dir not exist")
+// 	}
+// }

@@ -1,7 +1,7 @@
 package net
 
-import "github.com/thuongtruong109/gouse/net"
+// import "github.com/thuongtruong109/gouse/net"
 
-func SampleNetOpen() {
-	net.Open("https://google.com")
-}
+// func SampleNetOpen() {
+// 	net.Open("https://google.com")
+// }

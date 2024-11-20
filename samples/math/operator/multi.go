@@ -1,8 +1,8 @@
 package operator
 
-import "github.com/thuongtruong109/gouse/math"
+// import "github.com/thuongtruong109/gouse/math"
 
-func SampleMathMulti() {
-	var num1, num2, num3, num4 = 10, 20, 30, -2
-	println("Multiply of numbers: ", math.Multi(num1, num2, num3, num4))
-}
+// func SampleMathMulti() {
+// 	var num1, num2, num3, num4 = 10, 20, 30, -2
+// 	println("Multiply of numbers: ", math.Multi(num1, num2, num3, num4))
+// }

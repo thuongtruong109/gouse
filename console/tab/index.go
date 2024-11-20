@@ -8,7 +8,7 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
 
-	"github.com/thuongtruong109/gouse/math"
+	"github.com/thuongtruong109/gouse"
 )
 
 type model struct {
@@ -28,10 +28,10 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		case "ctrl+c", "q":
 			return m, tea.Quit
 		case "right", "l", "n", "tab":
-			m.activeTab = math.Min(m.activeTab+1, len(m.Tabs)-1)
+			m.activeTab = gouse.Min(m.activeTab+1, len(m.Tabs)-1)
 			return m, nil
 		case "left", "h", "p", "shift+tab":
-			m.activeTab = math.Max(m.activeTab-1, 0)
+			m.activeTab = gouse.Max(m.activeTab-1, 0)
 			return m, nil
 		}
 	}

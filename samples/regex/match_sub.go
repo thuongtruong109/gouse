@@ -1,13 +1,13 @@
 package regex
 
-import (
-	"fmt"
+// import (
+// 	"fmt"
 
-	"github.com/thuongtruong109/gouse/regex"
-)
+// 	"github.com/thuongtruong109/gouse/regex"
+// )
 
-// Note: regex pattern is not include one of (^, $, /g)
+// // Note: regex pattern is not include one of (^, $, /g)
 
-func SampleRegexMatch() {
-	fmt.Println("Match string with regex: ", regex.Match(`[A-Z]`, "Hello World 123"))
-}
+// func SampleRegexMatch() {
+// 	fmt.Println("Match string with regex: ", regex.Match(`[A-Z]`, "Hello World 123"))
+// }

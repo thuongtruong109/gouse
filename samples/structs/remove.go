@@ -1,23 +1,23 @@
 package structs
 
-import (
-	"fmt"
+// import (
+// 	"fmt"
 
-	"github.com/thuongtruong109/gouse/structs"
-)
+// 	"github.com/thuongtruong109/gouse/structs"
+// )
 
-type Remove_Person struct {
-	Name  string
-	Age   int
-	Email string
-}
+// type Remove_Person struct {
+// 	Name  string
+// 	Age   int
+// 	Email string
+// }
 
-func SampleStructRemove() {
-	person := Remove_Person{
-		Name:  "Example",
-		Age:   40,
-		Email: "example@gmail.com",
-	}
+// func SampleStructRemove() {
+// 	person := Remove_Person{
+// 		Name:  "Example",
+// 		Age:   40,
+// 		Email: "example@gmail.com",
+// 	}
 
-	fmt.Printf("Struct after removed field: %+v\n", structs.Remove(person, "Email"))
-}
+// 	fmt.Printf("Struct after removed field: %+v\n", structs.Remove(person, "Email"))
+// }

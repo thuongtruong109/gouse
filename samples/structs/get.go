@@ -1,24 +1,24 @@
 package structs
 
-import (
-	"fmt"
+// import (
+// 	"fmt"
 
-	"github.com/thuongtruong109/gouse/structs"
-)
+// 	"github.com/thuongtruong109/gouse/structs"
+// )
 
-type Get_Person struct {
-	Name  string
-	Age   int
-	Email string
-}
+// type Get_Person struct {
+// 	Name  string
+// 	Age   int
+// 	Email string
+// }
 
-func SampleStructGet() {
-	person := Get_Person{
-		Name:  "Example",
-		Age:   40,
-		Email: "example@gmail.com",
-	}
+// func SampleStructGet() {
+// 	person := Get_Person{
+// 		Name:  "Example",
+// 		Age:   40,
+// 		Email: "example@gmail.com",
+// 	}
 
-	name := structs.Get(person, "Name")
-	fmt.Printf("Name: %s\n", name)
-}
+// 	name := structs.Get(person, "Name")
+// 	fmt.Printf("Name: %s\n", name)
+// }

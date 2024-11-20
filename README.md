@@ -227,3 +227,4 @@ $ git clone https://github.com/thuongtruong109/gouse.git
 - [Golang x Github Actions](https://github.com/brpaz/github-actions-demo-go)
 - [Dynamic HTML](https://css-tricks.com/dynamic-page-replacing-content)
 - [Profiling Go Programs](https://blog.golang.org/pprof) - [Example](https://dev.to/immortalt/use-pprof-for-golang-program-memory-analysis-2cj6)
+-https://github.com/lxzan/gws

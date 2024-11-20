@@ -1,30 +1,30 @@
 package crypto
 
-import (
-	"fmt"
+// import (
+// 	"fmt"
 
-	"github.com/thuongtruong109/gouse/crypto"
-)
+// 	"github.com/thuongtruong109/gouse/crypto"
+// )
 
-func SampleCryptoEncode() {
-	data := []byte("This is a sample data")
+// func SampleCryptoEncode() {
+// 	data := []byte("This is a sample data")
 
-	encodedData, err := crypto.Encode(data)
-	if err != nil {
-		fmt.Println("Error encoding data:", err)
-		return
-	}
-	fmt.Println("Raw data:", string(data))
-	fmt.Println("Encoded data:", string(encodedData))
-}
+// 	encodedData, err := crypto.Encode(data)
+// 	if err != nil {
+// 		fmt.Println("Error encoding data:", err)
+// 		return
+// 	}
+// 	fmt.Println("Raw data:", string(data))
+// 	fmt.Println("Encoded data:", string(encodedData))
+// }
 
-func SampleCryptoDecode() {
-	data := []byte("VGhpcyBpcyBhIHNhbXBsZSBkYXRh")
-	decodedData, err := crypto.Decode(data)
-	if err != nil {
-		fmt.Println("Error decoding data:", err)
-		return
-	}
-	fmt.Println("Raw encoded data:", string(data))
-	fmt.Println("Decoded data:", string(decodedData))
-}
+// func SampleCryptoDecode() {
+// 	data := []byte("VGhpcyBpcyBhIHNhbXBsZSBkYXRh")
+// 	decodedData, err := crypto.Decode(data)
+// 	if err != nil {
+// 		fmt.Println("Error decoding data:", err)
+// 		return
+// 	}
+// 	fmt.Println("Raw encoded data:", string(data))
+// 	fmt.Println("Decoded data:", string(decodedData))
+// }

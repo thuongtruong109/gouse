@@ -1,23 +1,23 @@
 package config
 
-import (
-	"fmt"
+// import (
+// 	"fmt"
 
-	"github.com/thuongtruong109/gouse/config"
-)
+// 	"github.com/thuongtruong109/gouse/config"
+// )
 
-func SampleConfigJson() {
-	type Configuration struct {
-		Users  []string
-		Groups []string
-	}
+// func SampleConfigJson() {
+// 	type Configuration struct {
+// 		Users  []string
+// 		Groups []string
+// 	}
 
-	var myConf Configuration
-	err := config.Json("conf.json", &myConf)
-	if err != nil {
-		fmt.Println("Error:", err)
-	}
+// 	var myConf Configuration
+// 	err := config.Json("conf.json", &myConf)
+// 	if err != nil {
+// 		fmt.Println("Error:", err)
+// 	}
 
-	fmt.Println("Users:", myConf.Users)
-	fmt.Println("Groups:", myConf.Groups)
-}
+// 	fmt.Println("Users:", myConf.Users)
+// 	fmt.Println("Groups:", myConf.Groups)
+// }

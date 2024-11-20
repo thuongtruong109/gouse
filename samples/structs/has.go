@@ -1,27 +1,27 @@
 package structs
 
-import (
-	"fmt"
+// import (
+// 	"fmt"
 
-	"github.com/thuongtruong109/gouse/structs"
-)
+// 	"github.com/thuongtruong109/gouse/structs"
+// )
 
-type Has_Person struct {
-	Name  string
-	Age   int
-	Email string
-}
+// type Has_Person struct {
+// 	Name  string
+// 	Age   int
+// 	Email string
+// }
 
-func SampleStructHas() {
-	person := Has_Person{
-		Name:  "Example",
-		Age:   40,
-		Email: "",
-	}
+// func SampleStructHas() {
+// 	person := Has_Person{
+// 		Name:  "Example",
+// 		Age:   40,
+// 		Email: "",
+// 	}
 
-	has := structs.Has(person, "Email")
-	fmt.Printf("Has: %+v\n", has)
+// 	has := structs.Has(person, "Email")
+// 	fmt.Printf("Has: %+v\n", has)
 
-	hasEmpty := structs.HasEmpty(person, "Email")
-	fmt.Printf("Has empty: %+v\n", hasEmpty)
-}
+// 	hasEmpty := structs.HasEmpty(person, "Email")
+// 	fmt.Printf("Has empty: %+v\n", hasEmpty)
+// }

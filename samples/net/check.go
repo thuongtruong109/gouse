@@ -1,19 +1,19 @@
 package net
 
-import "github.com/thuongtruong109/gouse/net"
+// import "github.com/thuongtruong109/gouse/net"
 
-func SampleNetCheck() {
-	ok, err := net.Check("https://google.com")
-	if err != nil {
-		panic(err)
-	}
-	println("Response: ", ok)
-}
+// func SampleNetCheck() {
+// 	ok, err := net.Check("https://google.com")
+// 	if err != nil {
+// 		panic(err)
+// 	}
+// 	println("Response: ", ok)
+// }
 
-func SampleNetCheckWithStatusCode() {
-	statusCode, err := net.CheckWithStatusCode("https://google.com")
-	if err != nil {
-		panic(err)
-	}
-	println("Status code: ", statusCode)
-}
+// func SampleNetCheckWithStatusCode() {
+// 	statusCode, err := net.CheckWithStatusCode("https://google.com")
+// 	if err != nil {
+// 		panic(err)
+// 	}
+// 	println("Status code: ", statusCode)
+// }

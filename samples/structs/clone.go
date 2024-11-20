@@ -1,29 +1,29 @@
 package structs
 
-import (
-	"fmt"
+// import (
+// 	"fmt"
 
-	"github.com/thuongtruong109/gouse/structs"
-)
+// 	"github.com/thuongtruong109/gouse/structs"
+// )
 
-type Clone_Person struct {
-	Name  string
-	Age   int
-	Email string
-}
+// type Clone_Person struct {
+// 	Name  string
+// 	Age   int
+// 	Email string
+// }
 
-func SampleStructClone() {
-	person := Clone_Person{
-		Name:  "Example",
-		Age:   40,
-		Email: "example@gmail.com",
-	}
+// func SampleStructClone() {
+// 	person := Clone_Person{
+// 		Name:  "Example",
+// 		Age:   40,
+// 		Email: "example@gmail.com",
+// 	}
 
-	fmt.Printf("Original: %+v\n", person)
+// 	fmt.Printf("Original: %+v\n", person)
 
-	clone := structs.Clone(person)
+// 	clone := structs.Clone(person)
 
-	updateClone := clone.(Clone_Person)
-	updateClone.Name = "Updated Name"
-	fmt.Printf("Clone: %+v\n", updateClone)
-}
+// 	updateClone := clone.(Clone_Person)
+// 	updateClone.Name = "Updated Name"
+// 	fmt.Printf("Clone: %+v\n", updateClone)
+// }

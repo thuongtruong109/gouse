@@ -1,14 +1,14 @@
 package geometry
 
-import (
-	"fmt"
+// import (
+// 	"fmt"
 
-	"github.com/thuongtruong109/gouse/math"
-)
+// 	"github.com/thuongtruong109/gouse/math"
+// )
 
-func SampleMathTriangle() {
-	println("Area of triangle (integer): ", math.AreaTriangle(10, 20))
-	println("Area of triangle (float): ", fmt.Sprintf("%f", math.AreaTriangleF(10.0, 20.0)))
-	println("Perimeter of triangle (integer): ", math.PeriTriangle(10, 20, 30))
-	println("Perimeter of triangle (float): ", fmt.Sprintf("%f", math.PeriTriangleF(10.0, 20.0, 30.0)))
-}
+// func SampleMathTriangle() {
+// 	println("Area of triangle (integer): ", math.AreaTriangle(10, 20))
+// 	println("Area of triangle (float): ", fmt.Sprintf("%f", math.AreaTriangleF(10.0, 20.0)))
+// 	println("Perimeter of triangle (integer): ", math.PeriTriangle(10, 20, 30))
+// 	println("Perimeter of triangle (float): ", fmt.Sprintf("%f", math.PeriTriangleF(10.0, 20.0, 30.0)))
+// }

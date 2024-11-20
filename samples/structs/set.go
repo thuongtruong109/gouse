@@ -1,25 +1,25 @@
 package structs
 
-import (
-	"fmt"
+// import (
+// 	"fmt"
 
-	"github.com/thuongtruong109/gouse/structs"
-)
+// 	"github.com/thuongtruong109/gouse/structs"
+// )
 
-type Set_Person struct {
-	Name  string
-	Age   int
-	Email string
-}
+// type Set_Person struct {
+// 	Name  string
+// 	Age   int
+// 	Email string
+// }
 
-func SampleStructSet() {
-	person := &Set_Person{
-		Name:  "Example",
-		Age:   40,
-		Email: "example@gmail.com",
-	}
+// func SampleStructSet() {
+// 	person := &Set_Person{
+// 		Name:  "Example",
+// 		Age:   40,
+// 		Email: "example@gmail.com",
+// 	}
 
-	structs.Set(person, "Name", "Updated Name")
+// 	structs.Set(person, "Name", "Updated Name")
 
-	fmt.Printf("Struct after setting field: %+v\n", person)
-}
+// 	fmt.Printf("Struct after setting field: %+v\n", person)
+// }
