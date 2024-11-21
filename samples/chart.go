@@ -6,7 +6,7 @@ import (
 
 func SampleChartBar() {
 	newChart := &gouse.IBarChartOpts{
-		Output:   "bar.html",
+		Output:   "test_sample_data/bar.html",
 		Title:    "Bar chart in Go",
 		Subtitle: "This is fun to use!",
 		XAxis:    []string{"Jan", "Feb", "Mar", "Apr", "May", "Jun"},
@@ -22,7 +22,7 @@ func SampleChartBar() {
 
 func SampleChartLine() {
 	newChart := &gouse.ILineChartOpts{
-		Output:   "line.html",
+		Output:   "test_sample_data/line.html",
 		Title:    "Line chart in Go",
 		Subtitle: "This is fun to use!",
 		XAxis:    []string{"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"},
@@ -37,7 +37,7 @@ func SampleChartLine() {
 
 func SampleChartPie() {
 	newChart := &gouse.IPieChartOpts{
-		Output:    "pie.html",
+		Output:    "test_sample_data/pie.html",
 		Title:     "Pie chart in Go",
 		Subtitle:  "This is fun to use!",
 		Radius:    200,

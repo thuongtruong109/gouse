@@ -1171,32 +1171,6 @@ func TestLIndex(t *testing.T) {
 	}
 }
 
-func TestRandStr(t *testing.T) {
-	expectedLength := 10
-	got := RandStr(expectedLength)
-
-	if len(got) != expectedLength {
-		t.Errorf("RandomStr() = %v, want %v", len(got), expectedLength)
-	}
-
-	if reflect.TypeOf(got).Kind() != reflect.String {
-		t.Errorf("RandomStr() = %v, want %v", reflect.TypeOf(got).Kind(), reflect.String)
-	}
-}
-
-func TestRandomNum(t *testing.T) {
-	expectedLength := 6
-	got := RandDigit(expectedLength)
-
-	if len(got) != expectedLength {
-		t.Errorf("RandomNum() = %v, want %v", len(got), expectedLength)
-	}
-
-	if reflect.TypeOf(got).Kind() != reflect.String {
-		t.Errorf("RandomNum() = %v, want %v", reflect.TypeOf(got).Kind(), reflect.String)
-	}
-}
-
 func TestAt(t *testing.T) {
 	type args struct {
 		s string

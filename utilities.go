@@ -5,20 +5,7 @@ import (
 	"go/ast"
 	"go/parser"
 	"go/token"
-	"time"
-
-	"github.com/google/uuid"
 )
-
-func RandID() string {
-	randomID := fmt.Sprint(time.Now().UnixNano())
-	return randomID
-}
-
-func UUID() string {
-	uuid := uuid.New()
-	return uuid.String()
-}
 
 type Function struct {
 	Import string

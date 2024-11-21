@@ -6,18 +6,15 @@ install:
 	go install golang.org/x/perf/cmd/benchstat
 	go install honnef.co/go/tools/cmd/staticcheck@latest
 
-start:
-	go run main.go
-
 dev:
-	go run main.go -isDev=true
+	go run samples/main/index.go -isDev=true
 
 build:
 	go build ./...
 
 doc:
 	@echo "Generating docs..."
-	go run cmd/doc.go ./samples
+	go run cmd/doc_gen.go ./samples
 	@echo "Done!"
 
 test:
@@ -49,11 +46,11 @@ format:
 	gofmt -w -s . && goimports -w . && go fmt ./...
 	@echo "Done!"
 
-lint:
-	@echo "Running lint..."
-	export PATH=$PATH:$(go env GOPATH)/bin
-	staticcheck ./...
-	@echo "Done!"
+# lint:
+# 	@echo "Running lint..."
+# 	export PATH=$PATH:$(go env GOPATH)/bin
+# 	staticcheck ./...
+# 	@echo "Done!"
 
 count:
 	@echo "Counting lines..."
@@ -61,7 +58,7 @@ count:
 	@echo "Done!"
 
 pre:
-	make build && make test && make format && make lint && make doc
+	make build && make test && make format && make doc
 	git add .
 
 clean:

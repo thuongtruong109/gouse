@@ -618,26 +618,6 @@ func LIndex(s string, substr string) int {
 	return lastIndex
 }
 
-func RandStr(n int) string {
-	var result string
-
-	for i := 0; i < n; i++ {
-		result += string(CHAIN_STR[RandNum(0, len(CHAIN_STR)-1)])
-	}
-
-	return result
-}
-
-func RandDigit(n int) string {
-	var result string
-
-	for i := 0; i < n; i++ {
-		result += string(CHAIN_NUM[RandNum(0, len(CHAIN_NUM)-1)])
-	}
-
-	return result
-}
-
 func At(s string, index int) string {
 	if index < 0 {
 		index = len(s) + index

@@ -4,26 +4,6 @@ import (
 	"testing"
 )
 
-func TestRandom(t *testing.T) {
-	min := 1
-	max := 10
-
-	result := RandNum(min, max)
-
-	if result < min || result > max {
-		t.Errorf("Random() = %d; want >= %d and <= %d", result, min, max)
-	}
-}
-
-func BenchmarkRandom(b *testing.B) {
-	min := 1
-	max := 10
-
-	for i := 0; i < b.N; i++ {
-		RandNum(min, max)
-	}
-}
-
 func TestClamp(t *testing.T) {
 	min := 1
 	max := 10
