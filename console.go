@@ -9,7 +9,6 @@ import (
 	"strconv"
 
 	"github.com/AlecAivazis/survey/v2"
-	"github.com/thuongtruong109/gouse/shared"
 )
 
 func Cmd(defaultCmmand string, windowsCmmand ...string) {
@@ -41,7 +40,7 @@ func PrintColor[T int | int8 | int16 | int32 | uint | uint8 | uint16 | uint32 | 
 	fmt.Printf("%s%v\n", color, chain)
 }
 
-func Banner(font shared.FontBannerType, s string) {
+func Banner(font IFontBannerType, s string) {
 	split := Split(Uppers(s), "")
 	for i := 0; i < 3; i++ {
 		for _, v := range split {

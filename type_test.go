@@ -4,8 +4,6 @@ import (
 	"errors"
 	"reflect"
 	"testing"
-
-	"github.com/thuongtruong109/gouse/shared"
 )
 
 /* Testing type of variable */
@@ -179,7 +177,7 @@ func TestUndefined(t *testing.T) {
 /* Testing type of form */
 
 func TestIsUUID(t *testing.T) {
-	tests := []shared.ITest{
+	tests := []ITest{
 		{
 			Name:    "Test 1",
 			Input:   "123e4567-e89b-12d3-a456-426614174000",
@@ -225,7 +223,7 @@ func TestIsUUID(t *testing.T) {
 }
 
 func TestIsGmail(t *testing.T) {
-	tests := []shared.ITest{
+	tests := []ITest{
 		{
 			Name:    "Test 1",
 			Input:   "example@gmail.com",
@@ -265,7 +263,7 @@ func TestIsGmail(t *testing.T) {
 }
 
 func TestIsYahoo(t *testing.T) {
-	tests := []shared.ITest{
+	tests := []ITest{
 		{
 			Name:    "Test 1",
 			Input:   "example@yahoo.com",
@@ -299,7 +297,7 @@ func TestIsYahoo(t *testing.T) {
 }
 
 func TestIsOutlook(t *testing.T) {
-	tests := []shared.ITest{
+	tests := []ITest{
 		{
 			Name:    "Test 1",
 			Input:   "example@outlook.com",
@@ -333,7 +331,7 @@ func TestIsOutlook(t *testing.T) {
 }
 
 func TestIsEdu(t *testing.T) {
-	tests := []shared.ITest{
+	tests := []ITest{
 		{
 			Name:    "Test 1",
 			Input:   "example@edu.vn",
@@ -361,7 +359,7 @@ func TestIsEdu(t *testing.T) {
 }
 
 func TestIsEmail(t *testing.T) {
-	tests := []shared.ITest{
+	tests := []ITest{
 		{
 			Name:    "Test 1",
 			Input:   "user01@example.com",
@@ -389,7 +387,7 @@ func TestIsEmail(t *testing.T) {
 }
 
 func TestUsername(t *testing.T) {
-	tests := []shared.ITest{
+	tests := []ITest{
 		{
 			Name:    "Test 1",
 			Input:   "example",
@@ -429,7 +427,7 @@ func TestUsername(t *testing.T) {
 }
 
 func TestIsPassword(t *testing.T) {
-	tests := []shared.ITest{
+	tests := []ITest{
 		{
 			Name:    "Test 1",
 			Input:   "12345678",
@@ -457,7 +455,7 @@ func TestIsPassword(t *testing.T) {
 }
 
 func TestIsPhone(t *testing.T) {
-	tests := []shared.ITest{
+	tests := []ITest{
 		{
 			Name:    "Test 1",
 			Input:   "12345678",

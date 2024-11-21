@@ -1,7 +1,6 @@
 package gouse
 
 import (
-	"errors"
 	"fmt"
 	"image"
 	"image/color"
@@ -66,7 +65,7 @@ func HexToRGBA(hex string) (color.RGBA, error) {
 }
 
 func formatError(message string, err error) error {
-	return errors.New(fmt.Sprintf("%s: %v", message, err))
+	return fmt.Errorf("%s: %v", message, err)
 }
 
 func PNGToJPG(input, output string) error {

@@ -10,13 +10,25 @@
     <a href="https://pkg.go.dev/github.com/thuongtruong109/gouse"><img src="https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square" alt="go.dev"></a>
     <a href="https://godocs.io/github.com/thuongtruong109/gouse"><img alt="Godoc" src="https://godocs.io/github.com/thuongtruong109/gouse?status.svg"></a>
     <img src="./public/count.svg" alt="gouse_functions_count">
-    <a href="LICENSE"><img src="https://img.shields.io/github/license/thuongtruong109/gouse" alt="license"></a>
+    <!-- <a href="LICENSE"><img src="https://img.shields.io/github/license/thuongtruong109/gouse" alt="license"></a> -->
      <!-- <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/thuongtruong109/gouse"> -->
     <!-- <a href="https://app.codacy.com/gh/thuongtruong109/gouse/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_Coverage"><img src="https://app.codacy.com/project/badge/Coverage/21f940894abd4e0384ef8b84adc294da" alt="codacy"></a> -->
     <!-- <a href="https://sourcegraph.com/github.com/thuongtruong109/gouse?badge"><img src="https://sourcegraph.com/github.com/thuongtruong109/gouse/-/badge.svg" alt="sourcegraph"></a> -->
 </div>
 
 # ![Banner](/public/banner.png)
+
+<div align="center">
+  <table>
+    <tbody>
+      <td align="center">
+        <img width="2000" height="0"><br>
+        <sub>Made possible by my <a href="https://github.com/sponsors/thuongtruong109">Sponsor Program 💖</a></sub><br>
+        <img width="2000" height="0">
+      </td>
+    </tbody>
+  </table>
+</div>
 
 ## 🧠 Why Gouse?
 
@@ -54,32 +66,35 @@
 > Below is a list of modules that Gouse supports. This project is still in development stage, so not all features are available.
 
 ✅ Array <br/>
+✅ Api <br/>
 ✅ Cache <br/>
 ✅ Chart <br/>
 ✅ Config <br/>
-✅ Connection <br/>
 ✅ Console <br/>
+✅ Cron <br/>
+✅ Crypto <br/>
 ✅ Date <br/>
 ✅ Function <br/>
 ✅ Helper <br/>
 ✅ I/O <br/>
 ✅ Log <br/>
 ✅ Math <br/>
+✅ Media <br/>
 ✅ Net <br/>
 ✅ Number <br/>
+✅ OS <br/>
 ✅ Regex <br/>
 ✅ Struct <br/>
 ✅ String <br/>
 ✅ Tool <br/>
 ✅ Type <br/>
 
-<!-- - [ ] API
-- [ ] Cron
+<!-- ✅ Connection <br/> -->
+<!-- - 
+- [ ] Auth
 - [ ] Error
-- [ ] Json
 - [ ] Lang
 - [ ] Mail
-- [ ] Media
 - [ ] ORM
 - [ ] Queue
 - [ ] Socket
@@ -166,7 +181,7 @@ $ git clone https://github.com/thuongtruong109/gouse.git
 
 ## 📄 License
 
-- Gouse is released under the [`MIT License`](LICENSE). See the LICENSE file for more information.
+- Gouse is released under the [`BSD-3-Clause`](./LICENSE) License © 2023 [Tran Nguyen Thuong Truong](https://github.com/thuongtruong109)). See the for more information.
 
 - For more information, see the [`Licensing FAQs`](https://opensource.org/faq#mit-vs-bsd).
 
@@ -226,5 +241,4 @@ $ git clone https://github.com/thuongtruong109/gouse.git
 - [File handling in Golang](https://www.cloudhadoop.com/2018/11/learn-golang-tutorials-file-directory.html)
 - [Golang x Github Actions](https://github.com/brpaz/github-actions-demo-go)
 - [Dynamic HTML](https://css-tricks.com/dynamic-page-replacing-content)
-- [Profiling Go Programs](https://blog.golang.org/pprof) - [Example](https://dev.to/immortalt/use-pprof-for-golang-program-memory-analysis-2cj6)
--https://github.com/lxzan/gws
+- [Profiling Go Programs](https://blog.golang.org/pprof) - [Pprof example](https://dev.to/immortalt/use-pprof-for-golang-program-memory-analysis-2cj6) - [Gws example](https://github.com/lxzan/gws)

@@ -6,7 +6,6 @@ import (
 	"strings"
 
 	"github.com/google/uuid"
-	"github.com/thuongtruong109/gouse/shared"
 )
 
 /* Check type of variable */
@@ -150,7 +149,7 @@ func IsUUID(input string) (bool, error) {
 
 func isMail(emailStr, domain string) (bool, error) {
 	if Includes(emailStr, "@") {
-		if !IsMatchReg(shared.EmailLenReg, emailStr) {
+		if !IsMatchReg(EmailLenReg, emailStr) {
 			return false, ERROR_EMAIL_LENGTH
 		}
 
@@ -188,7 +187,7 @@ func IsEmail(emailStr, customDomain string) (bool, error) {
 }
 
 func IsUsername(username string) (bool, error) {
-	if !IsMatchReg(shared.UsernameReg, username) {
+	if !IsMatchReg(UsernameReg, username) {
 		return false, ERROR_INVALID_USERNAME
 	}
 
@@ -196,15 +195,15 @@ func IsUsername(username string) (bool, error) {
 }
 
 func IsPassword(password string) (bool, error) {
-	if !IsMatchReg(shared.PasswordLenReg, password) {
+	if !IsMatchReg(PasswordLenReg, password) {
 		return false, ERROR_PASSWORD_LENGTH
-	} else if !IsMatchReg(shared.PasswordLowerReg, password) {
+	} else if !IsMatchReg(PasswordLowerReg, password) {
 		return false, ERROR_PASSWORD_EMPTY_LOWER
-	} else if !IsMatchReg(shared.PasswordUpperReg, password) {
+	} else if !IsMatchReg(PasswordUpperReg, password) {
 		return false, ERROR_PASSWORD_EMPTY_UPPER
-	} else if !IsMatchReg(shared.PasswordDigitReg, password) {
+	} else if !IsMatchReg(PasswordDigitReg, password) {
 		return false, ERROR_PASSWORD_EMPTY_DIGIT
-	} else if !IsMatchReg(shared.PasswordSpecialReg, password) {
+	} else if !IsMatchReg(PasswordSpecialReg, password) {
 		return false, ERROR_PASSWORD_EMPTY_SPECIAL
 	} else {
 		return true, nil
@@ -212,7 +211,7 @@ func IsPassword(password string) (bool, error) {
 }
 
 func IsPhone(phone string) (bool, error) {
-	if !IsMatchReg(shared.PhoneReg, phone) {
+	if !IsMatchReg(PhoneReg, phone) {
 		return false, ERROR_INVALID_PHONE
 	}
 
