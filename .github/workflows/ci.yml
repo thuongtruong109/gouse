@@ -41,14 +41,14 @@ jobs:
         run: make test
 
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           file: coverage.out
           flags: unittests
 
       - name: Upload coverage
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: coverage
           path: coverage.out
@@ -74,7 +74,7 @@ jobs:
         go: ["1.19"]
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 1
       - uses: dominikh/staticcheck-action@v1.2.0

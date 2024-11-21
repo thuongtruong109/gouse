@@ -1,22 +1,34 @@
 <div align="center">
     <img src="https://github.com/thuongtruong109/gouse/actions/workflows/ci.yml/badge.svg?branch=main" alt="ci_status">
     <img src="https://github.com/thuongtruong109/gouse/actions/workflows/analysis.yml/badge.svg?branch=main" alt="codeql_status">
-    <a href="https://sonarcloud.io/summary/new_code?id=thuongtruong109_gouse"><img src="https://sonarcloud.io/api/project_badges/measure?project=thuongtruong109_gouse&metric=alert_status" alt="sonar"></a>
+    <a href="https://sonarcloud.io/summary/new_code?id=thuongtruong1009_gouse"><img src="https://sonarcloud.io/api/project_badges/measure?project=thuongtruong1009_gouse&metric=alert_status" alt="sonar"></a>
     <a href="https://app.codacy.com/gh/thuongtruong109/gouse/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade"><img src="https://app.codacy.com/project/badge/Grade/21f940894abd4e0384ef8b84adc294da" alt="codacy"></a>
-    <a href="https://app.deepsource.com/gh/thuongtruong109/gouse/" target="_blank"><img alt="DeepSource" title="DeepSource" src="https://app.deepsource.com/gh/thuongtruong109/gouse.svg/?label=resolved+issues&show_trend=false&token=VqBk6AsowWePd3khy3AUkvXJ"/></a>
+    <a href="https://app.deepsource.com/gh/thuongtruong109/gouse/" target="_blank"><img alt="DeepSource" title="DeepSource" src="https://app.deepsource.com/gh/thuongtruong1009/gouse.svg/?label=resolved+issues&show_trend=false&token=VqBk6AsowWePd3khy3AUkvXJ"/></a>
     <a href="https://goreportcard.com/report/thuongtruong109/gouse"><img src="https://goreportcard.com/badge/github.com/thuongtruong109/gouse" alt="go_report_card"></a>
-    <a href="https://codecov.io/gh/thuongtruong109/gouse"><img src="https://codecov.io/gh/thuongtruong109/gouse/branch/main/graph/badge.svg" alt="codecov"></a>
-    <a href="https://dl.circleci.com/status-badge/redirect/gh/thuongtruong109/gouse/tree/main"><img src="https://dl.circleci.com/status-badge/img/gh/thuongtruong109/gouse/tree/main.svg?style=svg" alt="circleci"></a>
+    <a href="https://codecov.io/gh/thuongtruong109/gouse"><img src="https://codecov.io/gh/thuongtruong1009/gouse/branch/main/graph/badge.svg" alt="codecov"></a>
+    <a href="https://dl.circleci.com/status-badge/redirect/gh/thuongtruong109/gouse/tree/main"><img src="https://dl.circleci.com/status-badge/img/gh/thuongtruong1009/gouse/tree/main.svg?style=svg" alt="circleci"></a>
     <a href="https://pkg.go.dev/github.com/thuongtruong109/gouse"><img src="https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square" alt="go.dev"></a>
-    <a href="https://godocs.io/github.com/thuongtruong109/gouse"><img alt="Godoc" src="https://godocs.io/github.com/thuongtruong109/gouse?status.svg"></a>
+    <!-- <a href="https://godocs.io/github.com/thuongtruong109/gouse"><img alt="Godoc" src="https://godocs.io/github.com/thuongtruong1009/gouse?status.svg"></a> -->
     <img src="./public/count.svg" alt="gouse_functions_count">
-    <a href="LICENSE"><img src="https://img.shields.io/github/license/thuongtruong109/gouse" alt="license"></a>
+    <!-- <a href="LICENSE"><img src="https://img.shields.io/github/license/thuongtruong109/gouse" alt="license"></a> -->
      <!-- <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/thuongtruong109/gouse"> -->
     <!-- <a href="https://app.codacy.com/gh/thuongtruong109/gouse/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_Coverage"><img src="https://app.codacy.com/project/badge/Coverage/21f940894abd4e0384ef8b84adc294da" alt="codacy"></a> -->
     <!-- <a href="https://sourcegraph.com/github.com/thuongtruong109/gouse?badge"><img src="https://sourcegraph.com/github.com/thuongtruong109/gouse/-/badge.svg" alt="sourcegraph"></a> -->
 </div>
 
 # ![Banner](/public/banner.png)
+
+<div align="center">
+  <table>
+    <tbody>
+      <td align="center">
+        <img width="2000" height="0"><br>
+        <sub>Made possible by my <a href="https://github.com/sponsors/thuongtruong109">Sponsor Program 💖</a></sub><br>
+        <img width="2000" height="0">
+      </td>
+    </tbody>
+  </table>
+</div>
 
 ## 🧠 Why Gouse?
 
@@ -54,32 +66,35 @@
 > Below is a list of modules that Gouse supports. This project is still in development stage, so not all features are available.
 
 ✅ Array <br/>
+✅ Api <br/>
 ✅ Cache <br/>
 ✅ Chart <br/>
 ✅ Config <br/>
-✅ Connection <br/>
 ✅ Console <br/>
+✅ Cron <br/>
+✅ Crypto <br/>
 ✅ Date <br/>
 ✅ Function <br/>
 ✅ Helper <br/>
 ✅ I/O <br/>
 ✅ Log <br/>
 ✅ Math <br/>
+✅ Media <br/>
 ✅ Net <br/>
 ✅ Number <br/>
+✅ OS <br/>
 ✅ Regex <br/>
 ✅ Struct <br/>
 ✅ String <br/>
 ✅ Tool <br/>
 ✅ Type <br/>
 
-<!-- - [ ] API
-- [ ] Cron
+<!-- ✅ Connection <br/> -->
+<!-- - 
+- [ ] Auth
 - [ ] Error
-- [ ] Json
 - [ ] Lang
 - [ ] Mail
-- [ ] Media
 - [ ] ORM
 - [ ] Queue
 - [ ] Socket
@@ -166,7 +181,7 @@ $ git clone https://github.com/thuongtruong109/gouse.git
 
 ## 📄 License
 
-- Gouse is released under the [`MIT License`](LICENSE). See the LICENSE file for more information.
+- Gouse is released under the [`MIT`](./LICENSE) License © 2024 [Tran Nguyen Thuong Truong](https://github.com/thuongtruong109)). See the for more information.
 
 - For more information, see the [`Licensing FAQs`](https://opensource.org/faq#mit-vs-bsd).
 
@@ -226,4 +241,4 @@ $ git clone https://github.com/thuongtruong109/gouse.git
 - [File handling in Golang](https://www.cloudhadoop.com/2018/11/learn-golang-tutorials-file-directory.html)
 - [Golang x Github Actions](https://github.com/brpaz/github-actions-demo-go)
 - [Dynamic HTML](https://css-tricks.com/dynamic-page-replacing-content)
-- [Profiling Go Programs](https://blog.golang.org/pprof) - [Example](https://dev.to/immortalt/use-pprof-for-golang-program-memory-analysis-2cj6)
+- [Profiling Go Programs](https://blog.golang.org/pprof) - [Pprof example](https://dev.to/immortalt/use-pprof-for-golang-program-memory-analysis-2cj6) - [Gws example](https://github.com/lxzan/gws)

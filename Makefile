@@ -6,24 +6,21 @@ install:
 	go install golang.org/x/perf/cmd/benchstat
 	go install honnef.co/go/tools/cmd/staticcheck@latest
 
-start:
-	go run main.go
-
 dev:
-	go run main.go -isDev=true
+	go run samples/main/index.go -isDev=true
 
 build:
 	go build ./...
 
 doc:
 	@echo "Generating docs..."
-	go run cmd/doc.go ./samples ./samples/api ./samples/array ./samples/cache ./samples/chart ./samples/config ./samples/crypto ./samples/date ./samples/function ./samples/helper ./samples/io ./samples/io/dir ./samples/io/file ./samples/io/path ./samples/math/check ./samples/math/operator ./samples/math/geometry ./samples/math/fomular ./samples/math/media ./samples/net ./samples/number ./samples/regex ./samples/strings ./samples/structs ./samples/types/cast ./samples/types/check
+	go run cmd/doc_gen.go ./samples
 	@echo "Done!"
 
 test:
 	@echo "Running tests..."
 	go clean -testcache
-	go test -v -count=1 -cover -coverprofile=coverage.out ./array/... ./cache/... ./chart/... ./config/... ./cron/... ./date/... ./number/... ./regex/... ./strings/... ./structs/... ./types/...
+	go test -v -count=1 -cover -coverprofile=coverage.out ./*.go
 	go tool cover -func=coverage.out
 	@echo "Done!"
 
@@ -49,18 +46,19 @@ format:
 	gofmt -w -s . && goimports -w . && go fmt ./...
 	@echo "Done!"
 
-lint:
-	@echo "Running lint..."
-	staticcheck ./...
-	@echo "Done!"
+# lint:
+# 	@echo "Running lint..."
+# 	export PATH=$PATH:$(go env GOPATH)/bin
+# 	staticcheck ./...
+# 	@echo "Done!"
 
 count:
 	@echo "Counting lines..."
-	bash count.sh public/count.svg array cache chart config connection cron crypto console date function helper io log math media net number os regex strings structs types
+	bash count.sh public/count.svg ./*.go
 	@echo "Done!"
 
 pre:
-	make build && make test && make format && make lint && make doc
+	make build && make test && make format && make doc
 	git add .
 
 clean:
