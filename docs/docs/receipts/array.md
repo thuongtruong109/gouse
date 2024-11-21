@@ -1,0 +1,635 @@
+# Array
+
+## Imports
+
+```go
+import (
+	"fmt"
+	"github.com/thuongtruong109/gouse"
+)
+```
+## Functions
+
+
+### SampleArrayChunk
+
+```go
+func SampleArrayChunk() {
+	println("--- Chunk array ---")
+	fmt.Println("[int]: ", gouse.Chunk([]int{1, -2, 3, -4, 5, 6}, 3))
+	fmt.Println("[uint]: ", gouse.Chunk([]uint{1, 2, 3, 4, 5, 6}, 3))
+	fmt.Println("[float]: ", gouse.Chunk([]float64{1.2, 2.3, 3.4, 4.5, 5.6, 6.7}, 3))
+	fmt.Println("[string]: ", gouse.Chunk([]string{"1", "2", "3", "4", "5", "6"}, 3))
+	fmt.Println("[rune]: ", gouse.Chunk([]rune{'a', 'b', 'c', 'd', 'e', 'f'}, 3))
+	fmt.Println("[complex]: ", gouse.Chunk([]complex128{1 + 2i, 2 + 3i, 3 + 4i, 4 + 5i, 5 + 6i, 6 + 7i}, 3))
+	fmt.Println("[struct]: ", gouse.Chunk([]struct{ a int }{{1}, {2}, {3}, {4}, {5}, {6}}, 3))
+}
+```
+## Imports
+
+```go
+import (
+	"fmt"
+	"github.com/thuongtruong109/gouse"
+)
+```
+## Functions
+
+
+### SampleArrayCompact
+
+```go
+func SampleArrayCompact() {
+	result := gouse.Compact([]interface{}{1, -2, 3, -4, 5, 6, 0, 0.0, "", false, nil})
+	fmt.Println("Compact remove all falsy values: ", result)
+}
+```
+## Imports
+
+```go
+import (
+	"fmt"
+	"github.com/thuongtruong109/gouse"
+)
+```
+## Functions
+
+
+### SampleArrayDiff
+
+```go
+func SampleArrayDiff() {
+	println("--- Difference array ---")
+	fmt.Println("[int]: ", gouse.Diff([]int{1, -2, 3, -4, 5, 6}, []int{1, 2, 3, 4, 5, 6}))
+	fmt.Println("[uint]: ", gouse.Diff([]uint{1, 2, 3, 4, 5, 7}, []uint{1, 2, 3, 4, 5, 6}))
+	fmt.Println("[float]: ", gouse.Diff([]float64{1.2, 2.3, 3.4}, []float64{4.5, 5.6, 6.7}))
+	fmt.Println("[string]: ", gouse.Diff([]string{"1", "4", "5", "6"}, []string{"1", "2", "3", "6"}))
+	fmt.Println("[rune]: ", gouse.Diff([]rune{'a', 'b', 'd', 'e', 'f'}, []rune{'a', 'b', 'c', 'f'}))
+	fmt.Println("[complex]: ", gouse.Diff([]complex128{1 + 2i, 2 + 3i, 5 + 6i, 6 + 7i}, []complex128{1 + 2i, 2 + 3i, 6 + 7i}))
+	fmt.Println("[struct]: ", gouse.Diff([]struct{ a int }{{-1}, {-2}, {3}, {4}, {5}, {6}}, []struct{ a int }{{1}, {2}}))
+}
+```
+## Imports
+
+```go
+import (
+	"fmt"
+	"github.com/thuongtruong109/gouse"
+)
+```
+## Functions
+
+
+### SampleArrayDrop
+
+```go
+func SampleArrayDrop() {
+	println("--- Drop elements in array (default n = 1) ---")
+	fmt.Println("[int] with default: ", gouse.Drop([]int{1, -2, 3, -4, 5, 6}))
+	fmt.Println("[int]: ", gouse.Drop([]int{1, -2, 3, -4, 5, 6}, 2))
+	fmt.Println("[uint]: ", gouse.Drop([]uint{1, 2, 3, 4, 5, 7}, 2))
+	fmt.Println("[float]: ", gouse.Drop([]float64{1.2, 2.3, 3.4}, 2))
+	fmt.Println("[string]: ", gouse.Drop([]string{"1", "4", "5", "6"}, 2))
+	fmt.Println("[rune]: ", gouse.Drop([]rune{'a', 'b', 'd', 'e', 'f'}, 2))
+	fmt.Println("[complex]: ", gouse.Drop([]complex128{1 + 2i, 2 + 3i, 5 + 6i, 6 + 7i}, 2))
+	fmt.Println("[struct]: ", gouse.Drop([]struct{ a int }{{-1}, {-2}, {3}, {4}, {5}, {6}}, 2))
+}
+```
+## Imports
+
+```go
+import (
+	"fmt"
+	"github.com/thuongtruong109/gouse"
+)
+```
+## Functions
+
+
+### SampleArrayEqual
+
+```go
+func SampleArrayEqual() {
+	println("--- Compare equal ---")
+	println("[int]: ", gouse.Equal(1, 1))
+	println("[uint]: ", gouse.Equal(uint(1), uint(1)))
+	println("[float]: ", gouse.Equal(1.2, 1.1))
+	println("[string]: ", gouse.Equal("1", "0"))
+	println("[rune]: ", gouse.Equal('a', 'a'))
+	println("[bool]: ", gouse.Equal(true, true))
+	println("[complex]: ", gouse.Equal(1+2i, 1+2i))
+	println("[struct]: ", gouse.Equal(struct{ a int }{1}, struct{ a int }{1}))
+}
+```
+## Imports
+
+```go
+import (
+	"fmt"
+	"github.com/thuongtruong109/gouse"
+)
+```
+## Functions
+
+
+### SampleArrayFilterBy
+
+```go
+func SampleArrayFilterBy() {
+	println("--- Filter elements in array by pass condition in callback function---")
+	println("[int]: ", gouse.FilterBy([]int{1, -2, 3, -4, 5, 6}, func(v int) bool {
+		return v > 2
+	}))
+
+	println("[uint]: ", gouse.FilterBy([]uint{1, 2, 3, 4, 5, 7}, func(v uint) bool {
+		return v > 2
+	}))
+
+	println("[float]: ", gouse.FilterBy([]float64{1.2, 2.3, 3.4}, func(v float64) bool {
+		return v > 2
+	}))
+
+	println("[string]: ", gouse.FilterBy([]string{"1", "4", "5", "6"}, func(v string) bool {
+		return v > "3"
+	}))
+
+	println("[rune]: ", gouse.FilterBy([]rune{'a', 'b', 'd', 'e', 'f'}, func(v rune) bool {
+		return v > 'c'
+	}))
+
+	println("[complex]: ", gouse.FilterBy([]complex128{1 + 2i, 2 + 3i, 5 + 6i, 6 + 7i}, func(v complex128) bool {
+		return real(v) > 3
+	}))
+
+	println("[struct]: ", gouse.FilterBy([]struct{ a int }{{-1}, {-2}, {3}, {4}, {5}, {6}}, func(v struct{ a int }) bool {
+		return v.a > 0
+	}))
+}
+```
+## Imports
+
+```go
+import (
+	"fmt"
+	"github.com/thuongtruong109/gouse"
+)
+```
+## Functions
+
+
+### SampleArrayFindBy
+
+```go
+func SampleArrayFindBy() {
+	println("--- Find element in array by pass condition in callback function---")
+	println("[int]: ", gouse.FindBy([]int{1, -2, 3, -4, 5, 6}, func(v int) bool {
+		return v == 3
+	}))
+
+	println("[uint]: ", gouse.FindBy([]uint{1, 2, 3, 4, 5, 7}, func(v uint) bool {
+		return v == 3
+	}))
+
+	println("[float]: ", gouse.FindBy([]float64{1.2, 2.3, 3.4}, func(v float64) bool {
+		return v == 3.4
+	}))
+
+	println("[string]: ", gouse.FindBy([]string{"1", "4", "5", "6"}, func(v string) bool {
+		return v == "5"
+	}))
+
+	println("[rune]: ", gouse.FindBy([]rune{'a', 'b', 'd', 'e', 'f'}, func(v rune) bool {
+		return v == 'e'
+	}))
+
+	println("[complex]: ", gouse.FindBy([]complex128{1 + 2i, 2 + 3i, 5 + 6i, 6 + 7i}, func(v complex128) bool {
+		return v == 5+6i
+	}))
+
+	fmt.Println("[struct]: ", gouse.FindBy([]struct{ a int }{{-1}, {-2}, {3}, {4}, {5}, {6}}, func(v struct{ a int }) bool {
+		return v.a == 3
+	}))
+}
+```
+## Imports
+
+```go
+import (
+	"fmt"
+	"github.com/thuongtruong109/gouse"
+)
+```
+## Functions
+
+
+### SampleArrayForBy
+
+```go
+func SampleArrayForBy() {
+	println("--- Loop array then handler with callback function ---")
+	print("[int]: ")
+	gouse.ForBy([]int{1, -2, 3, -4, 5, 6}, func(v int) {
+		println(v)
+	})
+
+	print("[uint]: ")
+	gouse.ForBy([]uint{1, 2, 3, 4, 5, 7}, func(v uint) {
+		println(v)
+	})
+
+	print("[float]: ")
+	gouse.ForBy([]float64{1.2, 2.3, 3.4}, func(v float64) {
+		println(v)
+	})
+
+	print("[string]: ")
+	gouse.ForBy([]string{"1", "4", "5", "6"}, func(v string) {
+		println(v)
+	})
+
+	print("[rune]: ")
+	gouse.ForBy([]rune{'a', 'b', 'd', 'e', 'f'}, func(v rune) {
+		println(v)
+	})
+
+	print("[complex]: ")
+	gouse.ForBy([]complex128{1 + 2i, 2 + 3i, 5 + 6i, 6 + 7i}, func(v complex128) {
+		println(v)
+	})
+
+	print("[struct]: ")
+	gouse.ForBy([]struct{ a int }{{-1}, {-2}, {3}, {4}, {5}, {6}}, func(v struct{ a int }) {
+		fmt.Println(v)
+	})
+}
+```
+## Imports
+
+```go
+import (
+	"fmt"
+	"github.com/thuongtruong109/gouse"
+)
+```
+## Functions
+
+
+### SampleArrayIncludes
+
+```go
+func SampleArrayIncludes() {
+	println("--- Check element is exist in array ---")
+	println("[int]: ", gouse.IncludesArr([]int{1, -2, 3}, 1))
+	println("[uint]: ", gouse.IncludesArr([]uint{1, 2, 3}, 1))
+	println("[float]: ", gouse.IncludesArr([]float64{1.2, 2.3, 3.4}, 1.2))
+	println("[string]: ", gouse.IncludesArr([]string{"1", "2", "3"}, "0"))
+	println("[rune]: ", gouse.IncludesArr([]rune{'a', 'b', 'c'}, 'a'))
+	println("[complex]: ", gouse.IncludesArr([]complex128{1 + 2i, 2 + 3i}, 1+2i))
+	println("[struct]: ", gouse.IncludesArr([]struct{ a int }{{1}, {2}}, struct{ a int }{3}))
+}
+```
+## Imports
+
+```go
+import (
+	"fmt"
+	"github.com/thuongtruong109/gouse"
+)
+```
+## Functions
+
+
+### SampleArrayIndex
+
+```go
+func SampleArrayIndex() {
+	println("--- Index of element in array ---")
+	println("[int]: ", gouse.IndexOfArr([]int{1, -2, 3, -4, 5, 6}, 3))
+	println("[uint]: ", gouse.IndexOfArr([]uint{1, 2, 3, 4, 5, 7}, 3))
+	println("[float]: ", gouse.IndexOfArr([]float64{1.2, 2.3, 3.4}, 3.4))
+	println("[string]: ", gouse.IndexOfArr([]string{"1", "4", "5", "6"}, "5"))
+	println("[rune]: ", gouse.IndexOfArr([]rune{'a', 'b', 'd', 'e', 'f'}, 'e'))
+	println("[complex]: ", gouse.IndexOfArr([]complex128{1 + 2i, 2 + 3i, 5 + 6i, 6 + 7i}, 5+6i))
+	println("[struct]: ", gouse.IndexOfArr([]struct{ a int }{{-1}, {-2}, {3}, {4}, {5}, {6}}, struct{ a int }{3}))
+}
+```
+## Imports
+
+```go
+import (
+	"fmt"
+	"github.com/thuongtruong109/gouse"
+)
+```
+## Functions
+
+
+### SampleArrayIndexBy
+
+```go
+func SampleArrayIndexBy() {
+	println("--- Find index of element pass condition in callback function ---")
+	println("[int]: ", gouse.IndexBy([]int{1, -2, 3, -4, 5, 6}, func(v int) bool {
+		return v == 3
+	}))
+
+	println("[uint]: ", gouse.IndexBy([]uint{1, 2, 3, 4, 5, 7}, func(v uint) bool {
+		return v == 3
+	}))
+
+	println("[float]: ", gouse.IndexBy([]float64{1.2, 2.3, 3.4}, func(v float64) bool {
+		return v == 3.4
+	}))
+
+	println("[string]: ", gouse.IndexBy([]string{"1", "4", "5", "6"}, func(v string) bool {
+		return v == "5"
+	}))
+
+	println("[rune]: ", gouse.IndexBy([]rune{'a', 'b', 'd', 'e', 'f'}, func(v rune) bool {
+		return v == 'e'
+	}))
+
+	println("[complex]: ", gouse.IndexBy([]complex128{1 + 2i, 2 + 3i, 5 + 6i, 6 + 7i}, func(v complex128) bool {
+		return v == 5+6i
+	}))
+
+	println("[struct]: ", gouse.IndexBy([]struct{ a int }{{-1}, {-2}, {3}, {4}, {5}, {6}}, func(v struct{ a int }) bool {
+		return v.a == 3
+	}))
+}
+```
+## Imports
+
+```go
+import (
+	"fmt"
+	"github.com/thuongtruong109/gouse"
+)
+```
+## Functions
+
+
+### SampleArrayIntersect
+
+```go
+func SampleArrayIntersect() {
+	println("--- Intersection arrays ---")
+	println("[int]: ", gouse.Intersect([]int{1, -2, 3, -4, 5, 6}, []int{1, 2, 3, 4, 5, 6}))
+	println("[uint]: ", gouse.Intersect([]uint{1, 2, 3, 4, 5, 7}, []uint{1, 2, 3, 4, 5, 6}))
+	println("[float]: ", gouse.Intersect([]float64{1.2, 2.3, 3.4}, []float64{1.2, 4.5, 5.6, 6.7}))
+	println("[string]: ", gouse.Intersect([]string{"1", "4", "5", "6"}, []string{"1", "2", "3", "6"}))
+	println("[rune]: ", gouse.Intersect([]rune{'a', 'b', 'd', 'e', 'f'}, []rune{'a', 'b', 'c', 'f'}))
+	println("[complex]: ", gouse.Intersect([]complex128{1 + 2i, 2 + 3i, 5 + 6i, 6 + 7i}, []complex128{1 + 2i, 2 + 3i, 6 + 7i}))
+	println("[struct]: ", gouse.Intersect([]struct{ a int }{{1}, {-2}, {3}, {4}, {5}, {6}}, []struct{ a int }{{1}, {2}}))
+}
+```
+## Imports
+
+```go
+import (
+	"fmt"
+	"github.com/thuongtruong109/gouse"
+)
+```
+## Functions
+
+
+### SampleArrayKeyBy
+
+```go
+func SampleArrayKeyBy() {
+	println("--- Find key of element pass condition in callback function ---")
+	println("[int]: ", gouse.KeyBy([]int{1, -2, 3, -4, 5, 6}, func(v int) bool {
+		return v == 3
+	}))
+
+	println("[uint]: ", gouse.KeyBy([]uint{1, 2, 3, 4, 5, 7}, func(v uint) bool {
+		return v == 3
+	}))
+
+	println("[float]: ", gouse.KeyBy([]float64{1.2, 2.3, 3.4}, func(v float64) bool {
+		return v == 3.4
+	}))
+
+	println("[string]: ", gouse.KeyBy([]string{"1", "4", "5", "6"}, func(v string) bool {
+		return v == "5"
+	}))
+
+	println("[rune]: ", gouse.KeyBy([]rune{'a', 'b', 'd', 'e', 'f'}, func(v rune) bool {
+		return v == 'e'
+	}))
+
+	println("[complex]: ", gouse.KeyBy([]complex128{1 + 2i, 2 + 3i, 5 + 6i, 6 + 7i}, func(v complex128) bool {
+		return v == 5+6i
+	}))
+
+	println("[struct]: ", gouse.KeyBy([]struct{ a int }{{-1}, {-2}, {3}, {4}, {5}, {6}}, func(v struct{ a int }) bool {
+		return v.a == 3
+	}))
+}
+```
+## Imports
+
+```go
+import (
+	"fmt"
+	"github.com/thuongtruong109/gouse"
+)
+```
+## Functions
+
+
+### SampleArrayMapBy
+
+```go
+func SampleArrayMapBy() {
+	println("--- Map array then handler with callback function ---")
+	fmt.Println("[int]: ", gouse.MapBy([]int{1, -2, 3, -4, 5, 6}, func(v int) int {
+		return v * 2
+	}))
+
+	fmt.Println("[uint]: ", gouse.MapBy([]uint{1, 2, 3, 4, 5, 7}, func(v uint) uint {
+		return v * 2
+	}))
+
+	fmt.Println("[float]: ", gouse.MapBy([]float64{1.2, 2.3, 3.4}, func(v float64) float64 {
+		return v * 2
+	}))
+
+	fmt.Println("[string]: ", gouse.MapBy([]string{"1", "4", "5", "6"}, func(v string) string {
+		return v + "1"
+	}))
+
+	fmt.Println("[rune]: ", gouse.MapBy([]rune{'a', 'b', 'd', 'e', 'f'}, func(v rune) rune {
+		return v + 1
+	}))
+
+	fmt.Println("[complex]: ", gouse.MapBy([]complex128{1 + 2i, 2 + 3i, 5 + 6i, 6 + 7i}, func(v complex128) complex128 {
+		return v * 2
+	}))
+
+	fmt.Println("[struct]: ", gouse.MapBy([]struct{ a int }{{-1}, {-2}, {3}, {4}, {5}, {6}}, func(v struct{ a int }) struct{ a int } {
+		return struct{ a int }{v.a * 2}
+	}))
+}
+```
+## Imports
+
+```go
+import (
+	"fmt"
+	"github.com/thuongtruong109/gouse"
+)
+```
+## Functions
+
+
+### SampleArrayMin
+
+```go
+func SampleArrayMin() {
+	println("--- Min element in array ---")
+	println("[int]: ", gouse.MinArr([]int{1, -2, 3}))
+	println("[uint]: ", gouse.MinArr([]uint{1, 2, 3}))
+	println("[string]: ", gouse.MinArr([]string{"z", "d", "m"}))
+	println("[rune]: ", string(gouse.MinArr([]rune{'z', 'd', 'm'})))
+	println("[float]: ", gouse.MinArr([]float64{1.2, 2.3, 3.4}))
+}
+```
+## Imports
+
+```go
+import (
+	"fmt"
+	"github.com/thuongtruong109/gouse"
+)
+```
+## Functions
+
+
+### SampleArrayMax
+
+```go
+func SampleArrayMax() {
+	println("--- Max element in array ---")
+	println("[int]: ", gouse.MaxArr([]int{1, -2, 3}))
+	println("[uint]: ", gouse.MaxArr([]uint{1, 2, 3}))
+	println("[string]: ", gouse.MaxArr([]string{"z", "d", "m"}))
+	println("[rune]: ", string(gouse.MaxArr([]rune{'z', 'd', 'm'})))
+	println("[float]: ", gouse.MaxArr([]float64{1.2, 2.3, 3.4}))
+}
+```
+## Imports
+
+```go
+import (
+	"fmt"
+	"github.com/thuongtruong109/gouse"
+)
+```
+## Functions
+
+
+### SampleArrayMost
+
+```go
+func SampleArrayMost() {
+	println("--- Most frequency in array ---")
+	println("[int]: ", gouse.Most([]int{1, -2, 3, 2, 2, 1, 2, 3}))
+	println("[uint]: ", gouse.Most([]uint{1, 2, 3, 2, 2, 1, 2, 3}))
+	fmt.Println("[float]: ", gouse.Most([]float64{1.2, 2.3, 3.4, 2.3, 2.3, 1.2, 2.3, 3.4}))
+	println("[string]: ", gouse.Most([]string{"1", "2", "3", "2", "2", "1", "2", "3"}))
+	println("[rune]: ", string(gouse.Most([]rune{'a', 'b', 'c', 'b', 'b', 'a', 'b', 'c'})))
+	fmt.Println("[complex]: ", gouse.Most([]complex128{1 + 2i, 2 + 3i, 3 + 4i, 2 + 3i, 2 + 3i, 1 + 2i, 2 + 3i, 3 + 4i}))
+	fmt.Println("[struct]: ", gouse.Most([]struct{ a int }{{1}, {2}, {3}, {2}, {2}, {1}, {2}, {3}}))
+}
+```
+## Imports
+
+```go
+import (
+	"fmt"
+	"github.com/thuongtruong109/gouse"
+)
+```
+## Functions
+
+
+### SampleArrayMerge
+
+```go
+func SampleArrayMerge() {
+	println("--- Merge arrays ---")
+	println("[int]: ", gouse.Merge([]int{1, -2, 3, -4, 5, 6}, []int{1, 2, 3, 4, 5, 6}, []int{1, -2, 3, -4, 5, 6}))
+	println("[uint]: ", gouse.Merge([]uint{1, 2, 3, 4, 5, 7}, []uint{1, 2, 3, 4, 5, 6}))
+	println("[float]: ", gouse.Merge([]float64{1.2, 2.3, 3.4}, []float64{1.2, 4.5, 5.6, 6.7}))
+	println("[string]: ", gouse.Merge([]string{"1", "4", "5", "6"}, []string{"1", "2", "3", "6"}))
+	println("[rune]: ", gouse.Merge([]rune{'a', 'b', 'd', 'e', 'f'}, []rune{'a', 'b', 'c', 'f'}))
+	println("[complex]: ", gouse.Merge([]complex128{1 + 2i, 2 + 3i, 5 + 6i, 6 + 7i}, []complex128{1 + 2i, 2 + 3i, 6 + 7i}))
+	println("[struct]: ", gouse.Merge([]struct{ a int }{{-1}, {-2}, {3}, {4}, {5}, {6}}, []struct{ a int }{{1}, {2}}))
+}
+```
+## Imports
+
+```go
+import (
+	"fmt"
+	"github.com/thuongtruong109/gouse"
+)
+```
+## Functions
+
+
+### SampleArrayRejectBy
+
+```go
+func SampleArrayRejectBy() {
+	println("--- Reject elements in array by pass condition in callback function---")
+	println("[int]: ", gouse.RejectBy([]int{1, -2, 3, -4, 5, 6}, func(v int) bool {
+		return v > 2
+	}))
+
+	println("[uint]: ", gouse.RejectBy([]uint{1, 2, 3, 4, 5, 7}, func(v uint) bool {
+		return v > 2
+	}))
+
+	println("[float]: ", gouse.RejectBy([]float64{1.2, 2.3, 3.4}, func(v float64) bool {
+		return v > 2
+	}))
+
+	println("[string]: ", gouse.RejectBy([]string{"1", "4", "5", "6"}, func(v string) bool {
+		return v > "3"
+	}))
+
+	println("[rune]: ", gouse.RejectBy([]rune{'a', 'b', 'd', 'e', 'f'}, func(v rune) bool {
+		return v > 'c'
+	}))
+
+	println("[complex]: ", gouse.RejectBy([]complex128{1 + 2i, 2 + 3i, 5 + 6i, 6 + 7i}, func(v complex128) bool {
+		return real(v) > 3
+	}))
+}
+```
+## Imports
+
+```go
+import (
+	"fmt"
+	"github.com/thuongtruong109/gouse"
+)
+```
+## Functions
+
+
+### SampleArraySum
+
+```go
+func SampleArraySum() {
+	println("--- Sum elements in array ---")
+	println("[int]: ", gouse.SumArr([]int{1, -2, 3}))
+	println("[uint]: ", gouse.SumArr([]uint{1, 2, 3}))
+	fmt.Println("[float]: ", gouse.SumArr([]float64{1.2, 2.3, 3.4}))
+	println("[rune]: ", gouse.SumArr([]rune{'a', 'b', 'c'}))
+	fmt.Println("[complex]: ", gouse.SumArr([]complex128{1 + 2i, 2 + 3i, 3 + 4i}))
+}
+```

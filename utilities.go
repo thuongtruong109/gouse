@@ -60,7 +60,7 @@ func extractImports(content []byte) string {
 	return string(result)
 }
 
-func extractFunctions(code []byte) []Function {
+func ExtractFunctions(code []byte) []Function {
 	fset := token.NewFileSet()
 	file, err := parser.ParseFile(fset, "string", string(code), parser.ParseComments)
 	if err != nil {
@@ -88,7 +88,7 @@ func extractFunctions(code []byte) []Function {
 
 func detectContent(content []byte) []byte {
 	var result []string
-	functions := extractFunctions(content)
+	functions := ExtractFunctions(content)
 	result = append(result, functions[0].HighlightImport())
 	for _, function := range functions {
 		tmpFunc := &Function{

@@ -25,23 +25,23 @@ const (
 )
 
 var (
-	ERROR_REQUIRED_UUID error = errors.New("uuid is required")
-	ERROR_INVALID_UUID  error = errors.New("uuid is invalid")
+	ErrorRequiredUuid error = errors.New("uuid is required")
+	ErrorInvalidUuid  error = errors.New("uuid is invalid")
 
-	ERROR_INVALID_EMAIL error = errors.New("email is invalid")
-	ERROR_EMAIL_LENGTH  error = errors.New("email must be between 8 and 32 characters long")
+	ErrorInvalidEmail error = errors.New("email is invalid")
+	ErrorEmailLength  error = errors.New("email must be between 8 and 32 characters long")
 
-	ERROR_INVALID_USERNAME error = errors.New("username is invalid, must be between 3 and 20 characters long and only contains letters, numbers and underscore")
+	ErrorInvalidUsername error = errors.New("username is invalid, must be between 3 and 20 characters long and only contains letters, numbers and underscore")
 
-	ERROR_INVALID_PASSWORD       error = errors.New("password is invalid, must be between 8 and 32 characters long and contains at least one lowercase letter, one uppercase letter, one digit and one special character")
-	ERROR_PASSWORD_LENGTH        error = errors.New("password must be between 8 and 32 characters long")
-	ERROR_PASSWORD_EMPTY_LOWER   error = errors.New("password must contain at least one lowercase letter")
-	ERROR_PASSWORD_EMPTY_UPPER   error = errors.New("password must contain at least one uppercase letter")
-	ERROR_PASSWORD_EMPTY_DIGIT   error = errors.New("password must contain at least one digit")
-	ERROR_PASSWORD_EMPTY_SPECIAL error = errors.New("password must contain at least one special character")
+	ErrorInvalidPassword      error = errors.New("password is invalid, must be between 8 and 32 characters long and contains at least one lowercase letter, one uppercase letter, one digit and one special character")
+	ErrorPasswordLength       error = errors.New("password must be between 8 and 32 characters long")
+	ErrorPasswordEmptyLower   error = errors.New("password must contain at least one lowercase letter")
+	ErrorPasswordEmptyUpper   error = errors.New("password must contain at least one uppercase letter")
+	ErrorPasswordEmptyDigit   error = errors.New("password must contain at least one digit")
+	ErrorPasswordEmptySpecial error = errors.New("password must contain at least one special character")
 
-	ERROR_HASH_PASSWORD    error = errors.New("error when encrypt password")
-	ERROR_COMPARE_PASSWORD error = errors.New("password not match")
+	ErrorHashPassword    error = errors.New("error when encrypt password")
+	ErrorComparePassword error = errors.New("password not match")
 
-	ERROR_INVALID_PHONE error = errors.New("phone is invalid")
+	ErrorInvalidPhone error = errors.New("phone is invalid")
 )

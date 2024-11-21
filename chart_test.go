@@ -51,9 +51,9 @@ func TestGenerateBarItems(t *testing.T) {
 	}
 }
 
-const line_output = "../mockdata/line_chart.html"
-
 func TestCreateLineChart(t *testing.T) {
+	const line_output = "./mockdata/line_chart.html"
+
 	options := &ILineChartOpts{
 		Output:   line_output,
 		Title:    "Test Title",
@@ -95,9 +95,9 @@ func TestGenerateLineItems(t *testing.T) {
 	}
 }
 
-const pie_output = "../mockdata/pie_chart.html"
-
 func TestCreatePieChart(t *testing.T) {
+	const pie_output = "./mockdata/pie_chart.html"
+
 	tests := []struct {
 		name           string
 		opts           *IPieChartOpts

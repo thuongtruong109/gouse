@@ -15,7 +15,7 @@ func TestReadJSON(t *testing.T) {
 	}
 
 	var conf configuration
-	if err := ReadJSON("../mockdata/config.json", &conf); err != nil {
+	if err := ReadJSON("./mockdata/config.json", &conf); err != nil {
 		t.Fatal(err)
 	}
 
@@ -49,7 +49,7 @@ func TestReadTOML(t *testing.T) {
 	}
 
 	var conf configuration
-	if err := ReadTOML("../mockdata/config.toml", &conf); err != nil {
+	if err := ReadTOML("./mockdata/config.toml", &conf); err != nil {
 		t.Fatal(err)
 	}
 
@@ -83,7 +83,7 @@ func TestReadYAML(t *testing.T) {
 	}
 
 	var conf Configuration
-	if err := ReadYAML("../mockdata/config.yaml", &conf); err != nil {
+	if err := ReadYAML("./mockdata/config.yaml", &conf); err != nil {
 		t.Fatal(err)
 	}
 

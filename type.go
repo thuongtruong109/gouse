@@ -136,12 +136,12 @@ func IsZero(v interface{}) bool {
 
 func IsUUID(input string) (bool, error) {
 	if input == "" {
-		return false, ERROR_REQUIRED_UUID
+		return false, ErrorRequiredUuid
 	}
 
 	_, err := uuid.Parse(input)
 	if err != nil {
-		return false, ERROR_INVALID_UUID
+		return false, ErrorInvalidUuid
 	}
 
 	return true, nil
@@ -150,19 +150,19 @@ func IsUUID(input string) (bool, error) {
 func isMail(emailStr, domain string) (bool, error) {
 	if Includes(emailStr, "@") {
 		if !IsMatchReg(EmailLenReg, emailStr) {
-			return false, ERROR_EMAIL_LENGTH
+			return false, ErrorEmailLength
 		}
 
 		split := strings.Split(emailStr, "@")
 		if len(split) != 2 || !Includes(split[1], ".") {
-			return false, ERROR_INVALID_EMAIL
+			return false, ErrorInvalidEmail
 		} else if !Includes(split[1], domain) {
-			return false, ERROR_INVALID_EMAIL
+			return false, ErrorInvalidEmail
 		} else {
 			return true, nil
 		}
 	} else {
-		return false, ERROR_INVALID_EMAIL
+		return false, ErrorInvalidEmail
 	}
 }
 
@@ -188,7 +188,7 @@ func IsEmail(emailStr, customDomain string) (bool, error) {
 
 func IsUsername(username string) (bool, error) {
 	if !IsMatchReg(UsernameReg, username) {
-		return false, ERROR_INVALID_USERNAME
+		return false, ErrorInvalidUsername
 	}
 
 	return true, nil
@@ -196,15 +196,15 @@ func IsUsername(username string) (bool, error) {
 
 func IsPassword(password string) (bool, error) {
 	if !IsMatchReg(PasswordLenReg, password) {
-		return false, ERROR_PASSWORD_LENGTH
+		return false, ErrorPasswordLength
 	} else if !IsMatchReg(PasswordLowerReg, password) {
-		return false, ERROR_PASSWORD_EMPTY_LOWER
+		return false, ErrorPasswordEmptyLower
 	} else if !IsMatchReg(PasswordUpperReg, password) {
-		return false, ERROR_PASSWORD_EMPTY_UPPER
+		return false, ErrorPasswordEmptyUpper
 	} else if !IsMatchReg(PasswordDigitReg, password) {
-		return false, ERROR_PASSWORD_EMPTY_DIGIT
+		return false, ErrorPasswordEmptyDigit
 	} else if !IsMatchReg(PasswordSpecialReg, password) {
-		return false, ERROR_PASSWORD_EMPTY_SPECIAL
+		return false, ErrorPasswordEmptySpecial
 	} else {
 		return true, nil
 	}
@@ -212,7 +212,7 @@ func IsPassword(password string) (bool, error) {
 
 func IsPhone(phone string) (bool, error) {
 	if !IsMatchReg(PhoneReg, phone) {
-		return false, ERROR_INVALID_PHONE
+		return false, ErrorInvalidPhone
 	}
 
 	return true, nil

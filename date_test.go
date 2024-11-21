@@ -33,7 +33,7 @@ func TestDashDate(t *testing.T) {
 }
 
 func TestDotDash(t *testing.T) {
-	if DashDate() != time.Now().Format("2006.01.02") {
+	if DotDate() != time.Now().Format("2006.01.02") {
 		t.Error("ShortDot() should return today's date in ShortDot format")
 	}
 }

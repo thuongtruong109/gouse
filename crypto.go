@@ -126,7 +126,7 @@ func DecryptFile(source string, password []byte) {
 func EncryptPassword(password string) (string, error) {
 	hashedPassword, err := bcrypt.GenerateFromPassword([]byte(password), bcrypt.DefaultCost)
 	if err != nil {
-		return "", ERROR_HASH_PASSWORD
+		return "", ErrorHashPassword
 	}
 
 	return string(hashedPassword), nil
@@ -134,7 +134,7 @@ func EncryptPassword(password string) (string, error) {
 
 func DecryptPassword(password, receivedPassword string) error {
 	if err := bcrypt.CompareHashAndPassword([]byte(password), []byte(receivedPassword)); err != nil {
-		return ERROR_COMPARE_PASSWORD
+		return ErrorComparePassword
 	}
 
 	return nil

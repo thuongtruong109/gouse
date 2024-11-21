@@ -10,7 +10,8 @@ import (
 	"github.com/thuongtruong109/gouse/console/glamour"
 	"github.com/thuongtruong109/gouse/console/inline"
 	"github.com/thuongtruong109/gouse/console/list"
-	"github.com/thuongtruong109/gouse/console/paper"
+
+	// "github.com/thuongtruong109/gouse/console/paper"
 	"github.com/thuongtruong109/gouse/console/parallel"
 	"github.com/thuongtruong109/gouse/console/progress"
 	"github.com/thuongtruong109/gouse/console/realtime"
@@ -18,7 +19,8 @@ import (
 	"github.com/thuongtruong109/gouse/console/spinner"
 	"github.com/thuongtruong109/gouse/console/split"
 	"github.com/thuongtruong109/gouse/console/stopwatch"
-	"github.com/thuongtruong109/gouse/console/tab"
+
+	// "github.com/thuongtruong109/gouse/console/tab"
 	"github.com/thuongtruong109/gouse/console/table"
 )
 
@@ -127,9 +129,9 @@ func SampleConsoleList() {
 	list.Default(title, items)
 }
 
-func SampleConsolePaper() {
-	paper.Run("main.go")
-}
+// func SampleConsolePaper() {
+// 	paper.Run("main.go")
+// }
 
 func SampleConsoleProgress() {
 	// first param is fail message
@@ -168,16 +170,16 @@ func SampleConsoleTable() {
 	table.Run()
 }
 
-func SampleConsoleTab() {
-	// tabContent items must be same length with tabs items
-	// and according to similar order in tabs
-	tabs := []string{"Lip Gloss", "Blush", "Eye Shadow", "Mascara", "Foundation"}
-	tabContent := []string{"Lip Gloss Tab", "Blush Tab", "Eye Shadow Tab", "Mascara Tab", "Foundation Tab"}
+// func SampleConsoleTab() {
+// 	// tabContent items must be same length with tabs items
+// 	// and according to similar order in tabs
+// 	tabs := []string{"Lip Gloss", "Blush", "Eye Shadow", "Mascara", "Foundation"}
+// 	tabContent := []string{"Lip Gloss Tab", "Blush Tab", "Eye Shadow Tab", "Mascara Tab", "Foundation Tab"}
 
-	println("Use arrow keys to switch tabs. Press q to quit.")
+// 	println("Use arrow keys to switch tabs. Press q to quit.")
 
-	tab.Run(tabs, tabContent)
-}
+// 	tab.Run(tabs, tabContent)
+// }
 
 func SampleConsoleCountdown() {
 	countdown.Run()
