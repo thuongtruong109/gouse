@@ -8,10 +8,10 @@
     <a href="https://codecov.io/gh/thuongtruong109/gouse"><img src="https://codecov.io/gh/thuongtruong1009/gouse/branch/main/graph/badge.svg" alt="codecov"></a>
     <a href="https://dl.circleci.com/status-badge/redirect/gh/thuongtruong109/gouse/tree/main"><img src="https://dl.circleci.com/status-badge/img/gh/thuongtruong1009/gouse/tree/main.svg?style=svg" alt="circleci"></a>
     <a href="https://pkg.go.dev/github.com/thuongtruong109/gouse"><img src="https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square" alt="go.dev"></a>
-    <!-- <a href="https://godocs.io/github.com/thuongtruong109/gouse"><img alt="Godoc" src="https://godocs.io/github.com/thuongtruong1009/gouse?status.svg"></a> -->
     <img src="./public/count.svg" alt="gouse_functions_count">
+    <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/thuongtruong109/gouse">
+    <!-- <a href="https://godocs.io/github.com/thuongtruong109/gouse"><img alt="Godoc" src="https://godocs.io/github.com/thuongtruong1009/gouse?status.svg"></a> -->
     <!-- <a href="LICENSE"><img src="https://img.shields.io/github/license/thuongtruong109/gouse" alt="license"></a> -->
-     <!-- <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/thuongtruong109/gouse"> -->
     <!-- <a href="https://app.codacy.com/gh/thuongtruong109/gouse/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_Coverage"><img src="https://app.codacy.com/project/badge/Coverage/21f940894abd4e0384ef8b84adc294da" alt="codacy"></a> -->
     <!-- <a href="https://sourcegraph.com/github.com/thuongtruong109/gouse?badge"><img src="https://sourcegraph.com/github.com/thuongtruong109/gouse/-/badge.svg" alt="sourcegraph"></a> -->
 </div>
@@ -22,9 +22,9 @@
   <table>
     <tbody>
       <td align="center">
-        <img width="2000" height="0"><br>
+        <div width="800" height="0"><br>
         <sub>Made possible by my <a href="https://github.com/sponsors/thuongtruong109">Sponsor Program 💖</a></sub><br>
-        <img width="2000" height="0">
+        <div width="800" height="0">
       </td>
     </tbody>
   </table>
@@ -65,31 +65,50 @@
 
 > Below is a list of modules that Gouse supports. This project is still in development stage, so not all features are available.
 
-✅ Array <br/>
-✅ Api <br/>
-✅ Cache <br/>
-✅ Chart <br/>
-✅ Config <br/>
-✅ Console <br/>
-✅ Cron <br/>
-✅ Crypto <br/>
-✅ Date <br/>
-✅ Function <br/>
-✅ Helper <br/>
-✅ I/O <br/>
-✅ Log <br/>
-✅ Math <br/>
-✅ Media <br/>
-✅ Net <br/>
-✅ Number <br/>
-✅ OS <br/>
-✅ Regex <br/>
-✅ Struct <br/>
-✅ String <br/>
-✅ Tool <br/>
-✅ Type <br/>
+<div align="center">
+  <table>
+    <tbody>
+      <td align="left">
+        <div width="300" height="0"><br>
+        ✅ Array <br/>
+        ✅ Api <br/>
+        ✅ Cache <br/>
+        ✅ Chart <br/>
+        ✅ Config <br/>
+        ✅ Console <br/>
+        ✅ Cron <br/>
+        ✅ Crypto <br/>
+        ✅ Date <br/>
+        <div width="300" height="0">
+      </td>
+      <td align="left">
+        <div width="300" height="0"><br>
+        ✅ Function <br/>
+        ✅ Helper <br/>
+        ✅ I/O <br/>
+        ✅ Connection <br/>
+        ✅ Log <br/>
+        ✅ Math <br/>
+        ✅ Media <br/>
+        <div width="300" height="0">
+      </td>
+      <td align="left">
+        <div width="400" height="0"><br>
+        ✅ Net <br/>
+        ✅ Number <br/>
+        ✅ OS <br/>
+        ✅ Random <br/>
+        ✅ Regex <br/>
+        ✅ Struct <br/>
+        ✅ String <br/>
+        ✅ Tool <br/>
+        ✅ Type <br/>
+        <div width="300" height="0">
+      </td>
+    </tbody>
+  </table>
+</div>
 
-<!-- ✅ Connection <br/> -->
 <!-- - 
 - [ ] Auth
 - [ ] Error

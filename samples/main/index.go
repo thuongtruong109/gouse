@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	isDevFlag := flag.Bool("isDev", false, "toggle enviroment mode")
+	isDevFlag := flag.Bool("isDev", false, "toggle environment mode")
 	flag.Parse()
 	if *isDevFlag {
 		arraySample()
