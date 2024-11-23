@@ -1,33 +1,20 @@
 # Number
 
-## Imports
-
 ```go
 import (
 	"github.com/thuongtruong109/gouse"
 )
 ```
-## Functions
 
-
-### SampleNumClamp
+#### 1. SampleNumClamp
 
 ```go
 func SampleNumClamp() {
 	println("Clamp number: ", gouse.Clamp(5, 1, 10))
 }
 ```
-## Imports
 
-```go
-import (
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleNumRandom
+#### 2. SampleNumRandom
 
 ```go
 func SampleNumRandom() {
@@ -35,17 +22,8 @@ func SampleNumRandom() {
 	println("Random number [1, 10): ", random)
 }
 ```
-## Imports
 
-```go
-import (
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleNumInRange
+#### 3. SampleNumInRange
 
 ```go
 func SampleNumInRange() {

@@ -1,16 +1,12 @@
 # Chart
 
-## Imports
-
 ```go
 import (
 	"github.com/thuongtruong109/gouse"
 )
 ```
-## Functions
 
-
-### SampleChartBar
+#### 1. SampleChartBar
 
 ```go
 func SampleChartBar() {
@@ -29,17 +25,8 @@ func SampleChartBar() {
 	gouse.CreateBarChart(newChart)
 }
 ```
-## Imports
 
-```go
-import (
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleChartLine
+#### 2. SampleChartLine
 
 ```go
 func SampleChartLine() {
@@ -57,17 +44,8 @@ func SampleChartLine() {
 	gouse.CreateLineChart(newChart)
 }
 ```
-## Imports
 
-```go
-import (
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleChartPie
+#### 3. SampleChartPie
 
 ```go
 func SampleChartPie() {

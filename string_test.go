@@ -523,7 +523,7 @@ func TestReplace(t *testing.T) {
 		new      string
 		expected string
 	}{
-		{"test", "e", "a", "taste"},
+		{"test", "e", "a", "tast"},
 		{"test", "t", "a", "aesa"},
 		{"test", "s", "a", "teat"},
 		{"test", "x", "a", "test"},
@@ -792,7 +792,7 @@ func TestSplice(t *testing.T) {
 	}{
 		{"test", 0, 1, []string{"a"}, "aest"},
 		{"test", 0, 2, []string{"a"}, "atest"},
-		{"test", 1, 1, []string{"a"}, "taste"},
+		{"test", 1, 1, []string{"a"}, "tast"},
 		// {"test", 1, 2, []string{"a"}, "taste"},
 		{"test", 2, 1, []string{"a", "b"}, "teabt"},
 		{"test", 3, 1, []string{"a"}, "tesa"},

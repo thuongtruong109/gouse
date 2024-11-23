@@ -1,17 +1,13 @@
 # Math
 
-## Imports
-
 ```go
 import (
 	"fmt"
 	"github.com/thuongtruong109/gouse"
 )
 ```
-## Functions
 
-
-### SampleMathIsEven
+#### 1. SampleMathIsEven
 
 ```go
 func SampleMathIsEven() {
@@ -19,18 +15,8 @@ func SampleMathIsEven() {
 	println("Check even number: ", gouse.IsEven(num))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathIsOdd
+#### 2. SampleMathIsOdd
 
 ```go
 func SampleMathIsOdd() {
@@ -38,18 +24,8 @@ func SampleMathIsOdd() {
 	println("Check odd number: ", gouse.IsOdd(num))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathIsPerfectSquare
+#### 3. SampleMathIsPerfectSquare
 
 ```go
 func SampleMathIsPerfectSquare() {
@@ -57,18 +33,8 @@ func SampleMathIsPerfectSquare() {
 	println("Check perfect square number: ", gouse.IsPerfectSquare(num))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathIsPrime
+#### 4. SampleMathIsPrime
 
 ```go
 func SampleMathIsPrime() {
@@ -76,18 +42,8 @@ func SampleMathIsPrime() {
 	println("Check prime number: ", gouse.IsPrime(num))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathLog
+#### 5. SampleMathLog
 
 ```go
 func SampleMathLog() {
@@ -101,18 +57,8 @@ func SampleMathLog() {
 	println("Logarithm of float number (base 10): ", fmt.Sprintf("%f", gouse.Log10F(20.0)))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathPytago
+#### 6. SampleMathPytago
 
 ```go
 func SampleMathPytago() {
@@ -120,18 +66,8 @@ func SampleMathPytago() {
 	println("Pytago of number (float): ", fmt.Sprintf("%f", gouse.PytagoF(3.0, 4.0)))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathTransition
+#### 7. SampleMathTransition
 
 ```go
 func SampleMathTransition() {
@@ -141,18 +77,8 @@ func SampleMathTransition() {
 	println("Time: ", fmt.Sprintf("%f", gouse.Time(distance, speed)))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathTrigonometry
+#### 8. SampleMathTrigonometry
 
 ```go
 func SampleMathTrigonometry() {
@@ -164,18 +90,8 @@ func SampleMathTrigonometry() {
 	println("Tangent of float number: ", fmt.Sprintf("%f", gouse.TanF(90.0)))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathCircle
+#### 9. SampleMathCircle
 
 ```go
 func SampleMathCircle() {
@@ -185,18 +101,8 @@ func SampleMathCircle() {
 	println("Perimeter of circle (float): ", fmt.Sprintf("%f", gouse.PeriCircleF(10.0)))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathCone
+#### 10. SampleMathCone
 
 ```go
 func SampleMathCone() {
@@ -206,18 +112,8 @@ func SampleMathCone() {
 	println("Volume of cone (float): ", fmt.Sprintf("%f", gouse.VolConeF(10.0, 20.0)))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathCube
+#### 11. SampleMathCube
 
 ```go
 func SampleMathCube() {
@@ -229,18 +125,8 @@ func SampleMathCube() {
 	println("Volume of cube (float): ", fmt.Sprintf("%f", gouse.VolCubeF(10.0)))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathCylinder
+#### 12. SampleMathCylinder
 
 ```go
 func SampleMathCylinder() {
@@ -250,18 +136,8 @@ func SampleMathCylinder() {
 	println("Volume of cylinder (float): ", fmt.Sprintf("%f", gouse.VolCylinderF(10.0, 20.0)))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathEllipse
+#### 13. SampleMathEllipse
 
 ```go
 func SampleMathEllipse() {
@@ -269,18 +145,8 @@ func SampleMathEllipse() {
 	println("Area of ellipse (float): ", fmt.Sprintf("%f", gouse.AreaEllipseF(10.0, 20.0)))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathParallelogram
+#### 14. SampleMathParallelogram
 
 ```go
 func SampleMathParallelogram() {
@@ -288,36 +154,16 @@ func SampleMathParallelogram() {
 	println("Area of parallelogram (float): ", fmt.Sprintf("%f", gouse.AreaParallelogramF(10.0, 20.0)))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathPolygon
+#### 15. SampleMathPolygon
 
 ```go
 func SampleMathPolygon() {
 	println("Area of pentagol by number of sides (integer): ", fmt.Sprintf("%f", gouse.AreaPolygon(10, 6)))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathRect
+#### 16. SampleMathRect
 
 ```go
 func SampleMathRect() {
@@ -330,18 +176,8 @@ func SampleMathRect() {
 	println("Volume of rectangular (float): ", fmt.Sprintf("%f", gouse.VolRectF(10.0, 20.0, 30.0)))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathRhombus
+#### 17. SampleMathRhombus
 
 ```go
 func SampleMathRhombus() {
@@ -349,18 +185,8 @@ func SampleMathRhombus() {
 	println("Area of rhombus (float): ", fmt.Sprintf("%f", gouse.AreaRhombusF(10.0, 20.0)))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathSphere
+#### 18. SampleMathSphere
 
 ```go
 func SampleMathSphere() {
@@ -370,18 +196,8 @@ func SampleMathSphere() {
 	println("Volume of sphere (float): ", fmt.Sprintf("%f", gouse.VolSphereF(10.0)))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathSquare
+#### 19. SampleMathSquare
 
 ```go
 func SampleMathSquare() {
@@ -391,18 +207,8 @@ func SampleMathSquare() {
 	println("Perimeter of square (float): ", fmt.Sprintf("%f", gouse.PeriSquareF(10.0)))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathTrapezoid
+#### 20. SampleMathTrapezoid
 
 ```go
 func SampleMathTrapezoid() {
@@ -410,18 +216,8 @@ func SampleMathTrapezoid() {
 	println("Area of trapezoid (float): ", fmt.Sprintf("%f", gouse.AreaTrapezoidF(10.0, 20.0, 30.0)))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathTriangle
+#### 21. SampleMathTriangle
 
 ```go
 func SampleMathTriangle() {
@@ -431,18 +227,8 @@ func SampleMathTriangle() {
 	println("Perimeter of triangle (float): ", fmt.Sprintf("%f", gouse.PeriTriangleF(10.0, 20.0, 30.0)))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathAbs
+#### 22. SampleMathAbs
 
 ```go
 func SampleMathAbs() {
@@ -450,18 +236,8 @@ func SampleMathAbs() {
 	println("Absolute number: ", gouse.Abs(num))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathAdd
+#### 23. SampleMathAdd
 
 ```go
 func SampleMathAdd() {
@@ -469,18 +245,8 @@ func SampleMathAdd() {
 	println("Add numbers: ", gouse.Add(num1, num2))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathCeil
+#### 24. SampleMathCeil
 
 ```go
 func SampleMathCeil() {
@@ -488,18 +254,8 @@ func SampleMathCeil() {
 	println("Ceil number: ", gouse.Ceil(num))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathOperators
+#### 25. SampleMathOperators
 
 ```go
 func SampleMathOperators() {
@@ -507,18 +263,8 @@ func SampleMathOperators() {
 	println("Quotient of numbers: ", gouse.Divide(num1, num2))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathFactorial
+#### 26. SampleMathFactorial
 
 ```go
 func SampleMathFactorial() {
@@ -526,18 +272,8 @@ func SampleMathFactorial() {
 	println("Factorial of number: ", gouse.Factorial(num))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathFloor
+#### 27. SampleMathFloor
 
 ```go
 func SampleMathFloor() {
@@ -545,18 +281,8 @@ func SampleMathFloor() {
 	println("Floor number: ", gouse.Floor(num))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathMin
+#### 28. SampleMathMin
 
 ```go
 func SampleMathMin() {
@@ -564,18 +290,8 @@ func SampleMathMin() {
 	println("Min number: ", gouse.Min(num1, num2, num3, num4))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathMax
+#### 29. SampleMathMax
 
 ```go
 func SampleMathMax() {
@@ -583,18 +299,8 @@ func SampleMathMax() {
 	println("Max number: ", gouse.Max(num1, num2, num3, num4))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathMean
+#### 30. SampleMathMean
 
 ```go
 func SampleMathMean() {
@@ -602,18 +308,8 @@ func SampleMathMean() {
 	println("Average/Mean of numbers: ", gouse.Mean(num1, num2, num3, num4))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathMulti
+#### 31. SampleMathMulti
 
 ```go
 func SampleMathMulti() {
@@ -621,18 +317,8 @@ func SampleMathMulti() {
 	println("Multiply of numbers: ", gouse.Multi(num1, num2, num3, num4))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathPower
+#### 32. SampleMathPower
 
 ```go
 func SampleMathPower() {
@@ -641,18 +327,8 @@ func SampleMathPower() {
 	println("Power of float numbers: ", gouse.PowF(2.0, 3.0))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathRemainder
+#### 33. SampleMathRemainder
 
 ```go
 func SampleMathRemainder() {
@@ -660,18 +336,8 @@ func SampleMathRemainder() {
 	println("Remainder of numbers: ", gouse.Remainder(num1, num2))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathRoot
+#### 34. SampleMathRoot
 
 ```go
 func SampleMathRoot() {
@@ -685,18 +351,8 @@ func SampleMathRoot() {
 	println("Nth-Root of float number: ", fmt.Sprintf("%f", gouse.RootF(20.0, 3.0)))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathRound
+#### 35. SampleMathRound
 
 ```go
 func SampleMathRound() {
@@ -704,18 +360,8 @@ func SampleMathRound() {
 	println("Round number: ", gouse.Round(num1), gouse.Round(num2))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathSub
+#### 36. SampleMathSub
 
 ```go
 func SampleMathSub() {
@@ -723,18 +369,8 @@ func SampleMathSub() {
 	println("Subtract of numbers: ", gouse.Sub(num1, num2))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMathSum
+#### 37. SampleMathSum
 
 ```go
 func SampleMathSum() {

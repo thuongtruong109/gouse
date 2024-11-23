@@ -1,35 +1,21 @@
 # Regex
 
-## Imports
-
 ```go
 import (
 	"fmt"
 	"github.com/thuongtruong109/gouse"
 )
 ```
-## Functions
 
-
-### SampleRegexIsMatch
+#### 1. SampleRegexIsMatch
 
 ```go
 func SampleRegexIsMatch() {
 	fmt.Println("Match string with regex: ", gouse.IsMatchReg(`[a-z]+\s[a-z]+`, "hello world"))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleRegexMatchIndex
+#### 2. SampleRegexMatchIndex
 
 ```go
 func SampleRegexMatchIndex() {
@@ -42,18 +28,8 @@ func SampleRegexMatchIndex() {
 	}
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleRegexMatch
+#### 3. SampleRegexMatch
 
 ```go
 func SampleRegexMatch() {

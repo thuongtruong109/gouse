@@ -82,14 +82,15 @@ func generateMarkdownFiles(file os.DirEntry, functions []gouse.Function, path, o
 
 	result = append(result, []byte("# "+gouse.Capitalize(gouse.TrimSuffix(file.Name(), ".go"))+"\n\n")...)
 
-	for _, function := range functions {
+	result = append(result, functions[0].HighlightImport()...)
+
+	for i, function := range functions {
 		if len(function.Import) > 0 {
-			result = append(result, []byte("## Imports\n\n")...)
-			result = append(result, function.HighlightImport()...)
-			result = append(result, []byte("## Functions\n\n")...)
+			// result = append(result, []byte("### Imports\n\n")...)
+			// result = append(result, []byte("### Functions\n\n")...)
 		}
 
-		result = append(result, function.HighlightName()...)
+		result = append(result, function.HighlightName(gouse.IntToString(i+1))...)
 		result = append(result, function.HighlightBody()...)
 	}
 

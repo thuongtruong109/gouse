@@ -1,17 +1,13 @@
 # Array
 
-## Imports
-
 ```go
 import (
 	"fmt"
 	"github.com/thuongtruong109/gouse"
 )
 ```
-## Functions
 
-
-### SampleArrayChunk
+#### 1. SampleArrayChunk
 
 ```go
 func SampleArrayChunk() {
@@ -25,18 +21,8 @@ func SampleArrayChunk() {
 	fmt.Println("[struct]: ", gouse.Chunk([]struct{ a int }{{1}, {2}, {3}, {4}, {5}, {6}}, 3))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleArrayCompact
+#### 2. SampleArrayCompact
 
 ```go
 func SampleArrayCompact() {
@@ -44,18 +30,8 @@ func SampleArrayCompact() {
 	fmt.Println("Compact remove all falsy values: ", result)
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleArrayDiff
+#### 3. SampleArrayDiff
 
 ```go
 func SampleArrayDiff() {
@@ -69,18 +45,8 @@ func SampleArrayDiff() {
 	fmt.Println("[struct]: ", gouse.Diff([]struct{ a int }{{-1}, {-2}, {3}, {4}, {5}, {6}}, []struct{ a int }{{1}, {2}}))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleArrayDrop
+#### 4. SampleArrayDrop
 
 ```go
 func SampleArrayDrop() {
@@ -95,18 +61,8 @@ func SampleArrayDrop() {
 	fmt.Println("[struct]: ", gouse.Drop([]struct{ a int }{{-1}, {-2}, {3}, {4}, {5}, {6}}, 2))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleArrayEqual
+#### 5. SampleArrayEqual
 
 ```go
 func SampleArrayEqual() {
@@ -121,18 +77,8 @@ func SampleArrayEqual() {
 	println("[struct]: ", gouse.Equal(struct{ a int }{1}, struct{ a int }{1}))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleArrayFilterBy
+#### 6. SampleArrayFilterBy
 
 ```go
 func SampleArrayFilterBy() {
@@ -166,18 +112,8 @@ func SampleArrayFilterBy() {
 	}))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleArrayFindBy
+#### 7. SampleArrayFindBy
 
 ```go
 func SampleArrayFindBy() {
@@ -211,18 +147,8 @@ func SampleArrayFindBy() {
 	}))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleArrayForBy
+#### 8. SampleArrayForBy
 
 ```go
 func SampleArrayForBy() {
@@ -263,18 +189,8 @@ func SampleArrayForBy() {
 	})
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleArrayIncludes
+#### 9. SampleArrayIncludes
 
 ```go
 func SampleArrayIncludes() {
@@ -288,18 +204,8 @@ func SampleArrayIncludes() {
 	println("[struct]: ", gouse.IncludesArr([]struct{ a int }{{1}, {2}}, struct{ a int }{3}))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleArrayIndex
+#### 10. SampleArrayIndex
 
 ```go
 func SampleArrayIndex() {
@@ -313,18 +219,8 @@ func SampleArrayIndex() {
 	println("[struct]: ", gouse.IndexOfArr([]struct{ a int }{{-1}, {-2}, {3}, {4}, {5}, {6}}, struct{ a int }{3}))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleArrayIndexBy
+#### 11. SampleArrayIndexBy
 
 ```go
 func SampleArrayIndexBy() {
@@ -358,18 +254,8 @@ func SampleArrayIndexBy() {
 	}))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleArrayIntersect
+#### 12. SampleArrayIntersect
 
 ```go
 func SampleArrayIntersect() {
@@ -383,18 +269,8 @@ func SampleArrayIntersect() {
 	println("[struct]: ", gouse.Intersect([]struct{ a int }{{1}, {-2}, {3}, {4}, {5}, {6}}, []struct{ a int }{{1}, {2}}))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleArrayKeyBy
+#### 13. SampleArrayKeyBy
 
 ```go
 func SampleArrayKeyBy() {
@@ -428,18 +304,8 @@ func SampleArrayKeyBy() {
 	}))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleArrayMapBy
+#### 14. SampleArrayMapBy
 
 ```go
 func SampleArrayMapBy() {
@@ -473,18 +339,8 @@ func SampleArrayMapBy() {
 	}))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleArrayMin
+#### 15. SampleArrayMin
 
 ```go
 func SampleArrayMin() {
@@ -496,18 +352,8 @@ func SampleArrayMin() {
 	println("[float]: ", gouse.MinArr([]float64{1.2, 2.3, 3.4}))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleArrayMax
+#### 16. SampleArrayMax
 
 ```go
 func SampleArrayMax() {
@@ -519,18 +365,8 @@ func SampleArrayMax() {
 	println("[float]: ", gouse.MaxArr([]float64{1.2, 2.3, 3.4}))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleArrayMost
+#### 17. SampleArrayMost
 
 ```go
 func SampleArrayMost() {
@@ -544,18 +380,8 @@ func SampleArrayMost() {
 	fmt.Println("[struct]: ", gouse.Most([]struct{ a int }{{1}, {2}, {3}, {2}, {2}, {1}, {2}, {3}}))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleArrayMerge
+#### 18. SampleArrayMerge
 
 ```go
 func SampleArrayMerge() {
@@ -569,18 +395,8 @@ func SampleArrayMerge() {
 	println("[struct]: ", gouse.Merge([]struct{ a int }{{-1}, {-2}, {3}, {4}, {5}, {6}}, []struct{ a int }{{1}, {2}}))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleArrayRejectBy
+#### 19. SampleArrayRejectBy
 
 ```go
 func SampleArrayRejectBy() {
@@ -610,18 +426,8 @@ func SampleArrayRejectBy() {
 	}))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleArraySum
+#### 20. SampleArraySum
 
 ```go
 func SampleArraySum() {

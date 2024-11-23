@@ -1,7 +1,5 @@
 # Function
 
-## Imports
-
 ```go
 import (
 	"fmt"
@@ -9,10 +7,8 @@ import (
 	"github.com/thuongtruong109/gouse"
 )
 ```
-## Functions
 
-
-### SampleFuncDelay
+#### 1. SampleFuncDelay
 
 ```go
 func SampleFuncDelay() {
@@ -33,19 +29,8 @@ func SampleFuncDelay() {
 	}, 3)
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"time"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleFuncInterval
+#### 2. SampleFuncInterval
 
 ```go
 func SampleFuncInterval() {
@@ -54,19 +39,8 @@ func SampleFuncInterval() {
 	}, 1)
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"time"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleFuncLock
+#### 3. SampleFuncLock
 
 ```go
 func SampleFuncLock() {
@@ -85,19 +59,8 @@ func SampleFuncLock() {
 	}).(func())()
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"time"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleFuncParallel
+#### 4. SampleFuncParallel
 
 ```go
 func SampleFuncParallel() {
@@ -125,19 +88,8 @@ func SampleFuncParallel() {
 	gouse.ParallelizeFunc(function1, function2, function3)
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"time"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleFuncRemain
+#### 5. SampleFuncRemain
 
 ```go
 func SampleFuncRemain() {
@@ -146,19 +98,8 @@ func SampleFuncRemain() {
 	}, 3)
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"time"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleFuncRetry
+#### 6. SampleFuncRetry
 
 ```go
 func SampleFuncRetry() {
@@ -168,19 +109,8 @@ func SampleFuncRetry() {
 	}, 3, 1)
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"time"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleFuncRunTime
+#### 7. SampleFuncRunTime
 
 ```go
 func SampleFuncRunTime() {

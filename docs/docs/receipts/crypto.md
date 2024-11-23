@@ -1,17 +1,13 @@
 # Crypto
 
-## Imports
-
 ```go
 import (
 	"fmt"
 	"github.com/thuongtruong109/gouse"
 )
 ```
-## Functions
 
-
-### SampleCryptoEncode
+#### 1. SampleCryptoEncode
 
 ```go
 func SampleCryptoEncode() {
@@ -26,18 +22,8 @@ func SampleCryptoEncode() {
 	fmt.Println("Encoded data:", string(encodedData))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleCryptoDecode
+#### 2. SampleCryptoDecode
 
 ```go
 func SampleCryptoDecode() {
@@ -51,18 +37,8 @@ func SampleCryptoDecode() {
 	fmt.Println("Decoded data:", string(decodedData))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleCryptoEncryptFile
+#### 3. SampleCryptoEncryptFile
 
 ```go
 func SampleCryptoEncryptFile() {
@@ -70,18 +46,8 @@ func SampleCryptoEncryptFile() {
 	println("File content encrypted")
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleCryptoDecryptFile
+#### 4. SampleCryptoDecryptFile
 
 ```go
 func SampleCryptoDecryptFile() {
@@ -89,18 +55,8 @@ func SampleCryptoDecryptFile() {
 	println("File content decrypted")
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleCryptoEncryptPassword
+#### 5. SampleCryptoEncryptPassword
 
 ```go
 func SampleCryptoEncryptPassword() {
@@ -115,18 +71,8 @@ func SampleCryptoEncryptPassword() {
 	fmt.Println("Encrypted data:", string(encryptedData))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleCryptoDecryptPassword
+#### 6. SampleCryptoDecryptPassword
 
 ```go
 func SampleCryptoDecryptPassword() {

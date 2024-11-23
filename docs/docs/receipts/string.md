@@ -1,17 +1,13 @@
 # String
 
-## Imports
-
 ```go
 import (
 	"fmt"
 	"github.com/thuongtruong109/gouse"
 )
 ```
-## Functions
 
-
-### SampleStringCapitalize
+#### 1. SampleStringCapitalize
 
 ```go
 func SampleStringCapitalize() {
@@ -19,18 +15,8 @@ func SampleStringCapitalize() {
 	println(gouse.Capitalize(str))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringCamelCase
+#### 2. SampleStringCamelCase
 
 ```go
 func SampleStringCamelCase() {
@@ -38,18 +24,8 @@ func SampleStringCamelCase() {
 	println("Convert string to Camel Case: ", gouse.CamelCase(str))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringSnakeCase
+#### 3. SampleStringSnakeCase
 
 ```go
 func SampleStringSnakeCase() {
@@ -58,18 +34,8 @@ func SampleStringSnakeCase() {
 	println("Convert string to Snake Case: ", gouse.SnakeCase(str1), gouse.SnakeCase(str2))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringKebabCase
+#### 4. SampleStringKebabCase
 
 ```go
 func SampleStringKebabCase() {
@@ -77,18 +43,8 @@ func SampleStringKebabCase() {
 	println("Convert string to Kebab Case: ", gouse.KebabCase(str))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringIsLetter
+#### 5. SampleStringIsLetter
 
 ```go
 func SampleStringIsLetter() {
@@ -96,18 +52,8 @@ func SampleStringIsLetter() {
 	println("Check is letter character: ", gouse.IsLetter(str[0]))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringIsDigit
+#### 6. SampleStringIsDigit
 
 ```go
 func SampleStringIsDigit() {
@@ -115,18 +61,8 @@ func SampleStringIsDigit() {
 	println("Check is number character: ", gouse.IsDigit(str[0]))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringIncludes
+#### 7. SampleStringIncludes
 
 ```go
 func SampleStringIncludes() {
@@ -134,18 +70,8 @@ func SampleStringIncludes() {
 	println("Check substring in string: ", gouse.Includes(str, "world"))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringIsLower
+#### 8. SampleStringIsLower
 
 ```go
 func SampleStringIsLower() {
@@ -153,18 +79,8 @@ func SampleStringIsLower() {
 	println("Check is lower string: ", gouse.IsLower(str[0]))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringIsUpper
+#### 9. SampleStringIsUpper
 
 ```go
 func SampleStringIsUpper() {
@@ -172,18 +88,8 @@ func SampleStringIsUpper() {
 	println("Check is upper string: ", gouse.IsUpper(str[0]))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringSplit
+#### 10. SampleStringSplit
 
 ```go
 func SampleStringSplit() {
@@ -191,18 +97,8 @@ func SampleStringSplit() {
 	fmt.Println("Split string by separator: ", gouse.Split(str, "l"))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringWords
+#### 11. SampleStringWords
 
 ```go
 func SampleStringWords() {
@@ -211,18 +107,8 @@ func SampleStringWords() {
 
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringReverse
+#### 12. SampleStringReverse
 
 ```go
 func SampleStringReverse() {
@@ -230,18 +116,8 @@ func SampleStringReverse() {
 	println("Reverse string: ", gouse.Reverse(str))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringLower
+#### 13. SampleStringLower
 
 ```go
 func SampleStringLower() {
@@ -251,18 +127,8 @@ func SampleStringLower() {
 	println("Lower first string: ", gouse.LowerFirst(str))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringUpper
+#### 14. SampleStringUpper
 
 ```go
 func SampleStringUpper() {
@@ -272,18 +138,8 @@ func SampleStringUpper() {
 	println("Upper first string: ", gouse.UpperFirst(str))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringRepeat
+#### 15. SampleStringRepeat
 
 ```go
 func SampleStringRepeat() {
@@ -291,18 +147,8 @@ func SampleStringRepeat() {
 	println("Repeat string: ", gouse.Repeat(str, 3))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringTruncate
+#### 16. SampleStringTruncate
 
 ```go
 func SampleStringTruncate() {
@@ -311,18 +157,8 @@ func SampleStringTruncate() {
 	println("Truncate string (custom): ", gouse.Truncate(str, 5, "***"))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringReplace
+#### 17. SampleStringReplace
 
 ```go
 func SampleStringReplace() {
@@ -330,18 +166,8 @@ func SampleStringReplace() {
 	println("Replace string: ", gouse.Replace(str, "world", "golang"))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringTrim
+#### 18. SampleStringTrim
 
 ```go
 func SampleStringTrim() {
@@ -351,18 +177,8 @@ func SampleStringTrim() {
 	println("Trim right string: ", gouse.RTrim(str))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringTrimBlank
+#### 19. SampleStringTrimBlank
 
 ```go
 func SampleStringTrimBlank() {
@@ -371,18 +187,8 @@ func SampleStringTrimBlank() {
 	println("Trim right blank string: ", gouse.TrimBlank("   hello world, this is world   \n"))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringTrimPrefix
+#### 20. SampleStringTrimPrefix
 
 ```go
 func SampleStringTrimPrefix() {
@@ -391,18 +197,8 @@ func SampleStringTrimPrefix() {
 	println("Trim suffix string: ", gouse.TrimSuffix(str, "   "))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringTrimSuffix
+#### 21. SampleStringTrimSuffix
 
 ```go
 func SampleStringTrimSuffix() {
@@ -410,18 +206,8 @@ func SampleStringTrimSuffix() {
 	println("Trim suffix string: ", gouse.TrimSuffix(str, "   "))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringJoin
+#### 22. SampleStringJoin
 
 ```go
 func SampleStringJoin() {
@@ -429,36 +215,16 @@ func SampleStringJoin() {
 	println("Join string: ", gouse.Join(str, "-"))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringConcat
+#### 23. SampleStringConcat
 
 ```go
 func SampleStringConcat() {
 	println("Concat string: ", gouse.Concat("hello", "world"))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringSubStr
+#### 24. SampleStringSubStr
 
 ```go
 func SampleStringSubStr() {
@@ -469,18 +235,8 @@ func SampleStringSubStr() {
 	println("Sub string (with negative index): ", gouse.SubStr(str, -5, -1))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringSlice
+#### 25. SampleStringSlice
 
 ```go
 func SampleStringSlice() {
@@ -492,18 +248,8 @@ func SampleStringSlice() {
 	println("Slice string (with negative index): ", gouse.Slice(str, -5, -1))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringSplice
+#### 26. SampleStringSplice
 
 ```go
 func SampleStringSplice() {
@@ -513,18 +259,8 @@ func SampleStringSplice() {
 	println("Splice string (with replace multiple): ", gouse.Splice(str, 1, 5, "golang1", "golang2"))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringStartsWith
+#### 27. SampleStringStartsWith
 
 ```go
 func SampleStringStartsWith() {
@@ -532,18 +268,8 @@ func SampleStringStartsWith() {
 	println("Starts with: ", gouse.StartsWith(str, "hello"))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringEndsWith
+#### 28. SampleStringEndsWith
 
 ```go
 func SampleStringEndsWith() {
@@ -551,18 +277,8 @@ func SampleStringEndsWith() {
 	println("Ends with: ", gouse.EndsWith(str, "world"))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringEscape
+#### 29. SampleStringEscape
 
 ```go
 func SampleStringEscape() {
@@ -570,18 +286,8 @@ func SampleStringEscape() {
 	println("Escape string: ", gouse.Escape(str))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringUnescape
+#### 30. SampleStringUnescape
 
 ```go
 func SampleStringUnescape() {
@@ -589,18 +295,8 @@ func SampleStringUnescape() {
 	println("Unescape string: ", gouse.Unescape(str))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringPad
+#### 31. SampleStringPad
 
 ```go
 func SampleStringPad() {
@@ -609,18 +305,8 @@ func SampleStringPad() {
 	println("Pad-right string: ", gouse.PadEnd(str, 20, '@'))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringCount
+#### 32. SampleStringCount
 
 ```go
 func SampleStringCount() {
@@ -629,18 +315,8 @@ func SampleStringCount() {
 	println("Count words/substr in string (with char): ", gouse.Count(str, "wo"))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringLines
+#### 33. SampleStringLines
 
 ```go
 func SampleStringLines() {
@@ -648,18 +324,8 @@ func SampleStringLines() {
 	println("Count lines of string: ", gouse.Lines(str))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringIndex
+#### 34. SampleStringIndex
 
 ```go
 func SampleStringIndex() {
@@ -691,18 +357,8 @@ func SampleStringIndex() {
 	}
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringRandom
+#### 35. SampleStringRandom
 
 ```go
 func SampleStringRandom() {
@@ -711,18 +367,8 @@ func SampleStringRandom() {
 	println("Random chain number: ", gouse.RandDigit(6))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringAt
+#### 36. SampleStringAt
 
 ```go
 func SampleStringAt() {
@@ -731,18 +377,8 @@ func SampleStringAt() {
 	println("At string: ", gouse.At(str, -5))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringCodePointAt
+#### 37. SampleStringCodePointAt
 
 ```go
 func SampleStringCodePointAt() {
@@ -751,18 +387,8 @@ func SampleStringCodePointAt() {
 	println("Code point at string: ", gouse.CodePointAt(str, -5))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringCodePoint
+#### 38. SampleStringCodePoint
 
 ```go
 func SampleStringCodePoint() {
@@ -774,18 +400,8 @@ func SampleStringCodePoint() {
 	}
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringFromCodePointAt
+#### 39. SampleStringFromCodePointAt
 
 ```go
 func SampleStringFromCodePointAt() {
@@ -793,18 +409,8 @@ func SampleStringFromCodePointAt() {
 	println("From code point at string: ", gouse.FromCodePointAt(9731))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStringFromCodePoint
+#### 40. SampleStringFromCodePoint
 
 ```go
 func SampleStringFromCodePoint() {

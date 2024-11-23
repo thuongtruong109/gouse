@@ -1,7 +1,5 @@
 # Console
 
-## Imports
-
 ```go
 import (
 	"fmt"
@@ -22,10 +20,8 @@ import (
 	"github.com/thuongtruong109/gouse/console/table"
 )
 ```
-## Functions
 
-
-### SampleConsoleCmd
+#### 1. SampleConsoleCmd
 
 ```go
 func SampleConsoleCmd() {
@@ -35,32 +31,8 @@ func SampleConsoleCmd() {
 	gouse.Cmd("ls", "clear")
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-	"github.com/thuongtruong109/gouse/console/choice"
-	"github.com/thuongtruong109/gouse/console/countdown"
-	"github.com/thuongtruong109/gouse/console/dir"
-	"github.com/thuongtruong109/gouse/console/glamour"
-	"github.com/thuongtruong109/gouse/console/inline"
-	"github.com/thuongtruong109/gouse/console/list"
-	"github.com/thuongtruong109/gouse/console/parallel"
-	"github.com/thuongtruong109/gouse/console/progress"
-	"github.com/thuongtruong109/gouse/console/realtime"
-	"github.com/thuongtruong109/gouse/console/sequence"
-	"github.com/thuongtruong109/gouse/console/spinner"
-	"github.com/thuongtruong109/gouse/console/split"
-	"github.com/thuongtruong109/gouse/console/stopwatch"
-	"github.com/thuongtruong109/gouse/console/table"
-)
-```
-## Functions
-
-
-### SampleConsoleClear
+#### 2. SampleConsoleClear
 
 ```go
 func SampleConsoleClear() {
@@ -69,32 +41,8 @@ func SampleConsoleClear() {
 	println("console cleared")
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-	"github.com/thuongtruong109/gouse/console/choice"
-	"github.com/thuongtruong109/gouse/console/countdown"
-	"github.com/thuongtruong109/gouse/console/dir"
-	"github.com/thuongtruong109/gouse/console/glamour"
-	"github.com/thuongtruong109/gouse/console/inline"
-	"github.com/thuongtruong109/gouse/console/list"
-	"github.com/thuongtruong109/gouse/console/parallel"
-	"github.com/thuongtruong109/gouse/console/progress"
-	"github.com/thuongtruong109/gouse/console/realtime"
-	"github.com/thuongtruong109/gouse/console/sequence"
-	"github.com/thuongtruong109/gouse/console/spinner"
-	"github.com/thuongtruong109/gouse/console/split"
-	"github.com/thuongtruong109/gouse/console/stopwatch"
-	"github.com/thuongtruong109/gouse/console/table"
-)
-```
-## Functions
-
-
-### SampleConsoleWithColor
+#### 3. SampleConsoleWithColor
 
 ```go
 func SampleConsoleWithColor() {
@@ -108,32 +56,8 @@ func SampleConsoleWithColor() {
 	gouse.PrintColor(gouse.CYAN_FG, "this is cyan")
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-	"github.com/thuongtruong109/gouse/console/choice"
-	"github.com/thuongtruong109/gouse/console/countdown"
-	"github.com/thuongtruong109/gouse/console/dir"
-	"github.com/thuongtruong109/gouse/console/glamour"
-	"github.com/thuongtruong109/gouse/console/inline"
-	"github.com/thuongtruong109/gouse/console/list"
-	"github.com/thuongtruong109/gouse/console/parallel"
-	"github.com/thuongtruong109/gouse/console/progress"
-	"github.com/thuongtruong109/gouse/console/realtime"
-	"github.com/thuongtruong109/gouse/console/sequence"
-	"github.com/thuongtruong109/gouse/console/spinner"
-	"github.com/thuongtruong109/gouse/console/split"
-	"github.com/thuongtruong109/gouse/console/stopwatch"
-	"github.com/thuongtruong109/gouse/console/table"
-)
-```
-## Functions
-
-
-### SampleConsoleBanner
+#### 4. SampleConsoleBanner
 
 ```go
 func SampleConsoleBanner() {
@@ -142,32 +66,8 @@ func SampleConsoleBanner() {
 	gouse.Banner(gouse.DOUBLE_ALPHA, "gouse - type single")
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-	"github.com/thuongtruong109/gouse/console/choice"
-	"github.com/thuongtruong109/gouse/console/countdown"
-	"github.com/thuongtruong109/gouse/console/dir"
-	"github.com/thuongtruong109/gouse/console/glamour"
-	"github.com/thuongtruong109/gouse/console/inline"
-	"github.com/thuongtruong109/gouse/console/list"
-	"github.com/thuongtruong109/gouse/console/parallel"
-	"github.com/thuongtruong109/gouse/console/progress"
-	"github.com/thuongtruong109/gouse/console/realtime"
-	"github.com/thuongtruong109/gouse/console/sequence"
-	"github.com/thuongtruong109/gouse/console/spinner"
-	"github.com/thuongtruong109/gouse/console/split"
-	"github.com/thuongtruong109/gouse/console/stopwatch"
-	"github.com/thuongtruong109/gouse/console/table"
-)
-```
-## Functions
-
-
-### SampleConsoleHelp
+#### 5. SampleConsoleHelp
 
 ```go
 func SampleConsoleHelp() {
@@ -204,32 +104,8 @@ func SampleConsoleHelp() {
 	// }
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-	"github.com/thuongtruong109/gouse/console/choice"
-	"github.com/thuongtruong109/gouse/console/countdown"
-	"github.com/thuongtruong109/gouse/console/dir"
-	"github.com/thuongtruong109/gouse/console/glamour"
-	"github.com/thuongtruong109/gouse/console/inline"
-	"github.com/thuongtruong109/gouse/console/list"
-	"github.com/thuongtruong109/gouse/console/parallel"
-	"github.com/thuongtruong109/gouse/console/progress"
-	"github.com/thuongtruong109/gouse/console/realtime"
-	"github.com/thuongtruong109/gouse/console/sequence"
-	"github.com/thuongtruong109/gouse/console/spinner"
-	"github.com/thuongtruong109/gouse/console/split"
-	"github.com/thuongtruong109/gouse/console/stopwatch"
-	"github.com/thuongtruong109/gouse/console/table"
-)
-```
-## Functions
-
-
-### SampleConsoleSelect
+#### 6. SampleConsoleSelect
 
 ```go
 func SampleConsoleSelect() {
@@ -242,32 +118,8 @@ func SampleConsoleSelect() {
 	println("You selected: ", selected)
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-	"github.com/thuongtruong109/gouse/console/choice"
-	"github.com/thuongtruong109/gouse/console/countdown"
-	"github.com/thuongtruong109/gouse/console/dir"
-	"github.com/thuongtruong109/gouse/console/glamour"
-	"github.com/thuongtruong109/gouse/console/inline"
-	"github.com/thuongtruong109/gouse/console/list"
-	"github.com/thuongtruong109/gouse/console/parallel"
-	"github.com/thuongtruong109/gouse/console/progress"
-	"github.com/thuongtruong109/gouse/console/realtime"
-	"github.com/thuongtruong109/gouse/console/sequence"
-	"github.com/thuongtruong109/gouse/console/spinner"
-	"github.com/thuongtruong109/gouse/console/split"
-	"github.com/thuongtruong109/gouse/console/stopwatch"
-	"github.com/thuongtruong109/gouse/console/table"
-)
-```
-## Functions
-
-
-### SampleConsoleList
+#### 7. SampleConsoleList
 
 ```go
 func SampleConsoleList() {
@@ -301,32 +153,8 @@ func SampleConsoleList() {
 	list.Default(title, items)
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-	"github.com/thuongtruong109/gouse/console/choice"
-	"github.com/thuongtruong109/gouse/console/countdown"
-	"github.com/thuongtruong109/gouse/console/dir"
-	"github.com/thuongtruong109/gouse/console/glamour"
-	"github.com/thuongtruong109/gouse/console/inline"
-	"github.com/thuongtruong109/gouse/console/list"
-	"github.com/thuongtruong109/gouse/console/parallel"
-	"github.com/thuongtruong109/gouse/console/progress"
-	"github.com/thuongtruong109/gouse/console/realtime"
-	"github.com/thuongtruong109/gouse/console/sequence"
-	"github.com/thuongtruong109/gouse/console/spinner"
-	"github.com/thuongtruong109/gouse/console/split"
-	"github.com/thuongtruong109/gouse/console/stopwatch"
-	"github.com/thuongtruong109/gouse/console/table"
-)
-```
-## Functions
-
-
-### SampleConsoleProgress
+#### 8. SampleConsoleProgress
 
 ```go
 func SampleConsoleProgress() {
@@ -336,64 +164,16 @@ func SampleConsoleProgress() {
 	progress.Run("^_^ Oh no, something went wrong", "✔️ Done!", 0.5)
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-	"github.com/thuongtruong109/gouse/console/choice"
-	"github.com/thuongtruong109/gouse/console/countdown"
-	"github.com/thuongtruong109/gouse/console/dir"
-	"github.com/thuongtruong109/gouse/console/glamour"
-	"github.com/thuongtruong109/gouse/console/inline"
-	"github.com/thuongtruong109/gouse/console/list"
-	"github.com/thuongtruong109/gouse/console/parallel"
-	"github.com/thuongtruong109/gouse/console/progress"
-	"github.com/thuongtruong109/gouse/console/realtime"
-	"github.com/thuongtruong109/gouse/console/sequence"
-	"github.com/thuongtruong109/gouse/console/spinner"
-	"github.com/thuongtruong109/gouse/console/split"
-	"github.com/thuongtruong109/gouse/console/stopwatch"
-	"github.com/thuongtruong109/gouse/console/table"
-)
-```
-## Functions
-
-
-### SampleConsoleRealtime
+#### 9. SampleConsoleRealtime
 
 ```go
 func SampleConsoleRealtime() {
 	realtime.Run()
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-	"github.com/thuongtruong109/gouse/console/choice"
-	"github.com/thuongtruong109/gouse/console/countdown"
-	"github.com/thuongtruong109/gouse/console/dir"
-	"github.com/thuongtruong109/gouse/console/glamour"
-	"github.com/thuongtruong109/gouse/console/inline"
-	"github.com/thuongtruong109/gouse/console/list"
-	"github.com/thuongtruong109/gouse/console/parallel"
-	"github.com/thuongtruong109/gouse/console/progress"
-	"github.com/thuongtruong109/gouse/console/realtime"
-	"github.com/thuongtruong109/gouse/console/sequence"
-	"github.com/thuongtruong109/gouse/console/spinner"
-	"github.com/thuongtruong109/gouse/console/split"
-	"github.com/thuongtruong109/gouse/console/stopwatch"
-	"github.com/thuongtruong109/gouse/console/table"
-)
-```
-## Functions
-
-
-### SampleConsoleChoice
+#### 10. SampleConsoleChoice
 
 ```go
 func SampleConsoleChoice() {
@@ -406,224 +186,56 @@ func SampleConsoleChoice() {
 	fmt.Printf("\n---\nYou chose %s!\n", update.Choice)
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-	"github.com/thuongtruong109/gouse/console/choice"
-	"github.com/thuongtruong109/gouse/console/countdown"
-	"github.com/thuongtruong109/gouse/console/dir"
-	"github.com/thuongtruong109/gouse/console/glamour"
-	"github.com/thuongtruong109/gouse/console/inline"
-	"github.com/thuongtruong109/gouse/console/list"
-	"github.com/thuongtruong109/gouse/console/parallel"
-	"github.com/thuongtruong109/gouse/console/progress"
-	"github.com/thuongtruong109/gouse/console/realtime"
-	"github.com/thuongtruong109/gouse/console/sequence"
-	"github.com/thuongtruong109/gouse/console/spinner"
-	"github.com/thuongtruong109/gouse/console/split"
-	"github.com/thuongtruong109/gouse/console/stopwatch"
-	"github.com/thuongtruong109/gouse/console/table"
-)
-```
-## Functions
-
-
-### SampleConsoleSpinner
+#### 11. SampleConsoleSpinner
 
 ```go
 func SampleConsoleSpinner() {
 	spinner.Run()
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-	"github.com/thuongtruong109/gouse/console/choice"
-	"github.com/thuongtruong109/gouse/console/countdown"
-	"github.com/thuongtruong109/gouse/console/dir"
-	"github.com/thuongtruong109/gouse/console/glamour"
-	"github.com/thuongtruong109/gouse/console/inline"
-	"github.com/thuongtruong109/gouse/console/list"
-	"github.com/thuongtruong109/gouse/console/parallel"
-	"github.com/thuongtruong109/gouse/console/progress"
-	"github.com/thuongtruong109/gouse/console/realtime"
-	"github.com/thuongtruong109/gouse/console/sequence"
-	"github.com/thuongtruong109/gouse/console/spinner"
-	"github.com/thuongtruong109/gouse/console/split"
-	"github.com/thuongtruong109/gouse/console/stopwatch"
-	"github.com/thuongtruong109/gouse/console/table"
-)
-```
-## Functions
-
-
-### SampleConsoleSplit
+#### 12. SampleConsoleSplit
 
 ```go
 func SampleConsoleSplit() {
 	split.Run()
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-	"github.com/thuongtruong109/gouse/console/choice"
-	"github.com/thuongtruong109/gouse/console/countdown"
-	"github.com/thuongtruong109/gouse/console/dir"
-	"github.com/thuongtruong109/gouse/console/glamour"
-	"github.com/thuongtruong109/gouse/console/inline"
-	"github.com/thuongtruong109/gouse/console/list"
-	"github.com/thuongtruong109/gouse/console/parallel"
-	"github.com/thuongtruong109/gouse/console/progress"
-	"github.com/thuongtruong109/gouse/console/realtime"
-	"github.com/thuongtruong109/gouse/console/sequence"
-	"github.com/thuongtruong109/gouse/console/spinner"
-	"github.com/thuongtruong109/gouse/console/split"
-	"github.com/thuongtruong109/gouse/console/stopwatch"
-	"github.com/thuongtruong109/gouse/console/table"
-)
-```
-## Functions
-
-
-### SampleConsoleStopwatch
+#### 13. SampleConsoleStopwatch
 
 ```go
 func SampleConsoleStopwatch() {
 	stopwatch.Run()
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-	"github.com/thuongtruong109/gouse/console/choice"
-	"github.com/thuongtruong109/gouse/console/countdown"
-	"github.com/thuongtruong109/gouse/console/dir"
-	"github.com/thuongtruong109/gouse/console/glamour"
-	"github.com/thuongtruong109/gouse/console/inline"
-	"github.com/thuongtruong109/gouse/console/list"
-	"github.com/thuongtruong109/gouse/console/parallel"
-	"github.com/thuongtruong109/gouse/console/progress"
-	"github.com/thuongtruong109/gouse/console/realtime"
-	"github.com/thuongtruong109/gouse/console/sequence"
-	"github.com/thuongtruong109/gouse/console/spinner"
-	"github.com/thuongtruong109/gouse/console/split"
-	"github.com/thuongtruong109/gouse/console/stopwatch"
-	"github.com/thuongtruong109/gouse/console/table"
-)
-```
-## Functions
-
-
-### SampleConsoleTable
+#### 14. SampleConsoleTable
 
 ```go
 func SampleConsoleTable() {
 	table.Run()
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-	"github.com/thuongtruong109/gouse/console/choice"
-	"github.com/thuongtruong109/gouse/console/countdown"
-	"github.com/thuongtruong109/gouse/console/dir"
-	"github.com/thuongtruong109/gouse/console/glamour"
-	"github.com/thuongtruong109/gouse/console/inline"
-	"github.com/thuongtruong109/gouse/console/list"
-	"github.com/thuongtruong109/gouse/console/parallel"
-	"github.com/thuongtruong109/gouse/console/progress"
-	"github.com/thuongtruong109/gouse/console/realtime"
-	"github.com/thuongtruong109/gouse/console/sequence"
-	"github.com/thuongtruong109/gouse/console/spinner"
-	"github.com/thuongtruong109/gouse/console/split"
-	"github.com/thuongtruong109/gouse/console/stopwatch"
-	"github.com/thuongtruong109/gouse/console/table"
-)
-```
-## Functions
-
-
-### SampleConsoleCountdown
+#### 15. SampleConsoleCountdown
 
 ```go
 func SampleConsoleCountdown() {
 	countdown.Run()
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-	"github.com/thuongtruong109/gouse/console/choice"
-	"github.com/thuongtruong109/gouse/console/countdown"
-	"github.com/thuongtruong109/gouse/console/dir"
-	"github.com/thuongtruong109/gouse/console/glamour"
-	"github.com/thuongtruong109/gouse/console/inline"
-	"github.com/thuongtruong109/gouse/console/list"
-	"github.com/thuongtruong109/gouse/console/parallel"
-	"github.com/thuongtruong109/gouse/console/progress"
-	"github.com/thuongtruong109/gouse/console/realtime"
-	"github.com/thuongtruong109/gouse/console/sequence"
-	"github.com/thuongtruong109/gouse/console/spinner"
-	"github.com/thuongtruong109/gouse/console/split"
-	"github.com/thuongtruong109/gouse/console/stopwatch"
-	"github.com/thuongtruong109/gouse/console/table"
-)
-```
-## Functions
-
-
-### SampleConsoleSequence
+#### 16. SampleConsoleSequence
 
 ```go
 func SampleConsoleSequence() {
 	sequence.Run()
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-	"github.com/thuongtruong109/gouse/console/choice"
-	"github.com/thuongtruong109/gouse/console/countdown"
-	"github.com/thuongtruong109/gouse/console/dir"
-	"github.com/thuongtruong109/gouse/console/glamour"
-	"github.com/thuongtruong109/gouse/console/inline"
-	"github.com/thuongtruong109/gouse/console/list"
-	"github.com/thuongtruong109/gouse/console/parallel"
-	"github.com/thuongtruong109/gouse/console/progress"
-	"github.com/thuongtruong109/gouse/console/realtime"
-	"github.com/thuongtruong109/gouse/console/sequence"
-	"github.com/thuongtruong109/gouse/console/spinner"
-	"github.com/thuongtruong109/gouse/console/split"
-	"github.com/thuongtruong109/gouse/console/stopwatch"
-	"github.com/thuongtruong109/gouse/console/table"
-)
-```
-## Functions
-
-
-### SampleConsoleInline
+#### 17. SampleConsoleInline
 
 ```go
 func SampleConsoleInline() {
@@ -635,96 +247,24 @@ func SampleConsoleInline() {
 	inline.Run(customMode)
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-	"github.com/thuongtruong109/gouse/console/choice"
-	"github.com/thuongtruong109/gouse/console/countdown"
-	"github.com/thuongtruong109/gouse/console/dir"
-	"github.com/thuongtruong109/gouse/console/glamour"
-	"github.com/thuongtruong109/gouse/console/inline"
-	"github.com/thuongtruong109/gouse/console/list"
-	"github.com/thuongtruong109/gouse/console/parallel"
-	"github.com/thuongtruong109/gouse/console/progress"
-	"github.com/thuongtruong109/gouse/console/realtime"
-	"github.com/thuongtruong109/gouse/console/sequence"
-	"github.com/thuongtruong109/gouse/console/spinner"
-	"github.com/thuongtruong109/gouse/console/split"
-	"github.com/thuongtruong109/gouse/console/stopwatch"
-	"github.com/thuongtruong109/gouse/console/table"
-)
-```
-## Functions
-
-
-### SampleConsoleParallel
+#### 18. SampleConsoleParallel
 
 ```go
 func SampleConsoleParallel() {
 	parallel.Run()
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-	"github.com/thuongtruong109/gouse/console/choice"
-	"github.com/thuongtruong109/gouse/console/countdown"
-	"github.com/thuongtruong109/gouse/console/dir"
-	"github.com/thuongtruong109/gouse/console/glamour"
-	"github.com/thuongtruong109/gouse/console/inline"
-	"github.com/thuongtruong109/gouse/console/list"
-	"github.com/thuongtruong109/gouse/console/parallel"
-	"github.com/thuongtruong109/gouse/console/progress"
-	"github.com/thuongtruong109/gouse/console/realtime"
-	"github.com/thuongtruong109/gouse/console/sequence"
-	"github.com/thuongtruong109/gouse/console/spinner"
-	"github.com/thuongtruong109/gouse/console/split"
-	"github.com/thuongtruong109/gouse/console/stopwatch"
-	"github.com/thuongtruong109/gouse/console/table"
-)
-```
-## Functions
-
-
-### SampleConsoleDir
+#### 19. SampleConsoleDir
 
 ```go
 func SampleConsoleDir() {
 	dir.Run()
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-	"github.com/thuongtruong109/gouse/console/choice"
-	"github.com/thuongtruong109/gouse/console/countdown"
-	"github.com/thuongtruong109/gouse/console/dir"
-	"github.com/thuongtruong109/gouse/console/glamour"
-	"github.com/thuongtruong109/gouse/console/inline"
-	"github.com/thuongtruong109/gouse/console/list"
-	"github.com/thuongtruong109/gouse/console/parallel"
-	"github.com/thuongtruong109/gouse/console/progress"
-	"github.com/thuongtruong109/gouse/console/realtime"
-	"github.com/thuongtruong109/gouse/console/sequence"
-	"github.com/thuongtruong109/gouse/console/spinner"
-	"github.com/thuongtruong109/gouse/console/split"
-	"github.com/thuongtruong109/gouse/console/stopwatch"
-	"github.com/thuongtruong109/gouse/console/table"
-)
-```
-## Functions
-
-
-### SampleConsoleGlamour
+#### 20. SampleConsoleGlamour
 
 ```go
 func SampleConsoleGlamour() {

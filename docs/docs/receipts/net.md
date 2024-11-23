@@ -1,17 +1,13 @@
 # Net
 
-## Imports
-
 ```go
 import (
 	"fmt"
 	"github.com/thuongtruong109/gouse"
 )
 ```
-## Functions
 
-
-### SampleNetCheck
+#### 1. SampleNetCheck
 
 ```go
 func SampleNetCheck() {
@@ -22,18 +18,8 @@ func SampleNetCheck() {
 	println("Response: ", ok)
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleNetCheckWithStatusCode
+#### 2. SampleNetCheckWithStatusCode
 
 ```go
 func SampleNetCheckWithStatusCode() {
@@ -44,18 +30,8 @@ func SampleNetCheckWithStatusCode() {
 	println("Status code: ", statusCode)
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleNetConnectTime
+#### 3. SampleNetConnectTime
 
 ```go
 func SampleNetConnectTime() {
@@ -67,54 +43,24 @@ func SampleNetConnectTime() {
 	fmt.Printf("Connect time: %fs\n", connectTime)
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleNetEncode
+#### 4. SampleNetEncode
 
 ```go
 func SampleNetEncode() {
 	println("Encode: ", gouse.EncodeHref("https://google.com"))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleNetDecode
+#### 5. SampleNetDecode
 
 ```go
 func SampleNetDecode() {
 	println("Decode: ", gouse.DecodeHref("https%3A%2F%2Fgoogle.com"))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleNetHeader
+#### 6. SampleNetHeader
 
 ```go
 func SampleNetHeader() {
@@ -126,18 +72,8 @@ func SampleNetHeader() {
 	fmt.Println(gouse.MapAsString(header))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleApiPortChecker
+#### 7. SampleApiPortChecker
 
 ```go
 func SampleApiPortChecker() {
@@ -145,54 +81,24 @@ func SampleApiPortChecker() {
 	fmt.Printf("Port Open: %t\n", open)
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleApiPortScanner
+#### 8. SampleApiPortScanner
 
 ```go
 func SampleApiPortScanner() {
 	gouse.ScanPort("tcp", "127.0.0.1", 3000, 8080)
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleNetProxy
+#### 9. SampleNetProxy
 
 ```go
 func SampleNetProxy() {
 	gouse.Proxy("5000", []string{"http://localhost:3000", "http://localhost:3001"})
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleNetOpen
+#### 10. SampleNetOpen
 
 ```go
 func SampleNetOpen() {

@@ -22,6 +22,7 @@ func main() {
 		helperSample()
 		ioSample()
 		mathSample()
+		mediaSample()
 		netSample()
 		numberSample()
 		osSample()

@@ -1,7 +1,5 @@
 # Io
 
-## Imports
-
 ```go
 import (
 	"encoding/json"
@@ -10,10 +8,8 @@ import (
 	"github.com/thuongtruong109/gouse"
 )
 ```
-## Functions
 
-
-### SampleIoCreatePath
+#### 1. SampleIoCreatePath
 
 ```go
 func SampleIoCreatePath() {
@@ -26,20 +22,8 @@ func SampleIoCreatePath() {
 	println("File created successfully.")
 }
 ```
-## Imports
 
-```go
-import (
-	"encoding/json"
-	"fmt"
-	"os"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleIoReadPath
+#### 2. SampleIoReadPath
 
 ```go
 func SampleIoReadPath() {
@@ -53,20 +37,8 @@ func SampleIoReadPath() {
 	fmt.Println("File content:", string(content))
 }
 ```
-## Imports
 
-```go
-import (
-	"encoding/json"
-	"fmt"
-	"os"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleIoWritePath
+#### 3. SampleIoWritePath
 
 ```go
 func SampleIoWritePath() {
@@ -81,20 +53,8 @@ func SampleIoWritePath() {
 	println("File updated successfully.")
 }
 ```
-## Imports
 
-```go
-import (
-	"encoding/json"
-	"fmt"
-	"os"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleIoCreateDir
+#### 4. SampleIoCreateDir
 
 ```go
 func SampleIoCreateDir() {
@@ -105,20 +65,8 @@ func SampleIoCreateDir() {
 	println("dir created")
 }
 ```
-## Imports
 
-```go
-import (
-	"encoding/json"
-	"fmt"
-	"os"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleIoCurrentDir
+#### 5. SampleIoCurrentDir
 
 ```go
 func SampleIoCurrentDir() {
@@ -131,20 +79,8 @@ func SampleIoCurrentDir() {
 	println(data)
 }
 ```
-## Imports
 
-```go
-import (
-	"encoding/json"
-	"fmt"
-	"os"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleIoHierarchyDir
+#### 6. SampleIoHierarchyDir
 
 ```go
 func SampleIoHierarchyDir() {
@@ -159,20 +95,8 @@ func SampleIoHierarchyDir() {
 	}
 }
 ```
-## Imports
 
-```go
-import (
-	"encoding/json"
-	"fmt"
-	"os"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleIoCheckDir
+#### 7. SampleIoCheckDir
 
 ```go
 func SampleIoCheckDir() {
@@ -187,20 +111,8 @@ func SampleIoCheckDir() {
 	}
 }
 ```
-## Imports
 
-```go
-import (
-	"encoding/json"
-	"fmt"
-	"os"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleIoLsDir
+#### 8. SampleIoLsDir
 
 ```go
 func SampleIoLsDir() {
@@ -215,20 +127,8 @@ func SampleIoLsDir() {
 	}
 }
 ```
-## Imports
 
-```go
-import (
-	"encoding/json"
-	"fmt"
-	"os"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleIoRemoveDir
+#### 9. SampleIoRemoveDir
 
 ```go
 func SampleIoRemoveDir() {
@@ -239,20 +139,8 @@ func SampleIoRemoveDir() {
 	println("dir removed")
 }
 ```
-## Imports
 
-```go
-import (
-	"encoding/json"
-	"fmt"
-	"os"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleIoAppendToFile
+#### 10. SampleIoAppendToFile
 
 ```go
 func SampleIoAppendToFile() {
@@ -263,20 +151,8 @@ func SampleIoAppendToFile() {
 	println("file appended")
 }
 ```
-## Imports
 
-```go
-import (
-	"encoding/json"
-	"fmt"
-	"os"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleIoCleanFile
+#### 11. SampleIoCleanFile
 
 ```go
 func SampleIoCleanFile() {
@@ -294,20 +170,8 @@ func SampleIoCleanFile() {
 	println("file cleaned")
 }
 ```
-## Imports
 
-```go
-import (
-	"encoding/json"
-	"fmt"
-	"os"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleIoCopyFile
+#### 12. SampleIoCopyFile
 
 ```go
 func SampleIoCopyFile() {
@@ -318,20 +182,8 @@ func SampleIoCopyFile() {
 	println("file copied")
 }
 ```
-## Imports
 
-```go
-import (
-	"encoding/json"
-	"fmt"
-	"os"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleIoCreateFile
+#### 13. SampleIoCreateFile
 
 ```go
 func SampleIoCreateFile() {
@@ -342,20 +194,8 @@ func SampleIoCreateFile() {
 	println("file created")
 }
 ```
-## Imports
 
-```go
-import (
-	"encoding/json"
-	"fmt"
-	"os"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleIoFileInfo
+#### 14. SampleIoFileInfo
 
 ```go
 func SampleIoFileInfo() {
@@ -372,20 +212,8 @@ func SampleIoFileInfo() {
 	fmt.Printf("File info (with system process): %+v\n", data.Sys)
 }
 ```
-## Imports
 
-```go
-import (
-	"encoding/json"
-	"fmt"
-	"os"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleIoCheckFile
+#### 15. SampleIoCheckFile
 
 ```go
 func SampleIoCheckFile() {
@@ -400,20 +228,8 @@ func SampleIoCheckFile() {
 	}
 }
 ```
-## Imports
 
-```go
-import (
-	"encoding/json"
-	"fmt"
-	"os"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleIoFileObj
+#### 16. SampleIoFileObj
 
 ```go
 func SampleIoFileObj() {
@@ -480,20 +296,8 @@ func SampleIoFileObj() {
 	println("data written")
 }
 ```
-## Imports
 
-```go
-import (
-	"encoding/json"
-	"fmt"
-	"os"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleIoReadFileByLine
+#### 17. SampleIoReadFileByLine
 
 ```go
 func SampleIoReadFileByLine() {
@@ -506,20 +310,8 @@ func SampleIoReadFileByLine() {
 	}
 }
 ```
-## Imports
 
-```go
-import (
-	"encoding/json"
-	"fmt"
-	"os"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleIoRemoveFile
+#### 18. SampleIoRemoveFile
 
 ```go
 func SampleIoRemoveFile() {
@@ -530,20 +322,8 @@ func SampleIoRemoveFile() {
 	println("file removed")
 }
 ```
-## Imports
 
-```go
-import (
-	"encoding/json"
-	"fmt"
-	"os"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleIoRenameFile
+#### 19. SampleIoRenameFile
 
 ```go
 func SampleIoRenameFile() {
@@ -554,20 +334,8 @@ func SampleIoRenameFile() {
 	println("file renamed")
 }
 ```
-## Imports
 
-```go
-import (
-	"encoding/json"
-	"fmt"
-	"os"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleIoTruncateFile
+#### 20. SampleIoTruncateFile
 
 ```go
 func SampleIoTruncateFile() {
@@ -578,20 +346,8 @@ func SampleIoTruncateFile() {
 	println("file truncated to 10 bytes")
 }
 ```
-## Imports
 
-```go
-import (
-	"encoding/json"
-	"fmt"
-	"os"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleIoWriteToFile
+#### 21. SampleIoWriteToFile
 
 ```go
 func SampleIoWriteToFile() {
@@ -602,20 +358,8 @@ func SampleIoWriteToFile() {
 	println("file written")
 }
 ```
-## Imports
 
-```go
-import (
-	"encoding/json"
-	"fmt"
-	"os"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleIoZip
+#### 22. SampleIoZip
 
 ```go
 func SampleIoZip() {
@@ -629,20 +373,8 @@ func SampleIoZip() {
 	println("Files zipped successfully:", zipFileName)
 }
 ```
-## Imports
 
-```go
-import (
-	"encoding/json"
-	"fmt"
-	"os"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleIoUnzip
+#### 23. SampleIoUnzip
 
 ```go
 func SampleIoUnzip() {

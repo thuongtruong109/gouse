@@ -1,17 +1,13 @@
 # Config
 
-## Imports
-
 ```go
 import (
 	"fmt"
 	"github.com/thuongtruong109/gouse"
 )
 ```
-## Functions
 
-
-### SampleConfigJson
+#### 1. SampleConfigJson
 
 ```go
 func SampleConfigJson() {
@@ -30,18 +26,8 @@ func SampleConfigJson() {
 	fmt.Println("Groups:", myConf.Groups)
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleConfigToml
+#### 2. SampleConfigToml
 
 ```go
 func SampleConfigToml() {
@@ -66,18 +52,8 @@ func SampleConfigToml() {
 	fmt.Println("Mysql Database:", myConf.Mysql.Database)
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleConfigYaml
+#### 3. SampleConfigYaml
 
 ```go
 func SampleConfigYaml() {

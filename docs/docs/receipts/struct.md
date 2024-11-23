@@ -1,17 +1,13 @@
 # Struct
 
-## Imports
-
 ```go
 import (
 	"fmt"
 	"github.com/thuongtruong109/gouse"
 )
 ```
-## Functions
 
-
-### SampleStructAdd
+#### 1. SampleStructAdd
 
 ```go
 func SampleStructAdd() {
@@ -36,18 +32,8 @@ func SampleStructAdd() {
 	fmt.Printf("Struct after adding fields: %+v\n", result)
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStructClone
+#### 2. SampleStructClone
 
 ```go
 func SampleStructClone() {
@@ -72,18 +58,8 @@ func SampleStructClone() {
 	fmt.Printf("Clone: %+v\n", updateClone)
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStructGet
+#### 3. SampleStructGet
 
 ```go
 func SampleStructGet() {
@@ -103,18 +79,8 @@ func SampleStructGet() {
 	fmt.Printf("Name: %s\n", name)
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStructHas
+#### 4. SampleStructHas
 
 ```go
 func SampleStructHas() {
@@ -137,18 +103,8 @@ func SampleStructHas() {
 	fmt.Printf("Has empty: %+v\n", hasEmpty)
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStructMerge
+#### 5. SampleStructMerge
 
 ```go
 func SampleStructMerge() {
@@ -185,18 +141,8 @@ func SampleStructMerge() {
 	fmt.Println("City:", merged.(map[string]interface{})["City"])
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStructRemove
+#### 6. SampleStructRemove
 
 ```go
 func SampleStructRemove() {
@@ -215,18 +161,8 @@ func SampleStructRemove() {
 	fmt.Printf("Struct after removed field: %+v\n", gouse.RemoveStruct(person, "Email"))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleStructSet
+#### 7. SampleStructSet
 
 ```go
 func SampleStructSet() {

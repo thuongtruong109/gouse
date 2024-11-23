@@ -1,17 +1,13 @@
 # Type
 
-## Imports
-
 ```go
 import (
 	"fmt"
 	"github.com/thuongtruong109/gouse"
 )
 ```
-## Functions
 
-
-### SampleTypeStringConvert
+#### 1. SampleTypeStringConvert
 
 ```go
 func SampleTypeStringConvert() {
@@ -22,18 +18,8 @@ func SampleTypeStringConvert() {
 	fmt.Println("Convert strings to bytes: ", string(gouse.StringsToBytes([]string{"1", "2", "3"})), "->", gouse.StringsToBytes([]string{"1", "2", "3"}))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleTypeCastToString
+#### 2. SampleTypeCastToString
 
 ```go
 func SampleTypeCastToString() {
@@ -45,18 +31,8 @@ func SampleTypeCastToString() {
 	println("Cast rune to string: ", gouse.RuneToString('a'))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleTypeStructConvert
+#### 3. SampleTypeStructConvert
 
 ```go
 func SampleTypeStructConvert() {
@@ -76,18 +52,8 @@ func SampleTypeStructConvert() {
 	fmt.Println("Struct to map: ", gouse.StructToMap(companyInfo))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleTypeCheck
+#### 4. SampleTypeCheck
 
 ```go
 func SampleTypeCheck() {
@@ -116,18 +82,8 @@ func SampleTypeCheck() {
 	println("Check type is zero: ", gouse.IsZero(0))
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleTypeCheckUUID
+#### 5. SampleTypeCheckUUID
 
 ```go
 func SampleTypeCheckUUID() {
@@ -138,18 +94,8 @@ func SampleTypeCheckUUID() {
 	println("Check is valid uuid: ", isValid)
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleTypeCheckGmail
+#### 6. SampleTypeCheckGmail
 
 ```go
 func SampleTypeCheckGmail() {
@@ -166,18 +112,8 @@ func SampleTypeCheckGmail() {
 	}
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleTypeCheckYahoo
+#### 7. SampleTypeCheckYahoo
 
 ```go
 func SampleTypeCheckYahoo() {
@@ -194,18 +130,8 @@ func SampleTypeCheckYahoo() {
 	}
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleTypeCheckOutlook
+#### 8. SampleTypeCheckOutlook
 
 ```go
 func SampleTypeCheckOutlook() {
@@ -222,18 +148,8 @@ func SampleTypeCheckOutlook() {
 	}
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleTypeCheckEdu
+#### 9. SampleTypeCheckEdu
 
 ```go
 func SampleTypeCheckEdu() {
@@ -250,18 +166,8 @@ func SampleTypeCheckEdu() {
 	}
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleTypeCheckEmail
+#### 10. SampleTypeCheckEmail
 
 ```go
 func SampleTypeCheckEmail() {
@@ -278,18 +184,8 @@ func SampleTypeCheckEmail() {
 	}
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleTypeCheckUsername
+#### 11. SampleTypeCheckUsername
 
 ```go
 func SampleTypeCheckUsername() {
@@ -312,18 +208,8 @@ func SampleTypeCheckUsername() {
 	}
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleTypeCheckPassword
+#### 12. SampleTypeCheckPassword
 
 ```go
 func SampleTypeCheckPassword() {
@@ -347,18 +233,8 @@ func SampleTypeCheckPassword() {
 	}
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleTypeCheckPhone
+#### 13. SampleTypeCheckPhone
 
 ```go
 func SampleTypeCheckPhone() {

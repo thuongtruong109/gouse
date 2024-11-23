@@ -1,7 +1,5 @@
 # Media
 
-## Imports
-
 ```go
 import (
 	"fmt"
@@ -12,10 +10,8 @@ import (
 	"github.com/thuongtruong109/gouse"
 )
 ```
-## Functions
 
-
-### SampleMediaCanvas
+#### 1. SampleMediaCanvas
 
 ```go
 func SampleMediaCanvas() {
@@ -31,22 +27,8 @@ func SampleMediaCanvas() {
 	png.Encode(file, avatar)
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"image/png"
-	"log"
-	"os"
-	"time"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleMediaPngToJpg
+#### 2. SampleMediaPngToJpg
 
 ```go
 func SampleMediaPngToJpg() {

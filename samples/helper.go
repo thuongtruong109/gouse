@@ -13,5 +13,5 @@ func SampleHelperUUID() {
 func SampleHelperAutoMdDoc() {
 	inputFilePath := "main.go"
 	outputFilePath := "main.md"
-	gouse.AutoMdDoc(inputFilePath, outputFilePath)
+	gouse.Go2Md(inputFilePath, outputFilePath)
 }

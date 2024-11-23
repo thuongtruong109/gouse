@@ -1,55 +1,33 @@
 # Helper
 
-## Imports
-
 ```go
 import (
 	"github.com/thuongtruong109/gouse"
 )
 ```
-## Functions
 
-
-### SampleHelperRandomID
+#### 1. SampleHelperRandomID
 
 ```go
 func SampleHelperRandomID() {
 	println("Generate random ID: ", gouse.RandID())
 }
 ```
-## Imports
 
-```go
-import (
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleHelperUUID
+#### 2. SampleHelperUUID
 
 ```go
 func SampleHelperUUID() {
 	println("New uuid: ", gouse.UUID())
 }
 ```
-## Imports
 
-```go
-import (
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleHelperAutoMdDoc
+#### 3. SampleHelperAutoMdDoc
 
 ```go
 func SampleHelperAutoMdDoc() {
 	inputFilePath := "main.go"
 	outputFilePath := "main.md"
-	gouse.AutoMdDoc(inputFilePath, outputFilePath)
+	gouse.Go2Md(inputFilePath, outputFilePath)
 }
 ```

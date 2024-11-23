@@ -1,17 +1,13 @@
 # Os
 
-## Imports
-
 ```go
 import (
 	"fmt"
 	"github.com/thuongtruong109/gouse"
 )
 ```
-## Functions
 
-
-### SampleOsCpu
+#### 1. SampleOsCpu
 
 ```go
 func SampleOsCpu() {
@@ -28,18 +24,8 @@ func SampleOsCpu() {
 	fmt.Println("Cores: ", cpuInfo.Cores)
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleOsDisk
+#### 2. SampleOsDisk
 
 ```go
 func SampleOsDisk() {
@@ -56,18 +42,8 @@ func SampleOsDisk() {
 	fmt.Println("Used Space Percent: ", diskInfo.UsedSpacePercent, "%")
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleOsSystem
+#### 3. SampleOsSystem
 
 ```go
 func SampleOsSystem() {
@@ -89,18 +65,8 @@ func SampleOsSystem() {
 	fmt.Println("Used Memory Percent: ", systemInfo.UsedMemoryPercent, "%")
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleOsProfile
+#### 4. SampleOsProfile
 
 ```go
 func SampleOsProfile() {

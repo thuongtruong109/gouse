@@ -1,17 +1,13 @@
 # Cron
 
-## Imports
-
 ```go
 import (
 	"fmt"
 	"github.com/thuongtruong109/gouse"
 )
 ```
-## Functions
 
-
-### SampleCronRun
+#### 1. SampleCronRun
 
 ```go
 func SampleCronRun() {

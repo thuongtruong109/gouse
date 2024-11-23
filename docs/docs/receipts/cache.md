@@ -1,7 +1,5 @@
 # Cache
 
-## Imports
-
 ```go
 import (
 	"fmt"
@@ -9,10 +7,8 @@ import (
 	"github.com/thuongtruong109/gouse"
 )
 ```
-## Functions
 
-
-### SampleCacheLocal
+#### 1. SampleCacheLocal
 
 ```go
 func SampleCacheLocal() {
@@ -47,19 +43,8 @@ func SampleCacheLocal() {
 	fmt.Println("All local cache values (after flush):", all)
 }
 ```
-## Imports
 
-```go
-import (
-	"fmt"
-	"time"
-	"github.com/thuongtruong109/gouse"
-)
-```
-## Functions
-
-
-### SampleCacheTmp
+#### 2. SampleCacheTmp
 
 ```go
 func SampleCacheTmp() {
