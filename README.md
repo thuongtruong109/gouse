@@ -8,10 +8,11 @@
     <a href="https://codecov.io/gh/thuongtruong109/gouse"><img src="https://codecov.io/gh/thuongtruong1009/gouse/branch/main/graph/badge.svg" alt="codecov"></a>
     <a href="https://dl.circleci.com/status-badge/redirect/gh/thuongtruong109/gouse/tree/main"><img src="https://dl.circleci.com/status-badge/img/gh/thuongtruong1009/gouse/tree/main.svg?style=svg" alt="circleci"></a>
     <a href="https://pkg.go.dev/github.com/thuongtruong109/gouse"><img src="https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square" alt="go.dev"></a>
+    <a href="https://gouse.vercel.app"><img src="https://img.shields.io/badge/homepage-pink" alt="homepage_website" /></a>
     <img src="./public/count.svg" alt="gouse_functions_count">
     <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/thuongtruong109/gouse">
+    <!-- <img alt="GitHub Release" src="https://img.shields.io/github/v/release/thuongtruong109/gouse"> -->
     <!-- <a href="https://godocs.io/github.com/thuongtruong109/gouse"><img alt="Godoc" src="https://godocs.io/github.com/thuongtruong1009/gouse?status.svg"></a> -->
-    <!-- <a href="LICENSE"><img src="https://img.shields.io/github/license/thuongtruong109/gouse" alt="license"></a> -->
     <!-- <a href="https://app.codacy.com/gh/thuongtruong109/gouse/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_Coverage"><img src="https://app.codacy.com/project/badge/Coverage/21f940894abd4e0384ef8b84adc294da" alt="codacy"></a> -->
     <!-- <a href="https://sourcegraph.com/github.com/thuongtruong109/gouse?badge"><img src="https://sourcegraph.com/github.com/thuongtruong109/gouse/-/badge.svg" alt="sourcegraph"></a> -->
 </div>
@@ -61,7 +62,7 @@
 
 👉 To address that need, Gouse was created as a powerful toolkit for Go developers, a collection of built-in functions and best practices that provide comprehensive, powerful, and reliable solutions. Trusted to build services, APIs, and web applications.
 
-## 🚀 Features
+## 🚀 Module packages
 
 > Below is a list of modules that Gouse supports. This project is still in development stage, so not all features are available.
 
@@ -108,6 +109,8 @@
     </tbody>
   </table>
 </div>
+
+* See more details at [Gouse homepage](https://gouse.vercel.app)
 
 <!-- - 
 - [ ] Auth

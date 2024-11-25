@@ -7,27 +7,17 @@ const pkg = require('../../package.json')
 export default defineConfig({
   lang: 'en-US',
   title: 'Gouse',
-  description: 'A modern essential Golang utility package delivering consistency, modularity, performance, & extras presets',
-
+  description: 'A modern Golang utility presets',
 
   sitemap: {
-    hostname: 'http://localhost:3000',
+    hostname: 'https://gouse.vercel.app',
   },
 
   head: [
     [
-      'script',
-      { id: 'register-sw' },
-      `;(() => {
-        if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('/sw.js')
-        }
-      })()`
-    ],
-    [
       'favicon',
-      { rel: 'icon', type: 'image/ico', href: '/img/favicon.ico' }
-    ]
+      { rel: 'icon', type: 'image/*', href: '/img/favicon.ico' }
+    ],
   ],
 
   themeConfig: {

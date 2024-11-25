@@ -11,10 +11,10 @@ hero:
   actions:
     - theme: brand
       text: What is Gouse?
-      link: /guide/what-is-gouse
+      link: /introduction/what-is-gouse
     - theme: alt
       text: Quickstart
-      link: /guide/getting-started
+      link: /introduction/getting-started
     - theme: alt
       text: GitHub
       link: https://github.com/thuongtruong109/gouse
@@ -38,6 +38,8 @@ features:
 ---
 
 <style>
+@import './style.css';
+
 :root {
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
@@ -57,4 +59,5 @@ features:
     --vp-home-hero-image-filter: blur(68px);
   }
 }
+
 </style>

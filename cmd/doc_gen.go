@@ -121,5 +121,5 @@ func createFilePath(subPath, fileName string, result []byte) {
 }
 
 func main() {
-	GenerateDocument("docs/docs", "receipts")
+	GenerateDocument("docs", "receipts")
 }
