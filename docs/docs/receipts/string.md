@@ -1,4 +1,6 @@
-# String
+
+# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.25rem 0.75rem 0.25rem 0;' type='info' text='🔖 String' />
+
 
 ```go
 import (
@@ -7,7 +9,9 @@ import (
 )
 ```
 
-#### 1. SampleStringCapitalize
+### <Badge style='font-size: 1.1rem;' type='tip' text='1. sample string capitalize' />
+
+
 
 ```go
 func SampleStringCapitalize() {
@@ -16,7 +20,9 @@ func SampleStringCapitalize() {
 }
 ```
 
-#### 2. SampleStringCamelCase
+### <Badge style='font-size: 1.1rem;' type='tip' text='2. sample string camel case' />
+
+
 
 ```go
 func SampleStringCamelCase() {
@@ -25,7 +31,9 @@ func SampleStringCamelCase() {
 }
 ```
 
-#### 3. SampleStringSnakeCase
+### <Badge style='font-size: 1.1rem;' type='tip' text='3. sample string snake case' />
+
+
 
 ```go
 func SampleStringSnakeCase() {
@@ -35,7 +43,9 @@ func SampleStringSnakeCase() {
 }
 ```
 
-#### 4. SampleStringKebabCase
+### <Badge style='font-size: 1.1rem;' type='tip' text='4. sample string kebab case' />
+
+
 
 ```go
 func SampleStringKebabCase() {
@@ -44,7 +54,9 @@ func SampleStringKebabCase() {
 }
 ```
 
-#### 5. SampleStringIsLetter
+### <Badge style='font-size: 1.1rem;' type='tip' text='5. sample string is letter' />
+
+
 
 ```go
 func SampleStringIsLetter() {
@@ -53,7 +65,9 @@ func SampleStringIsLetter() {
 }
 ```
 
-#### 6. SampleStringIsDigit
+### <Badge style='font-size: 1.1rem;' type='tip' text='6. sample string is digit' />
+
+
 
 ```go
 func SampleStringIsDigit() {
@@ -62,7 +76,9 @@ func SampleStringIsDigit() {
 }
 ```
 
-#### 7. SampleStringIncludes
+### <Badge style='font-size: 1.1rem;' type='tip' text='7. sample string includes' />
+
+
 
 ```go
 func SampleStringIncludes() {
@@ -71,7 +87,9 @@ func SampleStringIncludes() {
 }
 ```
 
-#### 8. SampleStringIsLower
+### <Badge style='font-size: 1.1rem;' type='tip' text='8. sample string is lower' />
+
+
 
 ```go
 func SampleStringIsLower() {
@@ -80,7 +98,9 @@ func SampleStringIsLower() {
 }
 ```
 
-#### 9. SampleStringIsUpper
+### <Badge style='font-size: 1.1rem;' type='tip' text='9. sample string is upper' />
+
+
 
 ```go
 func SampleStringIsUpper() {
@@ -89,7 +109,9 @@ func SampleStringIsUpper() {
 }
 ```
 
-#### 10. SampleStringSplit
+### <Badge style='font-size: 1.1rem;' type='tip' text='10. sample string split' />
+
+
 
 ```go
 func SampleStringSplit() {
@@ -98,7 +120,9 @@ func SampleStringSplit() {
 }
 ```
 
-#### 11. SampleStringWords
+### <Badge style='font-size: 1.1rem;' type='tip' text='11. sample string words' />
+
+
 
 ```go
 func SampleStringWords() {
@@ -108,7 +132,9 @@ func SampleStringWords() {
 }
 ```
 
-#### 12. SampleStringReverse
+### <Badge style='font-size: 1.1rem;' type='tip' text='12. sample string reverse' />
+
+
 
 ```go
 func SampleStringReverse() {
@@ -117,7 +143,9 @@ func SampleStringReverse() {
 }
 ```
 
-#### 13. SampleStringLower
+### <Badge style='font-size: 1.1rem;' type='tip' text='13. sample string lower' />
+
+
 
 ```go
 func SampleStringLower() {
@@ -128,7 +156,9 @@ func SampleStringLower() {
 }
 ```
 
-#### 14. SampleStringUpper
+### <Badge style='font-size: 1.1rem;' type='tip' text='14. sample string upper' />
+
+
 
 ```go
 func SampleStringUpper() {
@@ -139,7 +169,9 @@ func SampleStringUpper() {
 }
 ```
 
-#### 15. SampleStringRepeat
+### <Badge style='font-size: 1.1rem;' type='tip' text='15. sample string repeat' />
+
+
 
 ```go
 func SampleStringRepeat() {
@@ -148,7 +180,9 @@ func SampleStringRepeat() {
 }
 ```
 
-#### 16. SampleStringTruncate
+### <Badge style='font-size: 1.1rem;' type='tip' text='16. sample string truncate' />
+
+
 
 ```go
 func SampleStringTruncate() {
@@ -158,7 +192,9 @@ func SampleStringTruncate() {
 }
 ```
 
-#### 17. SampleStringReplace
+### <Badge style='font-size: 1.1rem;' type='tip' text='17. sample string replace' />
+
+
 
 ```go
 func SampleStringReplace() {
@@ -167,7 +203,9 @@ func SampleStringReplace() {
 }
 ```
 
-#### 18. SampleStringTrim
+### <Badge style='font-size: 1.1rem;' type='tip' text='18. sample string trim' />
+
+
 
 ```go
 func SampleStringTrim() {
@@ -178,7 +216,9 @@ func SampleStringTrim() {
 }
 ```
 
-#### 19. SampleStringTrimBlank
+### <Badge style='font-size: 1.1rem;' type='tip' text='19. sample string trim blank' />
+
+
 
 ```go
 func SampleStringTrimBlank() {
@@ -188,7 +228,9 @@ func SampleStringTrimBlank() {
 }
 ```
 
-#### 20. SampleStringTrimPrefix
+### <Badge style='font-size: 1.1rem;' type='tip' text='20. sample string trim prefix' />
+
+
 
 ```go
 func SampleStringTrimPrefix() {
@@ -198,7 +240,9 @@ func SampleStringTrimPrefix() {
 }
 ```
 
-#### 21. SampleStringTrimSuffix
+### <Badge style='font-size: 1.1rem;' type='tip' text='21. sample string trim suffix' />
+
+
 
 ```go
 func SampleStringTrimSuffix() {
@@ -207,7 +251,9 @@ func SampleStringTrimSuffix() {
 }
 ```
 
-#### 22. SampleStringJoin
+### <Badge style='font-size: 1.1rem;' type='tip' text='22. sample string join' />
+
+
 
 ```go
 func SampleStringJoin() {
@@ -216,7 +262,9 @@ func SampleStringJoin() {
 }
 ```
 
-#### 23. SampleStringConcat
+### <Badge style='font-size: 1.1rem;' type='tip' text='23. sample string concat' />
+
+
 
 ```go
 func SampleStringConcat() {
@@ -224,7 +272,9 @@ func SampleStringConcat() {
 }
 ```
 
-#### 24. SampleStringSubStr
+### <Badge style='font-size: 1.1rem;' type='tip' text='24. sample string sub str' />
+
+
 
 ```go
 func SampleStringSubStr() {
@@ -236,7 +286,9 @@ func SampleStringSubStr() {
 }
 ```
 
-#### 25. SampleStringSlice
+### <Badge style='font-size: 1.1rem;' type='tip' text='25. sample string slice' />
+
+
 
 ```go
 func SampleStringSlice() {
@@ -249,7 +301,9 @@ func SampleStringSlice() {
 }
 ```
 
-#### 26. SampleStringSplice
+### <Badge style='font-size: 1.1rem;' type='tip' text='26. sample string splice' />
+
+
 
 ```go
 func SampleStringSplice() {
@@ -260,7 +314,9 @@ func SampleStringSplice() {
 }
 ```
 
-#### 27. SampleStringStartsWith
+### <Badge style='font-size: 1.1rem;' type='tip' text='27. sample string starts with' />
+
+
 
 ```go
 func SampleStringStartsWith() {
@@ -269,7 +325,9 @@ func SampleStringStartsWith() {
 }
 ```
 
-#### 28. SampleStringEndsWith
+### <Badge style='font-size: 1.1rem;' type='tip' text='28. sample string ends with' />
+
+
 
 ```go
 func SampleStringEndsWith() {
@@ -278,7 +336,9 @@ func SampleStringEndsWith() {
 }
 ```
 
-#### 29. SampleStringEscape
+### <Badge style='font-size: 1.1rem;' type='tip' text='29. sample string escape' />
+
+
 
 ```go
 func SampleStringEscape() {
@@ -287,7 +347,9 @@ func SampleStringEscape() {
 }
 ```
 
-#### 30. SampleStringUnescape
+### <Badge style='font-size: 1.1rem;' type='tip' text='30. sample string unescape' />
+
+
 
 ```go
 func SampleStringUnescape() {
@@ -296,7 +358,9 @@ func SampleStringUnescape() {
 }
 ```
 
-#### 31. SampleStringPad
+### <Badge style='font-size: 1.1rem;' type='tip' text='31. sample string pad' />
+
+
 
 ```go
 func SampleStringPad() {
@@ -306,7 +370,9 @@ func SampleStringPad() {
 }
 ```
 
-#### 32. SampleStringCount
+### <Badge style='font-size: 1.1rem;' type='tip' text='32. sample string count' />
+
+
 
 ```go
 func SampleStringCount() {
@@ -316,7 +382,9 @@ func SampleStringCount() {
 }
 ```
 
-#### 33. SampleStringLines
+### <Badge style='font-size: 1.1rem;' type='tip' text='33. sample string lines' />
+
+
 
 ```go
 func SampleStringLines() {
@@ -325,7 +393,9 @@ func SampleStringLines() {
 }
 ```
 
-#### 34. SampleStringIndex
+### <Badge style='font-size: 1.1rem;' type='tip' text='34. sample string index' />
+
+
 
 ```go
 func SampleStringIndex() {
@@ -358,7 +428,9 @@ func SampleStringIndex() {
 }
 ```
 
-#### 35. SampleStringRandom
+### <Badge style='font-size: 1.1rem;' type='tip' text='35. sample string random' />
+
+
 
 ```go
 func SampleStringRandom() {
@@ -368,7 +440,9 @@ func SampleStringRandom() {
 }
 ```
 
-#### 36. SampleStringAt
+### <Badge style='font-size: 1.1rem;' type='tip' text='36. sample string at' />
+
+
 
 ```go
 func SampleStringAt() {
@@ -378,7 +452,9 @@ func SampleStringAt() {
 }
 ```
 
-#### 37. SampleStringCodePointAt
+### <Badge style='font-size: 1.1rem;' type='tip' text='37. sample string code point at' />
+
+
 
 ```go
 func SampleStringCodePointAt() {
@@ -388,7 +464,9 @@ func SampleStringCodePointAt() {
 }
 ```
 
-#### 38. SampleStringCodePoint
+### <Badge style='font-size: 1.1rem;' type='tip' text='38. sample string code point' />
+
+
 
 ```go
 func SampleStringCodePoint() {
@@ -401,7 +479,9 @@ func SampleStringCodePoint() {
 }
 ```
 
-#### 39. SampleStringFromCodePointAt
+### <Badge style='font-size: 1.1rem;' type='tip' text='39. sample string from code point at' />
+
+
 
 ```go
 func SampleStringFromCodePointAt() {
@@ -410,7 +490,9 @@ func SampleStringFromCodePointAt() {
 }
 ```
 
-#### 40. SampleStringFromCodePoint
+### <Badge style='font-size: 1.1rem;' type='tip' text='40. sample string from code point' />
+
+
 
 ```go
 func SampleStringFromCodePoint() {

@@ -1,4 +1,6 @@
-# Os
+
+# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.25rem 0.75rem 0.25rem 0;' type='info' text='🔖 Os' />
+
 
 ```go
 import (
@@ -7,7 +9,9 @@ import (
 )
 ```
 
-#### 1. SampleOsCpu
+### <Badge style='font-size: 1.1rem;' type='tip' text='1. sample os cpu' />
+
+
 
 ```go
 func SampleOsCpu() {
@@ -25,7 +29,9 @@ func SampleOsCpu() {
 }
 ```
 
-#### 2. SampleOsDisk
+### <Badge style='font-size: 1.1rem;' type='tip' text='2. sample os disk' />
+
+
 
 ```go
 func SampleOsDisk() {
@@ -43,7 +49,9 @@ func SampleOsDisk() {
 }
 ```
 
-#### 3. SampleOsSystem
+### <Badge style='font-size: 1.1rem;' type='tip' text='3. sample os system' />
+
+
 
 ```go
 func SampleOsSystem() {
@@ -66,7 +74,9 @@ func SampleOsSystem() {
 }
 ```
 
-#### 4. SampleOsProfile
+### <Badge style='font-size: 1.1rem;' type='tip' text='4. sample os profile' />
+
+
 
 ```go
 func SampleOsProfile() {

@@ -1,4 +1,6 @@
-# Helper
+
+# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.25rem 0.75rem 0.25rem 0;' type='info' text='🔖 Helper' />
+
 
 ```go
 import (
@@ -6,7 +8,9 @@ import (
 )
 ```
 
-#### 1. SampleHelperRandomID
+### <Badge style='font-size: 1.1rem;' type='tip' text='1. sample helper random i d' />
+
+
 
 ```go
 func SampleHelperRandomID() {
@@ -14,7 +18,9 @@ func SampleHelperRandomID() {
 }
 ```
 
-#### 2. SampleHelperUUID
+### <Badge style='font-size: 1.1rem;' type='tip' text='2. sample helper u u i d' />
+
+
 
 ```go
 func SampleHelperUUID() {
@@ -22,7 +28,9 @@ func SampleHelperUUID() {
 }
 ```
 
-#### 3. SampleHelperAutoMdDoc
+### <Badge style='font-size: 1.1rem;' type='tip' text='3. sample helper auto md doc' />
+
+
 
 ```go
 func SampleHelperAutoMdDoc() {

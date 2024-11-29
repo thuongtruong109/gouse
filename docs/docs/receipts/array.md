@@ -1,4 +1,6 @@
-# Array
+
+# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.25rem 0.75rem 0.25rem 0;' type='info' text='🔖 Array' />
+
 
 ```go
 import (
@@ -7,7 +9,9 @@ import (
 )
 ```
 
-#### 1. SampleArrayChunk
+### <Badge style='font-size: 1.1rem;' type='tip' text='1. sample array chunk' />
+
+
 
 ```go
 func SampleArrayChunk() {
@@ -22,7 +26,9 @@ func SampleArrayChunk() {
 }
 ```
 
-#### 2. SampleArrayCompact
+### <Badge style='font-size: 1.1rem;' type='tip' text='2. sample array compact' />
+
+
 
 ```go
 func SampleArrayCompact() {
@@ -31,7 +37,9 @@ func SampleArrayCompact() {
 }
 ```
 
-#### 3. SampleArrayDiff
+### <Badge style='font-size: 1.1rem;' type='tip' text='3. sample array diff' />
+
+
 
 ```go
 func SampleArrayDiff() {
@@ -46,7 +54,9 @@ func SampleArrayDiff() {
 }
 ```
 
-#### 4. SampleArrayDrop
+### <Badge style='font-size: 1.1rem;' type='tip' text='4. sample array drop' />
+
+
 
 ```go
 func SampleArrayDrop() {
@@ -62,7 +72,9 @@ func SampleArrayDrop() {
 }
 ```
 
-#### 5. SampleArrayEqual
+### <Badge style='font-size: 1.1rem;' type='tip' text='5. sample array equal' />
+
+
 
 ```go
 func SampleArrayEqual() {
@@ -78,7 +90,9 @@ func SampleArrayEqual() {
 }
 ```
 
-#### 6. SampleArrayFilterBy
+### <Badge style='font-size: 1.1rem;' type='tip' text='6. sample array filter by' />
+
+
 
 ```go
 func SampleArrayFilterBy() {
@@ -113,7 +127,9 @@ func SampleArrayFilterBy() {
 }
 ```
 
-#### 7. SampleArrayFindBy
+### <Badge style='font-size: 1.1rem;' type='tip' text='7. sample array find by' />
+
+
 
 ```go
 func SampleArrayFindBy() {
@@ -148,7 +164,9 @@ func SampleArrayFindBy() {
 }
 ```
 
-#### 8. SampleArrayForBy
+### <Badge style='font-size: 1.1rem;' type='tip' text='8. sample array for by' />
+
+
 
 ```go
 func SampleArrayForBy() {
@@ -190,7 +208,9 @@ func SampleArrayForBy() {
 }
 ```
 
-#### 9. SampleArrayIncludes
+### <Badge style='font-size: 1.1rem;' type='tip' text='9. sample array includes' />
+
+
 
 ```go
 func SampleArrayIncludes() {
@@ -205,7 +225,9 @@ func SampleArrayIncludes() {
 }
 ```
 
-#### 10. SampleArrayIndex
+### <Badge style='font-size: 1.1rem;' type='tip' text='10. sample array index' />
+
+
 
 ```go
 func SampleArrayIndex() {
@@ -220,7 +242,9 @@ func SampleArrayIndex() {
 }
 ```
 
-#### 11. SampleArrayIndexBy
+### <Badge style='font-size: 1.1rem;' type='tip' text='11. sample array index by' />
+
+
 
 ```go
 func SampleArrayIndexBy() {
@@ -255,7 +279,9 @@ func SampleArrayIndexBy() {
 }
 ```
 
-#### 12. SampleArrayIntersect
+### <Badge style='font-size: 1.1rem;' type='tip' text='12. sample array intersect' />
+
+
 
 ```go
 func SampleArrayIntersect() {
@@ -270,7 +296,9 @@ func SampleArrayIntersect() {
 }
 ```
 
-#### 13. SampleArrayKeyBy
+### <Badge style='font-size: 1.1rem;' type='tip' text='13. sample array key by' />
+
+
 
 ```go
 func SampleArrayKeyBy() {
@@ -305,7 +333,9 @@ func SampleArrayKeyBy() {
 }
 ```
 
-#### 14. SampleArrayMapBy
+### <Badge style='font-size: 1.1rem;' type='tip' text='14. sample array map by' />
+
+
 
 ```go
 func SampleArrayMapBy() {
@@ -340,7 +370,9 @@ func SampleArrayMapBy() {
 }
 ```
 
-#### 15. SampleArrayMin
+### <Badge style='font-size: 1.1rem;' type='tip' text='15. sample array min' />
+
+
 
 ```go
 func SampleArrayMin() {
@@ -353,7 +385,9 @@ func SampleArrayMin() {
 }
 ```
 
-#### 16. SampleArrayMax
+### <Badge style='font-size: 1.1rem;' type='tip' text='16. sample array max' />
+
+
 
 ```go
 func SampleArrayMax() {
@@ -366,7 +400,9 @@ func SampleArrayMax() {
 }
 ```
 
-#### 17. SampleArrayMost
+### <Badge style='font-size: 1.1rem;' type='tip' text='17. sample array most' />
+
+
 
 ```go
 func SampleArrayMost() {
@@ -381,7 +417,9 @@ func SampleArrayMost() {
 }
 ```
 
-#### 18. SampleArrayMerge
+### <Badge style='font-size: 1.1rem;' type='tip' text='18. sample array merge' />
+
+
 
 ```go
 func SampleArrayMerge() {
@@ -396,7 +434,9 @@ func SampleArrayMerge() {
 }
 ```
 
-#### 19. SampleArrayRejectBy
+### <Badge style='font-size: 1.1rem;' type='tip' text='19. sample array reject by' />
+
+
 
 ```go
 func SampleArrayRejectBy() {
@@ -427,7 +467,9 @@ func SampleArrayRejectBy() {
 }
 ```
 
-#### 20. SampleArraySum
+### <Badge style='font-size: 1.1rem;' type='tip' text='20. sample array sum' />
+
+
 
 ```go
 func SampleArraySum() {

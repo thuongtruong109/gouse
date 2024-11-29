@@ -1,4 +1,6 @@
-# Math
+
+# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.25rem 0.75rem 0.25rem 0;' type='info' text='🔖 Math' />
+
 
 ```go
 import (
@@ -7,7 +9,9 @@ import (
 )
 ```
 
-#### 1. SampleMathIsEven
+### <Badge style='font-size: 1.1rem;' type='tip' text='1. sample math is even' />
+
+
 
 ```go
 func SampleMathIsEven() {
@@ -16,7 +20,9 @@ func SampleMathIsEven() {
 }
 ```
 
-#### 2. SampleMathIsOdd
+### <Badge style='font-size: 1.1rem;' type='tip' text='2. sample math is odd' />
+
+
 
 ```go
 func SampleMathIsOdd() {
@@ -25,7 +31,9 @@ func SampleMathIsOdd() {
 }
 ```
 
-#### 3. SampleMathIsPerfectSquare
+### <Badge style='font-size: 1.1rem;' type='tip' text='3. sample math is perfect square' />
+
+
 
 ```go
 func SampleMathIsPerfectSquare() {
@@ -34,7 +42,9 @@ func SampleMathIsPerfectSquare() {
 }
 ```
 
-#### 4. SampleMathIsPrime
+### <Badge style='font-size: 1.1rem;' type='tip' text='4. sample math is prime' />
+
+
 
 ```go
 func SampleMathIsPrime() {
@@ -43,7 +53,9 @@ func SampleMathIsPrime() {
 }
 ```
 
-#### 5. SampleMathLog
+### <Badge style='font-size: 1.1rem;' type='tip' text='5. sample math log' />
+
+
 
 ```go
 func SampleMathLog() {
@@ -58,7 +70,9 @@ func SampleMathLog() {
 }
 ```
 
-#### 6. SampleMathPytago
+### <Badge style='font-size: 1.1rem;' type='tip' text='6. sample math pytago' />
+
+
 
 ```go
 func SampleMathPytago() {
@@ -67,7 +81,9 @@ func SampleMathPytago() {
 }
 ```
 
-#### 7. SampleMathTransition
+### <Badge style='font-size: 1.1rem;' type='tip' text='7. sample math transition' />
+
+
 
 ```go
 func SampleMathTransition() {
@@ -78,7 +94,9 @@ func SampleMathTransition() {
 }
 ```
 
-#### 8. SampleMathTrigonometry
+### <Badge style='font-size: 1.1rem;' type='tip' text='8. sample math trigonometry' />
+
+
 
 ```go
 func SampleMathTrigonometry() {
@@ -91,7 +109,9 @@ func SampleMathTrigonometry() {
 }
 ```
 
-#### 9. SampleMathCircle
+### <Badge style='font-size: 1.1rem;' type='tip' text='9. sample math circle' />
+
+
 
 ```go
 func SampleMathCircle() {
@@ -102,7 +122,9 @@ func SampleMathCircle() {
 }
 ```
 
-#### 10. SampleMathCone
+### <Badge style='font-size: 1.1rem;' type='tip' text='10. sample math cone' />
+
+
 
 ```go
 func SampleMathCone() {
@@ -113,7 +135,9 @@ func SampleMathCone() {
 }
 ```
 
-#### 11. SampleMathCube
+### <Badge style='font-size: 1.1rem;' type='tip' text='11. sample math cube' />
+
+
 
 ```go
 func SampleMathCube() {
@@ -126,7 +150,9 @@ func SampleMathCube() {
 }
 ```
 
-#### 12. SampleMathCylinder
+### <Badge style='font-size: 1.1rem;' type='tip' text='12. sample math cylinder' />
+
+
 
 ```go
 func SampleMathCylinder() {
@@ -137,7 +163,9 @@ func SampleMathCylinder() {
 }
 ```
 
-#### 13. SampleMathEllipse
+### <Badge style='font-size: 1.1rem;' type='tip' text='13. sample math ellipse' />
+
+
 
 ```go
 func SampleMathEllipse() {
@@ -146,7 +174,9 @@ func SampleMathEllipse() {
 }
 ```
 
-#### 14. SampleMathParallelogram
+### <Badge style='font-size: 1.1rem;' type='tip' text='14. sample math parallelogram' />
+
+
 
 ```go
 func SampleMathParallelogram() {
@@ -155,7 +185,9 @@ func SampleMathParallelogram() {
 }
 ```
 
-#### 15. SampleMathPolygon
+### <Badge style='font-size: 1.1rem;' type='tip' text='15. sample math polygon' />
+
+
 
 ```go
 func SampleMathPolygon() {
@@ -163,7 +195,9 @@ func SampleMathPolygon() {
 }
 ```
 
-#### 16. SampleMathRect
+### <Badge style='font-size: 1.1rem;' type='tip' text='16. sample math rect' />
+
+
 
 ```go
 func SampleMathRect() {
@@ -177,7 +211,9 @@ func SampleMathRect() {
 }
 ```
 
-#### 17. SampleMathRhombus
+### <Badge style='font-size: 1.1rem;' type='tip' text='17. sample math rhombus' />
+
+
 
 ```go
 func SampleMathRhombus() {
@@ -186,7 +222,9 @@ func SampleMathRhombus() {
 }
 ```
 
-#### 18. SampleMathSphere
+### <Badge style='font-size: 1.1rem;' type='tip' text='18. sample math sphere' />
+
+
 
 ```go
 func SampleMathSphere() {
@@ -197,7 +235,9 @@ func SampleMathSphere() {
 }
 ```
 
-#### 19. SampleMathSquare
+### <Badge style='font-size: 1.1rem;' type='tip' text='19. sample math square' />
+
+
 
 ```go
 func SampleMathSquare() {
@@ -208,7 +248,9 @@ func SampleMathSquare() {
 }
 ```
 
-#### 20. SampleMathTrapezoid
+### <Badge style='font-size: 1.1rem;' type='tip' text='20. sample math trapezoid' />
+
+
 
 ```go
 func SampleMathTrapezoid() {
@@ -217,7 +259,9 @@ func SampleMathTrapezoid() {
 }
 ```
 
-#### 21. SampleMathTriangle
+### <Badge style='font-size: 1.1rem;' type='tip' text='21. sample math triangle' />
+
+
 
 ```go
 func SampleMathTriangle() {
@@ -228,7 +272,9 @@ func SampleMathTriangle() {
 }
 ```
 
-#### 22. SampleMathAbs
+### <Badge style='font-size: 1.1rem;' type='tip' text='22. sample math abs' />
+
+
 
 ```go
 func SampleMathAbs() {
@@ -237,7 +283,9 @@ func SampleMathAbs() {
 }
 ```
 
-#### 23. SampleMathAdd
+### <Badge style='font-size: 1.1rem;' type='tip' text='23. sample math add' />
+
+
 
 ```go
 func SampleMathAdd() {
@@ -246,7 +294,9 @@ func SampleMathAdd() {
 }
 ```
 
-#### 24. SampleMathCeil
+### <Badge style='font-size: 1.1rem;' type='tip' text='24. sample math ceil' />
+
+
 
 ```go
 func SampleMathCeil() {
@@ -255,7 +305,9 @@ func SampleMathCeil() {
 }
 ```
 
-#### 25. SampleMathOperators
+### <Badge style='font-size: 1.1rem;' type='tip' text='25. sample math operators' />
+
+
 
 ```go
 func SampleMathOperators() {
@@ -264,7 +316,9 @@ func SampleMathOperators() {
 }
 ```
 
-#### 26. SampleMathFactorial
+### <Badge style='font-size: 1.1rem;' type='tip' text='26. sample math factorial' />
+
+
 
 ```go
 func SampleMathFactorial() {
@@ -273,7 +327,9 @@ func SampleMathFactorial() {
 }
 ```
 
-#### 27. SampleMathFloor
+### <Badge style='font-size: 1.1rem;' type='tip' text='27. sample math floor' />
+
+
 
 ```go
 func SampleMathFloor() {
@@ -282,7 +338,9 @@ func SampleMathFloor() {
 }
 ```
 
-#### 28. SampleMathMin
+### <Badge style='font-size: 1.1rem;' type='tip' text='28. sample math min' />
+
+
 
 ```go
 func SampleMathMin() {
@@ -291,7 +349,9 @@ func SampleMathMin() {
 }
 ```
 
-#### 29. SampleMathMax
+### <Badge style='font-size: 1.1rem;' type='tip' text='29. sample math max' />
+
+
 
 ```go
 func SampleMathMax() {
@@ -300,7 +360,9 @@ func SampleMathMax() {
 }
 ```
 
-#### 30. SampleMathMean
+### <Badge style='font-size: 1.1rem;' type='tip' text='30. sample math mean' />
+
+
 
 ```go
 func SampleMathMean() {
@@ -309,7 +371,9 @@ func SampleMathMean() {
 }
 ```
 
-#### 31. SampleMathMulti
+### <Badge style='font-size: 1.1rem;' type='tip' text='31. sample math multi' />
+
+
 
 ```go
 func SampleMathMulti() {
@@ -318,7 +382,9 @@ func SampleMathMulti() {
 }
 ```
 
-#### 32. SampleMathPower
+### <Badge style='font-size: 1.1rem;' type='tip' text='32. sample math power' />
+
+
 
 ```go
 func SampleMathPower() {
@@ -328,7 +394,9 @@ func SampleMathPower() {
 }
 ```
 
-#### 33. SampleMathRemainder
+### <Badge style='font-size: 1.1rem;' type='tip' text='33. sample math remainder' />
+
+
 
 ```go
 func SampleMathRemainder() {
@@ -337,7 +405,9 @@ func SampleMathRemainder() {
 }
 ```
 
-#### 34. SampleMathRoot
+### <Badge style='font-size: 1.1rem;' type='tip' text='34. sample math root' />
+
+
 
 ```go
 func SampleMathRoot() {
@@ -352,7 +422,9 @@ func SampleMathRoot() {
 }
 ```
 
-#### 35. SampleMathRound
+### <Badge style='font-size: 1.1rem;' type='tip' text='35. sample math round' />
+
+
 
 ```go
 func SampleMathRound() {
@@ -361,7 +433,9 @@ func SampleMathRound() {
 }
 ```
 
-#### 36. SampleMathSub
+### <Badge style='font-size: 1.1rem;' type='tip' text='36. sample math sub' />
+
+
 
 ```go
 func SampleMathSub() {
@@ -370,7 +444,9 @@ func SampleMathSub() {
 }
 ```
 
-#### 37. SampleMathSum
+### <Badge style='font-size: 1.1rem;' type='tip' text='37. sample math sum' />
+
+
 
 ```go
 func SampleMathSum() {

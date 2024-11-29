@@ -1,4 +1,6 @@
-# Number
+
+# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.25rem 0.75rem 0.25rem 0;' type='info' text='🔖 Number' />
+
 
 ```go
 import (
@@ -6,7 +8,9 @@ import (
 )
 ```
 
-#### 1. SampleNumClamp
+### <Badge style='font-size: 1.1rem;' type='tip' text='1. sample num clamp' />
+
+
 
 ```go
 func SampleNumClamp() {
@@ -14,7 +18,9 @@ func SampleNumClamp() {
 }
 ```
 
-#### 2. SampleNumRandom
+### <Badge style='font-size: 1.1rem;' type='tip' text='2. sample num random' />
+
+
 
 ```go
 func SampleNumRandom() {
@@ -23,7 +29,9 @@ func SampleNumRandom() {
 }
 ```
 
-#### 3. SampleNumInRange
+### <Badge style='font-size: 1.1rem;' type='tip' text='3. sample num in range' />
+
+
 
 ```go
 func SampleNumInRange() {

@@ -1,4 +1,6 @@
-# Crypto
+
+# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.25rem 0.75rem 0.25rem 0;' type='info' text='🔖 Crypto' />
+
 
 ```go
 import (
@@ -7,7 +9,9 @@ import (
 )
 ```
 
-#### 1. SampleCryptoEncode
+### <Badge style='font-size: 1.1rem;' type='tip' text='1. sample crypto encode' />
+
+
 
 ```go
 func SampleCryptoEncode() {
@@ -23,7 +27,9 @@ func SampleCryptoEncode() {
 }
 ```
 
-#### 2. SampleCryptoDecode
+### <Badge style='font-size: 1.1rem;' type='tip' text='2. sample crypto decode' />
+
+
 
 ```go
 func SampleCryptoDecode() {
@@ -38,7 +44,9 @@ func SampleCryptoDecode() {
 }
 ```
 
-#### 3. SampleCryptoEncryptFile
+### <Badge style='font-size: 1.1rem;' type='tip' text='3. sample crypto encrypt file' />
+
+
 
 ```go
 func SampleCryptoEncryptFile() {
@@ -47,7 +55,9 @@ func SampleCryptoEncryptFile() {
 }
 ```
 
-#### 4. SampleCryptoDecryptFile
+### <Badge style='font-size: 1.1rem;' type='tip' text='4. sample crypto decrypt file' />
+
+
 
 ```go
 func SampleCryptoDecryptFile() {
@@ -56,7 +66,9 @@ func SampleCryptoDecryptFile() {
 }
 ```
 
-#### 5. SampleCryptoEncryptPassword
+### <Badge style='font-size: 1.1rem;' type='tip' text='5. sample crypto encrypt password' />
+
+
 
 ```go
 func SampleCryptoEncryptPassword() {
@@ -72,7 +84,9 @@ func SampleCryptoEncryptPassword() {
 }
 ```
 
-#### 6. SampleCryptoDecryptPassword
+### <Badge style='font-size: 1.1rem;' type='tip' text='6. sample crypto decrypt password' />
+
+
 
 ```go
 func SampleCryptoDecryptPassword() {

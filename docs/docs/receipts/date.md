@@ -1,4 +1,6 @@
-# Date
+
+# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.25rem 0.75rem 0.25rem 0;' type='info' text='🔖 Date' />
+
 
 ```go
 import (
@@ -7,7 +9,9 @@ import (
 )
 ```
 
-#### 1. SampleDateTime
+### <Badge style='font-size: 1.1rem;' type='tip' text='1. sample date time' />
+
+
 
 ```go
 func SampleDateTime() {
@@ -28,7 +32,9 @@ func SampleDateTime() {
 }
 ```
 
-#### 2. SampleDateISO
+### <Badge style='font-size: 1.1rem;' type='tip' text='2. sample date i s o' />
+
+
 
 ```go
 func SampleDateISO() {
@@ -36,7 +42,9 @@ func SampleDateISO() {
 }
 ```
 
-#### 3. SampleDateShort
+### <Badge style='font-size: 1.1rem;' type='tip' text='3. sample date short' />
+
+
 
 ```go
 func SampleDateShort() {
@@ -50,7 +58,9 @@ func SampleDateShort() {
 }
 ```
 
-#### 4. SampleDateLong
+### <Badge style='font-size: 1.1rem;' type='tip' text='4. sample date long' />
+
+
 
 ```go
 func SampleDateLong() {
@@ -58,7 +68,9 @@ func SampleDateLong() {
 }
 ```
 
-#### 5. SampleDateUTC
+### <Badge style='font-size: 1.1rem;' type='tip' text='5. sample date u t c' />
+
+
 
 ```go
 func SampleDateUTC() {
@@ -66,7 +78,9 @@ func SampleDateUTC() {
 }
 ```
 
-#### 6. SampleDateToSecond
+### <Badge style='font-size: 1.1rem;' type='tip' text='6. sample date to second' />
+
+
 
 ```go
 func SampleDateToSecond() {
@@ -74,7 +88,9 @@ func SampleDateToSecond() {
 }
 ```
 
-#### 7. SampleDateToMinute
+### <Badge style='font-size: 1.1rem;' type='tip' text='7. sample date to minute' />
+
+
 
 ```go
 func SampleDateToMinute() {
@@ -82,7 +98,9 @@ func SampleDateToMinute() {
 }
 ```
 
-#### 8. SampleDateToHour
+### <Badge style='font-size: 1.1rem;' type='tip' text='8. sample date to hour' />
+
+
 
 ```go
 func SampleDateToHour() {
@@ -90,7 +108,9 @@ func SampleDateToHour() {
 }
 ```
 
-#### 9. SampleDateSleepSecond
+### <Badge style='font-size: 1.1rem;' type='tip' text='9. sample date sleep second' />
+
+
 
 ```go
 func SampleDateSleepSecond() {
@@ -98,7 +118,9 @@ func SampleDateSleepSecond() {
 }
 ```
 
-#### 10. SampleDateSleepMinute
+### <Badge style='font-size: 1.1rem;' type='tip' text='10. sample date sleep minute' />
+
+
 
 ```go
 func SampleDateSleepMinute() {
@@ -106,7 +128,9 @@ func SampleDateSleepMinute() {
 }
 ```
 
-#### 11. SampleDateSleepHour
+### <Badge style='font-size: 1.1rem;' type='tip' text='11. sample date sleep hour' />
+
+
 
 ```go
 func SampleDateSleepHour() {
@@ -114,7 +138,9 @@ func SampleDateSleepHour() {
 }
 ```
 
-#### 12. SampleDateClock
+### <Badge style='font-size: 1.1rem;' type='tip' text='12. sample date clock' />
+
+
 
 ```go
 func SampleDateClock() {

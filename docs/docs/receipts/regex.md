@@ -1,4 +1,6 @@
-# Regex
+
+# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.25rem 0.75rem 0.25rem 0;' type='info' text='🔖 Regex' />
+
 
 ```go
 import (
@@ -7,7 +9,9 @@ import (
 )
 ```
 
-#### 1. SampleRegexIsMatch
+### <Badge style='font-size: 1.1rem;' type='tip' text='1. sample regex is match' />
+
+
 
 ```go
 func SampleRegexIsMatch() {
@@ -15,7 +19,9 @@ func SampleRegexIsMatch() {
 }
 ```
 
-#### 2. SampleRegexMatchIndex
+### <Badge style='font-size: 1.1rem;' type='tip' text='2. sample regex match index' />
+
+
 
 ```go
 func SampleRegexMatchIndex() {
@@ -29,7 +35,9 @@ func SampleRegexMatchIndex() {
 }
 ```
 
-#### 3. SampleRegexMatch
+### <Badge style='font-size: 1.1rem;' type='tip' text='3. sample regex match' />
+
+
 
 ```go
 func SampleRegexMatch() {

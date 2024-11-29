@@ -1,4 +1,6 @@
-# Console
+
+# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.25rem 0.75rem 0.25rem 0;' type='info' text='🔖 Console' />
+
 
 ```go
 import (
@@ -21,7 +23,9 @@ import (
 )
 ```
 
-#### 1. SampleConsoleCmd
+### <Badge style='font-size: 1.1rem;' type='tip' text='1. sample console cmd' />
+
+
 
 ```go
 func SampleConsoleCmd() {
@@ -32,7 +36,9 @@ func SampleConsoleCmd() {
 }
 ```
 
-#### 2. SampleConsoleClear
+### <Badge style='font-size: 1.1rem;' type='tip' text='2. sample console clear' />
+
+
 
 ```go
 func SampleConsoleClear() {
@@ -42,7 +48,9 @@ func SampleConsoleClear() {
 }
 ```
 
-#### 3. SampleConsoleWithColor
+### <Badge style='font-size: 1.1rem;' type='tip' text='3. sample console with color' />
+
+
 
 ```go
 func SampleConsoleWithColor() {
@@ -57,7 +65,9 @@ func SampleConsoleWithColor() {
 }
 ```
 
-#### 4. SampleConsoleBanner
+### <Badge style='font-size: 1.1rem;' type='tip' text='4. sample console banner' />
+
+
 
 ```go
 func SampleConsoleBanner() {
@@ -67,7 +77,9 @@ func SampleConsoleBanner() {
 }
 ```
 
-#### 5. SampleConsoleHelp
+### <Badge style='font-size: 1.1rem;' type='tip' text='5. sample console help' />
+
+
 
 ```go
 func SampleConsoleHelp() {
@@ -105,7 +117,9 @@ func SampleConsoleHelp() {
 }
 ```
 
-#### 6. SampleConsoleSelect
+### <Badge style='font-size: 1.1rem;' type='tip' text='6. sample console select' />
+
+
 
 ```go
 func SampleConsoleSelect() {
@@ -119,7 +133,9 @@ func SampleConsoleSelect() {
 }
 ```
 
-#### 7. SampleConsoleList
+### <Badge style='font-size: 1.1rem;' type='tip' text='7. sample console list' />
+
+
 
 ```go
 func SampleConsoleList() {
@@ -154,7 +170,9 @@ func SampleConsoleList() {
 }
 ```
 
-#### 8. SampleConsoleProgress
+### <Badge style='font-size: 1.1rem;' type='tip' text='8. sample console progress' />
+
+
 
 ```go
 func SampleConsoleProgress() {
@@ -165,7 +183,9 @@ func SampleConsoleProgress() {
 }
 ```
 
-#### 9. SampleConsoleRealtime
+### <Badge style='font-size: 1.1rem;' type='tip' text='9. sample console realtime' />
+
+
 
 ```go
 func SampleConsoleRealtime() {
@@ -173,7 +193,9 @@ func SampleConsoleRealtime() {
 }
 ```
 
-#### 10. SampleConsoleChoice
+### <Badge style='font-size: 1.1rem;' type='tip' text='10. sample console choice' />
+
+
 
 ```go
 func SampleConsoleChoice() {
@@ -187,7 +209,9 @@ func SampleConsoleChoice() {
 }
 ```
 
-#### 11. SampleConsoleSpinner
+### <Badge style='font-size: 1.1rem;' type='tip' text='11. sample console spinner' />
+
+
 
 ```go
 func SampleConsoleSpinner() {
@@ -195,7 +219,9 @@ func SampleConsoleSpinner() {
 }
 ```
 
-#### 12. SampleConsoleSplit
+### <Badge style='font-size: 1.1rem;' type='tip' text='12. sample console split' />
+
+
 
 ```go
 func SampleConsoleSplit() {
@@ -203,7 +229,9 @@ func SampleConsoleSplit() {
 }
 ```
 
-#### 13. SampleConsoleStopwatch
+### <Badge style='font-size: 1.1rem;' type='tip' text='13. sample console stopwatch' />
+
+
 
 ```go
 func SampleConsoleStopwatch() {
@@ -211,7 +239,9 @@ func SampleConsoleStopwatch() {
 }
 ```
 
-#### 14. SampleConsoleTable
+### <Badge style='font-size: 1.1rem;' type='tip' text='14. sample console table' />
+
+
 
 ```go
 func SampleConsoleTable() {
@@ -219,7 +249,9 @@ func SampleConsoleTable() {
 }
 ```
 
-#### 15. SampleConsoleCountdown
+### <Badge style='font-size: 1.1rem;' type='tip' text='15. sample console countdown' />
+
+
 
 ```go
 func SampleConsoleCountdown() {
@@ -227,7 +259,9 @@ func SampleConsoleCountdown() {
 }
 ```
 
-#### 16. SampleConsoleSequence
+### <Badge style='font-size: 1.1rem;' type='tip' text='16. sample console sequence' />
+
+
 
 ```go
 func SampleConsoleSequence() {
@@ -235,7 +269,9 @@ func SampleConsoleSequence() {
 }
 ```
 
-#### 17. SampleConsoleInline
+### <Badge style='font-size: 1.1rem;' type='tip' text='17. sample console inline' />
+
+
 
 ```go
 func SampleConsoleInline() {
@@ -248,7 +284,9 @@ func SampleConsoleInline() {
 }
 ```
 
-#### 18. SampleConsoleParallel
+### <Badge style='font-size: 1.1rem;' type='tip' text='18. sample console parallel' />
+
+
 
 ```go
 func SampleConsoleParallel() {
@@ -256,7 +294,9 @@ func SampleConsoleParallel() {
 }
 ```
 
-#### 19. SampleConsoleDir
+### <Badge style='font-size: 1.1rem;' type='tip' text='19. sample console dir' />
+
+
 
 ```go
 func SampleConsoleDir() {
@@ -264,7 +304,9 @@ func SampleConsoleDir() {
 }
 ```
 
-#### 20. SampleConsoleGlamour
+### <Badge style='font-size: 1.1rem;' type='tip' text='20. sample console glamour' />
+
+
 
 ```go
 func SampleConsoleGlamour() {

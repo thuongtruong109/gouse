@@ -1,4 +1,6 @@
-# Config
+
+# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.25rem 0.75rem 0.25rem 0;' type='info' text='🔖 Config' />
+
 
 ```go
 import (
@@ -7,7 +9,9 @@ import (
 )
 ```
 
-#### 1. SampleConfigJson
+### <Badge style='font-size: 1.1rem;' type='tip' text='1. sample config json' />
+
+
 
 ```go
 func SampleConfigJson() {
@@ -27,7 +31,9 @@ func SampleConfigJson() {
 }
 ```
 
-#### 2. SampleConfigToml
+### <Badge style='font-size: 1.1rem;' type='tip' text='2. sample config toml' />
+
+
 
 ```go
 func SampleConfigToml() {
@@ -53,7 +59,9 @@ func SampleConfigToml() {
 }
 ```
 
-#### 3. SampleConfigYaml
+### <Badge style='font-size: 1.1rem;' type='tip' text='3. sample config yaml' />
+
+
 
 ```go
 func SampleConfigYaml() {

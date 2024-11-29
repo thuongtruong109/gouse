@@ -1,4 +1,6 @@
-# Function
+
+# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.25rem 0.75rem 0.25rem 0;' type='info' text='🔖 Function' />
+
 
 ```go
 import (
@@ -8,7 +10,9 @@ import (
 )
 ```
 
-#### 1. SampleFuncDelay
+### <Badge style='font-size: 1.1rem;' type='tip' text='1. sample func delay' />
+
+
 
 ```go
 func SampleFuncDelay() {
@@ -30,7 +34,9 @@ func SampleFuncDelay() {
 }
 ```
 
-#### 2. SampleFuncInterval
+### <Badge style='font-size: 1.1rem;' type='tip' text='2. sample func interval' />
+
+
 
 ```go
 func SampleFuncInterval() {
@@ -40,27 +46,40 @@ func SampleFuncInterval() {
 }
 ```
 
-#### 3. SampleFuncLock
+### <Badge style='font-size: 1.1rem;' type='tip' text='3. sample func lock' />
+
+
 
 ```go
 func SampleFuncLock() {
-	oneInOneOutFuc := gouse.LockFunc(func(i interface{}) interface{} {
+	oneInOneOutLockFunc := gouse.LockFunc(func(i interface{}) interface{} {
 		return i
 	}).(func(interface{}) interface{})("one input - one output")
-	fmt.Println(oneInOneOutFuc)
+	fmt.Println(oneInOneOutLockFunc)
 
-	twoInTwoOutFunc1, twoInTwoOutFunc2 := gouse.LockFunc(func(i1, i2 interface{}) (interface{}, interface{}) {
+	twoInTwoOutLockFunc1, twoInTwoOutLockFunc2 := gouse.LockFunc(func(i1, i2 interface{}) (interface{}, interface{}) {
 		return i1, i2
 	}).(func(interface{}, interface{}) (interface{}, interface{}))("two input - two output (a)", "two input - two output (b)")
-	fmt.Println(twoInTwoOutFunc1, twoInTwoOutFunc2)
+	fmt.Println(twoInTwoOutLockFunc1, twoInTwoOutLockFunc2)
 
 	gouse.LockFunc(func() {
 		println("no input - no output")
 	}).(func())()
+
+	exampleRWLockFunc := func(a, b int) int {
+		return a + b
+	}
+
+	lockedFunc := gouse.RWLockFunc(exampleRWLockFunc).(func(int, int) int)
+	result := lockedFunc(5, 3)
+	fmt.Println("RW Lock function result:", result)
+
 }
 ```
 
-#### 4. SampleFuncParallel
+### <Badge style='font-size: 1.1rem;' type='tip' text='4. sample func parallel' />
+
+
 
 ```go
 func SampleFuncParallel() {
@@ -89,7 +108,9 @@ func SampleFuncParallel() {
 }
 ```
 
-#### 5. SampleFuncRemain
+### <Badge style='font-size: 1.1rem;' type='tip' text='5. sample func remain' />
+
+
 
 ```go
 func SampleFuncRemain() {
@@ -99,7 +120,9 @@ func SampleFuncRemain() {
 }
 ```
 
-#### 6. SampleFuncRetry
+### <Badge style='font-size: 1.1rem;' type='tip' text='6. sample func retry' />
+
+
 
 ```go
 func SampleFuncRetry() {
@@ -110,7 +133,9 @@ func SampleFuncRetry() {
 }
 ```
 
-#### 7. SampleFuncRunTime
+### <Badge style='font-size: 1.1rem;' type='tip' text='7. sample func run time' />
+
+
 
 ```go
 func SampleFuncRunTime() {

@@ -1,4 +1,6 @@
-# Io
+
+# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.25rem 0.75rem 0.25rem 0;' type='info' text='🔖 Io' />
+
 
 ```go
 import (
@@ -9,7 +11,9 @@ import (
 )
 ```
 
-#### 1. SampleIoCreatePath
+### <Badge style='font-size: 1.1rem;' type='tip' text='1. sample io create path' />
+
+ Samples for io path functions<br>
 
 ```go
 func SampleIoCreatePath() {
@@ -23,7 +27,9 @@ func SampleIoCreatePath() {
 }
 ```
 
-#### 2. SampleIoReadPath
+### <Badge style='font-size: 1.1rem;' type='tip' text='2. sample io read path' />
+
+
 
 ```go
 func SampleIoReadPath() {
@@ -38,7 +44,9 @@ func SampleIoReadPath() {
 }
 ```
 
-#### 3. SampleIoWritePath
+### <Badge style='font-size: 1.1rem;' type='tip' text='3. sample io write path' />
+
+
 
 ```go
 func SampleIoWritePath() {
@@ -54,7 +62,9 @@ func SampleIoWritePath() {
 }
 ```
 
-#### 4. SampleIoCreateDir
+### <Badge style='font-size: 1.1rem;' type='tip' text='4. sample io create dir' />
+
+
 
 ```go
 func SampleIoCreateDir() {
@@ -66,7 +76,9 @@ func SampleIoCreateDir() {
 }
 ```
 
-#### 5. SampleIoCurrentDir
+### <Badge style='font-size: 1.1rem;' type='tip' text='5. sample io current dir' />
+
+
 
 ```go
 func SampleIoCurrentDir() {
@@ -80,7 +92,9 @@ func SampleIoCurrentDir() {
 }
 ```
 
-#### 6. SampleIoHierarchyDir
+### <Badge style='font-size: 1.1rem;' type='tip' text='6. sample io hierarchy dir' />
+
+
 
 ```go
 func SampleIoHierarchyDir() {
@@ -96,7 +110,9 @@ func SampleIoHierarchyDir() {
 }
 ```
 
-#### 7. SampleIoCheckDir
+### <Badge style='font-size: 1.1rem;' type='tip' text='7. sample io check dir' />
+
+
 
 ```go
 func SampleIoCheckDir() {
@@ -112,7 +128,9 @@ func SampleIoCheckDir() {
 }
 ```
 
-#### 8. SampleIoLsDir
+### <Badge style='font-size: 1.1rem;' type='tip' text='8. sample io ls dir' />
+
+
 
 ```go
 func SampleIoLsDir() {
@@ -128,7 +146,9 @@ func SampleIoLsDir() {
 }
 ```
 
-#### 9. SampleIoRemoveDir
+### <Badge style='font-size: 1.1rem;' type='tip' text='9. sample io remove dir' />
+
+
 
 ```go
 func SampleIoRemoveDir() {
@@ -140,7 +160,9 @@ func SampleIoRemoveDir() {
 }
 ```
 
-#### 10. SampleIoAppendToFile
+### <Badge style='font-size: 1.1rem;' type='tip' text='10. sample io append to file' />
+
+
 
 ```go
 func SampleIoAppendToFile() {
@@ -152,7 +174,9 @@ func SampleIoAppendToFile() {
 }
 ```
 
-#### 11. SampleIoCleanFile
+### <Badge style='font-size: 1.1rem;' type='tip' text='11. sample io clean file' />
+
+
 
 ```go
 func SampleIoCleanFile() {
@@ -171,7 +195,9 @@ func SampleIoCleanFile() {
 }
 ```
 
-#### 12. SampleIoCopyFile
+### <Badge style='font-size: 1.1rem;' type='tip' text='12. sample io copy file' />
+
+
 
 ```go
 func SampleIoCopyFile() {
@@ -183,7 +209,9 @@ func SampleIoCopyFile() {
 }
 ```
 
-#### 13. SampleIoCreateFile
+### <Badge style='font-size: 1.1rem;' type='tip' text='13. sample io create file' />
+
+
 
 ```go
 func SampleIoCreateFile() {
@@ -195,7 +223,9 @@ func SampleIoCreateFile() {
 }
 ```
 
-#### 14. SampleIoFileInfo
+### <Badge style='font-size: 1.1rem;' type='tip' text='14. sample io file info' />
+
+
 
 ```go
 func SampleIoFileInfo() {
@@ -213,7 +243,9 @@ func SampleIoFileInfo() {
 }
 ```
 
-#### 15. SampleIoCheckFile
+### <Badge style='font-size: 1.1rem;' type='tip' text='15. sample io check file' />
+
+
 
 ```go
 func SampleIoCheckFile() {
@@ -229,7 +261,9 @@ func SampleIoCheckFile() {
 }
 ```
 
-#### 16. SampleIoFileObj
+### <Badge style='font-size: 1.1rem;' type='tip' text='16. sample io file obj' />
+
+
 
 ```go
 func SampleIoFileObj() {
@@ -297,7 +331,9 @@ func SampleIoFileObj() {
 }
 ```
 
-#### 17. SampleIoReadFileByLine
+### <Badge style='font-size: 1.1rem;' type='tip' text='17. sample io read file by line' />
+
+
 
 ```go
 func SampleIoReadFileByLine() {
@@ -311,7 +347,9 @@ func SampleIoReadFileByLine() {
 }
 ```
 
-#### 18. SampleIoRemoveFile
+### <Badge style='font-size: 1.1rem;' type='tip' text='18. sample io remove file' />
+
+
 
 ```go
 func SampleIoRemoveFile() {
@@ -323,7 +361,9 @@ func SampleIoRemoveFile() {
 }
 ```
 
-#### 19. SampleIoRenameFile
+### <Badge style='font-size: 1.1rem;' type='tip' text='19. sample io rename file' />
+
+
 
 ```go
 func SampleIoRenameFile() {
@@ -335,7 +375,9 @@ func SampleIoRenameFile() {
 }
 ```
 
-#### 20. SampleIoTruncateFile
+### <Badge style='font-size: 1.1rem;' type='tip' text='20. sample io truncate file' />
+
+
 
 ```go
 func SampleIoTruncateFile() {
@@ -347,7 +389,9 @@ func SampleIoTruncateFile() {
 }
 ```
 
-#### 21. SampleIoWriteToFile
+### <Badge style='font-size: 1.1rem;' type='tip' text='21. sample io write to file' />
+
+
 
 ```go
 func SampleIoWriteToFile() {
@@ -359,7 +403,9 @@ func SampleIoWriteToFile() {
 }
 ```
 
-#### 22. SampleIoZip
+### <Badge style='font-size: 1.1rem;' type='tip' text='22. sample io zip' />
+
+
 
 ```go
 func SampleIoZip() {
@@ -374,7 +420,9 @@ func SampleIoZip() {
 }
 ```
 
-#### 23. SampleIoUnzip
+### <Badge style='font-size: 1.1rem;' type='tip' text='23. sample io unzip' />
+
+
 
 ```go
 func SampleIoUnzip() {

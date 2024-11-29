@@ -3,7 +3,7 @@
   "description": "A modern Golang utility presets",
   "private": true,
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0",
   "scripts": {
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",

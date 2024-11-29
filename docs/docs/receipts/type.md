@@ -1,4 +1,6 @@
-# Type
+
+# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.25rem 0.75rem 0.25rem 0;' type='info' text='🔖 Type' />
+
 
 ```go
 import (
@@ -7,7 +9,9 @@ import (
 )
 ```
 
-#### 1. SampleTypeStringConvert
+### <Badge style='font-size: 1.1rem;' type='tip' text='1. sample type string convert' />
+
+
 
 ```go
 func SampleTypeStringConvert() {
@@ -19,7 +23,9 @@ func SampleTypeStringConvert() {
 }
 ```
 
-#### 2. SampleTypeCastToString
+### <Badge style='font-size: 1.1rem;' type='tip' text='2. sample type cast to string' />
+
+
 
 ```go
 func SampleTypeCastToString() {
@@ -32,7 +38,9 @@ func SampleTypeCastToString() {
 }
 ```
 
-#### 3. SampleTypeStructConvert
+### <Badge style='font-size: 1.1rem;' type='tip' text='3. sample type struct convert' />
+
+
 
 ```go
 func SampleTypeStructConvert() {
@@ -53,7 +61,9 @@ func SampleTypeStructConvert() {
 }
 ```
 
-#### 4. SampleTypeCheck
+### <Badge style='font-size: 1.1rem;' type='tip' text='4. sample type check' />
+
+
 
 ```go
 func SampleTypeCheck() {
@@ -83,7 +93,9 @@ func SampleTypeCheck() {
 }
 ```
 
-#### 5. SampleTypeCheckUUID
+### <Badge style='font-size: 1.1rem;' type='tip' text='5. sample type check u u i d' />
+
+
 
 ```go
 func SampleTypeCheckUUID() {
@@ -95,7 +107,9 @@ func SampleTypeCheckUUID() {
 }
 ```
 
-#### 6. SampleTypeCheckGmail
+### <Badge style='font-size: 1.1rem;' type='tip' text='6. sample type check gmail' />
+
+
 
 ```go
 func SampleTypeCheckGmail() {
@@ -113,7 +127,9 @@ func SampleTypeCheckGmail() {
 }
 ```
 
-#### 7. SampleTypeCheckYahoo
+### <Badge style='font-size: 1.1rem;' type='tip' text='7. sample type check yahoo' />
+
+
 
 ```go
 func SampleTypeCheckYahoo() {
@@ -131,7 +147,9 @@ func SampleTypeCheckYahoo() {
 }
 ```
 
-#### 8. SampleTypeCheckOutlook
+### <Badge style='font-size: 1.1rem;' type='tip' text='8. sample type check outlook' />
+
+
 
 ```go
 func SampleTypeCheckOutlook() {
@@ -149,7 +167,9 @@ func SampleTypeCheckOutlook() {
 }
 ```
 
-#### 9. SampleTypeCheckEdu
+### <Badge style='font-size: 1.1rem;' type='tip' text='9. sample type check edu' />
+
+
 
 ```go
 func SampleTypeCheckEdu() {
@@ -167,7 +187,9 @@ func SampleTypeCheckEdu() {
 }
 ```
 
-#### 10. SampleTypeCheckEmail
+### <Badge style='font-size: 1.1rem;' type='tip' text='10. sample type check email' />
+
+
 
 ```go
 func SampleTypeCheckEmail() {
@@ -185,7 +207,9 @@ func SampleTypeCheckEmail() {
 }
 ```
 
-#### 11. SampleTypeCheckUsername
+### <Badge style='font-size: 1.1rem;' type='tip' text='11. sample type check username' />
+
+
 
 ```go
 func SampleTypeCheckUsername() {
@@ -209,7 +233,9 @@ func SampleTypeCheckUsername() {
 }
 ```
 
-#### 12. SampleTypeCheckPassword
+### <Badge style='font-size: 1.1rem;' type='tip' text='12. sample type check password' />
+
+
 
 ```go
 func SampleTypeCheckPassword() {
@@ -234,7 +260,9 @@ func SampleTypeCheckPassword() {
 }
 ```
 
-#### 13. SampleTypeCheckPhone
+### <Badge style='font-size: 1.1rem;' type='tip' text='13. sample type check phone' />
+
+
 
 ```go
 func SampleTypeCheckPhone() {

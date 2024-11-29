@@ -1,4 +1,6 @@
-# Struct
+
+# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.25rem 0.75rem 0.25rem 0;' type='info' text='🔖 Struct' />
+
 
 ```go
 import (
@@ -7,7 +9,9 @@ import (
 )
 ```
 
-#### 1. SampleStructAdd
+### <Badge style='font-size: 1.1rem;' type='tip' text='1. sample struct add' />
+
+
 
 ```go
 func SampleStructAdd() {
@@ -33,7 +37,9 @@ func SampleStructAdd() {
 }
 ```
 
-#### 2. SampleStructClone
+### <Badge style='font-size: 1.1rem;' type='tip' text='2. sample struct clone' />
+
+
 
 ```go
 func SampleStructClone() {
@@ -59,7 +65,9 @@ func SampleStructClone() {
 }
 ```
 
-#### 3. SampleStructGet
+### <Badge style='font-size: 1.1rem;' type='tip' text='3. sample struct get' />
+
+
 
 ```go
 func SampleStructGet() {
@@ -80,7 +88,9 @@ func SampleStructGet() {
 }
 ```
 
-#### 4. SampleStructHas
+### <Badge style='font-size: 1.1rem;' type='tip' text='4. sample struct has' />
+
+
 
 ```go
 func SampleStructHas() {
@@ -104,7 +114,9 @@ func SampleStructHas() {
 }
 ```
 
-#### 5. SampleStructMerge
+### <Badge style='font-size: 1.1rem;' type='tip' text='5. sample struct merge' />
+
+
 
 ```go
 func SampleStructMerge() {
@@ -142,7 +154,9 @@ func SampleStructMerge() {
 }
 ```
 
-#### 6. SampleStructRemove
+### <Badge style='font-size: 1.1rem;' type='tip' text='6. sample struct remove' />
+
+
 
 ```go
 func SampleStructRemove() {
@@ -162,7 +176,9 @@ func SampleStructRemove() {
 }
 ```
 
-#### 7. SampleStructSet
+### <Badge style='font-size: 1.1rem;' type='tip' text='7. sample struct set' />
+
+
 
 ```go
 func SampleStructSet() {

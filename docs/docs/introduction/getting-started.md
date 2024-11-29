@@ -1,15 +1,40 @@
-# VitePress 💙 StackBlitz
+# Getting Started
 
-Hi there :wave: This is a demo running VitePress within your **browser tab**!
+## 📦 Installation
 
-## Powered by Vite
+> Compatibility with Go version >= **`1.18`**
 
-VitePress uses Vite under the hood. This means:
+```go
+go get github.com/thuongtruong109/gouse
+```
 
-- Instant server start
-- Lightning fast HMR
-- Optimized builds
+## 🕯️ Quick Start
 
-## Markdown-Centered
+```go
+package main
 
-So you can focus more on writing. Powered by MarkdownIt. Comes with many [built-in extensions](https://vitepress.dev/guide/markdown), and you can use Vue features in Markdown too!
+import "github.com/thuongtruong109/gouse"
+
+func main() {
+    gouse.Stater()
+}
+```
+
+## 🦄 Usage
+
+- Using package directly in your module as ultra-lightweight utility functions.
+
+```go
+package main
+
+import (
+    "fmt"
+    "github.com/thuongtruong109/gouse/math"
+)
+
+func main() {
+    fmt.Println(math.Add(1, 2))
+}
+```
+
+- View more examples at [`receipts`](/receipts/array) page.

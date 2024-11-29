@@ -1,4 +1,6 @@
-# Media
+
+# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.25rem 0.75rem 0.25rem 0;' type='info' text='🔖 Media' />
+
 
 ```go
 import (
@@ -11,7 +13,9 @@ import (
 )
 ```
 
-#### 1. SampleMediaCanvas
+### <Badge style='font-size: 1.1rem;' type='tip' text='1. sample media canvas' />
+
+
 
 ```go
 func SampleMediaCanvas() {
@@ -28,7 +32,9 @@ func SampleMediaCanvas() {
 }
 ```
 
-#### 2. SampleMediaPngToJpg
+### <Badge style='font-size: 1.1rem;' type='tip' text='2. sample media png to jpg' />
+
+
 
 ```go
 func SampleMediaPngToJpg() {
