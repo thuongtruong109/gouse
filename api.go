@@ -124,34 +124,41 @@ func LoadBalancer(proxyPort string, backends []IBackend) {
 	}
 }
 
-func GracefulShutdown() {
+type IGracefulShutdown struct {
+	Port          string
+	StartMsg      string
+	ShutdownMsg   string
+	SleepTimout   time.Duration
+	HeaderTimeout time.Duration
+}
+
+func (igs *IGracefulShutdown) GracefulShutdown() {
 	var wg sync.WaitGroup
 
 	wg.Add(1)
 
 	go func() {
 		defer wg.Done()
-
-		time.Sleep(5 * time.Second)
+		time.Sleep(igs.SleepTimout) // 5 * time.Second
 	}()
 
 	c := make(chan os.Signal, 1)
 	signal.Notify(c, os.Interrupt)
 
-	fmt.Println("server started!")
+	fmt.Println(igs.StartMsg)
 
 	srv := http.Server{
-		Addr:              ":8080",
+		Addr:              ":" + igs.Port,
 		ReadHeaderTimeout: 5 * time.Second, // mitigate Slowloris attack by set timeout
 	}
 
 	go func() {
 		<-c
-		fmt.Println("server shutting down...")
+		fmt.Println(igs.ShutdownMsg)
 		go func() {
 			for {
 				fmt.Println("waiting for goroutines to finish...")
-				time.Sleep(1 * time.Second)
+				time.Sleep(igs.HeaderTimeout) // 1 * time.Second
 			}
 		}()
 		wg.Wait()

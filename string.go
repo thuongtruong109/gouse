@@ -76,6 +76,14 @@ func KebabCase(s string) string {
 	return concatCase(s, "-")
 }
 
+func SpaceCase(s string) string {
+	return concatCase(s, " ")
+}
+
+func CustomCase(s, sep string) string {
+	return concatCase(s, sep)
+}
+
 /* Character checking */
 
 func IsLetter[T byte | rune](char T) bool {

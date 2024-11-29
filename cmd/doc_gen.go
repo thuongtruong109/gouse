@@ -77,26 +77,32 @@ func processGoFile(file os.DirEntry, path, outputPath, newName string) {
 	generateMarkdownFiles(file, functions, path, outputPath, newName)
 }
 
+/* Working use Vitepress style */
+
+func highlightName(text string) string {
+	return fmt.Sprintf("\n# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.35rem 0.75rem 0.35rem 0;' type='info' text='🔖 %s' />\n", text)
+}
+
+func highlightFunction(text string) string {
+	return fmt.Sprintf("\n### <Badge style='font-size: 1.1rem;' type='tip' text='%s' />\n", text)
+}
+
 func generateMarkdownFiles(file os.DirEntry, functions []gouse.Function, path, outputPath, newName string) {
 	var result []byte
 
-	result = append(result, []byte("# "+gouse.Capitalize(gouse.TrimSuffix(file.Name(), ".go"))+"\n\n")...)
+	result = append(result, []byte(highlightName(gouse.Capitalize(gouse.TrimSuffix(file.Name(), ".go")))+"\n\n")...)
 
 	result = append(result, functions[0].HighlightImport()...)
 
 	for i, function := range functions {
-		if len(function.Import) > 0 {
-			// result = append(result, []byte("### Imports\n\n")...)
-			// result = append(result, []byte("### Functions\n\n")...)
-		}
-
-		result = append(result, function.HighlightName(gouse.IntToString(i+1))...)
+		result = append(result, highlightFunction(gouse.IntToString(i+1)+". "+gouse.SpaceCase(function.Name))...)
+		result = append(result, function.HighlightDesc()...)
 		result = append(result, function.HighlightBody()...)
 	}
 
 	fileName := gouse.Replace(file.Name(), ".go", ".md")
 
-	// replace new name for path (./oldName/*.go -> ./newName/*.go)
+	// replace (./oldName/*.go -> ./newName/*.go)
 	detectOld := gouse.Split(path, "/")[1]
 	renamedPath := gouse.Replace(path, detectOld, newName)
 
@@ -106,7 +112,6 @@ func generateMarkdownFiles(file os.DirEntry, functions []gouse.Function, path, o
 }
 
 func createFilePath(subPath, fileName string, result []byte) {
-	// create file path if not exist
 	err := gouse.CreatePath(filepath.Join(subPath, fileName))
 	if err != nil {
 		fmt.Println("Error creating file:", err)
@@ -121,5 +126,5 @@ func createFilePath(subPath, fileName string, result []byte) {
 }
 
 func main() {
-	GenerateDocument("docs", "receipts")
+	GenerateDocument("docs", "docs/receipts")
 }

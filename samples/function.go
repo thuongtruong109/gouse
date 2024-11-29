@@ -32,19 +32,28 @@ func SampleFuncInterval() {
 }
 
 func SampleFuncLock() {
-	oneInOneOutFuc := gouse.LockFunc(func(i interface{}) interface{} {
+	oneInOneOutLockFunc := gouse.LockFunc(func(i interface{}) interface{} {
 		return i
 	}).(func(interface{}) interface{})("one input - one output")
-	fmt.Println(oneInOneOutFuc)
+	fmt.Println(oneInOneOutLockFunc)
 
-	twoInTwoOutFunc1, twoInTwoOutFunc2 := gouse.LockFunc(func(i1, i2 interface{}) (interface{}, interface{}) {
+	twoInTwoOutLockFunc1, twoInTwoOutLockFunc2 := gouse.LockFunc(func(i1, i2 interface{}) (interface{}, interface{}) {
 		return i1, i2
 	}).(func(interface{}, interface{}) (interface{}, interface{}))("two input - two output (a)", "two input - two output (b)")
-	fmt.Println(twoInTwoOutFunc1, twoInTwoOutFunc2)
+	fmt.Println(twoInTwoOutLockFunc1, twoInTwoOutLockFunc2)
 
 	gouse.LockFunc(func() {
 		println("no input - no output")
 	}).(func())()
+
+	exampleRWLockFunc := func(a, b int) int {
+		return a + b
+	}
+
+	lockedFunc := gouse.RWLockFunc(exampleRWLockFunc).(func(int, int) int)
+	result := lockedFunc(5, 3)
+	fmt.Println("RW Lock function result:", result)
+
 }
 
 func SampleFuncParallel() {

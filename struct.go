@@ -5,6 +5,30 @@ import (
 	"reflect"
 )
 
+func GetTagName(structInstance interface{}) []string {
+	structType := reflect.TypeOf(structInstance)
+	var tags []string
+
+	for i := 0; i < structType.NumField(); i++ {
+		f := structType.Field(i)
+		tags = append(tags, f.Tag.Get("json"))
+	}
+
+	return tags
+}
+
+// Usage:
+
+// type User struct {
+// 	Id   int    `json:"id"`
+// 	Name string `json:"name"`
+// }
+
+// func main() {
+// 	u := User{1, "Tom"}
+// 	fmt.Println(GetTagName(u))
+// }
+
 // func Merge(structs ...interface{}) interface{} {
 // 	if len(structs) < 2 {
 // 		panic("At least two structs are required to merge")

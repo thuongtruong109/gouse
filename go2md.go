@@ -10,6 +10,7 @@ import (
 type Function struct {
 	Import string
 	Name   string
+	Desc   string
 	Body   string
 }
 
@@ -19,6 +20,11 @@ func (f *Function) HighlightImport() string {
 
 func (f *Function) HighlightName(orderNum string) string {
 	return fmt.Sprintf("\n#### %s\n", orderNum+". "+f.Name)
+}
+
+func (f *Function) HighlightDesc() string {
+	newDesc := Replace(f.Desc, "\n", "<br>")
+	return fmt.Sprintf("\n%s\n", newDesc)
 }
 
 func (f *Function) HighlightBody() string {
@@ -62,9 +68,15 @@ func ExtractFunctions(code []byte) []Function {
 			funcName := fn.Name.Name
 			funcBody := string(code[fn.Pos()-1 : fn.End()])
 
+			var funcComment string
+			if fn.Doc != nil {
+				funcComment = fn.Doc.Text()
+			}
+
 			functions = append(functions, Function{
 				Import: extractImports(code),
 				Name:   funcName,
+				Desc:   funcComment,
 				Body:   funcBody,
 			})
 		}
@@ -81,9 +93,11 @@ func detectContent(content []byte) []byte {
 		tmpFunc := &Function{
 			Import: function.Import,
 			Name:   function.Name,
+			Desc:   function.Desc,
 			Body:   function.Body,
 		}
 		result = append(result, tmpFunc.HighlightName(IntToString(i+1)))
+		result = append(result, tmpFunc.HighlightDesc())
 		result = append(result, tmpFunc.HighlightBody())
 	}
 

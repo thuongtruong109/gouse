@@ -8,57 +8,66 @@ import (
 
 /* Lock */
 
-type MutexWrapper struct {
-	mutex sync.Mutex
-}
-
-func (mw *MutexWrapper) lock() {
-	mw.mutex.Lock()
-}
-
-func (mw *MutexWrapper) unLock() {
-	mw.mutex.Unlock()
-}
-
-func LockFunc(callback interface{}) interface{} {
-	m := MutexWrapper{}
-	m.lock()
-	defer m.unLock()
-
+func lockHandler(callback interface{}, lock, unlock func()) interface{} {
 	callbackType := reflect.TypeOf(callback)
 	if callbackType.Kind() != reflect.Func {
 		panic("callback must be a function")
 	}
 
 	return reflect.MakeFunc(callbackType, func(params []reflect.Value) []reflect.Value {
-		// Convert params to interface{} slice
-		var resultInterfaces []interface{}
-		for _, result := range reflect.ValueOf(callback).Call(params) {
-			resultInterfaces = append(resultInterfaces, result.Interface())
-		}
-
-		// Return the results as reflect.Value
-		var resultReflectValues []reflect.Value
-		for _, result := range resultInterfaces {
-			resultReflectValues = append(resultReflectValues, reflect.ValueOf(result))
-		}
-
-		return resultReflectValues
+		lock()
+		defer unlock()
+		return reflect.ValueOf(callback).Call(params)
 	}).Interface()
 }
 
-// RWLock
+func LockFunc(callback interface{}) interface{} {
+	var mutex sync.Mutex
+	return lockHandler(callback, mutex.Lock, mutex.Unlock)
+}
 
-// type RWMutexWrapper struct {
-// 	rwMutex sync.RWMutex
-// }
+func RWLockFunc(callback interface{}) interface{} {
+	var rwMutex sync.RWMutex
+	return lockHandler(callback, rwMutex.RLock, rwMutex.RUnlock)
+}
 
-// func (mw *RWMutexWrapper) rLock() {
-// 	mw.rwMutex.RLock()
-// }
+/* Defer wrapper function */
 
-// func (mw *RWMutexWrapper) rUnLock() {
-// 	mw.rwMutex.RUnlock()
+func DeferWrapper(mainFunc func() error, cleanupFunc func()) error {
+	defer func() {
+		if cleanupFunc != nil {
+			cleanupFunc()
+		}
+	}()
+
+	if err := mainFunc(); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+/* Example */
+// func main() {
+// 	DeferWrapper(
+// 		func() error {
+// 			fmt.Println("Opening file...")
+// 			return fmt.Errorf("failed to read file")
+// 		},
+// 		func() {
+// 			fmt.Println("Closing file...")
+// 		},
+// 	)
+
+// 	DeferWrapper(
+// 		func() error {
+// 			fmt.Println("Connecting to database...")
+// 			return nil
+// 		},
+// 		func() {
+// 			fmt.Println("Disconnecting from database...")
+// 		},
+// 	)
 // }
 
 /* Delay */
