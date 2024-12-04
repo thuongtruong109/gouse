@@ -7,7 +7,7 @@ titleTemplate: Utility presets package
 hero:
   name: Gouse
   text: A modern Golang utility presets
-  tagline: Resuable functions rapidly
+  tagline: Reuse functions rapidly
   actions:
     - theme: brand
       text: What is Gouse?
@@ -23,17 +23,17 @@ hero:
     alt: Gouse
 
 features:
-  - icon: 📝
-    title: User-Friendly and Lightweight
+  - icon: 🪶
+    title: User-Friendly & Lightweight
     details: Gouse features an intuitive JavaScript syntax with no setup required. Import utility functions directly and enjoy a flexible, chainable package available in various builds and formats.
   - icon: 🛠️
-    title: Powerful and Versatile
+    title: Powerful & Versatile
     details: Access a wide range of methods for arrays, numbers, objects, and strings. Comprehensive documentation and examples make implementation smooth and efficient.
   - icon: 🧩
-    title: Scalable and Efficient
+    title: Scalable & Efficient
     details: Ideal for projects of any size, Gouse supports rapid setup, complex logic handling, and performance optimization across all operating systems.
   - icon: 🚀
-    title: Consistent and Maintainable
+    title: Consistent & Maintainable
     details: Reduce repetitive code and ensure a unified style. Gouse makes your code cleaner, easier to maintain, and minimizes compatibility issues or unexpected errors.
 ---
 
@@ -57,6 +57,10 @@ features:
   :root {
     --vp-home-hero-image-filter: blur(68px);
   }
+}
+
+.VPFooter {
+  border: none;
 }
 
 </style>

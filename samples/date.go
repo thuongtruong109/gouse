@@ -6,7 +6,7 @@ import (
 	"github.com/thuongtruong109/gouse"
 )
 
-func SampleDateTime() {
+func DateTime() {
 	println("Second:", gouse.Second())
 	println("Minute:", gouse.Minute())
 	println("Hour:", gouse.Hour())
@@ -23,11 +23,11 @@ func SampleDateTime() {
 	fmt.Println("UnixNanoToTime:", gouse.UnixNanoToTime(1000000000))
 }
 
-func SampleDateISO() {
+func DateISO() {
 	println("ISO:", gouse.ISODate())
 }
 
-func SampleDateShort() {
+func DateShort() {
 	println("ShortNormal:", gouse.NormalDate())
 	println("ShortReverse:", gouse.ReverseDate())
 	println("ShortDash:", gouse.DashDate())
@@ -37,38 +37,38 @@ func SampleDateShort() {
 	println("ShortMonth:", gouse.MonthDate())
 }
 
-func SampleDateLong() {
+func DateLong() {
 	println("Long:", gouse.LongDate())
 }
 
-func SampleDateUTC() {
+func DateUTC() {
 	println("UTC:", gouse.UTCDate())
 }
 
-func SampleDateToSecond() {
+func DateToSecond() {
 	println("ToSecond:", gouse.ToSecond(1))
 }
 
-func SampleDateToMinute() {
+func DateToMinute() {
 	println("ToMinute:", gouse.ToMinute(1))
 }
 
-func SampleDateToHour() {
+func DateToHour() {
 	println("ToHour:", gouse.ToHour(1))
 }
 
-func SampleDateSleepSecond() {
+func DateSleepSecond() {
 	gouse.SleepSecond(1)
 }
 
-func SampleDateSleepMinute() {
+func DateSleepMinute() {
 	gouse.SleepMinute(1)
 }
 
-func SampleDateSleepHour() {
+func DateSleepHour() {
 	gouse.SleepHour(1)
 }
 
-func SampleDateClock() {
+func DateClock() {
 	gouse.TerminalClock()
 }

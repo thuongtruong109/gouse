@@ -10,7 +10,7 @@ import (
 	"github.com/thuongtruong109/gouse"
 )
 
-func SampleMediaCanvas() {
+func MediaCanvas() {
 	avatar, err := gouse.CreateCanvas(200, "#FFFFFF")
 	if err != nil {
 		log.Fatal(err)
@@ -23,7 +23,7 @@ func SampleMediaCanvas() {
 	png.Encode(file, avatar)
 }
 
-func SampleMediaPngToJpg() {
+func MediaPngToJpg() {
 	err := gouse.PNGToJPG("mockdata/1720031107.png", "mockdata/output.jpg")
 	if err != nil {
 		fmt.Println(err)

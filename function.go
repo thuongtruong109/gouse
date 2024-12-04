@@ -47,29 +47,6 @@ func DeferWrapper(mainFunc func() error, cleanupFunc func()) error {
 	return nil
 }
 
-/* Example */
-// func main() {
-// 	DeferWrapper(
-// 		func() error {
-// 			fmt.Println("Opening file...")
-// 			return fmt.Errorf("failed to read file")
-// 		},
-// 		func() {
-// 			fmt.Println("Closing file...")
-// 		},
-// 	)
-
-// 	DeferWrapper(
-// 		func() error {
-// 			fmt.Println("Connecting to database...")
-// 			return nil
-// 		},
-// 		func() {
-// 			fmt.Println("Disconnecting from database...")
-// 		},
-// 	)
-// }
-
 /* Delay */
 
 type DelayedResult[T any] struct {

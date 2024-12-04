@@ -7,7 +7,10 @@ import (
 	"github.com/thuongtruong109/gouse"
 )
 
-func SampleCacheLocal() {
+/*
+Description: Cache local values
+*/
+func CacheLocal() {
 	newCache := gouse.NewLocalCache()
 	newCache.SetLocalCache("key1", "local cache value 1")
 	newCache.SetLocalCache("key2", "local cache value 2")
@@ -39,7 +42,10 @@ func SampleCacheLocal() {
 	fmt.Println("All local cache values (after flush):", all)
 }
 
-func SampleCacheTmp() {
+/*
+Description: Cache temporary values (with expiration time)
+*/
+func CacheTmp() {
 	newCache := gouse.NewTmpCache(gouse.ToSecond(3))
 	newCache.SetTmpCache("key1", "temp cache value 1", gouse.ToSecond(3))
 	newCache.SetTmpCache("key2", "temp cache value 2", gouse.ToSecond(6))

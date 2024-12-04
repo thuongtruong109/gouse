@@ -7,7 +7,7 @@ import (
 	"github.com/thuongtruong109/gouse"
 )
 
-func SampleFuncDelay() {
+func FuncDelay() {
 	println("Delay start:")
 
 	result := gouse.DelayF(func() string {
@@ -25,13 +25,13 @@ func SampleFuncDelay() {
 	}, 3)
 }
 
-func SampleFuncInterval() {
+func FuncInterval() {
 	gouse.IntervalFunc(func() {
 		println("Interval")
 	}, 1)
 }
 
-func SampleFuncLock() {
+func FuncLock() {
 	oneInOneOutLockFunc := gouse.LockFunc(func(i interface{}) interface{} {
 		return i
 	}).(func(interface{}) interface{})("one input - one output")
@@ -53,10 +53,9 @@ func SampleFuncLock() {
 	lockedFunc := gouse.RWLockFunc(exampleRWLockFunc).(func(int, int) int)
 	result := lockedFunc(5, 3)
 	fmt.Println("RW Lock function result:", result)
-
 }
 
-func SampleFuncParallel() {
+func FuncParallel() {
 	function1 := func() {
 		for i := 0; i < 5; i++ {
 			time.Sleep(100 * time.Millisecond)
@@ -81,20 +80,20 @@ func SampleFuncParallel() {
 	gouse.ParallelizeFunc(function1, function2, function3)
 }
 
-func SampleFuncRemain() {
+func FuncRemain() {
 	gouse.RemainFunc(func() {
 		println("Times")
 	}, 3)
 }
 
-func SampleFuncRetry() {
+func FuncRetry() {
 	gouse.RetryFunc(func() error {
 		println("Retry")
 		return nil
 	}, 3, 1)
 }
 
-func SampleFuncRunTime() {
+func FuncRunTime() {
 	exampleFunc := func() {
 		time.Sleep(2 * time.Second)
 		fmt.Println("Task completed.")
@@ -102,4 +101,26 @@ func SampleFuncRunTime() {
 
 	duration := gouse.RunTimeFunc(time.Now(), exampleFunc)
 	fmt.Printf("Function run in: %v\n", duration)
+}
+
+func FuncDeferWrapper() {
+	gouse.DeferWrapper(
+		func() error {
+			fmt.Println("Opening file...")
+			return fmt.Errorf("failed to read file")
+		},
+		func() {
+			fmt.Println("Closing file...")
+		},
+	)
+
+	gouse.DeferWrapper(
+		func() error {
+			fmt.Println("Connecting to database...")
+			return nil
+		},
+		func() {
+			fmt.Println("Disconnecting from database...")
+		},
+	)
 }

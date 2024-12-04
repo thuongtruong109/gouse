@@ -6,7 +6,7 @@ import (
 	"github.com/thuongtruong109/gouse"
 )
 
-func SampleStructAdd() {
+func StructAdd() {
 	type Add_Person struct {
 		Name  string
 		Age   int
@@ -28,7 +28,7 @@ func SampleStructAdd() {
 	fmt.Printf("Struct after adding fields: %+v\n", result)
 }
 
-func SampleStructClone() {
+func StructClone() {
 	type Clone_Person struct {
 		Name  string
 		Age   int
@@ -50,7 +50,7 @@ func SampleStructClone() {
 	fmt.Printf("Clone: %+v\n", updateClone)
 }
 
-func SampleStructGet() {
+func StructGet() {
 	type Get_Person struct {
 		Name  string
 		Age   int
@@ -67,7 +67,7 @@ func SampleStructGet() {
 	fmt.Printf("Name: %s\n", name)
 }
 
-func SampleStructHas() {
+func StructHas() {
 	type Has_Person struct {
 		Name  string
 		Age   int
@@ -87,7 +87,7 @@ func SampleStructHas() {
 	fmt.Printf("Has empty: %+v\n", hasEmpty)
 }
 
-func SampleStructMerge() {
+func StructMerge() {
 	type Merge_Person struct {
 		Name  string
 		Age   int
@@ -121,7 +121,7 @@ func SampleStructMerge() {
 	fmt.Println("City:", merged.(map[string]interface{})["City"])
 }
 
-func SampleStructRemove() {
+func StructRemove() {
 	type Remove_Person struct {
 		Name  string
 		Age   int
@@ -137,7 +137,7 @@ func SampleStructRemove() {
 	fmt.Printf("Struct after removed field: %+v\n", gouse.RemoveStruct(person, "Email"))
 }
 
-func SampleStructSet() {
+func StructSet() {
 	type Set_Person struct {
 		Name  string
 		Age   int

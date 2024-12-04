@@ -8,7 +8,7 @@ import (
 
 /* Samples for type conversion */
 
-func SampleTypeStringConvert() {
+func TypeStringConvert() {
 	println("Convert string to int: ", gouse.StringToInt("1"))
 	fmt.Println("Convert string to float: ", gouse.StringToFloat("1.1"))
 	println("Convert string to bool: ", gouse.StringToBool("true"))
@@ -16,7 +16,7 @@ func SampleTypeStringConvert() {
 	fmt.Println("Convert strings to bytes: ", string(gouse.StringsToBytes([]string{"1", "2", "3"})), "->", gouse.StringsToBytes([]string{"1", "2", "3"}))
 }
 
-func SampleTypeCastToString() {
+func TypeCastToString() {
 	println("Cast int to string: ", gouse.IntToString(1))
 	fmt.Println("Cast float to string: ", gouse.FloatToString(1.1))
 	println("Cast bool to string: ", gouse.BoolToString(true))
@@ -25,7 +25,7 @@ func SampleTypeCastToString() {
 	println("Cast rune to string: ", gouse.RuneToString('a'))
 }
 
-func SampleTypeStructConvert() {
+func TypeStructConvert() {
 	type CompanyInfo struct {
 		Company string
 		Address string
@@ -44,7 +44,7 @@ func SampleTypeStructConvert() {
 
 /* Samples for type check */
 
-func SampleTypeCheck() {
+func TypeCheck() {
 	println("Check type is int: ", gouse.IsInt(1))
 	println("Check type is uint: ", gouse.IsUnInt(-1))
 	println("Check type is float: ", gouse.IsFloat(1.1))
@@ -70,7 +70,7 @@ func SampleTypeCheck() {
 	println("Check type is zero: ", gouse.IsZero(0))
 }
 
-func SampleTypeCheckUUID() {
+func TypeCheckUUID() {
 	isValid, err := gouse.IsUUID("123e4567-e89b-12d3-a456-426614174000")
 	if err != nil {
 		println(err.Error())
@@ -90,7 +90,7 @@ var emails = []string{
 	"ititiu19228@student.hcmiu.edu.vn",
 }
 
-func SampleTypeCheckGmail() {
+func TypeCheckGmail() {
 	println("--- Check valid gmail ---")
 	for _, email := range emails {
 		isEmail, err := gouse.IsGmail(email)
@@ -104,7 +104,7 @@ func SampleTypeCheckGmail() {
 	}
 }
 
-func SampleTypeCheckYahoo() {
+func TypeCheckYahoo() {
 	println("--- Check valid yahoo ---")
 	for _, email := range emails {
 		isEmail, err := gouse.IsYahoo(email)
@@ -118,7 +118,7 @@ func SampleTypeCheckYahoo() {
 	}
 }
 
-func SampleTypeCheckOutlook() {
+func TypeCheckOutlook() {
 	println("--- Check valid outlook ---")
 	for _, email := range emails {
 		isEmail, err := gouse.IsOutlook(email)
@@ -132,7 +132,7 @@ func SampleTypeCheckOutlook() {
 	}
 }
 
-func SampleTypeCheckEdu() {
+func TypeCheckEdu() {
 	println("--- Check valid education mail ---")
 	for _, email := range emails {
 		isEmail, err := gouse.IsEdu(email)
@@ -146,7 +146,7 @@ func SampleTypeCheckEdu() {
 	}
 }
 
-func SampleTypeCheckEmail() {
+func TypeCheckEmail() {
 	println("--- Check valid custom domain ---")
 	for _, email := range emails {
 		isEmail, err := gouse.IsEmail(email, "edu.vn")
@@ -160,7 +160,7 @@ func SampleTypeCheckEmail() {
 	}
 }
 
-func SampleTypeCheckUsername() {
+func TypeCheckUsername() {
 	usernames := []string{
 		"okahehe",
 		"missingat.sign",
@@ -180,7 +180,7 @@ func SampleTypeCheckUsername() {
 	}
 }
 
-func SampleTypeCheckPassword() {
+func TypeCheckPassword() {
 	passwords := []string{
 		"okahehe",
 		"missingat.sign",
@@ -201,7 +201,7 @@ func SampleTypeCheckPassword() {
 	}
 }
 
-func SampleTypeCheckPhone() {
+func TypeCheckPhone() {
 	//  Note: Phone format syntax: +<country_calling_code> (<area_Prefix_mobile_code>) <phone_number>
 	// Reference at https://en.wikipedia.org/wiki/List_of_mobile_telephone_prefixes_by_country#:~:text=Property%20Value%20%20Country%20or%20unrecognized%20territory%20,73%20%20%20Etisalat%20%20%20www.etisalat.af%20
 	phoneNumbers := []string{

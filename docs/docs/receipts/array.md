@@ -1,5 +1,5 @@
 
-# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.25rem 0.75rem 0.25rem 0;' type='info' text='🔖 Array' />
+# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.35rem 0.75rem 0.35rem 0;' type='info' text='🔖 Array' />
 
 
 ```go
@@ -9,13 +9,12 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. sample array chunk' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='1. array chunk' />
 
-
+Description: Chunk an array into smaller arrays of a specified size<br>Input params: (array, size)<br>
 
 ```go
-func SampleArrayChunk() {
-	println("--- Chunk array ---")
+func ArrayChunk() {
 	fmt.Println("[int]: ", gouse.Chunk([]int{1, -2, 3, -4, 5, 6}, 3))
 	fmt.Println("[uint]: ", gouse.Chunk([]uint{1, 2, 3, 4, 5, 6}, 3))
 	fmt.Println("[float]: ", gouse.Chunk([]float64{1.2, 2.3, 3.4, 4.5, 5.6, 6.7}, 3))
@@ -26,24 +25,23 @@ func SampleArrayChunk() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='2. sample array compact' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='2. array compact' />
 
-
+Description: Removing falsy values (false, null, 0, "", undefined, and NaN) from an array<br>Input params: (array)<br>
 
 ```go
-func SampleArrayCompact() {
+func ArrayCompact() {
 	result := gouse.Compact([]interface{}{1, -2, 3, -4, 5, 6, 0, 0.0, "", false, nil})
 	fmt.Println("Compact remove all falsy values: ", result)
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='3. sample array diff' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='3. array difference' />
 
-
+Description: Check difference items between two arrays<br>Input params: (array1, array2)<br>
 
 ```go
-func SampleArrayDiff() {
-	println("--- Difference array ---")
+func ArrayDifference() {
 	fmt.Println("[int]: ", gouse.Diff([]int{1, -2, 3, -4, 5, 6}, []int{1, 2, 3, 4, 5, 6}))
 	fmt.Println("[uint]: ", gouse.Diff([]uint{1, 2, 3, 4, 5, 7}, []uint{1, 2, 3, 4, 5, 6}))
 	fmt.Println("[float]: ", gouse.Diff([]float64{1.2, 2.3, 3.4}, []float64{4.5, 5.6, 6.7}))
@@ -54,13 +52,12 @@ func SampleArrayDiff() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='4. sample array drop' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='4. array drop' />
 
-
+Description: Drop n elements in array (default n = 1)<br>Input params: (array, n)<br>
 
 ```go
-func SampleArrayDrop() {
-	println("--- Drop elements in array (default n = 1) ---")
+func ArrayDrop() {
 	fmt.Println("[int] with default: ", gouse.Drop([]int{1, -2, 3, -4, 5, 6}))
 	fmt.Println("[int]: ", gouse.Drop([]int{1, -2, 3, -4, 5, 6}, 2))
 	fmt.Println("[uint]: ", gouse.Drop([]uint{1, 2, 3, 4, 5, 7}, 2))
@@ -72,13 +69,12 @@ func SampleArrayDrop() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='5. sample array equal' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='5. array equal' />
 
-
+Description: Compare is equal between two elements<br>Input params: (element1, element2)<br>
 
 ```go
-func SampleArrayEqual() {
-	println("--- Compare equal ---")
+func ArrayEqual() {
 	println("[int]: ", gouse.Equal(1, 1))
 	println("[uint]: ", gouse.Equal(uint(1), uint(1)))
 	println("[float]: ", gouse.Equal(1.2, 1.1))
@@ -90,13 +86,12 @@ func SampleArrayEqual() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='6. sample array filter by' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='6. array filter by' />
 
-
+Description: Filter elements in array by pass condition in callback function<br>Input params: (array, callback)<br>
 
 ```go
-func SampleArrayFilterBy() {
-	println("--- Filter elements in array by pass condition in callback function---")
+func ArrayFilterBy() {
 	println("[int]: ", gouse.FilterBy([]int{1, -2, 3, -4, 5, 6}, func(v int) bool {
 		return v > 2
 	}))
@@ -127,13 +122,12 @@ func SampleArrayFilterBy() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='7. sample array find by' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='7. array find by' />
 
-
+Description: Find element in array by pass condition in callback function<br>Input params: (array, callback)<br>
 
 ```go
-func SampleArrayFindBy() {
-	println("--- Find element in array by pass condition in callback function---")
+func ArrayFindBy() {
 	println("[int]: ", gouse.FindBy([]int{1, -2, 3, -4, 5, 6}, func(v int) bool {
 		return v == 3
 	}))
@@ -164,13 +158,12 @@ func SampleArrayFindBy() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='8. sample array for by' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='8. array for by' />
 
-
+Description: Loop array then handler with callback function<br>Input params: (array, callback)<br>
 
 ```go
-func SampleArrayForBy() {
-	println("--- Loop array then handler with callback function ---")
+func ArrayForBy() {
 	print("[int]: ")
 	gouse.ForBy([]int{1, -2, 3, -4, 5, 6}, func(v int) {
 		println(v)
@@ -208,13 +201,12 @@ func SampleArrayForBy() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='9. sample array includes' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='9. array includes' />
 
-
+Description: Check element is exist in array<br>Input params: (array, element)<br>
 
 ```go
-func SampleArrayIncludes() {
-	println("--- Check element is exist in array ---")
+func ArrayIncludes() {
 	println("[int]: ", gouse.IncludesArr([]int{1, -2, 3}, 1))
 	println("[uint]: ", gouse.IncludesArr([]uint{1, 2, 3}, 1))
 	println("[float]: ", gouse.IncludesArr([]float64{1.2, 2.3, 3.4}, 1.2))
@@ -225,13 +217,12 @@ func SampleArrayIncludes() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='10. sample array index' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='10. array index' />
 
-
+Description: Get index of element in array<br>Input params: (array, element)<br>
 
 ```go
-func SampleArrayIndex() {
-	println("--- Index of element in array ---")
+func ArrayIndex() {
 	println("[int]: ", gouse.IndexOfArr([]int{1, -2, 3, -4, 5, 6}, 3))
 	println("[uint]: ", gouse.IndexOfArr([]uint{1, 2, 3, 4, 5, 7}, 3))
 	println("[float]: ", gouse.IndexOfArr([]float64{1.2, 2.3, 3.4}, 3.4))
@@ -242,13 +233,12 @@ func SampleArrayIndex() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='11. sample array index by' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='11. array index by' />
 
-
+Description: Find index of element pass condition in callback function<br>Input params: (array, callback)<br>
 
 ```go
-func SampleArrayIndexBy() {
-	println("--- Find index of element pass condition in callback function ---")
+func ArrayIndexBy() {
 	println("[int]: ", gouse.IndexBy([]int{1, -2, 3, -4, 5, 6}, func(v int) bool {
 		return v == 3
 	}))
@@ -279,13 +269,12 @@ func SampleArrayIndexBy() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='12. sample array intersect' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='12. array intersect' />
 
-
+Description: Intersection arrays<br>Input params: (array1, array2)<br>
 
 ```go
-func SampleArrayIntersect() {
-	println("--- Intersection arrays ---")
+func ArrayIntersect() {
 	println("[int]: ", gouse.Intersect([]int{1, -2, 3, -4, 5, 6}, []int{1, 2, 3, 4, 5, 6}))
 	println("[uint]: ", gouse.Intersect([]uint{1, 2, 3, 4, 5, 7}, []uint{1, 2, 3, 4, 5, 6}))
 	println("[float]: ", gouse.Intersect([]float64{1.2, 2.3, 3.4}, []float64{1.2, 4.5, 5.6, 6.7}))
@@ -296,13 +285,12 @@ func SampleArrayIntersect() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='13. sample array key by' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='13. array key by' />
 
-
+Description: Find key of element pass condition in callback function<br>Input params: (array, callback)<br>
 
 ```go
-func SampleArrayKeyBy() {
-	println("--- Find key of element pass condition in callback function ---")
+func ArrayKeyBy() {
 	println("[int]: ", gouse.KeyBy([]int{1, -2, 3, -4, 5, 6}, func(v int) bool {
 		return v == 3
 	}))
@@ -333,13 +321,12 @@ func SampleArrayKeyBy() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='14. sample array map by' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='14. array map by' />
 
-
+Description: Map array then handler with callback function<br>Input params: (array, callback)<br>
 
 ```go
-func SampleArrayMapBy() {
-	println("--- Map array then handler with callback function ---")
+func ArrayMapBy() {
 	fmt.Println("[int]: ", gouse.MapBy([]int{1, -2, 3, -4, 5, 6}, func(v int) int {
 		return v * 2
 	}))
@@ -370,13 +357,12 @@ func SampleArrayMapBy() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='15. sample array min' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='15. array min' />
 
-
+Description: Find min element in array<br>Input params: (array)<br>
 
 ```go
-func SampleArrayMin() {
-	println("--- Min element in array ---")
+func ArrayMin() {
 	println("[int]: ", gouse.MinArr([]int{1, -2, 3}))
 	println("[uint]: ", gouse.MinArr([]uint{1, 2, 3}))
 	println("[string]: ", gouse.MinArr([]string{"z", "d", "m"}))
@@ -385,13 +371,12 @@ func SampleArrayMin() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='16. sample array max' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='16. array max' />
 
-
+Description: Find max element in array<br>Input params: (array)<br>
 
 ```go
-func SampleArrayMax() {
-	println("--- Max element in array ---")
+func ArrayMax() {
 	println("[int]: ", gouse.MaxArr([]int{1, -2, 3}))
 	println("[uint]: ", gouse.MaxArr([]uint{1, 2, 3}))
 	println("[string]: ", gouse.MaxArr([]string{"z", "d", "m"}))
@@ -400,13 +385,12 @@ func SampleArrayMax() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='17. sample array most' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='17. array most' />
 
-
+Description: Find most frequency element in array<br>Input params: (array)<br>
 
 ```go
-func SampleArrayMost() {
-	println("--- Most frequency in array ---")
+func ArrayMost() {
 	println("[int]: ", gouse.Most([]int{1, -2, 3, 2, 2, 1, 2, 3}))
 	println("[uint]: ", gouse.Most([]uint{1, 2, 3, 2, 2, 1, 2, 3}))
 	fmt.Println("[float]: ", gouse.Most([]float64{1.2, 2.3, 3.4, 2.3, 2.3, 1.2, 2.3, 3.4}))
@@ -417,13 +401,12 @@ func SampleArrayMost() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='18. sample array merge' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='18. array merge' />
 
-
+Description: Merge arrays<br>Input params: (array1, array2, array3, ...)<br>
 
 ```go
-func SampleArrayMerge() {
-	println("--- Merge arrays ---")
+func ArrayMerge() {
 	println("[int]: ", gouse.Merge([]int{1, -2, 3, -4, 5, 6}, []int{1, 2, 3, 4, 5, 6}, []int{1, -2, 3, -4, 5, 6}))
 	println("[uint]: ", gouse.Merge([]uint{1, 2, 3, 4, 5, 7}, []uint{1, 2, 3, 4, 5, 6}))
 	println("[float]: ", gouse.Merge([]float64{1.2, 2.3, 3.4}, []float64{1.2, 4.5, 5.6, 6.7}))
@@ -434,13 +417,12 @@ func SampleArrayMerge() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='19. sample array reject by' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='19. array reject by' />
 
-
+Description: Remove element in array by pass condition in callback function<br>Input params: (array, callback)<br>
 
 ```go
-func SampleArrayRejectBy() {
-	println("--- Reject elements in array by pass condition in callback function---")
+func ArrayRejectBy() {
 	println("[int]: ", gouse.RejectBy([]int{1, -2, 3, -4, 5, 6}, func(v int) bool {
 		return v > 2
 	}))
@@ -467,13 +449,12 @@ func SampleArrayRejectBy() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='20. sample array sum' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='20. array sum' />
 
-
+Description: Calculate sum of elements in array<br>Input params: (array)<br>
 
 ```go
-func SampleArraySum() {
-	println("--- Sum elements in array ---")
+func ArraySum() {
 	println("[int]: ", gouse.SumArr([]int{1, -2, 3}))
 	println("[uint]: ", gouse.SumArr([]uint{1, 2, 3}))
 	fmt.Println("[float]: ", gouse.SumArr([]float64{1.2, 2.3, 3.4}))

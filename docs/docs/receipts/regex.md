@@ -1,5 +1,5 @@
 
-# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.25rem 0.75rem 0.25rem 0;' type='info' text='🔖 Regex' />
+# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.35rem 0.75rem 0.35rem 0;' type='info' text='🔖 Regex' />
 
 
 ```go
@@ -9,22 +9,22 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. sample regex is match' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='1. regex is match' />
 
 
 
 ```go
-func SampleRegexIsMatch() {
+func RegexIsMatch() {
 	fmt.Println("Match string with regex: ", gouse.IsMatchReg(`[a-z]+\s[a-z]+`, "hello world"))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='2. sample regex match index' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='2. regex match index' />
 
 
 
 ```go
-func SampleRegexMatchIndex() {
+func RegexMatchIndex() {
 	paragraph := "I think Ruth's dog is cuter than your dog!"
 	matchIdx := gouse.MatchIndexReg(`[^\w\s']`, paragraph)
 	if matchIdx != -1 {
@@ -35,12 +35,12 @@ func SampleRegexMatchIndex() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='3. sample regex match' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='3. regex match' />
 
 
 
 ```go
-func SampleRegexMatch() {
+func RegexMatch() {
 	fmt.Println("Match string with regex: ", gouse.MatchReg(`[A-Z]`, "Hello World 123"))
 }
 ```

@@ -1,5 +1,5 @@
 
-# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.25rem 0.75rem 0.25rem 0;' type='info' text='🔖 Console' />
+# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.35rem 0.75rem 0.35rem 0;' type='info' text='🔖 Console' />
 
 
 ```go
@@ -23,12 +23,12 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. sample console cmd' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='1. console cmd' />
 
 
 
 ```go
-func SampleConsoleCmd() {
+func ConsoleCmd() {
 	gouse.Cmd("echo command is working")
 
 	// first param is default command, second param is windows command (default is empty)
@@ -36,24 +36,24 @@ func SampleConsoleCmd() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='2. sample console clear' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='2. console clear' />
 
 
 
 ```go
-func SampleConsoleClear() {
+func ConsoleClear() {
 	println("console will be cleared now")
 	gouse.Cls()
 	println("console cleared")
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='3. sample console with color' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='3. console with color' />
 
 
 
 ```go
-func SampleConsoleWithColor() {
+func ConsoleWithColor() {
 	gouse.PrintColor(gouse.DEFAULT_FG, "this is default")
 	gouse.PrintColor(gouse.WHITE_FG, "this is white")
 	gouse.PrintColor(gouse.RED_FG, "this is red")
@@ -65,24 +65,24 @@ func SampleConsoleWithColor() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='4. sample console banner' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='4. console banner' />
 
 
 
 ```go
-func SampleConsoleBanner() {
+func ConsoleBanner() {
 	// param1: font name, param2: your input string
 	gouse.Banner(gouse.DOUBLE_ALPHA, "gouse - type double")
 	gouse.Banner(gouse.DOUBLE_ALPHA, "gouse - type single")
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='5. sample console help' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='5. console help' />
 
 
 
 ```go
-func SampleConsoleHelp() {
+func ConsoleHelp() {
 	name := "myprogram"
 	options := []*gouse.IHelpOptions{
 		{
@@ -117,12 +117,12 @@ func SampleConsoleHelp() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='6. sample console select' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='6. console select' />
 
 
 
 ```go
-func SampleConsoleSelect() {
+func ConsoleSelect() {
 	optconsolens := []string{"a", "b", "c"}
 	selected, err := gouse.Select("Select an optconsolen:", optconsolens)
 	if err != nil {
@@ -133,12 +133,12 @@ func SampleConsoleSelect() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='7. sample console list' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='7. console list' />
 
 
 
 ```go
-func SampleConsoleList() {
+func ConsoleList() {
 	title := "My Fave Things"
 	items := []list.Item{
 		{Label: "Raspberry Pi’s", Desc: "I have ’em all over my house"},
@@ -170,12 +170,12 @@ func SampleConsoleList() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='8. sample console progress' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='8. console progress' />
 
 
 
 ```go
-func SampleConsoleProgress() {
+func ConsoleProgress() {
 	// first param is fail message
 	// second param is done message
 	// third param is increment percent (default 0.25)
@@ -183,22 +183,22 @@ func SampleConsoleProgress() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='9. sample console realtime' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='9. console realtime' />
 
 
 
 ```go
-func SampleConsoleRealtime() {
+func ConsoleRealtime() {
 	realtime.Run()
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='10. sample console choice' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='10. console choice' />
 
 
 
 ```go
-func SampleConsoleChoice() {
+func ConsoleChoice() {
 	question := "What's your favorite flavor?"
 	options := []string{"Taro", "Coffee", "Lychee"}
 
@@ -209,72 +209,72 @@ func SampleConsoleChoice() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='11. sample console spinner' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='11. console spinner' />
 
 
 
 ```go
-func SampleConsoleSpinner() {
+func ConsoleSpinner() {
 	spinner.Run()
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='12. sample console split' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='12. console split' />
 
 
 
 ```go
-func SampleConsoleSplit() {
+func ConsoleSplit() {
 	split.Run()
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='13. sample console stopwatch' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='13. console stopwatch' />
 
 
 
 ```go
-func SampleConsoleStopwatch() {
+func ConsoleStopwatch() {
 	stopwatch.Run()
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='14. sample console table' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='14. console table' />
 
 
 
 ```go
-func SampleConsoleTable() {
+func ConsoleTable() {
 	table.Run()
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='15. sample console countdown' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='15. console countdown' />
 
 
 
 ```go
-func SampleConsoleCountdown() {
+func ConsoleCountdown() {
 	countdown.Run()
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='16. sample console sequence' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='16. console sequence' />
 
 
 
 ```go
-func SampleConsoleSequence() {
+func ConsoleSequence() {
 	sequence.Run()
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='17. sample console inline' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='17. console inline' />
 
 
 
 ```go
-func SampleConsoleInline() {
+func ConsoleInline() {
 	customMode := &inline.Mode{
 		AltscreenMode: " altscreen mode ", // string will be displayed when switch to altscreen mode
 		InlineMode:    " inline mode ",    // string will be displayed when switch to inline mode
@@ -284,32 +284,32 @@ func SampleConsoleInline() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='18. sample console parallel' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='18. console parallel' />
 
 
 
 ```go
-func SampleConsoleParallel() {
+func ConsoleParallel() {
 	parallel.Run()
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='19. sample console dir' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='19. console dir' />
 
 
 
 ```go
-func SampleConsoleDir() {
+func ConsoleDir() {
 	dir.Run()
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='20. sample console glamour' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='20. console glamour' />
 
 
 
 ```go
-func SampleConsoleGlamour() {
+func ConsoleGlamour() {
 	const content = `
 # Today’s Menu
 

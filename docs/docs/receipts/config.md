@@ -1,5 +1,5 @@
 
-# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.25rem 0.75rem 0.25rem 0;' type='info' text='🔖 Config' />
+# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.35rem 0.75rem 0.35rem 0;' type='info' text='🔖 Config' />
 
 
 ```go
@@ -9,12 +9,12 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. sample config json' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='1. config json' />
 
-
+Description: Read JSON configuration file<br>
 
 ```go
-func SampleConfigJson() {
+func ConfigJson() {
 	type configuration struct {
 		Users  []string
 		Groups []string
@@ -31,12 +31,12 @@ func SampleConfigJson() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='2. sample config toml' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='2. config toml' />
 
-
+Description: Read TOML configuration file<br>
 
 ```go
-func SampleConfigToml() {
+func ConfigToml() {
 	type configuration struct {
 		Mysql struct {
 			Host     string
@@ -59,12 +59,12 @@ func SampleConfigToml() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='3. sample config yaml' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='3. config yaml' />
 
-
+Description: Read YAML configuration file<br>
 
 ```go
-func SampleConfigYaml() {
+func ConfigYaml() {
 	type configuration struct {
 		Server struct {
 			Port string `envconfig:"SERVER_PORT"`

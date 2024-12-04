@@ -1,5 +1,5 @@
 
-# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.25rem 0.75rem 0.25rem 0;' type='info' text='🔖 Net' />
+# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.35rem 0.75rem 0.35rem 0;' type='info' text='🔖 Net' />
 
 
 ```go
@@ -9,12 +9,12 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. sample net check' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='1. net check' />
 
 
 
 ```go
-func SampleNetCheck() {
+func NetCheck() {
 	ok, err := gouse.CheckHref("https://google.com")
 	if err != nil {
 		panic(err)
@@ -23,12 +23,12 @@ func SampleNetCheck() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='2. sample net check with status code' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='2. net check with status code' />
 
 Description: Check if a URL is valid<br>Input params: (url)<br>
 
 ```go
-func SampleNetCheckWithStatusCode() {
+func NetCheckWithStatusCode() {
 	statusCode, err := gouse.CheckHrefStatusCode("https://google.com")
 	if err != nil {
 		panic(err)
@@ -37,12 +37,12 @@ func SampleNetCheckWithStatusCode() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='3. sample net connect time' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='3. net connect time' />
 
 Description: Calculate the time it takes to connect to a URL<br>Input params: (url)<br>
 
 ```go
-func SampleNetConnectTime() {
+func NetConnectTime() {
 	connectTime, err := gouse.HrefConnectTime("https://google.com")
 	if err != nil {
 		panic(err)
@@ -52,32 +52,32 @@ func SampleNetConnectTime() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='4. sample net encode' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='4. net encode' />
 
 Description: Encode a URL<br>Input params: (url)<br>
 
 ```go
-func SampleNetEncode() {
+func NetEncode() {
 	println("Encode: ", gouse.EncodeHref("https://google.com"))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='5. sample net decode' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='5. net decode' />
 
 Description: Decode a URL<br>Input params: (url)<br>
 
 ```go
-func SampleNetDecode() {
+func NetDecode() {
 	println("Decode: ", gouse.DecodeHref("https%3A%2F%2Fgoogle.com"))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='6. sample net header' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='6. net header' />
 
 Description: Get the header of a URL<br>Input params: (url)<br>
 
 ```go
-func SampleNetHeader() {
+func NetHeader() {
 	header, err := gouse.HrefHeader("https://google.com")
 	if err != nil {
 		panic(err)
@@ -87,43 +87,43 @@ func SampleNetHeader() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='7. sample api port checker' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='7. api port checker' />
 
 Description: Check if a port is open<br>Input params: (protocol, hostname, port)<br>
 
 ```go
-func SampleApiPortChecker() {
+func ApiPortChecker() {
 	open := gouse.CheckPort("tcp", "localhost", 1313)
 	fmt.Printf("Port Open: %t\n", open)
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='8. sample api port scanner' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='8. api port scanner' />
 
 Description: Scan for open ports on a given host.<br>Input params: (protocol, hostname, start port, end port)<br>
 
 ```go
-func SampleApiPortScanner() {
+func ApiPortScanner() {
 	gouse.ScanPort("tcp", "127.0.0.1", 3000, 8080)
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='9. sample net proxy' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='9. net proxy' />
 
 Description: Proxy wrapper to another port<br>Input params: (port, []string{urls})<br>
 
 ```go
-func SampleNetProxy() {
+func NetProxy() {
 	gouse.Proxy("5000", []string{"http://localhost:3000", "http://localhost:3001"})
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='10. sample net open' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='10. net open' />
 
 Description: Open a URL in the default browser<br>Input params: (url)<br>
 
 ```go
-func SampleNetOpen() {
+func NetOpen() {
 	gouse.OpenHref("https://google.com")
 }
 ```

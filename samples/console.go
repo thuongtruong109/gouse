@@ -24,20 +24,20 @@ import (
 	"github.com/thuongtruong109/gouse/console/table"
 )
 
-func SampleConsoleCmd() {
+func ConsoleCmd() {
 	gouse.Cmd("echo command is working")
 
 	// first param is default command, second param is windows command (default is empty)
 	gouse.Cmd("ls", "clear")
 }
 
-func SampleConsoleClear() {
+func ConsoleClear() {
 	println("console will be cleared now")
 	gouse.Cls()
 	println("console cleared")
 }
 
-func SampleConsoleWithColor() {
+func ConsoleWithColor() {
 	gouse.PrintColor(gouse.DEFAULT_FG, "this is default")
 	gouse.PrintColor(gouse.WHITE_FG, "this is white")
 	gouse.PrintColor(gouse.RED_FG, "this is red")
@@ -48,13 +48,13 @@ func SampleConsoleWithColor() {
 	gouse.PrintColor(gouse.CYAN_FG, "this is cyan")
 }
 
-func SampleConsoleBanner() {
+func ConsoleBanner() {
 	// param1: font name, param2: your input string
 	gouse.Banner(gouse.DOUBLE_ALPHA, "gouse - type double")
 	gouse.Banner(gouse.DOUBLE_ALPHA, "gouse - type single")
 }
 
-func SampleConsoleHelp() {
+func ConsoleHelp() {
 	name := "myprogram"
 	options := []*gouse.IHelpOptions{
 		{
@@ -88,7 +88,7 @@ func SampleConsoleHelp() {
 	// }
 }
 
-func SampleConsoleSelect() {
+func ConsoleSelect() {
 	optconsolens := []string{"a", "b", "c"}
 	selected, err := gouse.Select("Select an optconsolen:", optconsolens)
 	if err != nil {
@@ -98,7 +98,7 @@ func SampleConsoleSelect() {
 	println("You selected: ", selected)
 }
 
-func SampleConsoleList() {
+func ConsoleList() {
 	title := "My Fave Things"
 	items := []list.Item{
 		{Label: "Raspberry Pi’s", Desc: "I have ’em all over my house"},
@@ -129,22 +129,22 @@ func SampleConsoleList() {
 	list.Default(title, items)
 }
 
-// func SampleConsolePaper() {
+// func ConsolePaper() {
 // 	paper.Run("main.go")
 // }
 
-func SampleConsoleProgress() {
+func ConsoleProgress() {
 	// first param is fail message
 	// second param is done message
 	// third param is increment percent (default 0.25)
 	progress.Run("^_^ Oh no, something went wrong", "✔️ Done!", 0.5)
 }
 
-func SampleConsoleRealtime() {
+func ConsoleRealtime() {
 	realtime.Run()
 }
 
-func SampleConsoleChoice() {
+func ConsoleChoice() {
 	question := "What's your favorite flavor?"
 	options := []string{"Taro", "Coffee", "Lychee"}
 
@@ -154,23 +154,23 @@ func SampleConsoleChoice() {
 	fmt.Printf("\n---\nYou chose %s!\n", update.Choice)
 }
 
-func SampleConsoleSpinner() {
+func ConsoleSpinner() {
 	spinner.Run()
 }
 
-func SampleConsoleSplit() {
+func ConsoleSplit() {
 	split.Run()
 }
 
-func SampleConsoleStopwatch() {
+func ConsoleStopwatch() {
 	stopwatch.Run()
 }
 
-func SampleConsoleTable() {
+func ConsoleTable() {
 	table.Run()
 }
 
-// func SampleConsoleTab() {
+// func ConsoleTab() {
 // 	// tabContent items must be same length with tabs items
 // 	// and according to similar order in tabs
 // 	tabs := []string{"Lip Gloss", "Blush", "Eye Shadow", "Mascara", "Foundation"}
@@ -181,15 +181,15 @@ func SampleConsoleTable() {
 // 	tab.Run(tabs, tabContent)
 // }
 
-func SampleConsoleCountdown() {
+func ConsoleCountdown() {
 	countdown.Run()
 }
 
-func SampleConsoleSequence() {
+func ConsoleSequence() {
 	sequence.Run()
 }
 
-func SampleConsoleInline() {
+func ConsoleInline() {
 	customMode := &inline.Mode{
 		AltscreenMode: " altscreen mode ", // string will be displayed when switch to altscreen mode
 		InlineMode:    " inline mode ",    // string will be displayed when switch to inline mode
@@ -198,15 +198,15 @@ func SampleConsoleInline() {
 	inline.Run(customMode)
 }
 
-func SampleConsoleParallel() {
+func ConsoleParallel() {
 	parallel.Run()
 }
 
-func SampleConsoleDir() {
+func ConsoleDir() {
 	dir.Run()
 }
 
-func SampleConsoleGlamour() {
+func ConsoleGlamour() {
 	const content = `
 # Today’s Menu
 

@@ -1,5 +1,5 @@
 
-# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.25rem 0.75rem 0.25rem 0;' type='info' text='🔖 Struct' />
+# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.35rem 0.75rem 0.35rem 0;' type='info' text='🔖 Struct' />
 
 
 ```go
@@ -9,12 +9,12 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. sample struct add' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='1. struct add' />
 
 
 
 ```go
-func SampleStructAdd() {
+func StructAdd() {
 	type Add_Person struct {
 		Name  string
 		Age   int
@@ -37,12 +37,12 @@ func SampleStructAdd() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='2. sample struct clone' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='2. struct clone' />
 
 
 
 ```go
-func SampleStructClone() {
+func StructClone() {
 	type Clone_Person struct {
 		Name  string
 		Age   int
@@ -65,12 +65,12 @@ func SampleStructClone() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='3. sample struct get' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='3. struct get' />
 
 
 
 ```go
-func SampleStructGet() {
+func StructGet() {
 	type Get_Person struct {
 		Name  string
 		Age   int
@@ -88,12 +88,12 @@ func SampleStructGet() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='4. sample struct has' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='4. struct has' />
 
 
 
 ```go
-func SampleStructHas() {
+func StructHas() {
 	type Has_Person struct {
 		Name  string
 		Age   int
@@ -114,12 +114,12 @@ func SampleStructHas() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='5. sample struct merge' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='5. struct merge' />
 
 
 
 ```go
-func SampleStructMerge() {
+func StructMerge() {
 	type Merge_Person struct {
 		Name  string
 		Age   int
@@ -154,12 +154,12 @@ func SampleStructMerge() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='6. sample struct remove' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='6. struct remove' />
 
 
 
 ```go
-func SampleStructRemove() {
+func StructRemove() {
 	type Remove_Person struct {
 		Name  string
 		Age   int
@@ -176,12 +176,12 @@ func SampleStructRemove() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='7. sample struct set' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='7. struct set' />
 
 
 
 ```go
-func SampleStructSet() {
+func StructSet() {
 	type Set_Person struct {
 		Name  string
 		Age   int

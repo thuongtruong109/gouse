@@ -6,7 +6,7 @@ import (
 	"github.com/thuongtruong109/gouse"
 )
 
-func SampleNetCheck() {
+func NetCheck() {
 	ok, err := gouse.CheckHref("https://google.com")
 	if err != nil {
 		panic(err)
@@ -18,7 +18,7 @@ func SampleNetCheck() {
 Description: Check if a URL is valid
 Input params: (url)
 */
-func SampleNetCheckWithStatusCode() {
+func NetCheckWithStatusCode() {
 	statusCode, err := gouse.CheckHrefStatusCode("https://google.com")
 	if err != nil {
 		panic(err)
@@ -30,7 +30,7 @@ func SampleNetCheckWithStatusCode() {
 Description: Calculate the time it takes to connect to a URL
 Input params: (url)
 */
-func SampleNetConnectTime() {
+func NetConnectTime() {
 	connectTime, err := gouse.HrefConnectTime("https://google.com")
 	if err != nil {
 		panic(err)
@@ -43,7 +43,7 @@ func SampleNetConnectTime() {
 Description: Encode a URL
 Input params: (url)
 */
-func SampleNetEncode() {
+func NetEncode() {
 	println("Encode: ", gouse.EncodeHref("https://google.com"))
 }
 
@@ -51,7 +51,7 @@ func SampleNetEncode() {
 Description: Decode a URL
 Input params: (url)
 */
-func SampleNetDecode() {
+func NetDecode() {
 	println("Decode: ", gouse.DecodeHref("https%3A%2F%2Fgoogle.com"))
 }
 
@@ -59,7 +59,7 @@ func SampleNetDecode() {
 Description: Get the header of a URL
 Input params: (url)
 */
-func SampleNetHeader() {
+func NetHeader() {
 	header, err := gouse.HrefHeader("https://google.com")
 	if err != nil {
 		panic(err)
@@ -72,7 +72,7 @@ func SampleNetHeader() {
 Description: Check if a port is open
 Input params: (protocol, hostname, port)
 */
-func SampleApiPortChecker() {
+func ApiPortChecker() {
 	open := gouse.CheckPort("tcp", "localhost", 1313)
 	fmt.Printf("Port Open: %t\n", open)
 }
@@ -81,7 +81,7 @@ func SampleApiPortChecker() {
 Description: Scan for open ports on a given host.
 Input params: (protocol, hostname, start port, end port)
 */
-func SampleApiPortScanner() {
+func ApiPortScanner() {
 	gouse.ScanPort("tcp", "127.0.0.1", 3000, 8080)
 }
 
@@ -89,7 +89,7 @@ func SampleApiPortScanner() {
 Description: Proxy wrapper to another port
 Input params: (port, []string{urls})
 */
-func SampleNetProxy() {
+func NetProxy() {
 	gouse.Proxy("5000", []string{"http://localhost:3000", "http://localhost:3001"})
 }
 
@@ -97,6 +97,6 @@ func SampleNetProxy() {
 Description: Open a URL in the default browser
 Input params: (url)
 */
-func SampleNetOpen() {
+func NetOpen() {
 	gouse.OpenHref("https://google.com")
 }

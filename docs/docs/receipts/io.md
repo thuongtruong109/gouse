@@ -1,5 +1,5 @@
 
-# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.25rem 0.75rem 0.25rem 0;' type='info' text='🔖 Io' />
+# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.35rem 0.75rem 0.35rem 0;' type='info' text='🔖 Io' />
 
 
 ```go
@@ -11,12 +11,12 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. sample io create path' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='1. io create path' />
 
  Samples for io path functions<br>
 
 ```go
-func SampleIoCreatePath() {
+func IoCreatePath() {
 	relativePath := "tmp/example.txt"
 
 	if err := gouse.CreatePath(relativePath); err != nil {
@@ -27,12 +27,12 @@ func SampleIoCreatePath() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='2. sample io read path' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='2. io read path' />
 
 
 
 ```go
-func SampleIoReadPath() {
+func IoReadPath() {
 	relativePath := "tmp/example.txt"
 
 	content, err := gouse.ReadPath(relativePath)
@@ -44,12 +44,12 @@ func SampleIoReadPath() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='3. sample io write path' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='3. io write path' />
 
 
 
 ```go
-func SampleIoWritePath() {
+func IoWritePath() {
 	relativePath := "tmp/example.txt"
 
 	newContent := []byte("This is a new content")
@@ -62,12 +62,12 @@ func SampleIoWritePath() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='4. sample io create dir' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='4. io create dir' />
 
 
 
 ```go
-func SampleIoCreateDir() {
+func IoCreateDir() {
 	err2 := gouse.CreateDir("tmp")
 	if err2 != nil {
 		println(err2.Error())
@@ -76,12 +76,12 @@ func SampleIoCreateDir() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='5. sample io current dir' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='5. io current dir' />
 
 
 
 ```go
-func SampleIoCurrentDir() {
+func IoCurrentDir() {
 	data, err := gouse.CurrentDir()
 	if err != nil {
 		println(err.Error())
@@ -92,12 +92,12 @@ func SampleIoCurrentDir() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='6. sample io hierarchy dir' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='6. io hierarchy dir' />
 
 
 
 ```go
-func SampleIoHierarchyDir() {
+func IoHierarchyDir() {
 	data, err := gouse.HierarchyDir(".")
 	if err != nil {
 		println(err.Error())
@@ -110,12 +110,12 @@ func SampleIoHierarchyDir() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='7. sample io check dir' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='7. io check dir' />
 
 
 
 ```go
-func SampleIoCheckDir() {
+func IoCheckDir() {
 	isExist, err1 := gouse.IsExistDir("tmp")
 	if err1 != nil {
 		println(err1.Error())
@@ -128,12 +128,12 @@ func SampleIoCheckDir() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='8. sample io ls dir' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='8. io ls dir' />
 
 
 
 ```go
-func SampleIoLsDir() {
+func IoLsDir() {
 	data, err := gouse.LsDir(".")
 	if err != nil {
 		println(err.Error())
@@ -146,12 +146,12 @@ func SampleIoLsDir() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='9. sample io remove dir' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='9. io remove dir' />
 
 
 
 ```go
-func SampleIoRemoveDir() {
+func IoRemoveDir() {
 	err3 := gouse.RemoveDir("tmp")
 	if err3 != nil {
 		println(err3.Error())
@@ -160,12 +160,12 @@ func SampleIoRemoveDir() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='10. sample io append to file' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='10. io append to file' />
 
 
 
 ```go
-func SampleIoAppendToFile() {
+func IoAppendToFile() {
 	err := gouse.AppendFile("data.json", []string{"this is data 3", "this is data 4"})
 	if err != nil {
 		println(err.Error())
@@ -174,12 +174,12 @@ func SampleIoAppendToFile() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='11. sample io clean file' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='11. io clean file' />
 
 
 
 ```go
-func SampleIoCleanFile() {
+func IoCleanFile() {
 	err := gouse.CleanFile("data.json")
 	if err != nil {
 		println(err.Error())
@@ -195,12 +195,12 @@ func SampleIoCleanFile() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='12. sample io copy file' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='12. io copy file' />
 
 
 
 ```go
-func SampleIoCopyFile() {
+func IoCopyFile() {
 	err := gouse.CopyFile("data.json", "data2.json")
 	if err != nil {
 		println(err.Error())
@@ -209,12 +209,12 @@ func SampleIoCopyFile() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='13. sample io create file' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='13. io create file' />
 
 
 
 ```go
-func SampleIoCreateFile() {
+func IoCreateFile() {
 	err := gouse.CreateFile("data.json")
 	if err != nil {
 		println(err.Error())
@@ -223,12 +223,12 @@ func SampleIoCreateFile() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='14. sample io file info' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='14. io file info' />
 
 
 
 ```go
-func SampleIoFileInfo() {
+func IoFileInfo() {
 	data, err := gouse.FileInfo("main.go")
 	if err != nil {
 		println(err.Error())
@@ -243,12 +243,12 @@ func SampleIoFileInfo() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='15. sample io check file' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='15. io check file' />
 
 
 
 ```go
-func SampleIoCheckFile() {
+func IoCheckFile() {
 	isExist, err := gouse.IsExistFile("data.json")
 	if err != nil {
 		println(err.Error())
@@ -261,12 +261,12 @@ func SampleIoCheckFile() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='16. sample io file obj' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='16. io file obj' />
 
 
 
 ```go
-func SampleIoFileObj() {
+func IoFileObj() {
 	type User struct {
 		Name string
 		Age  int
@@ -331,12 +331,12 @@ func SampleIoFileObj() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='17. sample io read file by line' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='17. io read file by line' />
 
 
 
 ```go
-func SampleIoReadFileByLine() {
+func IoReadFileByLine() {
 	data, err := gouse.ReadFileByLine("main.go")
 	if err != nil {
 		println(err.Error())
@@ -347,12 +347,12 @@ func SampleIoReadFileByLine() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='18. sample io remove file' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='18. io remove file' />
 
 
 
 ```go
-func SampleIoRemoveFile() {
+func IoRemoveFile() {
 	err := gouse.RemoveFile("data.json")
 	if err != nil {
 		println(err.Error())
@@ -361,12 +361,12 @@ func SampleIoRemoveFile() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='19. sample io rename file' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='19. io rename file' />
 
 
 
 ```go
-func SampleIoRenameFile() {
+func IoRenameFile() {
 	err := gouse.RenameFile("data.json", "data2.json")
 	if err != nil {
 		println(err.Error())
@@ -375,12 +375,12 @@ func SampleIoRenameFile() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='20. sample io truncate file' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='20. io truncate file' />
 
 
 
 ```go
-func SampleIoTruncateFile() {
+func IoTruncateFile() {
 	err := gouse.TruncateFile("data.json", 10)
 	if err != nil {
 		println(err.Error())
@@ -389,12 +389,12 @@ func SampleIoTruncateFile() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='21. sample io write to file' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='21. io write to file' />
 
 
 
 ```go
-func SampleIoWriteToFile() {
+func IoWriteToFile() {
 	err := gouse.WriteFile("data.json", []string{"this is data 1", "this is data 2"})
 	if err != nil {
 		println(err.Error())
@@ -403,12 +403,12 @@ func SampleIoWriteToFile() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='22. sample io zip' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='22. io zip' />
 
 
 
 ```go
-func SampleIoZip() {
+func IoZip() {
 	filesToZip := []string{"file1.txt", "file2.txt"}
 	zipFileName := "archive.zip"
 	err := gouse.Zip(zipFileName, filesToZip)
@@ -420,12 +420,12 @@ func SampleIoZip() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='23. sample io unzip' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='23. io unzip' />
 
 
 
 ```go
-func SampleIoUnzip() {
+func IoUnzip() {
 	destFolder := "unzipped"
 	zipFileName := "archive.zip"
 	err := gouse.Unzip(zipFileName, destFolder)

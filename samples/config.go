@@ -6,7 +6,10 @@ import (
 	"github.com/thuongtruong109/gouse"
 )
 
-func SampleConfigJson() {
+/*
+Description: Read JSON configuration file
+*/
+func ConfigJson() {
 	type configuration struct {
 		Users  []string
 		Groups []string
@@ -22,7 +25,10 @@ func SampleConfigJson() {
 	fmt.Println("Groups:", myConf.Groups)
 }
 
-func SampleConfigToml() {
+/*
+Description: Read TOML configuration file
+*/
+func ConfigToml() {
 	type configuration struct {
 		Mysql struct {
 			Host     string
@@ -44,7 +50,10 @@ func SampleConfigToml() {
 	fmt.Println("Mysql Database:", myConf.Mysql.Database)
 }
 
-func SampleConfigYaml() {
+/*
+Description: Read YAML configuration file
+*/
+func ConfigYaml() {
 	type configuration struct {
 		Server struct {
 			Port string `envconfig:"SERVER_PORT"`

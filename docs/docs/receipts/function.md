@@ -1,5 +1,5 @@
 
-# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.25rem 0.75rem 0.25rem 0;' type='info' text='🔖 Function' />
+# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.35rem 0.75rem 0.35rem 0;' type='info' text='🔖 Function' />
 
 
 ```go
@@ -10,12 +10,12 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. sample func delay' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='1. func delay' />
 
 
 
 ```go
-func SampleFuncDelay() {
+func FuncDelay() {
 	println("Delay start:")
 
 	result := gouse.DelayF(func() string {
@@ -34,24 +34,24 @@ func SampleFuncDelay() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='2. sample func interval' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='2. func interval' />
 
 
 
 ```go
-func SampleFuncInterval() {
+func FuncInterval() {
 	gouse.IntervalFunc(func() {
 		println("Interval")
 	}, 1)
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='3. sample func lock' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='3. func lock' />
 
 
 
 ```go
-func SampleFuncLock() {
+func FuncLock() {
 	oneInOneOutLockFunc := gouse.LockFunc(func(i interface{}) interface{} {
 		return i
 	}).(func(interface{}) interface{})("one input - one output")
@@ -77,12 +77,12 @@ func SampleFuncLock() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='4. sample func parallel' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='4. func parallel' />
 
 
 
 ```go
-func SampleFuncParallel() {
+func FuncParallel() {
 	function1 := func() {
 		for i := 0; i < 5; i++ {
 			time.Sleep(100 * time.Millisecond)
@@ -108,24 +108,24 @@ func SampleFuncParallel() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='5. sample func remain' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='5. func remain' />
 
 
 
 ```go
-func SampleFuncRemain() {
+func FuncRemain() {
 	gouse.RemainFunc(func() {
 		println("Times")
 	}, 3)
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='6. sample func retry' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='6. func retry' />
 
 
 
 ```go
-func SampleFuncRetry() {
+func FuncRetry() {
 	gouse.RetryFunc(func() error {
 		println("Retry")
 		return nil
@@ -133,12 +133,12 @@ func SampleFuncRetry() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='7. sample func run time' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='7. func run time' />
 
 
 
 ```go
-func SampleFuncRunTime() {
+func FuncRunTime() {
 	exampleFunc := func() {
 		time.Sleep(2 * time.Second)
 		fmt.Println("Task completed.")

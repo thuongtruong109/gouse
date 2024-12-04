@@ -1,5 +1,5 @@
 
-# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.25rem 0.75rem 0.25rem 0;' type='info' text='🔖 String' />
+# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.35rem 0.75rem 0.35rem 0;' type='info' text='🔖 String' />
 
 
 ```go
@@ -9,146 +9,146 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. sample string capitalize' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='1. string capitalize' />
 
 
 
 ```go
-func SampleStringCapitalize() {
+func StringCapitalize() {
 	var str = "hello world"
 	println(gouse.Capitalize(str))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='2. sample string camel case' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='2. string camel case' />
 
 
 
 ```go
-func SampleStringCamelCase() {
+func StringCamelCase() {
 	var str = "convert_any-string TO-camelCase in Go! 123"
 	println("Convert string to Camel Case: ", gouse.CamelCase(str))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='3. sample string snake case' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='3. string snake case' />
 
 
 
 ```go
-func SampleStringSnakeCase() {
+func StringSnakeCase() {
 	var str1 = "hello world"
 	var str2 = "ConvertThisString123"
 	println("Convert string to Snake Case: ", gouse.SnakeCase(str1), gouse.SnakeCase(str2))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='4. sample string kebab case' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='4. string kebab case' />
 
 
 
 ```go
-func SampleStringKebabCase() {
+func StringKebabCase() {
 	var str = "hello world"
 	println("Convert string to Kebab Case: ", gouse.KebabCase(str))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='5. sample string is letter' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='5. string is letter' />
 
 
 
 ```go
-func SampleStringIsLetter() {
+func StringIsLetter() {
 	var str = "hello world"
 	println("Check is letter character: ", gouse.IsLetter(str[0]))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='6. sample string is digit' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='6. string is digit' />
 
 
 
 ```go
-func SampleStringIsDigit() {
+func StringIsDigit() {
 	var str = "1hello world"
 	println("Check is number character: ", gouse.IsDigit(str[0]))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='7. sample string includes' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='7. string includes' />
 
 
 
 ```go
-func SampleStringIncludes() {
+func StringIncludes() {
 	var str = "hello world, this is world"
 	println("Check substring in string: ", gouse.Includes(str, "world"))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='8. sample string is lower' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='8. string is lower' />
 
 
 
 ```go
-func SampleStringIsLower() {
+func StringIsLower() {
 	var str = "hELLO WORLD"
 	println("Check is lower string: ", gouse.IsLower(str[0]))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='9. sample string is upper' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='9. string is upper' />
 
 
 
 ```go
-func SampleStringIsUpper() {
+func StringIsUpper() {
 	var str = "Hello world"
 	println("Check is upper string: ", gouse.IsUpper(str[0]))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='10. sample string split' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='10. string split' />
 
 
 
 ```go
-func SampleStringSplit() {
+func StringSplit() {
 	var str = "hello world"
 	fmt.Println("Split string by separator: ", gouse.Split(str, "l"))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='11. sample string words' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='11. string words' />
 
 
 
 ```go
-func SampleStringWords() {
+func StringWords() {
 	var str = "hello world"
 	println("Split string to array of words: ", gouse.Words(str))
 
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='12. sample string reverse' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='12. string reverse' />
 
 
 
 ```go
-func SampleStringReverse() {
+func StringReverse() {
 	var str = "hello world"
 	println("Reverse string: ", gouse.Reverse(str))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='13. sample string lower' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='13. string lower' />
 
 
 
 ```go
-func SampleStringLower() {
+func StringLower() {
 	var str = "HELLO WORLD"
 	println("Lower string (string): ", gouse.Lowers(str))
 	println("Lower string (byte): ", gouse.Lower(str[0]))
@@ -156,12 +156,12 @@ func SampleStringLower() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='14. sample string upper' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='14. string upper' />
 
 
 
 ```go
-func SampleStringUpper() {
+func StringUpper() {
 	var str = "hello world"
 	println("Upper string (string): ", gouse.Uppers(str))
 	println("Upper string (byte): ", gouse.Upper(str[0]))
@@ -169,46 +169,46 @@ func SampleStringUpper() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='15. sample string repeat' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='15. string repeat' />
 
 
 
 ```go
-func SampleStringRepeat() {
+func StringRepeat() {
 	var str = "hello world"
 	println("Repeat string: ", gouse.Repeat(str, 3))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='16. sample string truncate' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='16. string truncate' />
 
 
 
 ```go
-func SampleStringTruncate() {
+func StringTruncate() {
 	var str = "hello world"
 	println("Truncate string (default): ", gouse.Truncate(str, 5))
 	println("Truncate string (custom): ", gouse.Truncate(str, 5, "***"))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='17. sample string replace' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='17. string replace' />
 
 
 
 ```go
-func SampleStringReplace() {
+func StringReplace() {
 	var str = "hello world, this is world"
 	println("Replace string: ", gouse.Replace(str, "world", "golang"))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='18. sample string trim' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='18. string trim' />
 
 
 
 ```go
-func SampleStringTrim() {
+func StringTrim() {
 	var str = "   hello world, this is world   "
 	println("Trim string: ", gouse.Trim(str))
 	println("Trim left string: ", gouse.LTrim(str))
@@ -216,68 +216,68 @@ func SampleStringTrim() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='19. sample string trim blank' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='19. string trim blank' />
 
 
 
 ```go
-func SampleStringTrimBlank() {
+func StringTrimBlank() {
 	println("Trim blank string: ", gouse.TrimBlank("   hello world, this is world   "))
 	println("Trim left blank string: ", gouse.TrimBlank("   hello world, this is world   \t"))
 	println("Trim right blank string: ", gouse.TrimBlank("   hello world, this is world   \n"))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='20. sample string trim prefix' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='20. string trim prefix' />
 
 
 
 ```go
-func SampleStringTrimPrefix() {
+func StringTrimPrefix() {
 	var str = "   hello world, this is world   "
 	println("Trim prefix string: ", gouse.TrimPrefix(str, "   "))
 	println("Trim suffix string: ", gouse.TrimSuffix(str, "   "))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='21. sample string trim suffix' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='21. string trim suffix' />
 
 
 
 ```go
-func SampleStringTrimSuffix() {
+func StringTrimSuffix() {
 	var str = "   hello world, this is world   "
 	println("Trim suffix string: ", gouse.TrimSuffix(str, "   "))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='22. sample string join' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='22. string join' />
 
 
 
 ```go
-func SampleStringJoin() {
+func StringJoin() {
 	var str = []string{"hello", "world"}
 	println("Join string: ", gouse.Join(str, "-"))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='23. sample string concat' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='23. string concat' />
 
 
 
 ```go
-func SampleStringConcat() {
+func StringConcat() {
 	println("Concat string: ", gouse.Concat("hello", "world"))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='24. sample string sub str' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='24. string sub str' />
 
 
 
 ```go
-func SampleStringSubStr() {
+func StringSubStr() {
 	var str = "hello world, this is world"
 	println("Sub string: ", gouse.SubStr(str, 0, 5))
 	println("Sub string: ", gouse.SubStr(str, 0, 1))
@@ -286,12 +286,12 @@ func SampleStringSubStr() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='25. sample string slice' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='25. string slice' />
 
 
 
 ```go
-func SampleStringSlice() {
+func StringSlice() {
 	var str = "hello world, this is world"
 	println("Slice string: ", gouse.Slice(str, 0, 5))
 	println("Slice string: ", gouse.Slice(str, 0, 1))
@@ -301,12 +301,12 @@ func SampleStringSlice() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='26. sample string splice' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='26. string splice' />
 
 
 
 ```go
-func SampleStringSplice() {
+func StringSplice() {
 	var str = "helloworld, this is world"
 	println("Splice string (default not replace): ", gouse.Splice(str, 0, 5))
 	println("Splice string (with replace): ", gouse.Splice(str, 1, 5, "golang"))
@@ -314,91 +314,91 @@ func SampleStringSplice() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='27. sample string starts with' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='27. string starts with' />
 
 
 
 ```go
-func SampleStringStartsWith() {
+func StringStartsWith() {
 	var str = "hello world, this is world"
 	println("Starts with: ", gouse.StartsWith(str, "hello"))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='28. sample string ends with' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='28. string ends with' />
 
 
 
 ```go
-func SampleStringEndsWith() {
+func StringEndsWith() {
 	var str = "hello world, this is world"
 	println("Ends with: ", gouse.EndsWith(str, "world"))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='29. sample string escape' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='29. string escape' />
 
 
 
 ```go
-func SampleStringEscape() {
+func StringEscape() {
 	var str = "This is a <b>bold</b> statement & \"quote\" – © ®"
 	println("Escape string: ", gouse.Escape(str))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='30. sample string unescape' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='30. string unescape' />
 
 
 
 ```go
-func SampleStringUnescape() {
+func StringUnescape() {
 	var str = "This is a &lt;b&gt;bold&lt;/b&gt; statement &amp; &quot;quote&quot; – © ®"
 	println("Unescape string: ", gouse.Unescape(str))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='31. sample string pad' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='31. string pad' />
 
 
 
 ```go
-func SampleStringPad() {
+func StringPad() {
 	var str = "hello world"
 	println("Pad-left string: ", gouse.PadStart(str, 20, '$'))
 	println("Pad-right string: ", gouse.PadEnd(str, 20, '@'))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='32. sample string count' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='32. string count' />
 
 
 
 ```go
-func SampleStringCount() {
+func StringCount() {
 	var str = "hello world wo wo"
 	println("Count words/substr in string (default): ", gouse.Count(str))
 	println("Count words/substr in string (with char): ", gouse.Count(str, "wo"))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='33. sample string lines' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='33. string lines' />
 
 
 
 ```go
-func SampleStringLines() {
+func StringLines() {
 	var str = "hello world\nwo wo"
 	println("Count lines of string: ", gouse.Lines(str))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='34. sample string index' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='34. string index' />
 
 
 
 ```go
-func SampleStringIndex() {
+func StringIndex() {
 	var str = "hello world, this is world"
 
 	f1, l1 := gouse.IndexSubStr(str, "l")
@@ -428,48 +428,48 @@ func SampleStringIndex() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='35. sample string random' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='35. string random' />
 
 
 
 ```go
-func SampleStringRandom() {
+func StringRandom() {
 	println("Random chain string: ", gouse.RandStr(10))
 
 	println("Random chain number: ", gouse.RandDigit(6))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='36. sample string at' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='36. string at' />
 
 
 
 ```go
-func SampleStringAt() {
+func StringAt() {
 	var str = "hello world"
 	println("At string: ", gouse.At(str, 1))
 	println("At string: ", gouse.At(str, -5))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='37. sample string code point at' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='37. string code point at' />
 
 
 
 ```go
-func SampleStringCodePointAt() {
+func StringCodePointAt() {
 	var str = "hello world"
 	println("Code point at string: ", gouse.CodePointAt(str, 1))
 	println("Code point at string: ", gouse.CodePointAt(str, -5))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='38. sample string code point' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='38. string code point' />
 
 
 
 ```go
-func SampleStringCodePoint() {
+func StringCodePoint() {
 	asciiValues := gouse.CodePoint("hello world")
 
 	print("Code point string: ")
@@ -479,23 +479,23 @@ func SampleStringCodePoint() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='39. sample string from code point at' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='39. string from code point at' />
 
 
 
 ```go
-func SampleStringFromCodePointAt() {
+func StringFromCodePointAt() {
 	println("From code point at string: ", gouse.FromCodePointAt(9733))
 	println("From code point at string: ", gouse.FromCodePointAt(9731))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='40. sample string from code point' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='40. string from code point' />
 
 
 
 ```go
-func SampleStringFromCodePoint() {
+func StringFromCodePoint() {
 	println("From code point string: ", gouse.FromCodePoint(104, 101, 108, 108, 111, 32, 119, 111, 114, 108, 100))
 }
 ```

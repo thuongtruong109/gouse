@@ -1,5 +1,5 @@
 
-# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.25rem 0.75rem 0.25rem 0;' type='info' text='🔖 Os' />
+# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.35rem 0.75rem 0.35rem 0;' type='info' text='🔖 Os' />
 
 
 ```go
@@ -9,12 +9,12 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. sample os cpu' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='1. os cpu' />
 
 
 
 ```go
-func SampleOsCpu() {
+func OsCpu() {
 	cpuInfo, err := gouse.CPU()
 	if err != nil {
 		fmt.Println("Error: ", err)
@@ -29,12 +29,12 @@ func SampleOsCpu() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='2. sample os disk' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='2. os disk' />
 
 
 
 ```go
-func SampleOsDisk() {
+func OsDisk() {
 	diskInfo, err := gouse.Disk()
 	if err != nil {
 		fmt.Println("Error: ", err)
@@ -49,12 +49,12 @@ func SampleOsDisk() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='3. sample os system' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='3. os system' />
 
 
 
 ```go
-func SampleOsSystem() {
+func OsSystem() {
 	systemInfo, err := gouse.System()
 	if err != nil {
 		fmt.Println("Error: ", err)
@@ -74,12 +74,12 @@ func SampleOsSystem() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='4. sample os profile' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='4. os profile' />
 
 
 
 ```go
-func SampleOsProfile() {
+func OsProfile() {
 	var cpuprofile, memprofile = "cpu.pprof", "mem.pprof"
 	gouse.Profile(cpuprofile, memprofile)
 

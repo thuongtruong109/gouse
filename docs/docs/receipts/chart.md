@@ -1,5 +1,5 @@
 
-# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.25rem 0.75rem 0.25rem 0;' type='info' text='🔖 Chart' />
+# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.35rem 0.75rem 0.35rem 0;' type='info' text='🔖 Chart' />
 
 
 ```go
@@ -8,12 +8,12 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. sample chart bar' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='1. chart bar' />
 
-
+Description: Create a bar chart and export it to a html file<br>
 
 ```go
-func SampleChartBar() {
+func ChartBar() {
 	newChart := &gouse.IBarChartOpts{
 		Output:   "test_sample_data/bar.html",
 		Title:    "Bar chart in Go",
@@ -30,12 +30,12 @@ func SampleChartBar() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='2. sample chart line' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='2. chart line' />
 
-
+Description: Create a line chart and export it to a html file<br>
 
 ```go
-func SampleChartLine() {
+func ChartLine() {
 	newChart := &gouse.ILineChartOpts{
 		Output:   "test_sample_data/line.html",
 		Title:    "Line chart in Go",
@@ -51,12 +51,12 @@ func SampleChartLine() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='3. sample chart pie' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='3. chart pie' />
 
-
+Description: Create a pie chart and export it to a html file<br>
 
 ```go
-func SampleChartPie() {
+func ChartPie() {
 	newChart := &gouse.IPieChartOpts{
 		Output:    "test_sample_data/pie.html",
 		Title:     "Pie chart in Go",

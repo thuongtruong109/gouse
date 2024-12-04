@@ -1,5 +1,5 @@
 
-# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.25rem 0.75rem 0.25rem 0;' type='info' text='🔖 Cache' />
+# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.35rem 0.75rem 0.35rem 0;' type='info' text='🔖 Cache' />
 
 
 ```go
@@ -10,12 +10,12 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. sample cache local' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='1. cache local' />
 
-
+Description: Cache local values<br>
 
 ```go
-func SampleCacheLocal() {
+func CacheLocal() {
 	newCache := gouse.NewLocalCache()
 	newCache.SetLocalCache("key1", "local cache value 1")
 	newCache.SetLocalCache("key2", "local cache value 2")
@@ -48,12 +48,12 @@ func SampleCacheLocal() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='2. sample cache tmp' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='2. cache tmp' />
 
-
+Description: Cache temporary values (with expiration time)<br>
 
 ```go
-func SampleCacheTmp() {
+func CacheTmp() {
 	newCache := gouse.NewTmpCache(gouse.ToSecond(3))
 	newCache.SetTmpCache("key1", "temp cache value 1", gouse.ToSecond(3))
 	newCache.SetTmpCache("key2", "temp cache value 2", gouse.ToSecond(6))

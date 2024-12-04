@@ -1,5 +1,5 @@
 
-# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.25rem 0.75rem 0.25rem 0;' type='info' text='🔖 Type' />
+# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.35rem 0.75rem 0.35rem 0;' type='info' text='🔖 Type' />
 
 
 ```go
@@ -9,12 +9,12 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. sample type string convert' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='1. type string convert' />
 
 
 
 ```go
-func SampleTypeStringConvert() {
+func TypeStringConvert() {
 	println("Convert string to int: ", gouse.StringToInt("1"))
 	fmt.Println("Convert string to float: ", gouse.StringToFloat("1.1"))
 	println("Convert string to bool: ", gouse.StringToBool("true"))
@@ -23,12 +23,12 @@ func SampleTypeStringConvert() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='2. sample type cast to string' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='2. type cast to string' />
 
 
 
 ```go
-func SampleTypeCastToString() {
+func TypeCastToString() {
 	println("Cast int to string: ", gouse.IntToString(1))
 	fmt.Println("Cast float to string: ", gouse.FloatToString(1.1))
 	println("Cast bool to string: ", gouse.BoolToString(true))
@@ -38,12 +38,12 @@ func SampleTypeCastToString() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='3. sample type struct convert' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='3. type struct convert' />
 
 
 
 ```go
-func SampleTypeStructConvert() {
+func TypeStructConvert() {
 	type CompanyInfo struct {
 		Company string
 		Address string
@@ -61,12 +61,12 @@ func SampleTypeStructConvert() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='4. sample type check' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='4. type check' />
 
 
 
 ```go
-func SampleTypeCheck() {
+func TypeCheck() {
 	println("Check type is int: ", gouse.IsInt(1))
 	println("Check type is uint: ", gouse.IsUnInt(-1))
 	println("Check type is float: ", gouse.IsFloat(1.1))
@@ -93,12 +93,12 @@ func SampleTypeCheck() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='5. sample type check u u i d' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='5. type check u u i d' />
 
 
 
 ```go
-func SampleTypeCheckUUID() {
+func TypeCheckUUID() {
 	isValid, err := gouse.IsUUID("123e4567-e89b-12d3-a456-426614174000")
 	if err != nil {
 		println(err.Error())
@@ -107,12 +107,12 @@ func SampleTypeCheckUUID() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='6. sample type check gmail' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='6. type check gmail' />
 
 
 
 ```go
-func SampleTypeCheckGmail() {
+func TypeCheckGmail() {
 	println("--- Check valid gmail ---")
 	for _, email := range emails {
 		isEmail, err := gouse.IsGmail(email)
@@ -127,12 +127,12 @@ func SampleTypeCheckGmail() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='7. sample type check yahoo' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='7. type check yahoo' />
 
 
 
 ```go
-func SampleTypeCheckYahoo() {
+func TypeCheckYahoo() {
 	println("--- Check valid yahoo ---")
 	for _, email := range emails {
 		isEmail, err := gouse.IsYahoo(email)
@@ -147,12 +147,12 @@ func SampleTypeCheckYahoo() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='8. sample type check outlook' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='8. type check outlook' />
 
 
 
 ```go
-func SampleTypeCheckOutlook() {
+func TypeCheckOutlook() {
 	println("--- Check valid outlook ---")
 	for _, email := range emails {
 		isEmail, err := gouse.IsOutlook(email)
@@ -167,12 +167,12 @@ func SampleTypeCheckOutlook() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='9. sample type check edu' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='9. type check edu' />
 
 
 
 ```go
-func SampleTypeCheckEdu() {
+func TypeCheckEdu() {
 	println("--- Check valid education mail ---")
 	for _, email := range emails {
 		isEmail, err := gouse.IsEdu(email)
@@ -187,12 +187,12 @@ func SampleTypeCheckEdu() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='10. sample type check email' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='10. type check email' />
 
 
 
 ```go
-func SampleTypeCheckEmail() {
+func TypeCheckEmail() {
 	println("--- Check valid custom domain ---")
 	for _, email := range emails {
 		isEmail, err := gouse.IsEmail(email, "edu.vn")
@@ -207,12 +207,12 @@ func SampleTypeCheckEmail() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='11. sample type check username' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='11. type check username' />
 
 
 
 ```go
-func SampleTypeCheckUsername() {
+func TypeCheckUsername() {
 	usernames := []string{
 		"okahehe",
 		"missingat.sign",
@@ -233,12 +233,12 @@ func SampleTypeCheckUsername() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='12. sample type check password' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='12. type check password' />
 
 
 
 ```go
-func SampleTypeCheckPassword() {
+func TypeCheckPassword() {
 	passwords := []string{
 		"okahehe",
 		"missingat.sign",
@@ -260,12 +260,12 @@ func SampleTypeCheckPassword() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='13. sample type check phone' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='13. type check phone' />
 
 
 
 ```go
-func SampleTypeCheckPhone() {
+func TypeCheckPhone() {
 	//  Note: Phone format syntax: +<country_calling_code> (<area_Prefix_mobile_code>) <phone_number>
 	// Reference at https://en.wikipedia.org/wiki/List_of_mobile_telephone_prefixes_by_country#:~:text=Property%20Value%20%20Country%20or%20unrecognized%20territory%20,73%20%20%20Etisalat%20%20%20www.etisalat.af%20
 	phoneNumbers := []string{

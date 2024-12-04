@@ -9,7 +9,7 @@ import (
 )
 
 /* Samples for io path functions */
-func SampleIoCreatePath() {
+func IoCreatePath() {
 	relativePath := "tmp/example.txt"
 
 	if err := gouse.CreatePath(relativePath); err != nil {
@@ -19,7 +19,7 @@ func SampleIoCreatePath() {
 	println("File created successfully.")
 }
 
-func SampleIoReadPath() {
+func IoReadPath() {
 	relativePath := "tmp/example.txt"
 
 	content, err := gouse.ReadPath(relativePath)
@@ -30,7 +30,7 @@ func SampleIoReadPath() {
 	fmt.Println("File content:", string(content))
 }
 
-func SampleIoWritePath() {
+func IoWritePath() {
 	relativePath := "tmp/example.txt"
 
 	newContent := []byte("This is a new content")
@@ -44,7 +44,7 @@ func SampleIoWritePath() {
 
 /* Directory functions */
 
-func SampleIoCreateDir() {
+func IoCreateDir() {
 	err2 := gouse.CreateDir("tmp")
 	if err2 != nil {
 		println(err2.Error())
@@ -52,7 +52,7 @@ func SampleIoCreateDir() {
 	println("dir created")
 }
 
-func SampleIoCurrentDir() {
+func IoCurrentDir() {
 	data, err := gouse.CurrentDir()
 	if err != nil {
 		println(err.Error())
@@ -62,7 +62,7 @@ func SampleIoCurrentDir() {
 	println(data)
 }
 
-func SampleIoHierarchyDir() {
+func IoHierarchyDir() {
 	data, err := gouse.HierarchyDir(".")
 	if err != nil {
 		println(err.Error())
@@ -74,7 +74,7 @@ func SampleIoHierarchyDir() {
 	}
 }
 
-func SampleIoCheckDir() {
+func IoCheckDir() {
 	isExist, err1 := gouse.IsExistDir("tmp")
 	if err1 != nil {
 		println(err1.Error())
@@ -86,7 +86,7 @@ func SampleIoCheckDir() {
 	}
 }
 
-func SampleIoLsDir() {
+func IoLsDir() {
 	data, err := gouse.LsDir(".")
 	if err != nil {
 		println(err.Error())
@@ -98,7 +98,7 @@ func SampleIoLsDir() {
 	}
 }
 
-func SampleIoRemoveDir() {
+func IoRemoveDir() {
 	err3 := gouse.RemoveDir("tmp")
 	if err3 != nil {
 		println(err3.Error())
@@ -108,7 +108,7 @@ func SampleIoRemoveDir() {
 
 /* File functions */
 
-func SampleIoAppendToFile() {
+func IoAppendToFile() {
 	err := gouse.AppendFile("data.json", []string{"this is data 3", "this is data 4"})
 	if err != nil {
 		println(err.Error())
@@ -116,7 +116,7 @@ func SampleIoAppendToFile() {
 	println("file appended")
 }
 
-func SampleIoCleanFile() {
+func IoCleanFile() {
 	err := gouse.CleanFile("data.json")
 	if err != nil {
 		println(err.Error())
@@ -131,7 +131,7 @@ func SampleIoCleanFile() {
 	println("file cleaned")
 }
 
-func SampleIoCopyFile() {
+func IoCopyFile() {
 	err := gouse.CopyFile("data.json", "data2.json")
 	if err != nil {
 		println(err.Error())
@@ -139,7 +139,7 @@ func SampleIoCopyFile() {
 	println("file copied")
 }
 
-func SampleIoCreateFile() {
+func IoCreateFile() {
 	err := gouse.CreateFile("data.json")
 	if err != nil {
 		println(err.Error())
@@ -147,7 +147,7 @@ func SampleIoCreateFile() {
 	println("file created")
 }
 
-func SampleIoFileInfo() {
+func IoFileInfo() {
 	data, err := gouse.FileInfo("main.go")
 	if err != nil {
 		println(err.Error())
@@ -161,7 +161,7 @@ func SampleIoFileInfo() {
 	fmt.Printf("File info (with system process): %+v\n", data.Sys)
 }
 
-func SampleIoCheckFile() {
+func IoCheckFile() {
 	isExist, err := gouse.IsExistFile("data.json")
 	if err != nil {
 		println(err.Error())
@@ -173,7 +173,7 @@ func SampleIoCheckFile() {
 	}
 }
 
-func SampleIoFileObj() {
+func IoFileObj() {
 	type User struct {
 		Name string
 		Age  int
@@ -237,7 +237,7 @@ func SampleIoFileObj() {
 	println("data written")
 }
 
-func SampleIoReadFileByLine() {
+func IoReadFileByLine() {
 	data, err := gouse.ReadFileByLine("main.go")
 	if err != nil {
 		println(err.Error())
@@ -247,7 +247,7 @@ func SampleIoReadFileByLine() {
 	}
 }
 
-func SampleIoRemoveFile() {
+func IoRemoveFile() {
 	err := gouse.RemoveFile("data.json")
 	if err != nil {
 		println(err.Error())
@@ -255,7 +255,7 @@ func SampleIoRemoveFile() {
 	println("file removed")
 }
 
-func SampleIoRenameFile() {
+func IoRenameFile() {
 	err := gouse.RenameFile("data.json", "data2.json")
 	if err != nil {
 		println(err.Error())
@@ -263,7 +263,7 @@ func SampleIoRenameFile() {
 	println("file renamed")
 }
 
-func SampleIoTruncateFile() {
+func IoTruncateFile() {
 	err := gouse.TruncateFile("data.json", 10)
 	if err != nil {
 		println(err.Error())
@@ -271,7 +271,7 @@ func SampleIoTruncateFile() {
 	println("file truncated to 10 bytes")
 }
 
-func SampleIoWriteToFile() {
+func IoWriteToFile() {
 	err := gouse.WriteFile("data.json", []string{"this is data 1", "this is data 2"})
 	if err != nil {
 		println(err.Error())
@@ -281,7 +281,7 @@ func SampleIoWriteToFile() {
 
 /* Utility functions */
 
-func SampleIoZip() {
+func IoZip() {
 	filesToZip := []string{"file1.txt", "file2.txt"}
 	zipFileName := "archive.zip"
 	err := gouse.Zip(zipFileName, filesToZip)
@@ -292,7 +292,7 @@ func SampleIoZip() {
 	println("Files zipped successfully:", zipFileName)
 }
 
-func SampleIoUnzip() {
+func IoUnzip() {
 	destFolder := "unzipped"
 	zipFileName := "archive.zip"
 	err := gouse.Unzip(zipFileName, destFolder)

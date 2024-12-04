@@ -6,8 +6,11 @@ import (
 	"github.com/thuongtruong109/gouse"
 )
 
-func SampleArrayChunk() {
-	println("--- Chunk array ---")
+/*
+Description: Chunk an array into smaller arrays of a specified size
+Input params: (array, size)
+*/
+func ArrayChunk() {
 	fmt.Println("[int]: ", gouse.Chunk([]int{1, -2, 3, -4, 5, 6}, 3))
 	fmt.Println("[uint]: ", gouse.Chunk([]uint{1, 2, 3, 4, 5, 6}, 3))
 	fmt.Println("[float]: ", gouse.Chunk([]float64{1.2, 2.3, 3.4, 4.5, 5.6, 6.7}, 3))
@@ -17,13 +20,20 @@ func SampleArrayChunk() {
 	fmt.Println("[struct]: ", gouse.Chunk([]struct{ a int }{{1}, {2}, {3}, {4}, {5}, {6}}, 3))
 }
 
-func SampleArrayCompact() {
+/*
+Description: Removing falsy values (false, null, 0, "", undefined, and NaN) from an array
+Input params: (array)
+*/
+func ArrayCompact() {
 	result := gouse.Compact([]interface{}{1, -2, 3, -4, 5, 6, 0, 0.0, "", false, nil})
 	fmt.Println("Compact remove all falsy values: ", result)
 }
 
-func SampleArrayDiff() {
-	println("--- Difference array ---")
+/*
+Description: Check difference items between two arrays
+Input params: (array1, array2)
+*/
+func ArrayDifference() {
 	fmt.Println("[int]: ", gouse.Diff([]int{1, -2, 3, -4, 5, 6}, []int{1, 2, 3, 4, 5, 6}))
 	fmt.Println("[uint]: ", gouse.Diff([]uint{1, 2, 3, 4, 5, 7}, []uint{1, 2, 3, 4, 5, 6}))
 	fmt.Println("[float]: ", gouse.Diff([]float64{1.2, 2.3, 3.4}, []float64{4.5, 5.6, 6.7}))
@@ -33,8 +43,11 @@ func SampleArrayDiff() {
 	fmt.Println("[struct]: ", gouse.Diff([]struct{ a int }{{-1}, {-2}, {3}, {4}, {5}, {6}}, []struct{ a int }{{1}, {2}}))
 }
 
-func SampleArrayDrop() {
-	println("--- Drop elements in array (default n = 1) ---")
+/*
+Description: Drop n elements in array (default n = 1)
+Input params: (array, n)
+*/
+func ArrayDrop() {
 	fmt.Println("[int] with default: ", gouse.Drop([]int{1, -2, 3, -4, 5, 6}))
 	fmt.Println("[int]: ", gouse.Drop([]int{1, -2, 3, -4, 5, 6}, 2))
 	fmt.Println("[uint]: ", gouse.Drop([]uint{1, 2, 3, 4, 5, 7}, 2))
@@ -45,8 +58,11 @@ func SampleArrayDrop() {
 	fmt.Println("[struct]: ", gouse.Drop([]struct{ a int }{{-1}, {-2}, {3}, {4}, {5}, {6}}, 2))
 }
 
-func SampleArrayEqual() {
-	println("--- Compare equal ---")
+/*
+Description: Compare is equal between two elements
+Input params: (element1, element2)
+*/
+func ArrayEqual() {
 	println("[int]: ", gouse.Equal(1, 1))
 	println("[uint]: ", gouse.Equal(uint(1), uint(1)))
 	println("[float]: ", gouse.Equal(1.2, 1.1))
@@ -57,8 +73,11 @@ func SampleArrayEqual() {
 	println("[struct]: ", gouse.Equal(struct{ a int }{1}, struct{ a int }{1}))
 }
 
-func SampleArrayFilterBy() {
-	println("--- Filter elements in array by pass condition in callback function---")
+/*
+Description: Filter elements in array by pass condition in callback function
+Input params: (array, callback)
+*/
+func ArrayFilterBy() {
 	println("[int]: ", gouse.FilterBy([]int{1, -2, 3, -4, 5, 6}, func(v int) bool {
 		return v > 2
 	}))
@@ -88,8 +107,11 @@ func SampleArrayFilterBy() {
 	}))
 }
 
-func SampleArrayFindBy() {
-	println("--- Find element in array by pass condition in callback function---")
+/*
+Description: Find element in array by pass condition in callback function
+Input params: (array, callback)
+*/
+func ArrayFindBy() {
 	println("[int]: ", gouse.FindBy([]int{1, -2, 3, -4, 5, 6}, func(v int) bool {
 		return v == 3
 	}))
@@ -119,8 +141,11 @@ func SampleArrayFindBy() {
 	}))
 }
 
-func SampleArrayForBy() {
-	println("--- Loop array then handler with callback function ---")
+/*
+Description: Loop array then handler with callback function
+Input params: (array, callback)
+*/
+func ArrayForBy() {
 	print("[int]: ")
 	gouse.ForBy([]int{1, -2, 3, -4, 5, 6}, func(v int) {
 		println(v)
@@ -157,8 +182,11 @@ func SampleArrayForBy() {
 	})
 }
 
-func SampleArrayIncludes() {
-	println("--- Check element is exist in array ---")
+/*
+Description: Check element is exist in array
+Input params: (array, element)
+*/
+func ArrayIncludes() {
 	println("[int]: ", gouse.IncludesArr([]int{1, -2, 3}, 1))
 	println("[uint]: ", gouse.IncludesArr([]uint{1, 2, 3}, 1))
 	println("[float]: ", gouse.IncludesArr([]float64{1.2, 2.3, 3.4}, 1.2))
@@ -168,8 +196,11 @@ func SampleArrayIncludes() {
 	println("[struct]: ", gouse.IncludesArr([]struct{ a int }{{1}, {2}}, struct{ a int }{3}))
 }
 
-func SampleArrayIndex() {
-	println("--- Index of element in array ---")
+/*
+Description: Get index of element in array
+Input params: (array, element)
+*/
+func ArrayIndex() {
 	println("[int]: ", gouse.IndexOfArr([]int{1, -2, 3, -4, 5, 6}, 3))
 	println("[uint]: ", gouse.IndexOfArr([]uint{1, 2, 3, 4, 5, 7}, 3))
 	println("[float]: ", gouse.IndexOfArr([]float64{1.2, 2.3, 3.4}, 3.4))
@@ -179,8 +210,11 @@ func SampleArrayIndex() {
 	println("[struct]: ", gouse.IndexOfArr([]struct{ a int }{{-1}, {-2}, {3}, {4}, {5}, {6}}, struct{ a int }{3}))
 }
 
-func SampleArrayIndexBy() {
-	println("--- Find index of element pass condition in callback function ---")
+/*
+Description: Find index of element pass condition in callback function
+Input params: (array, callback)
+*/
+func ArrayIndexBy() {
 	println("[int]: ", gouse.IndexBy([]int{1, -2, 3, -4, 5, 6}, func(v int) bool {
 		return v == 3
 	}))
@@ -210,8 +244,11 @@ func SampleArrayIndexBy() {
 	}))
 }
 
-func SampleArrayIntersect() {
-	println("--- Intersection arrays ---")
+/*
+Description: Intersection arrays
+Input params: (array1, array2)
+*/
+func ArrayIntersect() {
 	println("[int]: ", gouse.Intersect([]int{1, -2, 3, -4, 5, 6}, []int{1, 2, 3, 4, 5, 6}))
 	println("[uint]: ", gouse.Intersect([]uint{1, 2, 3, 4, 5, 7}, []uint{1, 2, 3, 4, 5, 6}))
 	println("[float]: ", gouse.Intersect([]float64{1.2, 2.3, 3.4}, []float64{1.2, 4.5, 5.6, 6.7}))
@@ -221,8 +258,11 @@ func SampleArrayIntersect() {
 	println("[struct]: ", gouse.Intersect([]struct{ a int }{{1}, {-2}, {3}, {4}, {5}, {6}}, []struct{ a int }{{1}, {2}}))
 }
 
-func SampleArrayKeyBy() {
-	println("--- Find key of element pass condition in callback function ---")
+/*
+Description: Find key of element pass condition in callback function
+Input params: (array, callback)
+*/
+func ArrayKeyBy() {
 	println("[int]: ", gouse.KeyBy([]int{1, -2, 3, -4, 5, 6}, func(v int) bool {
 		return v == 3
 	}))
@@ -252,8 +292,11 @@ func SampleArrayKeyBy() {
 	}))
 }
 
-func SampleArrayMapBy() {
-	println("--- Map array then handler with callback function ---")
+/*
+Description: Map array then handler with callback function
+Input params: (array, callback)
+*/
+func ArrayMapBy() {
 	fmt.Println("[int]: ", gouse.MapBy([]int{1, -2, 3, -4, 5, 6}, func(v int) int {
 		return v * 2
 	}))
@@ -283,8 +326,11 @@ func SampleArrayMapBy() {
 	}))
 }
 
-func SampleArrayMin() {
-	println("--- Min element in array ---")
+/*
+Description: Find min element in array
+Input params: (array)
+*/
+func ArrayMin() {
 	println("[int]: ", gouse.MinArr([]int{1, -2, 3}))
 	println("[uint]: ", gouse.MinArr([]uint{1, 2, 3}))
 	println("[string]: ", gouse.MinArr([]string{"z", "d", "m"}))
@@ -292,8 +338,11 @@ func SampleArrayMin() {
 	println("[float]: ", gouse.MinArr([]float64{1.2, 2.3, 3.4}))
 }
 
-func SampleArrayMax() {
-	println("--- Max element in array ---")
+/*
+Description: Find max element in array
+Input params: (array)
+*/
+func ArrayMax() {
 	println("[int]: ", gouse.MaxArr([]int{1, -2, 3}))
 	println("[uint]: ", gouse.MaxArr([]uint{1, 2, 3}))
 	println("[string]: ", gouse.MaxArr([]string{"z", "d", "m"}))
@@ -301,8 +350,11 @@ func SampleArrayMax() {
 	println("[float]: ", gouse.MaxArr([]float64{1.2, 2.3, 3.4}))
 }
 
-func SampleArrayMost() {
-	println("--- Most frequency in array ---")
+/*
+Description: Find most frequency element in array
+Input params: (array)
+*/
+func ArrayMost() {
 	println("[int]: ", gouse.Most([]int{1, -2, 3, 2, 2, 1, 2, 3}))
 	println("[uint]: ", gouse.Most([]uint{1, 2, 3, 2, 2, 1, 2, 3}))
 	fmt.Println("[float]: ", gouse.Most([]float64{1.2, 2.3, 3.4, 2.3, 2.3, 1.2, 2.3, 3.4}))
@@ -312,8 +364,11 @@ func SampleArrayMost() {
 	fmt.Println("[struct]: ", gouse.Most([]struct{ a int }{{1}, {2}, {3}, {2}, {2}, {1}, {2}, {3}}))
 }
 
-func SampleArrayMerge() {
-	println("--- Merge arrays ---")
+/*
+Description: Merge arrays
+Input params: (array1, array2, array3, ...)
+*/
+func ArrayMerge() {
 	println("[int]: ", gouse.Merge([]int{1, -2, 3, -4, 5, 6}, []int{1, 2, 3, 4, 5, 6}, []int{1, -2, 3, -4, 5, 6}))
 	println("[uint]: ", gouse.Merge([]uint{1, 2, 3, 4, 5, 7}, []uint{1, 2, 3, 4, 5, 6}))
 	println("[float]: ", gouse.Merge([]float64{1.2, 2.3, 3.4}, []float64{1.2, 4.5, 5.6, 6.7}))
@@ -323,8 +378,11 @@ func SampleArrayMerge() {
 	println("[struct]: ", gouse.Merge([]struct{ a int }{{-1}, {-2}, {3}, {4}, {5}, {6}}, []struct{ a int }{{1}, {2}}))
 }
 
-func SampleArrayRejectBy() {
-	println("--- Reject elements in array by pass condition in callback function---")
+/*
+Description: Remove element in array by pass condition in callback function
+Input params: (array, callback)
+*/
+func ArrayRejectBy() {
 	println("[int]: ", gouse.RejectBy([]int{1, -2, 3, -4, 5, 6}, func(v int) bool {
 		return v > 2
 	}))
@@ -350,8 +408,11 @@ func SampleArrayRejectBy() {
 	}))
 }
 
-func SampleArraySum() {
-	println("--- Sum elements in array ---")
+/*
+Description: Calculate sum of elements in array
+Input params: (array)
+*/
+func ArraySum() {
 	println("[int]: ", gouse.SumArr([]int{1, -2, 3}))
 	println("[uint]: ", gouse.SumArr([]uint{1, 2, 3}))
 	fmt.Println("[float]: ", gouse.SumArr([]float64{1.2, 2.3, 3.4}))

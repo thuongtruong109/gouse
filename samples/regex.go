@@ -8,11 +8,11 @@ import (
 
 // Note: regex pattern is not include one of (^, $, /g)
 
-func SampleRegexIsMatch() {
+func RegexIsMatch() {
 	fmt.Println("Match string with regex: ", gouse.IsMatchReg(`[a-z]+\s[a-z]+`, "hello world"))
 }
 
-func SampleRegexMatchIndex() {
+func RegexMatchIndex() {
 	paragraph := "I think Ruth's dog is cuter than your dog!"
 	matchIdx := gouse.MatchIndexReg(`[^\w\s']`, paragraph)
 	if matchIdx != -1 {
@@ -22,6 +22,6 @@ func SampleRegexMatchIndex() {
 	}
 }
 
-func SampleRegexMatch() {
+func RegexMatch() {
 	fmt.Println("Match string with regex: ", gouse.MatchReg(`[A-Z]`, "Hello World 123"))
 }

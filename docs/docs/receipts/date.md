@@ -1,5 +1,5 @@
 
-# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.25rem 0.75rem 0.25rem 0;' type='info' text='🔖 Date' />
+# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.35rem 0.75rem 0.35rem 0;' type='info' text='🔖 Date' />
 
 
 ```go
@@ -9,12 +9,12 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. sample date time' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='1. date time' />
 
 
 
 ```go
-func SampleDateTime() {
+func DateTime() {
 	println("Second:", gouse.Second())
 	println("Minute:", gouse.Minute())
 	println("Hour:", gouse.Hour())
@@ -32,22 +32,22 @@ func SampleDateTime() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='2. sample date i s o' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='2. date i s o' />
 
 
 
 ```go
-func SampleDateISO() {
+func DateISO() {
 	println("ISO:", gouse.ISODate())
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='3. sample date short' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='3. date short' />
 
 
 
 ```go
-func SampleDateShort() {
+func DateShort() {
 	println("ShortNormal:", gouse.NormalDate())
 	println("ShortReverse:", gouse.ReverseDate())
 	println("ShortDash:", gouse.DashDate())
@@ -58,92 +58,92 @@ func SampleDateShort() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='4. sample date long' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='4. date long' />
 
 
 
 ```go
-func SampleDateLong() {
+func DateLong() {
 	println("Long:", gouse.LongDate())
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='5. sample date u t c' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='5. date u t c' />
 
 
 
 ```go
-func SampleDateUTC() {
+func DateUTC() {
 	println("UTC:", gouse.UTCDate())
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='6. sample date to second' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='6. date to second' />
 
 
 
 ```go
-func SampleDateToSecond() {
+func DateToSecond() {
 	println("ToSecond:", gouse.ToSecond(1))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='7. sample date to minute' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='7. date to minute' />
 
 
 
 ```go
-func SampleDateToMinute() {
+func DateToMinute() {
 	println("ToMinute:", gouse.ToMinute(1))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='8. sample date to hour' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='8. date to hour' />
 
 
 
 ```go
-func SampleDateToHour() {
+func DateToHour() {
 	println("ToHour:", gouse.ToHour(1))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='9. sample date sleep second' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='9. date sleep second' />
 
 
 
 ```go
-func SampleDateSleepSecond() {
+func DateSleepSecond() {
 	gouse.SleepSecond(1)
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='10. sample date sleep minute' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='10. date sleep minute' />
 
 
 
 ```go
-func SampleDateSleepMinute() {
+func DateSleepMinute() {
 	gouse.SleepMinute(1)
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='11. sample date sleep hour' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='11. date sleep hour' />
 
 
 
 ```go
-func SampleDateSleepHour() {
+func DateSleepHour() {
 	gouse.SleepHour(1)
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='12. sample date clock' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='12. date clock' />
 
 
 
 ```go
-func SampleDateClock() {
+func DateClock() {
 	gouse.TerminalClock()
 }
 ```

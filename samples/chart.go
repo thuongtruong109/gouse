@@ -4,7 +4,10 @@ import (
 	"github.com/thuongtruong109/gouse"
 )
 
-func SampleChartBar() {
+/*
+Description: Create a bar chart and export it to a html file
+*/
+func ChartBar() {
 	newChart := &gouse.IBarChartOpts{
 		Output:   "test_sample_data/bar.html",
 		Title:    "Bar chart in Go",
@@ -20,7 +23,10 @@ func SampleChartBar() {
 	gouse.CreateBarChart(newChart)
 }
 
-func SampleChartLine() {
+/*
+Description: Create a line chart and export it to a html file
+*/
+func ChartLine() {
 	newChart := &gouse.ILineChartOpts{
 		Output:   "test_sample_data/line.html",
 		Title:    "Line chart in Go",
@@ -35,7 +41,10 @@ func SampleChartLine() {
 	gouse.CreateLineChart(newChart)
 }
 
-func SampleChartPie() {
+/*
+Description: Create a pie chart and export it to a html file
+*/
+func ChartPie() {
 	newChart := &gouse.IPieChartOpts{
 		Output:    "test_sample_data/pie.html",
 		Title:     "Pie chart in Go",

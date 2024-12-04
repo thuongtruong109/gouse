@@ -2,15 +2,15 @@ package samples
 
 import "github.com/thuongtruong109/gouse"
 
-func SampleNumClamp() {
+func NumClamp() {
 	println("Clamp number: ", gouse.Clamp(5, 1, 10))
 }
 
-func SampleNumRandom() {
+func NumRandom() {
 	random := gouse.RandNum(1, 10)
 	println("Random number [1, 10): ", random)
 }
 
-func SampleNumInRange() {
+func NumInRange() {
 	println("Check number is in range: ", gouse.InRange(5, 1, 10))
 }

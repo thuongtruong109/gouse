@@ -6,7 +6,11 @@ import (
 	"github.com/thuongtruong109/gouse"
 )
 
-func SampleCronRun() {
+/*
+Description: Run a cron job
+Input params: (duration uint64, stopAfter uint64, callback func())
+*/
+func CronRun() {
 	callback := func() {
 		fmt.Println("Cron job executed")
 	}

@@ -6,7 +6,7 @@ import (
 	"github.com/thuongtruong109/gouse"
 )
 
-func SampleOsCpu() {
+func OsCpu() {
 	cpuInfo, err := gouse.CPU()
 	if err != nil {
 		fmt.Println("Error: ", err)
@@ -20,7 +20,7 @@ func SampleOsCpu() {
 	fmt.Println("Cores: ", cpuInfo.Cores)
 }
 
-func SampleOsDisk() {
+func OsDisk() {
 	diskInfo, err := gouse.Disk()
 	if err != nil {
 		fmt.Println("Error: ", err)
@@ -34,7 +34,7 @@ func SampleOsDisk() {
 	fmt.Println("Used Space Percent: ", diskInfo.UsedSpacePercent, "%")
 }
 
-func SampleOsSystem() {
+func OsSystem() {
 	systemInfo, err := gouse.System()
 	if err != nil {
 		fmt.Println("Error: ", err)
@@ -53,7 +53,7 @@ func SampleOsSystem() {
 	fmt.Println("Used Memory Percent: ", systemInfo.UsedMemoryPercent, "%")
 }
 
-func SampleOsProfile() {
+func OsProfile() {
 	var cpuprofile, memprofile = "cpu.pprof", "mem.pprof"
 	gouse.Profile(cpuprofile, memprofile)
 

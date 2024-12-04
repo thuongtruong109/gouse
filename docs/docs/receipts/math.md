@@ -1,5 +1,5 @@
 
-# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.25rem 0.75rem 0.25rem 0;' type='info' text='🔖 Math' />
+# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.35rem 0.75rem 0.35rem 0;' type='info' text='🔖 Math' />
 
 
 ```go
@@ -9,56 +9,56 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. sample math is even' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='1. math is even' />
 
 
 
 ```go
-func SampleMathIsEven() {
+func MathIsEven() {
 	var num = 10
 	println("Check even number: ", gouse.IsEven(num))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='2. sample math is odd' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='2. math is odd' />
 
 
 
 ```go
-func SampleMathIsOdd() {
+func MathIsOdd() {
 	var num = 10
 	println("Check odd number: ", gouse.IsOdd(num))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='3. sample math is perfect square' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='3. math is perfect square' />
 
 
 
 ```go
-func SampleMathIsPerfectSquare() {
+func MathIsPerfectSquare() {
 	var num = 10
 	println("Check perfect square number: ", gouse.IsPerfectSquare(num))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='4. sample math is prime' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='4. math is prime' />
 
 
 
 ```go
-func SampleMathIsPrime() {
+func MathIsPrime() {
 	var num = 10
 	println("Check prime number: ", gouse.IsPrime(num))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='5. sample math log' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='5. math log' />
 
 
 
 ```go
-func SampleMathLog() {
+func MathLog() {
 	println("Logarithm of integer number: ", gouse.Log(16, 2))
 	println("Logarithm of float number: ", fmt.Sprintf("%f", gouse.LogF(20.0, 2.0)))
 
@@ -70,23 +70,23 @@ func SampleMathLog() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='6. sample math pytago' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='6. math pytago' />
 
 
 
 ```go
-func SampleMathPytago() {
+func MathPytago() {
 	println("Pytago of number (integer): ", fmt.Sprintf("%f", gouse.Pytago(3, 4)))
 	println("Pytago of number (float): ", fmt.Sprintf("%f", gouse.PytagoF(3.0, 4.0)))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='7. sample math transition' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='7. math transition' />
 
 
 
 ```go
-func SampleMathTransition() {
+func MathTransition() {
 	var distance, speed, time float64 = 100, 10, 10
 	println("Speed: ", fmt.Sprintf("%f", gouse.Speed(distance, time)))
 	println("Distance: ", fmt.Sprintf("%f", gouse.Distance(speed, time)))
@@ -94,12 +94,12 @@ func SampleMathTransition() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='8. sample math trigonometry' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='8. math trigonometry' />
 
 
 
 ```go
-func SampleMathTrigonometry() {
+func MathTrigonometry() {
 	println("Sine of integer number: ", gouse.Sin(90))
 	println("Sine of float number: ", fmt.Sprintf("%f", gouse.SinF(90.0)))
 	println("Cosine of integer number: ", gouse.Cos(90))
@@ -109,12 +109,12 @@ func SampleMathTrigonometry() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='9. sample math circle' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='9. math circle' />
 
 
 
 ```go
-func SampleMathCircle() {
+func MathCircle() {
 	println("Area of circle (integer): ", fmt.Sprintf("%f", gouse.AreaCircle(10)))
 	println("Area of circle (float): ", fmt.Sprintf("%f", gouse.AreaCircleF(10.0)))
 	println("Perimeter of circle (integer): ", fmt.Sprintf("%f", gouse.PeriCircle(10)))
@@ -122,12 +122,12 @@ func SampleMathCircle() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='10. sample math cone' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='10. math cone' />
 
 
 
 ```go
-func SampleMathCone() {
+func MathCone() {
 	println("Area of cone (integer): ", fmt.Sprintf("%f", gouse.AreaCone(10, 20)))
 	println("Area of cone (float): ", fmt.Sprintf("%f", gouse.AreaConeF(10.0, 20.0)))
 	println("Volume of cone (integer): ", fmt.Sprintf("%f", gouse.VolCone(10, 20)))
@@ -135,12 +135,12 @@ func SampleMathCone() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='11. sample math cube' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='11. math cube' />
 
 
 
 ```go
-func SampleMathCube() {
+func MathCube() {
 	println("Area of cube (integer): ", gouse.AreaCube(10))
 	println("Area of cube (float): ", fmt.Sprintf("%f", gouse.AreaCubeF(10.0)))
 	println("Perimeter of cube (integer): ", gouse.PeriCube(10))
@@ -150,12 +150,12 @@ func SampleMathCube() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='12. sample math cylinder' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='12. math cylinder' />
 
 
 
 ```go
-func SampleMathCylinder() {
+func MathCylinder() {
 	println("Area of cylinder (integer): ", fmt.Sprintf("%f", gouse.AreaCylinder(10, 20)))
 	println("Area of cylinder (float): ", fmt.Sprintf("%f", gouse.AreaCylinderF(10.0, 20.0)))
 	println("Volume of cylinder (integer): ", fmt.Sprintf("%f", gouse.VolCylinder(10, 20)))
@@ -163,44 +163,44 @@ func SampleMathCylinder() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='13. sample math ellipse' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='13. math ellipse' />
 
 
 
 ```go
-func SampleMathEllipse() {
+func MathEllipse() {
 	println("Area of ellipse (integer): ", fmt.Sprintf("%f", gouse.AreaEllipse(10, 20)))
 	println("Area of ellipse (float): ", fmt.Sprintf("%f", gouse.AreaEllipseF(10.0, 20.0)))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='14. sample math parallelogram' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='14. math parallelogram' />
 
 
 
 ```go
-func SampleMathParallelogram() {
+func MathParallelogram() {
 	println("Area of parallelogram (integer): ", gouse.AreaParallelogram(10, 20))
 	println("Area of parallelogram (float): ", fmt.Sprintf("%f", gouse.AreaParallelogramF(10.0, 20.0)))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='15. sample math polygon' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='15. math polygon' />
 
 
 
 ```go
-func SampleMathPolygon() {
+func MathPolygon() {
 	println("Area of pentagol by number of sides (integer): ", fmt.Sprintf("%f", gouse.AreaPolygon(10, 6)))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='16. sample math rect' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='16. math rect' />
 
 
 
 ```go
-func SampleMathRect() {
+func MathRect() {
 	println("Area of rectangle: ", gouse.AreaRect(10, 20))
 	println("Perimeter of rectangle (integer): ", gouse.PeriRect(10, 20))
 	println("Perimeter of rectangle (float): ", fmt.Sprintf("%f", gouse.PeriRectF(10.0, 20.0)))
@@ -211,23 +211,23 @@ func SampleMathRect() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='17. sample math rhombus' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='17. math rhombus' />
 
 
 
 ```go
-func SampleMathRhombus() {
+func MathRhombus() {
 	println("Area of rhombus (integer): ", gouse.AreaRhombus(10, 20))
 	println("Area of rhombus (float): ", fmt.Sprintf("%f", gouse.AreaRhombusF(10.0, 20.0)))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='18. sample math sphere' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='18. math sphere' />
 
 
 
 ```go
-func SampleMathSphere() {
+func MathSphere() {
 	println("Area of sphere (integer): ", fmt.Sprintf("%f", gouse.AreaSphere(10)))
 	println("Area of sphere (float): ", fmt.Sprintf("%f", gouse.AreaSphereF(10.0)))
 	println("Volume of sphere (integer): ", fmt.Sprintf("%f", gouse.VolSphere(10)))
@@ -235,12 +235,12 @@ func SampleMathSphere() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='19. sample math square' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='19. math square' />
 
 
 
 ```go
-func SampleMathSquare() {
+func MathSquare() {
 	println("Area of square (integer): ", gouse.AreaSquare(10))
 	println("Area of square (float): ", fmt.Sprintf("%f", gouse.AreaSquareF(10.0)))
 	println("Perimeter of square (integer): ", gouse.PeriSquare(10))
@@ -248,23 +248,23 @@ func SampleMathSquare() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='20. sample math trapezoid' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='20. math trapezoid' />
 
 
 
 ```go
-func SampleMathTrapezoid() {
+func MathTrapezoid() {
 	println("Area of trapezoid (integer): ", fmt.Sprintf("%f", gouse.AreaTrapezoid(10, 20, 30)))
 	println("Area of trapezoid (float): ", fmt.Sprintf("%f", gouse.AreaTrapezoidF(10.0, 20.0, 30.0)))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='21. sample math triangle' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='21. math triangle' />
 
 
 
 ```go
-func SampleMathTriangle() {
+func MathTriangle() {
 	println("Area of triangle (integer): ", gouse.AreaTriangle(10, 20))
 	println("Area of triangle (float): ", fmt.Sprintf("%f", gouse.AreaTriangleF(10.0, 20.0)))
 	println("Perimeter of triangle (integer): ", gouse.PeriTriangle(10, 20, 30))
@@ -272,145 +272,145 @@ func SampleMathTriangle() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='22. sample math abs' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='22. math abs' />
 
 
 
 ```go
-func SampleMathAbs() {
+func MathAbs() {
 	var num = -10
 	println("Absolute number: ", gouse.Abs(num))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='23. sample math add' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='23. math add' />
 
 
 
 ```go
-func SampleMathAdd() {
+func MathAdd() {
 	var num1, num2 = 10, -2
 	println("Add numbers: ", gouse.Add(num1, num2))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='24. sample math ceil' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='24. math ceil' />
 
 
 
 ```go
-func SampleMathCeil() {
+func MathCeil() {
 	var num = 10.49
 	println("Ceil number: ", gouse.Ceil(num))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='25. sample math operators' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='25. math operators' />
 
 
 
 ```go
-func SampleMathOperators() {
+func MathOperators() {
 	var num1, num2 = 10, -2
 	println("Quotient of numbers: ", gouse.Divide(num1, num2))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='26. sample math factorial' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='26. math factorial' />
 
 
 
 ```go
-func SampleMathFactorial() {
+func MathFactorial() {
 	var num = 5
 	println("Factorial of number: ", gouse.Factorial(num))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='27. sample math floor' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='27. math floor' />
 
 
 
 ```go
-func SampleMathFloor() {
+func MathFloor() {
 	var num = 10.49
 	println("Floor number: ", gouse.Floor(num))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='28. sample math min' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='28. math min' />
 
 
 
 ```go
-func SampleMathMin() {
+func MathMin() {
 	var num1, num2, num3, num4 = 10, 20, 30, -2
 	println("Min number: ", gouse.Min(num1, num2, num3, num4))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='29. sample math max' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='29. math max' />
 
 
 
 ```go
-func SampleMathMax() {
+func MathMax() {
 	var num1, num2, num3, num4 = 10, 20, 30, -2
 	println("Max number: ", gouse.Max(num1, num2, num3, num4))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='30. sample math mean' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='30. math mean' />
 
 
 
 ```go
-func SampleMathMean() {
+func MathMean() {
 	var num1, num2, num3, num4 = 10, 20, 30, -2
 	println("Average/Mean of numbers: ", gouse.Mean(num1, num2, num3, num4))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='31. sample math multi' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='31. math multi' />
 
 
 
 ```go
-func SampleMathMulti() {
+func MathMulti() {
 	var num1, num2, num3, num4 = 10, 20, 30, -2
 	println("Multiply of numbers: ", gouse.Multi(num1, num2, num3, num4))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='32. sample math power' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='32. math power' />
 
 
 
 ```go
-func SampleMathPower() {
+func MathPower() {
 	println("Power square of number: ", gouse.Pow2(2))
 	println("Power of integer numbers: ", gouse.Pow(2, 3))
 	println("Power of float numbers: ", gouse.PowF(2.0, 3.0))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='33. sample math remainder' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='33. math remainder' />
 
 
 
 ```go
-func SampleMathRemainder() {
+func MathRemainder() {
 	var num1, num2 = 10, -2
 	println("Remainder of numbers: ", gouse.Remainder(num1, num2))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='34. sample math root' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='34. math root' />
 
 
 
 ```go
-func SampleMathRoot() {
+func MathRoot() {
 	println("Square-Root of integer number: ", gouse.Sqrt(16))
 	println("Square-Root of float number: ", fmt.Sprintf("%f", gouse.SqrtF(20.0)))
 
@@ -422,34 +422,34 @@ func SampleMathRoot() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='35. sample math round' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='35. math round' />
 
 
 
 ```go
-func SampleMathRound() {
+func MathRound() {
 	var num1, num2 = 10.49, 10.51
 	println("Round number: ", gouse.Round(num1), gouse.Round(num2))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='36. sample math sub' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='36. math sub' />
 
 
 
 ```go
-func SampleMathSub() {
+func MathSub() {
 	var num1, num2 = 10, -2
 	println("Subtract of numbers: ", gouse.Sub(num1, num2))
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='37. sample math sum' />
+### <Badge style='font-size: 1.1rem;' type='tip' text='37. math sum' />
 
 
 
 ```go
-func SampleMathSum() {
+func MathSum() {
 	var num1, num2, num3, num4 = 10, 20, 30, -2
 	println("Sum of numbers: ", gouse.Sum(num1, num2, num3, num4))
 }
