@@ -23,6 +23,7 @@ func main() {
 ## 🦄 Usage
 
 - Using package directly in your module as ultra-lightweight utility functions.
+- Import as normal package
 
 ```go
 package main
@@ -37,4 +38,4 @@ func main() {
 }
 ```
 
-- View more examples at [`receipts`](/receipts/array) page.
+- Please refer to the [`receipts`](/receipts/array) for more examples.

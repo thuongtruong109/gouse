@@ -9,6 +9,7 @@ import (
 
 type Function struct {
 	Import string
+	Order  string
 	Name   string
 	Desc   string
 	Body   string
@@ -18,8 +19,8 @@ func (f *Function) HighlightImport() string {
 	return fmt.Sprintf("```go\nimport (\n%s)\n```\n", f.Import)
 }
 
-func (f *Function) HighlightName(orderNum string) string {
-	return fmt.Sprintf("\n#### %s\n", orderNum+". "+f.Name)
+func (f *Function) HighlightName() string {
+	return fmt.Sprintf("\n## %s. %s\n", f.Order, FirstUpperCase(SpaceCase(f.Name)))
 }
 
 func (f *Function) HighlightDesc() string {
@@ -75,6 +76,7 @@ func ExtractFunctions(code []byte) []Function {
 
 			functions = append(functions, Function{
 				Import: extractImports(code),
+				Order:  IntToString(len(functions) + 1),
 				Name:   funcName,
 				Desc:   funcComment,
 				Body:   funcBody,
@@ -89,14 +91,15 @@ func detectContent(content []byte) []byte {
 	var result []string
 	functions := ExtractFunctions(content)
 	result = append(result, functions[0].HighlightImport())
-	for i, function := range functions {
+	for _, function := range functions {
 		tmpFunc := &Function{
 			Import: function.Import,
+			Order:  function.Order,
 			Name:   function.Name,
 			Desc:   function.Desc,
 			Body:   function.Body,
 		}
-		result = append(result, tmpFunc.HighlightName(IntToString(i+1)))
+		result = append(result, tmpFunc.HighlightName())
 		result = append(result, tmpFunc.HighlightDesc())
 		result = append(result, tmpFunc.HighlightBody())
 	}

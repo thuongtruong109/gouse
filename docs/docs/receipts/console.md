@@ -23,7 +23,7 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. console cmd' />
+## 1. Console cmd
 
 
 
@@ -36,7 +36,7 @@ func ConsoleCmd() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='2. console clear' />
+## 2. Console clear
 
 
 
@@ -48,7 +48,7 @@ func ConsoleClear() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='3. console with color' />
+## 3. Console with color
 
 
 
@@ -65,7 +65,7 @@ func ConsoleWithColor() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='4. console banner' />
+## 4. Console banner
 
 
 
@@ -77,7 +77,7 @@ func ConsoleBanner() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='5. console help' />
+## 5. Console help
 
 
 
@@ -117,7 +117,7 @@ func ConsoleHelp() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='6. console select' />
+## 6. Console select
 
 
 
@@ -133,7 +133,7 @@ func ConsoleSelect() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='7. console list' />
+## 7. Console list
 
 
 
@@ -170,7 +170,7 @@ func ConsoleList() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='8. console progress' />
+## 8. Console progress
 
 
 
@@ -183,7 +183,7 @@ func ConsoleProgress() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='9. console realtime' />
+## 9. Console realtime
 
 
 
@@ -193,7 +193,7 @@ func ConsoleRealtime() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='10. console choice' />
+## 10. Console choice
 
 
 
@@ -209,7 +209,7 @@ func ConsoleChoice() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='11. console spinner' />
+## 11. Console spinner
 
 
 
@@ -219,7 +219,7 @@ func ConsoleSpinner() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='12. console split' />
+## 12. Console split
 
 
 
@@ -229,7 +229,7 @@ func ConsoleSplit() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='13. console stopwatch' />
+## 13. Console stopwatch
 
 
 
@@ -239,7 +239,7 @@ func ConsoleStopwatch() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='14. console table' />
+## 14. Console table
 
 
 
@@ -249,7 +249,7 @@ func ConsoleTable() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='15. console countdown' />
+## 15. Console countdown
 
 
 
@@ -259,7 +259,7 @@ func ConsoleCountdown() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='16. console sequence' />
+## 16. Console sequence
 
 
 
@@ -269,7 +269,7 @@ func ConsoleSequence() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='17. console inline' />
+## 17. Console inline
 
 
 
@@ -284,7 +284,7 @@ func ConsoleInline() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='18. console parallel' />
+## 18. Console parallel
 
 
 
@@ -294,7 +294,7 @@ func ConsoleParallel() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='19. console dir' />
+## 19. Console dir
 
 
 
@@ -304,7 +304,7 @@ func ConsoleDir() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='20. console glamour' />
+## 20. Console glamour
 
 
 

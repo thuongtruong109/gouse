@@ -9,7 +9,7 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. struct add' />
+## 1. Struct add
 
 
 
@@ -37,7 +37,7 @@ func StructAdd() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='2. struct clone' />
+## 2. Struct clone
 
 
 
@@ -65,7 +65,7 @@ func StructClone() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='3. struct get' />
+## 3. Struct get
 
 
 
@@ -88,7 +88,7 @@ func StructGet() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='4. struct has' />
+## 4. Struct has
 
 
 
@@ -114,7 +114,7 @@ func StructHas() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='5. struct merge' />
+## 5. Struct merge
 
 
 
@@ -154,7 +154,7 @@ func StructMerge() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='6. struct remove' />
+## 6. Struct remove
 
 
 
@@ -176,7 +176,7 @@ func StructRemove() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='7. struct set' />
+## 7. Struct set
 
 
 

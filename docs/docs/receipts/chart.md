@@ -8,7 +8,7 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. chart bar' />
+## 1. Chart bar
 
 Description: Create a bar chart and export it to a html file<br>
 
@@ -30,7 +30,7 @@ func ChartBar() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='2. chart line' />
+## 2. Chart line
 
 Description: Create a line chart and export it to a html file<br>
 
@@ -51,7 +51,7 @@ func ChartLine() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='3. chart pie' />
+## 3. Chart pie
 
 Description: Create a pie chart and export it to a html file<br>
 

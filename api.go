@@ -139,7 +139,7 @@ func (igs *IGracefulShutdown) GracefulShutdown() {
 
 	go func() {
 		defer wg.Done()
-		time.Sleep(igs.SleepTimout) // 5 * time.Second
+		time.Sleep(igs.SleepTimout)
 	}()
 
 	c := make(chan os.Signal, 1)
@@ -149,7 +149,7 @@ func (igs *IGracefulShutdown) GracefulShutdown() {
 
 	srv := http.Server{
 		Addr:              ":" + igs.Port,
-		ReadHeaderTimeout: 5 * time.Second, // mitigate Slowloris attack by set timeout
+		ReadHeaderTimeout: igs.HeaderTimeout,
 	}
 
 	go func() {
@@ -158,7 +158,7 @@ func (igs *IGracefulShutdown) GracefulShutdown() {
 		go func() {
 			for {
 				fmt.Println("waiting for goroutines to finish...")
-				time.Sleep(igs.HeaderTimeout) // 1 * time.Second
+				time.Sleep(1 * time.Second)
 			}
 		}()
 		wg.Wait()

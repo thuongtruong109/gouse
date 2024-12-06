@@ -9,7 +9,7 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. config json' />
+## 1. Config json
 
 Description: Read JSON configuration file<br>
 
@@ -31,7 +31,7 @@ func ConfigJson() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='2. config toml' />
+## 2. Config toml
 
 Description: Read TOML configuration file<br>
 
@@ -59,7 +59,7 @@ func ConfigToml() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='3. config yaml' />
+## 3. Config yaml
 
 Description: Read YAML configuration file<br>
 

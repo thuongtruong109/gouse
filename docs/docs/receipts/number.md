@@ -8,7 +8,7 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. num clamp' />
+## 1. Num clamp
 
 
 
@@ -18,7 +18,7 @@ func NumClamp() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='2. num random' />
+## 2. Num random
 
 
 
@@ -29,7 +29,7 @@ func NumRandom() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='3. num in range' />
+## 3. Num in range
 
 
 

@@ -9,7 +9,7 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. date time' />
+## 1. Date time
 
 
 
@@ -32,7 +32,7 @@ func DateTime() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='2. date i s o' />
+## 2. Date i s o
 
 
 
@@ -42,7 +42,7 @@ func DateISO() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='3. date short' />
+## 3. Date short
 
 
 
@@ -58,7 +58,7 @@ func DateShort() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='4. date long' />
+## 4. Date long
 
 
 
@@ -68,7 +68,7 @@ func DateLong() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='5. date u t c' />
+## 5. Date u t c
 
 
 
@@ -78,7 +78,7 @@ func DateUTC() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='6. date to second' />
+## 6. Date to second
 
 
 
@@ -88,7 +88,7 @@ func DateToSecond() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='7. date to minute' />
+## 7. Date to minute
 
 
 
@@ -98,7 +98,7 @@ func DateToMinute() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='8. date to hour' />
+## 8. Date to hour
 
 
 
@@ -108,7 +108,7 @@ func DateToHour() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='9. date sleep second' />
+## 9. Date sleep second
 
 
 
@@ -118,7 +118,7 @@ func DateSleepSecond() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='10. date sleep minute' />
+## 10. Date sleep minute
 
 
 
@@ -128,7 +128,7 @@ func DateSleepMinute() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='11. date sleep hour' />
+## 11. Date sleep hour
 
 
 
@@ -138,7 +138,7 @@ func DateSleepHour() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='12. date clock' />
+## 12. Date clock
 
 
 

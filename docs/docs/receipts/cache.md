@@ -10,7 +10,7 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. cache local' />
+## 1. Cache local
 
 Description: Cache local values<br>
 
@@ -48,7 +48,7 @@ func CacheLocal() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='2. cache tmp' />
+## 2. Cache tmp
 
 Description: Cache temporary values (with expiration time)<br>
 

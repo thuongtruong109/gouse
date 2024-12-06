@@ -10,7 +10,7 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. func delay' />
+## 1. Func delay
 
 
 
@@ -34,7 +34,7 @@ func FuncDelay() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='2. func interval' />
+## 2. Func interval
 
 
 
@@ -46,7 +46,7 @@ func FuncInterval() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='3. func lock' />
+## 3. Func lock
 
 
 
@@ -73,11 +73,10 @@ func FuncLock() {
 	lockedFunc := gouse.RWLockFunc(exampleRWLockFunc).(func(int, int) int)
 	result := lockedFunc(5, 3)
 	fmt.Println("RW Lock function result:", result)
-
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='4. func parallel' />
+## 4. Func parallel
 
 
 
@@ -108,7 +107,7 @@ func FuncParallel() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='5. func remain' />
+## 5. Func remain
 
 
 
@@ -120,7 +119,7 @@ func FuncRemain() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='6. func retry' />
+## 6. Func retry
 
 
 
@@ -133,7 +132,7 @@ func FuncRetry() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='7. func run time' />
+## 7. Func run time
 
 
 
@@ -146,5 +145,33 @@ func FuncRunTime() {
 
 	duration := gouse.RunTimeFunc(time.Now(), exampleFunc)
 	fmt.Printf("Function run in: %v\n", duration)
+}
+```
+
+## 8. Func defer wrapper
+
+
+
+```go
+func FuncDeferWrapper() {
+	gouse.DeferWrapper(
+		func() error {
+			fmt.Println("Opening file...")
+			return fmt.Errorf("failed to read file")
+		},
+		func() {
+			fmt.Println("Closing file...")
+		},
+	)
+
+	gouse.DeferWrapper(
+		func() error {
+			fmt.Println("Connecting to database...")
+			return nil
+		},
+		func() {
+			fmt.Println("Disconnecting from database...")
+		},
+	)
 }
 ```

@@ -13,7 +13,7 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. media canvas' />
+## 1. Media canvas
 
 
 
@@ -32,7 +32,7 @@ func MediaCanvas() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='2. media png to jpg' />
+## 2. Media png to jpg
 
 
 

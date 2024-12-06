@@ -9,7 +9,7 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. regex is match' />
+## 1. Regex is match
 
 
 
@@ -19,7 +19,7 @@ func RegexIsMatch() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='2. regex match index' />
+## 2. Regex match index
 
 
 
@@ -35,7 +35,7 @@ func RegexMatchIndex() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='3. regex match' />
+## 3. Regex match
 
 
 

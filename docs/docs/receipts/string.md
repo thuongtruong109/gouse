@@ -9,7 +9,7 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. string capitalize' />
+## 1. String capitalize
 
 
 
@@ -20,7 +20,7 @@ func StringCapitalize() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='2. string camel case' />
+## 2. String camel case
 
 
 
@@ -31,7 +31,7 @@ func StringCamelCase() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='3. string snake case' />
+## 3. String snake case
 
 
 
@@ -43,7 +43,7 @@ func StringSnakeCase() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='4. string kebab case' />
+## 4. String kebab case
 
 
 
@@ -54,7 +54,7 @@ func StringKebabCase() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='5. string is letter' />
+## 5. String is letter
 
 
 
@@ -65,7 +65,7 @@ func StringIsLetter() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='6. string is digit' />
+## 6. String is digit
 
 
 
@@ -76,7 +76,7 @@ func StringIsDigit() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='7. string includes' />
+## 7. String includes
 
 
 
@@ -87,7 +87,7 @@ func StringIncludes() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='8. string is lower' />
+## 8. String is lower
 
 
 
@@ -98,7 +98,7 @@ func StringIsLower() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='9. string is upper' />
+## 9. String is upper
 
 
 
@@ -109,7 +109,7 @@ func StringIsUpper() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='10. string split' />
+## 10. String split
 
 
 
@@ -120,7 +120,7 @@ func StringSplit() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='11. string words' />
+## 11. String words
 
 
 
@@ -132,7 +132,7 @@ func StringWords() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='12. string reverse' />
+## 12. String reverse
 
 
 
@@ -143,7 +143,7 @@ func StringReverse() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='13. string lower' />
+## 13. String lower
 
 
 
@@ -156,7 +156,7 @@ func StringLower() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='14. string upper' />
+## 14. String upper
 
 
 
@@ -169,7 +169,7 @@ func StringUpper() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='15. string repeat' />
+## 15. String repeat
 
 
 
@@ -180,7 +180,7 @@ func StringRepeat() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='16. string truncate' />
+## 16. String truncate
 
 
 
@@ -192,7 +192,7 @@ func StringTruncate() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='17. string replace' />
+## 17. String replace
 
 
 
@@ -203,7 +203,7 @@ func StringReplace() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='18. string trim' />
+## 18. String trim
 
 
 
@@ -216,7 +216,7 @@ func StringTrim() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='19. string trim blank' />
+## 19. String trim blank
 
 
 
@@ -228,7 +228,7 @@ func StringTrimBlank() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='20. string trim prefix' />
+## 20. String trim prefix
 
 
 
@@ -240,7 +240,7 @@ func StringTrimPrefix() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='21. string trim suffix' />
+## 21. String trim suffix
 
 
 
@@ -251,7 +251,7 @@ func StringTrimSuffix() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='22. string join' />
+## 22. String join
 
 
 
@@ -262,7 +262,7 @@ func StringJoin() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='23. string concat' />
+## 23. String concat
 
 
 
@@ -272,7 +272,7 @@ func StringConcat() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='24. string sub str' />
+## 24. String sub str
 
 
 
@@ -286,7 +286,7 @@ func StringSubStr() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='25. string slice' />
+## 25. String slice
 
 
 
@@ -301,7 +301,7 @@ func StringSlice() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='26. string splice' />
+## 26. String splice
 
 
 
@@ -314,7 +314,7 @@ func StringSplice() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='27. string starts with' />
+## 27. String starts with
 
 
 
@@ -325,7 +325,7 @@ func StringStartsWith() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='28. string ends with' />
+## 28. String ends with
 
 
 
@@ -336,7 +336,7 @@ func StringEndsWith() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='29. string escape' />
+## 29. String escape
 
 
 
@@ -347,7 +347,7 @@ func StringEscape() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='30. string unescape' />
+## 30. String unescape
 
 
 
@@ -358,7 +358,7 @@ func StringUnescape() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='31. string pad' />
+## 31. String pad
 
 
 
@@ -370,7 +370,7 @@ func StringPad() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='32. string count' />
+## 32. String count
 
 
 
@@ -382,7 +382,7 @@ func StringCount() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='33. string lines' />
+## 33. String lines
 
 
 
@@ -393,7 +393,7 @@ func StringLines() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='34. string index' />
+## 34. String index
 
 
 
@@ -428,7 +428,7 @@ func StringIndex() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='35. string random' />
+## 35. String random
 
 
 
@@ -440,7 +440,7 @@ func StringRandom() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='36. string at' />
+## 36. String at
 
 
 
@@ -452,7 +452,7 @@ func StringAt() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='37. string code point at' />
+## 37. String code point at
 
 
 
@@ -464,7 +464,7 @@ func StringCodePointAt() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='38. string code point' />
+## 38. String code point
 
 
 
@@ -479,7 +479,7 @@ func StringCodePoint() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='39. string from code point at' />
+## 39. String from code point at
 
 
 
@@ -490,7 +490,7 @@ func StringFromCodePointAt() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='40. string from code point' />
+## 40. String from code point
 
 
 

@@ -11,7 +11,7 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. io create path' />
+## 1. Io create path
 
  Samples for io path functions<br>
 
@@ -27,7 +27,7 @@ func IoCreatePath() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='2. io read path' />
+## 2. Io read path
 
 
 
@@ -44,7 +44,7 @@ func IoReadPath() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='3. io write path' />
+## 3. Io write path
 
 
 
@@ -62,7 +62,7 @@ func IoWritePath() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='4. io create dir' />
+## 4. Io create dir
 
 
 
@@ -76,7 +76,7 @@ func IoCreateDir() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='5. io current dir' />
+## 5. Io current dir
 
 
 
@@ -92,7 +92,7 @@ func IoCurrentDir() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='6. io hierarchy dir' />
+## 6. Io hierarchy dir
 
 
 
@@ -110,7 +110,7 @@ func IoHierarchyDir() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='7. io check dir' />
+## 7. Io check dir
 
 
 
@@ -128,7 +128,7 @@ func IoCheckDir() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='8. io ls dir' />
+## 8. Io ls dir
 
 
 
@@ -146,7 +146,7 @@ func IoLsDir() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='9. io remove dir' />
+## 9. Io remove dir
 
 
 
@@ -160,7 +160,7 @@ func IoRemoveDir() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='10. io append to file' />
+## 10. Io append to file
 
 
 
@@ -174,7 +174,7 @@ func IoAppendToFile() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='11. io clean file' />
+## 11. Io clean file
 
 
 
@@ -195,7 +195,7 @@ func IoCleanFile() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='12. io copy file' />
+## 12. Io copy file
 
 
 
@@ -209,7 +209,7 @@ func IoCopyFile() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='13. io create file' />
+## 13. Io create file
 
 
 
@@ -223,7 +223,7 @@ func IoCreateFile() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='14. io file info' />
+## 14. Io file info
 
 
 
@@ -243,7 +243,7 @@ func IoFileInfo() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='15. io check file' />
+## 15. Io check file
 
 
 
@@ -261,7 +261,7 @@ func IoCheckFile() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='16. io file obj' />
+## 16. Io file obj
 
 
 
@@ -331,7 +331,7 @@ func IoFileObj() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='17. io read file by line' />
+## 17. Io read file by line
 
 
 
@@ -347,7 +347,7 @@ func IoReadFileByLine() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='18. io remove file' />
+## 18. Io remove file
 
 
 
@@ -361,7 +361,7 @@ func IoRemoveFile() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='19. io rename file' />
+## 19. Io rename file
 
 
 
@@ -375,7 +375,7 @@ func IoRenameFile() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='20. io truncate file' />
+## 20. Io truncate file
 
 
 
@@ -389,7 +389,7 @@ func IoTruncateFile() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='21. io write to file' />
+## 21. Io write to file
 
 
 
@@ -403,7 +403,7 @@ func IoWriteToFile() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='22. io zip' />
+## 22. Io zip
 
 
 
@@ -420,7 +420,7 @@ func IoZip() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='23. io unzip' />
+## 23. Io unzip
 
 
 

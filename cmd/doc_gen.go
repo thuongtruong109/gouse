@@ -83,10 +83,6 @@ func highlightName(text string) string {
 	return fmt.Sprintf("\n# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.35rem 0.75rem 0.35rem 0;' type='info' text='🔖 %s' />\n", text)
 }
 
-func highlightFunction(text string) string {
-	return fmt.Sprintf("\n### <Badge style='font-size: 1.1rem;' type='tip' text='%s' />\n", text)
-}
-
 func generateMarkdownFiles(file os.DirEntry, functions []gouse.Function, path, outputPath, newName string) {
 	var result []byte
 
@@ -94,8 +90,8 @@ func generateMarkdownFiles(file os.DirEntry, functions []gouse.Function, path, o
 
 	result = append(result, functions[0].HighlightImport()...)
 
-	for i, function := range functions {
-		result = append(result, highlightFunction(gouse.IntToString(i+1)+". "+gouse.SpaceCase(function.Name))...)
+	for _, function := range functions {
+		result = append(result, function.HighlightName()...)
 		result = append(result, function.HighlightDesc()...)
 		result = append(result, function.HighlightBody()...)
 	}

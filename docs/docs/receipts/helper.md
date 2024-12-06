@@ -8,7 +8,7 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. helper random i d' />
+## 1. Helper random i d
 
 
 
@@ -18,7 +18,7 @@ func HelperRandomID() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='2. helper u u i d' />
+## 2. Helper u u i d
 
 
 
@@ -28,7 +28,7 @@ func HelperUUID() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='3. helper auto md doc' />
+## 3. Helper auto md doc
 
 
 

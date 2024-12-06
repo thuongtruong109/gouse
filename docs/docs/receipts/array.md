@@ -9,7 +9,7 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. array chunk' />
+## 1. Array chunk
 
 Description: Chunk an array into smaller arrays of a specified size<br>Input params: (array, size)<br>
 
@@ -25,7 +25,7 @@ func ArrayChunk() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='2. array compact' />
+## 2. Array compact
 
 Description: Removing falsy values (false, null, 0, "", undefined, and NaN) from an array<br>Input params: (array)<br>
 
@@ -36,7 +36,7 @@ func ArrayCompact() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='3. array difference' />
+## 3. Array difference
 
 Description: Check difference items between two arrays<br>Input params: (array1, array2)<br>
 
@@ -52,7 +52,7 @@ func ArrayDifference() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='4. array drop' />
+## 4. Array drop
 
 Description: Drop n elements in array (default n = 1)<br>Input params: (array, n)<br>
 
@@ -69,7 +69,7 @@ func ArrayDrop() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='5. array equal' />
+## 5. Array equal
 
 Description: Compare is equal between two elements<br>Input params: (element1, element2)<br>
 
@@ -86,7 +86,7 @@ func ArrayEqual() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='6. array filter by' />
+## 6. Array filter by
 
 Description: Filter elements in array by pass condition in callback function<br>Input params: (array, callback)<br>
 
@@ -122,7 +122,7 @@ func ArrayFilterBy() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='7. array find by' />
+## 7. Array find by
 
 Description: Find element in array by pass condition in callback function<br>Input params: (array, callback)<br>
 
@@ -158,7 +158,7 @@ func ArrayFindBy() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='8. array for by' />
+## 8. Array for by
 
 Description: Loop array then handler with callback function<br>Input params: (array, callback)<br>
 
@@ -201,7 +201,7 @@ func ArrayForBy() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='9. array includes' />
+## 9. Array includes
 
 Description: Check element is exist in array<br>Input params: (array, element)<br>
 
@@ -217,7 +217,7 @@ func ArrayIncludes() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='10. array index' />
+## 10. Array index
 
 Description: Get index of element in array<br>Input params: (array, element)<br>
 
@@ -233,7 +233,7 @@ func ArrayIndex() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='11. array index by' />
+## 11. Array index by
 
 Description: Find index of element pass condition in callback function<br>Input params: (array, callback)<br>
 
@@ -269,7 +269,7 @@ func ArrayIndexBy() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='12. array intersect' />
+## 12. Array intersect
 
 Description: Intersection arrays<br>Input params: (array1, array2)<br>
 
@@ -285,7 +285,7 @@ func ArrayIntersect() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='13. array key by' />
+## 13. Array key by
 
 Description: Find key of element pass condition in callback function<br>Input params: (array, callback)<br>
 
@@ -321,7 +321,7 @@ func ArrayKeyBy() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='14. array map by' />
+## 14. Array map by
 
 Description: Map array then handler with callback function<br>Input params: (array, callback)<br>
 
@@ -357,7 +357,7 @@ func ArrayMapBy() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='15. array min' />
+## 15. Array min
 
 Description: Find min element in array<br>Input params: (array)<br>
 
@@ -371,7 +371,7 @@ func ArrayMin() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='16. array max' />
+## 16. Array max
 
 Description: Find max element in array<br>Input params: (array)<br>
 
@@ -385,7 +385,7 @@ func ArrayMax() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='17. array most' />
+## 17. Array most
 
 Description: Find most frequency element in array<br>Input params: (array)<br>
 
@@ -401,7 +401,7 @@ func ArrayMost() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='18. array merge' />
+## 18. Array merge
 
 Description: Merge arrays<br>Input params: (array1, array2, array3, ...)<br>
 
@@ -417,7 +417,7 @@ func ArrayMerge() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='19. array reject by' />
+## 19. Array reject by
 
 Description: Remove element in array by pass condition in callback function<br>Input params: (array, callback)<br>
 
@@ -449,7 +449,7 @@ func ArrayRejectBy() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='20. array sum' />
+## 20. Array sum
 
 Description: Calculate sum of elements in array<br>Input params: (array)<br>
 

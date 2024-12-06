@@ -9,7 +9,7 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. type string convert' />
+## 1. Type string convert
 
 
 
@@ -23,7 +23,7 @@ func TypeStringConvert() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='2. type cast to string' />
+## 2. Type cast to string
 
 
 
@@ -38,7 +38,7 @@ func TypeCastToString() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='3. type struct convert' />
+## 3. Type struct convert
 
 
 
@@ -61,7 +61,7 @@ func TypeStructConvert() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='4. type check' />
+## 4. Type check
 
 
 
@@ -93,7 +93,7 @@ func TypeCheck() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='5. type check u u i d' />
+## 5. Type check u u i d
 
 
 
@@ -107,7 +107,7 @@ func TypeCheckUUID() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='6. type check gmail' />
+## 6. Type check gmail
 
 
 
@@ -127,7 +127,7 @@ func TypeCheckGmail() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='7. type check yahoo' />
+## 7. Type check yahoo
 
 
 
@@ -147,7 +147,7 @@ func TypeCheckYahoo() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='8. type check outlook' />
+## 8. Type check outlook
 
 
 
@@ -167,7 +167,7 @@ func TypeCheckOutlook() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='9. type check edu' />
+## 9. Type check edu
 
 
 
@@ -187,7 +187,7 @@ func TypeCheckEdu() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='10. type check email' />
+## 10. Type check email
 
 
 
@@ -207,7 +207,7 @@ func TypeCheckEmail() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='11. type check username' />
+## 11. Type check username
 
 
 
@@ -233,7 +233,7 @@ func TypeCheckUsername() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='12. type check password' />
+## 12. Type check password
 
 
 
@@ -260,7 +260,7 @@ func TypeCheckPassword() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='13. type check phone' />
+## 13. Type check phone
 
 
 

@@ -9,7 +9,7 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. net check' />
+## 1. Net check
 
 
 
@@ -23,7 +23,7 @@ func NetCheck() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='2. net check with status code' />
+## 2. Net check with status code
 
 Description: Check if a URL is valid<br>Input params: (url)<br>
 
@@ -37,7 +37,7 @@ func NetCheckWithStatusCode() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='3. net connect time' />
+## 3. Net connect time
 
 Description: Calculate the time it takes to connect to a URL<br>Input params: (url)<br>
 
@@ -52,7 +52,7 @@ func NetConnectTime() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='4. net encode' />
+## 4. Net encode
 
 Description: Encode a URL<br>Input params: (url)<br>
 
@@ -62,7 +62,7 @@ func NetEncode() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='5. net decode' />
+## 5. Net decode
 
 Description: Decode a URL<br>Input params: (url)<br>
 
@@ -72,7 +72,7 @@ func NetDecode() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='6. net header' />
+## 6. Net header
 
 Description: Get the header of a URL<br>Input params: (url)<br>
 
@@ -87,7 +87,7 @@ func NetHeader() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='7. api port checker' />
+## 7. Api port checker
 
 Description: Check if a port is open<br>Input params: (protocol, hostname, port)<br>
 
@@ -98,7 +98,7 @@ func ApiPortChecker() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='8. api port scanner' />
+## 8. Api port scanner
 
 Description: Scan for open ports on a given host.<br>Input params: (protocol, hostname, start port, end port)<br>
 
@@ -108,7 +108,7 @@ func ApiPortScanner() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='9. net proxy' />
+## 9. Net proxy
 
 Description: Proxy wrapper to another port<br>Input params: (port, []string{urls})<br>
 
@@ -118,7 +118,7 @@ func NetProxy() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='10. net open' />
+## 10. Net open
 
 Description: Open a URL in the default browser<br>Input params: (url)<br>
 

@@ -9,7 +9,7 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. crypto encode' />
+## 1. Crypto encode
 
 Description: Encode data to base64<br>Input params: (data []byte)<br>
 
@@ -27,7 +27,7 @@ func CryptoEncode() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='2. crypto decode' />
+## 2. Crypto decode
 
 Description: Decode data from base64<br>Input params: (data []byte)<br>
 
@@ -44,7 +44,7 @@ func CryptoDecode() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='3. crypto encrypt file' />
+## 3. Crypto encrypt file
 
 Description: Encrypt data in file<br>Input params: (filename string, password []byte)<br>
 
@@ -55,7 +55,7 @@ func CryptoEncryptFile() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='4. crypto decrypt file' />
+## 4. Crypto decrypt file
 
 Description: Decrypt data in file<br>Input params: (filename string, password []byte)<br>
 
@@ -66,7 +66,7 @@ func CryptoDecryptFile() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='5. crypto encrypt password' />
+## 5. Crypto encrypt password
 
 Description: Encrypt password string<br>Input params: (data string)<br>
 
@@ -84,7 +84,7 @@ func CryptoEncryptPassword() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='6. crypto decrypt password' />
+## 6. Crypto decrypt password
 
 Description: Decrypt password string and compare with the original password<br>Input params: (data string, password string)<br>
 

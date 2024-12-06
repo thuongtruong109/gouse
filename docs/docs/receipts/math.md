@@ -9,7 +9,7 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. math is even' />
+## 1. Math is even
 
 
 
@@ -20,7 +20,7 @@ func MathIsEven() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='2. math is odd' />
+## 2. Math is odd
 
 
 
@@ -31,7 +31,7 @@ func MathIsOdd() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='3. math is perfect square' />
+## 3. Math is perfect square
 
 
 
@@ -42,7 +42,7 @@ func MathIsPerfectSquare() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='4. math is prime' />
+## 4. Math is prime
 
 
 
@@ -53,7 +53,7 @@ func MathIsPrime() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='5. math log' />
+## 5. Math log
 
 
 
@@ -70,7 +70,7 @@ func MathLog() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='6. math pytago' />
+## 6. Math pytago
 
 
 
@@ -81,7 +81,7 @@ func MathPytago() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='7. math transition' />
+## 7. Math transition
 
 
 
@@ -94,7 +94,7 @@ func MathTransition() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='8. math trigonometry' />
+## 8. Math trigonometry
 
 
 
@@ -109,7 +109,7 @@ func MathTrigonometry() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='9. math circle' />
+## 9. Math circle
 
 
 
@@ -122,7 +122,7 @@ func MathCircle() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='10. math cone' />
+## 10. Math cone
 
 
 
@@ -135,7 +135,7 @@ func MathCone() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='11. math cube' />
+## 11. Math cube
 
 
 
@@ -150,7 +150,7 @@ func MathCube() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='12. math cylinder' />
+## 12. Math cylinder
 
 
 
@@ -163,7 +163,7 @@ func MathCylinder() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='13. math ellipse' />
+## 13. Math ellipse
 
 
 
@@ -174,7 +174,7 @@ func MathEllipse() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='14. math parallelogram' />
+## 14. Math parallelogram
 
 
 
@@ -185,7 +185,7 @@ func MathParallelogram() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='15. math polygon' />
+## 15. Math polygon
 
 
 
@@ -195,7 +195,7 @@ func MathPolygon() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='16. math rect' />
+## 16. Math rect
 
 
 
@@ -211,7 +211,7 @@ func MathRect() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='17. math rhombus' />
+## 17. Math rhombus
 
 
 
@@ -222,7 +222,7 @@ func MathRhombus() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='18. math sphere' />
+## 18. Math sphere
 
 
 
@@ -235,7 +235,7 @@ func MathSphere() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='19. math square' />
+## 19. Math square
 
 
 
@@ -248,7 +248,7 @@ func MathSquare() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='20. math trapezoid' />
+## 20. Math trapezoid
 
 
 
@@ -259,7 +259,7 @@ func MathTrapezoid() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='21. math triangle' />
+## 21. Math triangle
 
 
 
@@ -272,7 +272,7 @@ func MathTriangle() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='22. math abs' />
+## 22. Math abs
 
 
 
@@ -283,7 +283,7 @@ func MathAbs() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='23. math add' />
+## 23. Math add
 
 
 
@@ -294,7 +294,7 @@ func MathAdd() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='24. math ceil' />
+## 24. Math ceil
 
 
 
@@ -305,7 +305,7 @@ func MathCeil() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='25. math operators' />
+## 25. Math operators
 
 
 
@@ -316,7 +316,7 @@ func MathOperators() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='26. math factorial' />
+## 26. Math factorial
 
 
 
@@ -327,7 +327,7 @@ func MathFactorial() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='27. math floor' />
+## 27. Math floor
 
 
 
@@ -338,7 +338,7 @@ func MathFloor() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='28. math min' />
+## 28. Math min
 
 
 
@@ -349,7 +349,7 @@ func MathMin() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='29. math max' />
+## 29. Math max
 
 
 
@@ -360,7 +360,7 @@ func MathMax() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='30. math mean' />
+## 30. Math mean
 
 
 
@@ -371,7 +371,7 @@ func MathMean() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='31. math multi' />
+## 31. Math multi
 
 
 
@@ -382,7 +382,7 @@ func MathMulti() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='32. math power' />
+## 32. Math power
 
 
 
@@ -394,7 +394,7 @@ func MathPower() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='33. math remainder' />
+## 33. Math remainder
 
 
 
@@ -405,7 +405,7 @@ func MathRemainder() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='34. math root' />
+## 34. Math root
 
 
 
@@ -422,7 +422,7 @@ func MathRoot() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='35. math round' />
+## 35. Math round
 
 
 
@@ -433,7 +433,7 @@ func MathRound() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='36. math sub' />
+## 36. Math sub
 
 
 
@@ -444,7 +444,7 @@ func MathSub() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='37. math sum' />
+## 37. Math sum
 
 
 

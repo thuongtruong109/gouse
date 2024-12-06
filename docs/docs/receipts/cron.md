@@ -9,7 +9,7 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. cron run' />
+## 1. Cron run
 
 Description: Run a cron job<br>Input params: (duration uint64, stopAfter uint64, callback func())<br>
 

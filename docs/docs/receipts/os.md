@@ -9,7 +9,7 @@ import (
 )
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='1. os cpu' />
+## 1. Os cpu
 
 
 
@@ -29,7 +29,7 @@ func OsCpu() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='2. os disk' />
+## 2. Os disk
 
 
 
@@ -49,7 +49,7 @@ func OsDisk() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='3. os system' />
+## 3. Os system
 
 
 
@@ -74,7 +74,7 @@ func OsSystem() {
 }
 ```
 
-### <Badge style='font-size: 1.1rem;' type='tip' text='4. os profile' />
+## 4. Os profile
 
 
 
