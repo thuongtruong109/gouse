@@ -8,11 +8,6 @@ import (
 	"github.com/shirou/gopsutil/v4/disk"
 	"github.com/shirou/gopsutil/v4/host"
 	"github.com/shirou/gopsutil/v4/mem"
-
-	"log"
-	_ "net/http/pprof"
-	"os"
-	"runtime/pprof"
 )
 
 /* CPU */
@@ -102,34 +97,4 @@ func System() (*ISystem, error) {
 		UsedMemory:        vmStat.Used,
 		UsedMemoryPercent: strconv.FormatFloat(vmStat.UsedPercent, 'f', 2, 64),
 	}, nil
-}
-
-/* Profile */
-
-func Profile(cpuprofile, memprofile string) {
-	if cpuprofile != "" {
-		f, err := os.Create(cpuprofile)
-		if err != nil {
-			log.Fatal("could not create CPU profile: ", err)
-		}
-		defer f.Close() // error handling omitted for example
-		if err := pprof.StartCPUProfile(f); err != nil {
-			log.Fatal("could not start CPU profile: ", err)
-		}
-		defer pprof.StopCPUProfile()
-	}
-
-	// ... rest of the program ...
-
-	if memprofile != "" {
-		f, err := os.Create(memprofile)
-		if err != nil {
-			log.Fatal("could not create memory profile: ", err)
-		}
-		defer f.Close()
-		runtime.GC()
-		if err := pprof.WriteHeapProfile(f); err != nil {
-			log.Fatal("could not write memory profile: ", err)
-		}
-	}
 }

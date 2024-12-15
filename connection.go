@@ -65,16 +65,16 @@ func ConnectRedisUri(uri string) *redis.Client {
 
 /* Connect to Postgres */
 
-type IPgDB struct {
+type PgDB struct {
 	Client *sql.DB
 }
 
-func NewDatabase(dsn string) (*IPgDB, error) {
+func ConnectPostgres(dsn string) (*PgDB, error) {
 	const maxOpenDbConn = 10
 	const maxIdleDbConn = 5
 	const maxDbLifeTime = 5 * time.Minute
 
-	dbConn := &IPgDB{}
+	dbConn := &PgDB{}
 
 	db, err := sql.Open("pgx", dsn)
 	if err != nil {
@@ -92,14 +92,16 @@ func NewDatabase(dsn string) (*IPgDB, error) {
 
 	dbConn.Client = db
 
+	defer func() {
+		db.Close()
+	}()
+
 	return dbConn, nil
 }
 
 /* Connect to MinIO */
 
-type IMinioClient = *minio.Client
-
-type IMinioConf struct {
+type MinioConf struct {
 	Endpoint  string
 	AccessKey string
 	SecretKey string
@@ -108,9 +110,7 @@ type IMinioConf struct {
 	Location  string
 }
 
-func Minio(conf IMinioConf) (IMinioClient, error) {
-	ctx := context.Background()
-
+func ConnectMinio(ctx context.Context, conf MinioConf) (*minio.Client, error) {
 	minioClient, errInit := minio.New(conf.Endpoint, &minio.Options{
 		Creds:  credentials.NewStaticV4(conf.AccessKey, conf.SecretKey, ""),
 		Secure: conf.UseSSL,
@@ -124,7 +124,9 @@ func Minio(conf IMinioConf) (IMinioClient, error) {
 		log.Printf("We already own %s\n", conf.Bucket)
 		return minioClient, errInit
 	} else {
-		err := minioClient.MakeBucket(ctx, conf.Bucket, minio.MakeBucketOptions{Region: conf.Location})
+		err := minioClient.MakeBucket(ctx, conf.Bucket, minio.MakeBucketOptions{
+			Region: conf.Location,
+		})
 		if err != nil {
 			return minioClient, errInit
 		} else {
@@ -151,6 +153,10 @@ func ConnectMongo(ctx context.Context, uri string) (*mongo.Client, error) {
 	if err != nil {
 		return nil, fmt.Errorf("failed to ping MongoDB: %w", err)
 	}
+
+	defer func() {
+		client.Disconnect(ctx)
+	}()
 
 	return client, nil
 }

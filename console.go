@@ -11,6 +11,30 @@ import (
 	"github.com/AlecAivazis/survey/v2"
 )
 
+func Print[T interface{}](output T) {
+	fmt.Println(output)
+}
+
+func Println[T interface{}](output T) {
+	fmt.Println(output)
+}
+
+func Printf[T interface{}](format string, output T) {
+	fmt.Printf(format, output)
+}
+
+func Sprint[T interface{}](output T) string {
+	return fmt.Sprint(output)
+}
+
+func Sprintf[T interface{}](format string, output T) string {
+	return fmt.Sprintf(format, output)
+}
+
+func Sprintln[T interface{}](output T) string {
+	return fmt.Sprintln(output)
+}
+
 func Cmd(defaultCmmand string, windowsCmmand ...string) {
 	var cmd *exec.Cmd
 
@@ -36,7 +60,7 @@ func Cls() {
 	Cmd("clear", "cls")
 }
 
-func OutputColor[T int | int8 | int16 | int32 | uint | uint8 | uint16 | uint32 | uint64 | float32 | float64 | string](color string, output T) {
+func OutputColor[T interface{}](color string, output T) {
 	fmt.Printf("%s%v%s", color, output, DEFAULT_CONSOLE)
 }
 

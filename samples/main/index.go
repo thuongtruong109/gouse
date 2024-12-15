@@ -15,6 +15,7 @@ func main() {
 		cacheSample()
 		chartSample()
 		configSample()
+		connectionSample()
 		consoleSample()
 		cronSample()
 		cryptoSample()
@@ -22,6 +23,7 @@ func main() {
 		functionSample()
 		helperSample()
 		ioSample()
+		logSample()
 		mathSample()
 		mediaSample()
 		netSample()
@@ -82,6 +84,14 @@ func configSample() {
 	samples.ConfigJson()
 	samples.ConfigYaml()
 	samples.ConfigToml()
+}
+
+func connectionSample() {
+	samples.ConnectRedis()
+	samples.ConnectRedisUri()
+	samples.ConnectPostgres()
+	samples.ConnectMongo()
+	samples.ConnectMinio()
 }
 
 func consoleSample() {
@@ -155,6 +165,13 @@ func helperSample() {
 	samples.HelperUUID()
 
 	samples.HelperAutoMdDoc()
+}
+
+func logSample() {
+	samples.WriteLogDefault()
+	samples.WriteLogAsGouse()
+	samples.WriteLogWithType()
+	samples.AutoRotateTruncateLog()
 }
 
 func ioSample() {
