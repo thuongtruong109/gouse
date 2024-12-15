@@ -4,7 +4,9 @@
 
 ```go
 import (
-	"fmt"	"github.com/thuongtruong109/gouse")
+	"fmt"
+	"github.com/thuongtruong109/gouse"
+)
 ```
 
 ## 1. Random number
@@ -14,7 +16,8 @@ Description: Return a random number between min and max<br>Input params: (min, m
 ```go
 func RandomNumber() {
 	fmt.Println(gouse.RandNum(1, 100))
-}```
+}
+```
 
 ## 2. Random i d
 
@@ -23,7 +26,8 @@ Description: Return a random id (string) with current timestamp<br>
 ```go
 func RandomID() {
 	fmt.Println(gouse.RandID())
-}```
+}
+```
 
 ## 3. Random string
 
@@ -32,7 +36,8 @@ Description: Return a random string with n characters length<br>Input params: (l
 ```go
 func RandomString() {
 	fmt.Println(gouse.RandStr(10))
-}```
+}
+```
 
 ## 4. Random digit
 
@@ -41,7 +46,8 @@ Description: Return a random digit number with n characters length<br>Input para
 ```go
 func RandomDigit() {
 	fmt.Println(gouse.RandDigit(10))
-}```
+}
+```
 
 ## 5. Random u u i d
 
@@ -50,4 +56,5 @@ Description: Return a random UUID (format: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)
 ```go
 func RandomUUID() {
 	fmt.Println(gouse.UUID())
-}```
+}
+```

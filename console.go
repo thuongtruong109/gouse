@@ -36,8 +36,16 @@ func Cls() {
 	Cmd("clear", "cls")
 }
 
-func PrintColor[T int | int8 | int16 | int32 | uint | uint8 | uint16 | uint32 | uint64 | float32 | float64 | string](color string, chain T) {
-	fmt.Printf("%s%v\n", color, chain)
+func OutputColor[T int | int8 | int16 | int32 | uint | uint8 | uint16 | uint32 | uint64 | float32 | float64 | string](color string, output T) {
+	fmt.Printf("%s%v%s", color, output, DEFAULT_CONSOLE)
+}
+
+func OutputSuccess(output string) {
+	println(GREEN_CONSOLE + output + DEFAULT_CONSOLE)
+}
+
+func OutputError(output string, err string) {
+	println(RED_CONSOLE + err + DEFAULT_CONSOLE)
 }
 
 func Banner(font IFontBannerType, s string) {

@@ -4,7 +4,9 @@
 
 ```go
 import (
-	"time"	"github.com/thuongtruong109/gouse")
+	"time"
+	"github.com/thuongtruong109/gouse"
+)
 ```
 
 ## 1. Api loadbalancer
@@ -33,7 +35,8 @@ func ApiLoadbalancer() {
 
 	// gouse.HealthCheck() // Enable health check (optional)
 	gouse.LoadBalancer(lbCfg.ProxyPort, lbCfg.Backends)
-}```
+}
+```
 
 ## 2. Api graceful shutdown
 
@@ -50,4 +53,5 @@ func ApiGracefulShutdown() {
 	}
 
 	gs.GracefulShutdown()
-}```
+}
+```

@@ -147,6 +147,5 @@ func IntervalFunc(fn func(), timeout int) {
 
 func RunTimeFunc(startTime time.Time, task func()) time.Duration {
 	task()
-	elapsedTime := float64(time.Since(startTime).Seconds() * 1000)
-	return time.Duration(elapsedTime)
+	return DiffTimeNow(startTime)
 }

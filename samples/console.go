@@ -38,14 +38,14 @@ func ConsoleClear() {
 }
 
 func ConsoleWithColor() {
-	gouse.PrintColor(gouse.DEFAULT_FG, "this is default")
-	gouse.PrintColor(gouse.WHITE_FG, "this is white")
-	gouse.PrintColor(gouse.RED_FG, "this is red")
-	gouse.PrintColor(gouse.GREEN_FG, "this is green")
-	gouse.PrintColor(gouse.YELLOW_FG, "this is yellow")
-	gouse.PrintColor(gouse.BLUE_FG, "this is blue")
-	gouse.PrintColor(gouse.MAGENTA_FG, "this is magenta")
-	gouse.PrintColor(gouse.CYAN_FG, "this is cyan")
+	gouse.OutputColor(gouse.DEFAULT_CONSOLE, "this is default")
+	gouse.OutputColor(gouse.WHITE_CONSOLE, "this is white")
+	gouse.OutputColor(gouse.RED_CONSOLE, "this is red")
+	gouse.OutputColor(gouse.GREEN_CONSOLE, "this is green")
+	gouse.OutputColor(gouse.YELLOW_CONSOLE, "this is yellow")
+	gouse.OutputColor(gouse.BLUE_CONSOLE, "this is blue")
+	gouse.OutputColor(gouse.MAGENTA_CONSOLE, "this is magenta")
+	gouse.OutputColor(gouse.CYAN_CONSOLE, "this is cyan")
 }
 
 func ConsoleBanner() {

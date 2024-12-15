@@ -7,20 +7,20 @@ type ITest struct {
 	WantErr bool
 }
 
-// These maybe not supported by all terminals
 const (
-	DEFAULT_FG string = "\033[0m"
-	RED_FG     string = "\033[31m"
-	GREEN_FG   string = "\033[32m"
-	YELLOW_FG  string = "\033[33m"
-	PURPLE_FG  string = "\033[34m"
-	PINK_FG    string = "\033[35m"
-	CYAN_FG    string = "\033[36m"
-	WHITE_FG   string = "\033[97m"
-	ORANGE_FG  string = "\033[38;5;208m"
-	BLUE_FG    string = "\033[38;5;27m"
-	MAGENTA_FG string = "\033[38;5;13m"
-	Gray       string = "\033[37m"
+	// These maybe not supported by all terminals
+	DEFAULT_CONSOLE string = "\033[0m"
+	RED_CONSOLE     string = "\033[31m"
+	GREEN_CONSOLE   string = "\033[32m"
+	YELLOW_CONSOLE  string = "\033[33m"
+	PURPLE_CONSOLE  string = "\033[34m"
+	PINK_CONSOLE    string = "\033[35m"
+	CYAN_CONSOLE    string = "\033[36m"
+	WHITE_CONSOLE   string = "\033[97m"
+	ORANGE_CONSOLE  string = "\033[38;5;208m"
+	BLUE_CONSOLE    string = "\033[38;5;27m"
+	MAGENTA_CONSOLE string = "\033[38;5;13m"
+	GRAY_CONSOLE    string = "\033[37m"
 )
 
 // const (
@@ -48,6 +48,110 @@ const (
 const (
 	PhoneReg = `^\+\d{1,2}\s?\(\d{1,4}\)\s?\d{1,6}-\d{1,6}$`
 )
+
+const (
+	DESC_CREATE_FAILED string = "create failed"
+	DESC_GET_FAILED    string = "get failed"
+	DESC_UPDATE_FAILED string = "update failed"
+	DESC_DELETE_FAILED string = "delete failed"
+
+	DESC_CREATE_SUCCESS string = "create successfully"
+	DESC_GET_SUCCESS    string = "get successfully"
+	DESC_UPDATE_SUCCESS string = "update successfully"
+	DESC_DELETE_SUCCESS string = "delete successfully"
+
+	DESC_NOT_FOUND_DATA string = "not found data"
+	DESC_EMPTY_DATA     string = "empty data"
+	DESC_INVALID_DATA   string = "invalid data"
+)
+
+// const (
+// 	STATUS_OK              string = "OK"
+// 	STATUS_CREATED         string = "Created"
+// 	STATUS_ACCEPTED        string = "Accepted"
+// 	STATUS_NO_CONTENT      string = "No Content"
+// 	STATUS_RESET_CONTENT   string = "Reset Content"
+// 	STATUS_PARTIAL_CONTENT string = "Partial Content"
+// 	STATUS_MOVED_PERMANENT string = "Moved Permanently"
+// 	STATUS_FOUND           string = "Found"
+// 	STATUS_SEE_OTHER       string = "See Other"
+// 	STATUS_NOT_MODIFIED    string = "Not Modified"
+// 	STATUS_USE_PROXY       string = "Use Proxy"
+// 	STATUS_TEMP_REDIRECT   string = "Temporary Redirect"
+
+// 	STATUS_BAD_REQUEST          string = "Bad Request"
+// 	STATUS_UNAUTHORIZED         string = "Unauthorized"
+// 	STATUS_FORBIDDEN            string = "Forbidden"
+// 	STATUS_NOT_FOUND            string = "Not Found"
+// 	STATUS_METHOD_NOT_ALLOWED   string = "Method Not Allowed"
+// 	STATUS_NOT_ACCEPTABLE       string = "Not Acceptable"
+// 	STATUS_PROXY_AUTH_REQUIRED  string = "Proxy Authentication Required"
+// 	STATUS_REQUEST_TIMEOUT      string = "Request Timeout"
+// 	STATUS_CONFLICT             string = "Conflict"
+// 	STATUS_GONE                 string = "Gone"
+// 	STATUS_LENGTH_REQUIRED      string = "Length Required"
+// 	STATUS_PRECONDITION_FAILED  string = "Precondition Failed"
+// 	STATUS_REQUEST_ENTITY_LARGE string = "Request Entity Too Large"
+// 	STATUS_REQUEST_URI_LARGE    string = "Request-URI Too Large"
+// 	STATUS_UNSUPPORTED_MEDIA    string = "Unsupported Media Type"
+// 	STATUS_REQUEST_RANGE_INVALID string = "Requested Range Not Satisfiable"
+// 	STATUS_EXPECTATION_FAILED    string = "Expectation Failed"
+
+// 	STATUS_INTERNAL_SERVER_ERROR string = "Internal Server Error"
+// 	STATUS_NOT_IMPLEMENTED        string = "Not Implemented"
+// 	STATUS_BAD_GATEWAY            string = "Bad Gateway"
+// 	STATUS_SERVICE_UNAVAILABLE    string = "Service Unavailable"
+// 	STATUS_GATEWAY_TIMEOUT        string = "Gateway Timeout"
+
+// 	STATUS_CONTINUE           string = "Continue"
+// 	STATUS_SWITCHING_PROTOCOL string = "Switching Protocols"
+// 	STATUS_PROCESSING         string = "Processing"
+// 	STATUS_EARLY_HINTS        string = "Early Hints"
+// )
+
+// const (
+// 	STATUS_CONTINUE_CODE           int = 100
+// 	STATUS_SWITCHING_PROTOCOL_CODE int = 101
+// 	STATUS_PROCESSING_CODE         int = 102
+// 	STATUS_EARLY_HINTS_CODE        int = 103
+
+// 	STATUS_OK_CODE              int = 200
+// 	STATUS_CREATED_CODE         int = 201
+// 	STATUS_ACCEPTED_CODE        int = 202
+// 	STATUS_NO_CONTENT_CODE      int = 204
+// 	STATUS_RESET_CONTENT_CODE   int = 205
+// 	STATUS_PARTIAL_CONTENT_CODE int = 206
+// 	STATUS_MOVED_PERMANENT_CODE int = 301
+// 	STATUS_FOUND_CODE           int = 302
+// 	STATUS_SEE_OTHER_CODE       int = 303
+// 	STATUS_NOT_MODIFIED_CODE    int = 304
+// 	STATUS_USE_PROXY_CODE       int = 305
+// 	STATUS_TEMP_REDIRECT_CODE   int = 307
+
+// 	STATUS_BAD_REQUEST_CODE          int = 400
+// 	STATUS_UNAUTHORIZED_CODE         int = 401
+// 	STATUS_FORBIDDEN_CODE            int = 403
+// 	STATUS_NOT_FOUND_CODE            int = 404
+// 	STATUS_METHOD_NOT_ALLOWED_CODE   int = 405
+// 	STATUS_NOT_ACCEPTABLE_CODE       int = 406
+// 	STATUS_PROXY_AUTH_REQUIRED_CODE  int = 407
+// 	STATUS_REQUEST_TIMEOUT_CODE      int = 408
+// 	STATUS_CONFLICT_CODE             int = 409
+// 	STATUS_GONE_CODE                 int = 410
+// 	STATUS_LENGTH_REQUIRED_CODE      int = 411
+// 	STATUS_PRECONDITION_FAILED_CODE  int = 412
+// 	STATUS_REQUEST_ENTITY_LARGE_CODE int = 413
+// 	STATUS_REQUEST_URI_LARGE_CODE    int = 414
+// 	STATUS_UNSUPPORTED_MEDIA_CODE    int = 415
+// 	STATUS_REQUEST_RANGE_INVALID_CODE int = 416
+// 	STATUS_EXPECTATION_FAILED_CODE    int = 417
+
+// 	STATUS_INTERNAL_SERVER_ERROR_CODE int = 500
+// 	STATUS_NOT_IMPLEMENTED_CODE        int = 501
+// 	STATUS_BAD_GATEWAY_CODE            int = 502
+// 	STATUS_SERVICE_UNAVAILABLE_CODE    int = 503
+// 	STATUS_GATEWAY_TIMEOUT_CODE        int = 504
+// )
 
 type IFontBannerType map[string][3]string
 
