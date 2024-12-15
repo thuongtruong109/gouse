@@ -1,6 +1,15 @@
 {
   "name": "gouse",
   "description": "A modern Golang utility presets",
+  "author": {
+    "name": "Tran Nguyen Thuong Truong",
+    "email": "thuongtruong@proton.me"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thuongtruong109/gouse.git"
+  },
+  "license": "MIT",
   "private": true,
   "type": "module",
   "version": "1.0",

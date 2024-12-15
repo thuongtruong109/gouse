@@ -4,24 +4,24 @@ import (
 	"fmt"
 
 	"github.com/thuongtruong109/gouse"
-	"github.com/thuongtruong109/gouse/console/choice"
-	"github.com/thuongtruong109/gouse/console/countdown"
-	"github.com/thuongtruong109/gouse/console/dir"
-	"github.com/thuongtruong109/gouse/console/glamour"
-	"github.com/thuongtruong109/gouse/console/inline"
-	"github.com/thuongtruong109/gouse/console/list"
+	"github.com/thuongtruong109/gouse/cookbook/console/choice"
+	"github.com/thuongtruong109/gouse/cookbook/console/countdown"
+	"github.com/thuongtruong109/gouse/cookbook/console/dir"
+	"github.com/thuongtruong109/gouse/cookbook/console/glamour"
+	"github.com/thuongtruong109/gouse/cookbook/console/inline"
+	"github.com/thuongtruong109/gouse/cookbook/console/list"
 
 	// "github.com/thuongtruong109/gouse/console/paper"
-	"github.com/thuongtruong109/gouse/console/parallel"
-	"github.com/thuongtruong109/gouse/console/progress"
-	"github.com/thuongtruong109/gouse/console/realtime"
-	"github.com/thuongtruong109/gouse/console/sequence"
-	"github.com/thuongtruong109/gouse/console/spinner"
-	"github.com/thuongtruong109/gouse/console/split"
-	"github.com/thuongtruong109/gouse/console/stopwatch"
+	"github.com/thuongtruong109/gouse/cookbook/console/parallel"
+	"github.com/thuongtruong109/gouse/cookbook/console/progress"
+	"github.com/thuongtruong109/gouse/cookbook/console/realtime"
+	"github.com/thuongtruong109/gouse/cookbook/console/sequence"
+	"github.com/thuongtruong109/gouse/cookbook/console/spinner"
+	"github.com/thuongtruong109/gouse/cookbook/console/split"
+	"github.com/thuongtruong109/gouse/cookbook/console/stopwatch"
 
 	// "github.com/thuongtruong109/gouse/console/tab"
-	"github.com/thuongtruong109/gouse/console/table"
+	"github.com/thuongtruong109/gouse/cookbook/console/table"
 )
 
 func ConsoleCmd() {

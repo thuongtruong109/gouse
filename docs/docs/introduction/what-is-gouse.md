@@ -3,7 +3,7 @@
 ## 🧠 Why Gouse?
 
 - Gouse is a modern essential [`Golang`](https://golang.org/) utility package delivering consistency, modularity, performance, & extras presets inspired by [`Lodash`](https://lodash.com/).
-- Built on top of Go language, combined with others open-source packages.
+- Built on top of Go language, combined with others Go open-source packages.
 - `Javascript` user-friendly syntax.
 - No config - import as utility functions.
 - Lightweight package: easy to use, chainable, and extendable, and available in various builds & module formats.

@@ -8,7 +8,7 @@
     <a href="https://codecov.io/gh/thuongtruong109/gouse"><img src="https://codecov.io/gh/thuongtruong1009/gouse/branch/main/graph/badge.svg" alt="codecov"></a>
     <a href="https://dl.circleci.com/status-badge/redirect/gh/thuongtruong109/gouse/tree/main"><img src="https://dl.circleci.com/status-badge/img/gh/thuongtruong1009/gouse/tree/main.svg?style=svg" alt="circleci"></a>
     <a href="https://pkg.go.dev/github.com/thuongtruong109/gouse"><img src="https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square" alt="go.dev"></a>
-    <a href="https://gouse.vercel.app"><img src="https://img.shields.io/badge/homepage-pink" alt="homepage_website" /></a>
+    <a href="https://gouse.vercel.app"><img src="https://img.shields.io/badge/Documentation-pink" alt="documentation_website" /></a>
     <img src="./public/count.svg" alt="gouse_functions_count">
     <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/thuongtruong109/gouse">
     <!-- <img alt="GitHub Release" src="https://img.shields.io/github/v/release/thuongtruong109/gouse"> -->
@@ -34,6 +34,7 @@
 ## 🧠 Why Gouse?
 
 - Gouse is a modern essential [`Golang`](https://golang.org/) utility package delivering consistency, modularity, performance, & extras presets inspired by [`Lodash`](https://lodash.com/).
+- Built on top of Go language, combined with others Go open-source packages.
 - `Javascript` user-friendly syntax.
 - No config - import as utility functions.
 - Lightweight package: easy to use, chainable, and extendable, and available in various builds & module formats.
@@ -70,49 +71,49 @@
   <table>
     <tbody>
       <td align="left">
-        <div width="300" height="0"><br>
-        ✅ Array <br/>
-        ✅ Api <br/>
-        ✅ Cache <br/>
-        ✅ Chart <br/>
-        ✅ Config <br/>
-        ✅ Console <br/>
-        ✅ Cron <br/>
-        ✅ Crypto <br/>
-        ✅ Date <br/>
-        <div width="300" height="0">
+        <div width="300" height="0"></div><br>
+        <a href="https://gouse.vercel.app/receipts/array.html">✅ Array</a> <br/>
+        <a href="https://gouse.vercel.app/receipts/api.html">✅ Api</a> <br/>
+        <a href="https://gouse.vercel.app/receipts/cache.html">✅ Cache</a> <br/>
+        <a href="https://gouse.vercel.app/receipts/chart.html">✅ Chart</a> <br/>
+        <a href="https://gouse.vercel.app/receipts/config.html">✅ Config</a> <br/>
+        <a href="https://gouse.vercel.app/receipts/console.html">✅ Console</a> <br/>
+        <a href="https://gouse.vercel.app/receipts/cron.html">✅ Cron</a> <br/>
+        <a href="https://gouse.vercel.app/receipts/crypto.html">✅ Crypto</a> <br/>
+        <a href="https://gouse.vercel.app/receipts/date.html">✅ Date</a> <br/>
+        <div width="300" height="0"></div>
       </td>
       <td align="left">
-        <div width="300" height="0"><br>
-        ✅ Function <br/>
-        ✅ Helper <br/>
-        ✅ I/O <br/>
-        ✅ Connection <br/>
-        ✅ Log <br/>
-        ✅ Math <br/>
-        ✅ Media <br/>
-        <div width="300" height="0">
+        <div width="300" height="0"></div><br>
+        <a href="https://gouse.vercel.app/receipts/function.html">✅ Function</a> <br/>
+        <a href="https://gouse.vercel.app/receipts/helper.html">✅ Helper</a> <br/>
+        <a href="https://gouse.vercel.app/receipts/io.html">✅ I/O</a> <br/>
+        <a href="https://gouse.vercel.app/receipts/connection.html">✅ Connection</a> <br/>
+        <a href="https://gouse.vercel.app/receipts/log.html">✅ Log</a> <br/>
+        <a href="https://gouse.vercel.app/receipts/math.html">✅ Math</a> <br/>
+        <a href="https://gouse.vercel.app/receipts/media.html">✅ Media</a> <br/>
+        <div width="300" height="0"></div>
       </td>
       <td align="left">
-        <div width="400" height="0"><br>
-        ✅ Net <br/>
-        ✅ Number <br/>
-        ✅ OS <br/>
-        ✅ Random <br/>
-        ✅ Regex <br/>
-        ✅ Struct <br/>
-        ✅ String <br/>
-        ✅ Tool <br/>
-        ✅ Type <br/>
-        <div width="300" height="0">
+        <div width="400" height="0"></div><br>
+        <a href="https://gouse.vercel.app/receipts/net.html">✅ Net</a> <br/>
+        <a href="https://gouse.vercel.app/receipts/number.html">✅ Number</a> <br/>
+        <a href="https://gouse.vercel.app/receipts/os.html">✅ OS</a> <br/>
+        <a href="https://gouse.vercel.app/receipts/random.html">✅ Random</a> <br/>
+        <a href="https://gouse.vercel.app/receipts/regex.html">✅ Regex</a> <br/>
+        <a href="https://gouse.vercel.app/receipts/struct.html">✅ Struct</a> <br/>
+        <a href="https://gouse.vercel.app/receipts/string.html">✅ String</a> <br/>
+        <a href="https://gouse.vercel.app/receipts/tool.html">✅ Tool</a> <br/>
+        <a href="https://gouse.vercel.app/receipts/type.html">✅ Type</a> <br/>
+        <div width="300" height="0"></div>
       </td>
     </tbody>
   </table>
 </div>
 
-* See more details at [Gouse homepage](https://gouse.vercel.app)
+- See more details at [Gouse Documentation](https://gouse.vercel.app)
 
-<!-- - 
+<!-- -
 - [ ] Auth
 - [ ] Error
 - [ ] Lang
@@ -151,17 +152,14 @@ func main() {
 ```go
 package main
 
-import (
-    "fmt"
-    "github.com/thuongtruong109/gouse/math"
-)
+import "github.com/thuongtruong109/gouse"
 
 func main() {
-    fmt.Println(math.Add(1, 2))
+    gouse.Print(gouse.Add(1, 2))
 }
 ```
 
-- View more examples at [`sample`](sample) folder.
+- View more examples at [`sample`](https://gouse.vercel.app/receipts/array.html) folder.
 
 ## 📖 Documentation
 
@@ -244,14 +242,19 @@ $ git clone https://github.com/thuongtruong109/gouse.git
 - Gouse is built on top of the following below and others open-source projects
 
 - Special thanks to the following dependencies that helped make this project possible:
-  - [Google UUID](github.com/google/uuid) - A fast and simple UUID library for Go 🔑
-  - [Survey v2](github.com/AlecAivazis/survey/v2) - A golang library for building interactive prompts with full support for windows and posix terminals 🙋
-  - [Bubbletea](github.com/charmbracelet/bubbletea) - A powerful little TUI framework 🏗
-  - [Go Cache](github.com/patrickmn/go-cache) - An in-memory key:value store/cache (similar to Memcached) 🗄
-  - [Crypto](golang.org/x/crypto) - A collection of cryptographic algorithms and protocols for Go 📦
-  - [Go eCharts](github.com/go-echarts/go-echarts) - 🎨 The adorable charts library for Golang 📊
-  - [Env config](github.com/kelseyhightower/envconfig) x [Go Toml](github.com/pelletier/go-toml) - A Go library for managing configuration data from files 📄
-  - [Minio Client Go](github.com/minio/minio-go/v7) - MinIO Go Library for Amazon S3 compatible cloud storage 📦
+  - [Google UUID](https://github.com/google/uuid) - A fast and simple UUID library for Go 🔑
+  - [Survey v2](https://github.com/AlecAivazis/survey/v2) - A golang library for building interactive prompts with full support for windows and posix terminals 🙋
+  - [Bubbletea](https://github.com/charmbracelet/bubbletea) - A powerful little TUI framework 🏗
+  - [Go Cache](https://github.com/patrickmn/go-cache) - An in-memory key:value store/cache (similar to Memcached) 🗄
+  - [Crypto](https://golang.org/x/crypto) - A collection of cryptographic algorithms and protocols for Go 📦
+  - [Go eCharts](https://github.com/go-echarts/go-echarts) - 🎨 The adorable charts library for Golang 📊
+  - [Env config](https://github.com/kelseyhightower/envconfig) x [Go Toml](github.com/pelletier/go-toml) - A Go library for managing configuration data from files 📄
+  - [Minio Client Go v7](https://github.com/minio/minio-go) - MinIO Go Library for Amazon S3 compatible cloud storage 📦
+  - [Mongodb Go driver](https://github.com/mongo-driver) - The MongoDB supported driver for Go 📦
+  - [Redis Go v8](https://github.com/go-redis/redis) - Type-safe Redis client for Golang 📦
+  - [Cache for Go](github.com/patrickmn/go-cache) - An in-memory key:value store/cache (similar to Memcached) library for Go 🗄
+  - [Toml Go](github.com/pelletier/go-toml) - A Go library for managing configuration data from files 📄
+  - [Yaml](gopkg.in/yaml.v2) - A YAML support for the Go language 📄
 
 ## 📚 References
 
