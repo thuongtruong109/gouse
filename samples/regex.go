@@ -6,12 +6,20 @@ import (
 	"github.com/thuongtruong109/gouse"
 )
 
-// Note: regex pattern is not include one of (^, $, /g)
-
+/*
+Description: Check if the input string is match with regex pattern
+Input params: (pattern, input string)
+--> Note: regex pattern is not include one of (^, $, /g)
+*/
 func RegexIsMatch() {
 	fmt.Println("Match string with regex: ", gouse.IsMatchReg(`[a-z]+\s[a-z]+`, "hello world"))
 }
 
+/*
+Description: Find the first index and value of the match regex pattern
+Input params: (pattern, input string)
+--> Note: regex pattern is not include one of (^, $, /g)
+*/
 func RegexMatchIndex() {
 	paragraph := "I think Ruth's dog is cuter than your dog!"
 	matchIdx := gouse.MatchIndexReg(`[^\w\s']`, paragraph)
@@ -22,6 +30,11 @@ func RegexMatchIndex() {
 	}
 }
 
+/*
+Description: Find all index and value of the match regex pattern
+Input params: (pattern, input string)
+--> Note: regex pattern is not include one of (^, $, /g)
+*/
 func RegexMatch() {
 	fmt.Println("Match string with regex: ", gouse.MatchReg(`[A-Z]`, "Hello World 123"))
 }

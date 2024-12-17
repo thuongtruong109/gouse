@@ -11,14 +11,14 @@ Description: Return a random number between min and max
 Input params: (min, max int)
 */
 func RandomNumber() {
-	fmt.Println(gouse.RandNum(1, 100))
+	fmt.Println("Random number [1, 10): ", gouse.RandNum(1, 100))
 }
 
 /*
 Description: Return a random id (string) with current timestamp
 */
 func RandomID() {
-	fmt.Println(gouse.RandID())
+	fmt.Println("Generate random ID: ", gouse.RandID())
 }
 
 /*

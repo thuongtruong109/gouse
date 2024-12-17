@@ -10,7 +10,7 @@ import (
 Description: Load balancer with health check
 Input params: (ILbConfig.ProxyPort, ILbConfig.Backends)
 */
-func ApiLoadbalancer() {
+func Loadbalancer() {
 	lbCfg := gouse.ILbConfig{
 		ProxyPort: "8080",
 		Backends: []gouse.IBackend{
@@ -37,7 +37,7 @@ func ApiLoadbalancer() {
 Description: Graceful shutdown for API server
 Input params: (IGracefulShutdown)
 */
-func ApiGracefulShutdown() {
+func GracefulShutdown() {
 	gs := gouse.IGracefulShutdown{
 		Port:          "3000",
 		StartMsg:      "Starting server at port http://localhost:3000",

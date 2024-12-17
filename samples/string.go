@@ -6,138 +6,228 @@ import (
 	"github.com/thuongtruong109/gouse"
 )
 
-/* Samples for string case */
-
-func StringCapitalize() {
+/*
+Description: Capitalize the first letter of a string.
+Input params: (s string)
+*/
+func Capitalize() {
 	var str = "hello world"
 	println(gouse.Capitalize(str))
 }
 
-func StringCamelCase() {
+/*
+Description: Convert string to Camel Case.
+Input params: (s string)
+*/
+func CamelCase() {
 	var str = "convert_any-string TO-camelCase in Go! 123"
 	println("Convert string to Camel Case: ", gouse.CamelCase(str))
 }
 
-func StringSnakeCase() {
+/*
+Description: Convert string to Snake Case.
+Input params: (s string)
+*/
+func SnakeCase() {
 	var str1 = "hello world"
 	var str2 = "ConvertThisString123"
 	println("Convert string to Snake Case: ", gouse.SnakeCase(str1), gouse.SnakeCase(str2))
 }
 
-func StringKebabCase() {
+/*
+Description: Convert string to Kebab Case.
+Input params: (s string)
+*/
+func KebabCase() {
 	var str = "hello world"
 	println("Convert string to Kebab Case: ", gouse.KebabCase(str))
 }
 
-/* Samples for string check */
-
-func StringIsLetter() {
+/*
+Description: Check is letter character.
+Input params: (s string)
+*/
+func IsLetter() {
 	var str = "hello world"
 	println("Check is letter character: ", gouse.IsLetter(str[0]))
 }
 
-func StringIsDigit() {
+/*
+Description: Check is number character.
+Input params: (s string)
+*/
+func IsDigit() {
 	var str = "1hello world"
 	println("Check is number character: ", gouse.IsDigit(str[0]))
 }
 
-func StringIncludes() {
+/*
+Description: Check is contain substring in string.
+Input params: (s string, substr string)
+*/
+func Includes() {
 	var str = "hello world, this is world"
 	println("Check substring in string: ", gouse.Includes(str, "world"))
 }
 
-func StringIsLower() {
+/*
+Description: Check is lower string.
+Input params: (s string)
+*/
+func IsLower() {
 	var str = "hELLO WORLD"
 	println("Check is lower string: ", gouse.IsLower(str[0]))
 }
 
-func StringIsUpper() {
+/*
+Description: Check is upper string.
+Input params: (s string)
+*/
+func IsUpper() {
 	var str = "Hello world"
 	println("Check is upper string: ", gouse.IsUpper(str[0]))
 }
 
-/* Samples for string format */
-
-func StringSplit() {
+/*
+Description: Split string by separator.
+Input params: (s string, separator string)
+*/
+func Split() {
 	var str = "hello world"
 	fmt.Println("Split string by separator: ", gouse.Split(str, "l"))
 }
 
-func StringWords() {
+/*
+Description: Split string by single word
+Input params: (s string)
+*/
+func Words() {
 	var str = "hello world"
 	println("Split string to array of words: ", gouse.Words(str))
 
 }
 
-func StringReverse() {
+/*
+Description: Reverse string.
+Input params: (s string)
+*/
+func Reverse() {
 	var str = "hello world"
 	println("Reverse string: ", gouse.Reverse(str))
 }
 
-func StringLower() {
+/*
+Description: Convert string to lower case.
+Input params: (s string)
+*/
+func Lower() {
 	var str = "HELLO WORLD"
 	println("Lower string (string): ", gouse.Lowers(str))
 	println("Lower string (byte): ", gouse.Lower(str[0]))
 	println("Lower first string: ", gouse.LowerFirst(str))
 }
 
-func StringUpper() {
+/*
+Description: Convert string to upper case.
+Input params: (s string)
+*/
+func Upper() {
 	var str = "hello world"
 	println("Upper string (string): ", gouse.Uppers(str))
 	println("Upper string (byte): ", gouse.Upper(str[0]))
 	println("Upper first string: ", gouse.UpperFirst(str))
 }
 
-func StringRepeat() {
+/*
+Description: Repeat string n times.
+Input params: (struct interface{}, fieldName string, value interface{})
+*/
+func Repeat() {
 	var str = "hello world"
 	println("Repeat string: ", gouse.Repeat(str, 3))
 }
 
-func StringTruncate() {
+/*
+Description: Truncate string to n characters or add suffix.
+Input params: (s string, length int, suffix ...string)
+*/
+func Truncate() {
 	var str = "hello world"
 	println("Truncate string (default): ", gouse.Truncate(str, 5))
 	println("Truncate string (custom): ", gouse.Truncate(str, 5, "***"))
 }
 
-func StringReplace() {
+/*
+Description: Replace substring in string.
+Input params: (s string, old string, new string)
+*/
+func Replace() {
 	var str = "hello world, this is world"
 	println("Replace string: ", gouse.Replace(str, "world", "golang"))
 }
 
-func StringTrim() {
+/*
+Description: Trim left and right space in string.
+Input params: (s string)
+*/
+func Trim() {
 	var str = "   hello world, this is world   "
 	println("Trim string: ", gouse.Trim(str))
 	println("Trim left string: ", gouse.LTrim(str))
 	println("Trim right string: ", gouse.RTrim(str))
 }
 
-func StringTrimBlank() {
+/*
+Description: Trim left and right blank in string.
+Input params: (s string)
+*/
+func TrimBlank() {
 	println("Trim blank string: ", gouse.TrimBlank("   hello world, this is world   "))
 	println("Trim left blank string: ", gouse.TrimBlank("   hello world, this is world   \t"))
 	println("Trim right blank string: ", gouse.TrimBlank("   hello world, this is world   \n"))
 }
 
-func StringTrimPrefix() {
+/*
+Description: Trim left and right prefix in string.
+Input params: (s string, prefix string)
+*/
+func TrimPrefix() {
 	var str = "   hello world, this is world   "
 	println("Trim prefix string: ", gouse.TrimPrefix(str, "   "))
 	println("Trim suffix string: ", gouse.TrimSuffix(str, "   "))
 }
 
-func StringTrimSuffix() {
+/*
+Description: Trim left and right suffix in string.
+Input params: (s string, suffix string)
+*/
+func TrimSuffix() {
 	var str = "   hello world, this is world   "
 	println("Trim suffix string: ", gouse.TrimSuffix(str, "   "))
 }
 
-func StringJoin() {
+/*
+Description: Join string array to string.
+Input params: (s []string, separator string)
+*/
+func Join() {
 	var str = []string{"hello", "world"}
 	println("Join string: ", gouse.Join(str, "-"))
 }
 
-func StringConcat() {
+/*
+Description: Concat string.
+Input params: (s ...string)
+*/
+func Concat() {
 	println("Concat string: ", gouse.Concat("hello", "world"))
 }
 
-func StringSubStr() {
+/*
+Description: Get substring from string.
+Input params: (s string, start int, end ...int)
+*/
+func SubStr() {
 	var str = "hello world, this is world"
 	println("Sub string: ", gouse.SubStr(str, 0, 5))
 	println("Sub string: ", gouse.SubStr(str, 0, 1))
@@ -145,7 +235,11 @@ func StringSubStr() {
 	println("Sub string (with negative index): ", gouse.SubStr(str, -5, -1))
 }
 
-func StringSlice() {
+/*
+Description: Slice string from start to end.
+Input params: (s string, start int, end ...int)
+*/
+func Slice() {
 	var str = "hello world, this is world"
 	println("Slice string: ", gouse.Slice(str, 0, 5))
 	println("Slice string: ", gouse.Slice(str, 0, 1))
@@ -154,53 +248,87 @@ func StringSlice() {
 	println("Slice string (with negative index): ", gouse.Slice(str, -5, -1))
 }
 
-func StringSplice() {
+/*
+Description: Splice string from start to end.
+Input params: (s string, start int, end int, replace ...string)
+*/
+func Splice() {
 	var str = "helloworld, this is world"
 	println("Splice string (default not replace): ", gouse.Splice(str, 0, 5))
 	println("Splice string (with replace): ", gouse.Splice(str, 1, 5, "golang"))
 	println("Splice string (with replace multiple): ", gouse.Splice(str, 1, 5, "golang1", "golang2"))
 }
 
-func StringStartsWith() {
+/*
+Description: Check is start with substring in string.
+Input params: (s string, subStr string)
+*/
+func StartsWith() {
 	var str = "hello world, this is world"
 	println("Starts with: ", gouse.StartsWith(str, "hello"))
 }
 
-func StringEndsWith() {
+/*
+Description: Check is end with substring in string.
+Input params: (s string, subStr string)
+*/
+func EndsWith() {
 	var str = "hello world, this is world"
 	println("Ends with: ", gouse.EndsWith(str, "world"))
 }
 
-func StringEscape() {
+/*
+Description: Convert string to HTML entities.
+Input params: (s string)
+*/
+func Escape() {
 	var str = "This is a <b>bold</b> statement & \"quote\" – © ®"
 	println("Escape string: ", gouse.Escape(str))
 }
 
-func StringUnescape() {
+/*
+Description: Convert HTML entities to string.
+Input params: (s string)
+*/
+func Unescape() {
 	var str = "This is a &lt;b&gt;bold&lt;/b&gt; statement &amp; &quot;quote&quot; – © ®"
 	println("Unescape string: ", gouse.Unescape(str))
 }
 
-func StringPad() {
+/*
+Description: Add padding to string from left or right.
+Input params: (s string, length int, padStr string)
+*/
+func Pad() {
 	var str = "hello world"
 	println("Pad-left string: ", gouse.PadStart(str, 20, '$'))
 	println("Pad-right string: ", gouse.PadEnd(str, 20, '@'))
 }
 
-/* Samples for string utility */
-
-func StringCount() {
+/*
+Description: Count words/substr in string.
+Input params: (s string, substr ...string)
+*/
+func Count() {
 	var str = "hello world wo wo"
 	println("Count words/substr in string (default): ", gouse.Count(str))
 	println("Count words/substr in string (with char): ", gouse.Count(str, "wo"))
 }
 
-func StringLines() {
+/*
+Description: Count lines in string.
+Input params: (s string)
+*/
+func Lines() {
 	var str = "hello world\nwo wo"
 	println("Count lines of string: ", gouse.Lines(str))
 }
 
-func StringIndex() {
+/*
+Description: Get index of substring in string.
+Input params: (s string, substr string)
+*/
+func Index() {
 	var str = "hello world, this is world"
 
 	f1, l1 := gouse.IndexSubStr(str, "l")
@@ -217,37 +345,52 @@ func StringIndex() {
 
 	f4, l4 := gouse.IndexSubStr(str, "oo")
 	if f4 == -1 || l4 == -1 {
-		fmt.Println("Not found")
+		gouse.Println("Not found")
 	}
 
 	if gouse.FIndex(str, "oo") == -1 {
-		fmt.Println("Not found")
+		gouse.Println("Not found")
 	}
 
 	if gouse.LIndex(str, "oo") == -1 {
-		fmt.Println("Not found")
+		gouse.Println("Not found")
 	}
 }
 
-func StringRandom() {
+/*
+Description: Random chain string.
+Input params: (length int)
+*/
+func RandomChain() {
 	println("Random chain string: ", gouse.RandStr(10))
-
 	println("Random chain number: ", gouse.RandDigit(6))
 }
 
-func StringAt() {
+/*
+Description: Get character at index in string.
+Input params: (s string, index int)
+*/
+func At() {
 	var str = "hello world"
 	println("At string: ", gouse.At(str, 1))
 	println("At string: ", gouse.At(str, -5))
 }
 
-func StringCodePointAt() {
+/*
+Description: Get code point at index in string.
+Input params: (s string, index int)
+*/
+func CodePointAt() {
 	var str = "hello world"
 	println("Code point at string: ", gouse.CodePointAt(str, 1))
 	println("Code point at string: ", gouse.CodePointAt(str, -5))
 }
 
-func StringCodePoint() {
+/*
+Description: Get code point of string.
+Input params: (s string)
+*/
+func CodePoint() {
 	asciiValues := gouse.CodePoint("hello world")
 
 	print("Code point string: ")
@@ -256,11 +399,19 @@ func StringCodePoint() {
 	}
 }
 
-func StringFromCodePointAt() {
+/*
+Description: Transform code point to string.
+Input params: (codePoint int)
+*/
+func FromCodePointAt() {
 	println("From code point at string: ", gouse.FromCodePointAt(9733))
 	println("From code point at string: ", gouse.FromCodePointAt(9731))
 }
 
-func StringFromCodePoint() {
+/*
+Description: Transform multi code points to string.
+Input params: (codePoints ...int)
+*/
+func FromCodePoint() {
 	println("From code point string: ", gouse.FromCodePoint(104, 101, 108, 108, 111, 32, 119, 111, 114, 108, 100))
 }

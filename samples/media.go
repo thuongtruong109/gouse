@@ -1,7 +1,6 @@
 package samples
 
 import (
-	"fmt"
 	"image/png"
 	"log"
 	"os"
@@ -10,12 +9,16 @@ import (
 	"github.com/thuongtruong109/gouse"
 )
 
-func MediaCanvas() {
+/*
+Description: Create a canvas with a white background and save it as a PNG file
+Input params: (size int, background string)
+*/
+func Canvas() {
 	avatar, err := gouse.CreateCanvas(200, "#FFFFFF")
 	if err != nil {
 		log.Fatal(err)
 	}
-	filename := fmt.Sprintf("mockdata/%d.png", time.Now().Unix())
+	filename := gouse.Sprintf("mockdata/%d.png", time.Now().Unix())
 	file, err := os.Create(filename)
 	if err != nil {
 		log.Fatal(err)
@@ -23,12 +26,16 @@ func MediaCanvas() {
 	png.Encode(file, avatar)
 }
 
-func MediaPngToJpg() {
+/*
+Description: Convert a PNG image to a JPG image
+Input params: (jpgPath string, pngPath string)
+*/
+func PngToJpg() {
 	err := gouse.PNGToJPG("mockdata/1720031107.png", "mockdata/output.jpg")
 	if err != nil {
-		fmt.Println(err)
+		gouse.Println(err)
 		return
 	}
 
-	fmt.Println("Conversion successful")
+	gouse.Println("Conversion successful")
 }

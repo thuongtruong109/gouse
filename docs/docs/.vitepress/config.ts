@@ -51,6 +51,12 @@ export default defineConfig({
         ],
       },
     ],
+    search: {
+      provider: "local",
+      options: {
+        detailedView: true,
+      },
+    },
 
     sidebar: {
       "/introduction/": {
@@ -73,6 +79,7 @@ export default defineConfig({
           { text: "⌛ Cron", link: "cron" },
           { text: "🔐 Crypto", link: "crypto" },
           { text: "📅 Date", link: "date" },
+          { text: "⌛ Time", link: "time" },
           { text: "🫛 Function", link: "function" },
           { text: "🎯 I/O", link: "io" },
           { text: "✍️ Log", link: "log" },
@@ -85,9 +92,10 @@ export default defineConfig({
           { text: "🔃 Regex", link: "regex" },
           { text: "🔗 String", link: "string" },
           { text: "🛳️ Struct", link: "struct" },
-          { text: "🐧 Type", link: "type" },
+          { text: "📚 Type", link: "type" },
 
-          // { text: 'Path', link: 'path' },
+          // { text: "📧 Email", link: "email" },
+          // { text: '🐧Path', link: 'path' },
           // { text: 'Security', link: 'security' },
           // { text: 'Web', link: 'web' },
           // { text: 'Worker', link: 'worker' },

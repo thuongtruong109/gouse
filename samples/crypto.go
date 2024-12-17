@@ -10,7 +10,7 @@ import (
 Description: Encode data to base64
 Input params: (data []byte)
 */
-func CryptoEncode() {
+func EncodeData() {
 	data := []byte("This is a sample data")
 
 	encodedData, err := gouse.EncodeData(data)
@@ -26,7 +26,7 @@ func CryptoEncode() {
 Description: Decode data from base64
 Input params: (data []byte)
 */
-func CryptoDecode() {
+func DecodeData() {
 	data := []byte("VGhpcyBpcyBhIHNhbXBsZSBkYXRh")
 	decodedData, err := gouse.DecodeData(data)
 	if err != nil {
@@ -41,7 +41,7 @@ func CryptoDecode() {
 Description: Encrypt data in file
 Input params: (filename string, password []byte)
 */
-func CryptoEncryptFile() {
+func EncryptFile() {
 	gouse.EncryptFile("sample.txt", []byte("password"))
 	println("File content encrypted")
 }
@@ -50,7 +50,7 @@ func CryptoEncryptFile() {
 Description: Decrypt data in file
 Input params: (filename string, password []byte)
 */
-func CryptoDecryptFile() {
+func DecryptFile() {
 	gouse.DecryptFile("sample.txt", []byte("password"))
 	println("File content decrypted")
 }
@@ -59,7 +59,7 @@ func CryptoDecryptFile() {
 Description: Encrypt password string
 Input params: (data string)
 */
-func CryptoEncryptPassword() {
+func EncryptPassword() {
 	data := "This is a sample data"
 
 	encryptedData, err := gouse.EncryptPassword(data)
@@ -75,7 +75,7 @@ func CryptoEncryptPassword() {
 Description: Decrypt password string and compare with the original password
 Input params: (data string, password string)
 */
-func CryptoDecryptPassword() {
+func DecryptPassword() {
 	data := "$2a$10$bcA002IOHi5SYHNH4lmIbuHjHplGl7TQZ.MznNrL1N70vAi7ovTa2"
 	err := gouse.DecryptPassword(data, "This is a sample data")
 	if err != nil {

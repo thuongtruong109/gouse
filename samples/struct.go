@@ -6,6 +6,10 @@ import (
 	"github.com/thuongtruong109/gouse"
 )
 
+/*
+Description: Add fields to a struct
+Input params: (struct, newField interface{})
+*/
 func StructAdd() {
 	type Add_Person struct {
 		Name  string
@@ -25,9 +29,13 @@ func StructAdd() {
 	}
 	result := gouse.AddStruct(person, newFields)
 
-	fmt.Printf("Struct after adding fields: %+v\n", result)
+	gouse.Printf("Struct after adding fields: %+v\n", result)
 }
 
+/*
+Description: Clone a struct
+Input params: (struct interface{})
+*/
 func StructClone() {
 	type Clone_Person struct {
 		Name  string
@@ -41,15 +49,19 @@ func StructClone() {
 		Email: "example@gmail.com",
 	}
 
-	fmt.Printf("Original: %+v\n", person)
+	gouse.Printf("Original: %+v\n", person)
 
 	clone := gouse.CloneStruct(person)
 
 	updateClone := clone.(Clone_Person)
 	updateClone.Name = "Updated Name"
-	fmt.Printf("Clone: %+v\n", updateClone)
+	gouse.Printf("Clone: %+v\n", updateClone)
 }
 
+/*
+Description: Get fields from a struct
+Input params: (struct interface{}, fieldName string)
+*/
 func StructGet() {
 	type Get_Person struct {
 		Name  string
@@ -64,9 +76,13 @@ func StructGet() {
 	}
 
 	name := gouse.GetStruct(person, "Name")
-	fmt.Printf("Name: %s\n", name)
+	gouse.Printf("Name: %s\n", name)
 }
 
+/*
+Description: Check if a struct has a field
+Input params: (struct interface{}, fieldName string)
+*/
 func StructHas() {
 	type Has_Person struct {
 		Name  string
@@ -81,12 +97,16 @@ func StructHas() {
 	}
 
 	has := gouse.HasInStruct(person, "Email")
-	fmt.Printf("Has: %+v\n", has)
+	gouse.Printf("Has: %+v\n", has)
 
 	hasEmpty := gouse.HasEmptyInStruct(person, "Email")
-	fmt.Printf("Has empty: %+v\n", hasEmpty)
+	gouse.Printf("Has empty: %+v\n", hasEmpty)
 }
 
+/*
+Description: Merge two structs
+Input params: (struct1, struct2 interface{})
+*/
 func StructMerge() {
 	type Merge_Person struct {
 		Name  string
@@ -114,13 +134,17 @@ func StructMerge() {
 
 	merged := gouse.MergeStruct(person, address)
 
-	fmt.Printf("Struct after merged: %+v\n", merged)
+	gouse.Printf("Struct after merged: %+v\n", merged)
 
 	fmt.Println("Name:", merged.(map[string]interface{})["Name"])
 
 	fmt.Println("City:", merged.(map[string]interface{})["City"])
 }
 
+/*
+Description: Remove fields from a struct
+Input params: (struct interface{}, fieldName string)
+*/
 func StructRemove() {
 	type Remove_Person struct {
 		Name  string
@@ -134,9 +158,13 @@ func StructRemove() {
 		Email: "example@gmail.com",
 	}
 
-	fmt.Printf("Struct after removed field: %+v\n", gouse.RemoveStruct(person, "Email"))
+	gouse.Printf("Struct after removed field: %+v\n", gouse.RemoveStruct(person, "Email"))
 }
 
+/*
+Description: Set update a field in a struct
+Input params: (struct interface{}, fieldName string, value interface{})
+*/
 func StructSet() {
 	type Set_Person struct {
 		Name  string
@@ -152,5 +180,5 @@ func StructSet() {
 
 	gouse.SetStruct(person, "Name", "Updated Name")
 
-	fmt.Printf("Struct after setting field: %+v\n", person)
+	gouse.Printf("Struct after setting field: %+v\n", person)
 }

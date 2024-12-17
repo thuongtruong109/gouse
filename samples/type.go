@@ -6,8 +6,9 @@ import (
 	"github.com/thuongtruong109/gouse"
 )
 
-/* Samples for type conversion */
-
+/*
+Description: Convert string to other type
+*/
 func TypeStringConvert() {
 	println("Convert string to int: ", gouse.StringToInt("1"))
 	fmt.Println("Convert string to float: ", gouse.StringToFloat("1.1"))
@@ -16,6 +17,9 @@ func TypeStringConvert() {
 	fmt.Println("Convert strings to bytes: ", string(gouse.StringsToBytes([]string{"1", "2", "3"})), "->", gouse.StringsToBytes([]string{"1", "2", "3"}))
 }
 
+/*
+Description: Convert other type to string
+*/
 func TypeCastToString() {
 	println("Cast int to string: ", gouse.IntToString(1))
 	fmt.Println("Cast float to string: ", gouse.FloatToString(1.1))
@@ -25,6 +29,9 @@ func TypeCastToString() {
 	println("Cast rune to string: ", gouse.RuneToString('a'))
 }
 
+/*
+Description: Convert struct to string, map
+*/
 func TypeStructConvert() {
 	type CompanyInfo struct {
 		Company string
@@ -42,8 +49,9 @@ func TypeStructConvert() {
 	fmt.Println("Struct to map: ", gouse.StructToMap(companyInfo))
 }
 
-/* Samples for type check */
-
+/*
+Description: Check type of variable
+*/
 func TypeCheck() {
 	println("Check type is int: ", gouse.IsInt(1))
 	println("Check type is uint: ", gouse.IsUnInt(-1))
@@ -70,6 +78,10 @@ func TypeCheck() {
 	println("Check type is zero: ", gouse.IsZero(0))
 }
 
+/*
+Description: Check string is UUID
+Input params: (id string)
+*/
 func TypeCheckUUID() {
 	isValid, err := gouse.IsUUID("123e4567-e89b-12d3-a456-426614174000")
 	if err != nil {
@@ -78,19 +90,23 @@ func TypeCheckUUID() {
 	println("Check is valid uuid: ", isValid)
 }
 
-var emails = []string{
-	"okahehe@gmail.com",
-	"test@example.com",
-	"short@ex.com",
-	"toolong@exampledomain.com",
-	"missingat.sign.com",
-	"invalid@.domain.com",
-	"user2@yahoo.com",
-	"bean@outlook.com",
-	"ititiu19228@student.hcmiu.edu.vn",
-}
-
+/*
+Description: Check string is gmail
+Input params: (email string)
+*/
 func TypeCheckGmail() {
+	var emails = []string{
+		"okahehe@gmail.com",
+		"test@example.com",
+		"short@ex.com",
+		"toolong@exampledomain.com",
+		"missingat.sign.com",
+		"invalid@.domain.com",
+		"user2@yahoo.com",
+		"bean@outlook.com",
+		"ititiu19228@student.hcmiu.edu.vn",
+	}
+
 	println("--- Check valid gmail ---")
 	for _, email := range emails {
 		isEmail, err := gouse.IsGmail(email)
@@ -104,7 +120,23 @@ func TypeCheckGmail() {
 	}
 }
 
+/*
+Description: Check string is yahoo
+Input params: (email string)
+*/
 func TypeCheckYahoo() {
+	var emails = []string{
+		"okahehe@gmail.com",
+		"test@example.com",
+		"short@ex.com",
+		"toolong@exampledomain.com",
+		"missingat.sign.com",
+		"invalid@.domain.com",
+		"user2@yahoo.com",
+		"bean@outlook.com",
+		"ititiu19228@student.hcmiu.edu.vn",
+	}
+
 	println("--- Check valid yahoo ---")
 	for _, email := range emails {
 		isEmail, err := gouse.IsYahoo(email)
@@ -118,7 +150,23 @@ func TypeCheckYahoo() {
 	}
 }
 
+/*
+Description: Check string is outlook
+Input params: (email string)
+*/
 func TypeCheckOutlook() {
+	var emails = []string{
+		"okahehe@gmail.com",
+		"test@example.com",
+		"short@ex.com",
+		"toolong@exampledomain.com",
+		"missingat.sign.com",
+		"invalid@.domain.com",
+		"user2@yahoo.com",
+		"bean@outlook.com",
+		"ititiu19228@student.hcmiu.edu.vn",
+	}
+
 	println("--- Check valid outlook ---")
 	for _, email := range emails {
 		isEmail, err := gouse.IsOutlook(email)
@@ -132,7 +180,23 @@ func TypeCheckOutlook() {
 	}
 }
 
+/*
+Description: Check string is education email
+Input params: (email string)
+*/
 func TypeCheckEdu() {
+	var emails = []string{
+		"okahehe@gmail.com",
+		"test@example.com",
+		"short@ex.com",
+		"toolong@exampledomain.com",
+		"missingat.sign.com",
+		"invalid@.domain.com",
+		"user2@yahoo.com",
+		"bean@outlook.com",
+		"ititiu19228@student.hcmiu.edu.vn",
+	}
+
 	println("--- Check valid education mail ---")
 	for _, email := range emails {
 		isEmail, err := gouse.IsEdu(email)
@@ -146,7 +210,23 @@ func TypeCheckEdu() {
 	}
 }
 
+/*
+Description: Check string is email with custom domain
+Input params: (email string, domain string)
+*/
 func TypeCheckEmail() {
+	var emails = []string{
+		"okahehe@gmail.com",
+		"test@example.com",
+		"short@ex.com",
+		"toolong@exampledomain.com",
+		"missingat.sign.com",
+		"invalid@.domain.com",
+		"user2@yahoo.com",
+		"bean@outlook.com",
+		"ititiu19228@student.hcmiu.edu.vn",
+	}
+
 	println("--- Check valid custom domain ---")
 	for _, email := range emails {
 		isEmail, err := gouse.IsEmail(email, "edu.vn")
@@ -160,6 +240,10 @@ func TypeCheckEmail() {
 	}
 }
 
+/*
+Description: Check string is valid username recommended
+Input params: (username string)
+*/
 func TypeCheckUsername() {
 	usernames := []string{
 		"okahehe",
@@ -180,6 +264,10 @@ func TypeCheckUsername() {
 	}
 }
 
+/*
+Description: Check string is valid password recommended
+Input params: (password string)
+*/
 func TypeCheckPassword() {
 	passwords := []string{
 		"okahehe",
@@ -201,6 +289,10 @@ func TypeCheckPassword() {
 	}
 }
 
+/*
+Description: Check string is valid phone number
+Input params: (phone string)
+*/
 func TypeCheckPhone() {
 	//  Note: Phone format syntax: +<country_calling_code> (<area_Prefix_mobile_code>) <phone_number>
 	// Reference at https://en.wikipedia.org/wiki/List_of_mobile_telephone_prefixes_by_country#:~:text=Property%20Value%20%20Country%20or%20unrecognized%20territory%20,73%20%20%20Etisalat%20%20%20www.etisalat.af%20

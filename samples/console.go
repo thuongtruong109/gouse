@@ -24,6 +24,10 @@ import (
 	"github.com/thuongtruong109/gouse/cookbook/console/table"
 )
 
+/*
+Description: Run a command in the console
+Input params: (...command string)
+*/
 func ConsoleCmd() {
 	gouse.Cmd("echo command is working")
 
@@ -31,12 +35,19 @@ func ConsoleCmd() {
 	gouse.Cmd("ls", "clear")
 }
 
+/*
+Description: Clear the console
+*/
 func ConsoleClear() {
 	println("console will be cleared now")
 	gouse.Cls()
 	println("console cleared")
 }
 
+/*
+Description: Print with color in the console
+Input params: (color string, text string)
+*/
 func ConsoleWithColor() {
 	gouse.OutputColor(gouse.DEFAULT_CONSOLE, "this is default")
 	gouse.OutputColor(gouse.WHITE_CONSOLE, "this is white")
@@ -48,12 +59,19 @@ func ConsoleWithColor() {
 	gouse.OutputColor(gouse.CYAN_CONSOLE, "this is cyan")
 }
 
+/*
+Description: Display a banner in the console
+Input params: (font string, text string)
+*/
 func ConsoleBanner() {
-	// param1: font name, param2: your input string
 	gouse.Banner(gouse.DOUBLE_ALPHA, "gouse - type double")
 	gouse.Banner(gouse.DOUBLE_ALPHA, "gouse - type single")
 }
 
+/*
+Description: Display a help menu in the console
+Input params: (name string, options []*gouse.IHelpOptions)
+*/
 func ConsoleHelp() {
 	name := "myprogram"
 	options := []*gouse.IHelpOptions{
@@ -88,6 +106,9 @@ func ConsoleHelp() {
 	// }
 }
 
+/*
+Description: Display a select menu in the console
+*/
 func ConsoleSelect() {
 	optconsolens := []string{"a", "b", "c"}
 	selected, err := gouse.Select("Select an optconsolen:", optconsolens)

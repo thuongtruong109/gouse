@@ -6,6 +6,7 @@ import (
 
 /*
 Description: Create a bar chart and export it to a html file
+Input params: (*gouse.IBarChartOpts)
 */
 func ChartBar() {
 	newChart := &gouse.IBarChartOpts{
@@ -25,6 +26,7 @@ func ChartBar() {
 
 /*
 Description: Create a line chart and export it to a html file
+Input params: (*gouse.ILineChartOpts)
 */
 func ChartLine() {
 	newChart := &gouse.ILineChartOpts{
@@ -43,6 +45,7 @@ func ChartLine() {
 
 /*
 Description: Create a pie chart and export it to a html file
+Input params: (*gouse.IPieChartOpts)
 */
 func ChartPie() {
 	newChart := &gouse.IPieChartOpts{

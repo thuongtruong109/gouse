@@ -8,6 +8,7 @@ import (
 
 /*
 Description: Read JSON configuration file
+Input params: (path string, v interface{})
 */
 func ConfigJson() {
 	type configuration struct {
@@ -27,6 +28,7 @@ func ConfigJson() {
 
 /*
 Description: Read TOML configuration file
+Input params: (path string, v interface{})
 */
 func ConfigToml() {
 	type configuration struct {
@@ -52,6 +54,7 @@ func ConfigToml() {
 
 /*
 Description: Read YAML configuration file
+Input params: (path string, v interface{})
 */
 func ConfigYaml() {
 	type configuration struct {

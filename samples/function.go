@@ -7,7 +7,11 @@ import (
 	"github.com/thuongtruong109/gouse"
 )
 
-func FuncDelay() {
+/*
+Description: Delay function execution for a specific time.
+Input params: (func() string, delay int)
+*/
+func FunctionDelay() {
 	println("Delay start:")
 
 	result := gouse.DelayF(func() string {
@@ -25,17 +29,24 @@ func FuncDelay() {
 	}, 3)
 }
 
-func FuncInterval() {
+/*
+Description: Execute function at a specific interval.
+Input params: (func(), interval int)
+*/
+func FunctionInterval() {
 	gouse.IntervalFunc(func() {
 		println("Interval")
 	}, 1)
 }
 
-func FuncLock() {
+/*
+Description: Lock function execution.
+*/
+func FunctionLock() {
 	oneInOneOutLockFunc := gouse.LockFunc(func(i interface{}) interface{} {
 		return i
 	}).(func(interface{}) interface{})("one input - one output")
-	fmt.Println(oneInOneOutLockFunc)
+	gouse.Println(oneInOneOutLockFunc)
 
 	twoInTwoOutLockFunc1, twoInTwoOutLockFunc2 := gouse.LockFunc(func(i1, i2 interface{}) (interface{}, interface{}) {
 		return i1, i2
@@ -55,72 +66,82 @@ func FuncLock() {
 	fmt.Println("RW Lock function result:", result)
 }
 
-func FuncParallel() {
+/*
+Description: Parallelize multi functions execution.
+Input params: (...func())
+*/
+func FunctionParallel() {
 	function1 := func() {
 		for i := 0; i < 5; i++ {
 			time.Sleep(100 * time.Millisecond)
-			fmt.Println("Function 1 is executing")
+			gouse.Println("Function 1 is executing")
 		}
 	}
 
 	function2 := func() {
 		for i := 0; i < 5; i++ {
 			time.Sleep(200 * time.Millisecond)
-			fmt.Println("Function 2 is executing")
+			gouse.Println("Function 2 is executing")
 		}
 	}
 
 	function3 := func() {
 		for i := 0; i < 5; i++ {
 			time.Sleep(300 * time.Millisecond)
-			fmt.Println("Function 3 is executing")
+			gouse.Println("Function 3 is executing")
 		}
 	}
 
 	gouse.ParallelizeFunc(function1, function2, function3)
 }
 
-func FuncRemain() {
+/*
+Description: Limit function execution.
+Input params: (func(), times int)
+*/
+func FunctionRemain() {
 	gouse.RemainFunc(func() {
 		println("Times")
 	}, 3)
 }
 
-func FuncRetry() {
+/*
+Description: Retry function execution.
+Input params: (func(), times int, delay int)
+*/
+func FunctionRetry() {
 	gouse.RetryFunc(func() error {
 		println("Retry")
 		return nil
 	}, 3, 1)
 }
 
-func FuncRunTime() {
+/*
+Description: Measure function execution time.
+Input params: (time.Time, func())
+*/
+func FunctionRunTime() {
 	exampleFunc := func() {
 		time.Sleep(2 * time.Second)
-		fmt.Println("Task completed.")
+		gouse.Println("Task completed.")
 	}
 
 	duration := gouse.RunTimeFunc(time.Now(), exampleFunc)
-	fmt.Printf("Function run in: %v\n", duration)
+	gouse.Printf("Function run in: %v\n", duration)
 }
 
+/*
+Description: Wrap defer function
+Input params: (...func())
+*/
 func FuncDeferWrapper() {
 	gouse.DeferWrapper(
 		func() error {
-			fmt.Println("Opening file...")
-			return fmt.Errorf("failed to read file")
-		},
-		func() {
-			fmt.Println("Closing file...")
-		},
-	)
-
-	gouse.DeferWrapper(
-		func() error {
-			fmt.Println("Connecting to database...")
+			gouse.Println("Connecting to database...")
 			return nil
 		},
 		func() {
-			fmt.Println("Disconnecting from database...")
+			gouse.Println("Disconnecting from database...")
 		},
 	)
 }
