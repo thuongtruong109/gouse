@@ -23,7 +23,7 @@ func main() {
 		functionSample()
 		helperSample()
 		ioSample()
-		logSample()
+		loggerSample()
 		mathSample()
 		mediaSample()
 		netSample()
@@ -33,6 +33,7 @@ func main() {
 		regexSample()
 		stringSample()
 		structSample()
+		timeSample()
 		typeSample()
 	} else {
 		print("Please enable isDev flag to run samples")
@@ -165,7 +166,7 @@ func helperSample() {
 	samples.AutoMarkdownDocument()
 }
 
-func logSample() {
+func loggerSample() {
 	samples.WriteLogDefault()
 	samples.WriteLogAsGouse()
 	samples.WriteLogWithType()
@@ -334,6 +335,24 @@ func structSample() {
 
 	samples.StructClone()
 	samples.StructHas()
+}
+
+func timeSample() {
+	samples.TimeElement()
+
+	samples.DateISO()
+	samples.DateShort()
+	samples.DateLong()
+	samples.DateUTC()
+
+	samples.ToSecond()
+	samples.ToMinute()
+	samples.ToHour()
+	samples.SleepSecond()
+	samples.SleepMinute()
+	samples.SleepHour()
+
+	samples.Clock()
 }
 
 func typeSample() {

@@ -31,7 +31,7 @@ func IsNumber(v interface{}) bool {
 }
 
 func IsString(v interface{}) bool {
-	return strings.Contains(fmt.Sprintf("%T", v), "string")
+	return strings.Contains(Sprintf("%T", v), "string")
 }
 
 func IsRune(v interface{}) bool {
@@ -45,15 +45,15 @@ func IsByte(v interface{}) bool {
 }
 
 func IsUintptr(v interface{}) bool {
-	return strings.Contains(fmt.Sprintf("%T", v), "uintptr")
+	return strings.Contains(Sprintf("%T", v), "uintptr")
 }
 
 func IsError(v interface{}) bool {
-	return strings.Contains(fmt.Sprintf("%T", v), "error")
+	return strings.Contains(Sprintf("%T", v), "error")
 }
 
 func IsChannel(v interface{}) bool {
-	return strings.Contains(fmt.Sprintf("%T", v), "chan")
+	return strings.Contains(Sprintf("%T", v), "chan")
 }
 
 func IsUnsafePointer(v interface{}) bool {
@@ -61,19 +61,19 @@ func IsUnsafePointer(v interface{}) bool {
 }
 
 func IsPointer(v interface{}) bool {
-	return strings.Contains(fmt.Sprintf("%T", v), "*")
+	return strings.Contains(Sprintf("%T", v), "*")
 }
 
 func IsBool(v interface{}) bool {
-	return strings.Contains(fmt.Sprintf("%T", v), "bool")
+	return strings.Contains(Sprintf("%T", v), "bool")
 }
 
 func IsSlice(v interface{}) bool {
-	return strings.Contains(fmt.Sprintf("%T", v), "[]")
+	return strings.Contains(Sprintf("%T", v), "[]")
 }
 
 func IsMap(v interface{}) bool {
-	return strings.Contains(fmt.Sprintf("%T", v), "map")
+	return strings.Contains(Sprintf("%T", v), "map")
 }
 
 func IsStruct(v interface{}) bool {
@@ -81,11 +81,11 @@ func IsStruct(v interface{}) bool {
 }
 
 func IsArray(v interface{}) bool {
-	return strings.Contains(fmt.Sprintf("%T", v), "[")
+	return strings.Contains(Sprintf("%T", v), "[")
 }
 
 func IsFunc(v interface{}) bool {
-	return strings.Contains(fmt.Sprintf("%T", v), "func")
+	return strings.Contains(Sprintf("%T", v), "func")
 }
 
 func IsNil(v interface{}) bool {
@@ -229,7 +229,7 @@ func StructToString(data interface{}) string {
 	for i := 0; i < v.NumField(); i++ {
 		fieldName := t.Field(i).Name
 		fieldValue := v.Field(i).Interface()
-		fields = append(fields, fmt.Sprintf("%s: %v", fieldName, fieldValue))
+		fields = append(fields, Sprintf("%s: %v", fieldName, fieldValue))
 	}
 
 	// replace with array.Join()
@@ -241,7 +241,7 @@ func StructToString(data interface{}) string {
 		}
 	}
 
-	return fmt.Sprintf("%s{%s}", t.Name(), result)
+	return Sprintf("%s{%s}", t.Name(), result)
 }
 
 func StructToMap(data interface{}) map[string]interface{} {
@@ -294,19 +294,19 @@ func StringsToBytes(data []string) []byte {
 // }
 
 func IntToString(data int) string {
-	return fmt.Sprintf("%d", data)
+	return Sprintf("%d", data)
 }
 
 func FloatToString(data float64) string {
-	return fmt.Sprintf("%f", data)
+	return Sprintf("%f", data)
 }
 
 func BoolToString(data bool) string {
-	return fmt.Sprintf("%t", data)
+	return Sprintf("%t", data)
 }
 
 func ToString(data interface{}) string {
-	return fmt.Sprintf("%v", data)
+	return Sprintf("%v", data)
 }
 
 func BytesToString(data []byte) string {
@@ -322,12 +322,12 @@ func MapAsString[T string | []string](data map[string]T) string {
 	var result string
 
 	for key, value := range data {
-		result += fmt.Sprintf("%s: %s\n", key, value)
+		result += Sprintf("%s: %s\n", key, value)
 	}
 
 	return result
 }
 
 // func formatSlice[T string | []string](values T) string {
-// 	return "\"" + fmt.Sprintf("%s", values) + "\""
+// 	return "\"" + Sprintf("%s", values) + "\""
 // }

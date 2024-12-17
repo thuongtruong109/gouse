@@ -1,10 +1,6 @@
 package samples
 
-import (
-	"fmt"
-
-	"github.com/thuongtruong109/gouse"
-)
+import "github.com/thuongtruong109/gouse"
 
 /*
 Description: Show all time elements
@@ -21,9 +17,9 @@ func TimeElement() {
 	println("UnixNano:", gouse.UnixNano())
 	println("UnixMilli:", gouse.UnixMilli())
 	println("UnixMicro:", gouse.UnixMicro())
-	fmt.Println("UnixMilliToTime:", gouse.UnixMilliToTime(1000000000))
-	fmt.Println("UnixMicroToTime:", gouse.UnixMicroToTime(1000000000))
-	fmt.Println("UnixNanoToTime:", gouse.UnixNanoToTime(1000000000))
+	gouse.Println("UnixMilliToTime:", gouse.UnixMilliToTime(1000000000))
+	gouse.Println("UnixMicroToTime:", gouse.UnixMicroToTime(1000000000))
+	gouse.Println("UnixNanoToTime:", gouse.UnixNanoToTime(1000000000))
 }
 
 /*

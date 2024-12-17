@@ -1,7 +1,6 @@
 package samples
 
 import (
-	"fmt"
 	"time"
 
 	"github.com/thuongtruong109/gouse"
@@ -51,7 +50,7 @@ func FunctionLock() {
 	twoInTwoOutLockFunc1, twoInTwoOutLockFunc2 := gouse.LockFunc(func(i1, i2 interface{}) (interface{}, interface{}) {
 		return i1, i2
 	}).(func(interface{}, interface{}) (interface{}, interface{}))("two input - two output (a)", "two input - two output (b)")
-	fmt.Println(twoInTwoOutLockFunc1, twoInTwoOutLockFunc2)
+	gouse.Println(twoInTwoOutLockFunc1, twoInTwoOutLockFunc2)
 
 	gouse.LockFunc(func() {
 		println("no input - no output")
@@ -63,7 +62,7 @@ func FunctionLock() {
 
 	lockedFunc := gouse.RWLockFunc(exampleRWLockFunc).(func(int, int) int)
 	result := lockedFunc(5, 3)
-	fmt.Println("RW Lock function result:", result)
+	gouse.Println("RW Lock function result:", result)
 }
 
 /*

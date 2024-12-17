@@ -72,39 +72,40 @@
     <tbody>
       <td align="left">
         <div width="300" height="0"></div><br>
-        <a href="https://gouse.vercel.app/receipts/array.html">✅ Array</a> <br/>
-        <a href="https://gouse.vercel.app/receipts/api.html">✅ Api</a> <br/>
-        <a href="https://gouse.vercel.app/receipts/cache.html">✅ Cache</a> <br/>
-        <a href="https://gouse.vercel.app/receipts/chart.html">✅ Chart</a> <br/>
-        <a href="https://gouse.vercel.app/receipts/config.html">✅ Config</a> <br/>
-        <a href="https://gouse.vercel.app/receipts/console.html">✅ Console</a> <br/>
-        <a href="https://gouse.vercel.app/receipts/cron.html">✅ Cron</a> <br/>
-        <a href="https://gouse.vercel.app/receipts/crypto.html">✅ Crypto</a> <br/>
-        <a href="https://gouse.vercel.app/receipts/date.html">✅ Date</a> <br/>
+        <a href="/receipts/api">✅ Api</a> <br/>
+        <a href="/receipts/array">✅ Array</a> <br/>
+        <a href="/receipts/cache">✅ Cache</a> <br/>
+        <a href="/receipts/chart">✅ Chart</a> <br/>
+        <a href="/receipts/config">✅ Config</a> <br/>
+        <a href="/receipts/console">✅ Console</a> <br/>
+        <a href="/receipts/connection">✅ Connection</a> <br/>
+        <a href="/receipts/cron">✅ Cron</a> <br/>
+        <a href="/receipts/crypto">✅ Crypto</a> <br/>
         <div width="300" height="0"></div>
       </td>
       <td align="left">
         <div width="300" height="0"></div><br>
-        <a href="https://gouse.vercel.app/receipts/function.html">✅ Function</a> <br/>
-        <a href="https://gouse.vercel.app/receipts/helper.html">✅ Helper</a> <br/>
-        <a href="https://gouse.vercel.app/receipts/io.html">✅ I/O</a> <br/>
-        <a href="https://gouse.vercel.app/receipts/connection.html">✅ Connection</a> <br/>
-        <a href="https://gouse.vercel.app/receipts/log.html">✅ Log</a> <br/>
-        <a href="https://gouse.vercel.app/receipts/math.html">✅ Math</a> <br/>
-        <a href="https://gouse.vercel.app/receipts/media.html">✅ Media</a> <br/>
+        <a href="/receipts/date">✅ Date</a> <br/>
+        <a href="/receipts/function">✅ Function</a> <br/>
+        <a href="/receipts/helper">✅ Helper</a> <br/>
+        <a href="/receipts/io">✅ I/O</a> <br/>
+        <a href="/receipts/logger">✅ Logger</a> <br/>
+        <a href="/receipts/math">✅ Math</a> <br/>
+        <a href="/receipts/media">✅ Media</a> <br/>
+        <a href="/receipts/net">✅ Net</a> <br/>
         <div width="300" height="0"></div>
       </td>
       <td align="left">
         <div width="400" height="0"></div><br>
-        <a href="https://gouse.vercel.app/receipts/net.html">✅ Net</a> <br/>
-        <a href="https://gouse.vercel.app/receipts/number.html">✅ Number</a> <br/>
-        <a href="https://gouse.vercel.app/receipts/os.html">✅ OS</a> <br/>
-        <a href="https://gouse.vercel.app/receipts/random.html">✅ Random</a> <br/>
-        <a href="https://gouse.vercel.app/receipts/regex.html">✅ Regex</a> <br/>
-        <a href="https://gouse.vercel.app/receipts/struct.html">✅ Struct</a> <br/>
-        <a href="https://gouse.vercel.app/receipts/string.html">✅ String</a> <br/>
-        <a href="https://gouse.vercel.app/receipts/tool.html">✅ Tool</a> <br/>
-        <a href="https://gouse.vercel.app/receipts/type.html">✅ Type</a> <br/>
+        <a href="/receipts/number">✅ Number</a> <br/>
+        <a href="/receipts/os">✅ OS</a> <br/>
+        <a href="/receipts/print">✅ Print</a> <br/>
+        <a href="/receipts/random">✅ Random</a> <br/>
+        <a href="/receipts/regex">✅ Regex</a> <br/>
+        <a href="/receipts/string">✅ String</a> <br/>
+        <a href="/receipts/struct">✅ Struct</a> <br/>
+        <a href="/receipts/time">✅ Time</a> <br/>
+        <a href="/receipts/type">✅ Type</a> <br/>
         <div width="300" height="0"></div>
       </td>
     </tbody>
@@ -201,7 +202,7 @@ $ git clone https://github.com/thuongtruong109/gouse.git
 
 ## 📄 License
 
-- Gouse is released under the [`MIT`](./LICENSE) License © 2024 [Tran Nguyen Thuong Truong](https://github.com/thuongtruong109)). See the for more information.
+- Gouse is released under the [`MIT`](./LICENSE) License © 2024 [Tran Nguyen Thuong Truong](https://github.com/thuongtruong109).
 
 - For more information, see the [`Licensing FAQs`](https://opensource.org/faq#mit-vs-bsd).
 

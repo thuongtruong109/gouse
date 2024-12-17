@@ -4,14 +4,13 @@
 
 ```go
 import (
-	"fmt"
 	"github.com/thuongtruong109/gouse"
 )
 ```
 
 ## 1. Config json
 
-Description: Read JSON configuration file<br>
+Description: Read JSON configuration file<br>Input params: (path string, v interface{})<br>
 
 ```go
 func ConfigJson() {
@@ -23,17 +22,17 @@ func ConfigJson() {
 	var myConf configuration
 	err := gouse.ReadJSON("conf.json", &myConf)
 	if err != nil {
-		fmt.Println("Error:", err)
+		gouse.Println("Error:", err)
 	}
 
-	fmt.Println("Users:", myConf.Users)
-	fmt.Println("Groups:", myConf.Groups)
+	gouse.Println("Users:", myConf.Users)
+	gouse.Println("Groups:", myConf.Groups)
 }
 ```
 
 ## 2. Config toml
 
-Description: Read TOML configuration file<br>
+Description: Read TOML configuration file<br>Input params: (path string, v interface{})<br>
 
 ```go
 func ConfigToml() {
@@ -49,19 +48,19 @@ func ConfigToml() {
 	var myConf configuration
 	err := gouse.ReadTOML("conf.toml", &myConf)
 	if err != nil {
-		fmt.Println("Error:", err)
+		gouse.Println("Error:", err)
 	}
 
-	fmt.Println("Mysql Host:", myConf.Mysql.Host)
-	fmt.Println("Mysql Username:", myConf.Mysql.Username)
-	fmt.Println("Mysql Password:", myConf.Mysql.Password)
-	fmt.Println("Mysql Database:", myConf.Mysql.Database)
+	gouse.Println("Mysql Host:", myConf.Mysql.Host)
+	gouse.Println("Mysql Username:", myConf.Mysql.Username)
+	gouse.Println("Mysql Password:", myConf.Mysql.Password)
+	gouse.Println("Mysql Database:", myConf.Mysql.Database)
 }
 ```
 
 ## 3. Config yaml
 
-Description: Read YAML configuration file<br>
+Description: Read YAML configuration file<br>Input params: (path string, v interface{})<br>
 
 ```go
 func ConfigYaml() {
@@ -79,12 +78,12 @@ func ConfigYaml() {
 	var myConf configuration
 	err := gouse.ReadYAML("conf.yaml", &myConf)
 	if err != nil {
-		fmt.Println("Error:", err)
+		gouse.Println("Error:", err)
 	}
 
-	fmt.Println("Server Port:", myConf.Server.Port)
-	fmt.Println("Server Host:", myConf.Server.Host)
-	fmt.Println("DB Username:", myConf.Database.Username)
-	fmt.Println("DB Password:", myConf.Database.Password)
+	gouse.Println("Server Port:", myConf.Server.Port)
+	gouse.Println("Server Host:", myConf.Server.Host)
+	gouse.Println("DB Username:", myConf.Database.Username)
+	gouse.Println("DB Password:", myConf.Database.Password)
 }
 ```

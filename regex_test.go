@@ -1,8 +1,6 @@
 package gouse
 
-import (
-	"testing"
-)
+import "testing"
 
 func TestIsMatchReg(t *testing.T) {
 	var arr = []struct {

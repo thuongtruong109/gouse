@@ -1,20 +1,16 @@
 package samples
 
-import (
-	"fmt"
-
-	"github.com/thuongtruong109/gouse"
-)
+import "github.com/thuongtruong109/gouse"
 
 /*
 Description: Convert string to other type
 */
 func TypeStringConvert() {
 	println("Convert string to int: ", gouse.StringToInt("1"))
-	fmt.Println("Convert string to float: ", gouse.StringToFloat("1.1"))
+	gouse.Println("Convert string to float: ", gouse.StringToFloat("1.1"))
 	println("Convert string to bool: ", gouse.StringToBool("true"))
-	fmt.Println("Convert string to bytes: ", string(gouse.StringToBytes("1")), "->", gouse.StringToBytes("1"))
-	fmt.Println("Convert strings to bytes: ", string(gouse.StringsToBytes([]string{"1", "2", "3"})), "->", gouse.StringsToBytes([]string{"1", "2", "3"}))
+	gouse.Println("Convert string to bytes: ", string(gouse.StringToBytes("1")), "->", gouse.StringToBytes("1"))
+	gouse.Println("Convert strings to bytes: ", string(gouse.StringsToBytes([]string{"1", "2", "3"})), "->", gouse.StringsToBytes([]string{"1", "2", "3"}))
 }
 
 /*
@@ -22,7 +18,7 @@ Description: Convert other type to string
 */
 func TypeCastToString() {
 	println("Cast int to string: ", gouse.IntToString(1))
-	fmt.Println("Cast float to string: ", gouse.FloatToString(1.1))
+	gouse.Println("Cast float to string: ", gouse.FloatToString(1.1))
 	println("Cast bool to string: ", gouse.BoolToString(true))
 	println("Cast interface to string: ", gouse.ToString([]int{1, 2, 3}))
 	println("Cast bytes to string: ", gouse.BytesToString([]byte{49, 50, 51}))
@@ -46,7 +42,7 @@ func TypeStructConvert() {
 	}
 
 	println("Struct to string: ", gouse.StructToString(companyInfo))
-	fmt.Println("Struct to map: ", gouse.StructToMap(companyInfo))
+	gouse.Println("Struct to map: ", gouse.StructToMap(companyInfo))
 }
 
 /*
@@ -107,15 +103,14 @@ func TypeCheckGmail() {
 		"ititiu19228@student.hcmiu.edu.vn",
 	}
 
-	println("--- Check valid gmail ---")
 	for _, email := range emails {
 		isEmail, err := gouse.IsGmail(email)
 		if err != nil {
-			fmt.Printf("%s - %s\n", email, err)
+			gouse.Printf("%s - %s\n", email, err)
 		}
 
 		if isEmail {
-			fmt.Printf("%s - valid gmail\n", email)
+			gouse.Printf("%s - valid gmail\n", email)
 		}
 	}
 }
@@ -137,15 +132,14 @@ func TypeCheckYahoo() {
 		"ititiu19228@student.hcmiu.edu.vn",
 	}
 
-	println("--- Check valid yahoo ---")
 	for _, email := range emails {
 		isEmail, err := gouse.IsYahoo(email)
 		if err != nil {
-			fmt.Printf("%s - %s\n", email, err)
+			gouse.Printf("%s - %s\n", email, err)
 		}
 
 		if isEmail {
-			fmt.Printf("%s - valid yahoo email\n", email)
+			gouse.Printf("%s - valid yahoo email\n", email)
 		}
 	}
 }
@@ -167,15 +161,14 @@ func TypeCheckOutlook() {
 		"ititiu19228@student.hcmiu.edu.vn",
 	}
 
-	println("--- Check valid outlook ---")
 	for _, email := range emails {
 		isEmail, err := gouse.IsOutlook(email)
 		if err != nil {
-			fmt.Printf("%s - %s\n", email, err)
+			gouse.Printf("%s - %s\n", email, err)
 		}
 
 		if isEmail {
-			fmt.Printf("%s - valid outlook email\n", email)
+			gouse.Printf("%s - valid outlook email\n", email)
 		}
 	}
 }
@@ -197,15 +190,14 @@ func TypeCheckEdu() {
 		"ititiu19228@student.hcmiu.edu.vn",
 	}
 
-	println("--- Check valid education mail ---")
 	for _, email := range emails {
 		isEmail, err := gouse.IsEdu(email)
 		if err != nil {
-			fmt.Printf("%s - %s\n", email, err)
+			gouse.Printf("%s - %s\n", email, err)
 		}
 
 		if isEmail {
-			fmt.Printf("%s - valid education email\n", email)
+			gouse.Printf("%s - valid education email\n", email)
 		}
 	}
 }
@@ -227,15 +219,14 @@ func TypeCheckEmail() {
 		"ititiu19228@student.hcmiu.edu.vn",
 	}
 
-	println("--- Check valid custom domain ---")
 	for _, email := range emails {
 		isEmail, err := gouse.IsEmail(email, "edu.vn")
 		if err != nil {
-			fmt.Printf("%s - %s\n", email, err)
+			gouse.Printf("%s - %s\n", email, err)
 		}
 
 		if isEmail {
-			fmt.Printf("%s - valid custom domain email\n", email)
+			gouse.Printf("%s - valid custom domain email\n", email)
 		}
 	}
 }
@@ -251,15 +242,14 @@ func TypeCheckUsername() {
 		"#$%&*()",
 	}
 
-	println("--- Check valid username ---")
 	for _, username := range usernames {
 		isUsername, err := gouse.IsUsername(username)
 		if err != nil {
-			fmt.Printf("%s - %s\n", username, err)
+			gouse.Printf("%s - %s\n", username, err)
 		}
 
 		if isUsername {
-			fmt.Printf("%s - valid username\n", username)
+			gouse.Printf("%s - valid username\n", username)
 		}
 	}
 }
@@ -276,15 +266,14 @@ func TypeCheckPassword() {
 		"Username01$",
 	}
 
-	println("--- Check valid password ---")
 	for _, password := range passwords {
 		isPassword, err := gouse.IsPassword(password)
 		if err != nil {
-			fmt.Printf("%s - %s\n", password, err)
+			gouse.Printf("%s - %s\n", password, err)
 		}
 
 		if isPassword {
-			fmt.Printf("%s - valid password\n", password)
+			gouse.Printf("%s - valid password\n", password)
 		}
 	}
 }
@@ -305,15 +294,14 @@ func TypeCheckPhone() {
 		"+84 (3) 668-22796",
 	}
 
-	println("--- Check valid phone number ---")
 	for _, phoneNumber := range phoneNumbers {
 		isPhoneNumber, err := gouse.IsPhone(phoneNumber)
 		if err != nil {
-			fmt.Printf("%s - %s\n", phoneNumber, err)
+			gouse.Printf("%s - %s\n", phoneNumber, err)
 		}
 
 		if isPhoneNumber {
-			fmt.Printf("%s - valid phone number\n", phoneNumber)
+			gouse.Printf("%s - valid phone number\n", phoneNumber)
 		}
 	}
 }

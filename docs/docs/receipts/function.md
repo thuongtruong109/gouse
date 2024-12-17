@@ -4,18 +4,17 @@
 
 ```go
 import (
-	"fmt"
 	"time"
 	"github.com/thuongtruong109/gouse"
 )
 ```
 
-## 1. Func delay
+## 1. Function delay
 
-
+Description: Delay function execution for a specific time.<br>Input params: (func() string, delay int)<br>
 
 ```go
-func FuncDelay() {
+func FunctionDelay() {
 	println("Delay start:")
 
 	result := gouse.DelayF(func() string {
@@ -34,33 +33,33 @@ func FuncDelay() {
 }
 ```
 
-## 2. Func interval
+## 2. Function interval
 
-
+Description: Execute function at a specific interval.<br>Input params: (func(), interval int)<br>
 
 ```go
-func FuncInterval() {
+func FunctionInterval() {
 	gouse.IntervalFunc(func() {
 		println("Interval")
 	}, 1)
 }
 ```
 
-## 3. Func lock
+## 3. Function lock
 
-
+Description: Lock function execution.<br>
 
 ```go
-func FuncLock() {
+func FunctionLock() {
 	oneInOneOutLockFunc := gouse.LockFunc(func(i interface{}) interface{} {
 		return i
 	}).(func(interface{}) interface{})("one input - one output")
-	fmt.Println(oneInOneOutLockFunc)
+	gouse.Println(oneInOneOutLockFunc)
 
 	twoInTwoOutLockFunc1, twoInTwoOutLockFunc2 := gouse.LockFunc(func(i1, i2 interface{}) (interface{}, interface{}) {
 		return i1, i2
 	}).(func(interface{}, interface{}) (interface{}, interface{}))("two input - two output (a)", "two input - two output (b)")
-	fmt.Println(twoInTwoOutLockFunc1, twoInTwoOutLockFunc2)
+	gouse.Println(twoInTwoOutLockFunc1, twoInTwoOutLockFunc2)
 
 	gouse.LockFunc(func() {
 		println("no input - no output")
@@ -72,34 +71,34 @@ func FuncLock() {
 
 	lockedFunc := gouse.RWLockFunc(exampleRWLockFunc).(func(int, int) int)
 	result := lockedFunc(5, 3)
-	fmt.Println("RW Lock function result:", result)
+	gouse.Println("RW Lock function result:", result)
 }
 ```
 
-## 4. Func parallel
+## 4. Function parallel
 
-
+Description: Parallelize multi functions execution.<br>Input params: (...func())<br>
 
 ```go
-func FuncParallel() {
+func FunctionParallel() {
 	function1 := func() {
 		for i := 0; i < 5; i++ {
 			time.Sleep(100 * time.Millisecond)
-			fmt.Println("Function 1 is executing")
+			gouse.Println("Function 1 is executing")
 		}
 	}
 
 	function2 := func() {
 		for i := 0; i < 5; i++ {
 			time.Sleep(200 * time.Millisecond)
-			fmt.Println("Function 2 is executing")
+			gouse.Println("Function 2 is executing")
 		}
 	}
 
 	function3 := func() {
 		for i := 0; i < 5; i++ {
 			time.Sleep(300 * time.Millisecond)
-			fmt.Println("Function 3 is executing")
+			gouse.Println("Function 3 is executing")
 		}
 	}
 
@@ -107,24 +106,24 @@ func FuncParallel() {
 }
 ```
 
-## 5. Func remain
+## 5. Function remain
 
-
+Description: Limit function execution.<br>Input params: (func(), times int)<br>
 
 ```go
-func FuncRemain() {
+func FunctionRemain() {
 	gouse.RemainFunc(func() {
 		println("Times")
 	}, 3)
 }
 ```
 
-## 6. Func retry
+## 6. Function retry
 
-
+Description: Retry function execution.<br>Input params: (func(), times int, delay int)<br>
 
 ```go
-func FuncRetry() {
+func FunctionRetry() {
 	gouse.RetryFunc(func() error {
 		println("Retry")
 		return nil
@@ -132,45 +131,35 @@ func FuncRetry() {
 }
 ```
 
-## 7. Func run time
+## 7. Function run time
 
-
+Description: Measure function execution time.<br>Input params: (time.Time, func())<br>
 
 ```go
-func FuncRunTime() {
+func FunctionRunTime() {
 	exampleFunc := func() {
 		time.Sleep(2 * time.Second)
-		fmt.Println("Task completed.")
+		gouse.Println("Task completed.")
 	}
 
 	duration := gouse.RunTimeFunc(time.Now(), exampleFunc)
-	fmt.Printf("Function run in: %v\n", duration)
+	gouse.Printf("Function run in: %v\n", duration)
 }
 ```
 
 ## 8. Func defer wrapper
 
-
+Description: Wrap defer function<br>Input params: (...func())<br>
 
 ```go
 func FuncDeferWrapper() {
 	gouse.DeferWrapper(
 		func() error {
-			fmt.Println("Opening file...")
-			return fmt.Errorf("failed to read file")
-		},
-		func() {
-			fmt.Println("Closing file...")
-		},
-	)
-
-	gouse.DeferWrapper(
-		func() error {
-			fmt.Println("Connecting to database...")
+			gouse.Println("Connecting to database...")
 			return nil
 		},
 		func() {
-			fmt.Println("Disconnecting from database...")
+			gouse.Println("Disconnecting from database...")
 		},
 	)
 }

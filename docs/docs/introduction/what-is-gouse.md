@@ -41,38 +41,39 @@
     <tbody>
       <td align="left">
         <div width="300" height="0"></div><br>
-        <a href="/receipts/array">✅ Array</a> <br/>
         <a href="/receipts/api">✅ Api</a> <br/>
+        <a href="/receipts/array">✅ Array</a> <br/>
         <a href="/receipts/cache">✅ Cache</a> <br/>
         <a href="/receipts/chart">✅ Chart</a> <br/>
         <a href="/receipts/config">✅ Config</a> <br/>
         <a href="/receipts/console">✅ Console</a> <br/>
+        <a href="/receipts/connection">✅ Connection</a> <br/>
         <a href="/receipts/cron">✅ Cron</a> <br/>
         <a href="/receipts/crypto">✅ Crypto</a> <br/>
-        <a href="/receipts/date">✅ Date</a> <br/>
         <div width="300" height="0"></div>
       </td>
       <td align="left">
         <div width="300" height="0"></div><br>
+        <a href="/receipts/date">✅ Date</a> <br/>
         <a href="/receipts/function">✅ Function</a> <br/>
         <a href="/receipts/helper">✅ Helper</a> <br/>
         <a href="/receipts/io">✅ I/O</a> <br/>
-        <a href="/receipts/connection">✅ Connection</a> <br/>
-        <a href="/receipts/log">✅ Log</a> <br/>
+        <a href="/receipts/logger">✅ Logger</a> <br/>
         <a href="/receipts/math">✅ Math</a> <br/>
         <a href="/receipts/media">✅ Media</a> <br/>
+        <a href="/receipts/net">✅ Net</a> <br/>
         <div width="300" height="0"></div>
       </td>
       <td align="left">
         <div width="400" height="0"></div><br>
-        <a href="/receipts/net">✅ Net</a> <br/>
         <a href="/receipts/number">✅ Number</a> <br/>
         <a href="/receipts/os">✅ OS</a> <br/>
+        <a href="/receipts/print">✅ Print</a> <br/>
         <a href="/receipts/random">✅ Random</a> <br/>
         <a href="/receipts/regex">✅ Regex</a> <br/>
-        <a href="/receipts/struct">✅ Struct</a> <br/>
         <a href="/receipts/string">✅ String</a> <br/>
-        <a href="/receipts/tool">✅ Tool</a> <br/>
+        <a href="/receipts/struct">✅ Struct</a> <br/>
+        <a href="/receipts/time">✅ Time</a> <br/>
         <a href="/receipts/type">✅ Type</a> <br/>
         <div width="300" height="0"></div>
       </td>

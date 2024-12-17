@@ -4,14 +4,13 @@
 
 ```go
 import (
-	"fmt"
 	"github.com/thuongtruong109/gouse"
 )
 ```
 
 ## 1. Struct add
 
-
+Description: Add fields to a struct<br>Input params: (struct, newField interface{})<br>
 
 ```go
 func StructAdd() {
@@ -33,13 +32,13 @@ func StructAdd() {
 	}
 	result := gouse.AddStruct(person, newFields)
 
-	fmt.Printf("Struct after adding fields: %+v\n", result)
+	gouse.Printf("Struct after adding fields: %+v\n", result)
 }
 ```
 
 ## 2. Struct clone
 
-
+Description: Clone a struct<br>Input params: (struct interface{})<br>
 
 ```go
 func StructClone() {
@@ -55,19 +54,19 @@ func StructClone() {
 		Email: "example@gmail.com",
 	}
 
-	fmt.Printf("Original: %+v\n", person)
+	gouse.Printf("Original: %+v\n", person)
 
 	clone := gouse.CloneStruct(person)
 
 	updateClone := clone.(Clone_Person)
 	updateClone.Name = "Updated Name"
-	fmt.Printf("Clone: %+v\n", updateClone)
+	gouse.Printf("Clone: %+v\n", updateClone)
 }
 ```
 
 ## 3. Struct get
 
-
+Description: Get fields from a struct<br>Input params: (struct interface{}, fieldName string)<br>
 
 ```go
 func StructGet() {
@@ -84,13 +83,13 @@ func StructGet() {
 	}
 
 	name := gouse.GetStruct(person, "Name")
-	fmt.Printf("Name: %s\n", name)
+	gouse.Printf("Name: %s\n", name)
 }
 ```
 
 ## 4. Struct has
 
-
+Description: Check if a struct has a field<br>Input params: (struct interface{}, fieldName string)<br>
 
 ```go
 func StructHas() {
@@ -107,16 +106,16 @@ func StructHas() {
 	}
 
 	has := gouse.HasInStruct(person, "Email")
-	fmt.Printf("Has: %+v\n", has)
+	gouse.Printf("Has: %+v\n", has)
 
 	hasEmpty := gouse.HasEmptyInStruct(person, "Email")
-	fmt.Printf("Has empty: %+v\n", hasEmpty)
+	gouse.Printf("Has empty: %+v\n", hasEmpty)
 }
 ```
 
 ## 5. Struct merge
 
-
+Description: Merge two structs<br>Input params: (struct1, struct2 interface{})<br>
 
 ```go
 func StructMerge() {
@@ -146,17 +145,17 @@ func StructMerge() {
 
 	merged := gouse.MergeStruct(person, address)
 
-	fmt.Printf("Struct after merged: %+v\n", merged)
+	gouse.Printf("Struct after merged: %+v\n", merged)
 
-	fmt.Println("Name:", merged.(map[string]interface{})["Name"])
+	gouse.Println("Name:", merged.(map[string]interface{})["Name"])
 
-	fmt.Println("City:", merged.(map[string]interface{})["City"])
+	gouse.Println("City:", merged.(map[string]interface{})["City"])
 }
 ```
 
 ## 6. Struct remove
 
-
+Description: Remove fields from a struct<br>Input params: (struct interface{}, fieldName string)<br>
 
 ```go
 func StructRemove() {
@@ -172,13 +171,13 @@ func StructRemove() {
 		Email: "example@gmail.com",
 	}
 
-	fmt.Printf("Struct after removed field: %+v\n", gouse.RemoveStruct(person, "Email"))
+	gouse.Printf("Struct after removed field: %+v\n", gouse.RemoveStruct(person, "Email"))
 }
 ```
 
 ## 7. Struct set
 
-
+Description: Set update a field in a struct<br>Input params: (struct interface{}, fieldName string, value interface{})<br>
 
 ```go
 func StructSet() {
@@ -196,6 +195,6 @@ func StructSet() {
 
 	gouse.SetStruct(person, "Name", "Updated Name")
 
-	fmt.Printf("Struct after setting field: %+v\n", person)
+	gouse.Printf("Struct after setting field: %+v\n", person)
 }
 ```

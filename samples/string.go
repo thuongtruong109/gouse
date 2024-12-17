@@ -1,10 +1,6 @@
 package samples
 
-import (
-	"fmt"
-
-	"github.com/thuongtruong109/gouse"
-)
+import "github.com/thuongtruong109/gouse"
 
 /*
 Description: Capitalize the first letter of a string.
@@ -94,7 +90,7 @@ Input params: (s string, separator string)
 */
 func Split() {
 	var str = "hello world"
-	fmt.Println("Split string by separator: ", gouse.Split(str, "l"))
+	gouse.Println("Split string by separator: ", gouse.Split(str, "l"))
 }
 
 /*
@@ -332,16 +328,16 @@ func Index() {
 	var str = "hello world, this is world"
 
 	f1, l1 := gouse.IndexSubStr(str, "l")
-	fmt.Printf("First index start at: %d, end at: %d\n", f1, l1)
+	gouse.Printf("First index start at: %d, end at: %d\n", f1, l1)
 
 	f2, l2 := gouse.IndexSubStr(str, "world")
-	fmt.Printf("First index start at: %d, end at: %d\n", f2, l2)
+	gouse.Printf("First index start at: %d, end at: %d\n", f2, l2)
 
 	f3 := gouse.FIndex(str, "l")
-	fmt.Println("First index start at: ", f3)
+	gouse.Println("First index start at: ", f3)
 
 	l3 := gouse.LIndex(str, "world")
-	fmt.Println("Last index start at: ", l3)
+	gouse.Println("Last index start at: ", l3)
 
 	f4, l4 := gouse.IndexSubStr(str, "oo")
 	if f4 == -1 || l4 == -1 {
@@ -395,7 +391,7 @@ func CodePoint() {
 
 	print("Code point string: ")
 	for _, asciiValue := range asciiValues {
-		fmt.Printf("%d ", asciiValue)
+		gouse.Printf("%d ", asciiValue)
 	}
 }
 

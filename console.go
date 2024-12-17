@@ -11,30 +11,6 @@ import (
 	"github.com/AlecAivazis/survey/v2"
 )
 
-func Print[T interface{}](output T) {
-	fmt.Println(output)
-}
-
-func Println[T interface{}](output T) {
-	fmt.Println(output)
-}
-
-func Printf[T interface{}](format string, output T) {
-	fmt.Printf(format, output)
-}
-
-func Sprint[T interface{}](output T) string {
-	return fmt.Sprint(output)
-}
-
-func Sprintf[T interface{}](format string, output T) string {
-	return fmt.Sprintf(format, output)
-}
-
-func Sprintln[T interface{}](output T) string {
-	return fmt.Sprintln(output)
-}
-
 func Cmd(defaultCmmand string, windowsCmmand ...string) {
 	var cmd *exec.Cmd
 

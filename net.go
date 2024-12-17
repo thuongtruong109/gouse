@@ -2,7 +2,6 @@ package gouse
 
 import (
 	"context"
-	"fmt"
 	"io"
 	"net"
 	"net/http"
@@ -23,10 +22,10 @@ func ScanPort(protocol, hostname string, start, end int) {
 		port := strconv.FormatInt(int64(i), 10)
 		conn, err := net.Dial(protocol, hostname+":"+port)
 		if err == nil {
-			fmt.Println("Port", i, "open")
+			Println("Port", i, "open")
 			conn.Close()
 		} else {
-			fmt.Println("Port", i, "closed")
+			Println("Port", i, "closed")
 		}
 	}
 }
@@ -66,7 +65,7 @@ func handleRequest(urls []string) gin.HandlerFunc {
 		index := atomic.AddUint64(&counter, 1) % uint64(len(urls))
 		requestedURL := urls[index] + path[1:]
 
-		fmt.Println("Requested URL: ", requestedURL)
+		Println("Requested URL: ", requestedURL)
 
 		req, _ := http.NewRequest(ctx.Request.Method, requestedURL, ctx.Request.Body)
 

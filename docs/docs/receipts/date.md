@@ -4,37 +4,13 @@
 
 ```go
 import (
-	"fmt"
 	"github.com/thuongtruong109/gouse"
 )
 ```
 
-## 1. Date time
+## 1. Date i s o
 
-
-
-```go
-func DateTime() {
-	println("Second:", gouse.Second())
-	println("Minute:", gouse.Minute())
-	println("Hour:", gouse.Hour())
-	println("Day:", gouse.Day())
-	println("Month:", gouse.Month())
-	println("Year:", gouse.Year())
-	println("Weekday:", gouse.Weekday())
-	println("Unix:", gouse.Unix())
-	println("UnixNano:", gouse.UnixNano())
-	println("UnixMilli:", gouse.UnixMilli())
-	println("UnixMicro:", gouse.UnixMicro())
-	fmt.Println("UnixMilliToTime:", gouse.UnixMilliToTime(1000000000))
-	fmt.Println("UnixMicroToTime:", gouse.UnixMicroToTime(1000000000))
-	fmt.Println("UnixNanoToTime:", gouse.UnixNanoToTime(1000000000))
-}
-```
-
-## 2. Date i s o
-
-
+Description: Get current date in ISO format<br>
 
 ```go
 func DateISO() {
@@ -42,9 +18,9 @@ func DateISO() {
 }
 ```
 
-## 3. Date short
+## 2. Date short
 
-
+Description: Get current date in short formats<br>
 
 ```go
 func DateShort() {
@@ -58,9 +34,9 @@ func DateShort() {
 }
 ```
 
-## 4. Date long
+## 3. Date long
 
-
+Description: Get current date in long format<br>
 
 ```go
 func DateLong() {
@@ -68,82 +44,12 @@ func DateLong() {
 }
 ```
 
-## 5. Date u t c
+## 4. Date u t c
 
-
+Description: Get current date in UTC format<br>
 
 ```go
 func DateUTC() {
 	println("UTC:", gouse.UTCDate())
-}
-```
-
-## 6. Date to second
-
-
-
-```go
-func DateToSecond() {
-	println("ToSecond:", gouse.ToSecond(1))
-}
-```
-
-## 7. Date to minute
-
-
-
-```go
-func DateToMinute() {
-	println("ToMinute:", gouse.ToMinute(1))
-}
-```
-
-## 8. Date to hour
-
-
-
-```go
-func DateToHour() {
-	println("ToHour:", gouse.ToHour(1))
-}
-```
-
-## 9. Date sleep second
-
-
-
-```go
-func DateSleepSecond() {
-	gouse.SleepSecond(1)
-}
-```
-
-## 10. Date sleep minute
-
-
-
-```go
-func DateSleepMinute() {
-	gouse.SleepMinute(1)
-}
-```
-
-## 11. Date sleep hour
-
-
-
-```go
-func DateSleepHour() {
-	gouse.SleepHour(1)
-}
-```
-
-## 12. Date clock
-
-
-
-```go
-func DateClock() {
-	gouse.TerminalClock()
 }
 ```

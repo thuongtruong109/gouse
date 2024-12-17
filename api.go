@@ -2,7 +2,6 @@ package gouse
 
 import (
 	"context"
-	"fmt"
 	"log"
 	"net"
 	"net/http"
@@ -145,7 +144,7 @@ func (igs *IGracefulShutdown) GracefulShutdown() {
 	c := make(chan os.Signal, 1)
 	signal.Notify(c, os.Interrupt)
 
-	fmt.Println(igs.StartMsg)
+	Println(igs.StartMsg)
 
 	srv := http.Server{
 		Addr:              ":" + igs.Port,
@@ -154,18 +153,18 @@ func (igs *IGracefulShutdown) GracefulShutdown() {
 
 	go func() {
 		<-c
-		fmt.Println(igs.ShutdownMsg)
+		Println(igs.ShutdownMsg)
 		go func() {
 			for {
-				fmt.Println("waiting for goroutines to finish...")
+				Println("waiting for goroutines to finish...")
 				time.Sleep(1 * time.Second)
 			}
 		}()
 		wg.Wait()
 
 		if err := srv.Shutdown(context.Background()); err != nil {
-			fmt.Println("server shutdown error:", err)
+			Println("server shutdown error:", err)
 		}
 	}()
-	fmt.Println(srv.ListenAndServe())
+	Println(srv.ListenAndServe())
 }

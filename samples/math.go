@@ -1,10 +1,6 @@
 package samples
 
-import (
-	"fmt"
-
-	"github.com/thuongtruong109/gouse"
-)
+import "github.com/thuongtruong109/gouse"
 
 /*
 Description: Check number is even, odd, perfect square, prime
@@ -302,13 +298,13 @@ Input params: Sqrt(num int), SqrtF(num float64), Cbrt(num int), CbrtF(num float6
 */
 func Root() {
 	println("Square-Root of integer number: ", gouse.Sqrt(16))
-	println("Square-Root of float number: ", fmt.Sprintf("%f", gouse.SqrtF(20.0)))
+	println("Square-Root of float number: ", gouse.Sprintf("%f", gouse.SqrtF(20.0)))
 
 	println("Cube-Root of integer number: ", gouse.Cbrt(27))
-	println("Cube-Root of float number: ", fmt.Sprintf("%f", gouse.CbrtF(20.0)))
+	println("Cube-Root of float number: ", gouse.Sprintf("%f", gouse.CbrtF(20.0)))
 
 	println("Nth-Root of integer number: ", gouse.Root(4, 2))
-	println("Nth-Root of float number: ", fmt.Sprintf("%f", gouse.RootF(20.0, 3.0)))
+	println("Nth-Root of float number: ", gouse.Sprintf("%f", gouse.RootF(20.0, 3.0)))
 }
 
 /*

@@ -26,7 +26,7 @@ features:
   - icon: 🪶
     title: User-Friendly & Lightweight
     details: Gouse features an intuitive JavaScript syntax with no setup required. Import utility functions directly and enjoy a flexible, chainable package available in various builds and formats.
-  - icon: 🛠️
+  - icon: 🏗
     title: Powerful & Versatile
     details: Access a wide range of methods for arrays, numbers, objects, and strings. Comprehensive documentation and examples make implementation smooth and efficient.
   - icon: 🧩

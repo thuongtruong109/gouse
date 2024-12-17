@@ -2,7 +2,6 @@ package samples
 
 import (
 	"encoding/json"
-	"fmt"
 	"os"
 
 	"github.com/thuongtruong109/gouse"
@@ -16,7 +15,7 @@ func CreatePath() {
 	relativePath := "tmp/example.txt"
 
 	if err := gouse.CreatePath(relativePath); err != nil {
-		fmt.Println("Error creating file:", err)
+		gouse.Println("Error creating file:", err)
 		return
 	}
 	println("File created successfully.")
@@ -31,10 +30,10 @@ func ReadPath() {
 
 	content, err := gouse.ReadPath(relativePath)
 	if err != nil {
-		fmt.Println("Error reading file:", err)
+		gouse.Println("Error reading file:", err)
 		return
 	}
-	fmt.Println("File content:", string(content))
+	gouse.Println("File content:", string(content))
 }
 
 /*
@@ -47,7 +46,7 @@ func WritePath() {
 	newContent := []byte("This is a new content")
 
 	if err := gouse.WritePath(relativePath, newContent); err != nil {
-		fmt.Println("Error writing to file:", err)
+		gouse.Println("Error writing to file:", err)
 		return
 	}
 	println("File updated successfully.")
@@ -202,13 +201,13 @@ func FileInfo() {
 	if err != nil {
 		println(err.Error())
 	}
-	fmt.Printf("File info: %+v\n", data.All)
-	fmt.Println("File info (with name):", data.Name)
-	fmt.Printf("File info (with size): %d bytes\n", data.Size)
-	fmt.Println("File info (with permissions):", data.Mode)
-	fmt.Println("File info (with last modified):", data.ModTime)
-	fmt.Println("File info (with directory check): ", data.IsDir)
-	fmt.Printf("File info (with system process): %+v\n", data.Sys)
+	gouse.Printf("File info: %+v\n", data.All)
+	gouse.Println("File info (with name):", data.Name)
+	gouse.Printf("File info (with size): %d bytes\n", data.Size)
+	gouse.Println("File info (with permissions):", data.Mode)
+	gouse.Println("File info (with last modified):", data.ModTime)
+	gouse.Println("File info (with directory check): ", data.IsDir)
+	gouse.Printf("File info (with system process): %+v\n", data.Sys)
 }
 
 /*
@@ -244,11 +243,11 @@ func FileObj() {
 	// if err != nil {
 	// 	println(err.Error())
 	// }
-	// fmt.Printf("data: %+v\n", data)
+	// gouse.Printf("data: %+v\n", data)
 
 	// // write file
 	// updateData := append(data, User{
-	// 	Name: fmt.Sprintf("name %d", len(data)+1),
+	// 	Name: gouse.Sprintf("name %d", len(data)+1),
 	// 	Age:  len(data) + 1,
 	// })
 
@@ -257,7 +256,7 @@ func FileObj() {
 		println(err.Error())
 		return
 	}
-	fmt.Printf("data: %+v\n", data)
+	gouse.Printf("data: %+v\n", data)
 
 	// unmarshal data into a slice of User
 	var users []User
@@ -268,7 +267,7 @@ func FileObj() {
 
 	// create a new user
 	newUser := User{
-		Name: fmt.Sprintf("name %d", len(users)+1),
+		Name: gouse.Sprintf("name %d", len(users)+1),
 		Age:  len(users) + 1,
 	}
 
@@ -366,7 +365,7 @@ func Zip() {
 	zipFileName := "archive.zip"
 	err := gouse.Zip(zipFileName, filesToZip)
 	if err != nil {
-		fmt.Println("Error zipping files:", err)
+		gouse.Println("Error zipping files:", err)
 	}
 
 	println("Files zipped successfully:", zipFileName)
@@ -381,7 +380,7 @@ func Unzip() {
 	zipFileName := "archive.zip"
 	err := gouse.Unzip(zipFileName, destFolder)
 	if err != nil {
-		fmt.Println("Error unzipping files:", err)
+		gouse.Println("Error unzipping files:", err)
 	}
 
 	println("Files unzipped successfully to:", destFolder)

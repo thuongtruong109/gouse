@@ -1,10 +1,6 @@
 package samples
 
-import (
-	"fmt"
-
-	"github.com/thuongtruong109/gouse"
-)
+import "github.com/thuongtruong109/gouse"
 
 /*
 Description: Add fields to a struct
@@ -136,9 +132,9 @@ func StructMerge() {
 
 	gouse.Printf("Struct after merged: %+v\n", merged)
 
-	fmt.Println("Name:", merged.(map[string]interface{})["Name"])
+	gouse.Println("Name:", merged.(map[string]interface{})["Name"])
 
-	fmt.Println("City:", merged.(map[string]interface{})["City"])
+	gouse.Println("City:", merged.(map[string]interface{})["City"])
 }
 
 /*

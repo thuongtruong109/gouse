@@ -1,7 +1,6 @@
 package samples
 
 import (
-	"fmt"
 	"time"
 
 	"github.com/thuongtruong109/gouse"
@@ -19,27 +18,27 @@ func CacheLocal() {
 	all := newCache.AllLocalCache()
 	println("All local cache values:")
 	for k, v := range all {
-		fmt.Printf("\t%s: %s\n", k, v)
+		gouse.Printf("\t%s: %s\n", k, v)
 	}
 
 	getted1, err := newCache.GetLocalCache("key1")
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println("Getted key 1:", getted1)
+	gouse.Println("Getted key 1:", getted1)
 
 	newCache.DelLocalCache("key2")
 
 	all = newCache.AllLocalCache()
 	println("All local cache values (after delete key 2):")
 	for k, v := range all {
-		fmt.Printf("\t%s: %s\n", k, v)
+		gouse.Printf("\t%s: %s\n", k, v)
 	}
 
 	newCache.FlushLocalCache()
 
 	all = newCache.AllLocalCache()
-	fmt.Println("All local cache values (after flush):", all)
+	gouse.Println("All local cache values (after flush):", all)
 }
 
 /*
@@ -54,27 +53,27 @@ func CacheTmp() {
 	all := newCache.AllTmpCache()
 	println("All temp cache values:")
 	for k, v := range all {
-		fmt.Printf("\t%s: %v\n", k, v)
+		gouse.Printf("\t%s: %v\n", k, v)
 	}
 
 	getted := newCache.GetTmpCache("key1")
-	fmt.Println("Getted key 1 (before expires):", getted)
+	gouse.Println("Getted key 1 (before expires):", getted)
 
 	time.Sleep(gouse.ToSecond(4))
 
 	getted = newCache.GetTmpCache("key1")
-	fmt.Println("Getted key 1 (after expires):", getted)
+	gouse.Println("Getted key 1 (after expires):", getted)
 
 	newCache.DelTmpCache("key2")
 
 	all = newCache.AllTmpCache()
 	println("All temp cache values (after delete key 2):")
 	for k, v := range all {
-		fmt.Printf("\t%s: %v\n", k, v)
+		gouse.Printf("\t%s: %v\n", k, v)
 	}
 
 	newCache.FlushTmpCache()
 
 	all = newCache.AllTmpCache()
-	fmt.Println("All temp cache values (after flush):", all)
+	gouse.Println("All temp cache values (after flush):", all)
 }

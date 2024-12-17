@@ -1,7 +1,6 @@
 package gouse
 
 import (
-	"fmt"
 	"strconv"
 	"time"
 )
@@ -98,16 +97,16 @@ func formatTime(t time.Time) string {
 	secondStr := strconv.Itoa(second)
 
 	if hour < 10 {
-		hourStr = fmt.Sprintf("0%s", hourStr)
+		hourStr = Sprintf("0%s", hourStr)
 	}
 	if minute < 10 {
-		minuteStr = fmt.Sprintf("0%s", minuteStr)
+		minuteStr = Sprintf("0%s", minuteStr)
 	}
 	if second < 10 {
-		secondStr = fmt.Sprintf("0%s", secondStr)
+		secondStr = Sprintf("0%s", secondStr)
 	}
 
-	return fmt.Sprintf("%s:%s:%s", hourStr, minuteStr, secondStr)
+	return Sprintf("%s:%s:%s", hourStr, minuteStr, secondStr)
 }
 
 func TerminalClock() {
@@ -122,7 +121,7 @@ func TerminalClock() {
 
 	for t := range msgTime {
 		Cls()
-		fmt.Println(formatTime(t))
+		Println(formatTime(t))
 	}
 }
 

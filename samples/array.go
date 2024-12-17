@@ -1,23 +1,19 @@
 package samples
 
-import (
-	"fmt"
-
-	"github.com/thuongtruong109/gouse"
-)
+import "github.com/thuongtruong109/gouse"
 
 /*
 Description: Chunk an array into smaller arrays of a specified size
 Input params: (array, size)
 */
 func ArrayChunk() {
-	fmt.Println("[int]: ", gouse.Chunk([]int{1, -2, 3, -4, 5, 6}, 3))
-	fmt.Println("[uint]: ", gouse.Chunk([]uint{1, 2, 3, 4, 5, 6}, 3))
-	fmt.Println("[float]: ", gouse.Chunk([]float64{1.2, 2.3, 3.4, 4.5, 5.6, 6.7}, 3))
-	fmt.Println("[string]: ", gouse.Chunk([]string{"1", "2", "3", "4", "5", "6"}, 3))
-	fmt.Println("[rune]: ", gouse.Chunk([]rune{'a', 'b', 'c', 'd', 'e', 'f'}, 3))
-	fmt.Println("[complex]: ", gouse.Chunk([]complex128{1 + 2i, 2 + 3i, 3 + 4i, 4 + 5i, 5 + 6i, 6 + 7i}, 3))
-	fmt.Println("[struct]: ", gouse.Chunk([]struct{ a int }{{1}, {2}, {3}, {4}, {5}, {6}}, 3))
+	gouse.Println("[int]: ", gouse.Chunk([]int{1, -2, 3, -4, 5, 6}, 3))
+	gouse.Println("[uint]: ", gouse.Chunk([]uint{1, 2, 3, 4, 5, 6}, 3))
+	gouse.Println("[float]: ", gouse.Chunk([]float64{1.2, 2.3, 3.4, 4.5, 5.6, 6.7}, 3))
+	gouse.Println("[string]: ", gouse.Chunk([]string{"1", "2", "3", "4", "5", "6"}, 3))
+	gouse.Println("[rune]: ", gouse.Chunk([]rune{'a', 'b', 'c', 'd', 'e', 'f'}, 3))
+	gouse.Println("[complex]: ", gouse.Chunk([]complex128{1 + 2i, 2 + 3i, 3 + 4i, 4 + 5i, 5 + 6i, 6 + 7i}, 3))
+	gouse.Println("[struct]: ", gouse.Chunk([]struct{ a int }{{1}, {2}, {3}, {4}, {5}, {6}}, 3))
 }
 
 /*
@@ -26,7 +22,7 @@ Input params: (array)
 */
 func ArrayCompact() {
 	result := gouse.Compact([]interface{}{1, -2, 3, -4, 5, 6, 0, 0.0, "", false, nil})
-	fmt.Println("Compact remove all falsy values: ", result)
+	gouse.Println("Compact remove all falsy values: ", result)
 }
 
 /*
@@ -34,13 +30,13 @@ Description: Check difference items between two arrays
 Input params: (array1, array2)
 */
 func ArrayDifference() {
-	fmt.Println("[int]: ", gouse.Diff([]int{1, -2, 3, -4, 5, 6}, []int{1, 2, 3, 4, 5, 6}))
-	fmt.Println("[uint]: ", gouse.Diff([]uint{1, 2, 3, 4, 5, 7}, []uint{1, 2, 3, 4, 5, 6}))
-	fmt.Println("[float]: ", gouse.Diff([]float64{1.2, 2.3, 3.4}, []float64{4.5, 5.6, 6.7}))
-	fmt.Println("[string]: ", gouse.Diff([]string{"1", "4", "5", "6"}, []string{"1", "2", "3", "6"}))
-	fmt.Println("[rune]: ", gouse.Diff([]rune{'a', 'b', 'd', 'e', 'f'}, []rune{'a', 'b', 'c', 'f'}))
-	fmt.Println("[complex]: ", gouse.Diff([]complex128{1 + 2i, 2 + 3i, 5 + 6i, 6 + 7i}, []complex128{1 + 2i, 2 + 3i, 6 + 7i}))
-	fmt.Println("[struct]: ", gouse.Diff([]struct{ a int }{{-1}, {-2}, {3}, {4}, {5}, {6}}, []struct{ a int }{{1}, {2}}))
+	gouse.Println("[int]: ", gouse.Diff([]int{1, -2, 3, -4, 5, 6}, []int{1, 2, 3, 4, 5, 6}))
+	gouse.Println("[uint]: ", gouse.Diff([]uint{1, 2, 3, 4, 5, 7}, []uint{1, 2, 3, 4, 5, 6}))
+	gouse.Println("[float]: ", gouse.Diff([]float64{1.2, 2.3, 3.4}, []float64{4.5, 5.6, 6.7}))
+	gouse.Println("[string]: ", gouse.Diff([]string{"1", "4", "5", "6"}, []string{"1", "2", "3", "6"}))
+	gouse.Println("[rune]: ", gouse.Diff([]rune{'a', 'b', 'd', 'e', 'f'}, []rune{'a', 'b', 'c', 'f'}))
+	gouse.Println("[complex]: ", gouse.Diff([]complex128{1 + 2i, 2 + 3i, 5 + 6i, 6 + 7i}, []complex128{1 + 2i, 2 + 3i, 6 + 7i}))
+	gouse.Println("[struct]: ", gouse.Diff([]struct{ a int }{{-1}, {-2}, {3}, {4}, {5}, {6}}, []struct{ a int }{{1}, {2}}))
 }
 
 /*
@@ -48,14 +44,14 @@ Description: Drop n elements in array (default n = 1)
 Input params: (array, n)
 */
 func ArrayDrop() {
-	fmt.Println("[int] with default: ", gouse.Drop([]int{1, -2, 3, -4, 5, 6}))
-	fmt.Println("[int]: ", gouse.Drop([]int{1, -2, 3, -4, 5, 6}, 2))
-	fmt.Println("[uint]: ", gouse.Drop([]uint{1, 2, 3, 4, 5, 7}, 2))
-	fmt.Println("[float]: ", gouse.Drop([]float64{1.2, 2.3, 3.4}, 2))
-	fmt.Println("[string]: ", gouse.Drop([]string{"1", "4", "5", "6"}, 2))
-	fmt.Println("[rune]: ", gouse.Drop([]rune{'a', 'b', 'd', 'e', 'f'}, 2))
-	fmt.Println("[complex]: ", gouse.Drop([]complex128{1 + 2i, 2 + 3i, 5 + 6i, 6 + 7i}, 2))
-	fmt.Println("[struct]: ", gouse.Drop([]struct{ a int }{{-1}, {-2}, {3}, {4}, {5}, {6}}, 2))
+	gouse.Println("[int] with default: ", gouse.Drop([]int{1, -2, 3, -4, 5, 6}))
+	gouse.Println("[int]: ", gouse.Drop([]int{1, -2, 3, -4, 5, 6}, 2))
+	gouse.Println("[uint]: ", gouse.Drop([]uint{1, 2, 3, 4, 5, 7}, 2))
+	gouse.Println("[float]: ", gouse.Drop([]float64{1.2, 2.3, 3.4}, 2))
+	gouse.Println("[string]: ", gouse.Drop([]string{"1", "4", "5", "6"}, 2))
+	gouse.Println("[rune]: ", gouse.Drop([]rune{'a', 'b', 'd', 'e', 'f'}, 2))
+	gouse.Println("[complex]: ", gouse.Drop([]complex128{1 + 2i, 2 + 3i, 5 + 6i, 6 + 7i}, 2))
+	gouse.Println("[struct]: ", gouse.Drop([]struct{ a int }{{-1}, {-2}, {3}, {4}, {5}, {6}}, 2))
 }
 
 /*
@@ -136,7 +132,7 @@ func ArrayFindBy() {
 		return v == 5+6i
 	}))
 
-	fmt.Println("[struct]: ", gouse.FindBy([]struct{ a int }{{-1}, {-2}, {3}, {4}, {5}, {6}}, func(v struct{ a int }) bool {
+	gouse.Println("[struct]: ", gouse.FindBy([]struct{ a int }{{-1}, {-2}, {3}, {4}, {5}, {6}}, func(v struct{ a int }) bool {
 		return v.a == 3
 	}))
 }
@@ -178,7 +174,7 @@ func ArrayForBy() {
 
 	print("[struct]: ")
 	gouse.ForBy([]struct{ a int }{{-1}, {-2}, {3}, {4}, {5}, {6}}, func(v struct{ a int }) {
-		fmt.Println(v)
+		gouse.Println(v)
 	})
 }
 
@@ -297,31 +293,31 @@ Description: Map array then handler with callback function
 Input params: (array, callback)
 */
 func ArrayMapBy() {
-	fmt.Println("[int]: ", gouse.MapBy([]int{1, -2, 3, -4, 5, 6}, func(v int) int {
+	gouse.Println("[int]: ", gouse.MapBy([]int{1, -2, 3, -4, 5, 6}, func(v int) int {
 		return v * 2
 	}))
 
-	fmt.Println("[uint]: ", gouse.MapBy([]uint{1, 2, 3, 4, 5, 7}, func(v uint) uint {
+	gouse.Println("[uint]: ", gouse.MapBy([]uint{1, 2, 3, 4, 5, 7}, func(v uint) uint {
 		return v * 2
 	}))
 
-	fmt.Println("[float]: ", gouse.MapBy([]float64{1.2, 2.3, 3.4}, func(v float64) float64 {
+	gouse.Println("[float]: ", gouse.MapBy([]float64{1.2, 2.3, 3.4}, func(v float64) float64 {
 		return v * 2
 	}))
 
-	fmt.Println("[string]: ", gouse.MapBy([]string{"1", "4", "5", "6"}, func(v string) string {
+	gouse.Println("[string]: ", gouse.MapBy([]string{"1", "4", "5", "6"}, func(v string) string {
 		return v + "1"
 	}))
 
-	fmt.Println("[rune]: ", gouse.MapBy([]rune{'a', 'b', 'd', 'e', 'f'}, func(v rune) rune {
+	gouse.Println("[rune]: ", gouse.MapBy([]rune{'a', 'b', 'd', 'e', 'f'}, func(v rune) rune {
 		return v + 1
 	}))
 
-	fmt.Println("[complex]: ", gouse.MapBy([]complex128{1 + 2i, 2 + 3i, 5 + 6i, 6 + 7i}, func(v complex128) complex128 {
+	gouse.Println("[complex]: ", gouse.MapBy([]complex128{1 + 2i, 2 + 3i, 5 + 6i, 6 + 7i}, func(v complex128) complex128 {
 		return v * 2
 	}))
 
-	fmt.Println("[struct]: ", gouse.MapBy([]struct{ a int }{{-1}, {-2}, {3}, {4}, {5}, {6}}, func(v struct{ a int }) struct{ a int } {
+	gouse.Println("[struct]: ", gouse.MapBy([]struct{ a int }{{-1}, {-2}, {3}, {4}, {5}, {6}}, func(v struct{ a int }) struct{ a int } {
 		return struct{ a int }{v.a * 2}
 	}))
 }
@@ -357,11 +353,11 @@ Input params: (array)
 func ArrayMost() {
 	println("[int]: ", gouse.Most([]int{1, -2, 3, 2, 2, 1, 2, 3}))
 	println("[uint]: ", gouse.Most([]uint{1, 2, 3, 2, 2, 1, 2, 3}))
-	fmt.Println("[float]: ", gouse.Most([]float64{1.2, 2.3, 3.4, 2.3, 2.3, 1.2, 2.3, 3.4}))
+	gouse.Println("[float]: ", gouse.Most([]float64{1.2, 2.3, 3.4, 2.3, 2.3, 1.2, 2.3, 3.4}))
 	println("[string]: ", gouse.Most([]string{"1", "2", "3", "2", "2", "1", "2", "3"}))
 	println("[rune]: ", string(gouse.Most([]rune{'a', 'b', 'c', 'b', 'b', 'a', 'b', 'c'})))
-	fmt.Println("[complex]: ", gouse.Most([]complex128{1 + 2i, 2 + 3i, 3 + 4i, 2 + 3i, 2 + 3i, 1 + 2i, 2 + 3i, 3 + 4i}))
-	fmt.Println("[struct]: ", gouse.Most([]struct{ a int }{{1}, {2}, {3}, {2}, {2}, {1}, {2}, {3}}))
+	gouse.Println("[complex]: ", gouse.Most([]complex128{1 + 2i, 2 + 3i, 3 + 4i, 2 + 3i, 2 + 3i, 1 + 2i, 2 + 3i, 3 + 4i}))
+	gouse.Println("[struct]: ", gouse.Most([]struct{ a int }{{1}, {2}, {3}, {2}, {2}, {1}, {2}, {3}}))
 }
 
 /*
@@ -415,7 +411,7 @@ Input params: (array)
 func ArraySum() {
 	println("[int]: ", gouse.SumArr([]int{1, -2, 3}))
 	println("[uint]: ", gouse.SumArr([]uint{1, 2, 3}))
-	fmt.Println("[float]: ", gouse.SumArr([]float64{1.2, 2.3, 3.4}))
+	gouse.Println("[float]: ", gouse.SumArr([]float64{1.2, 2.3, 3.4}))
 	println("[rune]: ", gouse.SumArr([]rune{'a', 'b', 'c'}))
-	fmt.Println("[complex]: ", gouse.SumArr([]complex128{1 + 2i, 2 + 3i, 3 + 4i}))
+	gouse.Println("[complex]: ", gouse.SumArr([]complex128{1 + 2i, 2 + 3i, 3 + 4i}))
 }

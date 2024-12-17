@@ -9,12 +9,12 @@ import (
 )
 ```
 
-## 1. Api loadbalancer
+## 1. Loadbalancer
 
 Description: Load balancer with health check<br>Input params: (ILbConfig.ProxyPort, ILbConfig.Backends)<br>
 
 ```go
-func ApiLoadbalancer() {
+func Loadbalancer() {
 	lbCfg := gouse.ILbConfig{
 		ProxyPort: "8080",
 		Backends: []gouse.IBackend{
@@ -38,12 +38,12 @@ func ApiLoadbalancer() {
 }
 ```
 
-## 2. Api graceful shutdown
+## 2. Graceful shutdown
 
 Description: Graceful shutdown for API server<br>Input params: (IGracefulShutdown)<br>
 
 ```go
-func ApiGracefulShutdown() {
+func GracefulShutdown() {
 	gs := gouse.IGracefulShutdown{
 		Port:          "3000",
 		StartMsg:      "Starting server at port http://localhost:3000",

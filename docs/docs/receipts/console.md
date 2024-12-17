@@ -4,7 +4,6 @@
 
 ```go
 import (
-	"fmt"
 	"github.com/thuongtruong109/gouse"
 	"github.com/thuongtruong109/gouse/cookbook/console/choice"
 	"github.com/thuongtruong109/gouse/cookbook/console/countdown"
@@ -25,7 +24,7 @@ import (
 
 ## 1. Console cmd
 
-
+Description: Run a command in the console<br>Input params: (...command string)<br>
 
 ```go
 func ConsoleCmd() {
@@ -38,7 +37,7 @@ func ConsoleCmd() {
 
 ## 2. Console clear
 
-
+Description: Clear the console<br>
 
 ```go
 func ConsoleClear() {
@@ -50,7 +49,7 @@ func ConsoleClear() {
 
 ## 3. Console with color
 
-
+Description: Print with color in the console<br>Input params: (color string, text string)<br>
 
 ```go
 func ConsoleWithColor() {
@@ -67,11 +66,10 @@ func ConsoleWithColor() {
 
 ## 4. Console banner
 
-
+Description: Display a banner in the console<br>Input params: (font string, text string)<br>
 
 ```go
 func ConsoleBanner() {
-	// param1: font name, param2: your input string
 	gouse.Banner(gouse.DOUBLE_ALPHA, "gouse - type double")
 	gouse.Banner(gouse.DOUBLE_ALPHA, "gouse - type single")
 }
@@ -79,7 +77,7 @@ func ConsoleBanner() {
 
 ## 5. Console help
 
-
+Description: Display a help menu in the console<br>Input params: (name string, options []*gouse.IHelpOptions)<br>
 
 ```go
 func ConsoleHelp() {
@@ -112,14 +110,14 @@ func ConsoleHelp() {
 	}
 	gouse.Help(name, options)
 	// for _, option := range options {
-	// 	fmt.Printf("Option %s: %v\n", option.Opt, option.Val)
+	// 	gouse.Printf("Option %s: %v\n", option.Opt, option.Val)
 	// }
 }
 ```
 
 ## 6. Console select
 
-
+Description: Display a select menu in the console<br>
 
 ```go
 func ConsoleSelect() {
@@ -205,7 +203,7 @@ func ConsoleChoice() {
 	update := &choice.Model{}
 	choice.Run(question, options, update)
 
-	fmt.Printf("\n---\nYou chose %s!\n", update.Choice)
+	gouse.Printf("\n---\nYou chose %s!\n", update.Choice)
 }
 ```
 

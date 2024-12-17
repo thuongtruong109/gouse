@@ -4,452 +4,401 @@
 
 ```go
 import (
-	"fmt"
 	"github.com/thuongtruong109/gouse"
 )
 ```
 
-## 1. Math is even
+## 1. Check number
 
-
+Description: Check number is even, odd, perfect square, prime<br>Input params: (num int) number<br>
 
 ```go
-func MathIsEven() {
+func CheckNumber() {
 	var num = 10
 	println("Check even number: ", gouse.IsEven(num))
-}
-```
-
-## 2. Math is odd
-
-
-
-```go
-func MathIsOdd() {
-	var num = 10
 	println("Check odd number: ", gouse.IsOdd(num))
-}
-```
-
-## 3. Math is perfect square
-
-
-
-```go
-func MathIsPerfectSquare() {
-	var num = 10
 	println("Check perfect square number: ", gouse.IsPerfectSquare(num))
-}
-```
-
-## 4. Math is prime
-
-
-
-```go
-func MathIsPrime() {
-	var num = 10
 	println("Check prime number: ", gouse.IsPrime(num))
 }
 ```
 
-## 5. Math log
+## 2. Log
 
-
+Description: Calculate logarithm (base 2, 10) of number (F: float)<br>Input params: (num, base int)<br>
 
 ```go
-func MathLog() {
+func Log() {
 	println("Logarithm of integer number: ", gouse.Log(16, 2))
-	println("Logarithm of float number: ", fmt.Sprintf("%f", gouse.LogF(20.0, 2.0)))
+	println("Logarithm of float number: ", gouse.Sprintf("%f", gouse.LogF(20.0, 2.0)))
 
 	println("Logarithm of integer number (base 2): ", gouse.Log2(16))
-	println("Logarithm of float number (base 2): ", fmt.Sprintf("%f", gouse.Log2F(20.0)))
+	println("Logarithm of float number (base 2): ", gouse.Sprintf("%f", gouse.Log2F(20.0)))
 
 	println("Logarithm of integer number (base 10): ", gouse.Log10(100))
-	println("Logarithm of float number (base 10): ", fmt.Sprintf("%f", gouse.Log10F(20.0)))
+	println("Logarithm of float number (base 10): ", gouse.Sprintf("%f", gouse.Log10F(20.0)))
 }
 ```
 
-## 6. Math pytago
+## 3. Pytago
 
-
+Description: Calculate Pytago (F: float)<br>Input params: (num1, num2 int)<br>
 
 ```go
-func MathPytago() {
-	println("Pytago of number (integer): ", fmt.Sprintf("%f", gouse.Pytago(3, 4)))
-	println("Pytago of number (float): ", fmt.Sprintf("%f", gouse.PytagoF(3.0, 4.0)))
+func Pytago() {
+	gouse.Sprintf("Pytago of number (integer): %f", gouse.Pytago(3, 4))
+	gouse.Sprintf("Pytago of number (float): %f", gouse.PytagoF(3.0, 4.0))
 }
 ```
 
-## 7. Math transition
+## 4. Transition
 
-
+Description: Calculate transition (speed, distance, time)<br>Input params: Speed(distance, time float64), Distance(speed, time float64), Time(distance, speed float64)<br>
 
 ```go
-func MathTransition() {
+func Transition() {
 	var distance, speed, time float64 = 100, 10, 10
-	println("Speed: ", fmt.Sprintf("%f", gouse.Speed(distance, time)))
-	println("Distance: ", fmt.Sprintf("%f", gouse.Distance(speed, time)))
-	println("Time: ", fmt.Sprintf("%f", gouse.Time(distance, speed)))
+	gouse.Sprintf("Speed: %f", gouse.Speed(distance, time))
+	gouse.Sprintf("Distance: %f", gouse.Distance(speed, time))
+	gouse.Sprintf("Time: %f", gouse.Time(distance, speed))
 }
 ```
 
-## 8. Math trigonometry
+## 5. Trigonometry
 
-
+Description: Calculate trigonometry (sine, cosine, tangent) (F: float)<br>Input params: (angle float64)<br>
 
 ```go
-func MathTrigonometry() {
+func Trigonometry() {
 	println("Sine of integer number: ", gouse.Sin(90))
-	println("Sine of float number: ", fmt.Sprintf("%f", gouse.SinF(90.0)))
+	println("Sine of float number: ", gouse.Sprintf("%f", gouse.SinF(90.0)))
 	println("Cosine of integer number: ", gouse.Cos(90))
-	println("Cosine of float number: ", fmt.Sprintf("%f", gouse.CosF(90.0)))
+	println("Cosine of float number: ", gouse.Sprintf("%f", gouse.CosF(90.0)))
 	println("Tangent of integer number: ", gouse.Tan(90))
-	println("Tangent of float number: ", fmt.Sprintf("%f", gouse.TanF(90.0)))
+	println("Tangent of float number: ", gouse.Sprintf("%f", gouse.TanF(90.0)))
 }
 ```
 
-## 9. Math circle
+## 6. Circle
 
-
+Description: Calculate area, perimeter, volume of circle (F: float)<br>Input params: (radius float64)<br>
 
 ```go
-func MathCircle() {
-	println("Area of circle (integer): ", fmt.Sprintf("%f", gouse.AreaCircle(10)))
-	println("Area of circle (float): ", fmt.Sprintf("%f", gouse.AreaCircleF(10.0)))
-	println("Perimeter of circle (integer): ", fmt.Sprintf("%f", gouse.PeriCircle(10)))
-	println("Perimeter of circle (float): ", fmt.Sprintf("%f", gouse.PeriCircleF(10.0)))
+func Circle() {
+	gouse.Sprintf("Area of circle (integer): %f", gouse.AreaCircle(10))
+	gouse.Sprintf("Area of circle (float): %f", gouse.AreaCircleF(10.0))
+	gouse.Sprintf("Perimeter of circle (integer): %f", gouse.PeriCircle(10))
+	gouse.Sprintf("Perimeter of circle (float): %f", gouse.PeriCircleF(10.0))
 }
 ```
 
-## 10. Math cone
+## 7. Cone
 
-
+Description: Calculate area, volume of cone (F: float)<br>Input params: (radius, height float64)<br>
 
 ```go
-func MathCone() {
-	println("Area of cone (integer): ", fmt.Sprintf("%f", gouse.AreaCone(10, 20)))
-	println("Area of cone (float): ", fmt.Sprintf("%f", gouse.AreaConeF(10.0, 20.0)))
-	println("Volume of cone (integer): ", fmt.Sprintf("%f", gouse.VolCone(10, 20)))
-	println("Volume of cone (float): ", fmt.Sprintf("%f", gouse.VolConeF(10.0, 20.0)))
+func Cone() {
+	gouse.Sprintf("Area of cone (integer): %f", gouse.AreaCone(10, 20))
+	gouse.Sprintf("Area of cone (float): %f", gouse.AreaConeF(10.0, 20.0))
+	gouse.Sprintf("Volume of cone (integer): %f", gouse.VolCone(10, 20))
+	gouse.Sprintf("Volume of cone (float): %f", gouse.VolConeF(10.0, 20.0))
 }
 ```
 
-## 11. Math cube
+## 8. Cube
 
-
+Description: Calculate area, perimeter, volume of cube (F: float)<br>Input params: (side float64)<br>
 
 ```go
-func MathCube() {
+func Cube() {
 	println("Area of cube (integer): ", gouse.AreaCube(10))
-	println("Area of cube (float): ", fmt.Sprintf("%f", gouse.AreaCubeF(10.0)))
+	println("Area of cube (float): ", gouse.Sprintf("%f", gouse.AreaCubeF(10.0)))
 	println("Perimeter of cube (integer): ", gouse.PeriCube(10))
-	println("Perimeter of cube (float): ", fmt.Sprintf("%f", gouse.PeriCubeF(10.0)))
+	println("Perimeter of cube (float): ", gouse.Sprintf("%f", gouse.PeriCubeF(10.0)))
 	println("Volume of cube (integer): ", gouse.VolCube(10))
-	println("Volume of cube (float): ", fmt.Sprintf("%f", gouse.VolCubeF(10.0)))
+	println("Volume of cube (float): ", gouse.Sprintf("%f", gouse.VolCubeF(10.0)))
 }
 ```
 
-## 12. Math cylinder
+## 9. Cylinder
 
-
+Description: Calculate area, volume of cylinder (F: float)<br>Input params: (radius, height float64)<br>
 
 ```go
-func MathCylinder() {
-	println("Area of cylinder (integer): ", fmt.Sprintf("%f", gouse.AreaCylinder(10, 20)))
-	println("Area of cylinder (float): ", fmt.Sprintf("%f", gouse.AreaCylinderF(10.0, 20.0)))
-	println("Volume of cylinder (integer): ", fmt.Sprintf("%f", gouse.VolCylinder(10, 20)))
-	println("Volume of cylinder (float): ", fmt.Sprintf("%f", gouse.VolCylinderF(10.0, 20.0)))
+func Cylinder() {
+	gouse.Sprintf("Area of cylinder (integer): %f", gouse.AreaCylinder(10, 20))
+	gouse.Sprintf("Area of cylinder (float): %f", gouse.AreaCylinderF(10.0, 20.0))
+	gouse.Sprintf("Volume of cylinder (integer): %f", gouse.VolCylinder(10, 20))
+	gouse.Sprintf("Volume of cylinder (float): %f", gouse.VolCylinderF(10.0, 20.0))
 }
 ```
 
-## 13. Math ellipse
+## 10. Ellipse
 
-
+Description: Calculate area, perimeter, volume of ellipse (F: float)<br>Input params: (major, minor float64)<br>
 
 ```go
-func MathEllipse() {
-	println("Area of ellipse (integer): ", fmt.Sprintf("%f", gouse.AreaEllipse(10, 20)))
-	println("Area of ellipse (float): ", fmt.Sprintf("%f", gouse.AreaEllipseF(10.0, 20.0)))
+func Ellipse() {
+	gouse.Sprintf("Area of ellipse (integer): %f", gouse.AreaEllipse(10, 20))
+	gouse.Sprintf("Area of ellipse (float): %f", gouse.AreaEllipseF(10.0, 20.0))
 }
 ```
 
-## 14. Math parallelogram
+## 11. Parallelogram
 
-
+Description: Calculate area, perimeter, volume of parallelogram (F: float)<br>Input params: (base, height float64)<br>
 
 ```go
-func MathParallelogram() {
+func Parallelogram() {
 	println("Area of parallelogram (integer): ", gouse.AreaParallelogram(10, 20))
-	println("Area of parallelogram (float): ", fmt.Sprintf("%f", gouse.AreaParallelogramF(10.0, 20.0)))
+	println("Area of parallelogram (float): ", gouse.Sprintf("%f", gouse.AreaParallelogramF(10.0, 20.0)))
 }
 ```
 
-## 15. Math polygon
+## 12. Polygon
 
-
+Description: Calculate area of pentagon (F: float)<br>Input params: (side, apothem float64)<br>
 
 ```go
-func MathPolygon() {
-	println("Area of pentagol by number of sides (integer): ", fmt.Sprintf("%f", gouse.AreaPolygon(10, 6)))
+func Polygon() {
+	gouse.Sprintf("Area of pentagol by number of sides (integer): %f", gouse.AreaPolygon(10, 6))
 }
 ```
 
-## 16. Math rect
+## 13. Rect
 
-
+Description: Calculate area, perimeter, volume of rectangle (F: float)<br>Input params: (length, width float64)<br>
 
 ```go
-func MathRect() {
+func Rect() {
 	println("Area of rectangle: ", gouse.AreaRect(10, 20))
 	println("Perimeter of rectangle (integer): ", gouse.PeriRect(10, 20))
-	println("Perimeter of rectangle (float): ", fmt.Sprintf("%f", gouse.PeriRectF(10.0, 20.0)))
-	println("Diagonal of rectangle (integer): ", fmt.Sprintf("%f", gouse.DiagRect(10, 20)))
-	println("Diagonal of rectangle (float): ", fmt.Sprintf("%f", gouse.DiagRectF(10.0, 20.0)))
+	println("Perimeter of rectangle (float): ", gouse.Sprintf("%f", gouse.PeriRectF(10.0, 20.0)))
+	println("Diagonal of rectangle (integer): ", gouse.Sprintf("%f", gouse.DiagRect(10, 20)))
+	println("Diagonal of rectangle (float): ", gouse.Sprintf("%f", gouse.DiagRectF(10.0, 20.0)))
 	println("Volume of rectangular (integer): ", gouse.VolRect(10, 20, 30))
-	println("Volume of rectangular (float): ", fmt.Sprintf("%f", gouse.VolRectF(10.0, 20.0, 30.0)))
+	println("Volume of rectangular (float): ", gouse.Sprintf("%f", gouse.VolRectF(10.0, 20.0, 30.0)))
 }
 ```
 
-## 17. Math rhombus
+## 14. Rhombus
 
-
+Description: Calculate area, perimeter, volume of rhombus (F: float)<br>Input params: (diagonal1, diagonal2 float64)<br>
 
 ```go
-func MathRhombus() {
+func Rhombus() {
 	println("Area of rhombus (integer): ", gouse.AreaRhombus(10, 20))
-	println("Area of rhombus (float): ", fmt.Sprintf("%f", gouse.AreaRhombusF(10.0, 20.0)))
+	println("Area of rhombus (float): ", gouse.Sprintf("%f", gouse.AreaRhombusF(10.0, 20.0)))
 }
 ```
 
-## 18. Math sphere
+## 15. Sphere
 
-
+Description: Calculate area, volume of sphere (F: float)<br>Input params: (radius float64)<br>
 
 ```go
-func MathSphere() {
-	println("Area of sphere (integer): ", fmt.Sprintf("%f", gouse.AreaSphere(10)))
-	println("Area of sphere (float): ", fmt.Sprintf("%f", gouse.AreaSphereF(10.0)))
-	println("Volume of sphere (integer): ", fmt.Sprintf("%f", gouse.VolSphere(10)))
-	println("Volume of sphere (float): ", fmt.Sprintf("%f", gouse.VolSphereF(10.0)))
+func Sphere() {
+	gouse.Sprintf("Area of sphere (integer): %f", gouse.AreaSphere(10))
+	gouse.Sprintf("Area of sphere (float): %f", gouse.AreaSphereF(10.0))
+	gouse.Sprintf("Volume of sphere (integer): %f", gouse.VolSphere(10))
+	gouse.Sprintf("Volume of sphere (float): %f", gouse.VolSphereF(10.0))
 }
 ```
 
-## 19. Math square
+## 16. Square
 
-
+Description: Calculate area, perimeter, volume of square (F: float)<br>Input params: (side float64)<br>
 
 ```go
-func MathSquare() {
+func Square() {
 	println("Area of square (integer): ", gouse.AreaSquare(10))
-	println("Area of square (float): ", fmt.Sprintf("%f", gouse.AreaSquareF(10.0)))
+	println("Area of square (float): ", gouse.Sprintf("%f", gouse.AreaSquareF(10.0)))
 	println("Perimeter of square (integer): ", gouse.PeriSquare(10))
-	println("Perimeter of square (float): ", fmt.Sprintf("%f", gouse.PeriSquareF(10.0)))
+	println("Perimeter of square (float): ", gouse.Sprintf("%f", gouse.PeriSquareF(10.0)))
 }
 ```
 
-## 20. Math trapezoid
+## 17. Trapezoid
 
-
+Description: Calculate area, perimeter, volume of trapezoid (F: float)<br>Input params: (base1, base2, height float64)<br>
 
 ```go
-func MathTrapezoid() {
-	println("Area of trapezoid (integer): ", fmt.Sprintf("%f", gouse.AreaTrapezoid(10, 20, 30)))
-	println("Area of trapezoid (float): ", fmt.Sprintf("%f", gouse.AreaTrapezoidF(10.0, 20.0, 30.0)))
+func Trapezoid() {
+	gouse.Sprintf("Area of trapezoid (integer): %f", gouse.AreaTrapezoid(10, 20, 30))
+	gouse.Sprintf("Area of trapezoid (float): %f", gouse.AreaTrapezoidF(10.0, 20.0, 30.0))
 }
 ```
 
-## 21. Math triangle
+## 18. Triangle
 
-
+Description: Calculate area, perimeter of triangle (F: float)<br>Input params: (base, height, side float64)<br>
 
 ```go
-func MathTriangle() {
+func Triangle() {
 	println("Area of triangle (integer): ", gouse.AreaTriangle(10, 20))
-	println("Area of triangle (float): ", fmt.Sprintf("%f", gouse.AreaTriangleF(10.0, 20.0)))
+	println("Area of triangle (float): ", gouse.Sprintf("%f", gouse.AreaTriangleF(10.0, 20.0)))
 	println("Perimeter of triangle (integer): ", gouse.PeriTriangle(10, 20, 30))
-	println("Perimeter of triangle (float): ", fmt.Sprintf("%f", gouse.PeriTriangleF(10.0, 20.0, 30.0)))
+	println("Perimeter of triangle (float): ", gouse.Sprintf("%f", gouse.PeriTriangleF(10.0, 20.0, 30.0)))
 }
 ```
 
-## 22. Math abs
+## 19. Abs
 
-
+Description: Calculate absolute number<br>Input params: (num int)<br>
 
 ```go
-func MathAbs() {
+func Abs() {
 	var num = -10
 	println("Absolute number: ", gouse.Abs(num))
 }
 ```
 
-## 23. Math add
+## 20. Add
 
-
+Description: Add two numbers<br>Input params: (num1, num2 int)<br>
 
 ```go
-func MathAdd() {
+func Add() {
 	var num1, num2 = 10, -2
 	println("Add numbers: ", gouse.Add(num1, num2))
 }
 ```
 
-## 24. Math ceil
+## 21. Ceil
 
-
+Description: Calculate Ceil number<br>Input params: (num float64)<br>
 
 ```go
-func MathCeil() {
+func Ceil() {
 	var num = 10.49
 	println("Ceil number: ", gouse.Ceil(num))
 }
 ```
 
-## 25. Math operators
+## 22. Operators
 
-
+Description: Divide two numbers<br>Input params: (num1, num2 int)<br>
 
 ```go
-func MathOperators() {
+func Operators() {
 	var num1, num2 = 10, -2
 	println("Quotient of numbers: ", gouse.Divide(num1, num2))
 }
 ```
 
-## 26. Math factorial
+## 23. Factorial
 
-
+Description: Calculate factorial number<br>Input params: (num int)<br>
 
 ```go
-func MathFactorial() {
+func Factorial() {
 	var num = 5
 	println("Factorial of number: ", gouse.Factorial(num))
 }
 ```
 
-## 27. Math floor
+## 24. Floor
 
-
+Description: Calculate Floor number<br>Input params: (num float64)<br>
 
 ```go
-func MathFloor() {
+func Floor() {
 	var num = 10.49
 	println("Floor number: ", gouse.Floor(num))
 }
 ```
 
-## 28. Math min
+## 25. Min max mean
 
-
+Description: Find Min, Max, Mean of numbers<br>Input params: (struct interface{}, fieldName string, value interface{})<br>
 
 ```go
-func MathMin() {
+func MinMaxMean() {
 	var num1, num2, num3, num4 = 10, 20, 30, -2
 	println("Min number: ", gouse.Min(num1, num2, num3, num4))
-}
-```
-
-## 29. Math max
-
-
-
-```go
-func MathMax() {
-	var num1, num2, num3, num4 = 10, 20, 30, -2
 	println("Max number: ", gouse.Max(num1, num2, num3, num4))
-}
-```
-
-## 30. Math mean
-
-
-
-```go
-func MathMean() {
-	var num1, num2, num3, num4 = 10, 20, 30, -2
 	println("Average/Mean of numbers: ", gouse.Mean(num1, num2, num3, num4))
 }
 ```
 
-## 31. Math multi
+## 26. Multi
 
-
+Description: Multiply multiple numbers<br>Input params: (num ...int)<br>
 
 ```go
-func MathMulti() {
+func Multi() {
 	var num1, num2, num3, num4 = 10, 20, 30, -2
 	println("Multiply of numbers: ", gouse.Multi(num1, num2, num3, num4))
 }
 ```
 
-## 32. Math power
+## 27. Power
 
-
+Description: Calculate power of number (F: float)<br>Input params: Powe2(num int), Pow(num, power int), PoweF(num, power float64)<br>
 
 ```go
-func MathPower() {
+func Power() {
 	println("Power square of number: ", gouse.Pow2(2))
 	println("Power of integer numbers: ", gouse.Pow(2, 3))
 	println("Power of float numbers: ", gouse.PowF(2.0, 3.0))
 }
 ```
 
-## 33. Math remainder
+## 28. Remainder
 
-
+Description: Calculate remainder of two numbers<br>Input params: (num1, num2 int)<br>
 
 ```go
-func MathRemainder() {
+func Remainder() {
 	var num1, num2 = 10, -2
 	println("Remainder of numbers: ", gouse.Remainder(num1, num2))
 }
 ```
 
-## 34. Math root
+## 29. Root
 
-
+Description: Calculate square-root, cube-root, nth-root of number (F: float)<br>Input params: Sqrt(num int), SqrtF(num float64), Cbrt(num int), CbrtF(num float64), Root(num, power int), RootF(num, power float64)<br>
 
 ```go
-func MathRoot() {
+func Root() {
 	println("Square-Root of integer number: ", gouse.Sqrt(16))
-	println("Square-Root of float number: ", fmt.Sprintf("%f", gouse.SqrtF(20.0)))
+	println("Square-Root of float number: ", gouse.Sprintf("%f", gouse.SqrtF(20.0)))
 
 	println("Cube-Root of integer number: ", gouse.Cbrt(27))
-	println("Cube-Root of float number: ", fmt.Sprintf("%f", gouse.CbrtF(20.0)))
+	println("Cube-Root of float number: ", gouse.Sprintf("%f", gouse.CbrtF(20.0)))
 
 	println("Nth-Root of integer number: ", gouse.Root(4, 2))
-	println("Nth-Root of float number: ", fmt.Sprintf("%f", gouse.RootF(20.0, 3.0)))
+	println("Nth-Root of float number: ", gouse.Sprintf("%f", gouse.RootF(20.0, 3.0)))
 }
 ```
 
-## 35. Math round
+## 30. Round
 
-
+Description: Calculate round number<br>Input params: (num float64)<br>
 
 ```go
-func MathRound() {
+func Round() {
 	var num1, num2 = 10.49, 10.51
 	println("Round number: ", gouse.Round(num1), gouse.Round(num2))
 }
 ```
 
-## 36. Math sub
+## 31. Sub
 
-
+Description: Subtract two numbers<br>Input params: (num1, num2 int)<br>
 
 ```go
-func MathSub() {
+func Sub() {
 	var num1, num2 = 10, -2
 	println("Subtract of numbers: ", gouse.Sub(num1, num2))
 }
 ```
 
-## 37. Math sum
+## 32. Sum
 
-
+Description: Sum multiple numbers<br>Input params: (num ...int)<br>
 
 ```go
-func MathSum() {
+func Sum() {
 	var num1, num2, num3, num4 = 10, 20, 30, -2
 	println("Sum of numbers: ", gouse.Sum(num1, num2, num3, num4))
 }

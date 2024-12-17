@@ -1,8 +1,6 @@
 package gouse
 
-import (
-	"testing"
-)
+import "testing"
 
 /* Testing min max */
 

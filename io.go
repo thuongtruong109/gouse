@@ -5,7 +5,6 @@ import (
 	"bufio"
 	"encoding/json"
 	"errors"
-	"fmt"
 	"io"
 	"os"
 	"path/filepath"
@@ -396,14 +395,14 @@ func Zip(zipFileName string, files []string) error {
 	}
 	defer func() {
 		if closeErr := zipFile.Close(); closeErr != nil {
-			fmt.Println("Error closing zip file:", closeErr)
+			Println("Error closing zip file:", closeErr)
 		}
 	}()
 
 	zipWriter := zip.NewWriter(zipFile)
 	defer func() {
 		if closeErr := zipWriter.Close(); closeErr != nil {
-			fmt.Println("Error closing zip writer:", closeErr)
+			Println("Error closing zip writer:", closeErr)
 		}
 	}()
 
@@ -439,7 +438,7 @@ func Unzip(zipFile, destFolder string) error {
 	}
 	defer func() {
 		if closeErr := zipReader.Close(); closeErr != nil {
-			fmt.Println("Error closing zip reader:", closeErr)
+			Println("Error closing zip reader:", closeErr)
 		}
 	}()
 

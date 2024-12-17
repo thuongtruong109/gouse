@@ -1,8 +1,6 @@
 package gouse
 
-import (
-	"testing"
-)
+import "testing"
 
 func TestClamp(t *testing.T) {
 	min := 1

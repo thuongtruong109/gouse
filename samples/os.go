@@ -1,10 +1,6 @@
 package samples
 
-import (
-	"fmt"
-
-	"github.com/thuongtruong109/gouse"
-)
+import "github.com/thuongtruong109/gouse"
 
 /*
 Description: Get CPU information
@@ -12,15 +8,15 @@ Description: Get CPU information
 func Cpu() {
 	cpuInfo, err := gouse.CPU()
 	if err != nil {
-		fmt.Println("Error: ", err)
+		gouse.Println("Error: ", err)
 		return
 	}
 
-	fmt.Println("CPU Information")
-	fmt.Println("Model Name: ", cpuInfo.ModelName)
-	fmt.Println("Family: ", cpuInfo.Family)
-	fmt.Println("Speed: ", cpuInfo.Speed, "MHz")
-	fmt.Println("Cores: ", cpuInfo.Cores)
+	gouse.Println("CPU Information")
+	gouse.Println("Model Name: ", cpuInfo.ModelName)
+	gouse.Println("Family: ", cpuInfo.Family)
+	gouse.Println("Speed: ", cpuInfo.Speed, "MHz")
+	gouse.Println("Cores: ", cpuInfo.Cores)
 }
 
 /*
@@ -29,15 +25,15 @@ Description: Get Disk information
 func Disk() {
 	diskInfo, err := gouse.Disk()
 	if err != nil {
-		fmt.Println("Error: ", err)
+		gouse.Println("Error: ", err)
 		return
 	}
 
-	fmt.Println("Disk Information")
-	fmt.Println("Total Space: ", diskInfo.TotalSpace, "MB")
-	fmt.Println("Free Space: ", diskInfo.FreeSpace, "MB")
-	fmt.Println("Used Space: ", diskInfo.UsedSpace, "MB")
-	fmt.Println("Used Space Percent: ", diskInfo.UsedSpacePercent, "%")
+	gouse.Println("Disk Information")
+	gouse.Println("Total Space: ", diskInfo.TotalSpace, "MB")
+	gouse.Println("Free Space: ", diskInfo.FreeSpace, "MB")
+	gouse.Println("Used Space: ", diskInfo.UsedSpace, "MB")
+	gouse.Println("Used Space Percent: ", diskInfo.UsedSpacePercent, "%")
 }
 
 /*
@@ -46,20 +42,20 @@ Description: Get Memory information
 func System() {
 	systemInfo, err := gouse.System()
 	if err != nil {
-		fmt.Println("Error: ", err)
+		gouse.Println("Error: ", err)
 		return
 	}
 
-	fmt.Println("System Information")
-	fmt.Println("OS: ", systemInfo.Name)
-	fmt.Println("Platform: ", systemInfo.Platform)
-	fmt.Println("Arch: ", systemInfo.Arch)
-	fmt.Println("Hostname: ", systemInfo.Hostname)
-	fmt.Println("Number of Processes: ", systemInfo.NumsProcs)
-	fmt.Println("Total Memory: ", systemInfo.TotalMemory, "MB")
-	fmt.Println("Free Memory: ", systemInfo.FreeMemory, "MB")
-	fmt.Println("Used Memory: ", systemInfo.UsedMemory, "MB")
-	fmt.Println("Used Memory Percent: ", systemInfo.UsedMemoryPercent, "%")
+	gouse.Println("System Information")
+	gouse.Println("OS: ", systemInfo.Name)
+	gouse.Println("Platform: ", systemInfo.Platform)
+	gouse.Println("Arch: ", systemInfo.Arch)
+	gouse.Println("Hostname: ", systemInfo.Hostname)
+	gouse.Println("Number of Processes: ", systemInfo.NumsProcs)
+	gouse.Println("Total Memory: ", systemInfo.TotalMemory, "MB")
+	gouse.Println("Free Memory: ", systemInfo.FreeMemory, "MB")
+	gouse.Println("Used Memory: ", systemInfo.UsedMemory, "MB")
+	gouse.Println("Used Memory Percent: ", systemInfo.UsedMemoryPercent, "%")
 }
 
 /*

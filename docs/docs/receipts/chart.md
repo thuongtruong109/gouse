@@ -10,7 +10,7 @@ import (
 
 ## 1. Chart bar
 
-Description: Create a bar chart and export it to a html file<br>
+Description: Create a bar chart and export it to a html file<br>Input params: (*gouse.IBarChartOpts)<br>
 
 ```go
 func ChartBar() {
@@ -32,7 +32,7 @@ func ChartBar() {
 
 ## 2. Chart line
 
-Description: Create a line chart and export it to a html file<br>
+Description: Create a line chart and export it to a html file<br>Input params: (*gouse.ILineChartOpts)<br>
 
 ```go
 func ChartLine() {
@@ -53,7 +53,7 @@ func ChartLine() {
 
 ## 3. Chart pie
 
-Description: Create a pie chart and export it to a html file<br>
+Description: Create a pie chart and export it to a html file<br>Input params: (*gouse.IPieChartOpts)<br>
 
 ```go
 func ChartPie() {

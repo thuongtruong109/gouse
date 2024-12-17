@@ -1,6 +1,7 @@
 import { defineConfig } from "vitepress";
 
 import pkg from "../../package.json";
+import { editLink } from "./util";
 
 export default defineConfig({
   lang: "en-US",
@@ -79,19 +80,20 @@ export default defineConfig({
           { text: "⌛ Cron", link: "cron" },
           { text: "🔐 Crypto", link: "crypto" },
           { text: "📅 Date", link: "date" },
-          { text: "⌛ Time", link: "time" },
           { text: "🫛 Function", link: "function" },
           { text: "🎯 I/O", link: "io" },
-          { text: "✍️ Log", link: "log" },
+          { text: "✍️ Logger", link: "logger" },
           { text: "➗ Math", link: "math" },
           { text: "📸 Media", link: "media" },
           { text: "🛜 Net", link: "net" },
           { text: "🔢 Number", link: "number" },
           { text: "⭕ OS", link: "os" },
+          { text: "📝 Print", link: "print" },
           { text: "💭 Random", link: "random" },
           { text: "🔃 Regex", link: "regex" },
           { text: "🔗 String", link: "string" },
           { text: "🛳️ Struct", link: "struct" },
+          { text: "⌛ Time", link: "time" },
           { text: "📚 Type", link: "type" },
 
           // { text: "📧 Email", link: "email" },
@@ -116,11 +118,9 @@ export default defineConfig({
     },
 
     editLink: {
-      pattern:
-        "https://github.com/thuongtruong109/gouse/edit/main/samples/:path".replace(
-          "/receipts",
-          ""
-        ),
+      pattern: editLink(
+        "https://github.com/thuongtruong109/gouse/edit/main/samples/:path"
+      ),
       text: "Improve this page on GitHub",
     },
 

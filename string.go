@@ -1,9 +1,6 @@
 package gouse
 
-import (
-	"fmt"
-	"html"
-)
+import "html"
 
 /* Case conversion */
 
@@ -676,7 +673,7 @@ func FromCodePoint(codePoint ...int) string {
 	var result string
 
 	for _, v := range codePoint {
-		result += fmt.Sprintf("%c", v)
+		result += Sprintf("%c", v)
 	}
 
 	return result

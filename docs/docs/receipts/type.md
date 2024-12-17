@@ -4,33 +4,32 @@
 
 ```go
 import (
-	"fmt"
 	"github.com/thuongtruong109/gouse"
 )
 ```
 
 ## 1. Type string convert
 
-
+Description: Convert string to other type<br>
 
 ```go
 func TypeStringConvert() {
 	println("Convert string to int: ", gouse.StringToInt("1"))
-	fmt.Println("Convert string to float: ", gouse.StringToFloat("1.1"))
+	gouse.Println("Convert string to float: ", gouse.StringToFloat("1.1"))
 	println("Convert string to bool: ", gouse.StringToBool("true"))
-	fmt.Println("Convert string to bytes: ", string(gouse.StringToBytes("1")), "->", gouse.StringToBytes("1"))
-	fmt.Println("Convert strings to bytes: ", string(gouse.StringsToBytes([]string{"1", "2", "3"})), "->", gouse.StringsToBytes([]string{"1", "2", "3"}))
+	gouse.Println("Convert string to bytes: ", string(gouse.StringToBytes("1")), "->", gouse.StringToBytes("1"))
+	gouse.Println("Convert strings to bytes: ", string(gouse.StringsToBytes([]string{"1", "2", "3"})), "->", gouse.StringsToBytes([]string{"1", "2", "3"}))
 }
 ```
 
 ## 2. Type cast to string
 
-
+Description: Convert other type to string<br>
 
 ```go
 func TypeCastToString() {
 	println("Cast int to string: ", gouse.IntToString(1))
-	fmt.Println("Cast float to string: ", gouse.FloatToString(1.1))
+	gouse.Println("Cast float to string: ", gouse.FloatToString(1.1))
 	println("Cast bool to string: ", gouse.BoolToString(true))
 	println("Cast interface to string: ", gouse.ToString([]int{1, 2, 3}))
 	println("Cast bytes to string: ", gouse.BytesToString([]byte{49, 50, 51}))
@@ -40,7 +39,7 @@ func TypeCastToString() {
 
 ## 3. Type struct convert
 
-
+Description: Convert struct to string, map<br>
 
 ```go
 func TypeStructConvert() {
@@ -57,13 +56,13 @@ func TypeStructConvert() {
 	}
 
 	println("Struct to string: ", gouse.StructToString(companyInfo))
-	fmt.Println("Struct to map: ", gouse.StructToMap(companyInfo))
+	gouse.Println("Struct to map: ", gouse.StructToMap(companyInfo))
 }
 ```
 
 ## 4. Type check
 
-
+Description: Check type of variable<br>
 
 ```go
 func TypeCheck() {
@@ -95,7 +94,7 @@ func TypeCheck() {
 
 ## 5. Type check u u i d
 
-
+Description: Check string is UUID<br>Input params: (id string)<br>
 
 ```go
 func TypeCheckUUID() {
@@ -109,19 +108,30 @@ func TypeCheckUUID() {
 
 ## 6. Type check gmail
 
-
+Description: Check string is gmail<br>Input params: (email string)<br>
 
 ```go
 func TypeCheckGmail() {
-	println("--- Check valid gmail ---")
+	var emails = []string{
+		"okahehe@gmail.com",
+		"test@example.com",
+		"short@ex.com",
+		"toolong@exampledomain.com",
+		"missingat.sign.com",
+		"invalid@.domain.com",
+		"user2@yahoo.com",
+		"bean@outlook.com",
+		"ititiu19228@student.hcmiu.edu.vn",
+	}
+
 	for _, email := range emails {
 		isEmail, err := gouse.IsGmail(email)
 		if err != nil {
-			fmt.Printf("%s - %s\n", email, err)
+			gouse.Printf("%s - %s\n", email, err)
 		}
 
 		if isEmail {
-			fmt.Printf("%s - valid gmail\n", email)
+			gouse.Printf("%s - valid gmail\n", email)
 		}
 	}
 }
@@ -129,19 +139,30 @@ func TypeCheckGmail() {
 
 ## 7. Type check yahoo
 
-
+Description: Check string is yahoo<br>Input params: (email string)<br>
 
 ```go
 func TypeCheckYahoo() {
-	println("--- Check valid yahoo ---")
+	var emails = []string{
+		"okahehe@gmail.com",
+		"test@example.com",
+		"short@ex.com",
+		"toolong@exampledomain.com",
+		"missingat.sign.com",
+		"invalid@.domain.com",
+		"user2@yahoo.com",
+		"bean@outlook.com",
+		"ititiu19228@student.hcmiu.edu.vn",
+	}
+
 	for _, email := range emails {
 		isEmail, err := gouse.IsYahoo(email)
 		if err != nil {
-			fmt.Printf("%s - %s\n", email, err)
+			gouse.Printf("%s - %s\n", email, err)
 		}
 
 		if isEmail {
-			fmt.Printf("%s - valid yahoo email\n", email)
+			gouse.Printf("%s - valid yahoo email\n", email)
 		}
 	}
 }
@@ -149,19 +170,30 @@ func TypeCheckYahoo() {
 
 ## 8. Type check outlook
 
-
+Description: Check string is outlook<br>Input params: (email string)<br>
 
 ```go
 func TypeCheckOutlook() {
-	println("--- Check valid outlook ---")
+	var emails = []string{
+		"okahehe@gmail.com",
+		"test@example.com",
+		"short@ex.com",
+		"toolong@exampledomain.com",
+		"missingat.sign.com",
+		"invalid@.domain.com",
+		"user2@yahoo.com",
+		"bean@outlook.com",
+		"ititiu19228@student.hcmiu.edu.vn",
+	}
+
 	for _, email := range emails {
 		isEmail, err := gouse.IsOutlook(email)
 		if err != nil {
-			fmt.Printf("%s - %s\n", email, err)
+			gouse.Printf("%s - %s\n", email, err)
 		}
 
 		if isEmail {
-			fmt.Printf("%s - valid outlook email\n", email)
+			gouse.Printf("%s - valid outlook email\n", email)
 		}
 	}
 }
@@ -169,19 +201,30 @@ func TypeCheckOutlook() {
 
 ## 9. Type check edu
 
-
+Description: Check string is education email<br>Input params: (email string)<br>
 
 ```go
 func TypeCheckEdu() {
-	println("--- Check valid education mail ---")
+	var emails = []string{
+		"okahehe@gmail.com",
+		"test@example.com",
+		"short@ex.com",
+		"toolong@exampledomain.com",
+		"missingat.sign.com",
+		"invalid@.domain.com",
+		"user2@yahoo.com",
+		"bean@outlook.com",
+		"ititiu19228@student.hcmiu.edu.vn",
+	}
+
 	for _, email := range emails {
 		isEmail, err := gouse.IsEdu(email)
 		if err != nil {
-			fmt.Printf("%s - %s\n", email, err)
+			gouse.Printf("%s - %s\n", email, err)
 		}
 
 		if isEmail {
-			fmt.Printf("%s - valid education email\n", email)
+			gouse.Printf("%s - valid education email\n", email)
 		}
 	}
 }
@@ -189,19 +232,30 @@ func TypeCheckEdu() {
 
 ## 10. Type check email
 
-
+Description: Check string is email with custom domain<br>Input params: (email string, domain string)<br>
 
 ```go
 func TypeCheckEmail() {
-	println("--- Check valid custom domain ---")
+	var emails = []string{
+		"okahehe@gmail.com",
+		"test@example.com",
+		"short@ex.com",
+		"toolong@exampledomain.com",
+		"missingat.sign.com",
+		"invalid@.domain.com",
+		"user2@yahoo.com",
+		"bean@outlook.com",
+		"ititiu19228@student.hcmiu.edu.vn",
+	}
+
 	for _, email := range emails {
 		isEmail, err := gouse.IsEmail(email, "edu.vn")
 		if err != nil {
-			fmt.Printf("%s - %s\n", email, err)
+			gouse.Printf("%s - %s\n", email, err)
 		}
 
 		if isEmail {
-			fmt.Printf("%s - valid custom domain email\n", email)
+			gouse.Printf("%s - valid custom domain email\n", email)
 		}
 	}
 }
@@ -209,7 +263,7 @@ func TypeCheckEmail() {
 
 ## 11. Type check username
 
-
+Description: Check string is valid username recommended<br>Input params: (username string)<br>
 
 ```go
 func TypeCheckUsername() {
@@ -219,15 +273,14 @@ func TypeCheckUsername() {
 		"#$%&*()",
 	}
 
-	println("--- Check valid username ---")
 	for _, username := range usernames {
 		isUsername, err := gouse.IsUsername(username)
 		if err != nil {
-			fmt.Printf("%s - %s\n", username, err)
+			gouse.Printf("%s - %s\n", username, err)
 		}
 
 		if isUsername {
-			fmt.Printf("%s - valid username\n", username)
+			gouse.Printf("%s - valid username\n", username)
 		}
 	}
 }
@@ -235,7 +288,7 @@ func TypeCheckUsername() {
 
 ## 12. Type check password
 
-
+Description: Check string is valid password recommended<br>Input params: (password string)<br>
 
 ```go
 func TypeCheckPassword() {
@@ -246,15 +299,14 @@ func TypeCheckPassword() {
 		"Username01$",
 	}
 
-	println("--- Check valid password ---")
 	for _, password := range passwords {
 		isPassword, err := gouse.IsPassword(password)
 		if err != nil {
-			fmt.Printf("%s - %s\n", password, err)
+			gouse.Printf("%s - %s\n", password, err)
 		}
 
 		if isPassword {
-			fmt.Printf("%s - valid password\n", password)
+			gouse.Printf("%s - valid password\n", password)
 		}
 	}
 }
@@ -262,7 +314,7 @@ func TypeCheckPassword() {
 
 ## 13. Type check phone
 
-
+Description: Check string is valid phone number<br>Input params: (phone string)<br>
 
 ```go
 func TypeCheckPhone() {
@@ -277,15 +329,14 @@ func TypeCheckPhone() {
 		"+84 (3) 668-22796",
 	}
 
-	println("--- Check valid phone number ---")
 	for _, phoneNumber := range phoneNumbers {
 		isPhoneNumber, err := gouse.IsPhone(phoneNumber)
 		if err != nil {
-			fmt.Printf("%s - %s\n", phoneNumber, err)
+			gouse.Printf("%s - %s\n", phoneNumber, err)
 		}
 
 		if isPhoneNumber {
-			fmt.Printf("%s - valid phone number\n", phoneNumber)
+			gouse.Printf("%s - valid phone number\n", phoneNumber)
 		}
 	}
 }

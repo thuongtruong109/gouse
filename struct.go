@@ -1,9 +1,6 @@
 package gouse
 
-import (
-	"fmt"
-	"reflect"
-)
+import "reflect"
 
 func GetTagName(structInstance interface{}) []string {
 	structType := reflect.TypeOf(structInstance)
@@ -187,7 +184,7 @@ func SetStruct(structInstance interface{}, fieldName string, value interface{}) 
 
 	// Check if the structInstance is a pointer
 	if structValue.Kind() != reflect.Ptr || structValue.IsNil() {
-		fmt.Println("Struct instance must be a non-nil pointer.")
+		Println("Struct instance must be a non-nil pointer.")
 		return
 	}
 
@@ -199,7 +196,7 @@ func SetStruct(structInstance interface{}, fieldName string, value interface{}) 
 
 	// Check if the field is valid and exported
 	if !field.IsValid() || !field.CanSet() {
-		fmt.Printf("Field %s is unexported or not found.\n", fieldName)
+		Printf("Field %s is unexported or not found.\n", fieldName)
 		return
 	}
 
@@ -207,7 +204,7 @@ func SetStruct(structInstance interface{}, fieldName string, value interface{}) 
 	if reflect.ValueOf(value).Type().AssignableTo(field.Type()) {
 		field.Set(reflect.ValueOf(value))
 	} else {
-		fmt.Printf("Field %s type mismatch: expected %s, got %s\n", fieldName, field.Type(), reflect.ValueOf(value).Type())
+		Printf("Field %s type mismatch: expected %s, got %s\n", fieldName, field.Type(), reflect.ValueOf(value).Type())
 	}
 }
 

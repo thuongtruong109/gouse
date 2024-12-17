@@ -8,32 +8,22 @@ import (
 )
 ```
 
-## 1. Helper random i d
+## 1. U u i d
 
-
-
-```go
-func HelperRandomID() {
-	println("Generate random ID: ", gouse.RandID())
-}
-```
-
-## 2. Helper u u i d
-
-
+Description: Generate a new UUID<br>
 
 ```go
-func HelperUUID() {
+func UUID() {
 	println("New uuid: ", gouse.UUID())
 }
 ```
 
-## 3. Helper auto md doc
+## 2. Auto markdown document
 
-
+Description: Auto generate markdown document from go source code<br>Input params: (inputFilePath: string, outputFilePath: string)<br>
 
 ```go
-func HelperAutoMdDoc() {
+func AutoMarkdownDocument() {
 	inputFilePath := "main.go"
 	outputFilePath := "main.md"
 	gouse.Go2Md(inputFilePath, outputFilePath)
