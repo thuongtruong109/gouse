@@ -30,7 +30,7 @@ jobs:
           go-version: ${{ matrix.go-version }}
           # cache-dependency-path: go.sum
           # cache: true
-      
+
       - name: Install dependencies
         run: make install
 
@@ -48,7 +48,7 @@ jobs:
           flags: unittests
 
       - name: Upload coverage
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: coverage
           path: coverage.out
