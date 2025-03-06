@@ -1,8 +1,6 @@
 package gouse
 
-/* min max */
-
-func minmax[T comparable](arr []T, less func(T, T) bool) T {
+func _minmax[T comparable](arr []T, less func(T, T) bool) T {
 	if len(arr) == 0 {
 		panic("Empty array")
 	}
@@ -17,20 +15,18 @@ func minmax[T comparable](arr []T, less func(T, T) bool) T {
 }
 
 func MinArr[T int | int8 | int16 | int32 | uint | uint8 | uint16 | uint32 | uint64 | float32 | float64 | string](arr []T) T {
-	return minmax[T](arr, func(a, b T) bool {
+	return _minmax(arr, func(a, b T) bool {
 		return a > b
 	})
 }
 
 func MaxArr[T int | int8 | int16 | int32 | uint | uint8 | uint16 | uint32 | uint64 | float32 | float64 | string](arr []T) T {
-	return minmax[T](arr, func(a, b T) bool {
+	return _minmax(arr, func(a, b T) bool {
 		return a < b
 	})
 }
 
-/* intersection */
-
-func intersectSlice[T comparable](a, b []T) []T {
+func _interSlice[T comparable](a, b []T) []T {
 	var intersect []T
 
 	for _, v := range a {
@@ -50,13 +46,11 @@ func Intersect[T comparable](slices ...[]T) []T {
 	intersect := slices[0]
 
 	for _, slice := range slices[1:] {
-		intersect = intersectSlice(intersect, slice)
+		intersect = _interSlice(intersect, slice)
 	}
 
 	return intersect
 }
-
-/* Callback */
 
 func IndexBy[T comparable](arr []T, f func(T) bool) int {
 	for i, v := range arr {
@@ -114,8 +108,6 @@ func MapBy[T comparable, R comparable](arr []T, f func(T) R) []R {
 	return res
 }
 
-/* Utilities */
-
 func IncludesArr[T comparable](array []T, value T) bool {
 	for _, v := range array {
 		if v == value {
@@ -137,6 +129,24 @@ func SumArr[T int | int8 | int16 | int32 | int64 | uint | uint8 | uint16 | uint3
 	return sum
 }
 
+func ProductArr[T int | int8 | int16 | int32 | int64 | uint | uint8 | uint16 | uint32 | uint64 | float32 | float64](arr []T) T {
+	var product T = 1
+	for _, v := range arr {
+		product *= v
+	}
+	return product
+}
+
+func UniqueArr[T comparable](arr []T) []T {
+	var unique []T
+	for _, v := range arr {
+		if !IncludesArr(unique, v) {
+			unique = append(unique, v)
+		}
+	}
+	return unique
+}
+
 func Most[T comparable](arr []T) T {
 	var most = make(map[T]int)
 	max := arr[0]
@@ -146,6 +156,7 @@ func Most[T comparable](arr []T) T {
 			max = v
 		}
 	}
+
 	return max
 }
 
@@ -172,6 +183,10 @@ func Diff[T comparable](a, b []T) []T {
 }
 
 func Drop[T comparable](arr []T, n ...int) []T {
+	if len(arr) == 0 {
+		return nil
+	}
+
 	if len(n) == 0 {
 		n = append(n, 1)
 	}
@@ -196,7 +211,7 @@ func Merge[T comparable](arr ...[]T) []T {
 	return merged
 }
 
-func Compact[T interface{}](arr []T) []T {
+func Compact[T any](arr []T) []T {
 	var compact []T
 	for _, v := range arr {
 		if !IsZero(v) && !IsNil(v) && !IsEmpty(v) && !IsUndefined(v) && !IsBool(v) {
@@ -206,12 +221,14 @@ func Compact[T interface{}](arr []T) []T {
 	return compact
 }
 
-// func Sort[T interface{}](arr []T) []T {
+// func Sort[T any](arr []T) []T {
 // 	var sorted []T
 // 	for _, v := range arr {
-// 		if types.IsNumber(v) {
+// 		if IsNumber(v) {
 // 			sorted = append(sorted, v)
 // 		}
 // 	}
 // 	return sorted
 // }
+
+// flatten array

@@ -35,4 +35,3 @@ Description: Get current date in UTC format
 func DateUTC() {
 	println("UTC:", gouse.UTCDate())
 }
-

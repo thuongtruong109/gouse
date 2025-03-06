@@ -1,7 +1,7 @@
 package samples
 
 import (
-	"github.com/minio/minio-go/v7"
+	// "github.com/minio/minio-go/v7"
 	"github.com/thuongtruong109/gouse"
 )
 
@@ -63,22 +63,22 @@ Description: Connect to Minio
 Input params: (context.Context, config gouse.MinioConfig)
 */
 func ConnectMinio() {
-	ctx := gouse.CtxBg
+	// ctx := gouse.CtxBg
 
-	minioClient, err := gouse.ConnectMinio(ctx, gouse.MinioConf{
-		Endpoint:  "localhost:9000",
-		AccessKey: "minio",
-		SecretKey: "minio123",
-		UseSSL:    false,
-		Bucket:    "bucket",
-		Location:  "us-east-1",
-	})
-	if err != nil {
-		panic(err)
-	}
+	// minioClient, err := gouse.ConnectMinio(ctx, gouse.MinioConf{
+	// 	Endpoint:  "localhost:9000",
+	// 	AccessKey: "minio",
+	// 	SecretKey: "minio123",
+	// 	UseSSL:    false,
+	// 	Bucket:    "bucket",
+	// 	Location:  "us-east-1",
+	// })
+	// if err != nil {
+	// 	panic(err)
+	// }
 
-	// ... do something with minio
-	minioClient.FPutObject(ctx, "bucket", "object", "file", minio.PutObjectOptions{
-		ContentType: "application/octet-stream",
-	})
+	// // ... do something with minio
+	// minioClient.FPutObject(ctx, "bucket", "object", "file", minio.PutObjectOptions{
+	// 	ContentType: "application/octet-stream",
+	// })
 }

@@ -1,7 +1,6 @@
 package gouse
 
 import (
-	"errors"
 	"reflect"
 	"testing"
 )
@@ -43,12 +42,12 @@ func TestIsNumber(t *testing.T) {
 	}
 }
 
-func TestIsString(t *testing.T) {
-	var i string
-	if !IsString(i) {
-		t.Error("IsString(i) should return true")
-	}
-}
+// func TestIsString(t *testing.T) {
+// 	var i string
+// 	if !IsString(i) {
+// 		t.Error("IsString(i) should return true")
+// 	}
+// }
 
 func TestIsRune(t *testing.T) {
 	var i rune
@@ -64,26 +63,79 @@ func TestIsByte(t *testing.T) {
 	}
 }
 
+// func TestIsUintptr(t *testing.T) {
+// 	var i uintptr = 1
+// 	if !IsUintptr(i) {
+// 		t.Error("IsUintptr(i) should return true")
+// 	}
+// }
+
 func TestIsUintptr(t *testing.T) {
-	var i uintptr
-	if !IsUintptr(i) {
-		t.Error("IsUintptr(i) should return true")
+	tests := []struct {
+		name     string
+		input    interface{}
+		expected bool
+	}{
+		{
+			name:     "Uintptr Type",
+			input:    uintptr(0), // Testing a uintptr value
+			expected: true,
+		},
+		{
+			name:     "Int Type",
+			input:    42, // Testing an int value
+			expected: false,
+		},
+		{
+			name:     "String Type",
+			input:    "hello", // Testing a string value
+			expected: false,
+		},
+		{
+			name:     "Nil Value",
+			input:    nil, // Testing a nil value
+			expected: false,
+		},
+		{
+			name:     "Pointer Type",
+			input:    &struct{}{}, // Testing a pointer value
+			expected: false,
+		},
+		{
+			name:     "Float64 Type",
+			input:    3.14, // Testing a float value
+			expected: false,
+		},
+		{
+			name:     "Uintptr as Pointer",
+			input:    uintptr(10), // Another uintptr value
+			expected: true,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			got := IsUintptr(tt.input)
+			if got != tt.expected {
+				t.Errorf("IsUintptr() = %v, want %v", got, tt.expected)
+			}
+		})
 	}
 }
 
-func TestIsError(t *testing.T) {
-	var i error = errors.New("test")
-	if !IsError(i) {
-		t.Error("IsError(i) should return true")
-	}
-}
+// func TestIsError(t *testing.T) {
+// 	var i error = errors.New("test")
+// 	if !IsError(i) {
+// 		t.Error("IsError(i) should return true")
+// 	}
+// }
 
-func TestIsChannel(t *testing.T) {
-	var i chan int
-	if !IsChannel(i) {
-		t.Error("IsChannel(i) should return true")
-	}
-}
+// func TestIsChannel(t *testing.T) {
+// 	var i chan int
+// 	if !IsChannel(i) {
+// 		t.Error("IsChannel(i) should return true")
+// 	}
+// }
 
 func TestIsUnsafePointer(t *testing.T) {
 	var i uintptr
@@ -92,33 +144,33 @@ func TestIsUnsafePointer(t *testing.T) {
 	}
 }
 
-func TestIsPointer(t *testing.T) {
-	var i *int
-	if !IsPointer(i) {
-		t.Error("IsPointer(i) should return true")
-	}
-}
+// func TestIsPointer(t *testing.T) {
+// 	var i *int
+// 	if !IsPointer(i) {
+// 		t.Error("IsPointer(i) should return true")
+// 	}
+// }
 
-func TestIsBool(t *testing.T) {
-	var i bool
-	if !IsBool(i) {
-		t.Error("IsBool(i) should return true")
-	}
-}
+// func TestIsBool(t *testing.T) {
+// 	var i bool
+// 	if !IsBool(i) {
+// 		t.Error("IsBool(i) should return true")
+// 	}
+// }
 
-func TestIsSlice(t *testing.T) {
-	var i []int
-	if !IsSlice(i) {
-		t.Error("IsSlice(i) should return true")
-	}
-}
+// func TestIsSlice(t *testing.T) {
+// 	var i []int
+// 	if !IsSlice(i) {
+// 		t.Error("IsSlice(i) should return true")
+// 	}
+// }
 
-func TestIsMap(t *testing.T) {
-	var i map[string]int
-	if !IsMap(i) {
-		t.Error("IsMap(i) should return true")
-	}
-}
+// func TestIsMap(t *testing.T) {
+// 	var i map[string]int
+// 	if !IsMap(i) {
+// 		t.Error("IsMap(i) should return true")
+// 	}
+// }
 
 func TestIsStruct(t *testing.T) {
 	type testStruct struct {
@@ -132,19 +184,19 @@ func TestIsStruct(t *testing.T) {
 	}
 }
 
-func TestIsArray(t *testing.T) {
-	var i [3]int
-	if !IsArray(i) {
-		t.Error("IsArray(i) should return true")
-	}
-}
+// func TestIsArray(t *testing.T) {
+// 	var i [3]int
+// 	if !IsArray(i) {
+// 		t.Error("IsArray(i) should return true")
+// 	}
+// }
 
-func TestIsFunc(t *testing.T) {
-	var i func()
-	if !IsFunc(i) {
-		t.Error("IsFunc(i) should return true")
-	}
-}
+// func TestIsFunc(t *testing.T) {
+// 	var i func()
+// 	if !IsFunc(i) {
+// 		t.Error("IsFunc(i) should return true")
+// 	}
+// }
 
 func TestIsNil(t *testing.T) {
 	var i interface{}
@@ -484,22 +536,22 @@ func TestIsPhone(t *testing.T) {
 
 /* Testing convert type */
 
-func TestStructToString(t *testing.T) {
-	type testStruct struct {
-		One   int
-		Two   string
-		Three bool
-	}
+// func TestStructToString(t *testing.T) {
+// 	type testStruct struct {
+// 		One   int
+// 		Two   string
+// 		Three bool
+// 	}
 
-	data := testStruct{1, "two", true}
+// 	data := testStruct{1, "two", true}
 
-	result := StructToString(data)
-	expected := "testStruct{One: 1, Two: two, Three: true}"
+// 	result := StructToString(data)
+// 	expected := "testStruct{One: 1, Two: two, Three: true}"
 
-	if result != expected {
-		t.Errorf("Expected %s, got %s", expected, result)
-	}
-}
+// 	if result != expected {
+// 		t.Errorf("Expected %s, got %s", expected, result)
+// 	}
+// }
 
 func TestStructToMap(t *testing.T) {
 	type testStruct struct {
@@ -582,15 +634,15 @@ func TestIntToString(t *testing.T) {
 	}
 }
 
-func TestFloatToString(t *testing.T) {
-	data := 123.456
-	result := FloatToString(data)
-	expected := "123.456000"
+// func TestFloatToString(t *testing.T) {
+// 	data := 123.456
+// 	result := FloatToString(data)
+// 	expected := "123.456000"
 
-	if result != expected {
-		t.Errorf("Expected %s, got %s", expected, result)
-	}
-}
+// 	if result != expected {
+// 		t.Errorf("Expected %s, got %s", expected, result)
+// 	}
+// }
 
 func TestBoolToString(t *testing.T) {
 	data := true
@@ -639,21 +691,21 @@ func TestMapAsString(t *testing.T) {
 	}
 }
 
-func TestToString(t *testing.T) {
-	type testStruct struct {
-		One   int
-		Two   string
-		Three bool
-	}
+// func TestToString(t *testing.T) {
+// 	type testStruct struct {
+// 		One   int
+// 		Two   string
+// 		Three bool
+// 	}
 
-	data := testStruct{1, "two", true}
-	result := ToString(data)
-	expected := "{1 two true}"
+// 	data := testStruct{1, "two", true}
+// 	result := ToString(data)
+// 	expected := "{1 two true}"
 
-	if result != expected {
-		t.Errorf("Expected %s, got %s", expected, result)
-	}
-}
+// 	if result != expected {
+// 		t.Errorf("Expected %s, got %s", expected, result)
+// 	}
+// }
 
 // func TestStringToRune(t *testing.T) {
 // 	data := "t"

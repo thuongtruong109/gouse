@@ -11,9 +11,8 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 
 	"github.com/go-redis/redis/v8"
-
-	"github.com/minio/minio-go/v7"
-	"github.com/minio/minio-go/v7/pkg/credentials"
+	// "github.com/minio/minio-go/v7"
+	// "github.com/minio/minio-go/v7/pkg/credentials"
 )
 
 /* Connect to Redis */
@@ -101,40 +100,40 @@ func ConnectPostgres(dsn string) (*PgDB, error) {
 
 /* Connect to MinIO */
 
-type MinioConf struct {
-	Endpoint  string
-	AccessKey string
-	SecretKey string
-	UseSSL    bool
-	Bucket    string
-	Location  string
-}
+// type MinioConf struct {
+// 	Endpoint  string
+// 	AccessKey string
+// 	SecretKey string
+// 	UseSSL    bool
+// 	Bucket    string
+// 	Location  string
+// }
 
-func ConnectMinio(ctx context.Context, conf MinioConf) (*minio.Client, error) {
-	minioClient, errInit := minio.New(conf.Endpoint, &minio.Options{
-		Creds:  credentials.NewStaticV4(conf.AccessKey, conf.SecretKey, ""),
-		Secure: conf.UseSSL,
-	})
-	if errInit != nil {
-		log.Fatalln(errInit)
-	}
+// func ConnectMinio(ctx context.Context, conf MinioConf) (*minio.Client, error) {
+// 	minioClient, errInit := minio.New(conf.Endpoint, &minio.Options{
+// 		Creds:  credentials.NewStaticV4(conf.AccessKey, conf.SecretKey, ""),
+// 		Secure: conf.UseSSL,
+// 	})
+// 	if errInit != nil {
+// 		log.Fatalln(errInit)
+// 	}
 
-	exists, errBucketExists := minioClient.BucketExists(ctx, conf.Bucket)
-	if errBucketExists == nil && exists {
-		log.Printf("We already own %s\n", conf.Bucket)
-		return minioClient, errInit
-	} else {
-		err := minioClient.MakeBucket(ctx, conf.Bucket, minio.MakeBucketOptions{
-			Region: conf.Location,
-		})
-		if err != nil {
-			return minioClient, errInit
-		} else {
-			log.Printf("Successfully created %s\n", conf.Bucket)
-			return minioClient, errInit
-		}
-	}
-}
+// 	exists, errBucketExists := minioClient.BucketExists(ctx, conf.Bucket)
+// 	if errBucketExists == nil && exists {
+// 		log.Printf("We already own %s\n", conf.Bucket)
+// 		return minioClient, errInit
+// 	} else {
+// 		err := minioClient.MakeBucket(ctx, conf.Bucket, minio.MakeBucketOptions{
+// 			Region: conf.Location,
+// 		})
+// 		if err != nil {
+// 			return minioClient, errInit
+// 		} else {
+// 			log.Printf("Successfully created %s\n", conf.Bucket)
+// 			return minioClient, errInit
+// 		}
+// 	}
+// }
 
 /* Connect to MongoDB */
 

@@ -8,87 +8,90 @@ import (
 	"github.com/google/uuid"
 )
 
-/* Check type of variable */
-
-func IsInt(v interface{}) bool {
+func IsInt(v any) bool {
 	return strings.Contains(fmt.Sprintf("%T", v), "int")
 }
 
-func IsUnInt(v interface{}) bool {
+func IsUnInt(v any) bool {
 	return strings.Contains(fmt.Sprintf("%T", v), "uint")
 }
 
-func IsFloat(v interface{}) bool {
+func IsFloat(v any) bool {
 	return strings.Contains(fmt.Sprintf("%T", v), "float")
 }
 
-func IsComplex(v interface{}) bool {
+func IsComplex(v any) bool {
 	return strings.Contains(fmt.Sprintf("%T", v), "complex")
 }
 
-func IsNumber(v interface{}) bool {
+func IsNumber(v any) bool {
 	return IsInt(v) || IsFloat(v)
 }
 
-func IsString(v interface{}) bool {
+func IsString(v any) bool {
 	return strings.Contains(Sprintf("%T", v), "string")
 }
 
-func IsRune(v interface{}) bool {
+func IsRune(v any) bool {
 	_, ok := v.(rune)
 	return ok
 }
 
-func IsByte(v interface{}) bool {
+func IsByte(v any) bool {
 	_, ok := v.(byte)
 	return ok
 }
 
-func IsUintptr(v interface{}) bool {
-	return strings.Contains(Sprintf("%T", v), "uintptr")
+// func IsUintptr(v any) bool {
+// 	return strings.Contains(Sprintf("%T", v), "uintptr")
+// }
+
+func IsUintptr(v any) bool {
+	_, ok := v.(uintptr)
+	return ok
 }
 
-func IsError(v interface{}) bool {
+func IsError(v any) bool {
 	return strings.Contains(Sprintf("%T", v), "error")
 }
 
-func IsChannel(v interface{}) bool {
+func IsChannel(v any) bool {
 	return strings.Contains(Sprintf("%T", v), "chan")
 }
 
-func IsUnsafePointer(v interface{}) bool {
+func IsUnsafePointer(v any) bool {
 	return reflect.TypeOf(v).Kind() == reflect.Uintptr
 }
 
-func IsPointer(v interface{}) bool {
+func IsPointer(v any) bool {
 	return strings.Contains(Sprintf("%T", v), "*")
 }
 
-func IsBool(v interface{}) bool {
+func IsBool(v any) bool {
 	return strings.Contains(Sprintf("%T", v), "bool")
 }
 
-func IsSlice(v interface{}) bool {
+func IsSlice(v any) bool {
 	return strings.Contains(Sprintf("%T", v), "[]")
 }
 
-func IsMap(v interface{}) bool {
+func IsMap(v any) bool {
 	return strings.Contains(Sprintf("%T", v), "map")
 }
 
-func IsStruct(v interface{}) bool {
+func IsStruct(v any) bool {
 	return reflect.TypeOf(v).Kind() == reflect.Struct
 }
 
-func IsArray(v interface{}) bool {
+func IsArray(v any) bool {
 	return strings.Contains(Sprintf("%T", v), "[")
 }
 
-func IsFunc(v interface{}) bool {
+func IsFunc(v any) bool {
 	return strings.Contains(Sprintf("%T", v), "func")
 }
 
-func IsNil(v interface{}) bool {
+func IsNil(v any) bool {
 	return v == nil
 
 	// 	v := reflect.ValueOf(value)
@@ -99,7 +102,7 @@ func IsNil(v interface{}) bool {
 	// 	return false
 }
 
-func IsEmpty(v interface{}) bool {
+func IsEmpty(v any) bool {
 	if v == nil {
 		return true
 	}
@@ -115,24 +118,22 @@ func IsEmpty(v interface{}) bool {
 		return value == 0
 	case bool:
 		return !value
-	case []interface{}:
+	case []any:
 		return len(value) == 0
-	case map[string]interface{}:
+	case map[string]any:
 		return len(value) == 0
 	default:
 		return false
 	}
 }
 
-func IsUndefined(v interface{}) bool {
+func IsUndefined(v any) bool {
 	return v == nil || IsEmpty(v)
 }
 
-func IsZero(v interface{}) bool {
+func IsZero(v any) bool {
 	return v == nil || IsEmpty(v)
 }
-
-/* Check type of form */
 
 func IsUUID(input string) (bool, error) {
 	if input == "" {
@@ -218,15 +219,13 @@ func IsPhone(phone string) (bool, error) {
 	return true, nil
 }
 
-/* Convert type */
-
-func StructToString(data interface{}) string {
+func StructToString(data any) string {
 	v := reflect.ValueOf(data)
 	t := v.Type()
 
 	var fields []string
 
-	for i := 0; i < v.NumField(); i++ {
+	for i := range v.NumField() {
 		fieldName := t.Field(i).Name
 		fieldValue := v.Field(i).Interface()
 		fields = append(fields, Sprintf("%s: %v", fieldName, fieldValue))
@@ -244,11 +243,11 @@ func StructToString(data interface{}) string {
 	return Sprintf("%s{%s}", t.Name(), result)
 }
 
-func StructToMap(data interface{}) map[string]interface{} {
+func StructToMap(data any) map[string]any {
 	v := reflect.ValueOf(data)
 	t := v.Type()
 
-	result := make(map[string]interface{})
+	result := make(map[string]any)
 
 	for i := 0; i < v.NumField(); i++ {
 		fieldName := t.Field(i).Name
@@ -305,8 +304,8 @@ func BoolToString(data bool) string {
 	return Sprintf("%t", data)
 }
 
-func ToString(data interface{}) string {
-	return Sprintf("%v", data)
+func ToString(data any) string {
+	return fmt.Sprintf("%v", data)
 }
 
 func BytesToString(data []byte) string {
@@ -317,7 +316,6 @@ func RuneToString(data rune) string {
 	return string(data)
 }
 
-// MapAsString is not yet in example
 func MapAsString[T string | []string](data map[string]T) string {
 	var result string
 

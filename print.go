@@ -5,7 +5,7 @@ import (
 	"strconv"
 )
 
-func valueToString(value interface{}) string {
+func valueToString(value any) string {
 	switch v := value.(type) {
 	case string:
 		return v
@@ -20,7 +20,7 @@ func valueToString(value interface{}) string {
 	}
 }
 
-func Sprint(args ...interface{}) string {
+func Sprint(args ...any) string {
 	var result string
 	for i, arg := range args {
 		result += valueToString(arg)
@@ -31,11 +31,11 @@ func Sprint(args ...interface{}) string {
 	return result
 }
 
-func Sprintln(args ...interface{}) string {
+func Sprintln(args ...any) string {
 	return Sprint(args...) + "\n"
 }
 
-func Sprintf(format string, args ...interface{}) string {
+func Sprintf(format string, args ...any) string {
 	var result string
 	index := 0
 
@@ -62,7 +62,7 @@ func Sprintf(format string, args ...interface{}) string {
 			case 'f':
 				if v, ok := args[index].(float64); ok {
 					result += strconv.FormatFloat(v, 'f', 2, 64)
-				} else if v, ok := args[index].(float32); ok { // Handle float32
+				} else if v, ok := args[index].(float32); ok {
 					result += strconv.FormatFloat(float64(v), 'f', 2, 64)
 				} else {
 					result += "invalid"
@@ -86,6 +86,12 @@ func Sprintf(format string, args ...interface{}) string {
 				} else {
 					result += "invalid"
 				}
+			case 'c':
+				if v, ok := args[index].(int); ok {
+					result += string(rune(v))
+				} else {
+					result += "invalid"
+				}
 			default:
 				result += "%" + string(format[i])
 			}
@@ -97,17 +103,17 @@ func Sprintf(format string, args ...interface{}) string {
 	return result
 }
 
-func Println(args ...interface{}) {
+func Println(args ...any) {
 	result := Sprintln(args...)
 	os.Stdout.WriteString(result)
 }
 
-func Print(args ...interface{}) {
+func Print(args ...any) {
 	result := Sprint(args...)
 	os.Stdout.WriteString(result)
 }
 
-func Printf(format string, args ...interface{}) {
+func Printf(format string, args ...any) {
 	result := Sprintf(format, args...)
 	os.Stdout.WriteString(result)
 }
