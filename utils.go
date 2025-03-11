@@ -2,6 +2,7 @@ package gouse
 
 import (
 	"context"
+	"fmt"
 	"log"
 	_ "net/http/pprof"
 	"os"
@@ -27,15 +28,19 @@ func GetCtx() Ctx {
 	return CtxBg
 }
 
-/* Profile */
-
 func Profile(cpuprofile, memprofile string) {
 	if cpuprofile != "" {
 		f, err := os.Create(cpuprofile)
 		if err != nil {
 			log.Fatal("could not create CPU profile: ", err)
 		}
-		defer f.Close() // error handling omitted for example
+		defer func() {
+			err := f.Close()
+			if err != nil {
+				log.Printf("error closing CPU profile file: %v", err)
+			}
+		}()
+
 		if err := pprof.StartCPUProfile(f); err != nil {
 			log.Fatal("could not start CPU profile: ", err)
 		}
@@ -49,15 +54,20 @@ func Profile(cpuprofile, memprofile string) {
 		if err != nil {
 			log.Fatal("could not create memory profile: ", err)
 		}
-		defer f.Close()
+		defer func() {
+			err := f.Close()
+			if err != nil {
+				log.Printf("error closing memory profile file: %v", err)
+			}
+		}()
+
 		runtime.GC()
+
 		if err := pprof.WriteHeapProfile(f); err != nil {
 			log.Fatal("could not write memory profile: ", err)
 		}
 	}
 }
-
-/* Others */
 
 func DetectError(err interface{}) string {
 	switch e := err.(type) {
@@ -66,6 +76,6 @@ func DetectError(err interface{}) string {
 	case string:
 		return e
 	default:
-		return Sprintf("%v", err)
+		return fmt.Sprintf("%v", err)
 	}
 }

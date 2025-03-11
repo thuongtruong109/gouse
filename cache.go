@@ -8,8 +8,6 @@ import (
 	"github.com/patrickmn/go-cache"
 )
 
-/* Local cache */
-
 type ILocalCache struct {
 	Set  map[string]string
 	Lock sync.RWMutex
@@ -54,8 +52,6 @@ func (c *ILocalCache) AllLocalCache() map[string]string {
 	defer c.Lock.RUnlock()
 	return c.Set
 }
-
-/* temp cache */
 
 type ITmpCache struct {
 	Expires time.Duration

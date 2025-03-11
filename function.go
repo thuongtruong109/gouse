@@ -8,7 +8,7 @@ import (
 
 /* Lock */
 
-func lockHandler(callback interface{}, lock, unlock func()) interface{} {
+func _lockHandler(callback any, lock, unlock func()) any {
 	callbackType := reflect.TypeOf(callback)
 	if callbackType.Kind() != reflect.Func {
 		panic("callback must be a function")
@@ -21,17 +21,15 @@ func lockHandler(callback interface{}, lock, unlock func()) interface{} {
 	}).Interface()
 }
 
-func LockFunc(callback interface{}) interface{} {
+func LockFunc(callback any) any {
 	var mutex sync.Mutex
-	return lockHandler(callback, mutex.Lock, mutex.Unlock)
+	return _lockHandler(callback, mutex.Lock, mutex.Unlock)
 }
 
-func RWLockFunc(callback interface{}) interface{} {
+func RWLockFunc(callback any) any {
 	var rwMutex sync.RWMutex
-	return lockHandler(callback, rwMutex.RLock, rwMutex.RUnlock)
+	return _lockHandler(callback, rwMutex.RLock, rwMutex.RUnlock)
 }
-
-/* Defer wrapper function */
 
 func DeferWrapper(mainFunc func() error, cleanupFunc func()) error {
 	defer func() {
@@ -48,13 +46,12 @@ func DeferWrapper(mainFunc func() error, cleanupFunc func()) error {
 }
 
 /* Delay */
-
 type DelayedResult[T any] struct {
 	Value     T
 	HasReturn bool
 }
 
-func delay[T any](f func() T, timeout int, hasReturn bool) DelayedResult[T] {
+func _delay[T any](f func() T, timeout int, hasReturn bool) DelayedResult[T] {
 	resultChan := make(chan T, 1)
 
 	go func() {
@@ -73,17 +70,15 @@ func delay[T any](f func() T, timeout int, hasReturn bool) DelayedResult[T] {
 }
 
 func DelayF[T any](f func() T, timeout int) DelayedResult[T] {
-	return delay(f, timeout, true)
+	return _delay(f, timeout, true)
 }
 
 func DelayFunc(f func(), timeout int) DelayedResult[struct{}] {
-	return delay(func() struct{} {
+	return _delay(func() struct{} {
 		f()
 		return struct{}{}
 	}, timeout, false)
 }
-
-/* Utilities */
 
 func ParallelizeFunc(functions ...func()) {
 	var waitGroup sync.WaitGroup
@@ -133,7 +128,7 @@ func RetryFunc(fn func() error, attempts int, sleep int) (err error) {
 }
 
 func RemainFunc(fn func(), attempts int) {
-	for i := 0; i < attempts; i++ {
+	for range attempts {
 		fn()
 	}
 }
