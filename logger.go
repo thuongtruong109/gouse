@@ -22,10 +22,8 @@ func WriteLogDefault(logID, logMessage, output string) {
 		}
 	}()
 
-	// Create a new logger that writes to the log file
 	logger := log.New(file, logID, log.Ldate|log.Ltime|log.Lshortfile)
 
-	// Write some log messages
 	logger.Println(logMessage)
 }
 

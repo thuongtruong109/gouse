@@ -1,6 +1,6 @@
 package gouse
 
-func Clamp(value int, min int, max int) int {
+func Clamp(value, min, max int) int {
 	if value < min {
 		return min
 	} else if value > max {
@@ -10,6 +10,18 @@ func Clamp(value int, min int, max int) int {
 	return value
 }
 
-func InRange(value int, min int, max int) bool {
+func InRange(value, min, max int) bool {
 	return value >= min && value <= max
+}
+
+func Sort[T int | float64](nums []T) []T {
+	for i := range nums {
+		for j := i + 1; j < len(nums); j++ {
+			if nums[i] > nums[j] {
+				nums[i], nums[j] = nums[j], nums[i]
+			}
+		}
+	}
+
+	return nums
 }

@@ -26,7 +26,7 @@ func RandID() string {
 func RandStr(n int) string {
 	var result string
 
-	for i := 0; i < n; i++ {
+	for range n {
 		result += string(CHAIN_STR[RandNum(0, len(CHAIN_STR)-1)])
 	}
 
@@ -36,7 +36,7 @@ func RandStr(n int) string {
 func RandDigit(n int) string {
 	var result string
 
-	for i := 0; i < n; i++ {
+	for range n {
 		result += string(CHAIN_NUM[RandNum(0, len(CHAIN_NUM)-1)])
 	}
 

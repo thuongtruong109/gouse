@@ -83,14 +83,14 @@ func EncryptPassword() {
 }
 ```
 
-## 6. Decrypt password
+## 6. Compare password
 
-Description: Decrypt password string and compare with the original password<br>Input params: (data string, password string)<br>
+Description: Compare string with the original password<br>Input params: (data string, password string)<br>
 
 ```go
-func DecryptPassword() {
+func ComparePassword() {
 	data := "$2a$10$bcA002IOHi5SYHNH4lmIbuHjHplGl7TQZ.MznNrL1N70vAi7ovTa2"
-	err := gouse.DecryptPassword(data, "This is a sample data")
+	err := gouse.ComparePassword(data, "This is a sample data")
 	if err != nil {
 		gouse.Println("Error decrypting data:", err)
 		return

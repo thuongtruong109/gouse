@@ -2,11 +2,11 @@ package gouse
 
 import "reflect"
 
-func GetTagName(structInstance interface{}) []string {
+func GetTagName(structInstance any) []string {
 	structType := reflect.TypeOf(structInstance)
 	var tags []string
 
-	for i := 0; i < structType.NumField(); i++ {
+	for i := range structType.NumField() {
 		f := structType.Field(i)
 		tags = append(tags, f.Tag.Get("json"))
 	}

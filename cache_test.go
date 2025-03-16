@@ -5,8 +5,6 @@ import (
 	"time"
 )
 
-/* Testing Local Cache */
-
 func TestGetLocal(t *testing.T) {
 	c := NewLocalCache()
 	c.SetLocalCache("test", "test")
@@ -48,8 +46,6 @@ func TestAllLocalCache(t *testing.T) {
 		t.Error("AllLocal error")
 	}
 }
-
-/* Testing Tmp Cache */
 
 func TestGetTmpCache(t *testing.T) {
 	tmp := NewTmpCache(1 * time.Hour)

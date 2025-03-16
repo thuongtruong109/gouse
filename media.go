@@ -11,11 +11,9 @@ import (
 	"os"
 )
 
-/* Canvas */
-
 func CreateCanvas(size int, hexColor string) (*image.RGBA, error) {
 	width, height := size, size
-	bgColor, err := HexToRGBA(hexColor)
+	bgColor, err := Hex2Rgba(hexColor)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -25,9 +23,7 @@ func CreateCanvas(size int, hexColor string) (*image.RGBA, error) {
 	return background, err
 }
 
-/* Convert */
-
-func HexToRGBA(hex string) (color.RGBA, error) {
+func Hex2Rgba(hex string) (color.RGBA, error) {
 	var (
 		rgba             color.RGBA
 		err              error
@@ -68,7 +64,7 @@ func formatError(message string, err error) error {
 	return fmt.Errorf("%s: %v", message, err)
 }
 
-func PNGToJPG(input, output string) error {
+func Png2Jpg(input, output string) error {
 	pngFile, err := os.Open(input)
 	if err != nil {
 		return formatError("Error opening PNG file", err)

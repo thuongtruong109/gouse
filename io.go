@@ -10,8 +10,6 @@ import (
 	"path/filepath"
 )
 
-/* File */
-
 func IsExistFile(path string) (bool, error) {
 	_, err := os.Stat(path)
 	if os.IsNotExist(err) {
@@ -245,8 +243,6 @@ func WriteFileObj[T any](path string, data T) error {
 	return nil
 }
 
-/* Directory */
-
 func IsExistDir(dir string) (bool, error) {
 	_, err := os.Stat(dir)
 	if err == nil {
@@ -335,8 +331,6 @@ func CurrentDir() (string, error) {
 	return dir, nil
 }
 
-/* Path */
-
 func CreatePath(relativePath string) error {
 	absolutePath, err := filepath.Abs(relativePath)
 	if err != nil {
@@ -385,8 +379,6 @@ func WritePath(relativePath string, content []byte) error {
 
 	return nil
 }
-
-/* Compress */
 
 func Zip(zipFileName string, files []string) error {
 	zipFile, err := os.Create(zipFileName)

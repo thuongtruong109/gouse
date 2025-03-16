@@ -23,6 +23,40 @@ type Developer struct {
 	Title   string
 }
 
+func TestGetTagName(t *testing.T) {
+	type Person struct {
+		Name    string `json:"name"`
+		Age     int    `json:"age"`
+		Address string `json:"address"`
+	}
+
+	expectedTags := []string{"name", "age", "address"}
+
+	person := Person{
+		Name:    "John",
+		Age:     30,
+		Address: "123 Main St",
+	}
+
+	tags := GetTagName(person)
+
+	if !equal(tags, expectedTags) {
+		t.Errorf("GetTagName() = %v, want %v", tags, expectedTags)
+	}
+}
+
+func equal(a, b []string) bool {
+	if len(a) != len(b) {
+		return false
+	}
+	for i := range a {
+		if a[i] != b[i] {
+			return false
+		}
+	}
+	return true
+}
+
 func TestMergeStruct(t *testing.T) {
 	tests := []struct {
 		name   string
@@ -34,7 +68,6 @@ func TestMergeStruct(t *testing.T) {
 			input:  []interface{}{Person{Name: "John", Age: 25, Address: "123 Main St"}, Job{Title: "Developer"}},
 			output: map[string]interface{}{"Name": "John", "Age": 25, "Address": "123 Main St", "Title": "Developer"},
 		},
-		// Add more test cases as needed
 	}
 
 	for _, test := range tests {

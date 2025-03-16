@@ -15,8 +15,6 @@ import (
 	"golang.org/x/crypto/pbkdf2"
 )
 
-/* Data */
-
 func EncodeData(input []byte) ([]byte, error) {
 	encodedData := base64.StdEncoding.EncodeToString(input)
 	return []byte(encodedData), nil
@@ -29,8 +27,6 @@ func DecodeData(input []byte) ([]byte, error) {
 	}
 	return decodedData, nil
 }
-
-/* File */
 
 func EncryptFile(source string, password []byte) {
 	if _, err := os.Stat(source); os.IsNotExist(err) {
@@ -121,8 +117,6 @@ func DecryptFile(source string, password []byte) {
 	}
 }
 
-/* Password */
-
 func EncryptPassword(password string) (string, error) {
 	hashedPassword, err := bcrypt.GenerateFromPassword([]byte(password), bcrypt.DefaultCost)
 	if err != nil {
@@ -132,7 +126,7 @@ func EncryptPassword(password string) (string, error) {
 	return string(hashedPassword), nil
 }
 
-func DecryptPassword(password, receivedPassword string) error {
+func ComparePassword(password, receivedPassword string) error {
 	if err := bcrypt.CompareHashAndPassword([]byte(password), []byte(receivedPassword)); err != nil {
 		return ErrorComparePassword
 	}

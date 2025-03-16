@@ -129,7 +129,7 @@ func cryptoSample() {
 	samples.EncodeData()
 	samples.DecodeData()
 	samples.EncryptPassword()
-	samples.DecryptPassword()
+	samples.ComparePassword()
 	samples.EncryptFile()
 	samples.DecryptFile()
 }

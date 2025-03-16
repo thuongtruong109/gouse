@@ -1,8 +1,10 @@
 package gouse
 
-import "math"
+import (
+	"math"
 
-/* Formulas */
+	"golang.org/x/exp/constraints"
+)
 
 func Log(number, base int) int {
 	return int(math.Log(float64(number)) / math.Log(float64(base)))
@@ -28,12 +30,8 @@ func Log10F(number float64) float64 {
 	return LogF(number, 10)
 }
 
-func Pytago(side1, side2 int) float64 {
-	return SqrtF(float64(Pow(side1, 2) + Pow(side2, 2)))
-}
-
-func PytagoF(side1, side2 float64) float64 {
-	return SqrtF(float64(PowF(side1, 2) + PowF(side2, 2)))
+func Pytago[T int | float64](side1, side2 T) T {
+	return T(math.Sqrt(float64(side1*side1 + side2*side2)))
 }
 
 func Sin(angle int) float64 {
@@ -61,18 +59,16 @@ func TanF(angle float64) float64 {
 }
 
 func Speed(distance, time float64) float64 {
-	return DivideF(distance, time)
+	return Div(distance, time)
 }
 
 func Distance(speed, time float64) float64 {
-	return MultiF(speed, time)
+	return Multi(speed, time)
 }
 
 func Time(distance, speed float64) float64 {
-	return DivideF(distance, speed)
+	return Div(distance, speed)
 }
-
-/* Functions */
 
 func Abs(num int) int {
 	if num < 0 {
@@ -117,8 +113,8 @@ func Round(num float64) int {
 	return int(num) + 1
 }
 
-func Max(nums ...int) int {
-	var max int
+func Max[T int | float64](nums ...T) T {
+	var max T
 	for _, v := range nums {
 		if v > max {
 			max = v
@@ -127,17 +123,7 @@ func Max(nums ...int) int {
 	return max
 }
 
-func MaxF(nums ...float64) float64 {
-	var max float64
-	for _, v := range nums {
-		if v > max {
-			max = v
-		}
-	}
-	return max
-}
-
-func Min(nums ...int) int {
+func Min[T int | float64](nums ...T) T {
 	min := nums[0]
 
 	for _, v := range nums {
@@ -148,107 +134,63 @@ func Min(nums ...int) int {
 	return min
 }
 
-func MinF(nums ...float64) float64 {
-	min := nums[0]
-
-	for _, v := range nums {
-		if v < min {
-			min = v
-		}
-	}
-	return min
-}
-
-func Sum(nums ...int) int {
-	var sum int
+func Sum[T int | float64](nums ...T) T {
+	var sum T
 	for _, v := range nums {
 		sum += v
 	}
 	return sum
 }
 
-func SumF(nums ...float64) float64 {
-	var sum float64
-	for _, v := range nums {
-		sum += v
-	}
-	return sum
-}
-
-func Add(num1, num2 int) int {
+func Add[T int | float64](num1, num2 T) T {
 	return num1 + num2
 }
 
-func AddF(num1, num2 float64) float64 {
-	return num1 + num2
-}
-
-func Sub(num1, num2 int) int {
+func Sub[T int | float64](num1, num2 T) T {
 	return num1 - num2
 }
 
-func SubF(num1, num2 float64) float64 {
-	return num1 - num2
-}
-
-func Multi(nums ...int) int {
-	product := 1
+func Multi[T int | float64](nums ...T) T {
+	var product T = 1
 	for _, v := range nums {
 		product *= v
 	}
 	return product
 }
 
-func MultiF(nums ...float64) float64 {
-	product := 1.0
-	for _, v := range nums {
-		product *= v
-	}
-	return product
-}
-
-func Divide(num1, num2 int) int {
+func Div[T int | float64](num1, num2 T) T {
 	return num1 / num2
 }
 
-func DivideF(num1, num2 float64) float64 {
-	return num1 / num2
-}
-
-func Remainder(num1, num2 int) int {
+func Mod(num1, num2 int) int {
 	return num1 % num2
 }
 
-func Mean(nums ...int) int {
-	return Sum(nums...) / len(nums)
+func ModF(num1, num2 float64) float64 {
+	return math.Mod(num1, num2)
 }
 
-func MeanF(nums ...float64) float64 {
-	return SumF(nums...) / float64(len(nums))
-}
-
-func Pow(base, exp int) int {
-	result := 1
-	for i := 0; i < exp; i++ {
-		result *= base
+func Pow[T int | float64](base, exp T) T {
+	var result T = 1
+	switch exp := any(exp).(type) {
+	case int:
+		for i := 0; i < exp; i++ {
+			result *= base
+		}
+	case float64:
+		for i := 0.0; i < exp; i++ {
+			result *= base
+		}
 	}
 	return result
 }
 
-func PowF(base, exp float64) float64 {
-	result := 1.0
-	for i := 0; i < int(exp); i++ {
-		result *= base
-	}
-	return result
-}
-
-func Pow2(base int) int {
+func Pow2[T int | float64](base T) T {
 	return Multi(base, base)
 }
 
 func Pow2F(base float64) float64 {
-	return MultiF(base, base)
+	return Multi(base, base)
 }
 
 func Pow3(base int) int {
@@ -256,7 +198,7 @@ func Pow3(base int) int {
 }
 
 func Pow3F(base float64) float64 {
-	return MultiF(base, base, base)
+	return Multi(base, base, base)
 }
 
 func Factorial(num int) int {
@@ -266,126 +208,129 @@ func Factorial(num int) int {
 	return num * Factorial(num-1)
 }
 
-func Root(number, n int) int {
-	return int(math.Pow(float64(number), 1.0/float64(n)))
+func Root[T int | float64](number, n T) T {
+	var result T
+	switch num := any(number).(type) {
+	case int:
+		result = T(int(math.Pow(float64(num), 1.0/float64(n))))
+	case float64:
+		result = T(math.Pow(num, 1.0/float64(n)))
+	}
+	return result
 }
 
-func RootF(number, n float64) float64 {
-	return math.Pow(number, 1.0/n)
+func Sqrt[T int | float64](number T) T {
+	var result T
+	switch num := any(number).(type) {
+	case int:
+		result = T(int(math.Sqrt(float64(num))))
+	case float64:
+		result = T(math.Sqrt(num))
+	}
+	return result
 }
 
-func Sqrt(number int) int {
-	return int(math.Sqrt(float64(number)))
-}
-
-func SqrtF(number float64) float64 {
-	return math.Sqrt(number)
-}
-
-func Cbrt(number int) int {
+func Cbrt[T int | float64](number T) T {
 	return Root(number, 3)
 }
 
-func CbrtF(number float64) float64 {
-	return RootF(number, 3)
+func Mean[T int | float64](nums ...T) T {
+	return Sum(nums...) / T(len(nums))
 }
 
-/* Geometry */
+func Median[T int | float64](nums ...T) T {
+	Sort(nums)
+	n := len(nums)
 
-func AreaRect(length, width int) int {
+	if n%2 == 0 {
+		return (nums[n/2-1] + nums[n/2]) / 2
+	}
+
+	return nums[n/2]
+}
+
+func Mode[T int | float64](nums ...T) T {
+	if len(nums) == 0 {
+		var zero T
+		return zero
+	}
+
+	counts := make(map[T]int)
+	for _, v := range nums {
+		counts[v]++
+	}
+
+	var mode T
+	maxCount := 0
+
+	for k, v := range counts {
+		if v > maxCount {
+			mode = k
+			maxCount = v
+		}
+	}
+
+	return mode
+}
+
+func AreaRect[T int | float64](length, width T) T {
 	return Multi(length, width)
 }
 
-func AreaRectF(length, width float64) float64 {
-	return MultiF(length, width)
-}
-
-func PeriRect(length, width int) int {
+func PeriRect[T int | float64](length, width T) T {
 	return Multi(2, Add(length, width))
 }
 
-func PeriRectF(length, width float64) float64 {
-	return MultiF(2, AddF(length, width))
-}
-
-func DiagRect(length, width int) float64 {
-	return Pytago(length, width)
-}
-
-func DiagRectF(length, width float64) float64 {
-	return PytagoF(length, width)
-}
-
-func VolRect(length, width, height int) int {
+func VolRect[T int | float64](length, width, height T) T {
 	return Multi(length, width, height)
 }
 
-func VolRectF(length, width, height float64) float64 {
-	return MultiF(length, width, height)
+func DiagRect[T int | float64](length, width T) T {
+	return Pytago(length, width)
 }
 
-func AreaCircle(radius int) float64 {
+func AreaCir[T int | float64](radius T) float64 {
 	return math.Pi * float64(Pow2(radius))
 }
 
-func AreaCircleF(radius float64) float64 {
-	return math.Pi * PowF(radius, 2)
-}
-
-func PeriCircle(radius int) float64 {
+func PeriCir[T int | float64](radius T) float64 {
 	return 2 * math.Pi * float64(radius)
 }
 
-func PeriCircleF(radius float64) float64 {
-	return 2 * math.Pi * radius
+func AreaTri[T int | float64](base, height T) T {
+	return Div(Multi(base, height), 2)
 }
 
-func AreaTriangle(base, height int) int {
-	return Divide(Multi(base, height), 2)
-}
-
-func AreaTriangleF(base, height float64) float64 {
-	return DivideF(MultiF(base, height), 2)
-}
-
-func PeriTriangle(side1, side2, side3 int) int {
+func PeriTri[T int | float64](side1, side2, side3 T) T {
 	return Sum(side1, side2, side3)
 }
 
-func PeriTriangleF(side1, side2, side3 float64) float64 {
-	return SumF(side1, side2, side3)
-}
-
-func AreaSquare(side int) int {
+func AreaSquare[T int | float64](side T) T {
 	return Pow2(side)
 }
 
-func AreaSquareF(side float64) float64 {
-	return PowF(side, 2)
-}
-
-func PeriSquare(side int) int {
+func PeriSquare[T int | float64](side T) T {
 	return Multi(side, 4)
 }
 
-func PeriSquareF(side float64) float64 {
-	return MultiF(side, 4)
+func DiagSquare[T constraints.Integer | constraints.Float](side T) float64 {
+	return math.Sqrt(float64(side)*float64(side) + float64(side)*float64(side))
 }
 
-func AreaCube(side int) int {
+func AreaCube[T int | float64](side T) T {
 	return Multi(Pow2(side), 6)
 }
 
-func AreaCubeF(side float64) float64 {
-	return MultiF(PowF(side, 2), 6)
-}
-
-func PeriCube(side int) int {
+func PeriCube[T int | float64](side T) T {
 	return Multi(side, 12)
 }
 
-func PeriCubeF(side float64) float64 {
-	return MultiF(side, 12)
+func DiagCube(side int) float64 {
+	return Sqrt(float64(Pow3(side) + Pow3(side)))
+}
+
+func DiagCubeF(side float64) float64 {
+	return Sqrt(Pow(side, 3) + Pow(side, 3))
 }
 
 func VolCube(side int) int {
@@ -393,7 +338,7 @@ func VolCube(side int) int {
 }
 
 func VolCubeF(side float64) float64 {
-	return PowF(side, 3)
+	return Pow(side, 3)
 }
 
 func AreaSphere(radius int) float64 {
@@ -401,7 +346,7 @@ func AreaSphere(radius int) float64 {
 }
 
 func AreaSphereF(radius float64) float64 {
-	return 4 * math.Pi * PowF(radius, 2)
+	return 4 * math.Pi * Pow(radius, 2)
 }
 
 func VolSphere(radius int) float64 {
@@ -409,78 +354,44 @@ func VolSphere(radius int) float64 {
 }
 
 func VolSphereF(radius float64) float64 {
-	return (4 / 3) * math.Pi * PowF(radius, 2)
+	return (4 / 3) * math.Pi * Pow2(radius)
 }
 
-func AreaCylinder(radius, height int) float64 {
-	return (2 * math.Pi * float64(radius)) * float64(height)
+func AreaCyl[T constraints.Integer | constraints.Float](radius, height T) float64 {
+	return 2 * math.Pi * float64(radius) * float64(height)
 }
 
-func AreaCylinderF(radius, height float64) float64 {
-	return (2 * math.Pi * radius) * height
+func VolCyl[T constraints.Integer | constraints.Float](radius, height T) float64 {
+	return math.Pi * Pow2(float64(radius)) * float64(height)
 }
 
-func VolCylinder(radius, height int) float64 {
-	return math.Pi * float64(Pow2(radius)) * float64(height)
+func AreaCone[T constraints.Integer | constraints.Float](radius, height T) float64 {
+	return math.Pi * float64(radius) * (float64(radius) + math.Sqrt(float64((radius*radius)+(height*height))))
 }
 
-func VolCylinderF(radius, height float64) float64 {
-	return math.Pi * PowF(radius, 2) * height
+func VolCone[T constraints.Integer | constraints.Float](radius, height T) float64 {
+	return (1.0 / 3.0) * math.Pi * Pow2(float64(radius)) * float64(height)
 }
 
-func AreaCone(radius, height int) float64 {
-	return math.Pi * float64(radius) * (float64(radius) + math.Sqrt(float64(Pow2(height)+Pow2(radius))))
+func AreaTrapezoid[T constraints.Integer | constraints.Float](base1, base2, height T) float64 {
+	return 0.5 * float64(base1+base2) * float64(height)
 }
 
-func AreaConeF(radius, height float64) float64 {
-	return math.Pi * radius * (radius + math.Sqrt(PowF(height, 2)+PowF(radius, 2)))
-}
-
-func VolCone(radius, height int) float64 {
-	return DivideF(1, 3) * math.Pi * float64(Pow2(radius)) * float64(height)
-}
-
-func VolConeF(radius, height float64) float64 {
-	return DivideF(1, 3) * math.Pi * PowF(radius, 2) * height
-}
-
-func AreaTrapezoid(base1, base2, height int) float64 {
-	return 0.5 * float64(Add(base1, base2)) * float64(height)
-}
-
-func AreaTrapezoidF(base1, base2, height float64) float64 {
-	return 0.5 * (base1 + base2) * height
-}
-
-func AreaParallelogram(base, height int) int {
+func AreaParallelogram[T int | float64](base, height T) T {
 	return Multi(base, height)
 }
 
-func AreaParallelogramF(base, height float64) float64 {
-	return MultiF(base, height)
+func AreaRhombus[T int | float64](diag1, diag2 T) T {
+	return Div(Multi(diag1, diag2), 2)
 }
 
-func AreaRhombus(diag1, diag2 int) int {
-	return Divide(Multi(diag1, diag2), 2)
-}
-
-func AreaRhombusF(diag1, diag2 float64) float64 {
-	return DivideF(MultiF(diag1, diag2), 2)
-}
-
-func AreaEllipse(major, minor int) float64 {
+func AreaEllipse[T constraints.Integer | constraints.Float](major, minor T) float64 {
 	return math.Pi * float64(major) * float64(minor)
 }
 
-func AreaEllipseF(major, minor float64) float64 {
-	return math.Pi * major * minor
-}
-
 func AreaPolygon(lenSide float64, numSide int) float64 {
-	return DivideF(MultiF(0.25, float64(numSide), Pow2F(lenSide)), AbsF(TanF(DivideF(180, float64(numSide)))))
+	return Div(Multi(0.25, float64(numSide), Pow2F(lenSide)), AbsF(TanF(Div(180, float64(numSide)))))
 }
-
-/* Checks */
 
 func IsPrime(num int) bool {
 	if num <= 1 {
@@ -504,14 +415,12 @@ func IsOdd(num int) bool {
 
 func IsPerfectSquare(num int) bool {
 	for i := 1; i <= num; i++ {
-		if i*i == num {
+		if Pow2(i) == num {
 			return true
 		}
 	}
 	return false
 }
-
-/* Utilities */
 
 // func SumBy(nums []int, fn func(int) int) int {
 // 	var sum int
