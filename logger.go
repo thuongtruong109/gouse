@@ -33,7 +33,7 @@ type ILog struct {
 	Output  string
 }
 
-func WriteLog(prefix, msg, filePath string, err ...interface{}) {
+func WriteLog(prefix, msg, filePath string, err ...any) {
 	logParam := &ILog{
 		Prefix:  prefix,
 		Message: "",
@@ -51,7 +51,7 @@ func WriteLog(prefix, msg, filePath string, err ...interface{}) {
 	WriteLogDefault(logParam.Output, Sprintf("%s %s", logParam.Prefix, logParam.Message), logParam.Output)
 }
 
-func WriteErrorLog(msg string, err interface{}) {
+func WriteErrorLog(msg string, err any) {
 	WriteLog(ERROR_LOG_PREFIX, msg, ERROR_LOG_PATH, err)
 }
 

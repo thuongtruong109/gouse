@@ -7,7 +7,7 @@ import "html"
 func Capitalize(sentence string) string {
 	sentenceBytes := []byte(sentence)
 
-	for i := 0; i < len(sentenceBytes); i++ {
+	for i := range sentenceBytes {
 		if (i == 0 || sentenceBytes[i-1] == ' ') && IsLetter(sentenceBytes[i]) {
 			sentenceBytes[i] = Upper(sentenceBytes[i])
 		}
@@ -29,7 +29,6 @@ func CamelCase(s string) string {
 				result += string(Lower(char))
 			}
 		} else {
-			// If the character is not a letter or digit, set the flag to capitalize the next valid character.
 			upperNext = true
 		}
 	}
@@ -233,7 +232,7 @@ func UpperFirst(s string) string {
 func Repeat(s string, count int) string {
 	var result string
 
-	for i := 0; i < count; i++ {
+	for range count {
 		result += s
 	}
 

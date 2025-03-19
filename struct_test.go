@@ -40,33 +40,21 @@ func TestGetTagName(t *testing.T) {
 
 	tags := GetTagName(person)
 
-	if !equal(tags, expectedTags) {
+	if !Equal(tags, expectedTags) {
 		t.Errorf("GetTagName() = %v, want %v", tags, expectedTags)
 	}
-}
-
-func equal(a, b []string) bool {
-	if len(a) != len(b) {
-		return false
-	}
-	for i := range a {
-		if a[i] != b[i] {
-			return false
-		}
-	}
-	return true
 }
 
 func TestMergeStruct(t *testing.T) {
 	tests := []struct {
 		name   string
-		input  []interface{}
-		output interface{}
+		input  []any
+		output any
 	}{
 		{
 			name:   "Merge Person and Job",
-			input:  []interface{}{Person{Name: "John", Age: 25, Address: "123 Main St"}, Job{Title: "Developer"}},
-			output: map[string]interface{}{"Name": "John", "Age": 25, "Address": "123 Main St", "Title": "Developer"},
+			input:  []any{Person{Name: "John", Age: 25, Address: "123 Main St"}, Job{Title: "Developer"}},
+			output: map[string]any{"Name": "John", "Age": 25, "Address": "123 Main St", "Title": "Developer"},
 		},
 	}
 
@@ -74,7 +62,7 @@ func TestMergeStruct(t *testing.T) {
 		t.Run(test.name, func(t *testing.T) {
 			result := MergeStruct(test.input...)
 			fmt.Println(result)
-			fmt.Println(result.(map[string]interface{})["Name"])
+			fmt.Println(result.(map[string]any)["Name"])
 			if !reflect.DeepEqual(result, test.output) {
 				t.Errorf("Expected %+v, but got %+v", test.output, result)
 			}
@@ -85,9 +73,9 @@ func TestMergeStruct(t *testing.T) {
 func TestRemoveStruct(t *testing.T) {
 	tests := []struct {
 		name           string
-		inputStruct    interface{}
+		inputStruct    any
 		fieldsToRemove []string
-		expectedResult interface{}
+		expectedResult any
 	}{
 		{
 			name:           "Remove Address field",
@@ -104,7 +92,6 @@ func TestRemoveStruct(t *testing.T) {
 			fieldsToRemove: []string{"Age", "Address"},
 			expectedResult: struct{ Name string }{Name: "Jane"},
 		},
-		// Add more test cases as needed
 	}
 
 	for _, test := range tests {
@@ -122,36 +109,34 @@ func TestRemoveStruct(t *testing.T) {
 func TestAddStruct(t *testing.T) {
 	tests := []struct {
 		name           string
-		inputStruct    interface{}
-		newFields      map[string]interface{}
-		expectedResult interface{}
+		inputStruct    any
+		newFields      map[string]any
+		expectedResult any
 	}{
 		{
 			name:           "Add Email field",
 			inputStruct:    Person{Name: "John", Age: 25, Address: "123 Main St"},
-			newFields:      map[string]interface{}{"Email": "john@example.com"},
-			expectedResult: map[string]interface{}{"Name": "John", "Age": 25, "Address": "123 Main St", "Email": "john@example.com"},
+			newFields:      map[string]any{"Email": "john@example.com"},
+			expectedResult: map[string]any{"Name": "John", "Age": 25, "Address": "123 Main St", "Email": "john@example.com"},
 		},
 		{
 			name:           "Add multiple fields",
 			inputStruct:    Person{Name: "Jane", Age: 30, Address: "456 Side St"},
-			newFields:      map[string]interface{}{"Email": "jane@example.com", "Phone": "555-1234"},
-			expectedResult: map[string]interface{}{"Name": "Jane", "Age": 30, "Address": "456 Side St", "Email": "jane@example.com", "Phone": "555-1234"},
+			newFields:      map[string]any{"Email": "jane@example.com", "Phone": "555-1234"},
+			expectedResult: map[string]any{"Name": "Jane", "Age": 30, "Address": "456 Side St", "Email": "jane@example.com", "Phone": "555-1234"},
 		},
-		// Add more test cases as needed
 	}
 
 	for _, test := range tests {
 		t.Run(test.name, func(t *testing.T) {
 			result := AddStruct(test.inputStruct, test.newFields)
 
-			// Convert result and expected result to maps for comparison
-			resultMap := make(map[string]interface{})
+			resultMap := make(map[string]any)
 			for _, field := range reflect.VisibleFields(reflect.TypeOf(result)) {
 				resultMap[field.Name] = reflect.ValueOf(result).FieldByName(field.Name).Interface()
 			}
 
-			expectedResultMap := test.expectedResult.(map[string]interface{})
+			expectedResultMap := test.expectedResult.(map[string]any)
 
 			if !reflect.DeepEqual(resultMap, expectedResultMap) {
 				t.Errorf("Expected %+v, but got %+v", expectedResultMap, resultMap)
@@ -163,10 +148,10 @@ func TestAddStruct(t *testing.T) {
 func TestSetStruct(t *testing.T) {
 	tests := []struct {
 		name           string
-		inputStruct    interface{}
+		inputStruct    any
 		fieldName      string
-		value          interface{}
-		expectedResult interface{}
+		value          any
+		expectedResult any
 	}{
 		{
 			name:           "Set Name field",
@@ -182,7 +167,6 @@ func TestSetStruct(t *testing.T) {
 			value:          35,
 			expectedResult: &Person{Name: "Bob", Age: 35, Address: "456 Side St"},
 		},
-		// Add more test cases as needed
 	}
 
 	for _, test := range tests {
@@ -200,9 +184,9 @@ func TestSetStruct(t *testing.T) {
 func TestGetStruct(t *testing.T) {
 	tests := []struct {
 		name           string
-		inputStruct    interface{}
+		inputStruct    any
 		fieldName      string
-		expectedResult interface{}
+		expectedResult any
 	}{
 		{
 			name:           "Get Name field",
@@ -216,7 +200,6 @@ func TestGetStruct(t *testing.T) {
 			fieldName:      "Age",
 			expectedResult: 30,
 		},
-		// Add more test cases as needed
 	}
 
 	for _, test := range tests {
@@ -233,8 +216,8 @@ func TestGetStruct(t *testing.T) {
 func TestCloneStruct(t *testing.T) {
 	tests := []struct {
 		name           string
-		inputStruct    interface{}
-		expectedResult interface{}
+		inputStruct    any
+		expectedResult any
 	}{
 		{
 			name:           "Clone Person struct",
@@ -246,7 +229,6 @@ func TestCloneStruct(t *testing.T) {
 			inputStruct:    Person{Name: "Alice", Age: 30, Address: "456 Side St"},
 			expectedResult: Person{Name: "Alice", Age: 30, Address: "456 Side St"},
 		},
-		// Add more test cases as needed
 	}
 
 	for _, test := range tests {
@@ -264,7 +246,7 @@ func TestCloneStruct(t *testing.T) {
 func TestHasInStruct(t *testing.T) {
 	tests := []struct {
 		name           string
-		inputStruct    interface{}
+		inputStruct    any
 		fieldName      string
 		expectedResult bool
 	}{
@@ -280,7 +262,6 @@ func TestHasInStruct(t *testing.T) {
 			fieldName:      "Email",
 			expectedResult: false,
 		},
-		// Add more test cases as needed
 	}
 
 	for _, test := range tests {
@@ -298,7 +279,7 @@ func TestHasInStruct(t *testing.T) {
 func TestHasEmptyInStruct(t *testing.T) {
 	tests := []struct {
 		name           string
-		inputStruct    interface{}
+		inputStruct    any
 		fieldName      string
 		expectedResult bool
 	}{
@@ -314,7 +295,6 @@ func TestHasEmptyInStruct(t *testing.T) {
 			fieldName:      "Email",
 			expectedResult: true,
 		},
-		// Add more test cases as needed
 	}
 
 	for _, test := range tests {

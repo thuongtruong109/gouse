@@ -25,7 +25,7 @@ type IBarChartOpts struct {
 
 func generateBarItems(values []float64) []opts.BarData {
 	items := make([]opts.BarData, 0)
-	for i := 0; i < len(values); i++ {
+	for i := range values {
 		items = append(items, opts.BarData{Value: values[i]})
 	}
 	return items
@@ -65,7 +65,7 @@ type ILineChartOpts struct {
 
 func generateLineItems(values []float64) []opts.LineData {
 	items := make([]opts.LineData, 0)
-	for i := 0; i < len(values); i++ {
+	for i := range values {
 		items = append(items, opts.LineData{Value: values[i]})
 	}
 	return items
@@ -113,7 +113,7 @@ type IPieChartOpts struct {
 
 func generatePieItems(ele []IPieChartItem) []opts.PieData {
 	items := make([]opts.PieData, 0)
-	for i := 0; i < len(ele); i++ {
+	for i := range ele {
 		items = append(items, opts.PieData{
 			Name:  ele[i].Name,
 			Value: ele[i].Values,

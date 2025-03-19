@@ -2,7 +2,7 @@ package gouse
 
 import "time"
 
-func format(input interface{}, format string) string {
+func format(input any, format string) string {
 	var t time.Time
 
 	switch v := input.(type) {
@@ -21,7 +21,7 @@ func format(input interface{}, format string) string {
 	return t.Format(format)
 }
 
-func ISODate(date ...interface{}) string {
+func ISODate(date ...any) string {
 	if len(date) == 0 {
 		return format(time.Now(), "2006-01-02T15:04:05.999Z")
 	} else {
@@ -29,7 +29,7 @@ func ISODate(date ...interface{}) string {
 	}
 }
 
-func NormalDate(date ...interface{}) string {
+func NormalDate(date ...any) string {
 	if len(date) == 0 {
 		return format(time.Now(), "01/02/2006")
 	} else {
@@ -37,7 +37,7 @@ func NormalDate(date ...interface{}) string {
 	}
 }
 
-func ReverseDate(date ...interface{}) string {
+func ReverseDate(date ...any) string {
 	if len(date) == 0 {
 		return format(time.Now(), "2006/01/02")
 	} else {
@@ -45,7 +45,7 @@ func ReverseDate(date ...interface{}) string {
 	}
 }
 
-func DashDate(date ...interface{}) string {
+func DashDate(date ...any) string {
 	if len(date) == 0 {
 		return format(time.Now(), "2006-01-02")
 	} else {
@@ -53,7 +53,7 @@ func DashDate(date ...interface{}) string {
 	}
 }
 
-func DotDate(date ...interface{}) string {
+func DotDate(date ...any) string {
 	if len(date) == 0 {
 		return format(time.Now(), "2006.01.02")
 	} else {
@@ -61,7 +61,7 @@ func DotDate(date ...interface{}) string {
 	}
 }
 
-func UnderlineDate(date ...interface{}) string {
+func UnderlineDate(date ...any) string {
 	if len(date) == 0 {
 		return format(time.Now(), "2006_01_02")
 	} else {
@@ -69,7 +69,7 @@ func UnderlineDate(date ...interface{}) string {
 	}
 }
 
-func SpaceDate(date ...interface{}) string {
+func SpaceDate(date ...any) string {
 	if len(date) == 0 {
 		return format(time.Now(), "2006 01 02")
 	} else {
@@ -77,7 +77,7 @@ func SpaceDate(date ...interface{}) string {
 	}
 }
 
-func MonthDate(date ...interface{}) string {
+func MonthDate(date ...any) string {
 	if len(date) == 0 {
 		return format(time.Now(), "01/2006")
 	} else {
@@ -85,7 +85,7 @@ func MonthDate(date ...interface{}) string {
 	}
 }
 
-func LongDate(date ...interface{}) string {
+func LongDate(date ...any) string {
 	if len(date) == 0 {
 		return format(time.Now(), "Monday, January 2, 2006")
 	} else {
@@ -93,7 +93,7 @@ func LongDate(date ...interface{}) string {
 	}
 }
 
-func UTCDate(date ...interface{}) string {
+func UTCDate(date ...any) string {
 	if len(date) == 0 {
 		return format(time.Now(), "Jan 2, 2006 at 3:04pm (MST)")
 	} else {

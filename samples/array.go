@@ -1,6 +1,10 @@
 package samples
 
-import "github.com/thuongtruong109/gouse"
+import (
+	"fmt"
+
+	"github.com/thuongtruong109/gouse"
+)
 
 /*
 Description: Chunk an array into smaller arrays of a specified size
@@ -59,14 +63,30 @@ Description: Compare is equal between two elements
 Input params: (element1, element2)
 */
 func ArrayEqual() {
-	println("[int]: ", gouse.Equal(1, 1))
-	println("[uint]: ", gouse.Equal(uint(1), uint(1)))
-	println("[float]: ", gouse.Equal(1.2, 1.1))
-	println("[string]: ", gouse.Equal("1", "0"))
-	println("[rune]: ", gouse.Equal('a', 'a'))
-	println("[bool]: ", gouse.Equal(true, true))
-	println("[complex]: ", gouse.Equal(1+2i, 1+2i))
-	println("[struct]: ", gouse.Equal(struct{ a int }{1}, struct{ a int }{1}))
+	fmt.Println("[int]:", gouse.Equal([]int{1}, []int{1}))
+	fmt.Println("[int]:", gouse.Equal([]int{1}, []int{2}))
+
+	fmt.Println("[uint]:", gouse.Equal([]uint{1}, []uint{1}))
+	fmt.Println("[uint]:", gouse.Equal([]uint{1}, []uint{2}))
+
+	fmt.Println("[float]:", gouse.Equal([]float64{1.2}, []float64{1.2}))
+	fmt.Println("[float]:", gouse.Equal([]float64{1.2}, []float64{1.1}))
+
+	fmt.Println("[string]:", gouse.Equal([]string{"1"}, []string{"1"}))
+	fmt.Println("[string]:", gouse.Equal([]string{"1"}, []string{"0"}))
+
+	fmt.Println("[rune]:", gouse.Equal([]rune{'a'}, []rune{'a'}))
+	fmt.Println("[rune]:", gouse.Equal([]rune{'a'}, []rune{'b'}))
+
+	fmt.Println("[bool]:", gouse.Equal([]bool{true}, []bool{true}))
+	fmt.Println("[bool]:", gouse.Equal([]bool{true}, []bool{false}))
+
+	fmt.Println("[complex]:", gouse.Equal([]complex128{1 + 2i}, []complex128{1 + 2i}))
+	fmt.Println("[complex]:", gouse.Equal([]complex128{1 + 2i}, []complex128{2 + 3i}))
+
+	type MyStruct struct{ a int }
+	fmt.Println("[struct]:", gouse.Equal([]MyStruct{{1}}, []MyStruct{{1}}))
+	fmt.Println("[struct]:", gouse.Equal([]MyStruct{{1}}, []MyStruct{{2}}))
 }
 
 /*

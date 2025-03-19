@@ -119,7 +119,7 @@ func TestFormatTime(t *testing.T) {
 
 	for _, tc := range tests {
 		t.Run(tc.name, func(t *testing.T) {
-			result := formatTime(tc.input)
+			result := _time2String(tc.input)
 			if result != tc.expected {
 				t.Errorf("Expected %s, but got %s", tc.expected, result)
 			}

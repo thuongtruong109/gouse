@@ -102,7 +102,7 @@ type FileInfoStruct struct {
 	Mode    os.FileMode
 	ModTime string
 	IsDir   bool
-	Sys     interface{}
+	Sys     any
 	All     os.FileInfo
 }
 

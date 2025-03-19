@@ -85,9 +85,7 @@ func SleepHour(hour int) {
 	time.Sleep(ToHour(hour))
 }
 
-/* Clock format */
-
-func formatTime(t time.Time) string {
+func _time2String(t time.Time) string {
 	hour := t.Hour()
 	minute := t.Minute()
 	second := t.Second()
@@ -121,7 +119,7 @@ func TerminalClock() {
 
 	for t := range msgTime {
 		Cls()
-		Println(formatTime(t))
+		Println(_time2String(t))
 	}
 }
 

@@ -76,15 +76,16 @@
         <a href="/receipts/array">✅ Array</a> <br/>
         <a href="/receipts/cache">✅ Cache</a> <br/>
         <a href="/receipts/chart">✅ Chart</a> <br/>
+        <a href="/receipts/color">✅ Color</a> <br/>
         <a href="/receipts/config">✅ Config</a> <br/>
         <a href="/receipts/console">✅ Console</a> <br/>
         <a href="/receipts/connection">✅ Connection</a> <br/>
         <a href="/receipts/cron">✅ Cron</a> <br/>
-        <a href="/receipts/crypto">✅ Crypto</a> <br/>
         <div width="300" height="0"></div>
       </td>
       <td align="left">
         <div width="300" height="0"></div><br>
+        <a href="/receipts/crypto">✅ Crypto</a> <br/>
         <a href="/receipts/date">✅ Date</a> <br/>
         <a href="/receipts/function">✅ Function</a> <br/>
         <a href="/receipts/helper">✅ Helper</a> <br/>

@@ -15,8 +15,6 @@ import (
 	// "github.com/minio/minio-go/v7/pkg/credentials"
 )
 
-/* Connect to Redis */
-
 func ConnectRedis(addr, pass string, dbNo ...int) *redis.Client {
 	nums := 0
 
@@ -61,8 +59,6 @@ func ConnectRedisUri(uri string) *redis.Client {
 
 	return client
 }
-
-/* Connect to Postgres */
 
 type PgDB struct {
 	Client *sql.DB
@@ -134,8 +130,6 @@ func ConnectPostgres(dsn string) (*PgDB, error) {
 // 		}
 // 	}
 // }
-
-/* Connect to MongoDB */
 
 func ConnectMongo(ctx context.Context, uri string) (*mongo.Client, error) {
 	if uri == "" {

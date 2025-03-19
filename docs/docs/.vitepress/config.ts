@@ -74,6 +74,7 @@ export default defineConfig({
           { text: "📦 Array", link: "array" },
           { text: "🎫 Cache", link: "cache" },
           { text: "📊 Chart", link: "chart" },
+          { text: "🎨 Color", link: "color" },
           { text: "🪛 Config", link: "config" },
           { text: "💍 Connection", link: "connection" },
           { text: "🖨️ Console", link: "console" },

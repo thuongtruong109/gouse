@@ -359,8 +359,44 @@ func TestIncludesArr(t *testing.T) {
 }
 
 func TestEqual(t *testing.T) {
-	if !IncludesArr([]int{1, 2, 3}, 1) {
-		t.Errorf("Equal[int](1, 1) = false, want true")
+	tests := []struct {
+		a, b   []int
+		expect bool
+	}{
+		{
+			a:      []int{1, 2, 3},
+			b:      []int{1, 2, 3},
+			expect: true,
+		},
+		{
+			a:      []int{1, 2, 3},
+			b:      []int{1, 2, 4},
+			expect: false,
+		},
+		{
+			a:      []int{1, 2, 3},
+			b:      []int{1, 2},
+			expect: false,
+		},
+		{
+			a:      []int{1, 2, 3},
+			b:      []int{1, 2, 3, 4},
+			expect: false,
+		},
+		{
+			a:      []int{},
+			b:      []int{},
+			expect: true,
+		},
+	}
+
+	for _, test := range tests {
+		t.Run("", func(t *testing.T) {
+			got := Equal(test.a, test.b)
+			if got != test.expect {
+				t.Errorf("Equal(%v, %v) = %v; want %v", test.a, test.b, got, test.expect)
+			}
+		})
 	}
 }
 

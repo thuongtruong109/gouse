@@ -117,8 +117,16 @@ func IncludesArr[T comparable](array []T, value T) bool {
 	return false
 }
 
-func Equal[T comparable](a, b T) bool {
-	return a == b
+func Equal[T comparable](a, b []T) bool {
+	if len(a) != len(b) {
+		return false
+	}
+	for i := range a {
+		if a[i] != b[i] {
+			return false
+		}
+	}
+	return true
 }
 
 func SumArr[T int | int8 | int16 | int32 | int64 | uint | uint8 | uint16 | uint32 | uint64 | float32 | float64 | complex64 | complex128](arr []T) T {

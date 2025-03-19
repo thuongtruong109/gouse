@@ -3,6 +3,7 @@ package gouse
 import (
 	"fmt"
 	"reflect"
+	"strconv"
 	"strings"
 
 	"github.com/google/uuid"
@@ -305,7 +306,18 @@ func BoolToString(data bool) string {
 }
 
 func ToString(data any) string {
-	return fmt.Sprintf("%v", data)
+	switch v := data.(type) {
+	case string:
+		return v
+	case int:
+		return strconv.Itoa(v)
+	case float64:
+		return strconv.FormatFloat(v, 'f', 2, 64)
+	case bool:
+		return strconv.FormatBool(v)
+	default:
+		return fmt.Sprintf("%v", data)
+	}
 }
 
 func BytesToString(data []byte) string {

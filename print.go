@@ -5,25 +5,10 @@ import (
 	"strconv"
 )
 
-func valueToString(value any) string {
-	switch v := value.(type) {
-	case string:
-		return v
-	case int:
-		return strconv.Itoa(v)
-	case float64:
-		return strconv.FormatFloat(v, 'f', 2, 64)
-	case bool:
-		return strconv.FormatBool(v)
-	default:
-		return "unknown"
-	}
-}
-
 func Sprint(args ...any) string {
 	var result string
 	for i, arg := range args {
-		result += valueToString(arg)
+		result += ToString(arg)
 		if i < len(args)-1 {
 			result += " "
 		}

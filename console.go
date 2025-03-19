@@ -11,15 +11,15 @@ import (
 	"github.com/AlecAivazis/survey/v2"
 )
 
-func Cmd(defaultCmmand string, windowsCmmand ...string) {
+func Cmd(defaultCmd string, windowsCmd ...string) {
 	var cmd *exec.Cmd
 
-	splitCmd := Split(defaultCmmand, " ")
+	splitCmd := Split(defaultCmd, " ")
 
 	if runtime.GOOS == "windows" {
 		cmd = exec.Command("cmd", "/c")
-		if len(windowsCmmand) > 0 {
-			cmd.Args = append(cmd.Args, windowsCmmand...)
+		if len(windowsCmd) > 0 {
+			cmd.Args = append(cmd.Args, windowsCmd...)
 		} else {
 			cmd.Args = append(cmd.Args, splitCmd...)
 		}
@@ -36,7 +36,7 @@ func Cls() {
 	Cmd("clear", "cls")
 }
 
-func OutputColor[T interface{}](color string, output T) {
+func OutputColor[T any](color string, output T) {
 	fmt.Printf("%s%v%s", color, output, DEFAULT_CONSOLE)
 }
 
@@ -50,7 +50,7 @@ func OutputError(output string, err string) {
 
 func Banner(font IFontBannerType, s string) {
 	split := Split(Uppers(s), "")
-	for i := 0; i < 3; i++ {
+	for i := range 3 {
 		for _, v := range split {
 			fmt.Print(font[v][i])
 		}
@@ -82,8 +82,8 @@ func Confirm(label string) (bool, error) {
 type IHelpOptions struct {
 	Opt    string
 	Desc   string
-	Val    interface{}
-	Action interface{}
+	Val    any
+	Action any
 }
 
 type IHelpActionStr struct {
@@ -98,8 +98,8 @@ type IHelpActionBool struct {
 	Action func(bool)
 }
 
-func autoDetectAction(f interface{}) interface{} {
-	var action interface{}
+func autoDetectAction(f any) any {
+	var action any
 
 	switch value := f.(type) {
 	case func(string):
