@@ -14,7 +14,7 @@ func InRange(value, min, max int) bool {
 	return value >= min && value <= max
 }
 
-func Sort[T int | float64](nums []T) []T {
+func Sort[T Number](nums []T) []T {
 	for i := range nums {
 		for j := i + 1; j < len(nums); j++ {
 			if nums[i] > nums[j] {

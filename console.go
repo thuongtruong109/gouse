@@ -48,7 +48,7 @@ func OutputError(output string, err string) {
 	println(RED_CONSOLE + err + DEFAULT_CONSOLE)
 }
 
-func Banner(font IFontBannerType, s string) {
+func Banner(font IFontDouble, s string) {
 	split := Split(Uppers(s), "")
 	for i := range 3 {
 		for _, v := range split {

@@ -1,6 +1,9 @@
 package gouse
 
-import "testing"
+import (
+	"reflect"
+	"testing"
+)
 
 func TestMinMaxArr(t *testing.T) {
 	arr := []int{1, 2, 3, 4, 5}
@@ -496,6 +499,42 @@ func TestMost(t *testing.T) {
 	}
 }
 
+func TestLeast(t *testing.T) {
+	t.Parallel()
+
+	tests := []struct {
+		name string
+		arr  []int
+		want int
+	}{
+		// {
+		// 	name: "empty array",
+		// 	arr:  []int{},
+		// 	want: 0,
+		// },
+		{
+			name: "single element",
+			arr:  []int{1},
+			want: 1,
+		},
+		{
+			name: "multiple elements",
+			arr:  []int{1, 2, 2, 3},
+			want: 1,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			got := Least(tt.arr)
+
+			if got != tt.want {
+				t.Errorf("Least() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
 func TestChunk(t *testing.T) {
 	t.Parallel()
 
@@ -640,6 +679,451 @@ func TestDrop(t *testing.T) {
 	}
 }
 
+func TestFill(t *testing.T) {
+	t.Parallel()
+
+	tests := []struct {
+		name  string
+		arr   []int
+		value int
+		start int
+		end   int
+		want  []int
+	}{
+		{
+			name:  "empty array",
+			arr:   []int{},
+			value: 1,
+			start: 0,
+			end:   1,
+			want:  nil,
+		},
+		{
+			name:  "no fill",
+			arr:   []int{1, 2, 3},
+			value: 4,
+			start: 0,
+			end:   3,
+			want:  []int{4, 4, 4},
+		},
+		{
+			name:  "fill",
+			arr:   []int{1, 2, 3},
+			value: 4,
+			start: 1,
+			end:   2,
+			want:  []int{1, 4, 3},
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			got := Fill(tt.arr, tt.value, tt.start, tt.end)
+
+			if len(got) != len(tt.want) {
+				t.Errorf("Fill() = %v, want %v", got, tt.want)
+			}
+
+			for i := range got {
+				if got[i] != tt.want[i] {
+					t.Errorf("Fill() = %v, want %v", got, tt.want)
+				}
+			}
+		})
+	}
+}
+
+func TestShift(t *testing.T) {
+	t.Parallel()
+
+	tests := []struct {
+		name string
+		arr  []int
+		n    int
+		want []int
+	}{
+		{
+			name: "empty array",
+			arr:  []int{},
+			n:    1,
+			want: nil,
+		},
+		{
+			name: "no shift",
+			arr:  []int{1, 2, 3},
+			n:    0,
+			want: []int{1, 2, 3},
+		},
+		{
+			name: "shift one",
+			arr:  []int{1, 2, 3},
+			n:    1,
+			want: []int{1, 2},
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			got := Shift(tt.arr, tt.n)
+
+			if len(got) != len(tt.want) {
+				t.Errorf("Shift() = %v, want %v", got, tt.want)
+			}
+
+			for i := range got {
+				if got[i] != tt.want[i] {
+					t.Errorf("Shift() = %v, want %v", got, tt.want)
+				}
+			}
+		})
+	}
+}
+
+func TestUnshift(t *testing.T) {
+	arr := []int{}
+	result := Unshift(arr, 1)
+	expected := []int{1}
+	if !reflect.DeepEqual(result, expected) {
+		t.Errorf("Test failed, expected %v but got %v", expected, result)
+	}
+
+	arr = []int{}
+	result = Unshift(arr, 1, 2, 3)
+	expected = []int{1, 2, 3}
+	if !reflect.DeepEqual(result, expected) {
+		t.Errorf("Test failed, expected %v but got %v", expected, result)
+	}
+
+	arr = []int{4, 5, 6}
+	result = Unshift(arr, 1, 2, 3)
+	expected = []int{1, 2, 3, 4, 5, 6}
+	if !reflect.DeepEqual(result, expected) {
+		t.Errorf("Test failed, expected %v but got %v", expected, result)
+	}
+
+	arr = []int{4, 5, 6}
+	result = Unshift(arr)
+	expected = []int{4, 5, 6}
+	if !reflect.DeepEqual(result, expected) {
+		t.Errorf("Test failed, expected %v but got %v", expected, result)
+	}
+}
+
+func TestPop(t *testing.T) {
+	arr := []int{}
+	result := Pop(arr)
+	if result != nil {
+		t.Errorf("Test failed, expected nil but got %v", result)
+	}
+
+	arr = []int{1, 2, 3, 4, 5}
+	result = Pop(arr)
+	expected := []int{1, 2, 3, 4}
+	if !reflect.DeepEqual(result, expected) {
+		t.Errorf("Test failed, expected %v but got %v", expected, result)
+	}
+
+	arr = []int{1, 2, 3, 4, 5}
+	result = Pop(arr, 2)
+	expected = []int{1, 2, 3}
+	if !reflect.DeepEqual(result, expected) {
+		t.Errorf("Test failed, expected %v but got %v", expected, result)
+	}
+
+	arr = []int{1, 2, 3, 4, 5}
+	result = Pop(arr, 5)
+	expected = []int{}
+	if !reflect.DeepEqual(result, expected) {
+		t.Errorf("Test failed, expected %v but got %v", expected, result)
+	}
+
+	arr = []int{1, 2, 3}
+	result = Pop(arr, 10)
+	expected = []int{}
+	if !reflect.DeepEqual(result, expected) {
+		t.Errorf("Test failed, expected %v but got %v", expected, result)
+	}
+
+	arr = []int{1}
+	result = Pop(arr)
+	expected = []int{}
+	if !reflect.DeepEqual(result, expected) {
+		t.Errorf("Test failed, expected %v but got %v", expected, result)
+	}
+}
+
+func TestPush(t *testing.T) {
+	arr := []int{}
+	result := Push(arr, 1)
+	expected := []int{1}
+	if !reflect.DeepEqual(result, expected) {
+		t.Errorf("Test failed, expected %v but got %v", expected, result)
+	}
+
+	arr = []int{1}
+	result = Push(arr, 2, 3, 4)
+	expected = []int{1, 2, 3, 4}
+	if !reflect.DeepEqual(result, expected) {
+		t.Errorf("Test failed, expected %v but got %v", expected, result)
+	}
+
+	arr = []int{1, 2, 3}
+	result = Push(arr)
+	expected = []int{1, 2, 3}
+	if !reflect.DeepEqual(result, expected) {
+		t.Errorf("Test failed, expected %v but got %v", expected, result)
+	}
+}
+
+func TestSliceArr(t *testing.T) {
+	t.Parallel()
+
+	tests := []struct {
+		name  string
+		arr   []int
+		start int
+		end   int
+		want  []int
+		err   error
+	}{
+		{
+			name:  "empty array",
+			arr:   []int{},
+			start: 0,
+			end:   1,
+			want:  nil,
+			err:   nil,
+		},
+		{
+			name:  "no slice",
+			arr:   []int{1, 2, 3},
+			start: 0,
+			end:   3,
+			want:  []int{1, 2, 3},
+			err:   nil,
+		},
+		{
+			name:  "slice from index 1",
+			arr:   []int{1, 2, 3},
+			start: 1,
+			end:   3,
+			want:  []int{2, 3},
+			err:   nil,
+		},
+		{
+			name:  "slice with end exceeding length",
+			arr:   []int{1, 2, 3},
+			start: 1,
+			end:   5,
+			want:  []int{2, 3},
+			err:   nil,
+		},
+		{
+			name:  "slice with start exceeding length",
+			arr:   []int{1, 2, 3},
+			start: 5,
+			end:   6,
+			want:  nil,
+			err:   nil,
+		},
+		{
+			name:  "slice with negative start",
+			arr:   []int{1, 2, 3},
+			start: -1,
+			end:   2,
+			want:  []int{1, 2},
+			err:   nil,
+		},
+		{
+			name:  "slice with start equal to end",
+			arr:   []int{1, 2, 3},
+			start: 2,
+			end:   2,
+			want:  nil,
+			err:   nil,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			got, err := SliceArr(tt.arr, tt.start, tt.end)
+
+			if err != nil || tt.err != nil {
+				if (err == nil && tt.err != nil) || (err != nil && err.Error() != tt.err.Error()) {
+					t.Errorf("SliceArr() error = %v, want %v", err, tt.err)
+				}
+			}
+
+			if len(got) == 0 && tt.want != nil && len(tt.want) > 0 {
+				t.Errorf("SliceArr() = %v, want %v", got, tt.want)
+			} else if len(got) != len(tt.want) {
+				t.Errorf("SliceArr() = %v, want %v", got, tt.want)
+			} else {
+				for i := range got {
+					if got[i] != tt.want[i] {
+						t.Errorf("SliceArr() = %v, want %v", got, tt.want)
+					}
+				}
+			}
+		})
+	}
+}
+
+func TestSpliceArr(t *testing.T) {
+	tests := []struct {
+		name        string
+		arr         []int
+		start       int
+		deleteCount int
+		items       []int
+		expected    []int
+	}{
+		{
+			name:        "Empty array",
+			arr:         []int{},
+			start:       0,
+			deleteCount: 0,
+			items:       []int{1, 2},
+			expected:    []int{1, 2},
+		},
+		{
+			name:        "Delete elements from the middle",
+			arr:         []int{1, 2, 3, 4, 5},
+			start:       1,
+			deleteCount: 2,
+			items:       []int{8, 9},
+			expected:    []int{1, 8, 9, 4, 5},
+		},
+		{
+			name:        "Delete from the end",
+			arr:         []int{1, 2, 3, 4, 5},
+			start:       3,
+			deleteCount: 2,
+			items:       []int{},
+			expected:    []int{1, 2, 3},
+		},
+		{
+			name:        "Insert at the end",
+			arr:         []int{1, 2, 3},
+			start:       3,
+			deleteCount: 0,
+			items:       []int{4, 5},
+			expected:    []int{1, 2, 3, 4, 5},
+		},
+		{
+			name:        "Delete more elements than available",
+			arr:         []int{1, 2, 3},
+			start:       1,
+			deleteCount: 5,
+			items:       []int{8},
+			expected:    []int{1, 8},
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			got := SpliceArr(tt.arr, tt.start, tt.deleteCount, tt.items...)
+			if !reflect.DeepEqual(got, tt.expected) {
+				t.Errorf("SpliceArr() = %v, want %v", got, tt.expected)
+			}
+		})
+	}
+}
+
+func TestTake(t *testing.T) {
+	t.Parallel()
+
+	tests := []struct {
+		name string
+		arr  []int
+		n    int
+		want []int
+	}{
+		{
+			name: "empty array",
+			arr:  []int{},
+			n:    1,
+			want: nil,
+		},
+		{
+			name: "no take",
+			arr:  []int{1, 2, 3},
+			n:    0,
+			want: nil,
+		},
+		{
+			name: "take one",
+			arr:  []int{1, 2, 3},
+			n:    1,
+			want: []int{1},
+		},
+		{
+			name: "take two",
+			arr:  []int{1, 2, 3},
+			n:    2,
+			want: []int{1, 2},
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			got := Take(tt.arr, tt.n)
+
+			if len(got) != len(tt.want) {
+				t.Errorf("Take() = %v, want %v", got, tt.want)
+			}
+
+			for i := range got {
+				if got[i] != tt.want[i] {
+					t.Errorf("Take() = %v, want %v", got, tt.want)
+				}
+			}
+		})
+	}
+}
+
+func TestReverseArr(t *testing.T) {
+	t.Parallel()
+
+	tests := []struct {
+		name string
+		arr  []int
+		want []int
+	}{
+		{
+			name: "empty array",
+			arr:  []int{},
+			want: nil,
+		},
+		{
+			name: "single element",
+			arr:  []int{1},
+			want: []int{1},
+		},
+		{
+			name: "multiple elements",
+			arr:  []int{1, 2, 3},
+			want: []int{3, 2, 1},
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			got := ReverseArr(tt.arr)
+
+			if len(got) != len(tt.want) {
+				t.Errorf("Reverse() = %v, want %v", got, tt.want)
+			}
+
+			for i := range got {
+				if got[i] != tt.want[i] {
+					t.Errorf("Reverse() = %v, want %v", got, tt.want)
+				}
+			}
+		})
+	}
+}
+
 func TestIndexOfArr(t *testing.T) {
 	t.Parallel()
 
@@ -764,40 +1248,98 @@ func TestCompact(t *testing.T) {
 	}
 }
 
-// func TestSort(t *testing.T) {
-// 	t.Parallel()
+func TestSortArr(t *testing.T) {
+	intArray := []int{5, 2, 9, 1, 5, 6}
+	Sort(intArray)
 
-// 	tests := []struct {
-// 		name string
-// 		arr  []int
-// 		want []int
-// 	}{
-// 		{
-// 			name: "empty array",
-// 			arr:  []int{},
-// 			want: nil,
-// 		},
-// 		{
-// 			name: "no sort",
-// 			arr:  []int{3, 2, 1},
-// 			want: []int{1, 2, 3},
-// 		},
-// 		{
-// 			name: "sort",
-// 			arr:  []int{3, 1, 2},
-// 			want: []int{1, 2, 3},
-// 		},
-// 	}
+	expected := []int{1, 2, 5, 5, 6, 9}
+	for i, v := range intArray {
+		if v != expected[i] {
+			t.Errorf("expected %v, got %v", expected, intArray)
+		}
+	}
 
-// 	for _, tt := range tests {
-// 		t.Run(tt.name, func(t *testing.T) {
-// 			Sort(tt.arr)
+	strArray := []string{"apple", "orange", "banana", "grape"}
+	SortArr(strArray)
 
-// 			for i := range tt.arr {
-// 				if tt.arr[i] != tt.want[i] {
-// 					t.Errorf("Sort() = %v, want %v", tt.arr, tt.want)
-// 				}
-// 			}
-// 		})
-// 	}
-// }
+	expected2 := []string{"apple", "banana", "grape", "orange"}
+	for i, v := range strArray {
+		if v != expected2[i] {
+			t.Errorf("expected %v, got %v", expected2, strArray)
+		}
+	}
+
+	floatArray := []float64{5.2, 3.1, 7.4, 1.9}
+	SortArr(floatArray)
+
+	expected3 := []float64{1.9, 3.1, 5.2, 7.4}
+	for i, v := range floatArray {
+		if v != expected3[i] {
+			t.Errorf("expected %v, got %v", expected3, floatArray)
+		}
+	}
+
+	emptyArray := []int{}
+	Sort(emptyArray)
+
+	if len(emptyArray) != 0 {
+		t.Errorf("expected empty array, got %v", emptyArray)
+	}
+
+	singleElementArray := []int{42}
+	Sort(singleElementArray)
+
+	expected4 := []int{42}
+	for i, v := range singleElementArray {
+		if v != expected4[i] {
+			t.Errorf("expected %v, got %v", expected4, singleElementArray)
+		}
+	}
+}
+
+func TestFlatten(t *testing.T) {
+	tests := []struct {
+		input    any
+		expected []any
+	}{
+		{
+			input: []any{
+				[]any{1, 2, []any{3, 4}, 5},
+				6, []any{7, []any{8, 9}},
+			},
+			expected: []any{1, 2, 3, 4, 5, 6, 7, 8, 9},
+		},
+		{
+			input:    []any{1, 2, 3},
+			expected: []any{1, 2, 3},
+		},
+		{
+			input:    []any{[]any{1, 2}, 3, []any{4, 5}},
+			expected: []any{1, 2, 3, 4, 5},
+		},
+		{
+			input:    []any{[]any{}, []any{1, 2}},
+			expected: []any{1, 2},
+		},
+		{
+			input:    []any{1, []any{2, []any{3, 4}}, 5},
+			expected: []any{1, 2, 3, 4, 5},
+		},
+		{
+			input:    []any{},
+			expected: []any{},
+		},
+	}
+
+	for _, test := range tests {
+		t.Run("Flatten", func(t *testing.T) {
+			result := Flatten(test.input)
+			if len(result) == 0 && len(test.expected) == 0 {
+				return
+			}
+			if !reflect.DeepEqual(result, test.expected) {
+				t.Errorf("expected %v, got %v", test.expected, result)
+			}
+		})
+	}
+}

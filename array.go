@@ -1,5 +1,12 @@
 package gouse
 
+import (
+	"reflect"
+	"slices"
+
+	"golang.org/x/exp/constraints"
+)
+
 func _minmax[T comparable](arr []T, less func(T, T) bool) T {
 	if len(arr) == 0 {
 		panic("Empty array")
@@ -14,13 +21,13 @@ func _minmax[T comparable](arr []T, less func(T, T) bool) T {
 	return max
 }
 
-func MinArr[T int | int8 | int16 | int32 | uint | uint8 | uint16 | uint32 | uint64 | float32 | float64 | string](arr []T) T {
+func MinArr[T Number | string](arr []T) T {
 	return _minmax(arr, func(a, b T) bool {
 		return a > b
 	})
 }
 
-func MaxArr[T int | int8 | int16 | int32 | uint | uint8 | uint16 | uint32 | uint64 | float32 | float64 | string](arr []T) T {
+func MaxArr[T Number | string](arr []T) T {
 	return _minmax(arr, func(a, b T) bool {
 		return a < b
 	})
@@ -129,7 +136,7 @@ func Equal[T comparable](a, b []T) bool {
 	return true
 }
 
-func SumArr[T int | int8 | int16 | int32 | int64 | uint | uint8 | uint16 | uint32 | uint64 | float32 | float64 | complex64 | complex128](arr []T) T {
+func SumArr[T Number | complex64 | complex128](arr []T) T {
 	var sum T
 	for _, v := range arr {
 		sum += v
@@ -137,7 +144,7 @@ func SumArr[T int | int8 | int16 | int32 | int64 | uint | uint8 | uint16 | uint3
 	return sum
 }
 
-func ProductArr[T int | int8 | int16 | int32 | int64 | uint | uint8 | uint16 | uint32 | uint64 | float32 | float64](arr []T) T {
+func ProductArr[T Number | complex64 | complex128](arr []T) T {
 	var product T = 1
 	for _, v := range arr {
 		product *= v
@@ -166,6 +173,19 @@ func Most[T comparable](arr []T) T {
 	}
 
 	return max
+}
+
+func Least[T comparable](arr []T) T {
+	var least = make(map[T]int)
+	min := arr[0]
+	for _, v := range arr {
+		least[v] = least[v] + 1
+		if least[min] > least[v] {
+			min = v
+		}
+	}
+
+	return min
 }
 
 func Chunk[T comparable](array []T, size int) [][]T {
@@ -202,6 +222,129 @@ func Drop[T comparable](arr []T, n ...int) []T {
 	return arr[n[0]:]
 }
 
+func Fill[T comparable](arr []T, value T, start, end int) []T {
+	if len(arr) == 0 {
+		return nil
+	}
+
+	if start < 0 {
+		start = 0
+	}
+
+	if end > len(arr) {
+		end = len(arr)
+	}
+
+	for i := start; i < end; i++ {
+		arr[i] = value
+	}
+
+	return arr
+}
+
+func Shift[T comparable](arr []T, n ...int) []T {
+	if len(arr) == 0 {
+		return nil
+	}
+
+	if len(n) == 0 {
+		n = append(n, 1)
+	}
+
+	return arr[:len(arr)-n[0]]
+}
+
+func Unshift[T comparable](arr []T, values ...T) []T {
+	return append(values, arr...)
+}
+
+func Pop[T comparable](arr []T, n ...int) []T {
+	if len(arr) == 0 {
+		return nil
+	}
+
+	if len(n) == 0 {
+		n = append(n, 1)
+	}
+
+	if n[0] >= len(arr) {
+		return []T{}
+	}
+
+	return arr[:len(arr)-n[0]]
+}
+
+func Push[T comparable](arr []T, values ...T) []T {
+	return append(arr, values...)
+}
+
+func SliceArr[T comparable](arr []T, start, end int) ([]T, error) {
+	if len(arr) == 0 {
+		return nil, nil
+	}
+
+	if start < 0 {
+		start = 0
+	}
+
+	if end > len(arr) {
+		end = len(arr)
+	}
+
+	if start >= len(arr) {
+		return nil, nil
+	}
+
+	return arr[start:end], nil
+}
+
+func SpliceArr[T comparable](arr []T, start, deleteCount int, items ...T) []T {
+	if len(arr) == 0 && start == 0 && deleteCount == 0 {
+		return items
+	}
+
+	if start < 0 {
+		start = 0
+	}
+
+	if start > len(arr) {
+		start = len(arr)
+	}
+
+	if deleteCount < 0 {
+		deleteCount = 0
+	}
+	if deleteCount > len(arr)-start {
+		deleteCount = len(arr) - start
+	}
+
+	spliced := append(arr[:start], items...)
+
+	spliced = append(spliced, arr[start+deleteCount:]...)
+
+	return spliced
+}
+
+func Take[T comparable](arr []T, n int) []T {
+	if len(arr) == 0 {
+		return nil
+	}
+
+	if n > len(arr) {
+		n = len(arr)
+	}
+
+	return arr[:n]
+}
+
+func ReverseArr[T comparable](arr []T) []T {
+	var reversed []T
+	for i := len(arr) - 1; i >= 0; i-- {
+		reversed = append(reversed, arr[i])
+	}
+	return reversed
+}
+
 func IndexOfArr[T comparable](arr []T, value T) int {
 	for i, v := range arr {
 		if v == value {
@@ -229,14 +372,24 @@ func Compact[T any](arr []T) []T {
 	return compact
 }
 
-// func Sort[T any](arr []T) []T {
-// 	var sorted []T
-// 	for _, v := range arr {
-// 		if IsNumber(v) {
-// 			sorted = append(sorted, v)
-// 		}
-// 	}
-// 	return sorted
-// }
+func SortArr[T constraints.Ordered](arr []T) {
+	slices.Sort(arr)
+}
 
-// flatten array
+func Flatten(input any) []any {
+	var result []any
+
+	v := reflect.ValueOf(input)
+	if v.Kind() == reflect.Slice {
+		for i := range v.Len() {
+			elem := v.Index(i).Interface()
+			if reflect.ValueOf(elem).Kind() == reflect.Slice {
+				result = append(result, Flatten(elem)...)
+			} else {
+				result = append(result, elem)
+			}
+		}
+	}
+
+	return result
+}

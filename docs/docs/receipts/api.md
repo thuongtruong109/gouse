@@ -11,13 +11,13 @@ import (
 
 ## 1. Loadbalancer
 
-Description: Load balancer with health check<br>Input params: (ILbConfig.ProxyPort, ILbConfig.Backends)<br>
+Description: Load balancer with health check<br>Input params: (ILbConf.ProxyPort, ILbConf.Backends)<br>
 
 ```go
 func Loadbalancer() {
-	lbCfg := gouse.ILbConfig{
+	lbCfg := gouse.ILbConf{
 		ProxyPort: "8080",
-		Backends: []gouse.IBackend{
+		Backends: []gouse.ILb{
 			{
 				URL:    "http://localhost:8081",
 				IsDead: false,

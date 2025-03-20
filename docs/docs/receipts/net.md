@@ -10,39 +10,26 @@ import (
 
 ## 1. Check u r l
 
-Description: Check if a URL is valid<br>Input params: (url string)<br>
+Description: Check if a URL status<br>Input params: (url string)<br>
 
 ```go
 func CheckURL() {
-	ok, err := gouse.CheckHref("https://google.com")
+	isOk, statusCode, err := gouse.CheckUrl("https://google.com")
 	if err != nil {
 		panic(err)
 	}
-	println("Response: ", ok)
-}
-```
-
-## 2. Check with status code
-
-Description: Check if a URL is valid<br>Input params: (url string)<br>
-
-```go
-func CheckWithStatusCode() {
-	statusCode, err := gouse.CheckHrefStatusCode("https://google.com")
-	if err != nil {
-		panic(err)
-	}
+	println("Response: ", isOk)
 	println("Status code: ", statusCode)
 }
 ```
 
-## 3. Connect time
+## 2. Connect time
 
 Description: Calculate the time it takes to connect to a URL<br>Input params: (url string)<br>
 
 ```go
 func ConnectTime() {
-	connectTime, err := gouse.HrefConnectTime("https://google.com")
+	connectTime, err := gouse.ConTimeUrl("https://google.com")
 	if err != nil {
 		panic(err)
 	}
@@ -51,33 +38,33 @@ func ConnectTime() {
 }
 ```
 
-## 4. Encode u r l
+## 3. Encode u r l
 
 Description: Encode a URL<br>Input params: (url string)<br>
 
 ```go
 func EncodeURL() {
-	println("Encode: ", gouse.EncodeHref("https://google.com"))
+	println("Encode: ", gouse.EncodeUrl("https://google.com"))
 }
 ```
 
-## 5. Decode u r l
+## 4. Decode u r l
 
 Description: Decode a URL<br>Input params: (url string)<br>
 
 ```go
 func DecodeURL() {
-	println("Decode: ", gouse.DecodeHref("https%3A%2F%2Fgoogle.com"))
+	println("Decode: ", gouse.DecodeUrl("https%3A%2F%2Fgoogle.com"))
 }
 ```
 
-## 6. Header u r l
+## 5. Header u r l
 
 Description: Get the header of a URL<br>Input params: (url string)<br>
 
 ```go
 func HeaderURL() {
-	header, err := gouse.HrefHeader("https://google.com")
+	header, err := gouse.HeaderUrl("https://google.com")
 	if err != nil {
 		panic(err)
 	}
@@ -86,7 +73,7 @@ func HeaderURL() {
 }
 ```
 
-## 7. Port checker
+## 6. Port checker
 
 Description: Check if a port is open<br>Input params: (protocol, hostname string, port int)<br>
 
@@ -97,7 +84,7 @@ func PortChecker() {
 }
 ```
 
-## 8. Port scanner
+## 7. Port scanner
 
 Description: Scan for open ports on a given host.<br>Input params: (protocol, hostname string, startPort, endPort int)<br>
 
@@ -107,7 +94,7 @@ func PortScanner() {
 }
 ```
 
-## 9. Proxy
+## 8. Proxy
 
 Description: Proxy wrapper to another port<br>Input params: (port string, urls []string{})<br>
 
@@ -117,12 +104,12 @@ func Proxy() {
 }
 ```
 
-## 10. Open u r l
+## 9. Open u r l
 
 Description: Open a URL in the default browser<br>Input params: (url string)<br>
 
 ```go
 func OpenURL() {
-	gouse.OpenHref("https://google.com")
+	gouse.OpenUrl("https://google.com")
 }
 ```

@@ -13,24 +13,24 @@ import (
 	"time"
 )
 
-type IBackend struct {
+type ILb struct {
 	URL    string `json:"url"`
 	IsDead bool
 	mutex  sync.RWMutex
 }
 
-type ILbConfig struct {
-	ProxyPort string     `json:"proxy"`
-	Backends  []IBackend `json:"backends"`
+type ILbConf struct {
+	ProxyPort string `json:"proxy"`
+	Backends  []ILb  `json:"backends"`
 }
 
-func (backend *IBackend) SetDead(b bool) {
+func (backend *ILb) SetDead(b bool) {
 	backend.mutex.Lock()
 	backend.IsDead = b
 	backend.mutex.Unlock()
 }
 
-func (backend *IBackend) GetIsDead() bool {
+func (backend *ILb) GetIsDead() bool {
 	backend.mutex.RLock()
 	isAlive := backend.IsDead
 	backend.mutex.RUnlock()
@@ -39,9 +39,9 @@ func (backend *IBackend) GetIsDead() bool {
 
 var mutex sync.Mutex
 var idx int = 0
-var cfg ILbConfig
+var cfg ILbConf
 
-func lbHandler(w http.ResponseWriter, r *http.Request) {
+func _lbHandler(w http.ResponseWriter, r *http.Request) {
 	maxLen := len(cfg.Backends)
 
 	// Round Robin
@@ -61,12 +61,12 @@ func lbHandler(w http.ResponseWriter, r *http.Request) {
 	reverseProxy.ErrorHandler = func(w http.ResponseWriter, r *http.Request, e error) {
 		log.Printf("%v is dead", targetURL)
 		currentBackend.SetDead(true)
-		lbHandler(w, r)
+		_lbHandler(w, r)
 	}
 	reverseProxy.ServeHTTP(w, r)
 }
 
-func isAlive(url *url.URL) bool {
+func IsAlive(url *url.URL) bool {
 	conn, err := net.DialTimeout("tcp", url.Host, time.Minute*1)
 	if err != nil {
 		log.Printf("Unreachable tp %v, error:%v", url.Host, err.Error())
@@ -93,7 +93,7 @@ func HealthCheck() {
 				log.Print(err.Error())
 				continue
 			}
-			isAlive := isAlive(pingURL)
+			isAlive := IsAlive(pingURL)
 			backend.SetDead(!isAlive)
 			msg := "alive"
 			if !isAlive {
@@ -104,8 +104,8 @@ func HealthCheck() {
 	}
 }
 
-func LoadBalancer(proxyPort string, backends []IBackend) {
-	cfg = ILbConfig{
+func LoadBalancer(proxyPort string, backends []ILb) {
+	cfg = ILbConf{
 		ProxyPort: proxyPort,
 		Backends:  backends,
 	}
@@ -114,7 +114,7 @@ func LoadBalancer(proxyPort string, backends []IBackend) {
 
 	s := http.Server{
 		Addr:              ":" + cfg.ProxyPort,
-		Handler:           http.HandlerFunc(lbHandler),
+		Handler:           http.HandlerFunc(_lbHandler),
 		ReadHeaderTimeout: 10 * time.Second,
 	}
 

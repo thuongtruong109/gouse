@@ -246,7 +246,6 @@ func netSample() {
 	samples.EncodeURL()
 	samples.DecodeURL()
 	samples.CheckURL()
-	samples.CheckWithStatusCode()
 	samples.HeaderURL()
 	samples.ConnectTime()
 	samples.Proxy()

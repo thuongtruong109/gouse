@@ -435,3 +435,17 @@ func ArraySum() {
 	println("[rune]: ", gouse.SumArr([]rune{'a', 'b', 'c'}))
 	gouse.Println("[complex]: ", gouse.SumArr([]complex128{1 + 2i, 2 + 3i, 3 + 4i}))
 }
+
+func ArraySort() {
+	intArray := []int{5, 2, 9, 1, 5, 6}
+	gouse.SortArr(intArray)
+	fmt.Println("Sorted integers:", intArray)
+
+	strArray := []string{"apple", "orange", "banana", "grape"}
+	gouse.SortArr(strArray)
+	fmt.Println("Sorted strings:", strArray)
+
+	floatArray := []float64{5.2, 3.1, 7.4, 1.9}
+	gouse.SortArr(floatArray)
+	fmt.Println("Sorted floats:", floatArray)
+}

@@ -113,7 +113,7 @@ func Proxy(port string, urls []string) {
 	router.Run(":" + port)
 }
 
-func ReadRequest(ctxBind func() error, ctxReq func() context.Context, req interface{}) error {
+func ReadRequest(ctxBind func() error, ctxReq func() context.Context, req any) error {
 	validate := validator.New()
 
 	if err := ctxBind(); err != nil {
@@ -125,15 +125,15 @@ func ReadRequest(ctxBind func() error, ctxReq func() context.Context, req interf
 	return validate.StructCtx(ctx, req)
 }
 
-func OpenHref(url string) {
+func OpenUrl(url string) {
 	Cmd("explorer " + url)
 }
 
-func EncodeHref(s string) string {
+func EncodeUrl(s string) string {
 	return url.QueryEscape(s)
 }
 
-func DecodeHref(s string) string {
+func DecodeUrl(s string) string {
 	decoded, err := url.QueryUnescape(s)
 	if err != nil {
 		return s
@@ -141,25 +141,16 @@ func DecodeHref(s string) string {
 	return decoded
 }
 
-func CheckHref(url string) (bool, error) {
-	_, err := http.Get(url)
-	if err != nil {
-		return false, err
-	}
-
-	return true, nil
-}
-
-func CheckHrefStatusCode(url string) (int, error) {
+func CheckUrl(url string) (bool, int, error) {
 	resp, err := http.Get(url)
 	if err != nil {
-		return 0, err
+		return false, 0, err
 	}
 
-	return resp.StatusCode, nil
+	return true, resp.StatusCode, nil
 }
 
-func HrefHeader(url string) (http.Header, error) {
+func HeaderUrl(url string) (http.Header, error) {
 	resp, err := http.Get(url)
 	if err != nil {
 		return nil, err
@@ -168,7 +159,7 @@ func HrefHeader(url string) (http.Header, error) {
 	return resp.Header, nil
 }
 
-func HrefConnectTime(url string) (float64, error) {
+func ConTimeUrl(url string) (float64, error) {
 	startTime := time.Now()
 
 	resp, err := http.Get(url)
