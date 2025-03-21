@@ -2,7 +2,7 @@ package gouse
 
 import "reflect"
 
-func GetTagName(structInstance any) []string {
+func GetTag(structInstance any) []string {
 	structType := reflect.TypeOf(structInstance)
 	var tags []string
 
@@ -13,67 +13,6 @@ func GetTagName(structInstance any) []string {
 
 	return tags
 }
-
-// Usage:
-
-// type User struct {
-// 	Id   int    `json:"id"`
-// 	Name string `json:"name"`
-// }
-
-// func main() {
-// 	u := User{1, "Tom"}
-// 	fmt.Println(GetTagName(u))
-// }
-
-// func Merge(structs ...interface{}) interface{} {
-// 	if len(structs) < 2 {
-// 		panic("At least two structs are required to merge")
-// 	}
-
-// 	fieldValues := make(map[string]interface{})
-
-// 	// Iterate through the input structs
-// 	for _, structInstance := range structs {
-// 		structValue := reflect.ValueOf(structInstance)
-
-// 		// Iterate through the fields of the struct
-// 		for i := 0; i < structValue.NumField(); i++ {
-// 			field := structValue.Type().Field(i)
-// 			fieldName := field.Name
-
-// 			// Store field value in the map
-// 			fieldValues[fieldName] = structValue.Field(i).Interface()
-// 		}
-// 	}
-
-// 	// Create a slice of reflect.StructField for the new struct
-// 	var newFields []reflect.StructField
-
-// 	// Iterate through the fields of the new struct
-// 	for fieldName, value := range fieldValues {
-// 		// Add fields to the new struct dynamically
-// 		newFields = append(newFields, reflect.StructField{
-// 			Name: fieldName,
-// 			Type: reflect.TypeOf(value),
-// 		})
-// 	}
-
-// 	// Create a new struct type
-// 	newStructType := reflect.StructOf(newFields)
-
-// 	// Create a new instance of the struct
-// 	newStructValue := reflect.New(newStructType).Elem()
-
-// 	// Set field values in the new struct
-// 	for _, field := range newFields {
-// 		fieldName := field.Name
-// 		value := fieldValues[fieldName]
-// 		newStructValue.FieldByName(fieldName).Set(reflect.ValueOf(value))
-// 	}
-
-// 	return newStructValue.Interface()
-// }
 
 func MergeStruct(structs ...any) any {
 	if len(structs) < 2 {
@@ -100,7 +39,7 @@ func MergeStruct(structs ...any) any {
 	return resultMap
 }
 
-func RemoveStruct(structInstance any, fields ...string) any {
+func RmStruct(structInstance any, fields ...string) any {
 	structValue := reflect.ValueOf(structInstance)
 	structType := structValue.Type()
 

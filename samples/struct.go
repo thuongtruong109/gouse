@@ -154,7 +154,7 @@ func StructRemove() {
 		Email: "example@gmail.com",
 	}
 
-	gouse.Printf("Struct after removed field: %+v\n", gouse.RemoveStruct(person, "Email"))
+	gouse.Printf("Struct after removed field: %+v\n", gouse.RmStruct(person, "Email"))
 }
 
 /*

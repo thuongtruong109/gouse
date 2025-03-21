@@ -30,10 +30,10 @@ func Disk() {
 	}
 
 	gouse.Println("Disk Information")
-	gouse.Println("Total Space: ", diskInfo.TotalSpace, "MB")
-	gouse.Println("Free Space: ", diskInfo.FreeSpace, "MB")
-	gouse.Println("Used Space: ", diskInfo.UsedSpace, "MB")
-	gouse.Println("Used Space Percent: ", diskInfo.UsedSpacePercent, "%")
+	gouse.Println("Total Space: ", diskInfo.Total, "MB")
+	gouse.Println("Free Space: ", diskInfo.Free, "MB")
+	gouse.Println("Used Space: ", diskInfo.Used, "MB")
+	gouse.Println("Used Space Percent: ", diskInfo.UsedPercent, "%")
 }
 
 /*
@@ -52,10 +52,10 @@ func System() {
 	gouse.Println("Arch: ", systemInfo.Arch)
 	gouse.Println("Hostname: ", systemInfo.Hostname)
 	gouse.Println("Number of Processes: ", systemInfo.NumsProcs)
-	gouse.Println("Total Memory: ", systemInfo.TotalMemory, "MB")
-	gouse.Println("Free Memory: ", systemInfo.FreeMemory, "MB")
-	gouse.Println("Used Memory: ", systemInfo.UsedMemory, "MB")
-	gouse.Println("Used Memory Percent: ", systemInfo.UsedMemoryPercent, "%")
+	// gouse.Println("Total Memory: ", systemInfo.TotalMemory, "MB")
+	// gouse.Println("Free Memory: ", systemInfo.FreeMemory, "MB")
+	// gouse.Println("Used Memory: ", systemInfo.UsedMemory, "MB")
+	// gouse.Println("Used Memory Percent: ", systemInfo.UsedMemoryPercent, "%")
 }
 
 /*

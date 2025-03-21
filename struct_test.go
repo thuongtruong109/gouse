@@ -23,7 +23,7 @@ type Developer struct {
 	Title   string
 }
 
-func TestGetTagName(t *testing.T) {
+func TestGetTag(t *testing.T) {
 	type Person struct {
 		Name    string `json:"name"`
 		Age     int    `json:"age"`
@@ -38,7 +38,7 @@ func TestGetTagName(t *testing.T) {
 		Address: "123 Main St",
 	}
 
-	tags := GetTagName(person)
+	tags := GetTag(person)
 
 	if !Equal(tags, expectedTags) {
 		t.Errorf("GetTagName() = %v, want %v", tags, expectedTags)
@@ -96,7 +96,7 @@ func TestRemoveStruct(t *testing.T) {
 
 	for _, test := range tests {
 		t.Run(test.name, func(t *testing.T) {
-			result := RemoveStruct(test.inputStruct, test.fieldsToRemove...)
+			result := RmStruct(test.inputStruct, test.fieldsToRemove...)
 			expectedResult := reflect.ValueOf(test.expectedResult).Interface()
 
 			if !reflect.DeepEqual(result, expectedResult) {
