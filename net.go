@@ -1,7 +1,6 @@
 package gouse
 
 import (
-	"context"
 	"io"
 	"net"
 	"net/http"
@@ -12,7 +11,6 @@ import (
 	"net/url"
 
 	"github.com/gin-gonic/gin"
-	"github.com/go-playground/validator/v10"
 )
 
 func ScanPort(protocol, hostname string, start, end int) {
@@ -111,18 +109,6 @@ func Proxy(port string, urls []string) {
 	router.HEAD("*path", _handleRequest(urls))
 
 	router.Run(":" + port)
-}
-
-func ReadRequest(ctxBind func() error, ctxReq func() context.Context, req any) error {
-	validate := validator.New()
-
-	if err := ctxBind(); err != nil {
-		return err
-	}
-
-	ctx := ctxReq()
-
-	return validate.StructCtx(ctx, req)
 }
 
 func OpenUrl(url string) {

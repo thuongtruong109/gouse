@@ -8,22 +8,22 @@ import (
 )
 ```
 
-## 1. Clamp
+## 1. Number clamp
 
 
 
 ```go
-func Clamp() {
+func NumberClamp() {
 	println("Clamp number: ", gouse.Clamp(5, 1, 10))
 }
 ```
 
-## 2. Check in range
+## 2. Number check in range
 
 
 
 ```go
-func CheckInRange() {
+func NumberCheckInRange() {
 	println("Check number is in range: ", gouse.InRange(5, 1, 10))
 }
 ```

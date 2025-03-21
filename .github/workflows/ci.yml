@@ -67,7 +67,6 @@ jobs:
       #   uses: codacy/codacy-analysis-cli-action@master
 
   codeql:
-    name: Analyze
     runs-on: ubuntu-latest
     permissions:
       actions: read
@@ -93,7 +92,6 @@ jobs:
         uses: github/codeql-action/analyze@v2
 
   sonarqube:
-    name: SonarQube
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

@@ -19,7 +19,7 @@ func (f *Function) HighlightImport() string {
 }
 
 func (f *Function) HighlightName() string {
-	return Sprintf("\n## %s. %s\n", f.Order, FirstUpperCase(SpaceCase(f.Name)))
+	return Sprintf("\n## %s. %s\n", f.Order, UpperFirst(SpaceCase(f.Name)))
 }
 
 func (f *Function) HighlightDesc() string {

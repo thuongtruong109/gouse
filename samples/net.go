@@ -6,7 +6,7 @@ import "github.com/thuongtruong109/gouse"
 Description: Check if a URL status
 Input params: (url string)
 */
-func CheckURL() {
+func NetCheckURL() {
 	isOk, statusCode, err := gouse.CheckUrl("https://google.com")
 	if err != nil {
 		panic(err)
@@ -19,7 +19,7 @@ func CheckURL() {
 Description: Calculate the time it takes to connect to a URL
 Input params: (url string)
 */
-func ConnectTime() {
+func NetConnectTime() {
 	connectTime, err := gouse.ConTimeUrl("https://google.com")
 	if err != nil {
 		panic(err)
@@ -32,7 +32,7 @@ func ConnectTime() {
 Description: Encode a URL
 Input params: (url string)
 */
-func EncodeURL() {
+func NetEncodeURL() {
 	println("Encode: ", gouse.EncodeUrl("https://google.com"))
 }
 
@@ -40,7 +40,7 @@ func EncodeURL() {
 Description: Decode a URL
 Input params: (url string)
 */
-func DecodeURL() {
+func NetDecodeURL() {
 	println("Decode: ", gouse.DecodeUrl("https%3A%2F%2Fgoogle.com"))
 }
 
@@ -48,7 +48,7 @@ func DecodeURL() {
 Description: Get the header of a URL
 Input params: (url string)
 */
-func HeaderURL() {
+func NetHeaderURL() {
 	header, err := gouse.HeaderUrl("https://google.com")
 	if err != nil {
 		panic(err)
@@ -61,7 +61,7 @@ func HeaderURL() {
 Description: Check if a port is open
 Input params: (protocol, hostname string, port int)
 */
-func PortChecker() {
+func NetPortChecker() {
 	open := gouse.CheckPort("tcp", "localhost", 1313)
 	gouse.Printf("Port Open: %t\n", open)
 }
@@ -70,7 +70,7 @@ func PortChecker() {
 Description: Scan for open ports on a given host.
 Input params: (protocol, hostname string, startPort, endPort int)
 */
-func PortScanner() {
+func NetPortScanner() {
 	gouse.ScanPort("tcp", "127.0.0.1", 3000, 8080)
 }
 
@@ -78,7 +78,7 @@ func PortScanner() {
 Description: Proxy wrapper to another port
 Input params: (port string, urls []string{})
 */
-func Proxy() {
+func NetProxy() {
 	gouse.Proxy("5000", []string{"http://localhost:3000", "http://localhost:3001"})
 }
 
@@ -86,6 +86,6 @@ func Proxy() {
 Description: Open a URL in the default browser
 Input params: (url string)
 */
-func OpenURL() {
+func NetOpenURL() {
 	gouse.OpenUrl("https://google.com")
 }

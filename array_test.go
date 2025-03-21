@@ -403,24 +403,6 @@ func TestEqual(t *testing.T) {
 	}
 }
 
-func TestSumArr(t *testing.T) {
-	arr := []int{1, 2, 3, 4, 5}
-
-	expected := 15
-	if SumArr(arr) != expected {
-		t.Errorf("Expected %d, got %d", expected, SumArr(arr))
-	}
-}
-
-func TestProductArr(t *testing.T) {
-	arr := []int{1, 2, 3, 4, 5}
-
-	expected := 120
-	if ProductArr(arr) != expected {
-		t.Errorf("Expected %d, got %d", expected, ProductArr(arr))
-	}
-}
-
 func TestUniqueArr(t *testing.T) {
 	t.Parallel()
 
@@ -1341,5 +1323,44 @@ func TestFlatten(t *testing.T) {
 				t.Errorf("expected %v, got %v", test.expected, result)
 			}
 		})
+	}
+}
+
+func _isDifferent[T comparable](arr1, arr2 []T) bool {
+	for i := range arr1 {
+		if arr1[i] != arr2[i] {
+			return true
+		}
+	}
+	return false
+}
+
+func TestShuffle(t *testing.T) {
+	intArr := []int{1, 2, 3, 4, 5}
+	shuffledIntArr := Shuffle(intArr)
+
+	if len(shuffledIntArr) != len(intArr) {
+		t.Errorf("Expected shuffled array to have same length as original, but got length %d", len(shuffledIntArr))
+	}
+
+	if !_isDifferent(intArr, shuffledIntArr) {
+		t.Errorf("Expected shuffled array to be different from original")
+	}
+
+	emptyArr := []int{}
+	shuffledEmptyArr := Shuffle(emptyArr)
+
+	if len(shuffledEmptyArr) != 0 {
+		t.Errorf("Expected shuffled empty array to have length 0, but got length %d", len(shuffledEmptyArr))
+	}
+
+	strArr := []string{"apple", "banana", "cherry"}
+	shuffledStrArr := Shuffle(strArr)
+
+	if len(shuffledStrArr) != len(strArr) {
+		t.Errorf("Expected shuffled array to have same length as original, but got length %d", len(shuffledStrArr))
+	}
+	if !_isDifferent(strArr, shuffledStrArr) {
+		t.Errorf("Expected shuffled array to be different from original")
 	}
 }

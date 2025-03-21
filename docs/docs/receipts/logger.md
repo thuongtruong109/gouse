@@ -8,44 +8,44 @@ import (
 )
 ```
 
-## 1. Write log default
+## 1. Logger write default
 
 Description: Write log to file (as default)<br>Input params: (logId, logMessage, output string)<br>
 
 ```go
-func WriteLogDefault() {
+func LoggerWriteDefault() {
 	gouse.WriteLogDefault("id_1", "log message", "output.log")
 }
 ```
 
-## 2. Write log as gouse
+## 2. Logger write as gouse
 
 Description: Write log to file (as Gouse style format)<br>Input params: (prefix, msg, filePath string, err ...interface{})<br>
 
 ```go
-func WriteLogAsGouse() {
+func LoggerWriteAsGouse() {
 	gouse.WriteLog("[POST]", "message", "output.log", "error")
 }
 ```
 
-## 3. Write log with type
+## 3. Logger write with type
 
 Description: Write log by types to file (as Gouse style format)<br>Input params: (msg string, err interface{})<br>
 
 ```go
-func WriteLogWithType() {
+func LoggerWriteWithType() {
 	gouse.WriteErrorLog("log message", "error")
 	gouse.WriteInfoLog("log message")
 	gouse.WriteAccessLog("log message")
 }
 ```
 
-## 4. Auto rotate truncate log
+## 4. Logger auto rotate truncate
 
 Description: Truncate log file<br>Input params: (output string, maxFileSize ...int64)<br>
 
 ```go
-func AutoRotateTruncateLog() {
+func LoggerAutoRotateTruncate() {
 	gouse.RotateLog("output.log", 1024)
 }
 ```

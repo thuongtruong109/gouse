@@ -11,6 +11,8 @@ import (
 	"os/signal"
 	"sync"
 	"time"
+
+	"github.com/go-playground/validator/v10"
 )
 
 type ILb struct {
@@ -66,7 +68,7 @@ func _lbHandler(w http.ResponseWriter, r *http.Request) {
 	reverseProxy.ServeHTTP(w, r)
 }
 
-func IsAlive(url *url.URL) bool {
+func _isAlive(url *url.URL) bool {
 	conn, err := net.DialTimeout("tcp", url.Host, time.Minute*1)
 	if err != nil {
 		log.Printf("Unreachable tp %v, error:%v", url.Host, err.Error())
@@ -93,7 +95,7 @@ func HealthCheck() {
 				log.Print(err.Error())
 				continue
 			}
-			isAlive := IsAlive(pingURL)
+			isAlive := _isAlive(pingURL)
 			backend.SetDead(!isAlive)
 			msg := "alive"
 			if !isAlive {
@@ -167,4 +169,16 @@ func (igs *IGracefulShutdown) GracefulShutdown() {
 		}
 	}()
 	Println(srv.ListenAndServe())
+}
+
+func Validate(ctxBind func() error, ctxReq func() context.Context, req any) error {
+	validate := validator.New()
+
+	if err := ctxBind(); err != nil {
+		return err
+	}
+
+	ctx := ctxReq()
+
+	return validate.StructCtx(ctx, req)
 }

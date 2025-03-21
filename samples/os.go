@@ -5,7 +5,7 @@ import "github.com/thuongtruong109/gouse"
 /*
 Description: Get CPU information
 */
-func Cpu() {
+func OsCpu() {
 	cpuInfo, err := gouse.CPU()
 	if err != nil {
 		gouse.Println("Error: ", err)
@@ -22,7 +22,7 @@ func Cpu() {
 /*
 Description: Get Disk information
 */
-func Disk() {
+func OsDisk() {
 	diskInfo, err := gouse.Disk()
 	if err != nil {
 		gouse.Println("Error: ", err)
@@ -39,7 +39,7 @@ func Disk() {
 /*
 Description: Get Memory information
 */
-func System() {
+func OsSystem() {
 	systemInfo, err := gouse.System()
 	if err != nil {
 		gouse.Println("Error: ", err)

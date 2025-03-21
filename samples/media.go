@@ -13,7 +13,7 @@ import (
 Description: Create a canvas with a white background and save it as a PNG file
 Input params: (size int, background string)
 */
-func Canvas() {
+func MediaCanvas() {
 	avatar, err := gouse.CreateCanvas(200, "#FFFFFF")
 	if err != nil {
 		log.Fatal(err)

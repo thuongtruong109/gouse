@@ -1,6 +1,7 @@
 package gouse
 
 import (
+	"math/rand/v2"
 	"reflect"
 	"sort"
 )
@@ -57,62 +58,6 @@ func Intersect[T comparable](slices ...[]T) []T {
 	return intersect
 }
 
-func IndexBy[T comparable](arr []T, f func(T) bool) int {
-	for i, v := range arr {
-		if f(v) {
-			return i
-		}
-	}
-	return -1
-}
-
-func KeyBy[T comparable](arr []T, f func(T) bool) int {
-	return IndexBy(arr, f)
-}
-
-func FilterBy[T comparable](arr []T, f func(T) bool) []T {
-	var res []T
-	for _, v := range arr {
-		if f(v) {
-			res = append(res, v)
-		}
-	}
-	return res
-}
-
-func RejectBy[T comparable](arr []T, f func(T) bool) []T {
-	var res []T
-	for _, v := range arr {
-		if !f(v) {
-			res = append(res, v)
-		}
-	}
-	return res
-}
-
-func FindBy[T comparable](arr []T, f func(T) bool) T {
-	for _, v := range arr {
-		if f(v) {
-			return v
-		}
-	}
-	return arr[0]
-}
-
-func ForBy[T comparable](arr []T, f func(T)) {
-	for _, v := range arr {
-		f(v)
-	}
-}
-
-func MapBy[T comparable, R comparable](arr []T, f func(T) R) []R {
-	var res []R
-	for _, v := range arr {
-		res = append(res, f(v))
-	}
-	return res
-}
-
 func IncludesArr[T comparable](array []T, value T) bool {
 	for _, v := range array {
 		if v == value {
@@ -132,22 +77,6 @@ func Equal[T comparable](a, b []T) bool {
 		}
 	}
 	return true
-}
-
-func SumArr[T Number | complex64 | complex128](arr []T) T {
-	var sum T
-	for _, v := range arr {
-		sum += v
-	}
-	return sum
-}
-
-func ProductArr[T Number | complex64 | complex128](arr []T) T {
-	var product T = 1
-	for _, v := range arr {
-		product *= v
-	}
-	return product
 }
 
 func UniqueArr[T comparable](arr []T) []T {
@@ -402,4 +331,68 @@ func Flatten(input any) []any {
 	}
 
 	return result
+}
+
+func Shuffle[T comparable](arr []T) []T {
+	var shuffled []T
+	for _, i := range rand.Perm(len(arr)) {
+		shuffled = append(shuffled, arr[i])
+	}
+	return shuffled
+}
+
+func IndexBy[T comparable](arr []T, f func(T) bool) int {
+	for i, v := range arr {
+		if f(v) {
+			return i
+		}
+	}
+	return -1
+}
+
+func KeyBy[T comparable](arr []T, f func(T) bool) int {
+	return IndexBy(arr, f)
+}
+
+func FilterBy[T comparable](arr []T, f func(T) bool) []T {
+	var res []T
+	for _, v := range arr {
+		if f(v) {
+			res = append(res, v)
+		}
+	}
+	return res
+}
+
+func RejectBy[T comparable](arr []T, f func(T) bool) []T {
+	var res []T
+	for _, v := range arr {
+		if !f(v) {
+			res = append(res, v)
+		}
+	}
+	return res
+}
+
+func FindBy[T comparable](arr []T, f func(T) bool) T {
+	for _, v := range arr {
+		if f(v) {
+			return v
+		}
+	}
+	return arr[0]
+}
+
+func ForBy[T comparable](arr []T, f func(T)) {
+	for _, v := range arr {
+		f(v)
+	}
+}
+
+func MapBy[T comparable, R comparable](arr []T, f func(T) R) []R {
+	var res []R
+	for _, v := range arr {
+		res = append(res, f(v))
+	}
+	return res
 }

@@ -78,14 +78,6 @@ func CustomCase(s, sep string) string {
 	return _concatCase(s, sep)
 }
 
-func FirstUpperCase(s string) string {
-	if len(s) == 0 {
-		return s
-	}
-
-	return string(Upper(s[0])) + s[1:]
-}
-
 func IsLetter[T byte | rune](char T) bool {
 	return (char >= 'a' && char <= 'z') || (char >= 'A' && char <= 'Z')
 }

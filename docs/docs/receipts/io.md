@@ -10,12 +10,12 @@ import (
 )
 ```
 
-## 1. Create path
+## 1. Io create path
 
 Description: Create a path where file to be created.<br>Input params: (path string)<br>
 
 ```go
-func CreatePath() {
+func IoCreatePath() {
 	relativePath := "tmp/example.txt"
 
 	if err := gouse.CreatePath(relativePath); err != nil {
@@ -26,12 +26,12 @@ func CreatePath() {
 }
 ```
 
-## 2. Read path
+## 2. Io read path
 
 Description: Read the path where file to be read.<br>Input params: (path string)<br>
 
 ```go
-func ReadPath() {
+func IoReadPath() {
 	relativePath := "tmp/example.txt"
 
 	content, err := gouse.ReadPath(relativePath)
@@ -43,12 +43,12 @@ func ReadPath() {
 }
 ```
 
-## 3. Write path
+## 3. Io write path
 
 Description: Write content to the path where file to be updated.<br>Input params: (path string, content []byte)<br>
 
 ```go
-func WritePath() {
+func IoWritePath() {
 	relativePath := "tmp/example.txt"
 
 	newContent := []byte("This is a new content")
@@ -61,12 +61,12 @@ func WritePath() {
 }
 ```
 
-## 4. Create dir
+## 4. Io create dir
 
 Description: Create folder.<br>Input params: (folderName string)<br>
 
 ```go
-func CreateDir() {
+func IoCreateDir() {
 	err2 := gouse.CreateDir("tmp")
 	if err2 != nil {
 		println(err2.Error())
@@ -75,12 +75,12 @@ func CreateDir() {
 }
 ```
 
-## 5. Current dir
+## 5. Io current dir
 
 Description: Get current folder.<br>
 
 ```go
-func CurrentDir() {
+func IoCurrentDir() {
 	data, err := gouse.CurrentDir()
 	if err != nil {
 		println(err.Error())
@@ -91,12 +91,12 @@ func CurrentDir() {
 }
 ```
 
-## 6. Hierarchy dir
+## 6. Io hierarchy dir
 
 Description: Get the folder hierarchy.<br>Input params: (position string)<br>
 
 ```go
-func HierarchyDir() {
+func IoHierarchyDir() {
 	data, err := gouse.HierarchyDir(".")
 	if err != nil {
 		println(err.Error())
@@ -109,12 +109,12 @@ func HierarchyDir() {
 }
 ```
 
-## 7. Check dir
+## 7. Io check dir
 
 Description: Check if the folder exists.<br>Input params: (dirName string)<br>
 
 ```go
-func CheckDir() {
+func IoCheckDir() {
 	isExist, err1 := gouse.IsExistDir("tmp")
 	if err1 != nil {
 		println(err1.Error())
@@ -127,12 +127,12 @@ func CheckDir() {
 }
 ```
 
-## 8. Ls dir
+## 8. Io ls dir
 
 Description: List all files in the folder.<br>Input params: (position string)<br>
 
 ```go
-func LsDir() {
+func IoLsDir() {
 	data, err := gouse.LsDir(".")
 	if err != nil {
 		println(err.Error())
@@ -145,12 +145,12 @@ func LsDir() {
 }
 ```
 
-## 9. Remove dir
+## 9. Io remove dir
 
 Description: Remove folder.<br>Input params: (dirName string)<br>
 
 ```go
-func RemoveDir() {
+func IoRemoveDir() {
 	err3 := gouse.RemoveDir("tmp")
 	if err3 != nil {
 		println(err3.Error())
@@ -159,12 +159,12 @@ func RemoveDir() {
 }
 ```
 
-## 10. Append to file
+## 10. Io append to file
 
 Description: Append data to the file.<br>Input params: (fileName string, data []string)<br>
 
 ```go
-func AppendToFile() {
+func IoAppendToFile() {
 	err := gouse.AppendFile("data.json", []string{"this is data 3", "this is data 4"})
 	if err != nil {
 		println(err.Error())
@@ -173,12 +173,12 @@ func AppendToFile() {
 }
 ```
 
-## 11. Clean file
+## 11. Io clean file
 
 Description: Clean the file.<br>Input params: (fileName string)<br>
 
 ```go
-func CleanFile() {
+func IoCleanFile() {
 	err := gouse.CleanFile("data.json")
 	if err != nil {
 		println(err.Error())
@@ -194,12 +194,12 @@ func CleanFile() {
 }
 ```
 
-## 12. Copy file
+## 12. Io copy file
 
 Description: Copy content from one file to another.<br>Input params: (sourceName string, destinationName string)<br>
 
 ```go
-func CopyFile() {
+func IoCopyFile() {
 	err := gouse.CopyFile("data.json", "data2.json")
 	if err != nil {
 		println(err.Error())
@@ -208,12 +208,12 @@ func CopyFile() {
 }
 ```
 
-## 13. Create file
+## 13. Io create file
 
 Description: Create a file.<br>Input params: (fileName string)<br>
 
 ```go
-func CreateFile() {
+func IoCreateFile() {
 	err := gouse.CreateFile("data.json")
 	if err != nil {
 		println(err.Error())
@@ -222,12 +222,12 @@ func CreateFile() {
 }
 ```
 
-## 14. File info
+## 14. Io file info
 
 Description: Get file info.<br>Input params: (fileName string)<br>
 
 ```go
-func FileInfo() {
+func IoFileInfo() {
 	data, err := gouse.FileInfo("main.go")
 	if err != nil {
 		println(err.Error())
@@ -242,12 +242,12 @@ func FileInfo() {
 }
 ```
 
-## 15. Check file
+## 15. Io check file
 
 Description: Check if the file exists.<br>Input params: (fileName string)<br>
 
 ```go
-func CheckFile() {
+func IoCheckFile() {
 	isExist, err := gouse.IsExistFile("data.json")
 	if err != nil {
 		println(err.Error())
@@ -260,12 +260,12 @@ func CheckFile() {
 }
 ```
 
-## 16. File obj
+## 16. Io file obj
 
 Description: Write and update object to the file.<br>Input params: (fileName string, data interface{})<br>
 
 ```go
-func FileObj() {
+func IoFileObj() {
 	type User struct {
 		Name string
 		Age  int
@@ -330,12 +330,12 @@ func FileObj() {
 }
 ```
 
-## 17. Read file by line
+## 17. Io read file by line
 
 Description: Read file by line.<br>Input params: (fileName string)<br>
 
 ```go
-func ReadFileByLine() {
+func IoReadFileByLine() {
 	data, err := gouse.ReadFileByLine("main.go")
 	if err != nil {
 		println(err.Error())
@@ -346,12 +346,12 @@ func ReadFileByLine() {
 }
 ```
 
-## 18. Remove file
+## 18. Io remove file
 
 Description: Remove file.<br>Input params: (fileName string)<br>
 
 ```go
-func RemoveFile() {
+func IoRemoveFile() {
 	err := gouse.RemoveFile("data.json")
 	if err != nil {
 		println(err.Error())
@@ -360,12 +360,12 @@ func RemoveFile() {
 }
 ```
 
-## 19. Rename file
+## 19. Io rename file
 
 Description: Rename file.<br>Input params: (oldName string, newName string)<br>
 
 ```go
-func RenameFile() {
+func IoRenameFile() {
 	err := gouse.RenameFile("data.json", "data2.json")
 	if err != nil {
 		println(err.Error())
@@ -374,12 +374,12 @@ func RenameFile() {
 }
 ```
 
-## 20. Truncate file
+## 20. Io truncate file
 
 Description: Truncate data of file.<br>Input params: (fileName string, size int64)<br>
 
 ```go
-func TruncateFile() {
+func IoTruncateFile() {
 	err := gouse.TruncateFile("data.json", 10)
 	if err != nil {
 		println(err.Error())
@@ -388,12 +388,12 @@ func TruncateFile() {
 }
 ```
 
-## 21. Write to file
+## 21. Io write to file
 
 Description: Write data to file.<br>Input params: (fileName string, data []string)<br>
 
 ```go
-func WriteToFile() {
+func IoWriteToFile() {
 	err := gouse.WriteFile("data.json", []string{"this is data 1", "this is data 2"})
 	if err != nil {
 		println(err.Error())
@@ -402,12 +402,12 @@ func WriteToFile() {
 }
 ```
 
-## 22. Zip
+## 22. Io zip
 
 Description: Zip files.<br>Input params: (zipFileName string, filesToZip []string)<br>
 
 ```go
-func Zip() {
+func IoZip() {
 	filesToZip := []string{"file1.txt", "file2.txt"}
 	zipFileName := "archive.zip"
 	err := gouse.Zip(zipFileName, filesToZip)
@@ -419,12 +419,12 @@ func Zip() {
 }
 ```
 
-## 23. Unzip
+## 23. Io unzip
 
 Description: Unzip files.<br>Input params: (zipFileName string, destFolder string)<br>
 
 ```go
-func Unzip() {
+func IoUnzip() {
 	destFolder := "unzipped"
 	zipFileName := "archive.zip"
 	err := gouse.Unzip(zipFileName, destFolder)

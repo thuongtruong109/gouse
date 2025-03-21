@@ -12,12 +12,12 @@ import (
 )
 ```
 
-## 1. Canvas
+## 1. Media canvas
 
 Description: Create a canvas with a white background and save it as a PNG file<br>Input params: (size int, background string)<br>
 
 ```go
-func Canvas() {
+func MediaCanvas() {
 	avatar, err := gouse.CreateCanvas(200, "#FFFFFF")
 	if err != nil {
 		log.Fatal(err)

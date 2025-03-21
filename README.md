@@ -1,7 +1,6 @@
 <div align="center">
     <img src="https://github.com/thuongtruong109/gouse/actions/workflows/ci.yml/badge.svg?branch=main" alt="ci_status">
-    <img src="https://github.com/thuongtruong109/gouse/actions/workflows/analysis.yml/badge.svg?branch=main" alt="codeql_status">
-    <a href="https://sonarcloud.io/summary/new_code?id=thuongtruong1009_gouse"><img src="https://sonarcloud.io/api/project_badges/measure?project=thuongtruong1009_gouse&metric=alert_status" alt="sonar"></a>
+    <a href="https://sonarcloud.io/summary/new_code?id=thuongtruong109_gouse"><img src="https://sonarcloud.io/api/project_badges/measure?project=thuongtruong109_gouse&metric=alert_status" alt="sonar"></a>
     <a href="https://app.codacy.com/gh/thuongtruong109/gouse/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade"><img src="https://app.codacy.com/project/badge/Grade/21f940894abd4e0384ef8b84adc294da" alt="codacy"></a>
     <a href="https://app.deepsource.com/gh/thuongtruong109/gouse/" target="_blank"><img alt="DeepSource" title="DeepSource" src="https://app.deepsource.com/gh/thuongtruong1009/gouse.svg/?label=resolved+issues&show_trend=false&token=VqBk6AsowWePd3khy3AUkvXJ"/></a>
     <a href="https://goreportcard.com/report/thuongtruong109/gouse"><img src="https://goreportcard.com/badge/github.com/thuongtruong109/gouse" alt="go_report_card"></a>

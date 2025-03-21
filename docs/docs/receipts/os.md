@@ -8,12 +8,12 @@ import (
 )
 ```
 
-## 1. Cpu
+## 1. Os cpu
 
 Description: Get CPU information<br>
 
 ```go
-func Cpu() {
+func OsCpu() {
 	cpuInfo, err := gouse.CPU()
 	if err != nil {
 		gouse.Println("Error: ", err)
@@ -28,12 +28,12 @@ func Cpu() {
 }
 ```
 
-## 2. Disk
+## 2. Os disk
 
 Description: Get Disk information<br>
 
 ```go
-func Disk() {
+func OsDisk() {
 	diskInfo, err := gouse.Disk()
 	if err != nil {
 		gouse.Println("Error: ", err)
@@ -48,12 +48,12 @@ func Disk() {
 }
 ```
 
-## 3. System
+## 3. Os system
 
 Description: Get Memory information<br>
 
 ```go
-func System() {
+func OsSystem() {
 	systemInfo, err := gouse.System()
 	if err != nil {
 		gouse.Println("Error: ", err)

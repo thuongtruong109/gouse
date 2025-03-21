@@ -1,6 +1,5 @@
 install:
 	go get -v ./...
-	go mod tidy
 	go mod download
 	go install golang.org/x/tools/cmd/goimports@latest
 	go get golang.org/x/perf/cmd/benchstat
@@ -59,6 +58,7 @@ count:
 	@echo "Done!"
 
 pre:
+	go mod tidy
 	make format && make lint && make test && make build && make doc && make count
 	git add .
 

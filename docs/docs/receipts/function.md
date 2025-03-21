@@ -51,14 +51,14 @@ Description: Lock function execution.<br>
 
 ```go
 func FunctionLock() {
-	oneInOneOutLockFunc := gouse.LockFunc(func(i interface{}) interface{} {
+	oneInOneOutLockFunc := gouse.LockFunc(func(i any) any {
 		return i
-	}).(func(interface{}) interface{})("one input - one output")
+	}).(func(any) any)("one input - one output")
 	gouse.Println(oneInOneOutLockFunc)
 
-	twoInTwoOutLockFunc1, twoInTwoOutLockFunc2 := gouse.LockFunc(func(i1, i2 interface{}) (interface{}, interface{}) {
+	twoInTwoOutLockFunc1, twoInTwoOutLockFunc2 := gouse.LockFunc(func(i1, i2 any) (any, any) {
 		return i1, i2
-	}).(func(interface{}, interface{}) (interface{}, interface{}))("two input - two output (a)", "two input - two output (b)")
+	}).(func(any, any) (any, any))("two input - two output (a)", "two input - two output (b)")
 	gouse.Println(twoInTwoOutLockFunc1, twoInTwoOutLockFunc2)
 
 	gouse.LockFunc(func() {
@@ -82,21 +82,21 @@ Description: Parallelize multi functions execution.<br>Input params: (...func())
 ```go
 func FunctionParallel() {
 	function1 := func() {
-		for i := 0; i < 5; i++ {
+		for range 5 {
 			time.Sleep(100 * time.Millisecond)
 			gouse.Println("Function 1 is executing")
 		}
 	}
 
 	function2 := func() {
-		for i := 0; i < 5; i++ {
+		for range 5 {
 			time.Sleep(200 * time.Millisecond)
 			gouse.Println("Function 2 is executing")
 		}
 	}
 
 	function3 := func() {
-		for i := 0; i < 5; i++ {
+		for range 5 {
 			time.Sleep(300 * time.Millisecond)
 			gouse.Println("Function 3 is executing")
 		}
@@ -147,12 +147,12 @@ func FunctionRunTime() {
 }
 ```
 
-## 8. Func defer wrapper
+## 8. Function defer wrapper
 
 Description: Wrap defer function<br>Input params: (...func())<br>
 
 ```go
-func FuncDeferWrapper() {
+func FunctionDeferWrapper() {
 	gouse.DeferWrapper(
 		func() error {
 			gouse.Println("Connecting to database...")

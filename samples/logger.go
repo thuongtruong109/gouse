@@ -6,7 +6,7 @@ import "github.com/thuongtruong109/gouse"
 Description: Write log to file (as default)
 Input params: (logId, logMessage, output string)
 */
-func WriteLogDefault() {
+func LoggerWriteDefault() {
 	gouse.WriteLogDefault("id_1", "log message", "output.log")
 }
 
@@ -14,7 +14,7 @@ func WriteLogDefault() {
 Description: Write log to file (as Gouse style format)
 Input params: (prefix, msg, filePath string, err ...interface{})
 */
-func WriteLogAsGouse() {
+func LoggerWriteAsGouse() {
 	gouse.WriteLog("[POST]", "message", "output.log", "error")
 }
 
@@ -22,7 +22,7 @@ func WriteLogAsGouse() {
 Description: Write log by types to file (as Gouse style format)
 Input params: (msg string, err interface{})
 */
-func WriteLogWithType() {
+func LoggerWriteWithType() {
 	gouse.WriteErrorLog("log message", "error")
 	gouse.WriteInfoLog("log message")
 	gouse.WriteAccessLog("log message")
@@ -32,6 +32,6 @@ func WriteLogWithType() {
 Description: Truncate log file
 Input params: (output string, maxFileSize ...int64)
 */
-func AutoRotateTruncateLog() {
+func LoggerAutoRotateTruncate() {
 	gouse.RotateLog("output.log", 1024)
 }

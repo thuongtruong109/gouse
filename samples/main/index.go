@@ -14,6 +14,7 @@ func main() {
 		arraySample()
 		cacheSample()
 		chartSample()
+		colorSample()
 		configSample()
 		connectionSample()
 		consoleSample()
@@ -21,7 +22,6 @@ func main() {
 		cryptoSample()
 		dateSample()
 		functionSample()
-		helperSample()
 		ioSample()
 		loggerSample()
 		mathSample()
@@ -35,6 +35,7 @@ func main() {
 		structSample()
 		timeSample()
 		typeSample()
+		utilsSample()
 	} else {
 		print("Please enable isDev flag to run samples")
 	}
@@ -43,31 +44,43 @@ func main() {
 func apiSample() {
 	samples.Loadbalancer()
 	samples.GracefulShutdown()
+	// samples.Validate()
 }
 
 func arraySample() {
-	samples.ArrayEqual()
+	samples.ArrayMin()
+	samples.ArrayMax()
+	samples.ArrayIntersect()
 	samples.ArrayIncludes()
+	samples.ArrayEqual()
+	samples.ArrayUnique()
 	samples.ArrayMost()
-	samples.ArraySum()
+	samples.ArrayLeast()
 	samples.ArrayChunk()
 	samples.ArrayDifference()
 	samples.ArrayDrop()
-	samples.ArrayIndex()
+	samples.ArrayFill()
+	samples.ArrayShift()
+	samples.ArrayUnshift()
+	samples.ArrayPop()
+	samples.ArrayPush()
+	samples.ArraySlice()
+	samples.ArraySplice()
+	samples.ArrayTake()
+	samples.ArrayReverse()
+	samples.ArrayIndexOf()
 	samples.ArrayMerge()
 	samples.ArrayCompact()
-
-	samples.ArrayIntersect()
-	samples.ArrayMin()
-	samples.ArrayMax()
-
-	samples.ArrayKeyBy()
-	samples.ArrayIndexBy()
+	samples.ArrayFlatten()
+	samples.ArraySort()
+	samples.ArrayShuffle()
 	samples.ArrayFilterBy()
-	samples.ArrayRejectBy()
 	samples.ArrayFindBy()
 	samples.ArrayForBy()
+	samples.ArrayIndexBy()
+	samples.ArrayKeyBy()
 	samples.ArrayMapBy()
+	samples.ArrayRejectBy()
 }
 
 func cacheSample() {
@@ -79,6 +92,14 @@ func chartSample() {
 	samples.ChartBar()
 	samples.ChartLine()
 	samples.ChartPie()
+}
+
+func colorSample() {
+	// samples.ColorHueToRGB()
+	// samples.ColorHSLAToRGBA()
+	// samples.ColorRGBAToHSLA()
+	// samples.ColorHexToHSLA()
+	// samples.ColorHexToRGBA()
 }
 
 func configSample() {
@@ -126,30 +147,19 @@ func cronSample() {
 }
 
 func cryptoSample() {
-	samples.EncodeData()
-	samples.DecodeData()
-	samples.EncryptPassword()
-	samples.ComparePassword()
-	samples.EncryptFile()
-	samples.DecryptFile()
+	samples.CryptoEncodeData()
+	samples.CryptoDecodeData()
+	samples.CryptoEncryptPassword()
+	samples.CryptoComparePassword()
+	samples.CryptoEncryptFile()
+	samples.CryptoDecryptFile()
 }
 
 func dateSample() {
-	samples.TimeElement()
-
 	samples.DateISO()
 	samples.DateShort()
 	samples.DateLong()
 	samples.DateUTC()
-
-	samples.ToSecond()
-	samples.ToMinute()
-	samples.ToHour()
-	samples.SleepSecond()
-	samples.SleepMinute()
-	samples.SleepHour()
-
-	samples.Clock()
 }
 
 func functionSample() {
@@ -159,52 +169,48 @@ func functionSample() {
 	samples.FunctionInterval()
 	samples.FunctionLock()
 	samples.FunctionRunTime()
-}
-
-func helperSample() {
-	samples.UUID()
-	samples.AutoMarkdownDocument()
-}
-
-func loggerSample() {
-	samples.WriteLogDefault()
-	samples.WriteLogAsGouse()
-	samples.WriteLogWithType()
-	samples.AutoRotateTruncateLog()
+	samples.FunctionDeferWrapper()
+	samples.FunctionParallel()
 }
 
 func ioSample() {
-	samples.CheckDir()
-	samples.CreateDir()
-	samples.RemoveDir()
-	samples.LsDir()
-	samples.HierarchyDir()
-	samples.CurrentDir()
+	samples.IoCheckDir()
+	samples.IoCreateDir()
+	samples.IoRemoveDir()
+	samples.IoLsDir()
+	samples.IoHierarchyDir()
+	samples.IoCurrentDir()
 
-	samples.CheckFile()
-	samples.CreateFile()
-	samples.RemoveFile()
-	samples.ReadFileByLine()
-	samples.FileInfo()
-	samples.RenameFile()
-	samples.CopyFile()
-	samples.TruncateFile()
-	samples.CleanFile()
-	samples.WriteToFile()
-	samples.AppendToFile()
-	samples.FileObj()
+	samples.IoCheckFile()
+	samples.IoCreateFile()
+	samples.IoRemoveFile()
+	samples.IoReadFileByLine()
+	samples.IoFileInfo()
+	samples.IoRenameFile()
+	samples.IoCopyFile()
+	samples.IoTruncateFile()
+	samples.IoCleanFile()
+	samples.IoWriteToFile()
+	samples.IoAppendToFile()
+	samples.IoFileObj()
 
-	samples.CreatePath()
-	samples.ReadPath()
-	samples.WritePath()
+	samples.IoCreatePath()
+	samples.IoReadPath()
+	samples.IoWritePath()
 
-	samples.Zip()
-	samples.Unzip()
+	samples.IoZip()
+	samples.IoUnzip()
+}
+
+func loggerSample() {
+	samples.LoggerWriteDefault()
+	samples.LoggerWriteAsGouse()
+	samples.LoggerWriteWithType()
+	samples.LoggerAutoRotateTruncate()
 }
 
 func mathSample() {
 	samples.CheckNumber()
-
 	samples.Abs()
 	samples.Floor()
 	samples.Ceil()
@@ -215,12 +221,10 @@ func mathSample() {
 	samples.Power()
 	samples.Factorial()
 	samples.Root()
-
 	samples.Log()
 	samples.Pytago()
 	samples.Trigonometry()
 	samples.Transition()
-
 	samples.Rect()
 	samples.Circle()
 	samples.Triangle()
@@ -237,32 +241,35 @@ func mathSample() {
 }
 
 func mediaSample() {
-	samples.Canvas()
-	samples.PngToJpg()
+	samples.MediaCanvas()
+	// samples.MediaPNGToJPG()
 }
 
 func netSample() {
-	samples.OpenURL()
-	samples.EncodeURL()
-	samples.DecodeURL()
-	samples.CheckURL()
-	samples.HeaderURL()
-	samples.ConnectTime()
-	samples.Proxy()
-	samples.PortScanner()
-	samples.PortChecker()
+	samples.NetOpenURL()
+	samples.NetEncodeURL()
+	samples.NetDecodeURL()
+	samples.NetCheckURL()
+	samples.NetHeaderURL()
+	samples.NetConnectTime()
+	samples.NetProxy()
+	samples.NetPortScanner()
+	samples.NetPortChecker()
 }
 
 func numberSample() {
-	samples.Clamp()
-	samples.CheckInRange()
+	samples.NumberClamp()
+	samples.NumberCheckInRange()
+	// samples.NumberSortNum()
 }
 
 func osSample() {
-	samples.System()
-	samples.Disk()
-	samples.Cpu()
-	samples.Profile()
+	// samples.OsIo()
+	samples.OsDisk()
+	samples.OsCpu()
+	// samples.OsMemory()
+	// samples.OsUser()
+	samples.OsSystem()
 }
 
 func randomSample() {
@@ -280,86 +287,78 @@ func regexSample() {
 }
 
 func stringSample() {
-	samples.Capitalize()
-	samples.CamelCase()
-	samples.SnakeCase()
-	samples.KebabCase()
+	samples.StringCapitalize()
+	samples.StringCamelCase()
+	samples.StringSnakeCase()
+	samples.StringKebabCase()
+	samples.StringSpaceCase()
+	samples.StringCustomCase()
 
-	samples.IsLetter()
-	samples.IsDigit()
-	samples.Includes()
-	samples.IsLower()
-	samples.IsUpper()
+	samples.StringIsLetter()
+	samples.StringIsDigit()
+	samples.StringIncludes()
+	samples.StringIsLower()
+	samples.StringIsUpper()
+	samples.StringStartsWith()
+	samples.StringEndsWith()
 
-	samples.Split()
-	samples.Words()
-	samples.Reverse()
-	samples.Lower()
-	samples.Upper()
-	samples.Repeat()
-	samples.Truncate()
-	samples.Replace()
-	samples.Trim()
-	samples.TrimBlank()
-	samples.TrimPrefix()
-	samples.TrimSuffix()
-	samples.Join()
-	samples.Concat()
-	samples.SubStr()
-	samples.Slice()
-	samples.Splice()
-	samples.StartsWith()
-	samples.EndsWith()
-	samples.Escape()
-	samples.Unescape()
-	samples.Pad()
-
-	samples.Count()
-	samples.Lines()
-	samples.Index()
-	samples.RandomChain()
-	samples.At()
-	samples.CodePointAt()
-	samples.CodePoint()
-	samples.FromCodePointAt()
-	samples.FromCodePoint()
+	samples.StringSplit()
+	samples.StringWords()
+	samples.StringReverse()
+	samples.StringLower()
+	samples.StringUpper()
+	samples.StringRepeat()
+	samples.StringTruncate()
+	samples.StringReplace()
+	samples.StringTrim()
+	samples.StringTrimBlank()
+	samples.StringJoin()
+	samples.StringConcat()
+	samples.StringSubStr()
+	samples.StringSlice()
+	samples.StringSplice()
+	samples.StringEscape()
+	samples.StringUnescape()
+	samples.StringPad()
+	samples.StringCount()
+	samples.StringLines()
+	samples.StringIndex()
+	samples.StringAt()
+	samples.StringCodePointAt()
+	samples.StringCodePoint()
+	samples.StringFromCodePointAt()
+	samples.StringFromCodePoint()
 }
 
 func structSample() {
+	// samples.StructGetTag()
 	samples.StructMerge()
 	samples.StructRemove()
 	samples.StructAdd()
 	samples.StructSet()
 	samples.StructGet()
-
 	samples.StructClone()
 	samples.StructHas()
 }
 
 func timeSample() {
 	samples.TimeElement()
-
-	samples.DateISO()
-	samples.DateShort()
-	samples.DateLong()
-	samples.DateUTC()
-
-	samples.ToSecond()
-	samples.ToMinute()
-	samples.ToHour()
-	samples.SleepSecond()
-	samples.SleepMinute()
-	samples.SleepHour()
-
-	samples.Clock()
+	// samples.TimeToSecond()
+	// samples.TimeToMinute()
+	// samples.TimeToHour()
+	// samples.TimeSleepSecond()
+	// samples.TimeSleepMinute()
+	// samples.TimeSleepHour()
+	// samples.TimeClock()
+	// samples.TimeDiff()
+	// samples.TimeDiffNow()
 }
 
 func typeSample() {
+	samples.TypeCheck()
 	samples.TypeStringConvert()
 	samples.TypeStructConvert()
 	samples.TypeCastToString()
-
-	samples.TypeCheck()
 	samples.TypeCheckUUID()
 	samples.TypeCheckGmail()
 	samples.TypeCheckYahoo()
@@ -369,4 +368,11 @@ func typeSample() {
 	samples.TypeCheckUsername()
 	samples.TypeCheckPassword()
 	samples.TypeCheckPhone()
+	// samples.TypeTimeConvert()
+}
+
+func utilsSample() {
+	// samples.SetCtx()
+	// samples.GetCtx()
+	// samples.DetectError()
 }
