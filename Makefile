@@ -7,8 +7,6 @@ install:
 	go install golang.org/x/perf/cmd/benchstat
 	go install honnef.co/go/tools/cmd/staticcheck@latest
 
-	go get github.com/google/go-cmp/cmp
-
 dev:
 	go run samples/main/index.go -isDev=true
 

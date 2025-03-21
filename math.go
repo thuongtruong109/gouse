@@ -1,10 +1,6 @@
 package gouse
 
-import (
-	"math"
-
-	"golang.org/x/exp/constraints"
-)
+import "math"
 
 func Log(number, base int) int {
 	return int(math.Log(float64(number)) / math.Log(float64(base)))
@@ -313,7 +309,7 @@ func PeriSquare[T int | float64](side T) T {
 	return Multi(side, 4)
 }
 
-func DiagSquare[T constraints.Integer | constraints.Float](side T) float64 {
+func DiagSquare[T Number](side T) float64 {
 	return math.Sqrt(float64(side)*float64(side) + float64(side)*float64(side))
 }
 
@@ -357,23 +353,23 @@ func VolSphereF(radius float64) float64 {
 	return (4 / 3) * math.Pi * Pow2(radius)
 }
 
-func AreaCyl[T constraints.Integer | constraints.Float](radius, height T) float64 {
+func AreaCyl[T Number](radius, height T) float64 {
 	return 2 * math.Pi * float64(radius) * float64(height)
 }
 
-func VolCyl[T constraints.Integer | constraints.Float](radius, height T) float64 {
+func VolCyl[T Number](radius, height T) float64 {
 	return math.Pi * Pow2(float64(radius)) * float64(height)
 }
 
-func AreaCone[T constraints.Integer | constraints.Float](radius, height T) float64 {
+func AreaCone[T Number](radius, height T) float64 {
 	return math.Pi * float64(radius) * (float64(radius) + math.Sqrt(float64((radius*radius)+(height*height))))
 }
 
-func VolCone[T constraints.Integer | constraints.Float](radius, height T) float64 {
+func VolCone[T Number](radius, height T) float64 {
 	return (1.0 / 3.0) * math.Pi * Pow2(float64(radius)) * float64(height)
 }
 
-func AreaTrapezoid[T constraints.Integer | constraints.Float](base1, base2, height T) float64 {
+func AreaTrapezoid[T Number](base1, base2, height T) float64 {
 	return 0.5 * float64(base1+base2) * float64(height)
 }
 
@@ -385,7 +381,7 @@ func AreaRhombus[T int | float64](diag1, diag2 T) T {
 	return Div(Multi(diag1, diag2), 2)
 }
 
-func AreaEllipse[T constraints.Integer | constraints.Float](major, minor T) float64 {
+func AreaEllipse[T Number](major, minor T) float64 {
 	return math.Pi * float64(major) * float64(minor)
 }
 

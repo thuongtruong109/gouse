@@ -10,7 +10,7 @@ jobs:
           keys:
             - go-mod-v4-{{ checksum "go.sum" }}
       - run:
-          name: Install Dependencies
+          name: Install dependencies
           command: make install
       - save_cache:
           key: go-mod-v4-{{ checksum "go.sum" }}

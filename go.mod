@@ -22,11 +22,13 @@ require (
 	github.com/shirou/gopsutil/v4 v4.24.6
 	github.com/stretchr/testify v1.10.0
 	golang.org/x/crypto v0.36.0
-	golang.org/x/exp v0.0.0-20250305212735-054e65f0b394
 	gopkg.in/yaml.v2 v2.4.0
 )
 
-require github.com/google/go-cmp v0.7.0 // indirect
+require (
+	github.com/aclements/go-moremath v0.0.0-20210112150236-f10218a38794 // indirect
+	golang.org/x/perf v0.0.0-20250305200902-02a15fd477ba // indirect
+)
 
 require (
 	github.com/alecthomas/chroma v0.10.0 // indirect
