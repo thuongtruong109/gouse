@@ -29,7 +29,7 @@ func TestIsMatchReg(t *testing.T) {
 }
 
 func BenchmarkIsMatchReg(b *testing.B) {
-	for i := 0; i < b.N; i++ {
+	for b.Loop() {
 		IsMatchReg("^[a-zA-Z0-9]{3,20}$", "zoomer")
 	}
 }
@@ -55,8 +55,35 @@ func TestMatchReg(t *testing.T) {
 	}
 }
 
-func BenchmarkMatch(b *testing.B) {
-	for i := 0; i < b.N; i++ {
+func BenchmarkMatchReg(b *testing.B) {
+	for b.Loop() {
 		MatchReg("[A-Z]", "Hello World 123")
+	}
+}
+
+func TestMatchIdxReg(t *testing.T) {
+	arr := []struct {
+		regex    string
+		input    string
+		expected int
+	}{
+		{
+			regex:    "[A-Z]",
+			input:    "Hello World 123",
+			expected: 0,
+		},
+	}
+
+	for _, item := range arr {
+		actual := MatchIdxReg(item.regex, item.input)
+		if actual != item.expected {
+			t.Errorf("Match(%q, %q): expected %d, actual %d", item.regex, item.input, item.expected, actual)
+		}
+	}
+}
+
+func BenchmarkMatchIdxReg(b *testing.B) {
+	for b.Loop() {
+		MatchIdxReg("[A-Z]", "Hello World 123")
 	}
 }

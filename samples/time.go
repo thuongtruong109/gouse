@@ -14,12 +14,12 @@ func TimeElement() {
 	println("Year:", gouse.Year())
 	println("Weekday:", gouse.Weekday())
 	println("Unix:", gouse.Unix())
-	println("UnixNano:", gouse.UnixNano())
-	println("UnixMilli:", gouse.UnixMilli())
-	println("UnixMicro:", gouse.UnixMicro())
-	gouse.Println("UnixMilliToTime:", gouse.UnixMilliToTime(1000000000))
-	gouse.Println("UnixMicroToTime:", gouse.UnixMicroToTime(1000000000))
-	gouse.Println("UnixNanoToTime:", gouse.UnixNanoToTime(1000000000))
+	println("UnixNano:", gouse.Nano())
+	println("UnixMilli:", gouse.Milli())
+	println("UnixMicro:", gouse.Micro())
+	gouse.Println("UnixMilliToTime:", gouse.Milli2Time(1000000000))
+	gouse.Println("UnixMicroToTime:", gouse.Micro2Time(1000000000))
+	gouse.Println("UnixNanoToTime:", gouse.Nano2Time(1000000000))
 }
 
 /*

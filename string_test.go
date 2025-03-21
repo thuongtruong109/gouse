@@ -641,7 +641,7 @@ func TestTrimPrefix(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		actual := TrimPrefix(test.input, test.prefix)
+		actual := TrimPre(test.input, test.prefix)
 		if actual != test.expected {
 			t.Errorf("TrimPrefix(%q, %q): expected %q, actual %q", test.input, test.prefix, test.expected, actual)
 		}
@@ -661,7 +661,7 @@ func TestTrimSuffix(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		actual := TrimSuffix(test.input, test.suffix)
+		actual := TrimSuf(test.input, test.suffix)
 		if actual != test.expected {
 			t.Errorf("TrimSuffix(%q, %q): expected %q, actual %q", test.input, test.suffix, test.expected, actual)
 		}
@@ -823,7 +823,7 @@ func TestEscape(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		actual := Escape(test.input)
+		actual := Esc(test.input)
 		if actual != test.expected {
 			t.Errorf("Escape(%q): expected %q, actual %q", test.input, test.expected, actual)
 		}
@@ -843,7 +843,7 @@ func TestUnescape(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		actual := Unescape(test.input)
+		actual := Unesc(test.input)
 		if actual != test.expected {
 			t.Errorf("Unescape(%q): expected %q, actual %q", test.input, test.expected, actual)
 		}
@@ -866,7 +866,7 @@ func TestPadStart(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		actual := PadStart(test.input, test.length, test.pad)
+		actual := LPad(test.input, test.length, test.pad)
 		if actual != test.expected {
 			t.Errorf("PadStart(%q, %q, %q): expected %q, actual %q", test.input, test.length, test.pad, test.expected, actual)
 		}
@@ -889,7 +889,7 @@ func TestPadEnd(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		actual := PadEnd(test.input, test.length, test.pad)
+		actual := RPad(test.input, test.length, test.pad)
 		if actual != test.expected {
 			t.Errorf("PadEnd(%q, %q, %q): expected %q, actual %q", test.input, test.length, test.pad, test.expected, actual)
 		}
@@ -1047,7 +1047,7 @@ func TestIndex(t *testing.T) {
 	}
 
 	for _, tt := range tests {
-		gotFirst, gotLast := IndexSubStr(tt.args.s, tt.args.substr)
+		gotFirst, gotLast := IdxSubStr(tt.args.s, tt.args.substr)
 
 		if gotFirst != tt.wantFirst {
 			t.Errorf("Index() gotFirst = %v, want %v", gotFirst, tt.wantFirst)
@@ -1112,7 +1112,7 @@ func TestFIndex(t *testing.T) {
 	}
 
 	for _, tt := range tests1 {
-		if got := FIndex(tt.args.s, tt.args.substr); got != tt.want {
+		if got := FirstIdx(tt.args.s, tt.args.substr); got != tt.want {
 			t.Errorf("FIndex() = %v, want %v", got, tt.want)
 		}
 	}
@@ -1163,7 +1163,7 @@ func TestLIndex(t *testing.T) {
 	}
 
 	for _, tt := range tests2 {
-		got := LIndex(tt.args.s, tt.args.substr)
+		got := LastIdx(tt.args.s, tt.args.substr)
 
 		if got != tt.want {
 			t.Errorf("LIndex() = %v, want %v", got, tt.want)

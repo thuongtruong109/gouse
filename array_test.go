@@ -1248,7 +1248,7 @@ func TestCompact(t *testing.T) {
 	}
 }
 
-func TestSortArr(t *testing.T) {
+func TestSort(t *testing.T) {
 	intArray := []int{5, 2, 9, 1, 5, 6}
 	Sort(intArray)
 
@@ -1260,7 +1260,7 @@ func TestSortArr(t *testing.T) {
 	}
 
 	strArray := []string{"apple", "orange", "banana", "grape"}
-	SortArr(strArray)
+	Sort(strArray)
 
 	expected2 := []string{"apple", "banana", "grape", "orange"}
 	for i, v := range strArray {
@@ -1270,7 +1270,7 @@ func TestSortArr(t *testing.T) {
 	}
 
 	floatArray := []float64{5.2, 3.1, 7.4, 1.9}
-	SortArr(floatArray)
+	Sort(floatArray)
 
 	expected3 := []float64{1.9, 3.1, 5.2, 7.4}
 	for i, v := range floatArray {

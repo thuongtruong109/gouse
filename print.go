@@ -8,7 +8,7 @@ import (
 func Sprint(args ...any) string {
 	var result string
 	for i, arg := range args {
-		result += ToString(arg)
+		result += ToStr(arg)
 		if i < len(args)-1 {
 			result += " "
 		}

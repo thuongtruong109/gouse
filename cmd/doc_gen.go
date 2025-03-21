@@ -8,19 +8,6 @@ import (
 	"github.com/thuongtruong109/gouse"
 )
 
-func GenerateDocument(outputPath, newName string) {
-	if len(os.Args) < 2 {
-		println("Please provide at least one path to a file or directory")
-		return
-	}
-
-	clearOutputPath(outputPath, newName)
-
-	for i := 1; i < len(os.Args); i++ {
-		processPath(os.Args[i], outputPath, newName)
-	}
-}
-
 func clearOutputPath(outputPath, newName string) {
 	err := os.RemoveAll(filepath.Join(outputPath, newName))
 	if err != nil {
@@ -86,7 +73,7 @@ func highlightName(text string) string {
 func generateMarkdownFiles(file os.DirEntry, functions []gouse.Function, path, outputPath, newName string) {
 	var result []byte
 
-	result = append(result, []byte(highlightName(gouse.Capitalize(gouse.TrimSuffix(file.Name(), ".go")))+"\n\n")...)
+	result = append(result, []byte(highlightName(gouse.Capitalize(gouse.TrimSuf(file.Name(), ".go")))+"\n\n")...)
 
 	result = append(result, functions[0].HighlightImport()...)
 
@@ -118,6 +105,19 @@ func createFilePath(subPath, fileName string, result []byte) {
 	if err != nil {
 		fmt.Println("Error writing file:", err)
 		return
+	}
+}
+
+func GenerateDocument(outputPath, newName string) {
+	if len(os.Args) < 2 {
+		println("Please provide at least one path to a file or directory")
+		return
+	}
+
+	clearOutputPath(outputPath, newName)
+
+	for i := 1; i < len(os.Args); i++ {
+		processPath(os.Args[i], outputPath, newName)
 	}
 }
 

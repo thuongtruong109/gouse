@@ -54,13 +54,13 @@ func TestUnix(t *testing.T) {
 }
 
 func TestUnixMilli(t *testing.T) {
-	if UnixMilli() != time.Now().UnixNano()/int64(time.Millisecond) {
+	if Milli() != time.Now().UnixNano()/int64(time.Millisecond) {
 		t.Error("UnixMilli() != time.Now().UnixNano()/int64(time.Millisecond)")
 	}
 }
 
 func TestUnixMicro(t *testing.T) {
-	result := UnixMicro()
+	result := Micro()
 	currentTime := time.Now().UnixNano() / int64(time.Microsecond)
 
 	acceptableRange := int64(1000) // 1 millisecond in microseconds
@@ -71,7 +71,7 @@ func TestUnixMicro(t *testing.T) {
 }
 
 func TestUnixNano(t *testing.T) {
-	result := UnixNano()
+	result := Nano()
 	currentTime := time.Now().UnixNano()
 
 	acceptableRange := int64(1000000000) // 1 second in nanoseconds
@@ -82,19 +82,19 @@ func TestUnixNano(t *testing.T) {
 }
 
 func TestUnixMilliToTime(t *testing.T) {
-	if UnixMilliToTime(0) != time.Unix(0, 0) {
+	if Milli2Time(0) != time.Unix(0, 0) {
 		t.Error("UnixMilliToTime(0) != time.Unix(0, 0)")
 	}
 }
 
 func TestUnixMicroToTime(t *testing.T) {
-	if UnixMicroToTime(0) != time.Unix(0, 0) {
+	if Micro2Time(0) != time.Unix(0, 0) {
 		t.Error("UnixMicroToTime(0) != time.Unix(0, 0)")
 	}
 }
 
 func TestUnixNanoToTime(t *testing.T) {
-	if UnixNanoToTime(0) != time.Unix(0, 0) {
+	if Nano2Time(0) != time.Unix(0, 0) {
 		t.Error("UnixNanoToTime(0) != time.Unix(0, 0)")
 	}
 }
@@ -119,7 +119,7 @@ func TestFormatTime(t *testing.T) {
 
 	for _, tc := range tests {
 		t.Run(tc.name, func(t *testing.T) {
-			result := _time2String(tc.input)
+			result := Time2Str(tc.input)
 			if result != tc.expected {
 				t.Errorf("Expected %s, but got %s", tc.expected, result)
 			}

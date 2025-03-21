@@ -16,7 +16,7 @@ func MatchReg(regex, chain string) []string {
 	return result
 }
 
-func MatchIndexReg(regex, chain string) int {
+func MatchIdxReg(regex, chain string) int {
 	for i, v := range chain {
 		if IsMatchReg(regex, string(v)) {
 			return i

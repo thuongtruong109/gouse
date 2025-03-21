@@ -6,23 +6,23 @@ import "github.com/thuongtruong109/gouse"
 Description: Convert string to other type
 */
 func TypeStringConvert() {
-	println("Convert string to int: ", gouse.StringToInt("1"))
-	gouse.Println("Convert string to float: ", gouse.StringToFloat("1.1"))
-	println("Convert string to bool: ", gouse.StringToBool("true"))
-	gouse.Println("Convert string to bytes: ", string(gouse.StringToBytes("1")), "->", gouse.StringToBytes("1"))
-	gouse.Println("Convert strings to bytes: ", string(gouse.StringsToBytes([]string{"1", "2", "3"})), "->", gouse.StringsToBytes([]string{"1", "2", "3"}))
+	println("Convert string to int: ", gouse.Str2Int("1"))
+	gouse.Println("Convert string to float: ", gouse.Str2Float("1.1"))
+	println("Convert string to bool: ", gouse.Str2Bool("true"))
+	gouse.Println("Convert string to bytes: ", string(gouse.Str2Bytes("1")), "->", gouse.Str2Bytes("1"))
+	gouse.Println("Convert strings to bytes: ", string(gouse.Strs2Bytes([]string{"1", "2", "3"})), "->", gouse.Strs2Bytes([]string{"1", "2", "3"}))
 }
 
 /*
 Description: Convert other type to string
 */
 func TypeCastToString() {
-	println("Cast int to string: ", gouse.IntToString(1))
-	gouse.Println("Cast float to string: ", gouse.FloatToString(1.1))
-	println("Cast bool to string: ", gouse.BoolToString(true))
-	println("Cast interface to string: ", gouse.ToString([]int{1, 2, 3}))
-	println("Cast bytes to string: ", gouse.BytesToString([]byte{49, 50, 51}))
-	println("Cast rune to string: ", gouse.RuneToString('a'))
+	println("Cast int to string: ", gouse.Int2Str(1))
+	gouse.Println("Cast float to string: ", gouse.Float2Str(1.1))
+	println("Cast bool to string: ", gouse.Bool2Str(true))
+	println("Cast interface to string: ", gouse.ToStr([]int{1, 2, 3}))
+	println("Cast bytes to string: ", gouse.Bytes2Str([]byte{49, 50, 51}))
+	println("Cast rune to string: ", gouse.Rune2Str('a'))
 }
 
 /*
@@ -41,8 +41,8 @@ func TypeStructConvert() {
 		Contact: "+91 9876543210",
 	}
 
-	println("Struct to string: ", gouse.StructToString(companyInfo))
-	gouse.Println("Struct to map: ", gouse.StructToMap(companyInfo))
+	println("Struct to string: ", gouse.Struct2Str(companyInfo))
+	gouse.Println("Struct to map: ", gouse.Struct2Map(companyInfo))
 }
 
 /*

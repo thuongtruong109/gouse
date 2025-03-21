@@ -486,15 +486,15 @@ func ArraySum() {
 ```go
 func ArraySort() {
 	intArray := []int{5, 2, 9, 1, 5, 6}
-	gouse.SortArr(intArray)
+	gouse.Sort(intArray)
 	fmt.Println("Sorted integers:", intArray)
 
 	strArray := []string{"apple", "orange", "banana", "grape"}
-	gouse.SortArr(strArray)
+	gouse.Sort(strArray)
 	fmt.Println("Sorted strings:", strArray)
 
 	floatArray := []float64{5.2, 3.1, 7.4, 1.9}
-	gouse.SortArr(floatArray)
+	gouse.Sort(floatArray)
 	fmt.Println("Sorted floats:", floatArray)
 }
 ```

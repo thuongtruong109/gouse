@@ -5,6 +5,7 @@ import (
 	"reflect"
 	"strconv"
 	"strings"
+	"time"
 
 	"github.com/google/uuid"
 )
@@ -149,7 +150,7 @@ func IsUUID(input string) (bool, error) {
 	return true, nil
 }
 
-func isMail(emailStr, domain string) (bool, error) {
+func _isMail(emailStr, domain string) (bool, error) {
 	if Includes(emailStr, "@") {
 		if !IsMatchReg(EmailLenReg, emailStr) {
 			return false, ErrorEmailLength
@@ -169,23 +170,23 @@ func isMail(emailStr, domain string) (bool, error) {
 }
 
 func IsGmail(emailStr string) (bool, error) {
-	return isMail(emailStr, "gmail.com")
+	return _isMail(emailStr, "gmail.com")
 }
 
 func IsYahoo(emailStr string) (bool, error) {
-	return isMail(emailStr, "yahoo.com")
+	return _isMail(emailStr, "yahoo.com")
 }
 
 func IsOutlook(emailStr string) (bool, error) {
-	return isMail(emailStr, "outlook.com")
+	return _isMail(emailStr, "outlook.com")
 }
 
 func IsEdu(emailStr string) (bool, error) {
-	return isMail(emailStr, "edu")
+	return _isMail(emailStr, "edu")
 }
 
 func IsEmail(emailStr, customDomain string) (bool, error) {
-	return isMail(emailStr, customDomain)
+	return _isMail(emailStr, customDomain)
 }
 
 func IsUsername(username string) (bool, error) {
@@ -220,7 +221,7 @@ func IsPhone(phone string) (bool, error) {
 	return true, nil
 }
 
-func StructToString(data any) string {
+func Struct2Str(data any) string {
 	v := reflect.ValueOf(data)
 	t := v.Type()
 
@@ -244,7 +245,7 @@ func StructToString(data any) string {
 	return Sprintf("%s{%s}", t.Name(), result)
 }
 
-func StructToMap(data any) map[string]any {
+func Struct2Map(data any) map[string]any {
 	v := reflect.ValueOf(data)
 	t := v.Type()
 
@@ -259,53 +260,53 @@ func StructToMap(data any) map[string]any {
 	return result
 }
 
-func StringToInt(data string) int {
+func Str2Int(data string) int {
 	var result int
 	fmt.Sscanf(data, "%d", &result)
 	return result
 }
 
-func StringToFloat(data string) float64 {
+func Str2Float(data string) float64 {
 	var result float64
 	fmt.Sscanf(data, "%f", &result)
 	return result
 }
 
-func StringToBool(data string) bool {
+func Str2Bool(data string) bool {
 	var result bool
 	fmt.Sscanf(data, "%t", &result)
 	return result
 }
 
-func StringToBytes(data string) []byte {
+func Str2Bytes(data string) []byte {
 	return []byte(data)
 }
 
-func StringsToBytes(data []string) []byte {
+func Strs2Bytes(data []string) []byte {
 	var result []byte
 	for _, v := range data {
-		result = append(result, StringToBytes(v)...)
+		result = append(result, Str2Bytes(v)...)
 	}
 	return result
 }
 
-// func ErrorToString(data error) string {
+// func Error2Str(data error) string {
 // 	return data.Error()
 // }
 
-func IntToString(data int) string {
+func Int2Str(data int) string {
 	return Sprintf("%d", data)
 }
 
-func FloatToString(data float64) string {
+func Float2Str(data float64) string {
 	return Sprintf("%f", data)
 }
 
-func BoolToString(data bool) string {
+func Bool2Str(data bool) string {
 	return Sprintf("%t", data)
 }
 
-func ToString(data any) string {
+func ToStr(data any) string {
 	switch v := data.(type) {
 	case string:
 		return v
@@ -320,15 +321,15 @@ func ToString(data any) string {
 	}
 }
 
-func BytesToString(data []byte) string {
+func Bytes2Str(data []byte) string {
 	return string(data)
 }
 
-func RuneToString(data rune) string {
+func Rune2Str(data rune) string {
 	return string(data)
 }
 
-func MapAsString[T string | []string](data map[string]T) string {
+func Map2Str[T string | []string](data map[string]T) string {
 	var result string
 
 	for key, value := range data {
@@ -338,6 +339,24 @@ func MapAsString[T string | []string](data map[string]T) string {
 	return result
 }
 
-// func formatSlice[T string | []string](values T) string {
-// 	return "\"" + Sprintf("%s", values) + "\""
-// }
+func Time2Str(t time.Time) string {
+	hour := t.Hour()
+	minute := t.Minute()
+	second := t.Second()
+
+	hourStr := strconv.Itoa(hour)
+	minuteStr := strconv.Itoa(minute)
+	secondStr := strconv.Itoa(second)
+
+	if hour < 10 {
+		hourStr = Sprintf("0%s", hourStr)
+	}
+	if minute < 10 {
+		minuteStr = Sprintf("0%s", minuteStr)
+	}
+	if second < 10 {
+		secondStr = Sprintf("0%s", secondStr)
+	}
+
+	return Sprintf("%s:%s:%s", hourStr, minuteStr, secondStr)
+}

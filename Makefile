@@ -1,14 +1,13 @@
 install:
 	go get -v ./...
-	go mod download
 	go mod tidy
+	go mod download
 	go install golang.org/x/tools/cmd/goimports@latest
 	go get golang.org/x/perf/cmd/benchstat
 	go install golang.org/x/perf/cmd/benchstat
 	go install honnef.co/go/tools/cmd/staticcheck@latest
 
 	go get github.com/google/go-cmp/cmp
-	go get golang.org/x/exp/slices
 
 dev:
 	go run samples/main/index.go -isDev=true
@@ -50,11 +49,11 @@ format:
 	gofmt -w -s . && goimports -w . && go fmt ./...
 	@echo "Done!"
 
-# lint:
-# 	@echo "Running lint..."
-# 	export PATH=$PATH:$(go env GOPATH)/bin
-# 	staticcheck ./...
-# 	@echo "Done!"
+lint:
+	@echo "Running lint..."
+	export PATH=$PATH:$(go env GOPATH)/bin
+	staticcheck ./...
+	@echo "Done!"
 
 count:
 	@echo "Counting lines..."
@@ -62,7 +61,7 @@ count:
 	@echo "Done!"
 
 pre:
-	make build && make test && make format && make doc && make count
+	make format && make lint && make test && make build && make doc && make count
 	git add .
 
 clean:

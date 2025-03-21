@@ -69,7 +69,7 @@ func HeaderURL() {
 		panic(err)
 	}
 
-	gouse.Println(gouse.MapAsString(header))
+	gouse.Println(gouse.Map2Str(header))
 }
 ```
 

@@ -18,7 +18,7 @@ Input params: (pattern, input string)
 */
 func RegexMatchIndex() {
 	paragraph := "I think Ruth's dog is cuter than your dog!"
-	matchIdx := gouse.MatchIndexReg(`[^\w\s']`, paragraph)
+	matchIdx := gouse.MatchIdxReg(`[^\w\s']`, paragraph)
 	if matchIdx != -1 {
 		gouse.Printf("Match with regex (index: %d, value: %s)\n", matchIdx, string(paragraph[matchIdx]))
 	} else {

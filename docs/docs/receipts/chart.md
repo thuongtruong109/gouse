@@ -26,7 +26,7 @@ func ChartBar() {
 		},
 	}
 
-	gouse.CreateBarChart(newChart)
+	gouse.BarChart(newChart)
 }
 ```
 
@@ -47,7 +47,7 @@ func ChartLine() {
 		},
 	}
 
-	gouse.CreateLineChart(newChart)
+	gouse.LineChart(newChart)
 }
 ```
 
@@ -74,6 +74,6 @@ func ChartPie() {
 		},
 	}
 
-	gouse.CreatePieChart(newChart)
+	gouse.PieChart(newChart)
 }
 ```

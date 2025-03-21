@@ -31,7 +31,7 @@ func generateBarItems(values []float64) []opts.BarData {
 	return items
 }
 
-func CreateBarChart(options *IBarChartOpts) {
+func BarChart(options *IBarChartOpts) {
 	bar := charts.NewBar()
 
 	bar.SetGlobalOptions(charts.WithTitleOpts(opts.Title{
@@ -71,7 +71,7 @@ func generateLineItems(values []float64) []opts.LineData {
 	return items
 }
 
-func CreateLineChart(options *ILineChartOpts) {
+func LineChart(options *ILineChartOpts) {
 	line := charts.NewLine()
 
 	line.SetGlobalOptions(
@@ -122,7 +122,7 @@ func generatePieItems(ele []IPieChartItem) []opts.PieData {
 	return items
 }
 
-func CreatePieChart(options *IPieChartOpts) {
+func PieChart(options *IPieChartOpts) {
 	pie := charts.NewPie()
 	pie.SetGlobalOptions(
 		charts.WithTitleOpts(

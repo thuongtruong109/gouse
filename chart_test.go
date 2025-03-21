@@ -27,7 +27,7 @@ func TestCreateBarChart(t *testing.T) {
 		},
 	}
 
-	CreateBarChart(options)
+	BarChart(options)
 
 	if _, err := os.Stat(bar_output); os.IsNotExist(err) {
 		t.Errorf("Expected output file 'bar_chart.html' not found")
@@ -71,7 +71,7 @@ func TestCreateLineChart(t *testing.T) {
 		},
 	}
 
-	CreateLineChart(options)
+	LineChart(options)
 
 	if _, err := os.Stat(line_output); os.IsNotExist(err) {
 		t.Errorf("Expected output file 'line_test.html' not found")
@@ -124,7 +124,7 @@ func TestCreatePieChart(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			CreatePieChart(tt.opts)
+			PieChart(tt.opts)
 
 			_, err := os.Stat(tt.expectedOutput)
 			assert.NoError(t, err, "output file should be created")

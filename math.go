@@ -239,7 +239,7 @@ func Mean[T int | float64](nums ...T) T {
 }
 
 func Median[T int | float64](nums ...T) T {
-	Sort(nums)
+	SortNum(nums)
 	n := len(nums)
 
 	if n%2 == 0 {
@@ -421,15 +421,3 @@ func IsPerfectSquare(num int) bool {
 	}
 	return false
 }
-
-// func SumBy(nums []int, fn func(int) int) int {
-// 	var sum int
-// 	for _, v := range nums {
-// 		sum += fn(v)
-// 	}
-// 	return sum
-// }
-
-// func AverageBy(nums []int, fn func(int) int) int {
-// 	return SumBy(nums, fn) / len(nums)
-// }

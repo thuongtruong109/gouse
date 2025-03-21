@@ -66,10 +66,10 @@ func BenchmarkInRange(b *testing.B) {
 	}
 }
 
-func TestSort(t *testing.T) {
+func TestSortNum(t *testing.T) {
 	nums := []int{5, 3, 1, 4, 2}
 
-	result := Sort(nums)
+	result := SortNum(nums)
 
 	for i := range len(result) - 1 {
 		if result[i] > result[i+1] {
@@ -79,7 +79,7 @@ func TestSort(t *testing.T) {
 
 	nums2 := []float64{5.5, 3.3, 1.1, 4.4, 2.2}
 
-	result2 := Sort(nums2)
+	result2 := SortNum(nums2)
 
 	for i := range len(result2) - 1 {
 		if result2[i] > result2[i+1] {
@@ -88,16 +88,16 @@ func TestSort(t *testing.T) {
 	}
 }
 
-func BenchmarkSort(b *testing.B) {
+func BenchmarkSortNum(b *testing.B) {
 	nums := []int{5, 3, 1, 4, 2}
 
 	for i := 0; i < b.N; i++ {
-		Sort(nums)
+		SortNum(nums)
 	}
 
 	nums2 := []float64{5.5, 3.3, 1.1, 4.4, 2.2}
 
 	for i := 0; i < b.N; i++ {
-		Sort(nums2)
+		SortNum(nums2)
 	}
 }

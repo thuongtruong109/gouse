@@ -189,8 +189,8 @@ Input params: (s string, prefix string)
 */
 func TrimPrefix() {
 	var str = "   hello world, this is world   "
-	println("Trim prefix string: ", gouse.TrimPrefix(str, "   "))
-	println("Trim suffix string: ", gouse.TrimSuffix(str, "   "))
+	println("Trim prefix string: ", gouse.TrimPre(str, "   "))
+	println("Trim suffix string: ", gouse.TrimSuf(str, "   "))
 }
 
 /*
@@ -199,7 +199,7 @@ Input params: (s string, suffix string)
 */
 func TrimSuffix() {
 	var str = "   hello world, this is world   "
-	println("Trim suffix string: ", gouse.TrimSuffix(str, "   "))
+	println("Trim suffix string: ", gouse.TrimSuf(str, "   "))
 }
 
 /*
@@ -279,7 +279,7 @@ Input params: (s string)
 */
 func Escape() {
 	var str = "This is a <b>bold</b> statement & \"quote\" – © ®"
-	println("Escape string: ", gouse.Escape(str))
+	println("Escape string: ", gouse.Esc(str))
 }
 
 /*
@@ -288,7 +288,7 @@ Input params: (s string)
 */
 func Unescape() {
 	var str = "This is a &lt;b&gt;bold&lt;/b&gt; statement &amp; &quot;quote&quot; – © ®"
-	println("Unescape string: ", gouse.Unescape(str))
+	println("Unescape string: ", gouse.Unesc(str))
 }
 
 /*
@@ -297,8 +297,8 @@ Input params: (s string, length int, padStr string)
 */
 func Pad() {
 	var str = "hello world"
-	println("Pad-left string: ", gouse.PadStart(str, 20, '$'))
-	println("Pad-right string: ", gouse.PadEnd(str, 20, '@'))
+	println("Pad-left string: ", gouse.LPad(str, 20, '$'))
+	println("Pad-right string: ", gouse.RPad(str, 20, '@'))
 }
 
 /*
@@ -327,28 +327,28 @@ Input params: (s string, substr string)
 func Index() {
 	var str = "hello world, this is world"
 
-	f1, l1 := gouse.IndexSubStr(str, "l")
+	f1, l1 := gouse.IdxSubStr(str, "l")
 	gouse.Printf("First index start at: %d, end at: %d\n", f1, l1)
 
-	f2, l2 := gouse.IndexSubStr(str, "world")
+	f2, l2 := gouse.IdxSubStr(str, "world")
 	gouse.Printf("First index start at: %d, end at: %d\n", f2, l2)
 
-	f3 := gouse.FIndex(str, "l")
+	f3 := gouse.FirstIdx(str, "l")
 	gouse.Println("First index start at: ", f3)
 
-	l3 := gouse.LIndex(str, "world")
+	l3 := gouse.LastIdx(str, "world")
 	gouse.Println("Last index start at: ", l3)
 
-	f4, l4 := gouse.IndexSubStr(str, "oo")
+	f4, l4 := gouse.IdxSubStr(str, "oo")
 	if f4 == -1 || l4 == -1 {
 		gouse.Println("Not found")
 	}
 
-	if gouse.FIndex(str, "oo") == -1 {
+	if gouse.FirstIdx(str, "oo") == -1 {
 		gouse.Println("Not found")
 	}
 
-	if gouse.LIndex(str, "oo") == -1 {
+	if gouse.LastIdx(str, "oo") == -1 {
 		gouse.Println("Not found")
 	}
 }

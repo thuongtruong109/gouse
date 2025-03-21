@@ -536,7 +536,7 @@ func TestIsPhone(t *testing.T) {
 
 /* Testing convert type */
 
-// func TestStructToString(t *testing.T) {
+// func TestStruct2Str(t *testing.T) {
 // 	type testStruct struct {
 // 		One   int
 // 		Two   string
@@ -545,7 +545,7 @@ func TestIsPhone(t *testing.T) {
 
 // 	data := testStruct{1, "two", true}
 
-// 	result := StructToString(data)
+// 	result := Struct2Str(data)
 // 	expected := "testStruct{One: 1, Two: two, Three: true}"
 
 // 	if result != expected {
@@ -562,7 +562,7 @@ func TestStructToMap(t *testing.T) {
 
 	data := testStruct{1, "two", true}
 
-	result := StructToMap(data)
+	result := Struct2Map(data)
 	expected := map[string]interface{}{
 		"One":   1,
 		"Two":   "two",
@@ -576,7 +576,7 @@ func TestStructToMap(t *testing.T) {
 
 func TestStringToInt(t *testing.T) {
 	data := "123"
-	result := StringToInt(data)
+	result := Str2Int(data)
 	expected := 123
 
 	if result != expected {
@@ -586,7 +586,7 @@ func TestStringToInt(t *testing.T) {
 
 func TestStringToFloat(t *testing.T) {
 	data := "123.456"
-	result := StringToFloat(data)
+	result := Str2Float(data)
 	expected := 123.456
 
 	if result != expected {
@@ -596,7 +596,7 @@ func TestStringToFloat(t *testing.T) {
 
 func TestStringToBool(t *testing.T) {
 	data := "true"
-	result := StringToBool(data)
+	result := Str2Bool(data)
 	expected := true
 
 	if result != expected {
@@ -606,7 +606,7 @@ func TestStringToBool(t *testing.T) {
 
 func TestStringToBytes(t *testing.T) {
 	data := "test"
-	result := StringToBytes(data)
+	result := Str2Bytes(data)
 	expected := []byte{116, 101, 115, 116}
 
 	if !reflect.DeepEqual(result, expected) {
@@ -616,7 +616,7 @@ func TestStringToBytes(t *testing.T) {
 
 func TestStringsToBytes(t *testing.T) {
 	data := []string{"test", "test"}
-	result := StringsToBytes(data)
+	result := Strs2Bytes(data)
 	expected := []byte{116, 101, 115, 116, 116, 101, 115, 116}
 
 	if !reflect.DeepEqual(result, expected) {
@@ -624,9 +624,9 @@ func TestStringsToBytes(t *testing.T) {
 	}
 }
 
-func TestIntToString(t *testing.T) {
+func TestInt2Str(t *testing.T) {
 	data := 123
-	result := IntToString(data)
+	result := Int2Str(data)
 	expected := "123"
 
 	if result != expected {
@@ -634,9 +634,9 @@ func TestIntToString(t *testing.T) {
 	}
 }
 
-// func TestFloatToString(t *testing.T) {
+// func TestFloat2Str(t *testing.T) {
 // 	data := 123.456
-// 	result := FloatToString(data)
+// 	result := Float2Str(data)
 // 	expected := "123.456000"
 
 // 	if result != expected {
@@ -644,9 +644,9 @@ func TestIntToString(t *testing.T) {
 // 	}
 // }
 
-func TestBoolToString(t *testing.T) {
+func TestBool2Str(t *testing.T) {
 	data := true
-	result := BoolToString(data)
+	result := Bool2Str(data)
 	expected := "true"
 
 	if result != expected {
@@ -654,9 +654,9 @@ func TestBoolToString(t *testing.T) {
 	}
 }
 
-func TestBytesToString(t *testing.T) {
+func TestBytes2Str(t *testing.T) {
 	data := []byte{116, 101, 115, 116}
-	result := BytesToString(data)
+	result := Bytes2Str(data)
 	expected := "test"
 
 	if result != expected {
@@ -664,9 +664,9 @@ func TestBytesToString(t *testing.T) {
 	}
 }
 
-func TestRuneToString(t *testing.T) {
+func TestRune2Str(t *testing.T) {
 	data := 't'
-	result := RuneToString(data)
+	result := Rune2Str(data)
 	expected := "t"
 
 	if result != expected {
@@ -680,7 +680,7 @@ func TestMapAsString(t *testing.T) {
 		"Two":   "two",
 		"Three": "three",
 	}
-	result := MapAsString(data)
+	result := Map2Str(data)
 	expected := "One: one\nTwo: two\nThree: three\n"
 
 	resultType := reflect.TypeOf(result)
@@ -691,7 +691,7 @@ func TestMapAsString(t *testing.T) {
 	}
 }
 
-// func TestToString(t *testing.T) {
+// func Test2Str(t *testing.T) {
 // 	type testStruct struct {
 // 		One   int
 // 		Two   string
@@ -699,7 +699,7 @@ func TestMapAsString(t *testing.T) {
 // 	}
 
 // 	data := testStruct{1, "two", true}
-// 	result := ToString(data)
+// 	result := 2Str(data)
 // 	expected := "{1 two true}"
 
 // 	if result != expected {
@@ -727,9 +727,9 @@ func TestMapAsString(t *testing.T) {
 // 	}
 // }
 
-// func TestTimeToString(t *testing.T) {
+// func TestTime2Str(t *testing.T) {
 // 	data := time.Date(2015, 1, 1, 0, 0, 0, 0, time.UTC)
-// 	result := TimeToString(data)
+// 	result := Time2Str(data)
 // 	expected := "2015-01-01 00:00:00"
 
 // 	if result != expected {
@@ -747,9 +747,9 @@ func TestMapAsString(t *testing.T) {
 // 	}
 // }
 
-// func TestDurationToString(t *testing.T) {
+// func TestDuration2Str(t *testing.T) {
 // 	data := time.Second
-// 	result := DurationToString(data)
+// 	result := Duration2Str(data)
 // 	expected := "1s"
 
 // 	if result != expected {
@@ -767,9 +767,9 @@ func TestMapAsString(t *testing.T) {
 // 	}
 // }
 
-// func TestByteSizeToString(t *testing.T) {
+// func TestByteSize2Str(t *testing.T) {
 // 	data := ByteSize(1024)
-// 	result := ByteSizeToString(data)
+// 	result := ByteSize2Str(data)
 // 	expected := "1KB"
 
 // 	if result != expected {
@@ -787,9 +787,9 @@ func TestMapAsString(t *testing.T) {
 // 	}
 // }
 
-// func TestComplexToString(t *testing.T) {
+// func TestComplex2Str(t *testing.T) {
 // 	data := complex(1, 1)
-// 	result := ComplexToString(data)
+// 	result := Complex2Str(data)
 // 	expected := "1+1i"
 
 // 	if result != expected {

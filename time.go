@@ -1,9 +1,6 @@
 package gouse
 
-import (
-	"strconv"
-	"time"
-)
+import "time"
 
 func Second() int {
 	return time.Now().Second()
@@ -37,27 +34,27 @@ func Unix() int64 {
 	return time.Now().Unix()
 }
 
-func UnixMilli() int64 {
+func Milli() int64 {
 	return time.Now().UnixNano() / int64(time.Millisecond)
 }
 
-func UnixMicro() int64 {
+func Micro() int64 {
 	return time.Now().UnixNano() / int64(time.Microsecond)
 }
 
-func UnixNano() int64 {
+func Nano() int64 {
 	return time.Now().UnixNano()
 }
 
-func UnixMilliToTime(milli int64) time.Time {
+func Milli2Time(milli int64) time.Time {
 	return time.Unix(0, milli*int64(time.Millisecond))
 }
 
-func UnixMicroToTime(micro int64) time.Time {
+func Micro2Time(micro int64) time.Time {
 	return time.Unix(0, micro*int64(time.Microsecond))
 }
 
-func UnixNanoToTime(nano int64) time.Time {
+func Nano2Time(nano int64) time.Time {
 	return time.Unix(0, nano)
 }
 
@@ -85,28 +82,6 @@ func SleepHour(hour int) {
 	time.Sleep(ToHour(hour))
 }
 
-func _time2String(t time.Time) string {
-	hour := t.Hour()
-	minute := t.Minute()
-	second := t.Second()
-
-	hourStr := strconv.Itoa(hour)
-	minuteStr := strconv.Itoa(minute)
-	secondStr := strconv.Itoa(second)
-
-	if hour < 10 {
-		hourStr = Sprintf("0%s", hourStr)
-	}
-	if minute < 10 {
-		minuteStr = Sprintf("0%s", minuteStr)
-	}
-	if second < 10 {
-		secondStr = Sprintf("0%s", secondStr)
-	}
-
-	return Sprintf("%s:%s:%s", hourStr, minuteStr, secondStr)
-}
-
 func TerminalClock() {
 	msgTime := make(chan time.Time)
 
@@ -119,7 +94,7 @@ func TerminalClock() {
 
 	for t := range msgTime {
 		Cls()
-		Println(_time2String(t))
+		Println(Time2Str(t))
 	}
 }
 

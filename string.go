@@ -2,8 +2,6 @@ package gouse
 
 import "html"
 
-/* Case conversion */
-
 func Capitalize(sentence string) string {
 	sentenceBytes := []byte(sentence)
 
@@ -36,7 +34,7 @@ func CamelCase(s string) string {
 	return result
 }
 
-func concatCase(s string, sep string) string {
+func _concatCase(s string, sep string) string {
 	spliStr := Split(s, " ")
 	var result string
 
@@ -65,19 +63,19 @@ func concatCase(s string, sep string) string {
 }
 
 func SnakeCase(s string) string {
-	return concatCase(s, "_")
+	return _concatCase(s, "_")
 }
 
 func KebabCase(s string) string {
-	return concatCase(s, "-")
+	return _concatCase(s, "-")
 }
 
 func SpaceCase(s string) string {
-	return concatCase(s, " ")
+	return _concatCase(s, " ")
 }
 
 func CustomCase(s, sep string) string {
-	return concatCase(s, sep)
+	return _concatCase(s, sep)
 }
 
 func FirstUpperCase(s string) string {
@@ -88,8 +86,6 @@ func FirstUpperCase(s string) string {
 	return string(Upper(s[0])) + s[1:]
 }
 
-/* Character checking */
-
 func IsLetter[T byte | rune](char T) bool {
 	return (char >= 'a' && char <= 'z') || (char >= 'A' && char <= 'Z')
 }
@@ -99,18 +95,18 @@ func IsDigit[T byte | rune](char T) bool {
 }
 
 func Includes(s string, substr string) bool {
-	return FIndex(s, substr) != -1
+	return FirstIdx(s, substr) != -1
 }
 
 func StartsWith(s string, substr string) bool {
-	return FIndex(s, substr) == 0
+	return FirstIdx(s, substr) == 0
 }
 
 func EndsWith(s string, substr string) bool {
 	if len(s) < len(substr) {
 		return false
 	}
-	return LIndex(s, substr) == len(s)-len(substr)
+	return LastIdx(s, substr) == len(s)-len(substr)
 }
 
 func IsLower[T byte | rune](char T) bool {
@@ -120,8 +116,6 @@ func IsLower[T byte | rune](char T) bool {
 func IsUpper[T byte | rune](char T) bool {
 	return char >= 'A' && char <= 'Z'
 }
-
-/* Formatting */
 
 func Split(s string, separator string) []string {
 	var result []string
@@ -225,7 +219,6 @@ func UpperFirst(s string) string {
 		return s
 	}
 
-	// it is capital case
 	return string(Upper(s[0])) + s[1:]
 }
 
@@ -331,7 +324,7 @@ func TrimBlank(s string) string {
 	return s[start : end+1]
 }
 
-func TrimPrefix(s, prefix string) string {
+func TrimPre(s, prefix string) string {
 	if len(s) < len(prefix) {
 		return s
 	}
@@ -343,7 +336,7 @@ func TrimPrefix(s, prefix string) string {
 	return s
 }
 
-func TrimSuffix(s, suffix string) string {
+func TrimSuf(s, suffix string) string {
 	if len(s) < len(suffix) {
 		return s
 	}
@@ -484,7 +477,7 @@ func Splice(s string, start, replaceCount int, items ...string) string {
 	return s[:start] + Join(items, "") + s[start+replaceCount:]
 }
 
-func Escape(s string) string {
+func Esc(s string) string {
 	var result string
 
 	for _, v := range s {
@@ -523,7 +516,7 @@ func Escape(s string) string {
 	return result
 }
 
-func Unescape(s string) string {
+func Unesc(s string) string {
 	s = html.UnescapeString(s)
 
 	for i := 0; i < len(s); i++ {
@@ -537,7 +530,7 @@ func Unescape(s string) string {
 	return s
 }
 
-func pad(s string, addAmount int, padChar byte) string {
+func _pad(s string, addAmount int, padChar byte) string {
 	padding := make([]byte, addAmount-len(s))
 	for i := range padding {
 		padding[i] = padChar
@@ -546,22 +539,20 @@ func pad(s string, addAmount int, padChar byte) string {
 	return string(padding)
 }
 
-func PadStart(s string, addAmount int, padChar byte) string {
+func LPad(s string, addAmount int, padChar byte) string {
 	if len(s) >= addAmount {
 		return s
 	}
-	return pad(s, addAmount, padChar) + s
+	return _pad(s, addAmount, padChar) + s
 }
 
-func PadEnd(s string, addAmount int, padChar byte) string {
+func RPad(s string, addAmount int, padChar byte) string {
 	if len(s) >= addAmount {
 		return s
 	}
 
-	return s + pad(s, addAmount, padChar)
+	return s + _pad(s, addAmount, padChar)
 }
-
-/* Utility */
 
 func Count(s string, substr ...string) int {
 	if len(substr) == 0 {
@@ -600,11 +591,11 @@ func Lines(s string) int {
 	return len(result)
 }
 
-func IndexSubStr(s, substr string) (int, int) {
+func IdxSubStr(s, substr string) (int, int) {
 	firstIndex := -1
 	lastIndex := -1
 
-	for i := 0; i < len(s); i++ {
+	for i := range len(s) {
 		if len(s)-i < len(substr) {
 			break
 		}
@@ -620,13 +611,13 @@ func IndexSubStr(s, substr string) (int, int) {
 	return firstIndex, lastIndex
 }
 
-func FIndex(s string, substr string) int {
-	firstIndex, _ := IndexSubStr(s, substr)
+func FirstIdx(s string, substr string) int {
+	firstIndex, _ := IdxSubStr(s, substr)
 	return firstIndex
 }
 
-func LIndex(s string, substr string) int {
-	_, lastIndex := IndexSubStr(s, substr)
+func LastIdx(s string, substr string) int {
+	_, lastIndex := IdxSubStr(s, substr)
 	return lastIndex
 }
 

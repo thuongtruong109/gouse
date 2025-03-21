@@ -6,8 +6,11 @@ import (
 	"testing"
 )
 
+type contextKey string
+
 func TestCtx(t *testing.T) {
-	newCtx := context.WithValue(context.Background(), "key", "value")
+	key := contextKey("key")
+	newCtx := context.WithValue(context.Background(), key, "value")
 
 	SetCtx(newCtx)
 
@@ -17,7 +20,7 @@ func TestCtx(t *testing.T) {
 		t.Errorf("expected context %v, got %v", newCtx, ctx)
 	}
 
-	if value := ctx.Value("key"); value != "value" {
+	if value := ctx.Value(key); value != "value" {
 		t.Errorf("expected value 'value', got %v", value)
 	}
 }

@@ -75,7 +75,7 @@ func ExtractFunctions(code []byte) []Function {
 
 			functions = append(functions, Function{
 				Import: _extractImports(code),
-				Order:  IntToString(len(functions) + 1),
+				Order:  Int2Str(len(functions) + 1),
 				Name:   funcName,
 				Desc:   funcComment,
 				Body:   funcBody,
@@ -103,7 +103,7 @@ func _detectContent(content []byte) []byte {
 		result = append(result, tmpFunc.HighlightBody())
 	}
 
-	return StringsToBytes(result)
+	return Strs2Bytes(result)
 }
 
 func Go2Md(inputFilePath string, outputFilePath string) {

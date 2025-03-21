@@ -2,9 +2,7 @@ package gouse
 
 import (
 	"reflect"
-	"slices"
-
-	"golang.org/x/exp/constraints"
+	"sort"
 )
 
 func _minmax[T comparable](arr []T, less func(T, T) bool) T {
@@ -372,8 +370,20 @@ func Compact[T any](arr []T) []T {
 	return compact
 }
 
-func SortArr[T constraints.Ordered](arr []T) {
-	slices.Sort(arr)
+func Sort(input any) any {
+	switch v := input.(type) {
+	case []int:
+		sort.Ints(v)
+		return v
+	case []string:
+		sort.Strings(v)
+		return v
+	case []float64:
+		sort.Float64s(v)
+		return v
+	default:
+		return nil
+	}
 }
 
 func Flatten(input any) []any {

@@ -97,7 +97,7 @@ func (c *ITmpCache) FlushTmpCache() {
 func (c *ITmpCache) AllTmpCache() map[string]string {
 	result := make(map[string]string)
 	for k := range c.Set.Items() {
-		result[k] = ToString(c.GetTmpCache(k))
+		result[k] = ToStr(c.GetTmpCache(k))
 	}
 	return result
 }
