@@ -1336,31 +1336,67 @@ func _isDifferent[T comparable](arr1, arr2 []T) bool {
 }
 
 func TestShuffle(t *testing.T) {
-	intArr := []int{1, 2, 3, 4, 5}
-	shuffledIntArr := Shuffle(intArr)
+	intArr_1 := []int{1, 2, 3, 4, 5}
+	intArr_2 := []int{1, 2, 3, 4, 5}
+	Shuffle(intArr_2)
 
-	if len(shuffledIntArr) != len(intArr) {
-		t.Errorf("Expected shuffled array to have same length as original, but got length %d", len(shuffledIntArr))
+	if len(intArr_1) != len(intArr_2) {
+		t.Errorf("Expected shuffled array to have same length as original, but got length %d", len(intArr_2))
 	}
 
-	if !_isDifferent(intArr, shuffledIntArr) {
+	if !_isDifferent(intArr_1, intArr_2) {
 		t.Errorf("Expected shuffled array to be different from original")
 	}
 
 	emptyArr := []int{}
-	shuffledEmptyArr := Shuffle(emptyArr)
 
-	if len(shuffledEmptyArr) != 0 {
-		t.Errorf("Expected shuffled empty array to have length 0, but got length %d", len(shuffledEmptyArr))
+	if len(emptyArr) != 0 {
+		t.Errorf("Expected shuffled empty array to have length 0, but got length %d", len(emptyArr))
 	}
 
-	strArr := []string{"apple", "banana", "cherry"}
-	shuffledStrArr := Shuffle(strArr)
+	strArr_1 := []string{"apple", "banana", "cherry", "date"}
+	strArr_2 := []string{"apple", "banana", "cherry", "date"}
+	Shuffle(strArr_2)
 
-	if len(shuffledStrArr) != len(strArr) {
-		t.Errorf("Expected shuffled array to have same length as original, but got length %d", len(shuffledStrArr))
+	if len(strArr_1) != len(strArr_2) {
+		t.Errorf("Expected shuffled array to have same length as original, but got length %d", len(strArr_2))
 	}
-	if !_isDifferent(strArr, shuffledStrArr) {
+	if !_isDifferent(strArr_1, strArr_2) {
 		t.Errorf("Expected shuffled array to be different from original")
+	}
+}
+
+func TestIsEqualArr(t *testing.T) {
+	intArr1 := []int{1, 2, 3, 4}
+	intArr2 := []int{1, 2, 3, 4}
+	if !IsEqualArr(intArr1, intArr2) {
+		t.Errorf("Expected %v and %v to be equal", intArr1, intArr2)
+	}
+
+	intArr3 := []int{4, 3, 2, 1}
+	if IsEqualArr(intArr1, intArr3) {
+		t.Errorf("Expected %v and %v to be different", intArr1, intArr3)
+	}
+
+	strArr1 := []string{"apple", "banana", "cherry"}
+	strArr2 := []string{"apple", "banana", "cherry"}
+	if !IsEqualArr(strArr1, strArr2) {
+		t.Errorf("Expected %v and %v to be equal", strArr1, strArr2)
+	}
+
+	strArr3 := []string{"cherry", "banana", "apple"}
+	if IsEqualArr(strArr1, strArr3) {
+		t.Errorf("Expected %v and %v to be different", strArr1, strArr3)
+	}
+
+	emptyArr1 := []int{}
+	emptyArr2 := []int{}
+	if !IsEqualArr(emptyArr1, emptyArr2) {
+		t.Errorf("Expected %v and %v to be equal", emptyArr1, emptyArr2)
+	}
+
+	unequalArr := []int{1, 2}
+	if IsEqualArr(intArr1, unequalArr) {
+		t.Errorf("Expected %v and %v to be different", intArr1, unequalArr)
 	}
 }

@@ -432,17 +432,29 @@ Description: Shuffle array
 Input params: (array)
 */
 func ArrayShuffle() {
-	intArr := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
-	fmt.Println("Original int array:", intArr)
+	intArr := []int{1, 2, 3, 4, 5, 6}
+	fmt.Println("Original int Array:", intArr)
+	gouse.Shuffle(intArr)
+	fmt.Println("Shuffled int Array:", intArr)
 
-	shuffledIntArr := gouse.Shuffle(intArr)
-	fmt.Println("Shuffled int array:", shuffledIntArr)
+	stringArr := []string{"apple", "banana", "cherry", "date"}
+	fmt.Println("Original string Array:", stringArr)
+	gouse.Shuffle(stringArr)
+	fmt.Println("Shuffled string Array:", stringArr)
 
-	strArr := []string{"apple", "banana", "cherry", "date", "elderberry"}
-	fmt.Println("\nOriginal string array:", strArr)
+	byteArr := []byte{'a', 'b', 'c', 'd', 'e'}
+	fmt.Println("Original byte Array:", byteArr)
+	gouse.Shuffle(byteArr)
+	fmt.Println("Shuffled byte Array:", byteArr)
+}
 
-	shuffledStrArr := gouse.Shuffle(strArr)
-	fmt.Println("Shuffled string array:", shuffledStrArr)
+func ArrayIsEqual() {
+	intArr1 := []int{1, 2, 3, 4}
+	intArr2 := []int{1, 2, 3, 4}
+	intArr3 := []int{4, 3, 2, 1}
+
+	fmt.Println("intArr1 == intArr2:", gouse.IsEqualArr(intArr1, intArr2))
+	fmt.Println("intArr1 == intArr3:", gouse.IsEqualArr(intArr1, intArr3))
 }
 
 /*

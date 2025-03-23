@@ -1,9 +1,10 @@
 package gouse
 
 import (
-	"math/rand/v2"
+	"math/rand"
 	"reflect"
 	"sort"
+	"time"
 )
 
 func _minmax[T comparable](arr []T, less func(T, T) bool) T {
@@ -333,12 +334,24 @@ func Flatten(input any) []any {
 	return result
 }
 
-func Shuffle[T comparable](arr []T) []T {
-	var shuffled []T
-	for _, i := range rand.Perm(len(arr)) {
-		shuffled = append(shuffled, arr[i])
+func Shuffle[T comparable](arr []T) {
+	rand.Seed(time.Now().UnixNano())
+
+	originalArr := append([]T(nil), arr...)
+	for {
+		for i := len(arr) - 1; i > 0; i-- {
+			j := rand.Intn(i + 1)
+			arr[i], arr[j] = arr[j], arr[i]
+		}
+
+		if !IsEqualArr(arr, originalArr) {
+			break
+		}
 	}
-	return shuffled
+}
+
+func IsEqualArr[T comparable](a, b []T) bool {
+	return reflect.DeepEqual(a, b)
 }
 
 func IndexBy[T comparable](arr []T, f func(T) bool) int {
