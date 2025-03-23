@@ -27,24 +27,19 @@ const (
 	GRAY_CONSOLE    string = "\033[37m"
 )
 
-// const (
-// 	EmptyReg   = `^$`
-// 	SpaceReg   = `\s+`
-// 	WordNumReg = `^[a-zA-Z0-9]+$`
-// )
-
 const (
+	// 	EmptyReg   = `^$`
+	// 	SpaceReg   = `\s+`
+	// 	WordNumReg = `^[a-zA-Z0-9]+$`
 	UsernameReg = `^[a-zA-Z0-9_]{3,20}$`
+	EmailLenReg = `^.{8,32}$`
+	PhoneReg = `^\+\d{1,2}\s?\(\d{1,4}\)\s?\d{1,6}-\d{1,6}$`
 
 	PasswordLenReg     = `^.{8,32}$`
 	PasswordLowerReg   = `[a-z]`
 	PasswordUpperReg   = `[A-Z]`
 	PasswordDigitReg   = `\d`
 	PasswordSpecialReg = `[!@#$%^&*]`
-
-	EmailLenReg = `^.{8,32}$`
-
-	PhoneReg = `^\+\d{1,2}\s?\(\d{1,4}\)\s?\d{1,6}-\d{1,6}$`
 )
 
 const (
@@ -108,7 +103,6 @@ const (
 // )
 
 type IFontDouble map[string][3]string
-
 var DOUBLE_ALPHA = IFontDouble{
 	`A`: {
 		`╔═╗`,
