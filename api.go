@@ -2,6 +2,8 @@ package gouse
 
 import (
 	"context"
+	"fmt"
+	"io"
 	"log"
 	"net"
 	"net/http"
@@ -9,13 +11,16 @@ import (
 	"net/url"
 	"os"
 	"os/signal"
+	"path/filepath"
+	"strings"
 	"sync"
+	"sync/atomic"
 	"syscall"
 	"time"
 
+	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"
 )
-
 type ILb struct {
 	URL    string `json:"url"`
 	IsDead bool
@@ -182,4 +187,158 @@ func Validate(ctxBind func() error, ctxReq func() context.Context, req any) erro
 	ctx := ctxReq()
 
 	return validate.StructCtx(ctx, req)
+}
+
+func Proxy(port string, urls []string) {
+	_handleRequest := func(urls []string) gin.HandlerFunc {
+		var counter uint64
+
+		return func(ctx *gin.Context) {
+			path := ctx.Param("path")
+			if path == "" {
+				ctx.IndentedJSON(http.StatusBadRequest, gin.H{
+					"message": "Path is required",
+				})
+				ctx.Done()
+				return
+			}
+
+			index := atomic.AddUint64(&counter, 1) % uint64(len(urls))
+			requestedURL := urls[index] + path[1:]
+
+			Println("Requested URL: ", requestedURL)
+
+			req, _ := http.NewRequest(ctx.Request.Method, requestedURL, ctx.Request.Body)
+
+			req.Header = ctx.Request.Header.Clone()
+			req.Header.Del("origin")
+			req.Header.Del("referer")
+
+			queryValues := req.URL.Query()
+			for k, v := range ctx.Request.URL.Query() {
+				queryValues.Add(k, v[0])
+			}
+			req.URL.RawQuery = queryValues.Encode()
+
+			response, err1 := http.DefaultClient.Do(req)
+
+			for k, v := range response.Header.Clone() {
+				ctx.Header(k, v[0])
+			}
+
+			ctx.Header("Access-Control-Allow-Origin", "*")
+			ctx.Header("Access-Control-Allow-Methods", "*")
+			ctx.Header("Access-Control-Allow-Headers", "*")
+
+			responseBytes, err2 := io.ReadAll(response.Body)
+
+			if err1 != nil || err2 != nil {
+				ctx.IndentedJSON(http.StatusInternalServerError, gin.H{
+					"message": "Failed to request",
+				})
+				ctx.Done()
+				return
+			}
+
+			ctx.Data(response.StatusCode, response.Header.Get("Content-Type"), responseBytes)
+		}
+	}
+
+	router := gin.Default()
+
+	router.GET("*path", _handleRequest(urls))
+	router.POST("*path", _handleRequest(urls))
+	router.PUT("*path", _handleRequest(urls))
+	router.PATCH("*path", _handleRequest(urls))
+	router.DELETE("*path", _handleRequest(urls))
+	router.OPTIONS("*path", _handleRequest(urls))
+	router.HEAD("*path", _handleRequest(urls))
+
+	router.Run(":" + port)
+}
+
+func UploadSingle(w http.ResponseWriter, r *http.Request) {
+	err := r.ParseMultipartForm(10 << 20) // Limit to 10MB
+	if err != nil {
+		http.Error(w, fmt.Sprintf("file err: %s", err.Error()), http.StatusBadRequest)
+		return
+	}
+
+	file, header, err := r.FormFile("image")
+	if err != nil {
+		http.Error(w, fmt.Sprintf("file err: %s", err.Error()), http.StatusBadRequest)
+		return
+	}
+	defer file.Close()
+
+	fileExt := filepath.Ext(header.Filename)
+	originalFileName := strings.TrimSuffix(filepath.Base(header.Filename), fileExt)
+	now := time.Now()
+	filename := strings.ReplaceAll(strings.ToLower(originalFileName), " ", "-") + "-" + fmt.Sprintf("%v", now.Unix()) + fileExt
+	filePath := "http://localhost:8000/images/single/" + filename
+
+	out, err := os.Create("public/single/" + filename)
+	if err != nil {
+		http.Error(w, fmt.Sprintf("unable to create file: %s", err.Error()), http.StatusInternalServerError)
+		return
+	}
+	defer out.Close()
+
+	_, err = io.Copy(out, file)
+	if err != nil {
+		http.Error(w, fmt.Sprintf("error writing file: %s", err.Error()), http.StatusInternalServerError)
+		return
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+	w.Write(fmt.Appendf(nil, `{"filepath": "%s"}`, filePath))
+}
+
+func UploadMulti(w http.ResponseWriter, r *http.Request) {
+	err := r.ParseMultipartForm(10 << 20) // Limit to 10MB
+	if err != nil {
+		http.Error(w, "Unable to parse form", http.StatusBadRequest)
+		return
+	}
+
+	files := r.MultipartForm.File["images"]
+	servePath := "/serve/path"
+	storePath := "/store/path"
+
+	filePaths := []string{}
+
+	for _, file := range files {
+		fileExt := filepath.Ext(file.Filename)
+		originalFileName := strings.TrimSuffix(filepath.Base(file.Filename), fileExt)
+		now := time.Now()
+		filename := strings.ReplaceAll(strings.ToLower(originalFileName), " ", "-") + "-" + fmt.Sprintf("%v", now.Unix()) + fileExt
+		filePath := servePath + "/" + filename
+
+		filePaths = append(filePaths, filePath)
+
+		out, err := os.Create(storePath + "/" + filename)
+		if err != nil {
+			http.Error(w, "Error saving file: "+err.Error(), http.StatusInternalServerError)
+			return
+		}
+		defer out.Close()
+
+		readerFile, err := file.Open()
+		if err != nil {
+			http.Error(w, "Error opening file: "+err.Error(), http.StatusInternalServerError)
+			return
+		}
+		defer readerFile.Close()
+
+		_, err = io.Copy(out, readerFile)
+		if err != nil {
+			http.Error(w, "Error copying file content: "+err.Error(), http.StatusInternalServerError)
+			return
+		}
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+	w.Write(fmt.Appendf(nil, `{"filepath": "%v"}`, filePaths))
 }

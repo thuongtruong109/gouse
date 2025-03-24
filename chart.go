@@ -122,7 +122,7 @@ func LineChart(options *ILineChart) {
 	for _, item := range options.Items {
 		line.SetXAxis(options.XAxis).
 			AddSeries(item.Name, generateLineItems(item.Values)).
-			SetSeriesOptions(charts.WithLineChartOpts(opts.LineChart{Smooth: true}))
+			SetSeriesOptions(charts.WithLineChartOpts(opts.LineChart{Smooth: opts.Bool(true)}))
 	}
 
 	f, _ := os.Create(options.Output)
@@ -179,7 +179,7 @@ func PieChart(options *IPieChart) {
 			),
 			charts.WithLabelOpts(
 				opts.Label{
-					Show:      options.ShowLabel,
+					Show:      opts.Bool(options.ShowLabel),
 					Formatter: options.Format,
 				},
 			),
