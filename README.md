@@ -12,7 +12,6 @@
     <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/thuongtruong109/gouse">
     <!-- <img alt="GitHub Release" src="https://img.shields.io/github/v/release/thuongtruong109/gouse"> -->
     <!-- <a href="https://godocs.io/github.com/thuongtruong109/gouse"><img alt="Godoc" src="https://godocs.io/github.com/thuongtruong1009/gouse?status.svg"></a> -->
-    <!-- <a href="https://app.codacy.com/gh/thuongtruong109/gouse/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_Coverage"><img src="https://app.codacy.com/project/badge/Coverage/21f940894abd4e0384ef8b84adc294da" alt="codacy"></a> -->
     <!-- <a href="https://sourcegraph.com/github.com/thuongtruong109/gouse?badge"><img src="https://sourcegraph.com/github.com/thuongtruong109/gouse/-/badge.svg" alt="sourcegraph"></a> -->
 </div>
 
@@ -88,11 +87,11 @@
         <a href="/receipts/date">✅ Date</a> <br/>
         <a href="/receipts/function">✅ Function</a> <br/>
         <a href="/receipts/helper">✅ Helper</a> <br/>
+        <a href="/receipts/http">✅ Http</a> <br/>
         <a href="/receipts/io">✅ I/O</a> <br/>
         <a href="/receipts/logger">✅ Logger</a> <br/>
         <a href="/receipts/math">✅ Math</a> <br/>
         <a href="/receipts/media">✅ Media</a> <br/>
-        <a href="/receipts/net">✅ Net</a> <br/>
         <div width="300" height="0"></div>
       </td>
       <td align="left">

@@ -48,11 +48,11 @@ jobs:
           file: coverage.out
           flags: unittests
 
-      - name: Upload coverage
-        uses: actions/upload-artifact@v4
-        with:
-          name: coverage
-          path: coverage.out
+      # - name: Upload coverage
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: coverage
+      #     path: coverage.out
 
       - name: Benchmark test
         run: make bench

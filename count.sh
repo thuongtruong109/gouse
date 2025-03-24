@@ -25,7 +25,7 @@ for dir in "$@"; do
   fi
 
   while IFS= read -r file; do
-    count=$(grep -E 'func [A-Za-z]' "$file" | grep -vE 'func New' | wc -l)
+    count=$(grep -Ec 'func [A-Za-z]' "$file" | grep -vE 'func New')
     total_count=$((total_count + count))
   done <<< "$files"
 done
