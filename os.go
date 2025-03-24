@@ -85,7 +85,7 @@ func Disk() (*IDisk, error) {
 	}, nil
 }
 
-type IIO struct {
+type IIo struct {
 	ReadCount        uint64
 	MergedReadCount  uint64
 	WriteCount       uint64
@@ -102,14 +102,15 @@ type IIO struct {
 	Label            string
 }
 
-func IO() (*IIO, error) {
+func Io() ([]*IIo, error) {
 	ioStat, err := disk.IOCounters()
 	if err != nil {
-		return &IIO{}, err
+		return nil, err
 	}
 
+	var io []*IIo
 	for _, v := range ioStat {
-		return &IIO{
+		io = append(io, &IIo{
 			ReadCount:        v.ReadCount,
 			MergedReadCount:  v.MergedReadCount,
 			WriteCount:       v.WriteCount,
@@ -124,10 +125,10 @@ func IO() (*IIO, error) {
 			Name:             v.Name,
 			SerialNumber:     v.SerialNumber,
 			Label:            v.Label,
-		}, nil
+		})
 	}
 
-	return &IIO{}, nil
+	return io, nil
 }
 
 type IPartition struct {
@@ -175,7 +176,7 @@ type IHost struct {
 	HostID               string
 }
 
-func System() (*IHost, error) {
+func Host() (*IHost, error) {
 	runTimeOS := runtime.GOOS
 
 	hostStat, err := host.Info()

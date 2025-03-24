@@ -4,6 +4,7 @@ go 1.24
 
 require (
 	github.com/AlecAivazis/survey/v2 v2.3.7
+	github.com/PuerkitoBio/goquery v1.10.2
 	github.com/charmbracelet/bubbles v0.16.1
 	github.com/charmbracelet/bubbletea v1.2.3
 	github.com/charmbracelet/glamour v0.6.0
@@ -24,6 +25,8 @@ require (
 	golang.org/x/crypto v0.36.0
 	gopkg.in/yaml.v2 v2.4.0
 )
+
+require github.com/andybalholm/cascadia v1.3.3 // indirect
 
 require (
 	github.com/alecthomas/chroma v0.10.0 // indirect

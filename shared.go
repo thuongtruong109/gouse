@@ -33,7 +33,7 @@ const (
 	// 	WordNumReg = `^[a-zA-Z0-9]+$`
 	UsernameReg = `^[a-zA-Z0-9_]{3,20}$`
 	EmailLenReg = `^.{8,32}$`
-	PhoneReg = `^\+\d{1,2}\s?\(\d{1,4}\)\s?\d{1,6}-\d{1,6}$`
+	PhoneReg    = `^\+\d{1,2}\s?\(\d{1,4}\)\s?\d{1,6}-\d{1,6}$`
 
 	PasswordLenReg     = `^.{8,32}$`
 	PasswordLowerReg   = `[a-z]`
@@ -103,6 +103,7 @@ const (
 // )
 
 type IFontDouble map[string][3]string
+
 var DOUBLE_ALPHA = IFontDouble{
 	`A`: {
 		`╔═╗`,

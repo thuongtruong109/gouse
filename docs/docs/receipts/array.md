@@ -486,21 +486,39 @@ Description: Shuffle array<br>Input params: (array)<br>
 
 ```go
 func ArrayShuffle() {
-	intArr := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
-	fmt.Println("Original int array:", intArr)
+	intArr := []int{1, 2, 3, 4, 5, 6}
+	fmt.Println("Original int Array:", intArr)
+	gouse.Shuffle(intArr)
+	fmt.Println("Shuffled int Array:", intArr)
 
-	shuffledIntArr := gouse.Shuffle(intArr)
-	fmt.Println("Shuffled int array:", shuffledIntArr)
+	stringArr := []string{"apple", "banana", "cherry", "date"}
+	fmt.Println("Original string Array:", stringArr)
+	gouse.Shuffle(stringArr)
+	fmt.Println("Shuffled string Array:", stringArr)
 
-	strArr := []string{"apple", "banana", "cherry", "date", "elderberry"}
-	fmt.Println("\nOriginal string array:", strArr)
-
-	shuffledStrArr := gouse.Shuffle(strArr)
-	fmt.Println("Shuffled string array:", shuffledStrArr)
+	byteArr := []byte{'a', 'b', 'c', 'd', 'e'}
+	fmt.Println("Original byte Array:", byteArr)
+	gouse.Shuffle(byteArr)
+	fmt.Println("Shuffled byte Array:", byteArr)
 }
 ```
 
-## 27. Array filter by
+## 27. Array is equal
+
+
+
+```go
+func ArrayIsEqual() {
+	intArr1 := []int{1, 2, 3, 4}
+	intArr2 := []int{1, 2, 3, 4}
+	intArr3 := []int{4, 3, 2, 1}
+
+	fmt.Println("intArr1 == intArr2:", gouse.IsEqualArr(intArr1, intArr2))
+	fmt.Println("intArr1 == intArr3:", gouse.IsEqualArr(intArr1, intArr3))
+}
+```
+
+## 28. Array filter by
 
 Description: Filter elements in array by pass condition in callback function<br>Input params: (array, callback)<br>
 
@@ -536,7 +554,7 @@ func ArrayFilterBy() {
 }
 ```
 
-## 28. Array find by
+## 29. Array find by
 
 Description: Find element in array by pass condition in callback function<br>Input params: (array, callback)<br>
 
@@ -572,7 +590,7 @@ func ArrayFindBy() {
 }
 ```
 
-## 29. Array for by
+## 30. Array for by
 
 Description: Loop array then handler with callback function<br>Input params: (array, callback)<br>
 
@@ -615,7 +633,7 @@ func ArrayForBy() {
 }
 ```
 
-## 30. Array index by
+## 31. Array index by
 
 Description: Find index of element pass condition in callback function<br>Input params: (array, callback)<br>
 
@@ -651,7 +669,7 @@ func ArrayIndexBy() {
 }
 ```
 
-## 31. Array key by
+## 32. Array key by
 
 Description: Find key of element pass condition in callback function<br>Input params: (array, callback)<br>
 
@@ -687,7 +705,7 @@ func ArrayKeyBy() {
 }
 ```
 
-## 32. Array map by
+## 33. Array map by
 
 Description: Map array then handler with callback function<br>Input params: (array, callback)<br>
 
@@ -723,7 +741,7 @@ func ArrayMapBy() {
 }
 ```
 
-## 33. Array reject by
+## 34. Array reject by
 
 Description: Remove element in array by pass condition in callback function<br>Input params: (array, callback)<br>
 

@@ -10,7 +10,7 @@ import (
 func TestCreateBarChart(t *testing.T) {
 	const bar_output = "./mockdata/bar_chart.html"
 
-	options := &IBarChartOpts{
+	options := &IBarChart{
 		Output:   bar_output,
 		Title:    "Test Title",
 		Subtitle: "Test Subtitle",
@@ -54,7 +54,7 @@ func TestGenerateBarItems(t *testing.T) {
 func TestCreateLineChart(t *testing.T) {
 	const line_output = "./mockdata/line_chart.html"
 
-	options := &ILineChartOpts{
+	options := &ILineChart{
 		Output:   line_output,
 		Title:    "Test Title",
 		Subtitle: "Test Subtitle",
@@ -100,18 +100,19 @@ func TestCreatePieChart(t *testing.T) {
 
 	tests := []struct {
 		name           string
-		opts           *IPieChartOpts
+		opts           *IPieChart
 		expectedOutput string
 	}{
 		{
 			name: "Test basic pie chart",
-			opts: &IPieChartOpts{
-				Output:    pie_output,
-				Title:     "Test Pie Chart",
-				Subtitle:  "Test subtitle",
-				Radius:    50,
-				Format:    "{b}: {c}",
-				ShowLabel: true,
+			opts: &IPieChart{
+				Output:     pie_output,
+				Title:      "Test Pie Chart",
+				Subtitle:   "Test subtitle",
+				Annotation: "Monthly revenue",
+				Radius:     50,
+				Format:     "{b}: {c}",
+				ShowLabel:  true,
 				Items: []IPieChartItem{
 					{Name: "A", Values: 100},
 					{Name: "B", Values: 200},
@@ -125,6 +126,38 @@ func TestCreatePieChart(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			PieChart(tt.opts)
+
+			_, err := os.Stat(tt.expectedOutput)
+			assert.NoError(t, err, "output file should be created")
+		})
+	}
+}
+
+func TestCreateScatterChart(t *testing.T) {
+	const scatter_output = "./mockdata/scatter_chart.html"
+
+	tests := []struct {
+		name           string
+		opts           *IScatterChart
+		expectedOutput string
+	}{
+		{
+			name: "Test basic scatter chart",
+			opts: &IScatterChart{
+				Output:     scatter_output,
+				Title:      "Test Scatter Chart",
+				Subtitle:   "Test subtitle",
+				Annotation: "Test annotation",
+				XAxis:      []string{"Jan", "Feb", "Mar", "Apr", "May"},
+				Items:      []float64{10.5, 20.2, 30.3, 40.4, 50.5},
+			},
+			expectedOutput: scatter_output,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			ScatterChart(tt.opts)
 
 			_, err := os.Stat(tt.expectedOutput)
 			assert.NoError(t, err, "output file should be created")

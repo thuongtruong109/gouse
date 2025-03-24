@@ -427,7 +427,7 @@ Description: Unzip files.<br>Input params: (zipFileName string, destFolder strin
 func IoUnzip() {
 	destFolder := "unzipped"
 	zipFileName := "archive.zip"
-	err := gouse.Unzip(zipFileName, destFolder)
+	err := gouse.Extract(zipFileName, destFolder)
 	if err != nil {
 		gouse.Println("Error unzipping files:", err)
 	}

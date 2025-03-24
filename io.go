@@ -420,7 +420,7 @@ func Zip(zipFileName string, files []string) error {
 	return nil
 }
 
-func Unzip(zipFile, destFolder string) error {
+func Extract(zipFile, destFolder string) error {
 	const maxFileSize = 100 * 1024 * 1024  // 100 MB
 	const maxTotalSize = 500 * 1024 * 1024 // 500 MB
 

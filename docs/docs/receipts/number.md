@@ -10,7 +10,7 @@ import (
 
 ## 1. Number clamp
 
-
+Description: Clamp a number between a minimum and maximum value<br>Input params: (number, min, max int) -> int<br>
 
 ```go
 func NumberClamp() {
@@ -18,12 +18,23 @@ func NumberClamp() {
 }
 ```
 
-## 2. Number check in range
+## 2. Number in range
 
-
+Description: Check if a number is in a range<br>Input params: (number, min, max int) -> bool<br>
 
 ```go
-func NumberCheckInRange() {
+func NumberInRange() {
 	println("Check number is in range: ", gouse.InRange(5, 1, 10))
+}
+```
+
+## 3. Number sort
+
+Description: Sort a list of numbers<br>Input params: (nums []int) -> []int<br>
+
+```go
+func NumberSort() {
+	nums := []int{5, 3, 8, 1, 2}
+	println("Sort numbers: ", gouse.SortNum(nums))
 }
 ```

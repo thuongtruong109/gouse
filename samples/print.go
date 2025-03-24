@@ -2,6 +2,10 @@ package samples
 
 import "github.com/thuongtruong109/gouse"
 
+/*
+Description: Print, Println, Printf
+Input params: ...[](interface{})
+*/
 func Print() {
 	gouse.Println("Hello,", "this is custom fmt", 123, true)
 	gouse.Print("This is Print: ")
@@ -9,6 +13,10 @@ func Print() {
 	gouse.Printf("Formatted: number=%d, text=%s, float=%f, bool=%t\n", 42, "Golang", 3.14159, true)
 }
 
+/*
+Description: Sprint, Sprintln, Sprintf
+Input params: ...[](interface{})
+*/
 func Sprint() {
 	str1 := gouse.Sprint("Sprint result:", 42, "text", true)
 	gouse.Println("Sprint:", str1)

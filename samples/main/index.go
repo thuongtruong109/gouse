@@ -35,7 +35,7 @@ func main() {
 		structSample()
 		timeSample()
 		typeSample()
-		utilsSample()
+		utilitiesSample()
 	} else {
 		print("Please enable isDev flag to run samples")
 	}
@@ -92,6 +92,7 @@ func chartSample() {
 	samples.ChartBar()
 	samples.ChartLine()
 	samples.ChartPie()
+	samples.ChartScatter()
 }
 
 func colorSample() {
@@ -259,17 +260,17 @@ func netSample() {
 
 func numberSample() {
 	samples.NumberClamp()
-	samples.NumberCheckInRange()
+	samples.NumberInRange()
 	// samples.NumberSortNum()
 }
 
 func osSample() {
-	// samples.OsIo()
+	samples.OsIO()
 	samples.OsDisk()
 	samples.OsCpu()
-	// samples.OsMemory()
-	// samples.OsUser()
-	samples.OsSystem()
+	samples.OsMemory()
+	samples.OsUser()
+	samples.OsHost()
 }
 
 func randomSample() {
@@ -371,7 +372,7 @@ func typeSample() {
 	// samples.TypeTimeConvert()
 }
 
-func utilsSample() {
+func utilitiesSample() {
 	// samples.SetCtx()
 	// samples.GetCtx()
 	// samples.DetectError()

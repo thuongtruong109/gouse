@@ -10,11 +10,11 @@ import (
 
 ## 1. Chart bar
 
-Description: Create a bar chart and export it to a html file<br>Input params: (*gouse.IBarChartOpts)<br>
+Description: Create a bar chart and export it to a html file<br>Input params: (*gouse.IBarChart)<br>
 
 ```go
 func ChartBar() {
-	newChart := &gouse.IBarChartOpts{
+	newChart := &gouse.IBarChart{
 		Output:   "test_sample_data/bar.html",
 		Title:    "Bar chart in Go",
 		Subtitle: "This is fun to use!",
@@ -32,11 +32,11 @@ func ChartBar() {
 
 ## 2. Chart line
 
-Description: Create a line chart and export it to a html file<br>Input params: (*gouse.ILineChartOpts)<br>
+Description: Create a line chart and export it to a html file<br>Input params: (*gouse.ILineChart)<br>
 
 ```go
 func ChartLine() {
-	newChart := &gouse.ILineChartOpts{
+	newChart := &gouse.ILineChart{
 		Output:   "test_sample_data/line.html",
 		Title:    "Line chart in Go",
 		Subtitle: "This is fun to use!",
@@ -53,17 +53,18 @@ func ChartLine() {
 
 ## 3. Chart pie
 
-Description: Create a pie chart and export it to a html file<br>Input params: (*gouse.IPieChartOpts)<br>
+Description: Create a pie chart and export it to a html file<br>Input params: (*gouse.IPieChart)<br>
 
 ```go
 func ChartPie() {
-	newChart := &gouse.IPieChartOpts{
-		Output:    "test_sample_data/pie.html",
-		Title:     "Pie chart in Go",
-		Subtitle:  "This is fun to use!",
-		Radius:    200,
-		Format:    "{b}: {c} ({d}%)",
-		ShowLabel: true,
+	newChart := &gouse.IPieChart{
+		Output:     "test_sample_data/pie.html",
+		Title:      "Pie chart in Go",
+		Subtitle:   "This is fun to use!",
+		Annotation: "Monthly revenue",
+		Radius:     200,
+		Format:     "{b}: {c} ({d}%)",
+		ShowLabel:  true,
 		Items: []gouse.IPieChartItem{
 			{Name: "Category A", Values: 335},
 			{Name: "Category B", Values: 310},
@@ -75,5 +76,25 @@ func ChartPie() {
 	}
 
 	gouse.PieChart(newChart)
+}
+```
+
+## 4. Chart scatter
+
+Description: Create a scatter chart and export it to a html file<br>Input params: (*gouse.IScatterChart)<br>
+
+```go
+func ChartScatter() {
+	newChart := &gouse.IScatterChart{
+		Output:     "test_sample_data/scatter.html",
+		Title:      "Scatter chart in Go",
+		Subtitle:   "This is fun to use!",
+		Annotation: "Temperature",
+		XAxis: []string{"Jan 1", "Jan 10", "Jan 12", "Jan 20", "Jan 30", "Feb 1",
+			"Feb 2", "Feb 5", "Feb 8", "Feb 12"},
+		Items: []float64{-7.3, -3.4, -5.0, -0.9, -2.2, 4.8, 5.1, -1.9, 0, 2.6},
+	}
+
+	gouse.ScatterChart(newChart)
 }
 ```

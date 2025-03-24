@@ -10,34 +10,34 @@ import (
 Description: Cache local values
 */
 func CacheLocal() {
-	newCache := gouse.NewLocalCache()
-	newCache.SetLocalCache("key1", "local cache value 1")
-	newCache.SetLocalCache("key2", "local cache value 2")
-	newCache.SetLocalCache("key3", "local cache value 3")
+	newCache := gouse.NewLCache()
+	newCache.SetLCache("key1", "local cache value 1")
+	newCache.SetLCache("key2", "local cache value 2")
+	newCache.SetLCache("key3", "local cache value 3")
 
-	all := newCache.AllLocalCache()
+	all := newCache.AllLCache()
 	println("All local cache values:")
 	for k, v := range all {
 		gouse.Printf("\t%s: %s\n", k, v)
 	}
 
-	getted1, err := newCache.GetLocalCache("key1")
+	getted1, err := newCache.GetLCache("key1")
 	if err != nil {
 		panic(err)
 	}
 	gouse.Println("Getted key 1:", getted1)
 
-	newCache.DelLocalCache("key2")
+	newCache.DelLCache("key2")
 
-	all = newCache.AllLocalCache()
+	all = newCache.AllLCache()
 	println("All local cache values (after delete key 2):")
 	for k, v := range all {
 		gouse.Printf("\t%s: %s\n", k, v)
 	}
 
-	newCache.FlushLocalCache()
+	newCache.FlushLCache()
 
-	all = newCache.AllLocalCache()
+	all = newCache.AllLCache()
 	gouse.Println("All local cache values (after flush):", all)
 }
 
@@ -45,35 +45,35 @@ func CacheLocal() {
 Description: Cache temporary values (with expiration time)
 */
 func CacheTmp() {
-	newCache := gouse.NewTmpCache(gouse.ToSecond(3))
-	newCache.SetTmpCache("key1", "temp cache value 1", gouse.ToSecond(3))
-	newCache.SetTmpCache("key2", "temp cache value 2", gouse.ToSecond(6))
-	newCache.SetTmpCache("key3", "temp cache value 3", gouse.ToSecond(6))
+	newCache := gouse.NewTCache(gouse.ToSecond(3))
+	newCache.SetTCache("key1", "temp cache value 1", gouse.ToSecond(3))
+	newCache.SetTCache("key2", "temp cache value 2", gouse.ToSecond(6))
+	newCache.SetTCache("key3", "temp cache value 3", gouse.ToSecond(6))
 
-	all := newCache.AllTmpCache()
+	all := newCache.AllTCache()
 	println("All temp cache values:")
 	for k, v := range all {
 		gouse.Printf("\t%s: %v\n", k, v)
 	}
 
-	getted := newCache.GetTmpCache("key1")
+	getted := newCache.GetTCache("key1")
 	gouse.Println("Getted key 1 (before expires):", getted)
 
 	time.Sleep(gouse.ToSecond(4))
 
-	getted = newCache.GetTmpCache("key1")
+	getted = newCache.GetTCache("key1")
 	gouse.Println("Getted key 1 (after expires):", getted)
 
-	newCache.DelTmpCache("key2")
+	newCache.DelTCache("key2")
 
-	all = newCache.AllTmpCache()
+	all = newCache.AllTCache()
 	println("All temp cache values (after delete key 2):")
 	for k, v := range all {
 		gouse.Printf("\t%s: %v\n", k, v)
 	}
 
-	newCache.FlushTmpCache()
+	newCache.FlushTCache()
 
-	all = newCache.AllTmpCache()
+	all = newCache.AllTCache()
 	gouse.Println("All temp cache values (after flush):", all)
 }

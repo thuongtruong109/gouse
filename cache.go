@@ -8,19 +8,19 @@ import (
 	"github.com/patrickmn/go-cache"
 )
 
-type ILocalCache struct {
+type ILCache struct {
 	Set  map[string]string
 	Lock sync.RWMutex
 }
 
-func NewLocalCache() *ILocalCache {
-	return &ILocalCache{
+func NewLCache() *ILCache {
+	return &ILCache{
 		Set:  make(map[string]string),
 		Lock: sync.RWMutex{},
 	}
 }
 
-func (c *ILocalCache) GetLocalCache(key string) (string, error) {
+func (c *ILCache) GetLCache(key string) (string, error) {
 	c.Lock.RLock()
 	defer c.Lock.RUnlock()
 	if c.Set == nil {
@@ -29,56 +29,56 @@ func (c *ILocalCache) GetLocalCache(key string) (string, error) {
 	return c.Set[key], nil
 }
 
-func (c *ILocalCache) SetLocalCache(key, value string) {
+func (c *ILCache) SetLCache(key, value string) {
 	c.Lock.Lock()
 	defer c.Lock.Unlock()
 	c.Set[key] = value
 }
 
-func (c *ILocalCache) DelLocalCache(key string) {
+func (c *ILCache) DelLCache(key string) {
 	c.Lock.Lock()
 	defer c.Lock.Unlock()
 	delete(c.Set, key)
 }
 
-func (c *ILocalCache) FlushLocalCache() {
+func (c *ILCache) FlushLCache() {
 	c.Lock.Lock()
 	defer c.Lock.Unlock()
 	c.Set = map[string]string{}
 }
 
-func (c *ILocalCache) AllLocalCache() map[string]string {
+func (c *ILCache) AllLCache() map[string]string {
 	c.Lock.RLock()
 	defer c.Lock.RUnlock()
 	return c.Set
 }
 
-type ITmpCache struct {
+type ITCache struct {
 	Expires time.Duration
 	Set     *cache.Cache
 }
 
-func NewTmpCache(expires ...time.Duration) *ITmpCache {
+func NewTCache(expires ...time.Duration) *ITCache {
 	var expire time.Duration
 	if len(expires) > 0 {
 		expire = expires[0]
 	} else {
 		expire = 24 * time.Hour
 	}
-	return &ITmpCache{
+	return &ITCache{
 		Expires: expire,
 		Set:     cache.New(expire, expire),
 	}
 }
 
-func (c *ITmpCache) GetTmpCache(cacheKey string) interface{} {
+func (c *ITCache) GetTCache(cacheKey string) interface{} {
 	if val, found := c.Set.Get(cacheKey); found {
 		return val
 	}
 	return nil
 }
 
-func (c *ITmpCache) SetTmpCache(cacheKey string, value interface{}, expireTime time.Duration) {
+func (c *ITCache) SetTCache(cacheKey string, value interface{}, expireTime time.Duration) {
 	if expireTime == 0 {
 		expireTime = cache.DefaultExpiration
 	}
@@ -86,18 +86,18 @@ func (c *ITmpCache) SetTmpCache(cacheKey string, value interface{}, expireTime t
 	c.Set.Set(cacheKey, value, expireTime)
 }
 
-func (c *ITmpCache) DelTmpCache(cacheKey string) {
+func (c *ITCache) DelTCache(cacheKey string) {
 	c.Set.Delete(cacheKey)
 }
 
-func (c *ITmpCache) FlushTmpCache() {
+func (c *ITCache) FlushTCache() {
 	c.Set.Flush()
 }
 
-func (c *ITmpCache) AllTmpCache() map[string]string {
+func (c *ITCache) AllTCache() map[string]string {
 	result := make(map[string]string)
 	for k := range c.Set.Items() {
-		result[k] = ToStr(c.GetTmpCache(k))
+		result[k] = ToStr(c.GetTCache(k))
 	}
 	return result
 }

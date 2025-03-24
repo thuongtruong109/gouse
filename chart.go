@@ -6,16 +6,51 @@ import (
 	"github.com/go-echarts/go-echarts/v2/charts"
 	"github.com/go-echarts/go-echarts/v2/opts"
 	"github.com/go-echarts/go-echarts/v2/types"
+
+	"github.com/PuerkitoBio/goquery"
 )
 
-/* Bar chart */
+func _customTitle(dist, title string) {
+	file, err1 := os.Open(dist)
+	if err1 != nil {
+		println(err1)
+		return
+	}
+	defer file.Close()
+
+	doc, err2 := goquery.NewDocumentFromReader(file)
+	if err2 != nil {
+		println(err2)
+		return
+	}
+
+	doc.Find("title").SetText("Gouse - " + title)
+
+	outFile, err3 := os.Create(dist)
+	if err3 != nil {
+		println(err3)
+		return
+	}
+	defer outFile.Close()
+
+	html, err4 := doc.Html()
+	if err4 != nil {
+		println(err4)
+		return
+	}
+
+	_, err5 := outFile.WriteString(html)
+	if err5 != nil {
+		println(err5)
+	}
+}
 
 type IBarChartItem struct {
 	Name   string
 	Values []float64
 }
 
-type IBarChartOpts struct {
+type IBarChart struct {
 	Output   string
 	Title    string
 	Subtitle string
@@ -31,7 +66,7 @@ func generateBarItems(values []float64) []opts.BarData {
 	return items
 }
 
-func BarChart(options *IBarChartOpts) {
+func BarChart(options *IBarChart) {
 	bar := charts.NewBar()
 
 	bar.SetGlobalOptions(charts.WithTitleOpts(opts.Title{
@@ -46,16 +81,16 @@ func BarChart(options *IBarChartOpts) {
 
 	f, _ := os.Create(options.Output)
 	_ = bar.Render(f)
-}
 
-/* Line chart */
+	_customTitle(options.Output, options.Title)
+}
 
 type ILineChartItem struct {
 	Name   string
 	Values []float64
 }
 
-type ILineChartOpts struct {
+type ILineChart struct {
 	Output   string
 	Title    string
 	Subtitle string
@@ -71,7 +106,7 @@ func generateLineItems(values []float64) []opts.LineData {
 	return items
 }
 
-func LineChart(options *ILineChartOpts) {
+func LineChart(options *ILineChart) {
 	line := charts.NewLine()
 
 	line.SetGlobalOptions(
@@ -92,23 +127,24 @@ func LineChart(options *ILineChartOpts) {
 
 	f, _ := os.Create(options.Output)
 	_ = line.Render(f)
-}
 
-/* Pie chart */
+	_customTitle(options.Output, options.Title)
+}
 
 type IPieChartItem struct {
 	Name   string
 	Values float64
 }
 
-type IPieChartOpts struct {
-	Output    string
-	Title     string
-	Subtitle  string
-	Radius    float64
-	Format    string
-	ShowLabel bool
-	Items     []IPieChartItem
+type IPieChart struct {
+	Output     string
+	Title      string
+	Subtitle   string
+	Annotation string
+	Radius     float64
+	Format     string
+	ShowLabel  bool
+	Items      []IPieChartItem
 }
 
 func generatePieItems(ele []IPieChartItem) []opts.PieData {
@@ -122,7 +158,7 @@ func generatePieItems(ele []IPieChartItem) []opts.PieData {
 	return items
 }
 
-func PieChart(options *IPieChartOpts) {
+func PieChart(options *IPieChart) {
 	pie := charts.NewPie()
 	pie.SetGlobalOptions(
 		charts.WithTitleOpts(
@@ -133,7 +169,7 @@ func PieChart(options *IPieChartOpts) {
 		),
 	)
 	pie.SetSeriesOptions()
-	pie.AddSeries("Monthly revenue",
+	pie.AddSeries(options.Annotation,
 		generatePieItems(options.Items)).
 		SetSeriesOptions(
 			charts.WithPieChartOpts(
@@ -150,4 +186,36 @@ func PieChart(options *IPieChartOpts) {
 		)
 	f, _ := os.Create(options.Output)
 	_ = pie.Render(f)
+
+	_customTitle(options.Output, options.Title)
+}
+
+type IScatterChart struct {
+	Output     string
+	Title      string
+	Subtitle   string
+	Annotation string
+	XAxis      []string
+	Items      []float64
+}
+
+func ScatterChart(options *IScatterChart) {
+	scatter := charts.NewScatter()
+
+	scatter.SetGlobalOptions(
+		charts.WithInitializationOpts(opts.Initialization{Theme: types.ThemeWesteros}),
+		charts.WithTitleOpts(opts.Title{Title: options.Title, Subtitle: options.Subtitle}),
+	)
+
+	temps := make([]opts.ScatterData, 0)
+	for i := range options.Items {
+		temps = append(temps, opts.ScatterData{Value: options.Items[i]})
+	}
+
+	scatter.SetXAxis(options.XAxis).AddSeries(options.Annotation, temps)
+
+	f, _ := os.Create(options.Output)
+	scatter.Render(f)
+
+	_customTitle(options.Output, options.Title)
 }

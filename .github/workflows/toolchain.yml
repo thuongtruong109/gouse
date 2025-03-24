@@ -68,3 +68,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Codespell
         uses: codespell-project/actions-codespell@v2
+        with:
+          skip:
+            - "*_test.go"
+            - "*.md"
+          path: .

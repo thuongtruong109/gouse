@@ -10,7 +10,7 @@ import (
 
 ## 1. Print
 
-
+Description: Print, Println, Printf<br>Input params: ...[](interface{})<br>
 
 ```go
 func Print() {
@@ -23,7 +23,7 @@ func Print() {
 
 ## 2. Sprint
 
-
+Description: Sprint, Sprintln, Sprintf<br>Input params: ...[](interface{})<br>
 
 ```go
 func Sprint() {
