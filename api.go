@@ -21,6 +21,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"
 )
+
 type ILb struct {
 	URL    string `json:"url"`
 	IsDead bool
@@ -257,88 +258,95 @@ func Proxy(port string, urls []string) {
 	router.Run(":" + port)
 }
 
-func UploadSingle(w http.ResponseWriter, r *http.Request) {
+func _httpError(w http.ResponseWriter, msg string, statusCode int) {
+	http.Error(w, msg, statusCode)
+}
+
+func _generateFileName(originalFileName string) string {
+	fileExt := filepath.Ext(originalFileName)
+	originalName := strings.TrimSuffix(filepath.Base(originalFileName), fileExt)
+	now := time.Now().UnixNano()
+	filename := fmt.Sprintf("%s-%d%s", strings.ReplaceAll(strings.ToLower(originalName), " ", "-"), now, fileExt)
+	return filename
+}
+
+func UploadSingle(w http.ResponseWriter, r *http.Request, servePath, storePath string) {
 	err := r.ParseMultipartForm(10 << 20) // Limit to 10MB
 	if err != nil {
-		http.Error(w, fmt.Sprintf("file err: %s", err.Error()), http.StatusBadRequest)
+		_httpError(w, fmt.Sprintf("Error parsing form: %s", err.Error()), http.StatusBadRequest)
 		return
 	}
 
 	file, header, err := r.FormFile("image")
 	if err != nil {
-		http.Error(w, fmt.Sprintf("file err: %s", err.Error()), http.StatusBadRequest)
+		_httpError(w, fmt.Sprintf("Error retrieving file: %s", err.Error()), http.StatusBadRequest)
 		return
 	}
 	defer file.Close()
 
-	fileExt := filepath.Ext(header.Filename)
-	originalFileName := strings.TrimSuffix(filepath.Base(header.Filename), fileExt)
-	now := time.Now()
-	filename := strings.ReplaceAll(strings.ToLower(originalFileName), " ", "-") + "-" + fmt.Sprintf("%v", now.Unix()) + fileExt
-	filePath := "http://localhost:8000/images/single/" + filename
+	filename := _generateFileName(header.Filename)
+	filePath := filepath.Join(servePath, filename)
 
-	out, err := os.Create("public/single/" + filename)
+	out, err := os.Create(filepath.Join(storePath, filename))
 	if err != nil {
-		http.Error(w, fmt.Sprintf("unable to create file: %s", err.Error()), http.StatusInternalServerError)
+		_httpError(w, fmt.Sprintf("Unable to create file: %s", err.Error()), http.StatusInternalServerError)
 		return
 	}
 	defer out.Close()
 
 	_, err = io.Copy(out, file)
 	if err != nil {
-		http.Error(w, fmt.Sprintf("error writing file: %s", err.Error()), http.StatusInternalServerError)
+		_httpError(w, fmt.Sprintf("Error writing file: %s", err.Error()), http.StatusInternalServerError)
 		return
 	}
 
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
-	w.Write(fmt.Appendf(nil, `{"filepath": "%s"}`, filePath))
+	w.Write([]byte(fmt.Sprintf(`{"filepath": "%s"}`, filePath)))
 }
 
-func UploadMulti(w http.ResponseWriter, r *http.Request) {
+func UploadMulti(w http.ResponseWriter, r *http.Request, servePath, storePath string) {
 	err := r.ParseMultipartForm(10 << 20) // Limit to 10MB
 	if err != nil {
-		http.Error(w, "Unable to parse form", http.StatusBadRequest)
+		_httpError(w, "Unable to parse form", http.StatusBadRequest)
 		return
 	}
 
 	files := r.MultipartForm.File["images"]
-	servePath := "/serve/path"
-	storePath := "/store/path"
+	if len(files) == 0 {
+		_httpError(w, "No files uploaded", http.StatusBadRequest)
+		return
+	}
 
-	filePaths := []string{}
+	var filePaths []string
 
 	for _, file := range files {
-		fileExt := filepath.Ext(file.Filename)
-		originalFileName := strings.TrimSuffix(filepath.Base(file.Filename), fileExt)
-		now := time.Now()
-		filename := strings.ReplaceAll(strings.ToLower(originalFileName), " ", "-") + "-" + fmt.Sprintf("%v", now.Unix()) + fileExt
-		filePath := servePath + "/" + filename
-
+		filename := _generateFileName(file.Filename)
+		filePath := filepath.Join(servePath, filename)
 		filePaths = append(filePaths, filePath)
 
-		out, err := os.Create(storePath + "/" + filename)
+		out, err := os.Create(filepath.Join(storePath, filename))
 		if err != nil {
-			http.Error(w, "Error saving file: "+err.Error(), http.StatusInternalServerError)
+			_httpError(w, fmt.Sprintf("Error saving file: %s", err.Error()), http.StatusInternalServerError)
 			return
 		}
 		defer out.Close()
 
 		readerFile, err := file.Open()
 		if err != nil {
-			http.Error(w, "Error opening file: "+err.Error(), http.StatusInternalServerError)
+			_httpError(w, fmt.Sprintf("Error opening file: %s", err.Error()), http.StatusInternalServerError)
 			return
 		}
 		defer readerFile.Close()
 
 		_, err = io.Copy(out, readerFile)
 		if err != nil {
-			http.Error(w, "Error copying file content: "+err.Error(), http.StatusInternalServerError)
+			_httpError(w, fmt.Sprintf("Error copying file content: %s", err.Error()), http.StatusInternalServerError)
 			return
 		}
 	}
 
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
-	w.Write(fmt.Appendf(nil, `{"filepath": "%v"}`, filePaths))
+	w.Write([]byte(fmt.Sprintf(`{"filepath": %v}`, filePaths)))
 }

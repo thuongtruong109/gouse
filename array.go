@@ -4,7 +4,6 @@ import (
 	"math/rand"
 	"reflect"
 	"sort"
-	"time"
 )
 
 func _minmax[T comparable](arr []T, less func(T, T) bool) T {
@@ -335,8 +334,6 @@ func Flatten(input any) []any {
 }
 
 func Shuffle[T comparable](arr []T) {
-	rand.Seed(time.Now().UnixNano())
-
 	originalArr := append([]T(nil), arr...)
 	for {
 		for i := len(arr) - 1; i > 0; i-- {

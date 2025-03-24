@@ -28,20 +28,17 @@ test:
 	go tool cover -func=coverage.out
 	@echo "Done!"
 
-BENCH_CMD = go test -count 5 -run=^\# -bench=. ./number/... ./regex/...
+BENCH_CMD = go test -count 5 -run=^\# -bench=. ./...
 
 bench:
 	@echo "Running benchmarks..."
 	$(BENCH_CMD)
 	@echo "Done!"
 
-bench_filter:
-	BENCH_CMD -benchmem > $(f)
-
 bench_stat:
 	@echo "Running stat filter benchmarks..."
-	make bench_filter f=old.txt
-	make bench_filter f=new.txt
+	$(BENCH_CMD) -benchmem > old.txt
+	$(BENCH_CMD) -benchmem > new.txt
 	benchstat old.txt new.txt
 	@echo "Done!"
 

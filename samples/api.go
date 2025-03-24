@@ -1,6 +1,7 @@
 package samples
 
 import (
+	"net/http"
 	"time"
 
 	"github.com/thuongtruong109/gouse"
@@ -47,4 +48,21 @@ func GracefulShutdown() {
 	}
 
 	gs.GracefulShutdown()
+}
+
+/*
+Description: Upload file to server
+Input params: (servePath, storagePath string)
+*/
+func UploadFile() {
+	{
+		http.HandleFunc("/upload-single", func(w http.ResponseWriter, r *http.Request) {
+			gouse.UploadSingle(w, r, "http://localhost:8080/img", "./public")
+		})
+		http.HandleFunc("/upload-multi", func(w http.ResponseWriter, r *http.Request) {
+			gouse.UploadMulti(w, r, "http://localhost:8080/img", "./public")
+		})
+
+		http.ListenAndServe(":8080", nil)
+	}
 }
