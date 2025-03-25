@@ -1,5 +1,5 @@
 ci:
-	go get -v ./...
+	go get -v -t -d ./...
 	go mod download
 
 install:
@@ -9,6 +9,7 @@ install:
 	go get golang.org/x/perf/cmd/benchstat
 	go install golang.org/x/perf/cmd/benchstat
 	go install honnef.co/go/tools/cmd/staticcheck@latest
+	go install golang.org/x/vuln/cmd/govulncheck@latest
 
 dev:
 	go run samples/main/index.go -isDev=true
@@ -24,6 +25,8 @@ doc:
 test:
 	@echo "Running tests..."
 	go clean -testcache
+	go vet -v ./...
+	govulncheck ./...
 	go test -v -count=1 -cover -coverprofile=coverage.out ./*.go
 	go tool cover -func=coverage.out
 	@echo "Done!"

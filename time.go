@@ -70,15 +70,15 @@ func ToHour(hour int) time.Duration {
 	return time.Duration(hour) * time.Hour
 }
 
-func SleepSecond(second int) {
+func SleepS(second int) {
 	time.Sleep(ToSecond(second))
 }
 
-func SleepMinute(minute int) {
+func SleepM(minute int) {
 	time.Sleep(ToMinute(minute))
 }
 
-func SleepHour(hour int) {
+func SleepH(hour int) {
 	time.Sleep(ToHour(hour))
 }
 

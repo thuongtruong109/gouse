@@ -5,21 +5,21 @@ import (
 	"testing"
 )
 
-func TestDetectError(t *testing.T) {
+func TestDetectErr(t *testing.T) {
 	err := fmt.Errorf("this is an error")
-	result := DetectError(err)
+	result := DetectErr(err)
 	if result != "this is an error" {
 		t.Errorf("expected 'this is an error', got '%s'", result)
 	}
 
 	str := "this is a string"
-	result = DetectError(str)
+	result = DetectErr(str)
 	if result != "this is a string" {
 		t.Errorf("expected 'this is a string', got '%s'", result)
 	}
 
 	num := 123
-	result = DetectError(num)
+	result = DetectErr(num)
 	if result != "123" {
 		t.Errorf("expected '123', got '%s'", result)
 	}
@@ -29,13 +29,13 @@ func TestDetectError(t *testing.T) {
 		Age  int
 	}
 	p := Person{Name: "Alice", Age: 30}
-	result = DetectError(p)
+	result = DetectErr(p)
 	if result != "{Alice 30}" {
 		t.Errorf("expected '{Alice 30}', got '%s'", result)
 	}
 
 	var nilVal any = nil
-	result = DetectError(nilVal)
+	result = DetectErr(nilVal)
 	if result != "<nil>" {
 		t.Errorf("expected '<nil>', got '%s'", result)
 	}

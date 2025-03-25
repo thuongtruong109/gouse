@@ -43,8 +43,9 @@ func main() {
 
 func apiSample() {
 	samples.Loadbalancer()
-	samples.GracefulShutdown()
+	samples.Server()
 	// samples.Validate()
+	samples.UploadFile()
 }
 
 func arraySample() {

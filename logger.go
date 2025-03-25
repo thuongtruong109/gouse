@@ -42,7 +42,7 @@ func WriteLog(prefix, msg, filePath string, err ...any) {
 	logId := RandStr(8)
 
 	if len(err) > 0 {
-		errStr := DetectError(err)
+		errStr := DetectErr(err)
 		logParam.Message = Sprintf("Message: %s - ID: %s - Error: %s - Date: \n", msg, logId, errStr)
 	} else {
 		logParam.Message = Sprintf("Message: %s - ID: %s - Date: \n", msg, logId)

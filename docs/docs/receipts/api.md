@@ -39,21 +39,21 @@ func Loadbalancer() {
 }
 ```
 
-## 2. Graceful shutdown
+## 2. Server
 
-Description: Graceful shutdown for API server<br>Input params: (IGracefulShutdown)<br>
+Description: Start server with graceful shutdown mode for API<br>Input params: (gouse.IServer)<br>
 
 ```go
-func GracefulShutdown() {
-	gs := gouse.IGracefulShutdown{
+func Server() {
+	gs := gouse.IServer{
 		Port:          "3000",
 		StartMsg:      "Starting server at port http://localhost:3000",
 		ShutdownMsg:   "Shutting down server...",
-		SleepTimout:   5 * time.Second,
+		SleepTimeout:  5 * time.Second,
 		HeaderTimeout: 5 * time.Second,
 	}
 
-	gs.GracefulShutdown()
+	gs.Server()
 }
 ```
 

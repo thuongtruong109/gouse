@@ -117,7 +117,7 @@ func RetryFunc(fn func() error, attempts int, sleep int) (err error) {
 	for i := attempts; i > 0; i-- {
 		if i > 1 {
 			retry()
-			SleepSecond(sleep)
+			SleepS(sleep)
 		} else if i == 1 {
 			retry()
 		} else {
@@ -136,7 +136,7 @@ func RemainFunc(fn func(), attempts int) {
 func IntervalFunc(fn func(), timeout int) {
 	for {
 		fn()
-		SleepSecond(timeout)
+		SleepS(timeout)
 	}
 }
 

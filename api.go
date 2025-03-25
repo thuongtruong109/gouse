@@ -2,6 +2,7 @@ package gouse
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 	"io"
 	"log"
@@ -12,6 +13,8 @@ import (
 	"os"
 	"os/signal"
 	"path/filepath"
+	"runtime"
+	"runtime/debug"
 	"strings"
 	"sync"
 	"sync/atomic"
@@ -132,26 +135,30 @@ func LoadBalancer(proxyPort string, backends []ILb) {
 	}
 }
 
-type IGracefulShutdown struct {
+type IServer struct {
 	Port          string
 	StartMsg      string
 	ShutdownMsg   string
-	SleepTimout   time.Duration
+	SleepTimeout  time.Duration
 	HeaderTimeout time.Duration
 }
 
-func (igs *IGracefulShutdown) GracefulShutdown() {
+func (igs *IServer) Server() {
 	var wg sync.WaitGroup
 
 	wg.Add(1)
 
 	go func() {
 		defer wg.Done()
-		time.Sleep(igs.SleepTimout)
+		time.Sleep(igs.SleepTimeout)
 	}()
 
+	debug.FreeOSMemory()
+	runtime.GC()
+	runtime.GOMAXPROCS(runtime.NumCPU())
+
 	c := make(chan os.Signal, 1)
-	signal.Notify(c, os.Interrupt, syscall.SIGTERM)
+	signal.Notify(c, syscall.SIGINT, syscall.SIGTERM, os.Interrupt, syscall.SIGHUP, syscall.SIGQUIT)
 
 	Println(igs.StartMsg)
 
@@ -159,6 +166,12 @@ func (igs *IGracefulShutdown) GracefulShutdown() {
 		Addr:              ":" + igs.Port,
 		ReadHeaderTimeout: igs.HeaderTimeout,
 	}
+
+	ctx, cancel := context.WithTimeout(context.Background(), time.Duration(igs.SleepTimeout))
+	defer cancel()
+
+	p, _ := os.FindProcess(os.Getpid())
+	p.Signal(syscall.SIGINT)
 
 	go func() {
 		<-c
@@ -171,8 +184,8 @@ func (igs *IGracefulShutdown) GracefulShutdown() {
 		}()
 		wg.Wait()
 
-		if err := srv.Shutdown(context.Background()); err != nil {
-			Println("server shutdown error:", err)
+		if err := srv.Shutdown(ctx); err != nil {
+			log.Fatalf("server shutdown error: %v", fmt.Sprintf("%v", err))
 		}
 	}()
 	Println(srv.ListenAndServe())
@@ -349,4 +362,35 @@ func UploadMulti(w http.ResponseWriter, r *http.Request, servePath, storePath st
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
 	w.Write([]byte(fmt.Sprintf(`{"filepath": %v}`, filePaths)))
+}
+
+type IHeader struct {
+	Method        string
+	Addr          string
+	URL           string
+	Proto         string
+	Host          string
+	StatusCode    int
+	ContentLength int
+	ContentType   string
+}
+
+func Header(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+
+	for k, v := range r.Header {
+		fmt.Fprintf(w, "%q: %q\n\n", k, v)
+	}
+
+	p := &IHeader{
+		Method:        r.Method,
+		Addr:          r.RemoteAddr,
+		URL:           r.URL.String(),
+		Proto:         r.Proto,
+		Host:          r.Host,
+		StatusCode:    200,
+		ContentLength: 200,
+		ContentType:   "application/json",
+	}
+	json.NewEncoder(w).Encode(p)
 }

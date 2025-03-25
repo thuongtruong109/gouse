@@ -5,12 +5,12 @@ import (
 	"time"
 )
 
-func TestNewCronJob(t *testing.T) {
+func TestNewCron(t *testing.T) {
 	duration := time.Second * 1
 	stopAfter := time.Second * 5
 	callback := func() {}
 
-	cronJob := NewCronJob(duration, stopAfter, callback)
+	cronJob := NewCron(duration, stopAfter, callback)
 
 	if cronJob.duration != duration {
 		t.Errorf("Expected duration %v, but got %v", duration, cronJob.duration)
@@ -26,7 +26,7 @@ func TestNewCronJob(t *testing.T) {
 	}
 }
 
-func TestCronJobStartAndWait(t *testing.T) {
+func TestCronStartAndWait(t *testing.T) {
 	duration := time.Millisecond * 10
 	stopAfter := time.Millisecond * 50
 	callbackCalled := false
@@ -35,7 +35,7 @@ func TestCronJobStartAndWait(t *testing.T) {
 		callbackCalled = true
 	}
 
-	cronJob := NewCronJob(duration, stopAfter, callback)
+	cronJob := NewCron(duration, stopAfter, callback)
 	cronJob.StartJob()
 	cronJob.WaitJob()
 

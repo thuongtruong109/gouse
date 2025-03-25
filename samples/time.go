@@ -51,7 +51,7 @@ Description: Sleep for seconds
 Input params: (interval int64)
 */
 func SleepSecond() {
-	gouse.SleepSecond(1)
+	gouse.SleepS(1)
 }
 
 /*
@@ -59,7 +59,7 @@ Description: Sleep for minutes
 Input params: (interval int64)
 */
 func SleepMinute() {
-	gouse.SleepMinute(1)
+	gouse.SleepM(1)
 }
 
 /*
@@ -67,7 +67,7 @@ Description: Sleep for hours
 Input params: (interval int64)
 */
 func SleepHour() {
-	gouse.SleepHour(1)
+	gouse.SleepH(1)
 }
 
 /*

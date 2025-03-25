@@ -127,8 +127,6 @@ func TestFormatTime(t *testing.T) {
 	}
 }
 
-/* Testing utilities */
-
 func TestToSecond(t *testing.T) {
 	second := 1
 	expected := time.Duration(second) * time.Second
@@ -159,7 +157,7 @@ func TestToHour(t *testing.T) {
 func TestSleepSecond(t *testing.T) {
 	nowSecond := time.Now().Second()
 	second := 1
-	SleepSecond(second)
+	SleepS(second)
 	if nowSecond == time.Now().Second() {
 		t.Errorf("Expected %v but it got %v", nowSecond+second, time.Now().Second())
 	}
