@@ -347,37 +347,32 @@ func Memory() (*IMemory, error) {
 }
 
 func Profile(cpuprofile, memprofile string) {
+	closeFile := func(f *os.File) {
+		err := f.Close()
+		if err != nil {
+			log.Printf("error closing profile file: %v", err)
+		}
+	}
+
 	if cpuprofile != "" {
 		f, err := os.Create(cpuprofile)
 		if err != nil {
 			log.Fatal("could not create CPU profile: ", err)
 		}
-		defer func() {
-			err := f.Close()
-			if err != nil {
-				log.Printf("error closing CPU profile file: %v", err)
-			}
-		}()
+		defer closeFile(f)
 
 		if err := pprof.StartCPUProfile(f); err != nil {
 			log.Fatal("could not start CPU profile: ", err)
 		}
 		defer pprof.StopCPUProfile()
 	}
-
 	// ... rest of the program ...
-
 	if memprofile != "" {
 		f, err := os.Create(memprofile)
 		if err != nil {
 			log.Fatal("could not create memory profile: ", err)
 		}
-		defer func() {
-			err := f.Close()
-			if err != nil {
-				log.Printf("error closing memory profile file: %v", err)
-			}
-		}()
+		defer closeFile(f)
 
 		runtime.GC()
 

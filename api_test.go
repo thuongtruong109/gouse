@@ -15,7 +15,7 @@ func TestHttpError(t *testing.T) {
 
 	rr := httptest.NewRecorder()
 
-	_httpError(rr, "Not Found", http.StatusNotFound)
+	httpError(rr, "Not Found", http.StatusNotFound)
 
 	if status := rr.Code; status != http.StatusNotFound {
 		t.Errorf("Expected status code %d, got %d", http.StatusNotFound, status)

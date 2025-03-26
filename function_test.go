@@ -90,7 +90,11 @@ func TestLockHandlerWithNonFunctionCallback(t *testing.T) {
 		}
 	}()
 
-	_lockHandler("not a function", func() {}, func() {})
+	lockHandler("not a function", func() {
+		// do nothing
+	}, func() {
+		// do nothing
+	})
 }
 
 func TestLockFuncConcurrency(t *testing.T) {

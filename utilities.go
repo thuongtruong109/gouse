@@ -31,7 +31,7 @@ func (f *Function) HighlightBody() string {
 	return Sprintf("\n```go\n%s```\n", f.Body)
 }
 
-func _extractImports(content []byte) string {
+func extractImports(content []byte) string {
 	fset := token.NewFileSet()
 	node, err := parser.ParseFile(fset, "string", string(content), parser.ParseComments)
 	if err != nil {
@@ -74,7 +74,7 @@ func ExtractFunctions(code []byte) []Function {
 			}
 
 			functions = append(functions, Function{
-				Import: _extractImports(code),
+				Import: extractImports(code),
 				Order:  Int2Str(len(functions) + 1),
 				Name:   funcName,
 				Desc:   funcComment,
@@ -86,7 +86,7 @@ func ExtractFunctions(code []byte) []Function {
 	return functions
 }
 
-func _detectContent(content []byte) []byte {
+func detectContent(content []byte) []byte {
 	var result []string
 	functions := ExtractFunctions(content)
 	result = append(result, functions[0].HighlightImport())
@@ -112,7 +112,7 @@ func Go2Md(inputPath, outputPath string) {
 		panic(err)
 	}
 
-	wrapper := _detectContent(content)
+	wrapper := detectContent(content)
 
 	err = WritePath(outputPath, wrapper)
 	if err != nil {

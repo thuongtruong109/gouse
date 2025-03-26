@@ -51,16 +51,12 @@ jobs:
           file: coverage.out
           flags: unittests
 
-      - name: Coveralls
-        # uses: coverallsapp/github-action@v2
-        # with:
-        #   github-token: ${{ github.token }}
-        #   file: coverage.out
-        #   format: golang
-
-        uses: shogo82148/actions-goveralls@v1
-        with:
-          path-to-profile: coverage.out
+      # - name: Coveralls
+      #   uses: coverallsapp/github-action@v2
+      #   with:
+      #     github-token: ${{ github.token }}
+      #     file: coverage.out
+      #     format: golang
 
       # - name: Upload coverage
       #   uses: actions/upload-artifact@v4
@@ -108,8 +104,3 @@ jobs:
           version: v2.0
           problem-matchers: true
           args: --issues-exit-code=0  > linter-results.sarif
-
-      - name: Upload SARIF to Code Scanning
-        uses: github/codeql-action/upload-sarif@v3
-        with:
-          sarif_file: ./linter-results.sarif

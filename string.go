@@ -34,7 +34,7 @@ func CamelCase(s string) string {
 	return result
 }
 
-func _concatCase(s string, sep string) string {
+func concatCase(s string, sep string) string {
 	spliStr := Split(s, " ")
 	var result string
 
@@ -63,19 +63,19 @@ func _concatCase(s string, sep string) string {
 }
 
 func SnakeCase(s string) string {
-	return _concatCase(s, "_")
+	return concatCase(s, "_")
 }
 
 func KebabCase(s string) string {
-	return _concatCase(s, "-")
+	return concatCase(s, "-")
 }
 
 func SpaceCase(s string) string {
-	return _concatCase(s, " ")
+	return concatCase(s, " ")
 }
 
 func CustomCase(s, sep string) string {
-	return _concatCase(s, sep)
+	return concatCase(s, sep)
 }
 
 func IsLetter[T byte | rune](char T) bool {
@@ -522,7 +522,7 @@ func Unesc(s string) string {
 	return s
 }
 
-func _pad(s string, addAmount int, padChar byte) string {
+func pad(s string, addAmount int, padChar byte) string {
 	padding := make([]byte, addAmount-len(s))
 	for i := range padding {
 		padding[i] = padChar
@@ -535,7 +535,7 @@ func LPad(s string, addAmount int, padChar byte) string {
 	if len(s) >= addAmount {
 		return s
 	}
-	return _pad(s, addAmount, padChar) + s
+	return pad(s, addAmount, padChar) + s
 }
 
 func RPad(s string, addAmount int, padChar byte) string {
@@ -543,7 +543,7 @@ func RPad(s string, addAmount int, padChar byte) string {
 		return s
 	}
 
-	return s + _pad(s, addAmount, padChar)
+	return s + pad(s, addAmount, padChar)
 }
 
 func Count(s string, substr ...string) int {

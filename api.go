@@ -28,11 +28,11 @@ func Validate(ctxBind func() error, ctxReq func() context.Context, req any) erro
 	return validate.StructCtx(ctx, req)
 }
 
-func _httpError(w http.ResponseWriter, msg string, statusCode int) {
+func httpError(w http.ResponseWriter, msg string, statusCode int) {
 	http.Error(w, msg, statusCode)
 }
 
-func _generateFileName(originalFileName string) string {
+func generateFileName(originalFileName string) string {
 	fileExt := filepath.Ext(originalFileName)
 	originalName := strings.TrimSuffix(filepath.Base(originalFileName), fileExt)
 	now := time.Now().UnixNano()
@@ -40,85 +40,89 @@ func _generateFileName(originalFileName string) string {
 	return filename
 }
 
+func setJSONHeader(w http.ResponseWriter) {
+	w.Header().Set("Content-Type", "application/json")
+}
+
 func UploadSingle(w http.ResponseWriter, r *http.Request, servePath, storePath string) {
 	err := r.ParseMultipartForm(10 << 20) // Limit to 10MB
 	if err != nil {
-		_httpError(w, fmt.Sprintf("Error parsing form: %s", err.Error()), http.StatusBadRequest)
+		httpError(w, fmt.Sprintf("Error parsing form: %s", err.Error()), http.StatusBadRequest)
 		return
 	}
 
 	file, header, err := r.FormFile("image")
 	if err != nil {
-		_httpError(w, fmt.Sprintf("Error retrieving file: %s", err.Error()), http.StatusBadRequest)
+		httpError(w, fmt.Sprintf("Error retrieving file: %s", err.Error()), http.StatusBadRequest)
 		return
 	}
 	defer file.Close()
 
-	filename := _generateFileName(header.Filename)
+	filename := generateFileName(header.Filename)
 	filePath := filepath.Join(servePath, filename)
 
 	out, err := os.Create(filepath.Join(storePath, filename))
 	if err != nil {
-		_httpError(w, fmt.Sprintf("Unable to create file: %s", err.Error()), http.StatusInternalServerError)
+		httpError(w, fmt.Sprintf("Unable to create file: %s", err.Error()), http.StatusInternalServerError)
 		return
 	}
 	defer out.Close()
 
 	_, err = io.Copy(out, file)
 	if err != nil {
-		_httpError(w, fmt.Sprintf("Error writing file: %s", err.Error()), http.StatusInternalServerError)
+		httpError(w, fmt.Sprintf("Error writing file: %s", err.Error()), http.StatusInternalServerError)
 		return
 	}
 
-	w.Header().Set("Content-Type", "application/json")
+	setJSONHeader(w)
 	w.WriteHeader(http.StatusOK)
-	w.Write([]byte(fmt.Sprintf(`{"filepath": "%s"}`, filePath)))
+	w.Write(fmt.Appendf(nil, `{"filepath": "%s"}`, filePath))
 }
 
 func UploadMulti(w http.ResponseWriter, r *http.Request, servePath, storePath string) {
 	err := r.ParseMultipartForm(10 << 20) // Limit to 10MB
 	if err != nil {
-		_httpError(w, "Unable to parse form", http.StatusBadRequest)
+		httpError(w, "Unable to parse form", http.StatusBadRequest)
 		return
 	}
 
 	files := r.MultipartForm.File["images"]
 	if len(files) == 0 {
-		_httpError(w, "No files uploaded", http.StatusBadRequest)
+		httpError(w, "No files uploaded", http.StatusBadRequest)
 		return
 	}
 
 	var filePaths []string
 
 	for _, file := range files {
-		filename := _generateFileName(file.Filename)
+		filename := generateFileName(file.Filename)
 		filePath := filepath.Join(servePath, filename)
 		filePaths = append(filePaths, filePath)
 
 		out, err := os.Create(filepath.Join(storePath, filename))
 		if err != nil {
-			_httpError(w, fmt.Sprintf("Error saving file: %s", err.Error()), http.StatusInternalServerError)
+			httpError(w, fmt.Sprintf("Error saving file: %s", err.Error()), http.StatusInternalServerError)
 			return
 		}
 		defer out.Close()
 
 		readerFile, err := file.Open()
 		if err != nil {
-			_httpError(w, fmt.Sprintf("Error opening file: %s", err.Error()), http.StatusInternalServerError)
+			httpError(w, fmt.Sprintf("Error opening file: %s", err.Error()), http.StatusInternalServerError)
 			return
 		}
 		defer readerFile.Close()
 
 		_, err = io.Copy(out, readerFile)
 		if err != nil {
-			_httpError(w, fmt.Sprintf("Error copying file content: %s", err.Error()), http.StatusInternalServerError)
+			httpError(w, fmt.Sprintf("Error copying file content: %s", err.Error()), http.StatusInternalServerError)
 			return
 		}
 	}
 
-	w.Header().Set("Content-Type", "application/json")
+	setJSONHeader(w)
 	w.WriteHeader(http.StatusOK)
-	w.Write([]byte(fmt.Sprintf(`{"filepath": %v}`, filePaths)))
+	w.Write(fmt.Appendf(nil, `{"filepath": %v}`, filePaths))
 }
 
 type IHeader struct {
@@ -257,9 +261,6 @@ func (p *Pagination) GetQueryString() string {
 }
 
 func (p *Pagination) GetHasMore(totalCount int) bool {
-	// Calculate the total number of pages
 	totalPages := int(math.Ceil(float64(totalCount) / float64(p.Size)))
-
-	// If the current page is less than the total number of pages, there's more data
 	return p.Page < totalPages
 }

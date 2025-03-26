@@ -1326,7 +1326,7 @@ func TestFlatten(t *testing.T) {
 	}
 }
 
-func _isDifferent[T comparable](arr1, arr2 []T) bool {
+func isDiff[T comparable](arr1, arr2 []T) bool {
 	for i := range arr1 {
 		if arr1[i] != arr2[i] {
 			return true
@@ -1344,7 +1344,7 @@ func TestShuffle(t *testing.T) {
 		t.Errorf("Expected shuffled array to have same length as original, but got length %d", len(intArr_2))
 	}
 
-	if !_isDifferent(intArr_1, intArr_2) {
+	if !isDiff(intArr_1, intArr_2) {
 		t.Errorf("Expected shuffled array to be different from original")
 	}
 
@@ -1361,7 +1361,7 @@ func TestShuffle(t *testing.T) {
 	if len(strArr_1) != len(strArr_2) {
 		t.Errorf("Expected shuffled array to have same length as original, but got length %d", len(strArr_2))
 	}
-	if !_isDifferent(strArr_1, strArr_2) {
+	if !isDiff(strArr_1, strArr_2) {
 		t.Errorf("Expected shuffled array to be different from original")
 	}
 }

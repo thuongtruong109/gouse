@@ -6,7 +6,7 @@ import (
 	"sort"
 )
 
-func _minmax[T comparable](arr []T, less func(T, T) bool) T {
+func minmax[T comparable](arr []T, less func(T, T) bool) T {
 	if len(arr) == 0 {
 		panic("Empty array")
 	}
@@ -21,18 +21,18 @@ func _minmax[T comparable](arr []T, less func(T, T) bool) T {
 }
 
 func MinArr[T Number | string](arr []T) T {
-	return _minmax(arr, func(a, b T) bool {
+	return minmax(arr, func(a, b T) bool {
 		return a > b
 	})
 }
 
 func MaxArr[T Number | string](arr []T) T {
-	return _minmax(arr, func(a, b T) bool {
+	return minmax(arr, func(a, b T) bool {
 		return a < b
 	})
 }
 
-func _interSlice[T comparable](a, b []T) []T {
+func interSlice[T comparable](a, b []T) []T {
 	var intersect []T
 
 	for _, v := range a {
@@ -52,7 +52,7 @@ func Intersect[T comparable](slices ...[]T) []T {
 	intersect := slices[0]
 
 	for _, slice := range slices[1:] {
-		intersect = _interSlice(intersect, slice)
+		intersect = interSlice(intersect, slice)
 	}
 
 	return intersect

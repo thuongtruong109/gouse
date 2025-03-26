@@ -150,7 +150,7 @@ func IsUUID(input string) (bool, error) {
 	return true, nil
 }
 
-func _isMail(emailStr, domain string) (bool, error) {
+func isMail(emailStr, domain string) (bool, error) {
 	if Includes(emailStr, "@") {
 		if !IsMatchReg(EmailLenReg, emailStr) {
 			return false, ErrorEmailLength
@@ -170,23 +170,23 @@ func _isMail(emailStr, domain string) (bool, error) {
 }
 
 func IsGmail(emailStr string) (bool, error) {
-	return _isMail(emailStr, "gmail.com")
+	return isMail(emailStr, "gmail.com")
 }
 
 func IsYahoo(emailStr string) (bool, error) {
-	return _isMail(emailStr, "yahoo.com")
+	return isMail(emailStr, "yahoo.com")
 }
 
 func IsOutlook(emailStr string) (bool, error) {
-	return _isMail(emailStr, "outlook.com")
+	return isMail(emailStr, "outlook.com")
 }
 
 func IsEdu(emailStr string) (bool, error) {
-	return _isMail(emailStr, "edu")
+	return isMail(emailStr, "edu")
 }
 
 func IsEmail(emailStr, customDomain string) (bool, error) {
-	return _isMail(emailStr, customDomain)
+	return isMail(emailStr, customDomain)
 }
 
 func IsUsername(username string) (bool, error) {

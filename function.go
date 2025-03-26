@@ -8,7 +8,7 @@ import (
 
 /* Lock */
 
-func _lockHandler(callback any, lock, unlock func()) any {
+func lockHandler(callback any, lock, unlock func()) any {
 	callbackType := reflect.TypeOf(callback)
 	if callbackType.Kind() != reflect.Func {
 		panic("callback must be a function")
@@ -23,12 +23,12 @@ func _lockHandler(callback any, lock, unlock func()) any {
 
 func LockFunc(callback any) any {
 	var mutex sync.Mutex
-	return _lockHandler(callback, mutex.Lock, mutex.Unlock)
+	return lockHandler(callback, mutex.Lock, mutex.Unlock)
 }
 
 func RWLockFunc(callback any) any {
 	var rwMutex sync.RWMutex
-	return _lockHandler(callback, rwMutex.RLock, rwMutex.RUnlock)
+	return lockHandler(callback, rwMutex.RLock, rwMutex.RUnlock)
 }
 
 func DeferWrapper(mainFunc func() error, cleanupFunc func()) error {
@@ -51,7 +51,7 @@ type DelayedResult[T any] struct {
 	HasReturn bool
 }
 
-func _delay[T any](f func() T, timeout int, hasReturn bool) DelayedResult[T] {
+func delay[T any](f func() T, timeout int, hasReturn bool) DelayedResult[T] {
 	resultChan := make(chan T, 1)
 
 	go func() {
@@ -70,11 +70,11 @@ func _delay[T any](f func() T, timeout int, hasReturn bool) DelayedResult[T] {
 }
 
 func DelayF[T any](f func() T, timeout int) DelayedResult[T] {
-	return _delay(f, timeout, true)
+	return delay(f, timeout, true)
 }
 
 func DelayFunc(f func(), timeout int) DelayedResult[struct{}] {
-	return _delay(func() struct{} {
+	return delay(func() struct{} {
 		f()
 		return struct{}{}
 	}, timeout, false)

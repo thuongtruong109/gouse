@@ -49,7 +49,7 @@ var mutex sync.Mutex
 var idx int = 0
 var cfg ILbConf
 
-func _lbHandler(w http.ResponseWriter, r *http.Request) {
+func lbHandler(w http.ResponseWriter, r *http.Request) {
 	maxLen := len(cfg.Backends)
 
 	// Round Robin
@@ -69,12 +69,12 @@ func _lbHandler(w http.ResponseWriter, r *http.Request) {
 	reverseProxy.ErrorHandler = func(w http.ResponseWriter, r *http.Request, e error) {
 		log.Printf("%v is dead", targetURL)
 		currentBackend.SetDead(true)
-		_lbHandler(w, r)
+		lbHandler(w, r)
 	}
 	reverseProxy.ServeHTTP(w, r)
 }
 
-func _isAlive(url *url.URL) bool {
+func isAlive(url *url.URL) bool {
 	conn, err := net.DialTimeout("tcp", url.Host, time.Minute*1)
 	if err != nil {
 		log.Printf("Unreachable tp %v, error:%v", url.Host, err.Error())
@@ -101,7 +101,7 @@ func HealthCheck() {
 				log.Print(err.Error())
 				continue
 			}
-			isAlive := _isAlive(pingURL)
+			isAlive := isAlive(pingURL)
 			backend.SetDead(!isAlive)
 			msg := "alive"
 			if !isAlive {
@@ -122,7 +122,7 @@ func LoadBalancer(proxyPort string, backends []ILb) {
 
 	s := http.Server{
 		Addr:              ":" + cfg.ProxyPort,
-		Handler:           http.HandlerFunc(_lbHandler),
+		Handler:           http.HandlerFunc(lbHandler),
 		ReadHeaderTimeout: 10 * time.Second,
 	}
 

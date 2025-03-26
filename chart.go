@@ -10,7 +10,7 @@ import (
 	"github.com/PuerkitoBio/goquery"
 )
 
-func _customTitle(dist, title string) {
+func customTitle(dist, title string) {
 	file, err1 := os.Open(dist)
 	if err1 != nil {
 		println(err1)
@@ -82,7 +82,7 @@ func BarChart(options *IBarChart) {
 	f, _ := os.Create(options.Output)
 	_ = bar.Render(f)
 
-	_customTitle(options.Output, options.Title)
+	customTitle(options.Output, options.Title)
 }
 
 type ILineChartItem struct {
@@ -128,7 +128,7 @@ func LineChart(options *ILineChart) {
 	f, _ := os.Create(options.Output)
 	_ = line.Render(f)
 
-	_customTitle(options.Output, options.Title)
+	customTitle(options.Output, options.Title)
 }
 
 type IPieChartItem struct {
@@ -187,7 +187,7 @@ func PieChart(options *IPieChart) {
 	f, _ := os.Create(options.Output)
 	_ = pie.Render(f)
 
-	_customTitle(options.Output, options.Title)
+	customTitle(options.Output, options.Title)
 }
 
 type IScatterChart struct {
@@ -217,5 +217,5 @@ func ScatterChart(options *IScatterChart) {
 	f, _ := os.Create(options.Output)
 	scatter.Render(f)
 
-	_customTitle(options.Output, options.Title)
+	customTitle(options.Output, options.Title)
 }
