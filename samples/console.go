@@ -118,7 +118,7 @@ func ConsoleSelect() {
 }
 
 func ConsoleList() {
-	title := "My Fave Things"
+	title := "My Favourite Things"
 	items := []list.Item{
 		{Label: "Raspberry Pi’s", Desc: "I have ’em all over my house"},
 		{Label: "Nutella", Desc: "It's good on toast"},
