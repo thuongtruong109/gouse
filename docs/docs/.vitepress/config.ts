@@ -7,17 +7,12 @@ export default defineConfig({
   lang: "en-US",
   title: "Gouse",
   description: "A modern Golang utility presets",
-
-  logo: "/img/32x32.png",
-
   lastUpdated: true,
-
+  head: [["link", { rel: "icon", href: "/img/favicon.ico" }]],
+  ignoreDeadLinks: true,
   sitemap: {
     hostname: "https://gouse.vercel.app",
   },
-
-  head: [["link", { rel: "icon", href: "/img/favicon.ico" }]],
-
   themeConfig: {
     logo: "/img/32x32.png",
     socialLinks: [
@@ -58,13 +53,13 @@ export default defineConfig({
         detailedView: true,
       },
     },
-
     sidebar: {
       "/introduction/": {
         base: "/introduction/",
         items: [
           { text: "💡What is Gouse?", link: "what-is-gouse" },
           { text: "🏃‍➡️Getting Started", link: "getting-started" },
+          { text: "📚About", link: "about" },
         ],
       },
       "/receipts/": {
