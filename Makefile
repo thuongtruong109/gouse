@@ -25,8 +25,6 @@ doc:
 test:
 	@echo "Running tests..."
 	go clean -testcache
-	go vet -v ./...
-	govulncheck ./...
 	go test -v -count=1 -cover -coverprofile=coverage.out ./*.go
 	go tool cover -func=coverage.out
 	@echo "Done!"
@@ -54,6 +52,8 @@ lint:
 	@echo "Running lint..."
 	export PATH=$PATH:$(go env GOPATH)/bin
 	staticcheck ./...
+	go vet -v ./...
+	govulncheck ./...
 	@echo "Done!"
 
 count:

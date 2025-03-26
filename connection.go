@@ -15,7 +15,7 @@ import (
 	// "github.com/minio/minio-go/v7/pkg/credentials"
 )
 
-func ConnectRedis(addr, pass string, dbNo ...int) *redis.Client {
+func Redis(addr, pass string, dbNo ...int) *redis.Client {
 	nums := 0
 
 	if len(dbNo) > 0 {
@@ -40,7 +40,7 @@ func ConnectRedis(addr, pass string, dbNo ...int) *redis.Client {
 	return client
 }
 
-func ConnectRedisUri(uri string) *redis.Client {
+func RedisCloud(uri string) *redis.Client {
 	opt, err := redis.ParseURL(uri)
 	if err != nil {
 		panic(err)
@@ -64,7 +64,7 @@ type PgDB struct {
 	Client *sql.DB
 }
 
-func ConnectPostgres(dsn string) (*PgDB, error) {
+func Postgres(dsn string) (*PgDB, error) {
 	const maxOpenDbConn = 10
 	const maxIdleDbConn = 5
 	const maxDbLifeTime = 5 * time.Minute
@@ -131,7 +131,7 @@ func ConnectPostgres(dsn string) (*PgDB, error) {
 // 	}
 // }
 
-func ConnectMongo(ctx context.Context, uri string) (*mongo.Client, error) {
+func Mongo(ctx context.Context, uri string) (*mongo.Client, error) {
 	if uri == "" {
 		return nil, fmt.Errorf("uri connection is not set")
 	}

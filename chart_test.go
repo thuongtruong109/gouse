@@ -12,8 +12,8 @@ func TestCreateBarChart(t *testing.T) {
 
 	options := &IBarChart{
 		Output:   bar_output,
-		Title:    "Test Title",
-		Subtitle: "Test Subtitle",
+		Title:    "Test Bar Chart",
+		Subtitle: "Test subtitle",
 		XAxis:    []string{"A", "B", "C"},
 		Items: []IBarChartItem{
 			{
@@ -56,8 +56,8 @@ func TestCreateLineChart(t *testing.T) {
 
 	options := &ILineChart{
 		Output:   line_output,
-		Title:    "Test Title",
-		Subtitle: "Test Subtitle",
+		Title:    "Test Line Chart",
+		Subtitle: "Test subtitle",
 		XAxis:    []string{"A", "B", "C"},
 		Items: []ILineChartItem{
 			{

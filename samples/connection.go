@@ -10,18 +10,18 @@ Description: Connect to Redis(using parameters)
 Input params: (address string, password string, dbNo int)
 */
 func ConnectRedis() {
-	redis := gouse.ConnectRedis("localhost:6379", "password", 0)
+	redis := gouse.Redis("localhost:6379", "password", 0)
 
 	// ... do something with redis
 	redis.Set(redis.Context(), "key", "value", 0)
 }
 
 /*
-Description: Connect to Redis(using uri)
+Description: Connect to Redis cloud (using uri)
 Input params: (uri string)
 */
 func ConnectRedisUri() {
-	redis := gouse.ConnectRedisUri("redis://localhost:6379/0")
+	redis := gouse.RedisCloud("redis://localhost:6379/0")
 
 	// ... do something with redis
 	redis.Set(redis.Context(), "key", "value", 0)
@@ -33,7 +33,7 @@ Description: Connect to Postgres
 Input params: (uri string)
 */
 func ConnectPostgres() {
-	pg, err := gouse.ConnectPostgres("localhost:5432")
+	pg, err := gouse.Postgres("localhost:5432")
 	if err != nil {
 		panic(err)
 	}
@@ -49,7 +49,7 @@ Input params: (context.Context, uri string)
 func ConnectMongo() {
 	ctx := gouse.CtxBg
 
-	mongoClient, err := gouse.ConnectMongo(ctx, "mongodb://localhost:27017")
+	mongoClient, err := gouse.Mongo(ctx, "mongodb://localhost:27017")
 	if err != nil {
 		panic(err)
 	}

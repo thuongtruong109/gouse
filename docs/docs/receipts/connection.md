@@ -14,7 +14,7 @@ Description: Connect to Redis(using parameters)<br>Input params: (address string
 
 ```go
 func ConnectRedis() {
-	redis := gouse.ConnectRedis("localhost:6379", "password", 0)
+	redis := gouse.Redis("localhost:6379", "password", 0)
 
 	// ... do something with redis
 	redis.Set(redis.Context(), "key", "value", 0)
@@ -23,11 +23,11 @@ func ConnectRedis() {
 
 ## 2. Connect redis uri
 
-Description: Connect to Redis(using uri)<br>Input params: (uri string)<br>
+Description: Connect to Redis cloud (using uri)<br>Input params: (uri string)<br>
 
 ```go
 func ConnectRedisUri() {
-	redis := gouse.ConnectRedisUri("redis://localhost:6379/0")
+	redis := gouse.RedisCloud("redis://localhost:6379/0")
 
 	// ... do something with redis
 	redis.Set(redis.Context(), "key", "value", 0)
@@ -41,7 +41,7 @@ Description: Connect to Postgres<br>Input params: (uri string)<br>
 
 ```go
 func ConnectPostgres() {
-	pg, err := gouse.ConnectPostgres("localhost:5432")
+	pg, err := gouse.Postgres("localhost:5432")
 	if err != nil {
 		panic(err)
 	}
@@ -59,7 +59,7 @@ Description: Connect to MongoDB<br>Input params: (context.Context, uri string)<b
 func ConnectMongo() {
 	ctx := gouse.CtxBg
 
-	mongoClient, err := gouse.ConnectMongo(ctx, "mongodb://localhost:27017")
+	mongoClient, err := gouse.Mongo(ctx, "mongodb://localhost:27017")
 	if err != nil {
 		panic(err)
 	}
