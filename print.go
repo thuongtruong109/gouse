@@ -20,17 +20,30 @@ func Sprintln(args ...any) string {
 	return Sprint(args...) + "\n"
 }
 
+
 func Sprintf(format string, args ...any) string {
 	var result string
 	index := 0
 
 	for i := 0; i < len(format); i++ {
-		if format[i] == '%' && i+1 < len(format) {
-			i++
-			if index >= len(args) {
-				result += "%" + string(format[i])
+		// If the current character is '%', it's a format specifier
+		if format[i] == '%' {
+			// Check if it's a literal '%' (i.e. '%%')
+			if i+1 < len(format) && format[i+1] == '%' {
+				result += "%"
+				i++ // Skip the next '%'
 				continue
 			}
+
+			// Check if we've run out of arguments and append "invalid"
+			if index >= len(args) {
+				result += "invalid"
+				i++ // Skip over the format specifier (d, s, etc.)
+				continue
+			}
+
+			// Otherwise, process the format specifier
+			i++ // Move to the format specifier (e.g., 'd', 's', etc.)
 			switch format[i] {
 			case 'd':
 				if v, ok := args[index].(int); ok {
@@ -58,9 +71,6 @@ func Sprintf(format string, args ...any) string {
 				} else {
 					result += "invalid"
 				}
-			case '%':
-				result += "%"
-				index--
 			case 'T':
 				if v, ok := args[index].(bool); ok {
 					if v {
@@ -78,10 +88,12 @@ func Sprintf(format string, args ...any) string {
 					result += "invalid"
 				}
 			default:
-				result += "%" + string(format[i])
+				// For unknown format specifiers, just append "invalid"
+				result += "invalid"
 			}
-			index++
+			index++ // Move to the next argument
 		} else {
+			// Regular character, just append it
 			result += string(format[i])
 		}
 	}

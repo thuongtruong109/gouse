@@ -38,8 +38,8 @@ Description: Calculate Pytago (F: float)
 Input params: (num1, num2 int)
 */
 func Pytago() {
-	fmt.Sprintf("Pytago of number (integer): %f", gouse.Pytago(3, 4))
-	fmt.Sprintf("Pytago of number (float): %f", gouse.Pytago(3.0, 4.0))
+	fmt.Printf("Pytago of number (integer): %d", gouse.Pytago(3, 4))
+	fmt.Printf("Pytago of number (float): %f", gouse.Pytago(3.0, 4.0))
 }
 
 /*
@@ -48,9 +48,9 @@ Input params: Speed(distance, time float64), Distance(speed, time float64), Time
 */
 func Transition() {
 	var distance, speed, time float64 = 100, 10, 10
-	fmt.Sprintf("Speed: %f", gouse.Speed(distance, time))
-	fmt.Sprintf("Distance: %f", gouse.Distance(speed, time))
-	fmt.Sprintf("Time: %f", gouse.Time(distance, speed))
+	fmt.Printf("Speed: %f", gouse.Speed(distance, time))
+	fmt.Printf("Distance: %f", gouse.Distance(speed, time))
+	fmt.Printf("Time: %f", gouse.Time(distance, speed))
 }
 
 /*
@@ -71,10 +71,10 @@ Description: Calculate area, perimeter, volume of circle (F: float)
 Input params: (radius float64)
 */
 func Circle() {
-	fmt.Sprintf("Area of circle (integer): %f", gouse.AreaCir(10))
-	fmt.Sprintf("Area of circle (float): %f", gouse.AreaCir(10.0))
-	fmt.Sprintf("Perimeter of circle (integer): %f", gouse.PeriCir(10))
-	fmt.Sprintf("Perimeter of circle (float): %f", gouse.PeriCir(10.0))
+	fmt.Printf("Area of circle (integer): %f", gouse.AreaCir(10))
+	fmt.Printf("Area of circle (float): %f", gouse.AreaCir(10.0))
+	fmt.Printf("Perimeter of circle (integer): %f", gouse.PeriCir(10))
+	fmt.Printf("Perimeter of circle (float): %f", gouse.PeriCir(10.0))
 }
 
 /*
@@ -82,10 +82,10 @@ Description: Calculate area, volume of cone (F: float)
 Input params: (radius, height float64)
 */
 func Cone() {
-	fmt.Sprintf("Area of cone (integer): %f", gouse.AreaCone(10, 20))
-	fmt.Sprintf("Area of cone (float): %f", gouse.AreaCone(10.0, 20.0))
-	fmt.Sprintf("Volume of cone (integer): %f", gouse.VolCone(10, 20))
-	fmt.Sprintf("Volume of cone (float): %f", gouse.VolCone(10.0, 20.0))
+	fmt.Printf("Area of cone (integer): %f", gouse.AreaCone(10, 20))
+	fmt.Printf("Area of cone (float): %f", gouse.AreaCone(10.0, 20.0))
+	fmt.Printf("Volume of cone (integer): %f", gouse.VolCone(10, 20))
+	fmt.Printf("Volume of cone (float): %f", gouse.VolCone(10.0, 20.0))
 }
 
 /*
@@ -106,10 +106,10 @@ Description: Calculate area, volume of cylinder (F: float)
 Input params: (radius, height float64)
 */
 func Cylinder() {
-	fmt.Sprintf("Area of cylinder (integer): %f", gouse.AreaCyl(10, 20))
-	fmt.Sprintf("Area of cylinder (float): %f", gouse.AreaCyl(10.0, 20.0))
-	fmt.Sprintf("Volume of cylinder (integer): %f", gouse.VolCyl(10, 20))
-	fmt.Sprintf("Volume of cylinder (float): %f", gouse.VolCyl(10.0, 20.0))
+	fmt.Printf("Area of cylinder (integer): %f", gouse.AreaCyl(10, 20))
+	fmt.Printf("Area of cylinder (float): %f", gouse.AreaCyl(10.0, 20.0))
+	fmt.Printf("Volume of cylinder (integer): %f", gouse.VolCyl(10, 20))
+	fmt.Printf("Volume of cylinder (float): %f", gouse.VolCyl(10.0, 20.0))
 }
 
 /*
@@ -117,8 +117,8 @@ Description: Calculate area, perimeter, volume of ellipse (F: float)
 Input params: (major, minor float64)
 */
 func Ellipse() {
-	fmt.Sprintf("Area of ellipse (integer): %f", gouse.AreaEllipse(10, 20))
-	fmt.Sprintf("Area of ellipse (float): %f", gouse.AreaEllipse(10.0, 20.0))
+	fmt.Printf("Area of ellipse (integer): %f", gouse.AreaEllipse(10, 20))
+	fmt.Printf("Area of ellipse (float): %f", gouse.AreaEllipse(10.0, 20.0))
 }
 
 /*
@@ -135,7 +135,7 @@ Description: Calculate area of pentagon (F: float)
 Input params: (side, apothem float64)
 */
 func Polygon() {
-	fmt.Sprintf("Area of pentagol by number of sides (integer): %f", gouse.AreaPolygon(10, 6))
+	fmt.Printf("Area of pentagol by number of sides (integer): %f", gouse.AreaPolygon(10, 6))
 }
 
 /*
@@ -146,7 +146,7 @@ func Rect() {
 	println("Area of rectangle: ", gouse.AreaRect(10, 20))
 	println("Perimeter of rectangle (integer): ", gouse.PeriRect(10, 20))
 	println("Perimeter of rectangle (float): ", fmt.Sprintf("%f", gouse.PeriRect(10.0, 20.0)))
-	println("Diagonal of rectangle (integer): ", fmt.Sprintf("%f", gouse.DiagRect(10, 20)))
+	println("Diagonal of rectangle (integer): ", fmt.Sprintf("%d", gouse.DiagRect(10, 20)))
 	println("Diagonal of rectangle (float): ", fmt.Sprintf("%f", gouse.DiagRect(10.0, 20.0)))
 	println("Volume of rectangular (integer): ", gouse.VolRect(10, 20, 30))
 	println("Volume of rectangular (float): ", fmt.Sprintf("%f", gouse.VolRect(10.0, 20.0, 30.0)))
@@ -166,10 +166,10 @@ Description: Calculate area, volume of sphere (F: float)
 Input params: (radius float64)
 */
 func Sphere() {
-	fmt.Sprintf("Area of sphere (integer): %f", gouse.AreaSphere(10))
-	fmt.Sprintf("Area of sphere (float): %f", gouse.AreaSphereF(10.0))
-	fmt.Sprintf("Volume of sphere (integer): %f", gouse.VolSphere(10))
-	fmt.Sprintf("Volume of sphere (float): %f", gouse.VolSphereF(10.0))
+	fmt.Printf("Area of sphere (integer): %f", gouse.AreaSphere(10))
+	fmt.Printf("Area of sphere (float): %f", gouse.AreaSphereF(10.0))
+	fmt.Printf("Volume of sphere (integer): %f", gouse.VolSphere(10))
+	fmt.Printf("Volume of sphere (float): %f", gouse.VolSphereF(10.0))
 }
 
 /*
@@ -188,8 +188,8 @@ Description: Calculate area, perimeter, volume of trapezoid (F: float)
 Input params: (base1, base2, height float64)
 */
 func Trapezoid() {
-	fmt.Sprintf("Area of trapezoid (integer): %f", gouse.AreaTrapezoid(10, 20, 30))
-	fmt.Sprintf("Area of trapezoid (float): %f", gouse.AreaTrapezoid(10.0, 20.0, 30.0))
+	fmt.Printf("Area of trapezoid (integer): %f", gouse.AreaTrapezoid(10, 20, 30))
+	fmt.Printf("Area of trapezoid (float): %f", gouse.AreaTrapezoid(10.0, 20.0, 30.0))
 }
 
 /*

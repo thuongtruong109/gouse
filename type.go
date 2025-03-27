@@ -316,6 +316,18 @@ func ToStr(data any) string {
 		return strconv.FormatFloat(v, 'f', 2, 64)
 	case bool:
 		return strconv.FormatBool(v)
+	case []byte:
+		return string(v)
+	case rune:
+		return string(v)
+	case uuid.UUID:
+		return v.String()
+	case time.Time:
+		return v.Format(time.RFC3339)
+	case nil:
+		return "nil"
+	case error:
+		return v.Error()
 	default:
 		return fmt.Sprintf("%v", data)
 	}
