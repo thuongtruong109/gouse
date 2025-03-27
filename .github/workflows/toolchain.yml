@@ -8,11 +8,13 @@ on:
       - "!**/*.go"
       - "!go.*"
       - "!*.go"
+      - "docs/**"
   pull_request:
     paths-ignore:
       - "!**/*.go"
       - "!go.*"
       - "!*.go"
+      - "docs/**"
 
 jobs:
   diagram:

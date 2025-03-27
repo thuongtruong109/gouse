@@ -2,6 +2,7 @@ package gouse
 
 import (
 	"crypto/rand"
+	"fmt"
 	"math/big"
 	"time"
 
@@ -19,7 +20,7 @@ func RandNum(min, max int) int {
 }
 
 func RandID() string {
-	randomID := Sprint(time.Now().UnixNano())
+	randomID := fmt.Sprint(time.Now().UnixNano())
 	return randomID
 }
 

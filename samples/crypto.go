@@ -1,6 +1,10 @@
 package samples
 
-import "github.com/thuongtruong109/gouse"
+import (
+	"fmt"
+
+	"github.com/thuongtruong109/gouse"
+)
 
 /*
 Description: Encode data to base64
@@ -11,11 +15,11 @@ func CryptoEncodeData() {
 
 	encodedData, err := gouse.EncodeData(data)
 	if err != nil {
-		gouse.Println("Error encoding data:", err)
+		fmt.Println("Error encoding data:", err)
 		return
 	}
-	gouse.Println("Raw data:", string(data))
-	gouse.Println("Encoded data:", string(encodedData))
+	fmt.Println("Raw data:", string(data))
+	fmt.Println("Encoded data:", string(encodedData))
 }
 
 /*
@@ -26,11 +30,11 @@ func CryptoDecodeData() {
 	data := []byte("VGhpcyBpcyBhIHNhbXBsZSBkYXRh")
 	decodedData, err := gouse.DecodeData(data)
 	if err != nil {
-		gouse.Println("Error decoding data:", err)
+		fmt.Println("Error decoding data:", err)
 		return
 	}
-	gouse.Println("Raw encoded data:", string(data))
-	gouse.Println("Decoded data:", string(decodedData))
+	fmt.Println("Raw encoded data:", string(data))
+	fmt.Println("Decoded data:", string(decodedData))
 }
 
 /*
@@ -60,11 +64,11 @@ func CryptoEncryptPassword() {
 
 	encryptedData, err := gouse.EncryptPassword(data)
 	if err != nil {
-		gouse.Println("Error encrypting data:", err)
+		fmt.Println("Error encrypting data:", err)
 		return
 	}
-	gouse.Println("Raw data:", string(data))
-	gouse.Println("Encrypted data:", string(encryptedData))
+	fmt.Println("Raw data:", string(data))
+	fmt.Println("Encrypted data:", string(encryptedData))
 }
 
 /*
@@ -75,7 +79,7 @@ func CryptoComparePassword() {
 	data := "$2a$10$bcA002IOHi5SYHNH4lmIbuHjHplGl7TQZ.MznNrL1N70vAi7ovTa2"
 	err := gouse.ComparePassword(data, "This is a sample data")
 	if err != nil {
-		gouse.Println("Error decrypting data:", err)
+		fmt.Println("Error decrypting data:", err)
 		return
 	}
 	println("Password matched")

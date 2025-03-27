@@ -1,6 +1,10 @@
 package samples
 
-import "github.com/thuongtruong109/gouse"
+import (
+	"fmt"
+
+	"github.com/thuongtruong109/gouse"
+)
 
 /*
 Description: Get CPU information
@@ -9,24 +13,24 @@ Params: None -> *gouse.ICPU
 func OsCpu() {
 	cpuInfo, err := gouse.CPU()
 	if err != nil {
-		gouse.Println("Error: ", err)
+		fmt.Println("Error: ", err)
 		return
 	}
 
-	gouse.Println(":: CPU Information")
-	gouse.Println("Model Name: ", cpuInfo.ModelName)
-	gouse.Println("Family: ", cpuInfo.Family)
-	gouse.Println("Speed: ", cpuInfo.Speed, "MHz")
-	gouse.Println("Cores: ", cpuInfo.Cores)
-	gouse.Println("Vendor ID: ", cpuInfo.VendorID)
-	gouse.Println("Model: ", cpuInfo.Model)
-	gouse.Println("Stepping: ", cpuInfo.Stepping)
-	gouse.Println("Physical ID: ", cpuInfo.PhysicalID)
-	gouse.Println("Core ID: ", cpuInfo.CoreID)
-	gouse.Println("Mhz: ", cpuInfo.Mhz)
-	gouse.Println("Cache Size: ", cpuInfo.CacheSize)
-	gouse.Println("Flags: ", cpuInfo.Flags)
-	gouse.Println("Microcode: ", cpuInfo.Microcode)
+	fmt.Println(":: CPU Information")
+	fmt.Println("Model Name: ", cpuInfo.ModelName)
+	fmt.Println("Family: ", cpuInfo.Family)
+	fmt.Println("Speed: ", cpuInfo.Speed, "MHz")
+	fmt.Println("Cores: ", cpuInfo.Cores)
+	fmt.Println("Vendor ID: ", cpuInfo.VendorID)
+	fmt.Println("Model: ", cpuInfo.Model)
+	fmt.Println("Stepping: ", cpuInfo.Stepping)
+	fmt.Println("Physical ID: ", cpuInfo.PhysicalID)
+	fmt.Println("Core ID: ", cpuInfo.CoreID)
+	fmt.Println("Mhz: ", cpuInfo.Mhz)
+	fmt.Println("Cache Size: ", cpuInfo.CacheSize)
+	fmt.Println("Flags: ", cpuInfo.Flags)
+	fmt.Println("Microcode: ", cpuInfo.Microcode)
 }
 
 /*
@@ -36,21 +40,21 @@ Params: None -> *gouse.IDisk
 func OsDisk() {
 	diskInfo, err := gouse.Disk()
 	if err != nil {
-		gouse.Println("Error: ", err)
+		fmt.Println("Error: ", err)
 		return
 	}
 
-	gouse.Println(":: Disk Information")
-	gouse.Println("Total Space: ", diskInfo.Total, "MB")
-	gouse.Println("Free Space: ", diskInfo.Free, "MB")
-	gouse.Println("Used Space: ", diskInfo.Used, "MB")
-	gouse.Println("Used Space Percent: ", diskInfo.UsedPercent, "%")
-	gouse.Println("File System Type: ", diskInfo.Fstype)
-	gouse.Println("Path: ", diskInfo.Path)
-	gouse.Println("Inodes Total: ", diskInfo.InodesTotal)
-	gouse.Println("Inodes Used: ", diskInfo.InodesUsed)
-	gouse.Println("Inodes Free: ", diskInfo.InodesFree)
-	gouse.Println("Inodes Used Percent: ", diskInfo.InodesUsedPercent, "%")
+	fmt.Println(":: Disk Information")
+	fmt.Println("Total Space: ", diskInfo.Total, "MB")
+	fmt.Println("Free Space: ", diskInfo.Free, "MB")
+	fmt.Println("Used Space: ", diskInfo.Used, "MB")
+	fmt.Println("Used Space Percent: ", diskInfo.UsedPercent, "%")
+	fmt.Println("File System Type: ", diskInfo.Fstype)
+	fmt.Println("Path: ", diskInfo.Path)
+	fmt.Println("Inodes Total: ", diskInfo.InodesTotal)
+	fmt.Println("Inodes Used: ", diskInfo.InodesUsed)
+	fmt.Println("Inodes Free: ", diskInfo.InodesFree)
+	fmt.Println("Inodes Used Percent: ", diskInfo.InodesUsedPercent, "%")
 }
 
 /*
@@ -60,25 +64,25 @@ Params: None -> *gouse.IHost
 func OsHost() {
 	hostInfo, err := gouse.Host()
 	if err != nil {
-		gouse.Println("Error: ", err)
+		fmt.Println("Error: ", err)
 		return
 	}
 
-	gouse.Println(":: Host Information")
-	gouse.Println("Name: ", hostInfo.Name)
-	gouse.Println("Platform: ", hostInfo.Platform)
-	gouse.Println("Arch: ", hostInfo.Arch)
-	gouse.Println("Hostname: ", hostInfo.Hostname)
-	gouse.Println("Number of Processes: ", hostInfo.NumsProcs)
-	gouse.Println("Uptime: ", hostInfo.Uptime)
-	gouse.Println("Boot Time: ", hostInfo.BootTime)
-	gouse.Println("OS: ", hostInfo.OS)
-	gouse.Println("Kernel Version: ", hostInfo.KernelVersion)
-	gouse.Println("Host ID: ", hostInfo.HostID)
-	gouse.Println("Virtualization System: ", hostInfo.VirtualizationSystem)
-	gouse.Println("Virtualization Role: ", hostInfo.VirtualizationRole)
-	gouse.Println("Platform Family: ", hostInfo.PlatformFamily)
-	gouse.Println("Platform Version: ", hostInfo.PlatformVersion)
+	fmt.Println(":: Host Information")
+	fmt.Println("Name: ", hostInfo.Name)
+	fmt.Println("Platform: ", hostInfo.Platform)
+	fmt.Println("Arch: ", hostInfo.Arch)
+	fmt.Println("Hostname: ", hostInfo.Hostname)
+	fmt.Println("Number of Processes: ", hostInfo.NumsProcs)
+	fmt.Println("Uptime: ", hostInfo.Uptime)
+	fmt.Println("Boot Time: ", hostInfo.BootTime)
+	fmt.Println("OS: ", hostInfo.OS)
+	fmt.Println("Kernel Version: ", hostInfo.KernelVersion)
+	fmt.Println("Host ID: ", hostInfo.HostID)
+	fmt.Println("Virtualization System: ", hostInfo.VirtualizationSystem)
+	fmt.Println("Virtualization Role: ", hostInfo.VirtualizationRole)
+	fmt.Println("Platform Family: ", hostInfo.PlatformFamily)
+	fmt.Println("Platform Version: ", hostInfo.PlatformVersion)
 }
 
 /*
@@ -88,16 +92,16 @@ Params: None -> *gouse.IPartition
 func OsPartion() {
 	partitions, err := gouse.Partition()
 	if err != nil {
-		gouse.Println("Error: ", err)
+		fmt.Println("Error: ", err)
 		return
 	}
 
-	gouse.Println(":: Partitions Information")
+	fmt.Println(":: Partitions Information")
 	for _, v := range partitions {
-		gouse.Println("Device: ", v.Device)
-		gouse.Println("Mountpoint: ", v.Mountpoint)
-		gouse.Println("Fstype: ", v.Fstype)
-		gouse.Println("Opts: ", v.Opts)
+		fmt.Println("Device: ", v.Device)
+		fmt.Println("Mountpoint: ", v.Mountpoint)
+		fmt.Println("Fstype: ", v.Fstype)
+		fmt.Println("Opts: ", v.Opts)
 	}
 }
 
@@ -108,16 +112,16 @@ Params: None -> *gouse.IProcess
 func OsUser() {
 	users, err := gouse.User()
 	if err != nil {
-		gouse.Println("Error: ", err)
+		fmt.Println("Error: ", err)
 		return
 	}
 
-	gouse.Println(":: Users Information")
+	fmt.Println(":: Users Information")
 	for _, v := range users {
-		gouse.Println("User: ", v.User)
-		gouse.Println("Terminal: ", v.Terminal)
-		gouse.Println("Host: ", v.Host)
-		gouse.Println("Started: ", v.Started)
+		fmt.Println("User: ", v.User)
+		fmt.Println("Terminal: ", v.Terminal)
+		fmt.Println("Host: ", v.Host)
+		fmt.Println("Started: ", v.Started)
 	}
 }
 
@@ -128,26 +132,26 @@ Params: None -> *gouse.IIo
 func OsIO() {
 	ioStat, err := gouse.Io()
 	if err != nil {
-		gouse.Println("Error: ", err)
+		fmt.Println("Error: ", err)
 		return
 	}
 
-	gouse.Println(":: IO Information")
+	fmt.Println(":: IO Information")
 	for _, v := range ioStat {
-		gouse.Println("Read Count: ", v.ReadCount)
-		gouse.Println("Merge Read Count: ", v.MergedReadCount)
-		gouse.Println("Write Count: ", v.WriteCount)
-		gouse.Println("Merge Write Count: ", v.MergedWriteCount)
-		gouse.Println("Read Bytes: ", v.ReadBytes)
-		gouse.Println("Write Bytes: ", v.WriteBytes)
-		gouse.Println("Read Time: ", v.ReadTime)
-		gouse.Println("Write Time: ", v.WriteTime)
-		gouse.Println("Iops In Progress: ", v.IopsInProgress)
-		gouse.Println("I/O Time: ", v.IoTime)
-		gouse.Println("Weighted IO: ", v.WeightedIO)
-		gouse.Println("Name: ", v.Name)
-		gouse.Println("Serial Number: ", v.SerialNumber)
-		gouse.Println("Label: ", v.Label)
+		fmt.Println("Read Count: ", v.ReadCount)
+		fmt.Println("Merge Read Count: ", v.MergedReadCount)
+		fmt.Println("Write Count: ", v.WriteCount)
+		fmt.Println("Merge Write Count: ", v.MergedWriteCount)
+		fmt.Println("Read Bytes: ", v.ReadBytes)
+		fmt.Println("Write Bytes: ", v.WriteBytes)
+		fmt.Println("Read Time: ", v.ReadTime)
+		fmt.Println("Write Time: ", v.WriteTime)
+		fmt.Println("Iops In Progress: ", v.IopsInProgress)
+		fmt.Println("I/O Time: ", v.IoTime)
+		fmt.Println("Weighted IO: ", v.WeightedIO)
+		fmt.Println("Name: ", v.Name)
+		fmt.Println("Serial Number: ", v.SerialNumber)
+		fmt.Println("Label: ", v.Label)
 	}
 }
 
@@ -158,58 +162,58 @@ Params: None -> *gouse.IMemory
 func OsMemory() {
 	memoryInfo, err := gouse.Memory()
 	if err != nil {
-		gouse.Println("Error: ", err)
+		fmt.Println("Error: ", err)
 		return
 	}
 
-	gouse.Println(":: Memory Information")
-	gouse.Println("Virtual Total: ", memoryInfo.VirtualTotal, "MB")
-	gouse.Println("Virtual Used: ", memoryInfo.VirtualUsed, "MB")
-	gouse.Println("Virtual Free: ", memoryInfo.VirtualFree, "MB")
-	gouse.Println("Virtual Used Percent: ", memoryInfo.VirtualUsedPercent, "%")
-	gouse.Println("Virtual Available: ", memoryInfo.VirtualAvailable, "MB")
-	gouse.Println("Virtual Active: ", memoryInfo.VirtualActive, "MB")
-	gouse.Println("Virtual Inactive: ", memoryInfo.VirtualInactive, "MB")
-	gouse.Println("Vrtual Wired: ", memoryInfo.VirtualWired, "MB")
-	gouse.Println("Virtual Laundry: ", memoryInfo.VirtualLaundry, "MB")
-	gouse.Println("Virtual Buffers: ", memoryInfo.VirtualBuffers, "MB")
-	gouse.Println("Virtual Cached: ", memoryInfo.VirtualCached, "MB")
-	gouse.Println("Virtual Write Back: ", memoryInfo.VirtualWriteBack, "MB")
-	gouse.Println("Virtual Dirty: ", memoryInfo.VirtualDirty, "MB")
-	gouse.Println("Virtual Write Back Tmp: ", memoryInfo.VirtualWriteBackTmp, "MB")
-	gouse.Println("Virtual Shared: ", memoryInfo.VirtualShared, "MB")
-	gouse.Println("Virtual Slab: ", memoryInfo.VirtualSlab, "MB")
-	gouse.Println("Virtual Sreclaimable: ", memoryInfo.VirtualSreclaimable, "MB")
-	gouse.Println("Virtual Sunreclaim: ", memoryInfo.VirtualSunreclaim, "MB")
-	gouse.Println("Virtual Page Tables: ", memoryInfo.VirtualPageTables, "MB")
-	gouse.Println("Virtual Swap Cached: ", memoryInfo.VirtualSwapCached, "MB")
-	gouse.Println("Virtual Commit Limit: ", memoryInfo.VirtualCommitLimit, "MB")
-	gouse.Println("Virtual Committed AS: ", memoryInfo.VirtualCommittedAS, "MB")
-	gouse.Println("Virtual High Total: ", memoryInfo.VirtualHighTotal, "MB")
-	gouse.Println("Virtual High Free: ", memoryInfo.VirtualHighFree, "MB")
-	gouse.Println("Virtual Low Total: ", memoryInfo.VirtualLowTotal, "MB")
-	gouse.Println("Virtual Low Free: ", memoryInfo.VirtualLowFree, "MB")
-	gouse.Println("Virtual Mapped: ", memoryInfo.VirtualMapped, "MB")
-	gouse.Println("Virtual Malloc Total: ", memoryInfo.VirtualMallocTotal, "MB")
-	gouse.Println("Virtual Malloc Used: ", memoryInfo.VirtualMallocUsed, "MB")
-	gouse.Println("Virtual Malloc Chunk: ", memoryInfo.VirtualMallocChunk, "MB")
-	gouse.Println("Virtual Huge Pages Total: ", memoryInfo.VirtualHugePagesTotal, "MB")
-	gouse.Println("Virtual Huge Pages Free: ", memoryInfo.VirtualHugePagesFree, "MB")
-	gouse.Println("Virtual Huge Pages Rsvd: ", memoryInfo.VirtualHugePagesRsvd, "MB")
-	gouse.Println("Virtual Huge Pages Surp: ", memoryInfo.VirtualHugePagesSurp, "MB")
-	gouse.Println("Virtual Huge Page Size: ", memoryInfo.VirtualHugePageSize, "MB")
-	gouse.Println("Virtual Anon Huge Pages: ", memoryInfo.VirtualAnonHugePages, "MB")
+	fmt.Println(":: Memory Information")
+	fmt.Println("Virtual Total: ", memoryInfo.VirtualTotal, "MB")
+	fmt.Println("Virtual Used: ", memoryInfo.VirtualUsed, "MB")
+	fmt.Println("Virtual Free: ", memoryInfo.VirtualFree, "MB")
+	fmt.Println("Virtual Used Percent: ", memoryInfo.VirtualUsedPercent, "%")
+	fmt.Println("Virtual Available: ", memoryInfo.VirtualAvailable, "MB")
+	fmt.Println("Virtual Active: ", memoryInfo.VirtualActive, "MB")
+	fmt.Println("Virtual Inactive: ", memoryInfo.VirtualInactive, "MB")
+	fmt.Println("Vrtual Wired: ", memoryInfo.VirtualWired, "MB")
+	fmt.Println("Virtual Laundry: ", memoryInfo.VirtualLaundry, "MB")
+	fmt.Println("Virtual Buffers: ", memoryInfo.VirtualBuffers, "MB")
+	fmt.Println("Virtual Cached: ", memoryInfo.VirtualCached, "MB")
+	fmt.Println("Virtual Write Back: ", memoryInfo.VirtualWriteBack, "MB")
+	fmt.Println("Virtual Dirty: ", memoryInfo.VirtualDirty, "MB")
+	fmt.Println("Virtual Write Back Tmp: ", memoryInfo.VirtualWriteBackTmp, "MB")
+	fmt.Println("Virtual Shared: ", memoryInfo.VirtualShared, "MB")
+	fmt.Println("Virtual Slab: ", memoryInfo.VirtualSlab, "MB")
+	fmt.Println("Virtual Sreclaimable: ", memoryInfo.VirtualSreclaimable, "MB")
+	fmt.Println("Virtual Sunreclaim: ", memoryInfo.VirtualSunreclaim, "MB")
+	fmt.Println("Virtual Page Tables: ", memoryInfo.VirtualPageTables, "MB")
+	fmt.Println("Virtual Swap Cached: ", memoryInfo.VirtualSwapCached, "MB")
+	fmt.Println("Virtual Commit Limit: ", memoryInfo.VirtualCommitLimit, "MB")
+	fmt.Println("Virtual Committed AS: ", memoryInfo.VirtualCommittedAS, "MB")
+	fmt.Println("Virtual High Total: ", memoryInfo.VirtualHighTotal, "MB")
+	fmt.Println("Virtual High Free: ", memoryInfo.VirtualHighFree, "MB")
+	fmt.Println("Virtual Low Total: ", memoryInfo.VirtualLowTotal, "MB")
+	fmt.Println("Virtual Low Free: ", memoryInfo.VirtualLowFree, "MB")
+	fmt.Println("Virtual Mapped: ", memoryInfo.VirtualMapped, "MB")
+	fmt.Println("Virtual Malloc Total: ", memoryInfo.VirtualMallocTotal, "MB")
+	fmt.Println("Virtual Malloc Used: ", memoryInfo.VirtualMallocUsed, "MB")
+	fmt.Println("Virtual Malloc Chunk: ", memoryInfo.VirtualMallocChunk, "MB")
+	fmt.Println("Virtual Huge Pages Total: ", memoryInfo.VirtualHugePagesTotal, "MB")
+	fmt.Println("Virtual Huge Pages Free: ", memoryInfo.VirtualHugePagesFree, "MB")
+	fmt.Println("Virtual Huge Pages Rsvd: ", memoryInfo.VirtualHugePagesRsvd, "MB")
+	fmt.Println("Virtual Huge Pages Surp: ", memoryInfo.VirtualHugePagesSurp, "MB")
+	fmt.Println("Virtual Huge Page Size: ", memoryInfo.VirtualHugePageSize, "MB")
+	fmt.Println("Virtual Anon Huge Pages: ", memoryInfo.VirtualAnonHugePages, "MB")
 
-	gouse.Println("Swap Total: ", memoryInfo.SwapTotal, "MB")
-	gouse.Println("Swap Used: ", memoryInfo.SwapUsed, "MB")
-	gouse.Println("Swap Free: ", memoryInfo.SwapFree, "MB")
-	gouse.Println("Swap Used Percent: ", memoryInfo.SwapUsedPercent, "%")
-	gouse.Println("Swap Sin: ", memoryInfo.SwapSin, "MB")
-	gouse.Println("Swap Sout: ", memoryInfo.SwapSout, "MB")
-	gouse.Println("Swap Pg In: ", memoryInfo.SwapPgIn, "MB")
-	gouse.Println("Swap Pg Out: ", memoryInfo.SwapPgOut, "MB")
-	gouse.Println("Swap Pg Fault: ", memoryInfo.SwapPgFault, "MB")
-	gouse.Println("Swap Pg Maj Fault: ", memoryInfo.SwapPgMajFault, "MB")
+	fmt.Println("Swap Total: ", memoryInfo.SwapTotal, "MB")
+	fmt.Println("Swap Used: ", memoryInfo.SwapUsed, "MB")
+	fmt.Println("Swap Free: ", memoryInfo.SwapFree, "MB")
+	fmt.Println("Swap Used Percent: ", memoryInfo.SwapUsedPercent, "%")
+	fmt.Println("Swap Sin: ", memoryInfo.SwapSin, "MB")
+	fmt.Println("Swap Sout: ", memoryInfo.SwapSout, "MB")
+	fmt.Println("Swap Pg In: ", memoryInfo.SwapPgIn, "MB")
+	fmt.Println("Swap Pg Out: ", memoryInfo.SwapPgOut, "MB")
+	fmt.Println("Swap Pg Fault: ", memoryInfo.SwapPgFault, "MB")
+	fmt.Println("Swap Pg Maj Fault: ", memoryInfo.SwapPgMajFault, "MB")
 }
 
 /*

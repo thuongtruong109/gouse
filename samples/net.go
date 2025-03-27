@@ -1,6 +1,10 @@
 package samples
 
-import "github.com/thuongtruong109/gouse"
+import (
+	"fmt"
+
+	"github.com/thuongtruong109/gouse"
+)
 
 /*
 Description: Check if a URL status
@@ -25,7 +29,7 @@ func NetConnectTime() {
 		panic(err)
 	}
 
-	gouse.Printf("Connect time: %fs\n", connectTime)
+	fmt.Printf("Connect time: %fs\n", connectTime)
 }
 
 /*
@@ -54,7 +58,7 @@ func NetHeaderURL() {
 		panic(err)
 	}
 
-	gouse.Println(gouse.Map2Str(header))
+	fmt.Println(gouse.Map2Str(header))
 }
 
 /*
@@ -63,7 +67,7 @@ Input params: (protocol, hostname string, port int)
 */
 func NetPortChecker() {
 	open := gouse.CheckPort("tcp", "localhost", 1313)
-	gouse.Printf("Port Open: %t\n", open)
+	fmt.Printf("Port Open: %t\n", open)
 }
 
 /*

@@ -1,6 +1,7 @@
 package gouse
 
 import (
+	"fmt"
 	"go/ast"
 	"go/parser"
 	"go/token"
@@ -15,27 +16,27 @@ type Function struct {
 }
 
 func (f *Function) HighlightImport() string {
-	return Sprintf("```go\nimport (\n%s)\n```\n", f.Import)
+	return fmt.Sprintf("```go\nimport (\n%s)\n```\n", f.Import)
 }
 
 func (f *Function) HighlightName() string {
-	return Sprintf("\n## %s. %s\n", f.Order, UpperFirst(SpaceCase(f.Name)))
+	return fmt.Sprintf("\n## %s. %s\n", f.Order, UpperFirst(SpaceCase(f.Name)))
 }
 
 func (f *Function) HighlightDesc() string {
 	newDesc := Replace(f.Desc, "\n", "<br>")
-	return Sprintf("\n%s\n", newDesc)
+	return fmt.Sprintf("\n%s\n", newDesc)
 }
 
 func (f *Function) HighlightBody() string {
-	return Sprintf("\n```go\n%s```\n", f.Body)
+	return fmt.Sprintf("\n```go\n%s```\n", f.Body)
 }
 
 func extractImports(content []byte) string {
 	fset := token.NewFileSet()
 	node, err := parser.ParseFile(fset, "string", string(content), parser.ParseComments)
 	if err != nil {
-		Println("Error parsing file:", err)
+		fmt.Println("Error parsing file:", err)
 		return ""
 	}
 
@@ -44,7 +45,7 @@ func extractImports(content []byte) string {
 		if genDecl, ok := decl.(*ast.GenDecl); ok && genDecl.Tok == token.IMPORT {
 			for _, spec := range genDecl.Specs {
 				if importSpec, ok := spec.(*ast.ImportSpec); ok {
-					result = append(result, Sprintf("\t%s", string(content[importSpec.Pos()-1:importSpec.End()]))...)
+					result = append(result, fmt.Sprintf("\t%s", string(content[importSpec.Pos()-1:importSpec.End()]))...)
 				}
 			}
 		}
@@ -57,7 +58,7 @@ func ExtractFunctions(code []byte) []Function {
 	fset := token.NewFileSet()
 	file, err := parser.ParseFile(fset, "string", string(code), parser.ParseComments)
 	if err != nil {
-		Println("Error parsing file:", err)
+		fmt.Println("Error parsing file:", err)
 		return nil
 	}
 

@@ -1,6 +1,7 @@
 package gouse
 
 import (
+	"fmt"
 	"net"
 	"net/http"
 	"strconv"
@@ -14,10 +15,10 @@ func ScanPort(protocol, hostname string, start, end int) {
 		port := strconv.FormatInt(int64(i), 10)
 		conn, err := net.Dial(protocol, hostname+":"+port)
 		if err == nil {
-			Println("Port", i, "open")
+			fmt.Println("Port", i, "open")
 			conn.Close()
 		} else {
-			Println("Port", i, "closed")
+			fmt.Println("Port", i, "closed")
 		}
 	}
 }

@@ -31,7 +31,7 @@ func IsNumber(v any) bool {
 }
 
 func IsString(v any) bool {
-	return strings.Contains(Sprintf("%T", v), "string")
+	return strings.Contains(fmt.Sprintf("%T", v), "string")
 }
 
 func IsRune(v any) bool {
@@ -54,11 +54,11 @@ func IsUintptr(v any) bool {
 }
 
 func IsError(v any) bool {
-	return strings.Contains(Sprintf("%T", v), "error")
+	return strings.Contains(fmt.Sprintf("%T", v), "error")
 }
 
 func IsChannel(v any) bool {
-	return strings.Contains(Sprintf("%T", v), "chan")
+	return strings.Contains(fmt.Sprintf("%T", v), "chan")
 }
 
 func IsUnsafePointer(v any) bool {
@@ -66,19 +66,19 @@ func IsUnsafePointer(v any) bool {
 }
 
 func IsPointer(v any) bool {
-	return strings.Contains(Sprintf("%T", v), "*")
+	return strings.Contains(fmt.Sprintf("%T", v), "*")
 }
 
 func IsBool(v any) bool {
-	return strings.Contains(Sprintf("%T", v), "bool")
+	return strings.Contains(fmt.Sprintf("%T", v), "bool")
 }
 
 func IsSlice(v any) bool {
-	return strings.Contains(Sprintf("%T", v), "[]")
+	return strings.Contains(fmt.Sprintf("%T", v), "[]")
 }
 
 func IsMap(v any) bool {
-	return strings.Contains(Sprintf("%T", v), "map")
+	return strings.Contains(fmt.Sprintf("%T", v), "map")
 }
 
 func IsStruct(v any) bool {
@@ -86,11 +86,11 @@ func IsStruct(v any) bool {
 }
 
 func IsArray(v any) bool {
-	return strings.Contains(Sprintf("%T", v), "[")
+	return strings.Contains(fmt.Sprintf("%T", v), "[")
 }
 
 func IsFunc(v any) bool {
-	return strings.Contains(Sprintf("%T", v), "func")
+	return strings.Contains(fmt.Sprintf("%T", v), "func")
 }
 
 func IsNil(v any) bool {
@@ -230,7 +230,7 @@ func Struct2Str(data any) string {
 	for i := range v.NumField() {
 		fieldName := t.Field(i).Name
 		fieldValue := v.Field(i).Interface()
-		fields = append(fields, Sprintf("%s: %v", fieldName, fieldValue))
+		fields = append(fields, fmt.Sprintf("%s: %v", fieldName, fieldValue))
 	}
 
 	// replace with array.Join()
@@ -242,7 +242,7 @@ func Struct2Str(data any) string {
 		}
 	}
 
-	return Sprintf("%s{%s}", t.Name(), result)
+	return fmt.Sprintf("%s{%s}", t.Name(), result)
 }
 
 func Struct2Map(data any) map[string]any {
@@ -295,15 +295,15 @@ func Strs2Bytes(data []string) []byte {
 // }
 
 func Int2Str(data int) string {
-	return Sprintf("%d", data)
+	return fmt.Sprintf("%d", data)
 }
 
 func Float2Str(data float64) string {
-	return Sprintf("%f", data)
+	return fmt.Sprintf("%f", data)
 }
 
 func Bool2Str(data bool) string {
-	return Sprintf("%t", data)
+	return fmt.Sprintf("%t", data)
 }
 
 func ToStr(data any) string {
@@ -333,7 +333,7 @@ func Map2Str[T string | []string](data map[string]T) string {
 	var result string
 
 	for key, value := range data {
-		result += Sprintf("%s: %s\n", key, value)
+		result += fmt.Sprintf("%s: %s\n", key, value)
 	}
 
 	return result
@@ -349,14 +349,14 @@ func Time2Str(t time.Time) string {
 	secondStr := strconv.Itoa(second)
 
 	if hour < 10 {
-		hourStr = Sprintf("0%s", hourStr)
+		hourStr = fmt.Sprintf("0%s", hourStr)
 	}
 	if minute < 10 {
-		minuteStr = Sprintf("0%s", minuteStr)
+		minuteStr = fmt.Sprintf("0%s", minuteStr)
 	}
 	if second < 10 {
-		secondStr = Sprintf("0%s", secondStr)
+		secondStr = fmt.Sprintf("0%s", secondStr)
 	}
 
-	return Sprintf("%s:%s:%s", hourStr, minuteStr, secondStr)
+	return fmt.Sprintf("%s:%s:%s", hourStr, minuteStr, secondStr)
 }

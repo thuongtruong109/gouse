@@ -1,6 +1,10 @@
 package samples
 
-import "github.com/thuongtruong109/gouse"
+import (
+	"fmt"
+
+	"github.com/thuongtruong109/gouse"
+)
 
 /*
 Description: Capitalize the first letter of a string.
@@ -108,7 +112,7 @@ Input params: (s string, separator string)
 */
 func StringSplit() {
 	var str = "hello world"
-	gouse.Println("Split string by separator: ", gouse.Split(str, "l"))
+	fmt.Println("Split string by separator: ", gouse.Split(str, "l"))
 }
 
 /*
@@ -346,28 +350,28 @@ func StringIndex() {
 	var str = "hello world, this is world"
 
 	f1, l1 := gouse.IdxSubStr(str, "l")
-	gouse.Printf("First index start at: %d, end at: %d\n", f1, l1)
+	fmt.Printf("First index start at: %d, end at: %d\n", f1, l1)
 
 	f2, l2 := gouse.IdxSubStr(str, "world")
-	gouse.Printf("First index start at: %d, end at: %d\n", f2, l2)
+	fmt.Printf("First index start at: %d, end at: %d\n", f2, l2)
 
 	f3 := gouse.FirstIdx(str, "l")
-	gouse.Println("First index start at: ", f3)
+	fmt.Println("First index start at: ", f3)
 
 	l3 := gouse.LastIdx(str, "world")
-	gouse.Println("Last index start at: ", l3)
+	fmt.Println("Last index start at: ", l3)
 
 	f4, l4 := gouse.IdxSubStr(str, "oo")
 	if f4 == -1 || l4 == -1 {
-		gouse.Println("Not found")
+		fmt.Println("Not found")
 	}
 
 	if gouse.FirstIdx(str, "oo") == -1 {
-		gouse.Println("Not found")
+		fmt.Println("Not found")
 	}
 
 	if gouse.LastIdx(str, "oo") == -1 {
-		gouse.Println("Not found")
+		fmt.Println("Not found")
 	}
 }
 
@@ -409,7 +413,7 @@ func StringCodePoint() {
 
 	print("Code point string: ")
 	for _, asciiValue := range asciiValues {
-		gouse.Printf("%d ", asciiValue)
+		fmt.Printf("%d ", asciiValue)
 	}
 }
 

@@ -1,6 +1,9 @@
 package gouse
 
-import "html"
+import (
+	"fmt"
+	"html"
+)
 
 func Capitalize(sentence string) string {
 	sentenceBytes := []byte(sentence)
@@ -655,7 +658,7 @@ func FromCodePoint(codePoint ...int) string {
 	var result string
 
 	for _, v := range codePoint {
-		result += Sprintf("%c", v)
+		result += fmt.Sprintf("%c", v)
 	}
 
 	return result

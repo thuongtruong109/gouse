@@ -1,6 +1,8 @@
 package samples
 
 import (
+	"fmt"
+
 	"github.com/thuongtruong109/gouse"
 	"github.com/thuongtruong109/gouse/cookbook/console/choice"
 	"github.com/thuongtruong109/gouse/cookbook/console/countdown"
@@ -100,7 +102,7 @@ func ConsoleHelp() {
 	}
 	gouse.Help(name, options)
 	// for _, option := range options {
-	// 	gouse.Printf("Option %s: %v\n", option.Opt, option.Val)
+	// 	fmt.Printf("Option %s: %v\n", option.Opt, option.Val)
 	// }
 }
 
@@ -170,7 +172,7 @@ func ConsoleChoice() {
 	update := &choice.Model{}
 	choice.Run(question, options, update)
 
-	gouse.Printf("\n---\nYou chose %s!\n", update.Choice)
+	fmt.Printf("\n---\nYou chose %s!\n", update.Choice)
 }
 
 func ConsoleSpinner() {

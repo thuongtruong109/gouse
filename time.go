@@ -1,6 +1,9 @@
 package gouse
 
-import "time"
+import (
+	"fmt"
+	"time"
+)
 
 func Second() int {
 	return time.Now().Second()
@@ -94,7 +97,7 @@ func TerminalClock() {
 
 	for t := range msgTime {
 		Cls()
-		Println(Time2Str(t))
+		fmt.Println(Time2Str(t))
 	}
 }
 

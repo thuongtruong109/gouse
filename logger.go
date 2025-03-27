@@ -1,6 +1,7 @@
 package gouse
 
 import (
+	"fmt"
 	"log"
 	"os"
 	"time"
@@ -43,12 +44,12 @@ func WriteLog(prefix, msg, filePath string, err ...any) {
 
 	if len(err) > 0 {
 		errStr := DetectErr(err)
-		logParam.Message = Sprintf("Message: %s - ID: %s - Error: %s - Date: \n", msg, logId, errStr)
+		logParam.Message = fmt.Sprintf("Message: %s - ID: %s - Error: %s - Date: \n", msg, logId, errStr)
 	} else {
-		logParam.Message = Sprintf("Message: %s - ID: %s - Date: \n", msg, logId)
+		logParam.Message = fmt.Sprintf("Message: %s - ID: %s - Date: \n", msg, logId)
 	}
 
-	WriteLogDefault(logParam.Output, Sprintf("%s %s", logParam.Prefix, logParam.Message), logParam.Output)
+	WriteLogDefault(logParam.Output, fmt.Sprintf("%s %s", logParam.Prefix, logParam.Message), logParam.Output)
 }
 
 func WriteErrorLog(msg string, err any) {

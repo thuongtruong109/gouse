@@ -33,7 +33,7 @@ func Redis(addr, pass string, dbNo ...int) *redis.Client {
 		log.Fatal(err)
 	}
 
-	Println("Connected to Redis: ", pong)
+	fmt.Println("Connected to Redis: ", pong)
 
 	defer client.Close()
 
@@ -53,7 +53,7 @@ func RedisCloud(uri string) *redis.Client {
 		log.Fatal(err)
 	}
 
-	Println("Connected to Redis: ", pong)
+	fmt.Println("Connected to Redis: ", pong)
 
 	defer client.Close()
 
@@ -81,7 +81,7 @@ func Postgres(dsn string) (*PgDB, error) {
 
 	err = db.Ping()
 	if err != nil {
-		Println("*** Pinged database successfully ***")
+		fmt.Println("*** Pinged database successfully ***")
 		log.Fatal(err)
 	}
 

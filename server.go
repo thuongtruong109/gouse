@@ -156,7 +156,7 @@ func (igs *IServer) Server() {
 	c := make(chan os.Signal, 1)
 	signal.Notify(c, syscall.SIGINT, syscall.SIGTERM, os.Interrupt, syscall.SIGHUP, syscall.SIGQUIT)
 
-	Println(igs.StartMsg)
+	fmt.Println(igs.StartMsg)
 
 	srv := http.Server{
 		Addr:              ":" + igs.Port,
@@ -171,10 +171,10 @@ func (igs *IServer) Server() {
 
 	go func() {
 		<-c
-		Println(igs.ShutdownMsg)
+		fmt.Println(igs.ShutdownMsg)
 		go func() {
 			for {
-				Println("waiting for goroutines to finish...")
+				fmt.Println("waiting for goroutines to finish...")
 				time.Sleep(1 * time.Second)
 			}
 		}()
@@ -184,7 +184,7 @@ func (igs *IServer) Server() {
 			log.Fatalf("server shutdown error: %v", fmt.Sprintf("%v", err))
 		}
 	}()
-	Println(srv.ListenAndServe())
+	fmt.Println(srv.ListenAndServe())
 }
 
 func Proxy(port string, urls []string) {
@@ -204,7 +204,7 @@ func Proxy(port string, urls []string) {
 			index := atomic.AddUint64(&counter, 1) % uint64(len(urls))
 			requestedURL := urls[index] + path[1:]
 
-			Println("Requested URL: ", requestedURL)
+			fmt.Println("Requested URL: ", requestedURL)
 
 			req, _ := http.NewRequest(ctx.Request.Method, requestedURL, ctx.Request.Body)
 

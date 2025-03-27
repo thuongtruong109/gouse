@@ -8,7 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### What's new
 
-- Add packages (color, print, time...)
+- Add packages (color, context, error, http, print, server, time...)
 - Update test cases, and benchmark tests
 - Fix compatible versions of dependencies
 

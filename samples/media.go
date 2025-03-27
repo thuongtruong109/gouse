@@ -1,6 +1,7 @@
 package samples
 
 import (
+	"fmt"
 	"image/png"
 	"log"
 	"os"
@@ -18,7 +19,7 @@ func MediaCanvas() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	filename := gouse.Sprintf("mockdata/%d.png", time.Now().Unix())
+	filename := fmt.Sprintf("mockdata/%d.png", time.Now().Unix())
 	file, err := os.Create(filename)
 	if err != nil {
 		log.Fatal(err)
@@ -33,9 +34,9 @@ Input params: (jpgPath string, pngPath string)
 func PngToJpg() {
 	err := gouse.Png2Jpg("mockdata/1720031107.png", "mockdata/output.jpg")
 	if err != nil {
-		gouse.Println(err)
+		fmt.Println(err)
 		return
 	}
 
-	gouse.Println("Conversion successful")
+	fmt.Println("Conversion successful")
 }
