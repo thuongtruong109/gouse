@@ -9,7 +9,31 @@ import (
 )
 ```
 
-## 1. Struct add
+## 1. Struct get tags
+
+Description: Get tags from a struct<br>Input params: (struct interface{})<br>
+
+```go
+func StructGetTags() {
+	type Person struct {
+		Name     string `json:"name"`
+		Age      int    `json:"age"`
+		Location string `json:"location"`
+	}
+
+	p := Person{
+		Name:     "Alice",
+		Age:      30,
+		Location: "Wonderland",
+	}
+
+	tags := gouse.GetTags(p)
+
+	fmt.Println("JSON Tags:", tags)
+}
+```
+
+## 2. Struct add
 
 Description: Add fields to a struct<br>Input params: (struct, newField interface{})<br>
 
@@ -37,7 +61,7 @@ func StructAdd() {
 }
 ```
 
-## 2. Struct clone
+## 3. Struct clone
 
 Description: Clone a struct<br>Input params: (struct interface{})<br>
 
@@ -65,7 +89,7 @@ func StructClone() {
 }
 ```
 
-## 3. Struct get
+## 4. Struct get
 
 Description: Get fields from a struct<br>Input params: (struct interface{}, fieldName string)<br>
 
@@ -88,7 +112,7 @@ func StructGet() {
 }
 ```
 
-## 4. Struct has
+## 5. Struct has
 
 Description: Check if a struct has a field<br>Input params: (struct interface{}, fieldName string)<br>
 
@@ -114,7 +138,7 @@ func StructHas() {
 }
 ```
 
-## 5. Struct merge
+## 6. Struct merge
 
 Description: Merge two structs<br>Input params: (struct1, struct2 interface{})<br>
 
@@ -154,7 +178,7 @@ func StructMerge() {
 }
 ```
 
-## 6. Struct remove
+## 7. Struct remove
 
 Description: Remove fields from a struct<br>Input params: (struct interface{}, fieldName string)<br>
 
@@ -176,7 +200,7 @@ func StructRemove() {
 }
 ```
 
-## 7. Struct set
+## 8. Struct set
 
 Description: Set update a field in a struct<br>Input params: (struct interface{}, fieldName string, value interface{})<br>
 

@@ -5,7 +5,7 @@ import (
 	"reflect"
 )
 
-func GetTag(structInstance any) []string {
+func GetTags(structInstance any) []string {
 	structType := reflect.TypeOf(structInstance)
 	var tags []string
 

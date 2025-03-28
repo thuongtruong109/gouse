@@ -1,7 +1,6 @@
 package gouse
 
 import (
-	"fmt"
 	"image"
 	"image/draw"
 	"image/jpeg"
@@ -22,31 +21,27 @@ func CreateCanvas(size int, hexColor string) (*image.RGBA, error) {
 	return background, err
 }
 
-func formatError(message string, err error) error {
-	return fmt.Errorf("%s: %v", message, err)
-}
-
 func Png2Jpg(input, output string) error {
 	pngFile, err := os.Open(input)
 	if err != nil {
-		return formatError("Error opening PNG file", err)
+		return ErrMsg("Error opening PNG file", err)
 	}
 	defer pngFile.Close()
 
 	pngImage, err := png.Decode(pngFile)
 	if err != nil {
-		return formatError("Error decoding PNG file", err)
+		return ErrMsg("Error decoding PNG file", err)
 	}
 
 	jpegFile, err := os.Create(output)
 	if err != nil {
-		return formatError("Error creating JPEG file", err)
+		return ErrMsg("Error creating JPEG file", err)
 	}
 	defer jpegFile.Close()
 
 	err = jpeg.Encode(jpegFile, pngImage, nil)
 	if err != nil {
-		return formatError("Error encoding image to JPEG", err)
+		return ErrMsg("Error encoding image to JPEG", err)
 	}
 
 	return nil

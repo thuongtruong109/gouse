@@ -4,6 +4,10 @@
 
 ![Project Structure](https://raw.githubusercontent.com/thuongtruong109/gouse/diagram/project-structure.svg)
 
+## 📊 Benchmark
+
+![Benchmark](https://github.com/thuongtruong109/gouse/blob/main/public/benchmark.png)
+
 ## 📜 Changelog
 
 - Gouse is under active development. This means that new features, bug fixes, and breaking changes will be released frequently. We encourage you to keep the [`CHANGELOG`](https://github.com/thuongtruong109/gouse/blob/main/CHANGELOG.md) open while upgrading to see what's new!
@@ -36,3 +40,15 @@
   - [Cache for Go](github.com/patrickmn/go-cache) - An in-memory key:value store/cache (similar to Memcached) library for Go 🗄
   - [Toml Go](github.com/pelletier/go-toml) - A Go library for managing configuration data from files 📄
   - [Yaml](gopkg.in/yaml.v2) - A YAML support for the Go language 📄
+
+## 🧑‍🤝‍🧑 Contributing
+
+Gouse is an open source project and built on the top of other open-source projects. Welcome all the kinds of contributions. No matter it is for typo fix, bug fix or big new features. Please do not hesitate to ask a question or send a pull request.
+
+We strongly value documentation and integration with other projects, so we are very glad to accept improvements for these aspects.
+
+If you're looking for issues to work on, try looking at the good first issue list. We do our best to tag issues suitable for new external contributors with that label, so it's a great way to find something you can help with!
+
+- Please read our [`Code of Conduct`](https://github.com/thuongtruong109/gouse/blob/main/.github/CODE_OF_CONDUCT.md) before contributing.
+
+- Refer to the [`Contributing Guide`](https://github.com/thuongtruong109/gouse/blob/main/.github/CONTRIBUTING.md) for more information on how to get started.

@@ -139,7 +139,13 @@
 ## 📦 Installation
 
 ```go
-go get github.com/thuongtruong109/gouse
+go get -u github.com/thuongtruong109/gouse
+```
+
+or add to your `go.mod` file:
+
+```go
+required github.com/thuongtruong109/gouse
 ```
 
 ## 🕯️ Quick Start
@@ -186,7 +192,7 @@ func main() {
 
 `INPUT`: 1000000
 
-<!-- ## 📚 Examples -->
+# ![Benchmark](/public/benchmark.png)
 
 ## 📁 Project Structure
 
@@ -202,7 +208,11 @@ $ git clone https://github.com/thuongtruong109/gouse.git
 
 ## 📝 Contributing
 
-- We welcome your contributions! If you're looking for issues to work on, try looking at the good first issue list. We do our best to tag issues suitable for new external contributors with that label, so it's a great way to find something you can help with!
+Gouse is an open source project and built on the top of other open-source projects. Welcome all the kinds of contributions. No matter it is for typo fix, bug fix or big new features. Please do not hesitate to ask a question or send a pull request.
+
+We strongly value documentation and integration with other projects, so we are very glad to accept improvements for these aspects.
+
+If you're looking for issues to work on, try looking at the good first issue list. We do our best to tag issues suitable for new external contributors with that label, so it's a great way to find something you can help with!
 
 - Please read our [`Code of Conduct`](.github/CODE_OF_CONDUCT.md) before contributing.
 

@@ -10,7 +10,7 @@ import (
 Description: Check if a URL status
 Input params: (url string)
 */
-func NetCheckURL() {
+func HttpCheckUrl() {
 	isOk, statusCode, err := gouse.CheckUrl("https://google.com")
 	if err != nil {
 		panic(err)
@@ -23,7 +23,7 @@ func NetCheckURL() {
 Description: Calculate the time it takes to connect to a URL
 Input params: (url string)
 */
-func NetConnectTime() {
+func HttpConnectTime() {
 	connectTime, err := gouse.ConTimeUrl("https://google.com")
 	if err != nil {
 		panic(err)
@@ -36,7 +36,7 @@ func NetConnectTime() {
 Description: Encode a URL
 Input params: (url string)
 */
-func NetEncodeURL() {
+func HttpEncodeUrl() {
 	println("Encode: ", gouse.EncodeUrl("https://google.com"))
 }
 
@@ -44,7 +44,7 @@ func NetEncodeURL() {
 Description: Decode a URL
 Input params: (url string)
 */
-func NetDecodeURL() {
+func HttpDecodeUrl() {
 	println("Decode: ", gouse.DecodeUrl("https%3A%2F%2Fgoogle.com"))
 }
 
@@ -52,7 +52,7 @@ func NetDecodeURL() {
 Description: Get the header of a URL
 Input params: (url string)
 */
-func NetHeaderURL() {
+func HttpHeaderUrl() {
 	header, err := gouse.HeaderUrl("https://google.com")
 	if err != nil {
 		panic(err)
@@ -65,7 +65,7 @@ func NetHeaderURL() {
 Description: Check if a port is open
 Input params: (protocol, hostname string, port int)
 */
-func NetPortChecker() {
+func HttpPortChecker() {
 	open := gouse.CheckPort("tcp", "localhost", 1313)
 	fmt.Printf("Port Open: %t\n", open)
 }
@@ -74,22 +74,14 @@ func NetPortChecker() {
 Description: Scan for open ports on a given host.
 Input params: (protocol, hostname string, startPort, endPort int)
 */
-func NetPortScanner() {
+func HttpPortScanner() {
 	gouse.ScanPort("tcp", "127.0.0.1", 3000, 8080)
-}
-
-/*
-Description: Proxy wrapper to another port
-Input params: (port string, urls []string{})
-*/
-func NetProxy() {
-	gouse.Proxy("5000", []string{"http://localhost:3000", "http://localhost:3001"})
 }
 
 /*
 Description: Open a URL in the default browser
 Input params: (url string)
 */
-func NetOpenURL() {
+func HttpOpenUrl() {
 	gouse.OpenUrl("https://google.com")
 }

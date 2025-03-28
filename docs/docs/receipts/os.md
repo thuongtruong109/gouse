@@ -233,12 +233,12 @@ func OsMemory() {
 }
 ```
 
-## 8. Profile
+## 8. Os profile
 
 Description: Run Profile<br>Input params: (cpu.pprof, mem.pprof)<br>
 
 ```go
-func Profile() {
+func OsProfile() {
 	var cpuprofile, memprofile = "cpu.pprof", "mem.pprof"
 	gouse.Profile(cpuprofile, memprofile)
 

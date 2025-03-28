@@ -18,19 +18,22 @@ func main() {
 		configSample()
 		connectionSample()
 		consoleSample()
+		contextSample()
 		cronSample()
 		cryptoSample()
 		dateSample()
+		errorSample()
 		functionSample()
+		httpSample()
 		ioSample()
 		loggerSample()
 		mathSample()
 		mediaSample()
-		netSample()
 		numberSample()
 		osSample()
 		randomSample()
 		regexSample()
+		serverSample()
 		stringSample()
 		structSample()
 		timeSample()
@@ -42,10 +45,11 @@ func main() {
 }
 
 func apiSample() {
-	samples.Loadbalancer()
-	samples.Server()
-	// samples.Validate()
+	samples.Validate()
 	samples.UploadFile()
+	samples.Header()
+	samples.Header()
+	samples.Pagination()
 }
 
 func arraySample() {
@@ -97,11 +101,11 @@ func chartSample() {
 }
 
 func colorSample() {
-	// samples.ColorHueToRGB()
-	// samples.ColorHSLAToRGBA()
-	// samples.ColorRGBAToHSLA()
-	// samples.ColorHexToHSLA()
-	// samples.ColorHexToRGBA()
+	samples.ColorHueToRgb()
+	samples.ColorHlsaToRgba()
+	samples.ColorRgbaToHlsa()
+	samples.ColorHexToHlsa()
+	samples.ColorHexToRgba()
 }
 
 func configSample() {
@@ -144,6 +148,10 @@ func consoleSample() {
 	samples.ConsoleGlamour()
 }
 
+func contextSample() {
+	samples.Context()
+}
+
 func cronSample() {
 	samples.CronRun()
 }
@@ -164,6 +172,14 @@ func dateSample() {
 	samples.DateUTC()
 }
 
+func errorSample() {
+	samples.ErrorDetect()
+	samples.ErrorFormat()
+	samples.ErrorMsg()
+	samples.ErrorPanic()
+	samples.ErrorFatal()
+}
+
 func functionSample() {
 	samples.FunctionDelay()
 	samples.FunctionRetry()
@@ -173,6 +189,18 @@ func functionSample() {
 	samples.FunctionRunTime()
 	samples.FunctionDeferWrapper()
 	samples.FunctionParallel()
+}
+
+func httpSample() {
+	samples.HttpPortScanner()
+	samples.HttpPortChecker()
+	samples.HttpCheckUrl()
+	samples.HttpConnectTime()
+	samples.HttpEncodeUrl()
+	samples.HttpDecodeUrl()
+	samples.HttpCheckUrl()
+	samples.HttpHeaderUrl()
+	samples.HttpOpenUrl()
 }
 
 func ioSample() {
@@ -201,7 +229,7 @@ func ioSample() {
 	samples.IoWritePath()
 
 	samples.IoZip()
-	samples.IoUnzip()
+	samples.IoExtract()
 }
 
 func loggerSample() {
@@ -244,25 +272,13 @@ func mathSample() {
 
 func mediaSample() {
 	samples.MediaCanvas()
-	// samples.MediaPNGToJPG()
-}
-
-func netSample() {
-	samples.NetOpenURL()
-	samples.NetEncodeURL()
-	samples.NetDecodeURL()
-	samples.NetCheckURL()
-	samples.NetHeaderURL()
-	samples.NetConnectTime()
-	samples.NetProxy()
-	samples.NetPortScanner()
-	samples.NetPortChecker()
+	samples.MediaPngToJpg()
 }
 
 func numberSample() {
 	samples.NumberClamp()
 	samples.NumberInRange()
-	// samples.NumberSortNum()
+	samples.NumberSort()
 }
 
 func osSample() {
@@ -272,6 +288,8 @@ func osSample() {
 	samples.OsMemory()
 	samples.OsUser()
 	samples.OsHost()
+	samples.OsPartion()
+	samples.OsProfile()
 }
 
 func randomSample() {
@@ -286,6 +304,12 @@ func regexSample() {
 	samples.RegexIsMatch()
 	samples.RegexMatch()
 	samples.RegexMatchIndex()
+}
+
+func serverSample() {
+	samples.ServerLoadbalancer()
+	samples.GracefulShutdownServer()
+	samples.ServerProxy()
 }
 
 func stringSample() {
@@ -333,7 +357,7 @@ func stringSample() {
 }
 
 func structSample() {
-	// samples.StructGetTag()
+	samples.StructGetTags()
 	samples.StructMerge()
 	samples.StructRemove()
 	samples.StructAdd()
@@ -345,15 +369,13 @@ func structSample() {
 
 func timeSample() {
 	samples.TimeElement()
-	// samples.TimeToSecond()
-	// samples.TimeToMinute()
-	// samples.TimeToHour()
-	// samples.TimeSleepSecond()
-	// samples.TimeSleepMinute()
-	// samples.TimeSleepHour()
-	// samples.TimeClock()
-	// samples.TimeDiff()
-	// samples.TimeDiffNow()
+	samples.TimeToSecond()
+	samples.TimeToMinute()
+	samples.TimeToHour()
+	samples.TimeSleepSecond()
+	samples.TimeSleepMinute()
+	samples.TimeSleepHour()
+	samples.TimeTerminalClock()
 }
 
 func typeSample() {
@@ -374,7 +396,5 @@ func typeSample() {
 }
 
 func utilitiesSample() {
-	// samples.SetCtx()
-	// samples.GetCtx()
-	// samples.DetectError()
+	samples.UtilsGoToMarkdown()
 }

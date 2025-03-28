@@ -30,7 +30,7 @@ func TimeElement() {
 Description: Convert time to seconds
 Input params: (time int64)
 */
-func ToSecond() {
+func TimeToSecond() {
 	println("ToSecond:", gouse.ToSecond(1))
 }
 
@@ -38,7 +38,7 @@ func ToSecond() {
 Description: Convert time to minutes
 Input params: (time int64)
 */
-func ToMinute() {
+func TimeToMinute() {
 	println("ToMinute:", gouse.ToMinute(1))
 }
 
@@ -46,7 +46,7 @@ func ToMinute() {
 Description: Convert time to hours
 Input params: (time int64)
 */
-func ToHour() {
+func TimeToHour() {
 	println("ToHour:", gouse.ToHour(1))
 }
 
@@ -54,7 +54,7 @@ func ToHour() {
 Description: Sleep for seconds
 Input params: (interval int64)
 */
-func SleepSecond() {
+func TimeSleepSecond() {
 	gouse.SleepS(1)
 }
 
@@ -62,7 +62,7 @@ func SleepSecond() {
 Description: Sleep for minutes
 Input params: (interval int64)
 */
-func SleepMinute() {
+func TimeSleepMinute() {
 	gouse.SleepM(1)
 }
 
@@ -70,13 +70,13 @@ func SleepMinute() {
 Description: Sleep for hours
 Input params: (interval int64)
 */
-func SleepHour() {
+func TimeSleepHour() {
 	gouse.SleepH(1)
 }
 
 /*
 Description: Display clock in terminal
 */
-func Clock() {
+func TimeTerminalClock() {
 	gouse.TerminalClock()
 }

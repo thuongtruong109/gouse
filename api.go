@@ -137,7 +137,7 @@ type IHeader struct {
 }
 
 func Header(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Type", "application/json")
+	setJSONHeader(w)
 
 	for k, v := range r.Header {
 		fmt.Fprintf(w, "%q: %q\n\n", k, v)
@@ -153,6 +153,7 @@ func Header(w http.ResponseWriter, r *http.Request) {
 		ContentLength: 200,
 		ContentType:   "application/json",
 	}
+	w.WriteHeader(200)
 	json.NewEncoder(w).Encode(p)
 }
 

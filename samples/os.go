@@ -220,7 +220,7 @@ func OsMemory() {
 Description: Run Profile
 Input params: (cpu.pprof, mem.pprof)
 */
-func Profile() {
+func OsProfile() {
 	var cpuprofile, memprofile = "cpu.pprof", "mem.pprof"
 	gouse.Profile(cpuprofile, memprofile)
 

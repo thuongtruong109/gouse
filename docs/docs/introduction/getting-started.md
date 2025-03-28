@@ -8,6 +8,12 @@
 go get github.com/thuongtruong109/gouse
 ```
 
+or add to your `go.mod` file:
+
+```go
+required github.com/thuongtruong109/gouse
+```
+
 ## 🕯️ Quick Start
 
 ```go

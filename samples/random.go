@@ -26,7 +26,7 @@ Description: Return a random string with n characters length
 Input params: (length int)
 */
 func RandomString() {
-	fmt.Println(gouse.RandStr(10))
+	fmt.Println("Random string: ", gouse.RandStr(10))
 }
 
 /*
@@ -34,12 +34,12 @@ Description: Return a random digit number with n characters length
 Input params: (length int)
 */
 func RandomDigit() {
-	fmt.Println(gouse.RandDigit(10))
+	fmt.Println("Random digit: ", gouse.RandDigit(10))
 }
 
 /*
-Description: Return a random UUID (format: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)
+Description: Return a new random UUID (format: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)
 */
 func RandomUUID() {
-	fmt.Println(gouse.UUID())
+	fmt.Println("New uuid: ", gouse.UUID())
 }

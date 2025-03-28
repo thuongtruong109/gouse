@@ -1,5 +1,5 @@
 
-# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.35rem 0.75rem 0.35rem 0;' type='info' text='🔖 Net' />
+# <Badge style='font-size: 1.8rem; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); padding: 0.35rem 0.75rem 0.35rem 0;' type='info' text='🔖 Http' />
 
 
 ```go
@@ -9,12 +9,12 @@ import (
 )
 ```
 
-## 1. Net check u r l
+## 1. Http check url
 
 Description: Check if a URL status<br>Input params: (url string)<br>
 
 ```go
-func NetCheckURL() {
+func HttpCheckUrl() {
 	isOk, statusCode, err := gouse.CheckUrl("https://google.com")
 	if err != nil {
 		panic(err)
@@ -24,12 +24,12 @@ func NetCheckURL() {
 }
 ```
 
-## 2. Net connect time
+## 2. Http connect time
 
 Description: Calculate the time it takes to connect to a URL<br>Input params: (url string)<br>
 
 ```go
-func NetConnectTime() {
+func HttpConnectTime() {
 	connectTime, err := gouse.ConTimeUrl("https://google.com")
 	if err != nil {
 		panic(err)
@@ -39,32 +39,32 @@ func NetConnectTime() {
 }
 ```
 
-## 3. Net encode u r l
+## 3. Http encode url
 
 Description: Encode a URL<br>Input params: (url string)<br>
 
 ```go
-func NetEncodeURL() {
+func HttpEncodeUrl() {
 	println("Encode: ", gouse.EncodeUrl("https://google.com"))
 }
 ```
 
-## 4. Net decode u r l
+## 4. Http decode url
 
 Description: Decode a URL<br>Input params: (url string)<br>
 
 ```go
-func NetDecodeURL() {
+func HttpDecodeUrl() {
 	println("Decode: ", gouse.DecodeUrl("https%3A%2F%2Fgoogle.com"))
 }
 ```
 
-## 5. Net header u r l
+## 5. Http header url
 
 Description: Get the header of a URL<br>Input params: (url string)<br>
 
 ```go
-func NetHeaderURL() {
+func HttpHeaderUrl() {
 	header, err := gouse.HeaderUrl("https://google.com")
 	if err != nil {
 		panic(err)
@@ -74,43 +74,33 @@ func NetHeaderURL() {
 }
 ```
 
-## 6. Net port checker
+## 6. Http port checker
 
 Description: Check if a port is open<br>Input params: (protocol, hostname string, port int)<br>
 
 ```go
-func NetPortChecker() {
+func HttpPortChecker() {
 	open := gouse.CheckPort("tcp", "localhost", 1313)
 	fmt.Printf("Port Open: %t\n", open)
 }
 ```
 
-## 7. Net port scanner
+## 7. Http port scanner
 
 Description: Scan for open ports on a given host.<br>Input params: (protocol, hostname string, startPort, endPort int)<br>
 
 ```go
-func NetPortScanner() {
+func HttpPortScanner() {
 	gouse.ScanPort("tcp", "127.0.0.1", 3000, 8080)
 }
 ```
 
-## 8. Net proxy
-
-Description: Proxy wrapper to another port<br>Input params: (port string, urls []string{})<br>
-
-```go
-func NetProxy() {
-	gouse.Proxy("5000", []string{"http://localhost:3000", "http://localhost:3001"})
-}
-```
-
-## 9. Net open u r l
+## 8. Http open url
 
 Description: Open a URL in the default browser<br>Input params: (url string)<br>
 
 ```go
-func NetOpenURL() {
+func HttpOpenUrl() {
 	gouse.OpenUrl("https://google.com")
 }
 ```

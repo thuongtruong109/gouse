@@ -7,6 +7,28 @@ import (
 )
 
 /*
+Description: Get tags from a struct
+Input params: (struct interface{})
+*/
+func StructGetTags() {
+	type Person struct {
+		Name     string `json:"name"`
+		Age      int    `json:"age"`
+		Location string `json:"location"`
+	}
+
+	p := Person{
+		Name:     "Alice",
+		Age:      30,
+		Location: "Wonderland",
+	}
+
+	tags := gouse.GetTags(p)
+
+	fmt.Println("JSON Tags:", tags)
+}
+
+/*
 Description: Add fields to a struct
 Input params: (struct, newField interface{})
 */

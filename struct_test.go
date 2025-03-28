@@ -38,7 +38,7 @@ func TestGetTag(t *testing.T) {
 		Address: "123 Main St",
 	}
 
-	tags := GetTag(person)
+	tags := GetTags(person)
 
 	if !Equal(tags, expectedTags) {
 		t.Errorf("GetTagName() = %v, want %v", tags, expectedTags)

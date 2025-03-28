@@ -32,72 +32,72 @@ func TimeElement() {
 }
 ```
 
-## 2. To second
+## 2. Time to second
 
 Description: Convert time to seconds<br>Input params: (time int64)<br>
 
 ```go
-func ToSecond() {
+func TimeToSecond() {
 	println("ToSecond:", gouse.ToSecond(1))
 }
 ```
 
-## 3. To minute
+## 3. Time to minute
 
 Description: Convert time to minutes<br>Input params: (time int64)<br>
 
 ```go
-func ToMinute() {
+func TimeToMinute() {
 	println("ToMinute:", gouse.ToMinute(1))
 }
 ```
 
-## 4. To hour
+## 4. Time to hour
 
 Description: Convert time to hours<br>Input params: (time int64)<br>
 
 ```go
-func ToHour() {
+func TimeToHour() {
 	println("ToHour:", gouse.ToHour(1))
 }
 ```
 
-## 5. Sleep second
+## 5. Time sleep second
 
 Description: Sleep for seconds<br>Input params: (interval int64)<br>
 
 ```go
-func SleepSecond() {
+func TimeSleepSecond() {
 	gouse.SleepS(1)
 }
 ```
 
-## 6. Sleep minute
+## 6. Time sleep minute
 
 Description: Sleep for minutes<br>Input params: (interval int64)<br>
 
 ```go
-func SleepMinute() {
+func TimeSleepMinute() {
 	gouse.SleepM(1)
 }
 ```
 
-## 7. Sleep hour
+## 7. Time sleep hour
 
 Description: Sleep for hours<br>Input params: (interval int64)<br>
 
 ```go
-func SleepHour() {
+func TimeSleepHour() {
 	gouse.SleepH(1)
 }
 ```
 
-## 8. Clock
+## 8. Time terminal clock
 
 Description: Display clock in terminal<br>
 
 ```go
-func Clock() {
+func TimeTerminalClock() {
 	gouse.TerminalClock()
 }
 ```

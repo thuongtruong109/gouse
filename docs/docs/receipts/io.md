@@ -420,12 +420,12 @@ func IoZip() {
 }
 ```
 
-## 23. Io unzip
+## 23. Io extract
 
 Description: Unzip files.<br>Input params: (zipFileName string, destFolder string)<br>
 
 ```go
-func IoUnzip() {
+func IoExtract() {
 	destFolder := "unzipped"
 	zipFileName := "archive.zip"
 	err := gouse.Extract(zipFileName, destFolder)

@@ -31,7 +31,7 @@ func MediaCanvas() {
 Description: Convert a PNG image to a JPG image
 Input params: (jpgPath string, pngPath string)
 */
-func PngToJpg() {
+func MediaPngToJpg() {
 	err := gouse.Png2Jpg("mockdata/1720031107.png", "mockdata/output.jpg")
 	if err != nil {
 		fmt.Println(err)

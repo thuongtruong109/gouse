@@ -376,7 +376,7 @@ func IoZip() {
 Description: Unzip files.
 Input params: (zipFileName string, destFolder string)
 */
-func IoUnzip() {
+func IoExtract() {
 	destFolder := "unzipped"
 	zipFileName := "archive.zip"
 	err := gouse.Extract(zipFileName, destFolder)
