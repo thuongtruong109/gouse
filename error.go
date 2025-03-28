@@ -16,7 +16,7 @@ func DetectErr(err any) string {
 	}
 }
 
-func ToErr(err any) error {
+func Err(err any) error {
 	switch e := err.(type) {
 	case error:
 		return e
@@ -25,6 +25,10 @@ func ToErr(err any) error {
 	default:
 		return fmt.Errorf("%v", err)
 	}
+}
+
+func ErrMsg(message string, err error) error {
+	return fmt.Errorf("%s: %v", message, err)
 }
 
 func Panic(msg error, err ...any) {

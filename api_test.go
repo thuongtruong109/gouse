@@ -29,8 +29,7 @@ func TestHttpError(t *testing.T) {
 	}
 }
 
-// TestNewPagination tests the creation of a new Pagination object
-func TestNewPagination(t *testing.T) {
+func TestPagination(t *testing.T) {
 	p := NewPagination(10, 1)
 
 	if p.Size != 10 {
@@ -48,10 +47,7 @@ func TestNewPagination(t *testing.T) {
 	if p2.Page != 1 {
 		t.Errorf("expected default page 1, got %d", p2.Page)
 	}
-}
 
-// TestSetSize tests the SetSize method
-func TestSetSize(t *testing.T) {
 	tests := []struct {
 		sizeQuery string
 		expected  int
@@ -74,11 +70,8 @@ func TestSetSize(t *testing.T) {
 			t.Errorf("SetSize(%v) = %v, want %v", tt.sizeQuery, p.Size, tt.expected)
 		}
 	}
-}
 
-// TestSetPage tests the SetPage method
-func TestSetPage(t *testing.T) {
-	tests := []struct {
+	tests2 := []struct {
 		pageQuery string
 		expected  int
 		expectErr bool
@@ -88,7 +81,7 @@ func TestSetPage(t *testing.T) {
 		{"abc", 0, true},
 	}
 
-	for _, tt := range tests {
+	for _, tt := range tests2 {
 		p := &Pagination{}
 		err := p.SetPage(tt.pageQuery)
 
@@ -100,11 +93,8 @@ func TestSetPage(t *testing.T) {
 			t.Errorf("SetPage(%v) = %v, want %v", tt.pageQuery, p.Page, tt.expected)
 		}
 	}
-}
 
-// TestGetTotalPages tests the GetTotalPages method
-func TestGetTotalPages(t *testing.T) {
-	tests := []struct {
+	tests3 := []struct {
 		total    int
 		size     int
 		expected int
@@ -115,7 +105,7 @@ func TestGetTotalPages(t *testing.T) {
 		{100, 20, 5},
 	}
 
-	for _, tt := range tests {
+	for _, tt := range tests3 {
 		p := &Pagination{Total: tt.total, Size: tt.size}
 		actual := p.GetTotalPages()
 
@@ -123,11 +113,8 @@ func TestGetTotalPages(t *testing.T) {
 			t.Errorf("GetTotalPages() = %v, want %v", actual, tt.expected)
 		}
 	}
-}
 
-// TestGetNextPage tests the GetNextPage method
-func TestGetNextPage(t *testing.T) {
-	tests := []struct {
+	tests4 := []struct {
 		page     int
 		total    int
 		size     int
@@ -139,7 +126,7 @@ func TestGetNextPage(t *testing.T) {
 		{5, 100, 10, 6},
 	}
 
-	for _, tt := range tests {
+	for _, tt := range tests4 {
 		p := &Pagination{Page: tt.page, Total: tt.total, Size: tt.size}
 		actual := p.GetNextPage()
 
@@ -147,11 +134,8 @@ func TestGetNextPage(t *testing.T) {
 			t.Errorf("GetNextPage() = %v, want %v", actual, tt.expected)
 		}
 	}
-}
 
-// TestGetPrevPage tests the GetPrevPage method
-func TestGetPrevPage(t *testing.T) {
-	tests := []struct {
+	tests5 := []struct {
 		page     int
 		expected int
 	}{
@@ -160,7 +144,7 @@ func TestGetPrevPage(t *testing.T) {
 		{10, 9},
 	}
 
-	for _, tt := range tests {
+	for _, tt := range tests5 {
 		p := &Pagination{Page: tt.page}
 		actual := p.GetPrevPage()
 
@@ -168,11 +152,8 @@ func TestGetPrevPage(t *testing.T) {
 			t.Errorf("GetPrevPage() = %v, want %v", actual, tt.expected)
 		}
 	}
-}
 
-// TestGetOffset tests the GetOffset method
-func TestGetOffset(t *testing.T) {
-	tests := []struct {
+	tests6 := []struct {
 		page     int
 		size     int
 		expected int
@@ -182,7 +163,7 @@ func TestGetOffset(t *testing.T) {
 		{3, 20, 40}, // Third page, offset should be size * 2
 	}
 
-	for _, tt := range tests {
+	for _, tt := range tests6 {
 		p := &Pagination{Page: tt.page, Size: tt.size}
 		actual := p.GetOffset()
 
@@ -190,25 +171,20 @@ func TestGetOffset(t *testing.T) {
 			t.Errorf("GetOffset() = %v, want %v", actual, tt.expected)
 		}
 	}
-}
 
-// TestGetQueryString tests the GetQueryString method
-func TestGetQueryString(t *testing.T) {
-	p := &Pagination{
+	p7 := &Pagination{
 		Page:    2,
 		Size:    10,
 		OrderBy: "asc",
 	}
 	expected := "page=2&size=10&orderBy=asc"
-	actual := p.GetQueryString()
+	actual := p7.GetQueryString()
 
 	if actual != expected {
 		t.Errorf("GetQueryString() = %v, want %v", actual, expected)
 	}
-}
 
-func TestGetHasMore(t *testing.T) {
-	tests := []struct {
+	tests8 := []struct {
 		pagination      Pagination
 		totalCount      int
 		expectedHasMore bool
@@ -240,7 +216,7 @@ func TestGetHasMore(t *testing.T) {
 		// },
 	}
 
-	for _, tt := range tests {
+	for _, tt := range tests8 {
 		t.Run("", func(t *testing.T) {
 			hasMore := tt.pagination.GetHasMore(tt.totalCount)
 			if hasMore != tt.expectedHasMore {

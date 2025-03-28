@@ -4,6 +4,7 @@
 
 ```go
 import (
+	"fmt"
 	"time"
 	"github.com/thuongtruong109/gouse"
 )
@@ -54,12 +55,12 @@ func FunctionLock() {
 	oneInOneOutLockFunc := gouse.LockFunc(func(i any) any {
 		return i
 	}).(func(any) any)("one input - one output")
-	gouse.Println(oneInOneOutLockFunc)
+	fmt.Println(oneInOneOutLockFunc)
 
 	twoInTwoOutLockFunc1, twoInTwoOutLockFunc2 := gouse.LockFunc(func(i1, i2 any) (any, any) {
 		return i1, i2
 	}).(func(any, any) (any, any))("two input - two output (a)", "two input - two output (b)")
-	gouse.Println(twoInTwoOutLockFunc1, twoInTwoOutLockFunc2)
+	fmt.Println(twoInTwoOutLockFunc1, twoInTwoOutLockFunc2)
 
 	gouse.LockFunc(func() {
 		println("no input - no output")
@@ -71,7 +72,7 @@ func FunctionLock() {
 
 	lockedFunc := gouse.RWLockFunc(exampleRWLockFunc).(func(int, int) int)
 	result := lockedFunc(5, 3)
-	gouse.Println("RW Lock function result:", result)
+	fmt.Println("RW Lock function result:", result)
 }
 ```
 
@@ -84,21 +85,21 @@ func FunctionParallel() {
 	function1 := func() {
 		for range 5 {
 			time.Sleep(100 * time.Millisecond)
-			gouse.Println("Function 1 is executing")
+			fmt.Println("Function 1 is executing")
 		}
 	}
 
 	function2 := func() {
 		for range 5 {
 			time.Sleep(200 * time.Millisecond)
-			gouse.Println("Function 2 is executing")
+			fmt.Println("Function 2 is executing")
 		}
 	}
 
 	function3 := func() {
 		for range 5 {
 			time.Sleep(300 * time.Millisecond)
-			gouse.Println("Function 3 is executing")
+			fmt.Println("Function 3 is executing")
 		}
 	}
 
@@ -139,11 +140,11 @@ Description: Measure function execution time.<br>Input params: (time.Time, func(
 func FunctionRunTime() {
 	exampleFunc := func() {
 		time.Sleep(2 * time.Second)
-		gouse.Println("Task completed.")
+		fmt.Println("Task completed.")
 	}
 
 	duration := gouse.RunTimeFunc(time.Now(), exampleFunc)
-	gouse.Printf("Function run in: %v\n", duration)
+	fmt.Printf("Function run in: %v\n", duration)
 }
 ```
 
@@ -155,11 +156,11 @@ Description: Wrap defer function<br>Input params: (...func())<br>
 func FunctionDeferWrapper() {
 	gouse.DeferWrapper(
 		func() error {
-			gouse.Println("Connecting to database...")
+			fmt.Println("Connecting to database...")
 			return nil
 		},
 		func() {
-			gouse.Println("Disconnecting from database...")
+			fmt.Println("Disconnecting from database...")
 		},
 	)
 }

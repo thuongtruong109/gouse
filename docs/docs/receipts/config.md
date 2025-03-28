@@ -4,6 +4,7 @@
 
 ```go
 import (
+	"fmt"
 	"github.com/thuongtruong109/gouse"
 )
 ```
@@ -22,11 +23,11 @@ func ConfigJson() {
 	var myConf configuration
 	err := gouse.ReadJSON("conf.json", &myConf)
 	if err != nil {
-		gouse.Println("Error:", err)
+		fmt.Println("Error:", err)
 	}
 
-	gouse.Println("Users:", myConf.Users)
-	gouse.Println("Groups:", myConf.Groups)
+	fmt.Println("Users:", myConf.Users)
+	fmt.Println("Groups:", myConf.Groups)
 }
 ```
 
@@ -48,13 +49,13 @@ func ConfigToml() {
 	var myConf configuration
 	err := gouse.ReadTOML("conf.toml", &myConf)
 	if err != nil {
-		gouse.Println("Error:", err)
+		fmt.Println("Error:", err)
 	}
 
-	gouse.Println("Mysql Host:", myConf.Mysql.Host)
-	gouse.Println("Mysql Username:", myConf.Mysql.Username)
-	gouse.Println("Mysql Password:", myConf.Mysql.Password)
-	gouse.Println("Mysql Database:", myConf.Mysql.Database)
+	fmt.Println("Mysql Host:", myConf.Mysql.Host)
+	fmt.Println("Mysql Username:", myConf.Mysql.Username)
+	fmt.Println("Mysql Password:", myConf.Mysql.Password)
+	fmt.Println("Mysql Database:", myConf.Mysql.Database)
 }
 ```
 
@@ -78,12 +79,12 @@ func ConfigYaml() {
 	var myConf configuration
 	err := gouse.ReadYAML("conf.yaml", &myConf)
 	if err != nil {
-		gouse.Println("Error:", err)
+		fmt.Println("Error:", err)
 	}
 
-	gouse.Println("Server Port:", myConf.Server.Port)
-	gouse.Println("Server Host:", myConf.Server.Host)
-	gouse.Println("DB Username:", myConf.Database.Username)
-	gouse.Println("DB Password:", myConf.Database.Password)
+	fmt.Println("Server Port:", myConf.Server.Port)
+	fmt.Println("Server Host:", myConf.Server.Host)
+	fmt.Println("DB Username:", myConf.Database.Username)
+	fmt.Println("DB Password:", myConf.Database.Password)
 }
 ```

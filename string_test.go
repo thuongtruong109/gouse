@@ -5,8 +5,6 @@ import (
 	"testing"
 )
 
-/* Test case conversion functions */
-
 func TestCapitalize(t *testing.T) {
 	tests := []struct {
 		input    string
@@ -82,8 +80,6 @@ func TestCamelCase(t *testing.T) {
 		}
 	}
 }
-
-/* Testing check characters */
 
 func TestIsLetter(t *testing.T) {
 	tests := []struct {
@@ -254,8 +250,6 @@ func TestIsUpper(t *testing.T) {
 		}
 	}
 }
-
-/* Testing transformations */
 
 func TestSplit(t *testing.T) {
 	tests := []struct {
@@ -895,8 +889,6 @@ func TestPadEnd(t *testing.T) {
 		}
 	}
 }
-
-/* Testing utilities */
 
 func TestCount(t *testing.T) {
 	type args struct {

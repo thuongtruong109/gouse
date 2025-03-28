@@ -4,6 +4,7 @@
 
 ```go
 import (
+	"fmt"
 	"github.com/thuongtruong109/gouse"
 )
 ```
@@ -34,7 +35,7 @@ func NetConnectTime() {
 		panic(err)
 	}
 
-	gouse.Printf("Connect time: %fs\n", connectTime)
+	fmt.Printf("Connect time: %fs\n", connectTime)
 }
 ```
 
@@ -69,7 +70,7 @@ func NetHeaderURL() {
 		panic(err)
 	}
 
-	gouse.Println(gouse.Map2Str(header))
+	fmt.Println(gouse.Map2Str(header))
 }
 ```
 
@@ -80,7 +81,7 @@ Description: Check if a port is open<br>Input params: (protocol, hostname string
 ```go
 func NetPortChecker() {
 	open := gouse.CheckPort("tcp", "localhost", 1313)
-	gouse.Printf("Port Open: %t\n", open)
+	fmt.Printf("Port Open: %t\n", open)
 }
 ```
 

@@ -20,7 +20,6 @@ func Sprintln(args ...any) string {
 	return Sprint(args...) + "\n"
 }
 
-
 func Sprintf(format string, args ...any) string {
 	var result string
 	index := 0

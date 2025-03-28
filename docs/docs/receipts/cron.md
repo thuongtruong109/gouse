@@ -4,6 +4,7 @@
 
 ```go
 import (
+	"fmt"
 	"github.com/thuongtruong109/gouse"
 )
 ```
@@ -15,11 +16,11 @@ Description: Run a cron job<br>Input params: (duration uint64, stopAfter uint64,
 ```go
 func CronRun() {
 	callback := func() {
-		gouse.Println("Cron job executed")
+		fmt.Println("Cron job executed")
 	}
 
 	gouse.RunJob(1, 5, callback)
 
-	gouse.Println("Cron job stopped.")
+	fmt.Println("Cron job stopped.")
 }
 ```

@@ -4,6 +4,7 @@
 
 ```go
 import (
+	"fmt"
 	"github.com/thuongtruong109/gouse"
 )
 ```
@@ -25,9 +26,9 @@ func TimeElement() {
 	println("UnixNano:", gouse.Nano())
 	println("UnixMilli:", gouse.Milli())
 	println("UnixMicro:", gouse.Micro())
-	gouse.Println("UnixMilliToTime:", gouse.Milli2Time(1000000000))
-	gouse.Println("UnixMicroToTime:", gouse.Micro2Time(1000000000))
-	gouse.Println("UnixNanoToTime:", gouse.Nano2Time(1000000000))
+	fmt.Println("UnixMilliToTime:", gouse.Milli2Time(1000000000))
+	fmt.Println("UnixMicroToTime:", gouse.Micro2Time(1000000000))
+	fmt.Println("UnixNanoToTime:", gouse.Nano2Time(1000000000))
 }
 ```
 

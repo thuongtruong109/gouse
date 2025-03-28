@@ -4,6 +4,7 @@
 
 ```go
 import (
+	"fmt"
 	"github.com/thuongtruong109/gouse"
 )
 ```
@@ -32,7 +33,7 @@ func StructAdd() {
 	}
 	result := gouse.AddStruct(person, newFields)
 
-	gouse.Printf("Struct after adding fields: %+v\n", result)
+	fmt.Printf("Struct after adding fields: %+v\n", result)
 }
 ```
 
@@ -54,13 +55,13 @@ func StructClone() {
 		Email: "example@gmail.com",
 	}
 
-	gouse.Printf("Original: %+v\n", person)
+	fmt.Printf("Original: %+v\n", person)
 
 	clone := gouse.CloneStruct(person)
 
 	updateClone := clone.(Clone_Person)
 	updateClone.Name = "Updated Name"
-	gouse.Printf("Clone: %+v\n", updateClone)
+	fmt.Printf("Clone: %+v\n", updateClone)
 }
 ```
 
@@ -83,7 +84,7 @@ func StructGet() {
 	}
 
 	name := gouse.GetStruct(person, "Name")
-	gouse.Printf("Name: %s\n", name)
+	fmt.Printf("Name: %s\n", name)
 }
 ```
 
@@ -106,10 +107,10 @@ func StructHas() {
 	}
 
 	has := gouse.HasInStruct(person, "Email")
-	gouse.Printf("Has: %+v\n", has)
+	fmt.Printf("Has: %+v\n", has)
 
 	hasEmpty := gouse.HasEmptyInStruct(person, "Email")
-	gouse.Printf("Has empty: %+v\n", hasEmpty)
+	fmt.Printf("Has empty: %+v\n", hasEmpty)
 }
 ```
 
@@ -145,11 +146,11 @@ func StructMerge() {
 
 	merged := gouse.MergeStruct(person, address)
 
-	gouse.Printf("Struct after merged: %+v\n", merged)
+	fmt.Printf("Struct after merged: %+v\n", merged)
 
-	gouse.Println("Name:", merged.(map[string]interface{})["Name"])
+	fmt.Println("Name:", merged.(map[string]interface{})["Name"])
 
-	gouse.Println("City:", merged.(map[string]interface{})["City"])
+	fmt.Println("City:", merged.(map[string]interface{})["City"])
 }
 ```
 
@@ -171,7 +172,7 @@ func StructRemove() {
 		Email: "example@gmail.com",
 	}
 
-	gouse.Printf("Struct after removed field: %+v\n", gouse.RmStruct(person, "Email"))
+	fmt.Printf("Struct after removed field: %+v\n", gouse.RmStruct(person, "Email"))
 }
 ```
 
@@ -195,6 +196,6 @@ func StructSet() {
 
 	gouse.SetStruct(person, "Name", "Updated Name")
 
-	gouse.Printf("Struct after setting field: %+v\n", person)
+	fmt.Printf("Struct after setting field: %+v\n", person)
 }
 ```
