@@ -188,7 +188,7 @@ func (igs *IServer) Server() {
 }
 
 func Proxy(port string, urls []string) {
-	_handleRequest := func(urls []string) gin.HandlerFunc {
+	handleRequest := func(urls []string) gin.HandlerFunc {
 		var counter uint64
 
 		return func(ctx *gin.Context) {
@@ -244,13 +244,13 @@ func Proxy(port string, urls []string) {
 
 	router := gin.Default()
 
-	router.GET("*path", _handleRequest(urls))
-	router.POST("*path", _handleRequest(urls))
-	router.PUT("*path", _handleRequest(urls))
-	router.PATCH("*path", _handleRequest(urls))
-	router.DELETE("*path", _handleRequest(urls))
-	router.OPTIONS("*path", _handleRequest(urls))
-	router.HEAD("*path", _handleRequest(urls))
+	router.GET("*path", handleRequest(urls))
+	router.POST("*path", handleRequest(urls))
+	router.PUT("*path", handleRequest(urls))
+	router.PATCH("*path", handleRequest(urls))
+	router.DELETE("*path", handleRequest(urls))
+	router.OPTIONS("*path", handleRequest(urls))
+	router.HEAD("*path", handleRequest(urls))
 
 	router.Run(":" + port)
 }

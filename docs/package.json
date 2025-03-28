@@ -10,9 +10,8 @@
     "url": "https://github.com/thuongtruong109/gouse.git"
   },
   "license": "MIT",
-  "private": true,
   "type": "module",
-  "version": "1.0",
+  "version": "1.1",
   "scripts": {
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
