@@ -6,7 +6,7 @@
 
 ## 📊 Benchmark
 
-![Benchmark](https://github.com/thuongtruong109/gouse/blob/main/public/benchmark.png)
+![Benchmark](https://github.com/thuongtruong109/gouse/blob/main/public/benchmark.png?raw=true)
 
 ## 📜 Changelog
 
