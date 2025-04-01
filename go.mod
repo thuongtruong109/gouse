@@ -1,7 +1,6 @@
 module github.com/thuongtruong109/gouse
 
 go 1.24.0
-
 require (
 	github.com/AlecAivazis/survey/v2 v2.3.7
 	github.com/PuerkitoBio/goquery v1.10.2
@@ -11,7 +10,7 @@ require (
 	github.com/charmbracelet/lipgloss v1.1.0
 	github.com/gin-gonic/gin v1.10.0
 	github.com/go-echarts/go-echarts/v2 v2.5.2
-	github.com/go-playground/validator/v10 v10.20.0
+	github.com/go-playground/validator/v10 v10.26.0
 	github.com/go-redis/redis/v8 v8.11.5
 	github.com/google/uuid v1.6.0
 	github.com/kelseyhightower/envconfig v1.4.0
@@ -20,7 +19,7 @@ require (
 	github.com/muesli/termenv v0.16.0
 	github.com/patrickmn/go-cache v2.1.0+incompatible
 	github.com/pelletier/go-toml v1.9.5
-	github.com/shirou/gopsutil/v4 v4.25.2
+	github.com/shirou/gopsutil/v4 v4.25.3
 	github.com/stretchr/testify v1.10.0
 	golang.org/x/crypto v0.36.0
 	gopkg.in/yaml.v2 v2.4.0
@@ -52,7 +51,7 @@ require (
 	github.com/dlclark/regexp2 v1.11.0 // indirect
 	github.com/dustin/go-humanize v1.0.1 // indirect
 	github.com/erikgeiser/coninput v0.0.0-20211004153227-1c3628e74d0f // indirect
-	github.com/gabriel-vasile/mimetype v1.4.3 // indirect
+	github.com/gabriel-vasile/mimetype v1.4.8 // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
 	github.com/go-ole/go-ole v1.2.6 // indirect
 	github.com/go-playground/locales v0.14.1 // indirect
