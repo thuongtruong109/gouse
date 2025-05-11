@@ -57,7 +57,7 @@ The library follows a modular architecture where related functions are grouped t
 
 ## 🗾 Usage Flow
 
-![Flow](../img/flow.png)
+![Flow](https://raw.githubusercontent.com/thuongtruong109/gouse/refs/heads/main/docs/docs/public/img/flow.png)
 
 ## 🚀 Core functionality
 
