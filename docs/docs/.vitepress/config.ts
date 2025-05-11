@@ -103,7 +103,7 @@ export default defineConfig({
       pattern: editLink(
         "https://github.com/thuongtruong109/gouse/edit/main/samples/:path"
       ),
-      text: "Improve this page on GitHub",
+      text: "Suggest improve this page",
     },
 
     footer: {

@@ -2,7 +2,7 @@
 
 ## 📦 Installation
 
-> Compatibility with Go version >= **`1.18`**
+> Compatibility with Go version **`>=1.18`**
 
 ```go
 go get github.com/thuongtruong109/gouse
@@ -26,10 +26,10 @@ func main() {
 }
 ```
 
-## 🦄 Usage
+## 🪴 Usage
 
-- Using package directly in your module as ultra-lightweight utility functions.
-- Import as normal package
+Using package directly in your module as ultra-lightweight utility functions.
+Import as normal package
 
 ```go
 package main

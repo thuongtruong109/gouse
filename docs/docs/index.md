@@ -24,17 +24,17 @@ hero:
 
 features:
   - icon: 🪶
-    title: User-Friendly & Lightweight
-    details: Gouse features an intuitive JavaScript syntax with no setup required. Import utility functions directly and enjoy a flexible, chainable package available in various builds and formats.
+    title: Modularity
+    details: Import only what you need without dependencies on the entire library.
   - icon: 🏗
-    title: Powerful & Versatile
-    details: Access a wide range of methods for arrays, numbers, objects, and strings. Comprehensive documentation and examples make implementation smooth and efficient.
+    title: Consistency
+    details: Unified API design and coding style across all functions.
   - icon: 🧩
-    title: Scalable & Efficient
-    details: Ideal for projects of any size, Gouse supports rapid setup, complex logic handling, and performance optimization across all operating systems.
+    title: Usability
+    details: JavaScript-inspired syntax for familiar and intuitive usage
   - icon: 🚀
-    title: Consistent & Maintainable
-    details: Reduce repetitive code and ensure a unified style. Gouse makes your code cleaner, easier to maintain, and minimizes compatibility issues or unexpected errors.
+    title: Performance
+    details: Optimized implementations for efficient execution
 ---
 
 <style>
