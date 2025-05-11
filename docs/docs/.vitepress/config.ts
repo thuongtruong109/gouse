@@ -101,7 +101,7 @@ export default defineConfig({
 
     editLink: {
       pattern: editLink(
-        "https://github.com/thuongtruong109/gouse/edit/main/samples/:path"
+        "https://github.com/thuongtruong109/gouse/edit/main/docs/docs/:path"
       ),
       text: "Suggest improve this page",
     },
