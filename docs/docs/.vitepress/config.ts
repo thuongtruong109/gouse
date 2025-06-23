@@ -37,8 +37,16 @@ export default defineConfig({
         text: `🔖v${pkg.version}`,
         items: [
           {
+            text: "Release Notes",
+            link: "https://github.com/thuongtruong109/gouse/releases",
+          },
+          {
             text: "Changelog",
             link: "https://github.com/thuongtruong109/gouse/blob/main/CHANGELOG.md",
+          },
+          {
+            text: "Issues",
+            link: "https://github.com/thuongtruong109/gouse/issues/new/choose",
           },
           {
             text: "Contributing",

@@ -7,11 +7,11 @@
     <a href="https://codecov.io/gh/thuongtruong109/gouse"><img src="https://codecov.io/gh/thuongtruong1009/gouse/branch/main/graph/badge.svg" alt="codecov"></a>
     <a href="https://dl.circleci.com/status-badge/redirect/gh/thuongtruong109/gouse/tree/main"><img src="https://dl.circleci.com/status-badge/img/gh/thuongtruong1009/gouse/tree/main.svg?style=svg" alt="circleci"></a>
     <a href="https://pkg.go.dev/github.com/thuongtruong109/gouse"><img src="https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square" alt="go.dev"></a>
-    <a href="https://gouse.vercel.app"><img src="https://img.shields.io/badge/Documentation-pink" alt="documentation_website" /></a>
+    <a href="https://gouse.vercel.app"><img src="https://img.shields.io/badge/documentation-pink?logo=go" alt="documentation_website" /></a>
     <img src="./public/count.svg" alt="gouse_functions_count">
     <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/thuongtruong109/gouse">
-    <!-- <img alt="GitHub Release" src="https://img.shields.io/github/v/release/thuongtruong109/gouse"> -->
-    <!-- <a href="https://godocs.io/github.com/thuongtruong109/gouse"><img alt="Godoc" src="https://godocs.io/github.com/thuongtruong1009/gouse?status.svg"></a> -->
+    <img alt="GitHub Release" src="https://img.shields.io/github/v/release/thuongtruong109/gouse">
+    <a href="https://godocs.io/github.com/thuongtruong109/gouse"><img alt="Godoc" src="https://godocs.io/github.com/thuongtruong1009/gouse?status.svg"></a>
     <!-- <a href="https://sourcegraph.com/github.com/thuongtruong109/gouse?badge"><img src="https://sourcegraph.com/github.com/thuongtruong109/gouse/-/badge.svg" alt="sourcegraph"></a> -->
 </div>
 
@@ -74,50 +74,33 @@
 
 > Below is a list of modules that Gouse supports. This project is still in development stage, so not all features are available.
 
-<div align="center">
-  <table>
-    <tbody>
-      <td align="left">
-        <div width="300" height="0"></div><br>
-        <a href="/receipts/api">✅ Api</a> <br/>
-        <a href="/receipts/array">✅ Array</a> <br/>
-        <a href="/receipts/cache">✅ Cache</a> <br/>
-        <a href="/receipts/chart">✅ Chart</a> <br/>
-        <a href="/receipts/color">✅ Color</a> <br/>
-        <a href="/receipts/config">✅ Config</a> <br/>
-        <a href="/receipts/console">✅ Console</a> <br/>
-        <a href="/receipts/connection">✅ Connection</a> <br/>
-        <a href="/receipts/cron">✅ Cron</a> <br/>
-        <div width="300" height="0"></div>
-      </td>
-      <td align="left">
-        <div width="300" height="0"></div><br>
-        <a href="/receipts/crypto">✅ Crypto</a> <br/>
-        <a href="/receipts/date">✅ Date</a> <br/>
-        <a href="/receipts/function">✅ Function</a> <br/>
-        <a href="/receipts/helper">✅ Helper</a> <br/>
-        <a href="/receipts/http">✅ Http</a> <br/>
-        <a href="/receipts/io">✅ I/O</a> <br/>
-        <a href="/receipts/logger">✅ Logger</a> <br/>
-        <a href="/receipts/math">✅ Math</a> <br/>
-        <a href="/receipts/media">✅ Media</a> <br/>
-        <div width="300" height="0"></div>
-      </td>
-      <td align="left">
-        <div width="400" height="0"></div><br>
-        <a href="/receipts/number">✅ Number</a> <br/>
-        <a href="/receipts/os">✅ OS</a> <br/>
-        <a href="/receipts/print">✅ Print</a> <br/>
-        <a href="/receipts/random">✅ Random</a> <br/>
-        <a href="/receipts/regex">✅ Regex</a> <br/>
-        <a href="/receipts/string">✅ String</a> <br/>
-        <a href="/receipts/struct">✅ Struct</a> <br/>
-        <a href="/receipts/time">✅ Time</a> <br/>
-        <a href="/receipts/type">✅ Type</a> <br/>
-        <div width="300" height="0"></div>
-      </td>
-    </tbody>
-  </table>
+<div style="display: flex; flex-wrap: wrap; gap: 4px;">
+  <a href="https://github.com/thuongtruong109/gouse/blob/main/api.go"><img src="https://img.shields.io/badge/✅%20Api-teal" alt="api" /></a>
+  <a href="https://github.com/thuongtruong109/gouse/blob/main/array.go"><img src="https://img.shields.io/badge/✅%20Array-teal" alt="array" /></a>
+  <a href="https://github.com/thuongtruong109/gouse/blob/main/cache.go"><img src="https://img.shields.io/badge/✅%20Cache-teal" alt="cache" /></a>
+  <a href="https://github.com/thuongtruong109/gouse/blob/main/chart.go"><img src="https://img.shields.io/badge/✅%20Chart-teal" alt="chart" /></a>
+  <a href="https://github.com/thuongtruong109/gouse/blob/main/config.go"><img src="https://img.shields.io/badge/✅%20Config-teal" alt="config" /></a>
+  <a href="https://github.com/thuongtruong109/gouse/blob/main/console.go"><img src="https://img.shields.io/badge/✅%20Console-teal" alt="console" /></a>
+  <a href="https://github.com/thuongtruong109/gouse/blob/main/connection.go"><img src="https://img.shields.io/badge/✅%20Connection-teal" alt="connection" /></a>
+  <a href="https://github.com/thuongtruong109/gouse/blob/main/cron.go"><img src="https://img.shields.io/badge/✅%20Cron-teal" alt="cron" /></a>
+  <a href="/receipts/crypto"><img src="https://img.shields.io/badge/✅%20Crypto-teal" alt="crypto" /></a>
+  <a href="/receipts/date"><img src="https://img.shields.io/badge/✅%20Date-teal" alt="date" /></a>
+  <a href="https://github.com/thuongtruong109/gouse/blob/main/function.go"><img src="https://img.shields.io/badge/✅%20Function-teal" alt="function" /></a>
+  <a href="https://github.com/thuongtruong109/gouse/blob/main/helper.go"><img src="https://img.shields.io/badge/✅%20Helper-teal" alt="helper" /></a>
+  <a href="https://github.com/thuongtruong109/gouse/blob/main/io.go"><img src="https://img.shields.io/badge/✅%20I/O-teal" alt="io" /></a>
+  <a href="https://github.com/thuongtruong109/gouse/blob/main/logger.go"><img src="https://img.shields.io/badge/✅%20Logger-teal" alt="logger" /></a>
+  <a href="https://github.com/thuongtruong109/gouse/blob/main/math.go"><img src="https://img.shields.io/badge/✅%20Math-teal" alt="math" /></a>
+  <a href="https://github.com/thuongtruong109/gouse/blob/main/media.go"><img src="https://img.shields.io/badge/✅%20Media-teal" alt="media" /></a>
+  <a href="https://github.com/thuongtruong109/gouse/blob/main/net.go"><img src="https://img.shields.io/badge/✅%20Net-teal" alt="net" /></a>
+  <a href="https://github.com/thuongtruong109/gouse/blob/main/number.go"><img src="https://img.shields.io/badge/✅%20Number-teal" alt="number" /></a>
+  <a href="https://github.com/thuongtruong109/gouse/blob/main/os.go"><img src="https://img.shields.io/badge/✅%20OS-teal" alt="os" /></a>
+  <a href="https://github.com/thuongtruong109/gouse/blob/main/print.go"><img src="https://img.shields.io/badge/✅%20Print-teal" alt="print" /></a>
+  <a href="https://github.com/thuongtruong109/gouse/blob/main/random.go"><img src="https://img.shields.io/badge/✅%20Random-teal" alt="random" /></a>
+  <a href="https://github.com/thuongtruong109/gouse/blob/main/regex.go"><img src="https://img.shields.io/badge/✅%20Regex-teal" alt="regex" /></a>
+  <a href="https://github.com/thuongtruong109/gouse/blob/main/string.go"><img src="https://img.shields.io/badge/✅%20String-teal" alt="string" /></a>
+  <a href="https://github.com/thuongtruong109/gouse/blob/main/struct.go"><img src="https://img.shields.io/badge/✅%20Struct-teal" alt="struct" /></a>
+  <a href="https://github.com/thuongtruong109/gouse/blob/main/time.go"><img src="https://img.shields.io/badge/✅%20Time-teal" alt="time" /></a>
+  <a href="https://github.com/thuongtruong109/gouse/blob/main/type.go"><img src="https://img.shields.io/badge/✅%20Type-teal" alt="type" /></a>
 </div>
 
 - See more details at [Gouse Documentation](https://gouse.vercel.app)
@@ -288,3 +271,4 @@ If you're looking for issues to work on, try looking at the good first issue lis
 - [Profiling Go Programs](https://blog.golang.org/pprof) - [Pprof example](https://dev.to/immortalt/use-pprof-for-golang-program-memory-analysis-2cj6) - [Gws example](https://github.com/lxzan/gws)
 
 <!-- https://github.com/178inaba/third-party-test/tree/master -->
+<!-- https://github.com/slurpcode/go-to-algorithms/blob/main/math/powerset.go -->
