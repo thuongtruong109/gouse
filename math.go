@@ -417,3 +417,25 @@ func IsPerfectSquare(num int) bool {
 	}
 	return false
 }
+
+func Fibo(nth int) int {
+	var dp [256]int
+
+	if nth <= 2 {
+		return 1
+	}
+
+	if dp[nth] != 0 {
+		return dp[nth]
+	}
+
+	dp[nth] = Fibo(nth - 2) + Fibo(nth - 1)
+	return dp[nth]
+}
+
+func Euclid(a int, b int) int {
+	if b == 0 {
+		return a
+	}
+	return Euclid(b, a%b)
+}

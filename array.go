@@ -1,6 +1,7 @@
 package gouse
 
 import (
+	"fmt"
 	"math/rand"
 	"reflect"
 	"sort"
@@ -405,4 +406,17 @@ func MapBy[T comparable, R comparable](arr []T, f func(T) R) []R {
 		res = append(res, f(v))
 	}
 	return res
+}
+
+func PowerSet(nums []int) {
+	size := (1 << len(nums))
+
+	for counter := range size {
+		for j := range nums {
+			if (counter & (1 << j)) != 0 {
+				fmt.Printf("%d ", nums[j])
+			}
+		}
+		fmt.Println()
+	}
 }
