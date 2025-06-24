@@ -1,5 +1,5 @@
 ci:
-	go get -v -t -d ./...
+	go get -v -t -d=true ./...
 	go mod download
 
 install:

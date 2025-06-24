@@ -665,7 +665,11 @@ func FromCodePoint(codePoint ...int) string {
 }
 
 func MatchStr(text string, pattern string) int {
-	LPS := func (pattern string) []int {
+	if len(pattern) == 0 {
+		return 0
+	}
+
+	LPS := func(pattern string) []int {
 		lps := make([]int, len(pattern))
 		i := 1
 		j := 0
@@ -685,7 +689,6 @@ func MatchStr(text string, pattern string) int {
 		}
 		return lps
 	}
-
 
 	lps := LPS(pattern)
 	i := 0
@@ -707,9 +710,3 @@ func MatchStr(text string, pattern string) int {
 	}
 	return -1
 }
-
-// func main() {
-// 	fmt.Println("KMP Algorithm")
-
-// 	fmt.Println(KMP("ABABDABACDABABCABAB", "ABABCABAB"))
-// }

@@ -796,3 +796,51 @@ func TestMapAsString(t *testing.T) {
 // 		t.Errorf("Expected %s, got %s", expected, result)
 // 	}
 // }
+
+func TestRoman2Int(t *testing.T) {
+	tests := []struct {
+		input    string
+		expected int
+	}{
+		{"I", 1},
+		{"IV", 4},
+		{"IX", 9},
+		{"X", 10},
+		{"XL", 40},
+		{"XC", 90},
+		{"C", 100},
+		{"CD", 400},
+		{"CM", 900},
+		{"M", 1000},
+		{"LVIII", 58},
+		{"MCMXCIV", 1994},
+	}
+
+	for _, test := range tests {
+		result := Roman2Int(test.input)
+		if result != test.expected {
+			t.Errorf("Roman2Int(%q) = %d; want %d", test.input, result, test.expected)
+		}
+	}
+}
+
+func TestInt2Roman(t *testing.T) {
+	tests := []struct {
+		input    int
+		expected string
+	}{
+		{1, "I"},
+		{4, "IV"},
+		{9, "IX"},
+		{58, "LVIII"},
+		{1994, "MCMXCIV"},
+		{3999, "MMMCMXCIX"},
+	}
+
+	for _, test := range tests {
+		result := Int2Roman(test.input)
+		if result != test.expected {
+			t.Errorf("Int2Roman(%d) = %q; want %q", test.input, result, test.expected)
+		}
+	}
+}

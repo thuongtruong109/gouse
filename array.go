@@ -1,7 +1,6 @@
 package gouse
 
 import (
-	"fmt"
 	"math/rand"
 	"reflect"
 	"sort"
@@ -352,6 +351,29 @@ func IsEqualArr[T comparable](a, b []T) bool {
 	return reflect.DeepEqual(a, b)
 }
 
+func IsEqualArr2[T comparable](a, b [][]T) bool {
+	if len(a) != len(b) {
+		return false
+	}
+
+	matched := make([]bool, len(b))
+
+	for _, subA := range a {
+		found := false
+		for i, subB := range b {
+			if !matched[i] && reflect.DeepEqual(subA, subB) {
+				matched[i] = true
+				found = true
+				break
+			}
+		}
+		if !found {
+			return false
+		}
+	}
+	return true
+}
+
 func IndexBy[T comparable](arr []T, f func(T) bool) int {
 	for i, v := range arr {
 		if f(v) {
@@ -408,15 +430,19 @@ func MapBy[T comparable, R comparable](arr []T, f func(T) R) []R {
 	return res
 }
 
-func PowerSet(nums []int) {
-	size := (1 << len(nums))
+func PowerSet(nums []int) [][]int {
+	size := 1 << len(nums)
+	result := [][]int{}
 
-	for counter := range size {
-		for j := range nums {
+	for counter := 0; counter < size; counter++ {
+		subset := []int{}
+		for j := 0; j < len(nums); j++ {
 			if (counter & (1 << j)) != 0 {
-				fmt.Printf("%d ", nums[j])
+				subset = append(subset, nums[j])
 			}
 		}
-		fmt.Println()
+		result = append(result, subset)
 	}
+
+	return result
 }

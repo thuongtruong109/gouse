@@ -398,7 +398,34 @@ func Roman2Int(s string) int {
 	return result
 }
 
-// func main() {
-// 	fmt.Println("Code Solve Question Roman To Integer")
-// 	fmt.Println(romanToInt("MXI"))
-// }
+func Int2Roman(num int) string {
+	var romanMap = []struct {
+		value  int
+		symbol string
+	}{
+		{1000, "M"},
+		{900, "CM"},
+		{500, "D"},
+		{400, "CD"},
+		{100, "C"},
+		{90, "XC"},
+		{50, "L"},
+		{40, "XL"},
+		{10, "X"},
+		{9, "IX"},
+		{5, "V"},
+		{4, "IV"},
+		{1, "I"},
+	}
+
+	var result strings.Builder
+
+	for _, r := range romanMap {
+		for num >= r.value {
+			result.WriteString(r.symbol)
+			num -= r.value
+		}
+	}
+
+	return result.String()
+}

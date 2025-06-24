@@ -419,18 +419,21 @@ func IsPerfectSquare(num int) bool {
 }
 
 func Fibo(nth int) int {
-	var dp [256]int
+	memo := make(map[int]int)
 
-	if nth <= 2 {
-		return 1
+	var fib func(int) int
+	fib = func(n int) int {
+		if n <= 2 {
+			return 1
+		}
+		if val, ok := memo[n]; ok {
+			return val
+		}
+		memo[n] = fib(n-1) + fib(n-2)
+		return memo[n]
 	}
 
-	if dp[nth] != 0 {
-		return dp[nth]
-	}
-
-	dp[nth] = Fibo(nth - 2) + Fibo(nth - 1)
-	return dp[nth]
+	return fib(nth)
 }
 
 func Euclid(a int, b int) int {

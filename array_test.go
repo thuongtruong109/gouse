@@ -1400,3 +1400,36 @@ func TestIsEqualArr(t *testing.T) {
 		t.Errorf("Expected %v and %v to be different", intArr1, unequalArr)
 	}
 }
+
+func TestPowerSet(t *testing.T) {
+	tests := []struct {
+		input    []int
+		expected [][]int
+	}{
+		{
+			input:    []int{},
+			expected: [][]int{{}},
+		},
+		{
+			input:    []int{1},
+			expected: [][]int{{}, {1}},
+		},
+		{
+			input:    []int{1, 2},
+			expected: [][]int{{}, {1}, {2}, {1, 2}},
+		},
+		{
+			input: []int{1, 2, 3},
+			expected: [][]int{
+				{}, {1}, {2}, {1, 2}, {3}, {1, 3}, {2, 3}, {1, 2, 3},
+			},
+		},
+	}
+
+	for _, test := range tests {
+		output := PowerSet(test.input)
+		if !IsEqualArr2(output, test.expected) {
+			t.Errorf("PowerSet(%v) = %v; want %v", test.input, output, test.expected)
+		}
+	}
+}

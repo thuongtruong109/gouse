@@ -1524,3 +1524,27 @@ func TestFromCodePoint(t *testing.T) {
 		}
 	}
 }
+
+func TestMatchStr(t *testing.T) {
+	tests := []struct {
+		text     string
+		pattern  string
+		expected int
+	}{
+		{"hello world", "world", 6},
+		{"abababc", "ababc", 2},
+		{"abcdabcabcd", "abcabcd", 4},
+		{"aaaaa", "bba", -1},
+		{"mississippi", "issi", 1},
+		{"", "", 0},
+		{"a", "", 0},
+		{"", "a", -1},
+	}
+
+	for _, test := range tests {
+		result := MatchStr(test.text, test.pattern)
+		if result != test.expected {
+			t.Errorf("MatchStr(%q, %q) = %d; want %d", test.text, test.pattern, result, test.expected)
+		}
+	}
+}

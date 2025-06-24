@@ -613,3 +613,46 @@ func TestPeriSquare(t *testing.T) {
 // 		t.Errorf("VolCylF() = %f; want %f", result2, expected)
 // 	}
 // }
+
+func TestFibo(t *testing.T) {
+	tests := []struct {
+		n        int
+		expected int
+	}{
+		{1, 1},
+		{2, 1},
+		{3, 2},
+		{4, 3},
+		{5, 5},
+		{10, 55},
+		{20, 6765},
+	}
+
+	for _, test := range tests {
+		result := Fibo(test.n)
+		if result != test.expected {
+			t.Errorf("Fibo(%d) = %d; want %d", test.n, result, test.expected)
+		}
+	}
+}
+
+func TestEuclid(t *testing.T) {
+	tests := []struct {
+		a, b     int
+		expected int
+	}{
+		{48, 18, 6},
+		{56, 98, 14},
+		{101, 103, 1},
+		{0, 5, 5},
+		{7, 0, 7},
+		{270, 192, 6},
+	}
+
+	for _, test := range tests {
+		result := Euclid(test.a, test.b)
+		if result != test.expected {
+			t.Errorf("Euclid(%d, %d) = %d; want %d", test.a, test.b, result, test.expected)
+		}
+	}
+}
