@@ -180,6 +180,7 @@ func main() {
 ## 📁 Project Structure
 
 ![Project Structure](https://raw.githubusercontent.com/thuongtruong109/gouse/diagram/project-structure.svg)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fthuongtruong109%2Fgouse.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fthuongtruong109%2Fgouse?ref=badge_shield)
 
 ## 🛠️ Development
 
@@ -206,6 +207,9 @@ If you're looking for issues to work on, try looking at the good first issue lis
 - Gouse is released under the [`MIT`](./LICENSE) License © 2024 [Tran Nguyen Thuong Truong](https://github.com/thuongtruong109).
 
 - For more information, see the [`Licensing FAQs`](https://opensource.org/faq#mit-vs-bsd).
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fthuongtruong109%2Fgouse.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fthuongtruong109%2Fgouse?ref=badge_large)
 
 ## 📌 Support
 
