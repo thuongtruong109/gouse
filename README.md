@@ -183,6 +183,7 @@ func main() {
 ## 📁 Project Structure
 
 ![Project Structure](https://raw.githubusercontent.com/thuongtruong109/gouse/diagram/project-structure.svg)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fthuongtruong109%2Fgouse.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fthuongtruong109%2Fgouse?ref=badge_shield)
 
 ## 🛠️ Development
 
