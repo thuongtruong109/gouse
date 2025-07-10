@@ -7,11 +7,14 @@
     <a href="https://codecov.io/gh/thuongtruong109/gouse"><img src="https://codecov.io/gh/thuongtruong1009/gouse/branch/main/graph/badge.svg" alt="codecov"></a>
     <a href="https://dl.circleci.com/status-badge/redirect/gh/thuongtruong109/gouse/tree/main"><img src="https://dl.circleci.com/status-badge/img/gh/thuongtruong1009/gouse/tree/main.svg?style=svg" alt="circleci"></a>
     <a href="https://pkg.go.dev/github.com/thuongtruong109/gouse"><img src="https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square" alt="go.dev"></a>
-    <a href="https://gouse.vercel.app"><img src="https://img.shields.io/badge/documentation-pink?logo=go" alt="documentation_website" /></a>
+    <a href="https://godocs.io/github.com/thuongtruong109/gouse"><img alt="Godoc" src="https://godocs.io/github.com/thuongtruong1009/gouse?status.svg"></a>
+    <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fthuongtruong109%2Fgouse?ref=badge_shield&issueType=security" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fthuongtruong109%2Fgouse.svg?type=shield&issueType=security"/></a>
+    <a href="https://gouse.vercel.app"><img src="https://img.shields.io/badge/website-black?logo=go" alt="documentation_website" /></a>
     <img src="./public/count.svg" alt="gouse_functions_count">
     <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/thuongtruong109/gouse">
-    <img alt="GitHub Release" src="https://img.shields.io/github/v/release/thuongtruong109/gouse">
-    <a href="https://godocs.io/github.com/thuongtruong109/gouse"><img alt="Godoc" src="https://godocs.io/github.com/thuongtruong1009/gouse?status.svg"></a>
+    <a href="https://github.com/thuongtruong109/gouse/releases">
+      <img alt="GitHub Release" src="https://img.shields.io/github/v/release/thuongtruong109/gouse">
+    </a>
     <!-- <a href="https://sourcegraph.com/github.com/thuongtruong109/gouse?badge"><img src="https://sourcegraph.com/github.com/thuongtruong109/gouse/-/badge.svg" alt="sourcegraph"></a> -->
 </div>
 
@@ -206,6 +209,10 @@ If you're looking for issues to work on, try looking at the good first issue lis
 - Gouse is released under the [`MIT`](./LICENSE) License © 2024 [Tran Nguyen Thuong Truong](https://github.com/thuongtruong109).
 
 - For more information, see the [`Licensing FAQs`](https://opensource.org/faq#mit-vs-bsd).
+
+[![FOSSA License Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fthuongtruong109%2Fgouse.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fthuongtruong109%2Fgouse?ref=badge_shield)
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fthuongtruong109%2Fgouse.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fthuongtruong109%2Fgouse?ref=badge_large)
 
 ## 📌 Support
 

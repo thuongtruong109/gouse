@@ -103,3 +103,22 @@ func TestReadYAML(t *testing.T) {
 		t.Fatalf("expected meta.type to be 'package', got %q", conf.Meta.Type)
 	}
 }
+
+func TestReadCSV(t *testing.T) {
+	records, err := ReadCSV("mockdata/config.csv")
+	if err != nil {
+		t.Fatalf("failed to read CSV: %v", err)
+	}
+
+	if len(records) != 3 {
+		t.Fatalf("expected 3 rows (including header), got %d", len(records))
+	}
+
+	if records[1][0] != "Alice" {
+		t.Errorf("expected 'Alice', got '%s'", records[1][0])
+	}
+
+	if records[2][2] != "bob@example.com" {
+		t.Errorf("expected 'bob@example.com', got '%s'", records[2][2])
+	}
+}

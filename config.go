@@ -1,6 +1,7 @@
 package gouse
 
 import (
+	"encoding/csv"
 	"encoding/json"
 	"os"
 
@@ -62,4 +63,19 @@ func ReadYAML[T any](path string, configuration *T) error {
 	}
 
 	return nil
+}
+
+func ReadCSV(path string) ([][]string, error) {
+	file, err := os.Open(path)
+	if err != nil {
+		return nil, err
+	}
+	defer func() {
+		if err := file.Close(); err != nil {
+			panic(err)
+		}
+	}()
+
+	reader := csv.NewReader(file)
+	return reader.ReadAll()
 }
